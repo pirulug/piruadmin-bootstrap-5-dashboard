@@ -1,0 +1,19 @@
+extends ../layouts/auth
+
+append config
+  -pageName = '400'
+  -pageUrl = 'pages-404'
+
+block content
+
+  .container.d-flex.flex-column
+    .row.vh-100
+      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
+        .d-table-cell.align-middle
+          .text-center
+            i.display-1.text-primary.fa.fa-exclamation-triangle
+            h1.display-1.fw-bold 404
+            p.h1 Page not found.
+            p.h2.fw-normal.mt-3.mb-4 The page you are looking for might have been removed.
+            a.btn.btn-primary(href='dashboard.html') Return to website
+

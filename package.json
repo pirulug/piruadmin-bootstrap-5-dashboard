@@ -1,0 +1,72 @@
+{
+  "homepage": "https://pirulug.github.io/admin-pirulug",
+  "name": "admin-pirulug",
+  "version": "1.0.0",
+  "description": "Admin dashboard bootstrap 5",
+  "keywords": [
+    "template",
+    "css",
+    "sass",
+    "html",
+    "theme",
+    "front-end",
+    "ui kit",
+    "web"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress",
+    "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress",
+    "watch": "webpack --config webpack.config.js --watch --progress",
+    "start": "webpack serve --config webpack.config.js --progress",
+    "prepublishOnly": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Pirulug",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirulug/admin-pirulug.git"
+  },
+  "devDependencies": {
+    "@babel/core": "7.21.0",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/preset-env": "7.20.2",
+    "@babel/register": "7.21.0",
+    "@sumotto/beautify-html-webpack-plugin": "^1.0.0",
+    "autoprefixer": "10.4.13",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "11.0.0",
+    "cross-env": "7.0.3",
+    "css-loader": "6.7.3",
+    "css-minimizer-webpack-plugin": "4.2.2",
+    "eslint": "8.35.0",
+    "file-loader": "6.2.0",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "2.7.2",
+    "postcss": "^8.4.21",
+    "postcss-loader": "7.0.2",
+    "pug": "^2.0.2",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.58.3",
+    "sass-loader": "13.2.0",
+    "terser-webpack-plugin": "5.3.6",
+    "url-loader": "4.1.1",
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.1",
+    "webpack-dev-server": "4.11.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.12.1",
+    "@fortawesome/fontawesome-free": "^6.3.0",
+    "@popperjs/core": "2.11.6",
+    "bootstrap": "^5.3.0-alpha1",
+    "chart.js": "^4.2.1",
+    "feather-icons": "4.29.0",
+    "flatpickr": "4.6.13",
+    "jsvectormap": "1.5.1",
+    "simplebar": "6.2.1"
+  }
+}

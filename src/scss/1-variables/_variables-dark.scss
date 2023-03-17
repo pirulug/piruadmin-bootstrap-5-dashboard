@@ -1,0 +1,51 @@
+// Dark color mode variables
+
+//
+// Global colors
+//
+
+// scss-docs-start sass-dark-mode-vars
+$primary-text-dark: $primary-300 !default;
+
+$primary-bg-subtle-dark: $primary-900 !default;
+
+$primary-border-subtle-dark: $primary-700 !default;
+
+$body-color-dark: $gray-400 !default;
+
+$body-bg-dark: #171717 !default;
+$body-bg-alt-dark: shade-color($body-bg-dark, 80%) !default;
+
+$link-color-dark: $primary-300 !default;
+$link-hover-color-dark: $primary-200 !default;
+$code-color-dark: $cyan-300 !default;
+
+//
+// Forms
+//
+
+//
+// Accordion
+//
+
+// =================
+// Varibles Mio
+// =================
+
+// Sidebar link
+$sidebar-link-color-dark: $body-color-dark !default;
+$sidebar-link-bg-dark: $body-bg-dark !default;
+
+$sidebar-link-hover-bg-dark: $body-bg-dark !default;
+
+// Sidebar brand
+$sidebar-brand-color-dark: $body-color-dark !default;
+
+// Sidebar link icon
+$sidebar-link-icon-color-dark: $body-color-dark !default;
+
+// NavTop
+$navtop-bg-dark: $body-bg-dark !default;
+
+// Footer
+$footer-bg-dark: $body-bg-dark !default;

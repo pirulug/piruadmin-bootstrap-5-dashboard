@@ -1,0 +1,23 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Images'
+  -pageUrl = 'ui-images'
+
+block content
+
+  .card 
+    .card-body 
+      div
+        .mb-3
+          img.img-fluid(src="https://dummyimage.com/5000x1000/000/fff.jpg")
+        .mb-3
+          img.img-thumbnail(src="https://dummyimage.com/200x200/000/fff.jpg")
+        .mb-3
+          img.rounded.float-start(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
+        .mb-3
+          img.rounded.float-end(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
+        .mb-3
+          img.rounded.mx-auto.d-block(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
+
+

@@ -1,0 +1,35 @@
+extends ../layouts/auth
+
+append config
+  -pageName = 'Sing Up'
+  -pageUrl = 'pages-sign-up'
+
+block content
+
+  .container.d-flex.flex-column
+    .row.vh-100
+      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
+        .d-table-cell.align-middle
+          .text-center.mt-4
+            h1.h2 Sign Up
+            p.lead
+              | Already have an account? Sign in here
+          .card
+            .card-body
+              .m-sm-4
+                form
+                  .mb-3
+                    label.form-label Name
+                    input.form-control(type='text' name='name' placeholder='Enter your name')
+                  .mb-3
+                    label.form-label Company
+                    input.form-control(type='text' name='company' placeholder='Enter your company name')
+                  .mb-3
+                    label.form-label Email
+                    input.form-control(type='email' name='email' placeholder='Enter your email')
+                  .mb-3
+                    label.form-label Password
+                    input.form-control(type='password' name='password' placeholder='Enter password')
+                  .text-center.mt-3
+                    a.btn.btn-lg.btn-primary(href='index.html') Sign up
+                    // <button type="submit" class="btn btn-lg btn-primary">Sign up</button>

@@ -1,0 +1,330 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Tabs'
+  -pageUrl = 'ui-tabs'
+
+block content
+
+  .row
+    .col-12.col-lg-6
+      .tab
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#tab-1' data-bs-toggle='tab' role='tab' aria-selected='true') Home
+          li.nav-item(role='presentation')
+            a.nav-link(href='#tab-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Profile
+          li.nav-item(role='presentation')
+            a.nav-link(href='#tab-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Messages
+        .tab-content
+          #tab-1.tab-pane.active.show(role='tabpanel')
+            h4.tab-title Default tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #tab-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #tab-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-primary
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#primary-tab-1' data-bs-toggle='tab' role='tab' aria-selected='true') Home
+          li.nav-item(role='presentation')
+            a.nav-link(href='#primary-tab-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Profile
+          li.nav-item(role='presentation')
+            a.nav-link(href='#primary-tab-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Messages
+        .tab-content
+          #primary-tab-1.tab-pane.active(role='tabpanel')
+            h4.tab-title Colored tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #primary-tab-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #primary-tab-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-vertical
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#tab-11' data-bs-toggle='tab' role='tab' aria-selected='true') Home
+          li.nav-item(role='presentation')
+            a.nav-link(href='#tab-22' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Profile
+          li.nav-item(role='presentation')
+            a.nav-link(href='#tab-33' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Messages
+        .tab-content
+          #tab-11.tab-pane.active.show(role='tabpanel')
+            h4.tab-title Default tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #tab-22.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #tab-33.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-vertical.tab-info
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#primary-tab-11' data-bs-toggle='tab' role='tab' aria-selected='true') Home
+          li.nav-item(role='presentation')
+            a.nav-link(href='#primary-tab-22' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Profile
+          li.nav-item(role='presentation')
+            a.nav-link(href='#primary-tab-33' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1') Messages
+        .tab-content
+          #primary-tab-11.tab-pane.active(role='tabpanel')
+            h4.tab-title Colored tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #primary-tab-22.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #primary-tab-33.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+
+    .col-12.col-lg-6
+      .tab
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#icon-tab-1' data-bs-toggle='tab' role='tab' aria-selected='true')
+              i.align-middle(data-feather='home')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#icon-tab-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='settings')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#icon-tab-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='message-square')
+        .tab-content
+          #icon-tab-1.tab-pane.active(role='tabpanel')
+            h4.tab-title Icon tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #icon-tab-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #icon-tab-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-success
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#colored-icon-1' data-bs-toggle='tab' role='tab' aria-selected='true')
+              i.align-middle(data-feather='home')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#colored-icon-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='settings')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#colored-icon-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='message-square')
+        .tab-content
+          #colored-icon-1.tab-pane.active(role='tabpanel')
+            h4.tab-title Colored icon tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #colored-icon-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #colored-icon-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-vertical
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#vertical-icon-tab-1' data-bs-toggle='tab' role='tab' aria-selected='true')
+              i.align-middle(data-feather='home')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#vertical-icon-tab-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='settings')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#vertical-icon-tab-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='message-square')
+        .tab-content
+          #vertical-icon-tab-1.tab-pane.active(role='tabpanel')
+            h4.tab-title Vertical icon tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #vertical-icon-tab-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #vertical-icon-tab-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+    
+    .col-12.col-lg-6
+      .tab.tab-vertical.tab-danger
+        ul.nav.nav-tabs(role='tablist')
+          li.nav-item(role='presentation')
+            a.nav-link.active(href='#colored-vertical-icon-tab-1' data-bs-toggle='tab' role='tab' aria-selected='true')
+              i.align-middle(data-feather='home')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#colored-vertical-icon-tab-2' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='settings')
+          li.nav-item(role='presentation')
+            a.nav-link(href='#colored-vertical-icon-tab-3' data-bs-toggle='tab' role='tab' aria-selected='false' tabindex='-1')
+              i.align-middle(data-feather='message-square')
+        .tab-content
+          #colored-vertical-icon-tab-1.tab-pane.active(role='tabpanel')
+            h4.tab-title Colored vertical icon tabs
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #colored-vertical-icon-tab-2.tab-pane(role='tabpanel')
+            h4.tab-title Another one
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.
+          #colored-vertical-icon-tab-3.tab-pane(role='tabpanel')
+            h4.tab-title One more
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum
+              | rhoncus. Aenean massa. Cum sociis natoque penatibus et magnis neque dis parturient montes, nascetur ridiculus mus.
+              | In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            p
+              | Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+              | justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              | justo.

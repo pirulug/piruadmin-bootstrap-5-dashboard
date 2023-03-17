@@ -1,0 +1,174 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Profile'
+  -pageUrl = 'pages-profile'
+
+block content
+
+  .row
+    .col-md-3.col-xl-4
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Profile Details
+        .card-body.text-center
+          img.img-fluid.rounded-circle.mb-2(src='https://dummyimage.com/200x200/000/fff.jpg' alt='Christina Mason' width='128' height='128')
+          h5.card-title.mb-0 Christina Mason
+          .text-muted.mb-2 Lead Developer
+          div
+            a.btn.btn-primary.btn-sm(href='#') Follow
+            a.btn.btn-primary.btn-sm(href='#')
+              span(data-feather='message-square')
+              |  Message
+        hr.my-0
+        .card-body
+          h5.h6.card-title Skills
+          a.badge.bg-primary.me-1.my-1(href='#') HTML
+          a.badge.bg-primary.me-1.my-1(href='#') JavaScript
+          a.badge.bg-primary.me-1.my-1(href='#') Sass
+          a.badge.bg-primary.me-1.my-1(href='#') Angular
+          a.badge.bg-primary.me-1.my-1(href='#') Vue
+          a.badge.bg-primary.me-1.my-1(href='#') React
+          a.badge.bg-primary.me-1.my-1(href='#') Redux
+          a.badge.bg-primary.me-1.my-1(href='#') UI
+          a.badge.bg-primary.me-1.my-1(href='#') UX
+        hr.my-0
+        .card-body
+          h5.h6.card-title About
+          ul.list-unstyled.mb-0
+            li.mb-1
+              span.feather-sm.me-1(data-feather='home')
+              |  Lives in 
+              a(href='#') San Francisco, SA
+            li.mb-1
+              span.feather-sm.me-1(data-feather='briefcase')
+              |  Works at 
+              a(href='#') GitHub
+            li.mb-1
+              span.feather-sm.me-1(data-feather='map-pin')
+              |  From 
+              a(href='#') Boston
+        hr.my-0
+        .card-body
+          h5.h6.card-title Elsewhere
+          ul.list-unstyled.mb-0
+            li.mb-1.d-flex.justify-content-between.align-items-center.flex-wrap
+              span
+                i.align-middle.feather-sm.me-1(data-feather="home")
+                | Website
+              a(href="#") https://pirulug.com
+            li.mb-1.d-flex.justify-content-between.align-items-center.flex-wrap
+              span
+                i.align-middle.feather-sm.me-1(data-feather="twitter")
+                | Twitter
+              a(href='#') @pirulug
+            li.mb-1.d-flex.justify-content-between.align-items-center.flex-wrap
+              span
+                i.align-middle.feather-sm.me-1(data-feather="facebook")
+                | Facebook
+              a(href='#') pirulug
+            li.mb-1.d-flex.justify-content-between.align-items-center.flex-wrap
+              span
+                i.align-middle.feather-sm.me-1(data-feather="instagram")
+                | Instagram
+              a(href='#') pirulug
+
+    .col-md-9.col-xl-8
+      .card
+        .card-header
+          h5.card-title.mb-0 Activities
+        .card-body.h-100
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Vanessa Tucker')
+            .flex-grow-1
+              small.float-end.text-navy 5m ago
+              strong Vanessa Tucker
+              |  started following 
+              strong Christina Mason
+              br
+              small.text-muted Today 7:51 pm
+              br
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Charles Hall')
+            .flex-grow-1
+              small.float-end.text-navy 30m ago
+              strong Charles Hall
+              |  posted something on 
+              strong Christina Mason
+              | &apos;s timeline
+              br
+              small.text-muted Today 7:21 pm
+              .border.text-sm.text-muted.p-2.mt-1
+                | Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
+                | pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+              a.btn.btn-sm.btn-danger.mt-1(href='#')
+                i.feather-sm(data-feather='heart')
+                |  Like
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Christina Mason')
+            .flex-grow-1
+              small.float-end.text-navy 1h ago
+              strong Christina Mason
+              |  posted a new blog
+              br
+              small.text-muted Today 6:35 pm
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='William Harris')
+            .flex-grow-1
+              small.float-end.text-navy 3h ago
+              strong William Harris
+              |  posted two photos on 
+              strong Christina Mason
+              | &apos;s timeline
+              br
+              small.text-muted Today 5:12 pm
+              .row.g-0.mt-1
+                .col-6.col-md-4.col-lg-4.col-xl-3
+                  img.img-fluid.pe-2(src='https://dummyimage.com/200x200/000/fff.jpg' alt='Unsplash')
+                .col-6.col-md-4.col-lg-4.col-xl-3
+                  img.img-fluid.pe-2(src='https://dummyimage.com/200x200/000/fff.jpg' alt='Unsplash')
+              a.btn.btn-sm.btn-danger.mt-1(href='#')
+                i.feather-sm(data-feather='heart')
+                |  Like
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='William Harris')
+            .flex-grow-1
+              small.float-end.text-navy 1d ago
+              strong William Harris
+              |  started following 
+              strong Christina Mason
+              br
+              small.text-muted Yesterday 3:12 pm
+              .d-flex.align-items-start.mt-1
+                a.pe-3(href='#')
+                  img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Christina Mason')
+                .flex-grow-1
+                  .border.text-sm.text-muted.p-2.mt-1
+                    | Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Christina Mason')
+            .flex-grow-1
+              small.float-end.text-navy 1d ago
+              strong Christina Mason
+              |  posted a new blog
+              br
+              small.text-muted Yesterday 2:43 pm
+          hr
+          .d-flex.align-items-start
+            img.rounded-circle.me-2(src='https://dummyimage.com/200x200/000/fff.jpg' width='36' height='36' alt='Charles Hall')
+            .flex-grow-1
+              small.float-end.text-navy 1d ago
+              strong Charles Hall
+              |  started following 
+              strong Christina Mason
+              br
+              small.text-muted Yesterdag 1:51 pm
+          hr
+          .d-grid
+            a.btn.btn-primary(href='#') Load more
+

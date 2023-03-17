@@ -1,0 +1,145 @@
+.navtop {
+  @extend .navbar;
+  @extend .navbar-expand;
+  @extend .bg-body;
+
+  padding: $navtop-padding-y $navtop-padding-x;
+
+  @include media-breakpoint-down(md) {
+    width: 100vw;
+  }
+
+  .avatar {
+    margin-top: -15px;
+    margin-bottom: -15px;
+  }
+
+  .navbar-nav {
+    direction: ltr;
+  }
+
+  .navbar-align {
+    margin-left: auto;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.15rem;
+    padding: $spacer * 0.875 0;
+    color: $gray-100;
+    display: block;
+
+    svg,
+    .feather {
+      color: $primary;
+      height: 24px;
+      width: 24px;
+      margin-left: -0.15rem;
+      margin-right: 0.375rem;
+      margin-top: -0.375rem;
+    }
+  }
+
+  .nav-icon,
+  .nav-flag {
+    padding: 0.1rem 0.8rem;
+    display: block;
+    font-size: 1.5rem;
+    color: $gray-600;
+    transition: $transition-appearance-fast;
+    line-height: 1.4;
+
+    &:after {
+      display: none !important;
+    }
+
+    &:hover,
+    &.active {
+      color: $primary;
+    }
+
+    svg,
+    .feather {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .nav-item {
+    .indicator {
+      background: $primary;
+      box-shadow: $box-shadow;
+      border-radius: 50%;
+      display: block;
+      height: 18px;
+      width: 18px;
+      padding: 1px;
+      position: absolute;
+      top: 0;
+      right: -8px;
+      text-align: center;
+      transition: top 0.1s ease-out;
+      font-size: 0.675rem;
+      color: $white;
+    }
+
+    &:hover .indicator {
+      top: -4px;
+    }
+
+    a:focus {
+      outline: 0;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .navtop .avatar {
+      max-height: 47px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .navtop {
+      padding: 0.75rem;
+    }
+
+    .nav-icon {
+      padding: 0.1rem 0.75rem;
+    }
+
+    .dropdown,
+    .dropleft,
+    .dropright,
+    .dropup {
+      position: inherit;
+    }
+
+    .navtop-expand .navtop-nav .dropdown-menu-lg {
+      min-width: 100%;
+    }
+
+    .nav-item .nav-link:after {
+      display: none;
+    }
+  }
+
+  .nav-flag img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .navtop input {
+    direction: ltr;
+  }
+}
+
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     .navtop {
+//       @extend .navbar-dark;
+//       background: $navtop-bg-dark;
+//     }
+//   }
+// }

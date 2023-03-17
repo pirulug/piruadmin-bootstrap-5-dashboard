@@ -1,0 +1,90 @@
+.tab {
+  --#{$prefix}tab-color: #{$tab-color};
+  --#{$prefix}tab-bg: #{$tab-bg};
+  --#{$prefix}tab-active-color: #{$tab-active-color};
+  --#{$prefix}tab-active-bg: #{$tab-active-bg};
+  --#{$prefix}tab-hover-color: #{$tab-hover-color};
+  --#{$prefix}tab-hover-bg: #{$tab-hover-bg};
+
+  margin-bottom: 2rem;
+
+  .nav-tabs {
+    border: 0;
+
+    .nav-link {
+      background: transparent;
+      border: 0;
+      color: var(--#{$prefix}tab-color);
+      padding: 0.75rem 1rem;
+
+      &.active {
+        background: var(--#{$prefix}tab-active-bg);
+        color: var(--#{$prefix}tab-active-color);
+      }
+
+      &:hover:not(.active) {
+        background: var(--#{$prefix}tab-hover-bg);
+        color: var(--#{$prefix}tab-hover-color);
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  .tab-content {
+    background: var(--#{$prefix}tab-bg);
+    border-radius: 0 0 0.2rem 0.2rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tab-vertical {
+  .nav-tabs {
+    flex-direction: column;
+    float: left;
+    border: 0;
+
+    .nav-link {
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0.2rem;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .tab-content {
+    overflow: auto;
+  }
+}
+@each $color, $value in $theme-colors {
+  .tab-#{$color} {
+    @include tab-color($value);
+    .nav-tabs {
+      .nav-link {
+        color: var(--#{$prefix}tab-color);
+
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+
+    .tab-content {
+      color: #fff;
+    }
+  }
+}
+
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+
+//   }
+// }

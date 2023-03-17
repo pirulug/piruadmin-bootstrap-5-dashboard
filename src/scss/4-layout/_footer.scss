@@ -1,0 +1,21 @@
+footer.footer {
+  padding: $spacer $spacer*0.875;
+  direction: ltr;
+  background: $footer-bg;
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100vw;
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    footer.footer {
+      background: $footer-bg-dark;
+    }
+  }
+}

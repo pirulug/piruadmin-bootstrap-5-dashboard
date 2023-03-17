@@ -1,0 +1,82 @@
+mixin header(title)
+  li.sidebar-header
+    | #{title}
+
+mixin item(title, url, icon)
+  li.sidebar-item(class=(pageUrl === url ? "active" : undefined))
+    a.sidebar-link(href=`${url}` + ".html")
+      i.align-middle(data-feather=`${icon}`)
+      span.align-middle #{title}
+
+mixin subItem(title, href, icon, id, pages)
+
+  - var isActive
+  each page in pages
+    if pageUrl === page
+      -isActive = "si"
+
+  li.sidebar-item(class=(isActive === "si" ? "active" : undefined))
+    a.sidebar-link(class=(isActive === "si" ? undefined : "collapsed") data-bs-target=`#${id}` data-bs-toggle='collapse')
+      i.align-middle(data-feather=`${icon}`)
+      span.align-middle #{title}
+    ul.sidebar-dropdown.list-unstyled.collapse(class=(isActive === "si" ? "show" : undefined) id=`${id}` data-bs-parent='#sidebar')    
+      block
+
+mixin subLink(title, url)
+  li.sidebar-item(class=(pageUrl === url ? "active" : undefined))
+    a.sidebar-link(href=`${url}` + ".html") #{title}
+
+
+nav#sidebar.sidebar.js-sidebar
+  .sidebar-content.js-simplebar
+    a.sidebar-brand(href='index.html')
+      span.align-middle #{siteName}
+    ul.sidebar-nav
+
+      +item("Dashboard", "dashboard", "sliders")
+
+      +header('Pages')
+
+      +subItem("Pages", "#", "file", "pages", ["pages-settings","pages-blank"])        
+        +subLink("Settings", "pages-settings")
+        +subLink("Blank Page", "pages-blank")
+
+      +item("Profile", "pages-profile", "user")
+
+      +subItem("Auth", "#", "users", "auth", ["auth-sign-in","auth-sign-up","auth-reset-password","auth-recover-password"])        
+        +subLink("Sign In", "auth-sign-in")
+        +subLink("Sign Up", "auth-sign-up")
+        +subLink("Reset Password", "auth-reset-password")
+        +subLink("Reccover Password", "auth-recover-password")
+        
+      +subItem("Erros", "#", "coffee", "errors", ["error-404", "error-500"]) 
+        +subLink("404", "error-404")
+        +subLink("500", "error-500")
+
+      +header('Tools & Components')
+
+      +subItem("UI Elements", "#", "users", "ui-elements",  ["ui-buttons", "ui-cards", "ui-general", "ui-images", "ui-tabs"])
+        +subLink("Buttons", "ui-buttons")
+        +subLink("Cards", "ui-cards")
+        +subLink("General UI", "ui-general")
+        +subLink("Images", "ui-images")
+        +subLink("Tabs", "ui-tabs")
+
+      +subItem("Tables", "#", "grid", "tables", ["table-bootstrap"]) 
+        +subLink("Table bootstrap", "table-bootstrap")
+        //- dataTables
+
+      +subItem("Forms", "#", "file", "forms", ["forms-basic-inputs"]) 
+        +subLink("Basics inputs", "forms-basic-inputs")
+        //- +subLink("Form layouts", "forms-layouts")
+        //- +subLink("Input groups", "forms-input-groups")
+
+      +subItem("Icons", "#", "coffee", "iconos", ["icons-feather","icons-awesome"]) 
+        +subLink("Feather", "icons-feather")
+        +subLink("Font Awesome", "icons-awesome")
+
+      +header("Plugins & Addons")
+
+      +item("Charts", "charts-chartjs", "bar-chart-2")
+
+      +item("Maps", "maps-google", "map")

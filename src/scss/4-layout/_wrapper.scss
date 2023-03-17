@@ -1,0 +1,22 @@
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+  background: $body-bg-alt;
+}
+
+body {
+  background: $body-bg-alt;
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .wrapper {
+      background: $body-bg-alt-dark;
+    }
+
+    body {
+      background: $body-bg-alt-dark;
+    }
+  }
+}

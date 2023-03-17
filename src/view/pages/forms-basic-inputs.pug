@@ -1,0 +1,111 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Basic Form'
+  -pageUrl = 'forms-basic-inputs'
+
+block content
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Input
+        .card-body
+          input.form-control(type='text' placeholder='Input')
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Textarea
+        .card-body
+          textarea.form-control(rows='2' placeholder='Textarea')
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Checkboxes
+        .card-body
+          div
+            label.form-check
+              input.form-check-input(type='checkbox' value='')
+              span.form-check-label
+                | Option one is this and that&mdash;be sure to include why it&apos;s great
+            label.form-check
+              input.form-check-input(type='checkbox' value='' disabled='')
+              span.form-check-label
+                | Option two is disabled
+          div
+            label.form-check.form-check-inline
+              input.form-check-input(type='checkbox' value='option1')
+              span.form-check-label
+                | 1
+            label.form-check.form-check-inline
+              input.form-check-input(type='checkbox' value='option2')
+              span.form-check-label
+                | 2
+            label.form-check.form-check-inline
+              input.form-check-input(type='checkbox' value='option3' disabled='')
+              span.form-check-label
+                | 3
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Read only
+        .card-body
+          input.form-control(type='text' placeholder='Readonly input' readonly='')
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Radios
+        .card-body
+          div
+            label.form-check
+              input.form-check-input(type='radio' value='option1' name='radios-example' checked='')
+              span.form-check-label
+                | Option one is this and that&mdash;be sure to include why it&apos;s great
+            label.form-check
+              input.form-check-input(type='radio' value='option2' name='radios-example')
+              span.form-check-label
+                | Option two can be something else and selecting it will deselect option one
+            label.form-check
+              input.form-check-input(type='radio' value='option3' name='radios-example' disabled='')
+              span.form-check-label
+                | Option three is disabled
+          div
+            label.form-check.form-check-inline
+              input.form-check-input(type='radio' name='inline-radios-example' value='option1')
+              span.form-check-label
+                | 1
+            label.form-check.form-check-inline
+              input.form-check-input(type='radio' name='inline-radios-example' value='option2')
+              span.form-check-label
+                | 2
+            label.form-check.form-check-inline
+              input.form-check-input(type='radio' name='inline-radios-example' value='option3' disabled='')
+              span.form-check-label
+                | 3
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Selects
+        .card-body
+          select.form-select.mb-3
+            option(selected='') Open this select menu
+            option One
+            option Two
+            option Three
+          select.form-control(multiple='')
+            option One
+            option Two
+            option Three
+            option Four
+      .card
+        .card-header
+          h5.card-title.mb-0 Disabled
+        .card-body
+          .mb-3
+            label.form-label Disabled input
+            input.form-control(type='text' placeholder='Disabled input' disabled='')
+          .mb-3
+            label.form-label Disabled select menu
+            select.form-control(disabled='')
+              option Disabled select
+          label.form-check
+            input.form-check-input(type='checkbox' value='' disabled='')
+            span.form-check-label
+              | Can&apos;t check this

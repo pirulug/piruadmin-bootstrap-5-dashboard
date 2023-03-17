@@ -1,0 +1,38 @@
+extends ../layouts/auth
+
+append config
+  -pageName = 'Sing In'
+  -pageUrl = 'pages-sign-in'
+
+block content
+
+  .container.d-flex.flex-column
+    .row.vh-100
+      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
+        .d-table-cell.align-middle
+          .text-center.mt-4
+            h1.h2 Sign in
+            p.lead
+              | Don't have an account yet? Sign up here
+          .card
+            .card-body
+              .m-sm-4
+                form
+                  .mb-3
+                    label.form-label Email
+                    input.form-control(type='email' name='email' placeholder='Enter your email')
+                  .mb-3
+                    label.form-label Password
+                    input.form-control(type='password' name='password' placeholder='Enter your password')
+                    small
+                      a(href='index.html') Forgot password?
+                  div
+                    label.form-check
+                      input.form-check-input(type='checkbox' value='remember-me' name='remember-me' checked='')
+                      span.form-check-label
+                        | Remember me next time
+                  .text-center.mt-3
+                    a.btn.btn-primary(href='index.html') Sign in
+                    // <button type="submit" class="btn btn-primary">Sign in</button>
+
+

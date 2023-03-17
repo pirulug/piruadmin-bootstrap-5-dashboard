@@ -1,0 +1,29 @@
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentcolor;
+}
+
+.active .bi {
+  display: block !important;
+}
+
+.settings-toggle {
+  background: $primary;
+  border-radius: 50%;
+  bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  height: 52px;
+  padding: 1rem;
+  position: fixed;
+  right: 20px;
+  width: 52px;
+
+  svg {
+    height: 20px;
+    margin-top: -0.25rem;
+    width: 20px;
+  }
+}

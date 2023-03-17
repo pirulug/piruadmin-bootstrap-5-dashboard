@@ -1,0 +1,385 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Buttons'
+  -pageUrl = 'ui-buttons'
+
+block content
+
+  h6.mb-0.text-uppercase Basic Buttons
+  hr
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default.
+        .card-body
+          button.btn.btn-primary Primary
+          button.btn.btn-secondary Secondary
+          button.btn.btn-success Success
+          button.btn.btn-danger Danger
+          button.btn.btn-warning Warning
+          button.btn.btn-info Info
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Disabled.
+        .card-body        
+          button.btn.btn-primary(disabled='') Primary
+          button.btn.btn-secondary(disabled='') Secondary
+          button.btn.btn-success(disabled='') Success
+          button.btn.btn-danger(disabled='') Danger
+          button.btn.btn-warning(disabled='') Warning
+          button.btn.btn-info(disabled='') Info
+
+  h6.mb-0.text-uppercase Rounded Buttons
+  hr
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default.
+        .card-body
+          button.btn.rounded-pill.btn-primary Primary
+          button.btn.rounded-pill.btn-secondary Secondary
+          button.btn.rounded-pill.btn-success Success
+          button.btn.rounded-pill.btn-danger Danger
+          button.btn.rounded-pill.btn-warning Warning
+          button.btn.rounded-pill.btn-info Info
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Disabled.
+        .card-body        
+          button.btn.rounded-pill.btn-primary(disabled='') Primary
+          button.btn.rounded-pill.btn-secondary(disabled='') Secondary
+          button.btn.rounded-pill.btn-success(disabled='') Success
+          button.btn.rounded-pill.btn-danger(disabled='') Danger
+          button.btn.rounded-pill.btn-warning(disabled='') Warning
+          button.btn.rounded-pill.btn-info(disabled='') Info
+
+  h6.mb-0.text-uppercase Outline Buttons
+  hr
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default.
+        .card-body
+          button.btn.btn-outline-primary Primary
+          button.btn.btn-outline-secondary Secondary
+          button.btn.btn-outline-success Success
+          button.btn.btn-outline-danger Danger
+          button.btn.btn-outline-warning Warning
+          button.btn.btn-outline-info Info
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Disabled.
+        .card-body        
+          button.btn.btn-outline-primary(disabled='') Primary
+          button.btn.btn-outline-secondary(disabled='') Secondary
+          button.btn.btn-outline-success(disabled='') Success
+          button.btn.btn-outline-danger(disabled='') Danger
+          button.btn.btn-outline-warning(disabled='') Warning
+          button.btn.btn-outline-info(disabled='') Info
+
+  h6.mb-0.text-uppercase Icon Buttons
+  hr
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default.
+        .card-body.text-center
+          .mb-3
+            button.mb-1.btn.btn-primary
+              i.far.fa-smile
+              |  Primary
+            button.mb-1.btn.btn-secondary
+              i.fas.fa-globe-americas
+              |  Secondary
+            button.mb-1.btn.btn-success
+              i.fas.fa-check
+              |  Success
+            button.mb-1.btn.btn-danger
+              i.fas.fa-times
+              |  Danger
+            button.mb-1.btn.btn-warning
+              i.fas.fa-exclamation
+              |  Warning
+            button.mb-1.btn.btn-info
+              i.fas.fa-info
+              |  Info
+          div
+            button.mb-1.btn.btn-primary
+              i.far.fa-smile
+            button.mb-1.btn.btn-secondary
+              i.fas.fa-globe-americas
+            button.mb-1.btn.btn-success
+              i.fas.fa-check
+            button.mb-1.btn.btn-danger
+              i.fas.fa-times
+            button.mb-1.btn.btn-warning
+              i.fas.fa-exclamation
+            button.mb-1.btn.btn-info
+              i.fas.fa-info
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Disabled.
+        .card-body.text-center        
+          .mb-3
+            button.btn.mb-1.btn-facebook
+              i.align-middle.fab.fa-facebook
+              |  Facebook
+            button.btn.mb-1.btn-twitter
+              i.align-middle.fab.fa-twitter
+              |  Twitter
+            button.btn.mb-1.btn-google
+              i.align-middle.fab.fa-google
+              |  Google
+            button.btn.mb-1.btn-youtube
+              i.align-middle.fab.fa-youtube
+              |  Youtube
+            button.btn.mb-1.btn-vimeo
+              i.align-middle.fab.fa-vimeo
+              |  Vimeo
+            button.btn.mb-1.btn-dribbble
+              i.align-middle.fab.fa-dribbble
+              |  Dribbble
+            button.btn.mb-1.btn-github
+              i.align-middle.fab.fa-github
+              |  Github
+            button.btn.mb-1.btn-instagram
+              i.align-middle.fab.fa-instagram
+              |  Instagram
+            button.btn.mb-1.btn-pinterest
+              i.align-middle.fab.fa-pinterest
+              |  Pinterest
+            button.btn.mb-1.btn-flickr
+              i.align-middle.fab.fa-flickr
+              |  Flickr
+            button.btn.mb-1.btn-bitbucket
+              i.align-middle.fab.fa-bitbucket
+              |  Bitbucket
+          div
+            button.btn.mb-1.btn-facebook
+              i.align-middle.fab.my-1.fa-facebook
+            button.btn.mb-1.btn-twitter
+              i.align-middle.fab.my-1.fa-twitter
+            button.btn.mb-1.btn-google
+              i.align-middle.fab.my-1.fa-google
+            button.btn.mb-1.btn-youtube
+              i.align-middle.fab.my-1.fa-youtube
+            button.btn.mb-1.btn-vimeo
+              i.align-middle.fab.my-1.fa-vimeo
+            button.btn.mb-1.btn-dribbble
+              i.align-middle.fab.my-1.fa-dribbble
+            button.btn.mb-1.btn-github
+              i.align-middle.fab.my-1.fa-github
+            button.btn.mb-1.btn-instagram
+              i.align-middle.fab.my-1.fa-instagram
+            button.btn.mb-1.btn-pinterest
+              i.align-middle.fab.my-1.fa-pinterest
+            button.btn.mb-1.btn-flickr
+              i.align-middle.fab.my-1.fa-flickr
+            button.btn.mb-1.btn-bitbucket
+              i.align-middle.fab.my-1.fa-bitbucket
+  
+  h6.mb-0.text-uppercase More Buttons
+  hr
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Button Sizes
+          h6.card-subtitle.text-muted Fancy larger or smaller buttons.
+        .card-body.text-center
+          .mb-3
+            button.btn.btn-primary.btn-sm Small
+            button.btn.btn-primary Medium
+            button.btn.btn-primary.btn-lg Large
+          div
+            button.btn.btn-primary.btn-sm
+              i.fas.fa-globe-americas
+              |  Small
+            button.btn.btn-primary
+              i.fas.fa-globe-americas
+              |  Medium
+            button.btn.btn-primary.btn-lg
+              i.fas.fa-globe-americas
+              |  Large
+      .card.mb-3
+        .card-header
+          h5.card-title Button Dropdown
+          h6.card-subtitle.text-muted Dropdowns styles with buttons.
+        .card-body.text-center
+          .mb-3
+            .btn-group
+              button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Primary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Secondary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-success.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Success
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Danger
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Warning
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Info
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+          div
+            .btn-group.btn-group-sm
+              button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Primary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Secondary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-success.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Success
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Danger
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Warning
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Info
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Button Group
+          h6.card-subtitle.text-muted Button group components.
+        .card-body
+          h6.card-subtitle.mb-2.text-muted Horizontal button group
+          .btn-group.btn-group-lg.mb-3(role='group' aria-label='Large button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          br
+          .btn-group.mb-3(role='group' aria-label='Default button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          br
+          .btn-group.btn-group-sm.mb-4(role='group' aria-label='Small button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          h6.card-subtitle.mb-2.text-muted Button toolbar
+          .btn-toolbar.mb-4(role='toolbar' aria-label='Toolbar with button groups')
+            .btn-group.me-2(role='group' aria-label='First group')
+              button.btn.btn-secondary(type='button') 1
+              button.btn.btn-secondary(type='button') 2
+              button.btn.btn-secondary(type='button') 3
+              button.btn.btn-secondary(type='button') 4
+            .btn-group.me-2(role='group' aria-label='Second group')
+              button.btn.btn-secondary(type='button') 5
+              button.btn.btn-secondary(type='button') 6
+              button.btn.btn-secondary(type='button') 7
+            .btn-group(role='group' aria-label='Third group')
+              button.btn.btn-secondary(type='button') 8
+          h6.card-subtitle.mb-2.text-muted Vertical button group
+          .btn-toolbar
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-primary(type='button') Button
+              button.btn.btn-primary(type='button') Button
+              button.btn.btn-primary(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-success(type='button') Button
+              button.btn.btn-success(type='button') Button
+              button.btn.btn-success(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-warning(type='button') Button
+              button.btn.btn-warning(type='button') Button
+              button.btn.btn-warning(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-danger(type='button') Button
+              button.btn.btn-danger(type='button') Button
+              button.btn.btn-danger(type='button') Button
+

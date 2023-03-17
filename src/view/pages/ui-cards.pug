@@ -1,0 +1,45 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Cards'
+  -pageUrl = 'ui-cards'
+
+block content
+
+  .row
+    .col-12.col-md-6
+      .card
+        img.card-img-top(src='https://dummyimage.com/400x200/000/fff.jpg' alt='Unsplash')
+        .card-header
+          h5.card-title.mb-0 Card with image and links
+        .card-body
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+          a.card-link(href='#') Card link
+          a.card-link(href='#') Another link
+    .col-12.col-md-6
+      .card.mb-3
+        img.card-img-top(src='https://dummyimage.com/400x200/000/fff.jpg' alt='Unsplash')
+        .card-header
+          h5.card-title.mb-0 Card with image and button
+        .card-body
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+          a.btn.btn-primary(href='#') Go somewhere
+    .col-12.col-md-6
+      .card
+        .card-header
+          h5.card-title.mb-0 Card with links
+        .card-body
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+          a.card-link(href='#') Card link
+          a.card-link(href='#') Another link
+    .col-12.col-md-6
+      .card
+        .card-header
+          h5.card-title.mb-0 Card with button
+        .card-body
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+          a.btn.btn-primary(href='#') Go somewhere

@@ -1,0 +1,154 @@
+nav.navtop
+  a.sidebar-toggle.js-sidebar-toggle
+    i.hamburger.align-self-center
+
+  .navbar-collapse.collapse
+    ul.navbar-nav.navbar-align
+
+      svg(xmlns='http://www.w3.org/2000/svg' style='display: none;')
+        symbol#circle-half(viewbox='0 0 16 16')
+          path(d='M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z')
+        symbol#moon-stars-fill(viewbox='0 0 16 16')
+          path(d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z')
+          path(d='M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z')
+        symbol#sun-fill(viewbox='0 0 16 16')
+          path(d='M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z')
+          symbol#check2(viewbox='0 0 16 16')
+            path(d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z')
+
+      li.nav-item.dropdown
+        button#bd-theme.btn.btn-link.nav-link.dropdown-toggle.d-flex.align-items-center(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+          svg.bi.my-1.theme-icon-active
+            use(href='#circle-half')
+        ul.dropdown-menu.dropdown-menu-end
+          li
+            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='light')
+              svg.bi.me-2.opacity-50.theme-icon
+                use(href='#sun-fill')
+              | Light
+              svg.bi.ms-auto.d-none
+                use(href='#check2')
+          li
+            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='dark')
+              svg.bi.me-2.opacity-50.theme-icon
+                use(href='#moon-stars-fill')
+              | Dark
+              svg.bi.ms-auto.d-none
+                use(href='#check2')
+          li
+            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='auto')
+              svg.bi.me-2.opacity-50.theme-icon
+                use(href='#circle-half')
+              | Auto
+              svg.bi.ms-auto.d-none
+                use(href='#check2')
+
+      li.nav-item.dropdown
+        a#alertsDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+          .position-relative
+            i.align-middle(data-feather='bell')
+            span.indicator 4
+        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='alertsDropdown')
+          .dropdown-menu-header
+            | 4 New Notifications
+          .list-group
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  i.text-danger(data-feather='alert-circle')
+                .col-10
+                  div Update completed
+                  .text-muted.small.mt-1 Restart server 12 to complete the update.
+                  .text-muted.small.mt-1 30m ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  i.text-warning(data-feather='bell')
+                .col-10
+                  div Lorem ipsum
+                  .text-muted.small.mt-1 Aliquam ex eros, imperdiet vulputate hendrerit et.
+                  .text-muted.small.mt-1 2h ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  i.text-primary(data-feather='home')
+                .col-10
+                  div Login from 192.186.1.8
+                  .text-muted.small.mt-1 5h ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  i.text-success(data-feather='user-plus')
+                .col-10
+                  div New connection
+                  .text-muted.small.mt-1 Christina accepted your request.
+                  .text-muted.small.mt-1 14h ago
+          .dropdown-menu-footer
+            a.text-muted(href='#') Show all notifications
+      li.nav-item.dropdown
+        a#messagesDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+          .position-relative
+            i.align-middle(data-feather='message-square')
+        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='messagesDropdown')
+          .dropdown-menu-header
+            .position-relative
+              | 4 New Messages
+          .list-group
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Vanessa Tucker')
+                .col-10.ps-2
+                  div Vanessa Tucker
+                  .text-muted.small.mt-1 Nam pretium turpis et arcu. Duis arcu tortor.
+                  .text-muted.small.mt-1 15m ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='William Harris')
+                .col-10.ps-2
+                  div William Harris
+                  .text-muted.small.mt-1 Curabitur ligula sapien euismod vitae.
+                  .text-muted.small.mt-1 2h ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Christina Mason')
+                .col-10.ps-2
+                  div Christina Mason
+                  .text-muted.small.mt-1 Pellentesque auctor neque nec urna.
+                  .text-muted.small.mt-1 4h ago
+            a.list-group-item(href='#')
+              .row.g-0.align-items-center
+                .col-2
+                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Sharon Lessman')
+                .col-10.ps-2
+                  div Sharon Lessman
+                  .text-muted.small.mt-1 Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                  .text-muted.small.mt-1 5h ago
+          .dropdown-menu-footer
+            a.text-muted(href='#') Show all messages
+      li.nav-item.dropdown
+        a.nav-icon.dropdown-toggle.d-inline-block.d-sm-none(href='#' data-bs-toggle='dropdown')
+          i.align-middle(data-feather='user')
+        a.nav-link.dropdown-toggle.d-none.d-sm-inline-block(href='#' data-bs-toggle='dropdown')
+          img.avatar.img-fluid.rounded.me-1(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Charles Hall')
+          span Pirulug
+        .dropdown-menu.dropdown-menu-end
+          a.dropdown-item(href='pages-profile.html')
+            i.align-middle.me-1(data-feather='user')
+            |  Profile
+          a.dropdown-item(href='#')
+            i.align-middle.me-1(data-feather='pie-chart')
+            |  Analytics
+          .dropdown-divider
+          a.dropdown-item(href='pages-settings.html')
+            i.align-middle.me-1(data-feather='settings')
+            |  Settings &amp; Privacy
+          a.dropdown-item(href='#')
+            i.align-middle.me-1(data-feather='help-circle')
+            |  Help Center
+          .dropdown-divider
+          a.dropdown-item(href='#') 
+            i.align-middle.me-1(data-feather='log-out')
+            | Log out

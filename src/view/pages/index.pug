@@ -1,0 +1,23 @@
+extends ../layouts/home
+
+append config
+  -pageName = 'Index'
+  -pageUrl = 'index'
+
+block header
+  // Header
+  header.bg-body-tertiary.py-5
+    .container.px-5
+      .row.gx-5.justify-content-center
+        .col-lg-6
+          .text-center.my-5
+            h1.display-5.fw-bolder.mb-2 #{siteName} Bootstrap 5 Dashboard
+            p.lead-50.mb-4 Open source dashboard powered by Bootstrap 5
+            .d-grid.gap-3.d-sm-flex.justify-content-sm-center
+              a.btn.btn-primary.btn-lg.me-1(href='dashboard.html') 
+                |Demo
+              a.btn.btn-outline-primary.btn-lg(href='dashboard.html') Documentation
+
+block content
+  .d-flex.justify-content-center.my-5
+    img.col-md-8.col-12.mx-auto(src='img/background.png' alt='Imagen de demostración')

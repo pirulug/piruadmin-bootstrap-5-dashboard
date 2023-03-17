@@ -1,0 +1,48 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Google Maps'
+  -pageUrl = 'maps-google'
+
+block content
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default Map
+          h6.card-subtitle.text-muted Displays the default road map view.
+        .card-body
+          #default_map.content(style='height: 300px;')
+    .col-12.col-lg-6
+      .card
+        .card-header
+          h5.card-title Hybrid Map
+          h6.card-subtitle.text-muted Displays a mixture of normal and satellite views.
+        .card-body
+          #hybrid_map.content(style='height: 300px;')
+
+block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&callback=initMaps' async defer)
+
+  script.
+    function initMaps() {
+      var defaultMap = {
+        zoom: 14,
+        center: {
+          lat: 40.712784,
+          lng: -74.005941
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      new google.maps.Map(document.getElementById("default_map"), defaultMap);
+      var hybridMap = {
+        zoom: 14,
+        center: {
+          lat: 40.712784,
+          lng: -74.005941
+        },
+        mapTypeId: google.maps.MapTypeId.HYBRID
+      };
+      new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
+      }

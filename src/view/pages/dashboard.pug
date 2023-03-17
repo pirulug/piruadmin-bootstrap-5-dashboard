@@ -1,0 +1,219 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Dashboard'
+  -pageUrl = 'dashboard'
+
+block content
+
+  .row.g-4
+    .col-sm-6.col-xl-3
+      .card.border-left-primary.mb-3
+        .card-body
+          .row
+            .col.mt-0
+              h5.card-title Sales
+            .col-auto
+              .stat.stat-primary
+                i.align-middle(data-feather='truck')
+          h1.mt-1.mb-3 2.382
+          .mb-0
+            span.text-danger
+              i.mdi.mdi-arrow-bottom-right
+              |  -3.65%
+            span.text-muted Since last week
+    .col-sm-6.col-xl-3 
+      .card.mb-3
+        .card-body
+          .row
+            .col.mt-0
+              h5.card-title Visitors
+            .col-auto
+              .stat.stat-success
+                i.align-middle(data-feather='users')
+          h1.mt-1.mb-3 14.212
+          .mb-0
+            span.text-success
+              i.mdi.mdi-arrow-bottom-right
+              |  5.25%
+            span.text-muted Since last week
+    .col-sm-6.col-xl-3
+      .card.mb-3
+        .card-body
+          .row
+            .col.mt-0
+              h5.card-title Earnings
+            .col-auto
+              .stat.stat-info
+                i.align-middle(data-feather='dollar-sign')
+          h1.mt-1.mb-3 $21.300
+          .mb-0
+            span.text-success
+              i.mdi.mdi-arrow-bottom-right
+              |  6.65%
+            span.text-muted Since last week
+    .col-sm-6.col-xl-3  
+      .card.mb-3
+        .card-body
+          .row
+            .col.mt-0
+              h5.card-title Orders
+            .col-auto
+              .stat.stat-danger
+                i.align-middle(data-feather='shopping-cart')
+          h1.mt-1.mb-3 64
+          .mb-0
+            span.text-danger
+              i.mdi.mdi-arrow-bottom-right
+              |  -2.25%
+            span.text-muted Since last week
+
+  .row.g-4
+    .col-12.col-md-12.col-xxl-6.d-flex.order-3.order-xxl-2
+      .card.mb-3.flex-fill.w-100
+        .card-header
+          h5.card-title.mb-0 Recent Movement
+        .card-body.py-3
+          canvas#chartjs-dashboard-line
+    .col-12.col-md-12.col-xxl-6.d-flex.order-3.order-xxl-2
+      .card.mb-3.flex-fill.w-100
+        .card-header
+          h5.card-title.mb-0 Real-Time
+        .card-body.px-4
+
+          canvas#chartjs-dashboard-bar(style='height:350px;')
+
+  .row
+    .col-12.d-flex
+      .card.flex-fill
+        .card-header
+          h5.card-title.mb-0 Latest Projects
+        table.table.table-hover.my-0
+          thead
+            tr
+              th Name
+              th.d-none.d-xl-table-cell Start Date
+              th.d-none.d-xl-table-cell End Date
+              th Status
+              th.d-none.d-md-table-cell Assignee
+          tbody
+            tr
+              td Project Apollo
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-success Done
+              td.d-none.d-md-table-cell Vanessa Tucker
+            tr
+              td Project Fireball
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-danger Cancelled
+              td.d-none.d-md-table-cell William Harris
+            tr
+              td Project Hades
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-success Done
+              td.d-none.d-md-table-cell Sharon Lessman
+            tr
+              td Project Nitro
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-warning In progress
+              td.d-none.d-md-table-cell Vanessa Tucker
+            tr
+              td Project Phoenix
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-success Done
+              td.d-none.d-md-table-cell William Harris
+            tr
+              td Project X
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-success Done
+              td.d-none.d-md-table-cell Sharon Lessman
+            tr
+              td Project Romeo
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-success Done
+              td.d-none.d-md-table-cell Christina Mason
+            tr
+              td Project Wombat
+              td.d-none.d-xl-table-cell 01/01/2021
+              td.d-none.d-xl-table-cell 31/06/2021
+              td
+                span.badge.bg-warning In progress
+              td.d-none.d-md-table-cell William Harris
+
+block scripts 
+
+  script.
+
+    const ctx = document.getElementById('chartjs-dashboard-line').getContext('2d');
+    //- const labels = Utils.months({count: 7});
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
+            datasets: [{
+                label: 'Total de Visitas',
+                borderColor: '#ff0055',
+                backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
+                data: [
+                  1000,
+                  500,
+                  48254,
+                  4554,
+                  85555,
+                  364564,
+                  457878,
+                  45455,
+                  2,
+                  100,
+                  1545,
+                  95454
+                ]              
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+    // Bar chart
+    new Chart(document.getElementById("chartjs-dashboard-bar"), {
+      type: "bar",
+      data: {
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+        datasets: [{
+          label: "This year",
+          backgroundColor: window.theme.primary,
+          borderColor: window.theme.primary,
+          hoverBackgroundColor: window.theme.primary,
+          hoverBorderColor: window.theme.primary,
+          data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+          barPercentage: .75,
+          categoryPercentage: .5
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        legend: {
+          display: false
+        },
+      }
+    });

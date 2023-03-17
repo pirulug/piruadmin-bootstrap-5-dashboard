@@ -1,0 +1,217 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Tables'
+  -pageUrl = 'table-bootstrap'
+
+block content
+  .row
+    .col-xl-9.mx-auto
+      h6.mb-0.text-uppercase Basic Table
+      hr
+      .card
+        .card-body
+          table.table.mb-0
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Striped rows
+      hr
+      .card
+        .card-body
+          table.table.mb-0.table-striped
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Dark Table
+      hr
+      .card
+        .card-body
+          table.table.mb-0.table-dark.table-striped
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Hoverable rows
+      hr
+      .card
+        .card-body
+          table.table.mb-0.table-hover
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Bordered tables
+      hr
+      .card
+        .card-body
+          table.table.table-bordered.mb-0
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Tables without borders
+      hr
+      .card
+        .card-body
+          table.table.table-borderless.mb-0
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Small tables
+      hr
+      .card
+        .card-body
+          table.table.table-sm.mb-0
+            thead
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter
+      h6.mb-0.text-uppercase Table head
+      hr
+      .card
+        .card-body
+          table.table.mb-0
+            thead.table-dark
+              tr
+                th(scope='col') #
+                th(scope='col') First
+                th(scope='col') Last
+                th(scope='col') Handle
+            tbody
+              tr
+                th(scope='row') 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                th(scope='row') 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                th(scope='row') 3
+                td(colspan='2') Larry the Bird
+                td @twitter

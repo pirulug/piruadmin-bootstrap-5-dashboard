@@ -1,0 +1,106 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Pages Settings'
+  -pageUrl = 'pages-settings'
+
+block content
+
+  .row
+    .col-md-3.col-xl-2
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Profile Settings
+        .list-group.list-group-flush(role='tablist')
+          a.list-group-item.list-group-item-action.active(data-bs-toggle='list' href='#account' role='tab')
+            | Account
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#password' role='tab')
+            | Password
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Privacy and safety
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Email notifications
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Web notifications
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Widgets
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Your data
+          a.list-group-item.list-group-item-action(data-bs-toggle='list' href='#' role='tab')
+            | Delete account
+    .col-md-9.col-xl-10
+      .tab-content
+        #account.tab-pane.fade.show.active(role='tabpanel')
+          .card.mb-3
+            .card-header
+              h5.card-title.mb-0 Public info
+            .card-body
+              form
+                .row
+                  .col-md-8
+                    .mb-3
+                      label.form-label(for='inputUsername') Username
+                      input#inputUsername.form-control(type='text' placeholder='Username')
+                    .mb-3
+                      label.form-label(for='inputUsername') Biography
+                      textarea#inputBio.form-control(rows='2' placeholder='Tell something about yourself')
+                  .col-md-4
+                    .text-center
+                      img.rounded-circle.img-responsive.mt-2(alt='Charles Hall' src='https://dummyimage.com/400x400/000/fff.jpg' width='128' height='128')
+                      .mt-2
+                        span.btn.btn-primary
+                          i.fas.fa-upload
+                          |  Upload
+                      small For best results, use an image at least 128px by 128px in .jpg format
+                button.btn.btn-primary(type='submit') Save changes
+          .card.mb-3
+            .card-header
+              h5.card-title.mb-0 Private info
+            .card-body
+              form
+                .row
+                  .mb-3.col-md-6
+                    label.form-label(for='inputFirstName') First name
+                    input#inputFirstName.form-control(type='text' placeholder='First name')
+                  .mb-3.col-md-6
+                    label.form-label(for='inputLastName') Last name
+                    input#inputLastName.form-control(type='text' placeholder='Last name')
+                .mb-3
+                  label.form-label(for='inputEmail4') Email
+                  input#inputEmail4.form-control(type='email' placeholder='Email')
+                .mb-3
+                  label.form-label(for='inputAddress') Address
+                  input#inputAddress.form-control(type='text' placeholder='1234 Main St')
+                .mb-3
+                  label.form-label(for='inputAddress2') Address 2
+                  input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
+                .row
+                  .mb-3.col-md-6
+                    label.form-label(for='inputCity') City
+                    input#inputCity.form-control(type='text')
+                  .mb-3.col-md-4
+                    label.form-label(for='inputState') State
+                    select#inputState.form-control
+                      option(selected='') Choose...
+                      option ...
+                  .mb-3.col-md-2
+                    label.form-label(for='inputZip') Zip
+                    input#inputZip.form-control(type='text')
+                button.btn.btn-primary(type='submit') Save changes
+        #password.tab-pane.fade(role='tabpanel')
+          .card
+            .card-body
+              h5.card-title Password
+              form
+                .mb-3
+                  label.form-label(for='inputPasswordCurrent') Current password
+                  input#inputPasswordCurrent.form-control(type='password')
+                  small
+                    a(href='#') Forgot your password?
+                .mb-3
+                  label.form-label(for='inputPasswordNew') New password
+                  input#inputPasswordNew.form-control(type='password')
+                .mb-3
+                  label.form-label(for='inputPasswordNew2') Verify password
+                  input#inputPasswordNew2.form-control(type='password')
+                button.btn.btn-primary(type='submit') Save changes
