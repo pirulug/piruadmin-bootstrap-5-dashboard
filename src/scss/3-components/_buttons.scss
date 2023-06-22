@@ -1,11 +1,11 @@
 .btn {
   // box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-out;
+  //transition: all 0.3s ease-out;
 
-  &:hover {
-    box-shadow: none;
-    transform: translateY(-3px);
-  }
+  // &:hover {
+  //   box-shadow: none;
+  //   transform: translateY(-3px);
+  // }
 
   .feather {
     width: 14px;
@@ -17,7 +17,7 @@
   .btn-#{$color} {
     @include button-color($white);
     @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -26,7 +26,7 @@
     @include button-variant($value, $value);
     @include button-color($white);
     @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -39,14 +39,14 @@
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
-    // @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    @include button-color-hover($white);
+    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 @each $color, $value in $social-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
     @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
