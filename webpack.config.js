@@ -20,6 +20,9 @@ const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
   fileName.endsWith(".pug")
 );
 
+// Genera un número aleatorio entre 1024 y 65535
+const randomPort = Math.floor(Math.random() * (65535 - 1024) + 1024);
+
 module.exports = {
   entry: {
     app: "./src/js/app.js",
@@ -151,7 +154,7 @@ module.exports = {
     },
     watchFiles: ["src/**/*"],
     compress: true,
-    port: 6970,
+    port: randomPort,
     // open: {
     //   app: {
     //     name: "firefox",
