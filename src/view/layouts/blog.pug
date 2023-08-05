@@ -11,7 +11,23 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='')
 
+    // Primary Meta Tags
     title #{pageName} | #{siteName}
+    meta(name='title' content=`${pageName} | ${siteName}`)
+    meta(name='description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
+    meta(name='keywords' content='bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard')
+    // Open Graph / Facebook
+    meta(property='og:type' content='website')
+    meta(property='og:url' content=`https://pirulug.github.io/admin-pirulug/${pageUrl}.html`)
+    meta(property='og:title' content=`${pageName} | ${siteName}`)
+    meta(property='og:description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
+    meta(property='og:image' content='https://pirulug.github.io/admin-pirulug/img/background.png')
+    // Twitter
+    meta(property='twitter:card' content='summary_large_image')
+    meta(property='twitter:url' content=`https://pirulug.github.io/admin-pirulug/${pageUrl}.html`)
+    meta(property='twitter:title' content=`${pageName} | ${siteName}`)
+    meta(property='twitter:description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
+    meta(property='twitter:image' content='https://pirulug.github.io/admin-pirulug/img/background.png')
 
     // Favicon
     link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
