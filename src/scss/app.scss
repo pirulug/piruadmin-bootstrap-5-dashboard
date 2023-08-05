@@ -1,56 +1,50 @@
-// Functions
-// @import "0-functions/functions";
 @import "~bootstrap/scss/_functions";
 
-// Variables
-@import "1-variables/variables";
-@import "1-variables/variables-dark";
+// Base
+@import "base/reset";
+@import "base/typography";
+@import "base/variables";
+@import "base/variables-dark";
 
-// Bootstrap
-@import "~bootstrap/scss/bootstrap";
+// Third-party Libraries
+@import "~bootstrap/scss/bootstrap"; // Bootstrap
 
-// Theme mixins
-@import "2-mixins/button";
-@import "2-mixins/tab";
+// Mixins
+@import "mixins/button";
+@import "mixins/tab";
 
-// Theme components
-@import "3-components/avatar";
-@import "3-components/buttons";
-@import "3-components/card";
-@import "3-components/dropdown";
-@import "3-components/feather";
-@import "3-components/hamburger";
-@import "3-components/stat";
-@import "3-components/tab";
+// Components
+@import "components/avatar";
+@import "components/buttons";
+@import "components/card";
+@import "components/dropdown";
+@import "components/feather";
+@import "components/hamburger";
+@import "components/stat";
+@import "components/tab";
 
-// Theme layout
-@import "4-layout/content";
-@import "4-layout/footer";
-@import "4-layout/main";
-@import "4-layout/navtop";
-@import "4-layout/sidebar";
-@import "4-layout/wrapper";
+// Layout
+@import "layout/content";
+@import "layout/footer";
+@import "layout/main";
+@import "layout/navtop";
+@import "layout/sidebar";
+@import "layout/wrapper";
 
-// Theme utilities
+// Pages
+@import "pages/home";
+@import "pages/about";
 
-// Theme plugins
-// FontAwesome
-$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/v4-shims";
+// Utilities
+@import "utilities/variables";
+@import "utilities/functions";
+@import "utilities/helpers";
 
-// Simplebar
-@import "~simplebar/dist/simplebar";
+// Third-party Plugins and Libraries
+@import "plugins/flatpickr";
+@import "plugins/fontawesome";
+@import "plugins/simplebar";
+@import "plugins/vendor";
 
-// Flatpickr
-@import "~flatpickr/dist/flatpickr";
-
-// Theme plugin styles
-@import "6-vendor/simplebar";
-@import "6-vendor/flatpickr";
-
-// Theme styles
-@import "7-hacks/hack";
+// Additional Styles and Hacks
+@import "hacks/hack";
