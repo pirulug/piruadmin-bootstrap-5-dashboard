@@ -8,15 +8,16 @@ block content
 
   .container.d-flex.flex-column
     .row.vh-100
-      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
+      .col-sm-10.col-md-8.col-lg-6.col-xl-5.mx-auto.d-table.h-100
         .d-table-cell.align-middle
           .text-center.mt-4
-            h1.h2 Sign in
+            h1.h2 Welcome back!
             p.lead
-              | Don't have an account yet? Sign up here
+              | Sign in to your account to continue
           .card
             .card-body
-              .m-sm-4
+              .m-sm-3
+                
                 form
                   .mb-3
                     label.form-label Email
@@ -25,14 +26,34 @@ block content
                     label.form-label Password
                     input.form-control(type='password' name='password' placeholder='Enter your password')
                     small
-                      a(href='index.html') Forgot password?
+                      a(href='/auth-reset-password.html') Forgot password?
                   div
-                    label.form-check
-                      input.form-check-input(type='checkbox' value='remember-me' name='remember-me' checked='')
-                      span.form-check-label
-                        | Remember me next time
-                  .text-center.mt-3
-                    a.btn.btn-primary(href='index.html') Sign in
-                    // <button type="submit" class="btn btn-primary">Sign in</button>
+                    .form-check.align-items-center
+                      input#customControlInline.form-check-input(type='checkbox' value='remember-me' name='remember-me' checked='')
+                      label.form-check-label.text-small(for='customControlInline') Remember me
+                  .d-grid.gap-2.mt-3
+                    a.btn.btn-primary(href='/') Sign in
+                
+                .row
+                  .col
+                    hr
+                  .col-auto.text-uppercase.d-flex.align-items-center Or
+                  .col
+                    hr
+
+                .d-grid.gap-2.mb-3
+                  a.btn.btn-google(href='/')
+                    i.fab.fa-fw.fa-google
+                    |  Sign in with Google
+                  a.btn.btn-facebook(href='/')
+                    i.fab.fa-fw.fa-facebook-f
+                    |  Sign in with Facebook
+                  a.btn.btn-microsoft(href='/')
+                    i.fab.fa-fw.fa-microsoft
+                    |  Sign in with Microsoft
+          .text-center.mb-3
+            | Don&apos;t have an account? 
+            a(href='/auth-sign-up.html') Sign up
+
 
 
