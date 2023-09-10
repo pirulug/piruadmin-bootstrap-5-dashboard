@@ -27,32 +27,34 @@
   setTheme(getPreferredTheme());
 
   const showActiveTheme = (theme) => {
-    const activeThemeIcon = document.querySelector(".theme-icon-active use");
+    const activeThemeIcon = document.querySelector(".theme-icon-active");
     const btnToActive = document.querySelector(
       `[data-bs-theme-value="${theme}"]`
     );
-    const svgOfActiveBtn = btnToActive
-      .querySelector("svg use")
-      .getAttribute("href");
 
     document.querySelectorAll("[data-bs-theme-value]").forEach((element) => {
       element.classList.remove("active");
     });
 
     btnToActive.classList.add("active");
-    activeThemeIcon.setAttribute("href", svgOfActiveBtn);
+    activeThemeIcon.innerHTML = btnToActive.innerHTML;
   };
 
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", () => {
-      if (storedTheme !== "light" || storedTheme !== "dark") {
-        setTheme(getPreferredTheme());
-      }
-    });
+  const updateThemeIcon = (theme) => {
+    const themeIcon = document.querySelector("#bd-theme .theme-icon-active");
+
+    if (theme === "light") {
+      themeIcon.innerHTML = '<i class="fa fa-sun me-1"></i>';
+    } else if (theme === "dark") {
+      themeIcon.innerHTML = '<i class="fa fa-moon me-1"></i>';
+    } else {
+      themeIcon.innerHTML = '<i class="fa fa-circle-half-stroke me-1"></i>';
+    }
+  };
 
   window.addEventListener("DOMContentLoaded", () => {
     showActiveTheme(getPreferredTheme());
+    updateThemeIcon(getPreferredTheme());
 
     document.querySelectorAll("[data-bs-theme-value]").forEach((toggle) => {
       toggle.addEventListener("click", () => {
@@ -60,6 +62,7 @@
         localStorage.setItem("theme", theme);
         setTheme(theme);
         showActiveTheme(theme);
+        updateThemeIcon(theme);
       });
     });
   });
