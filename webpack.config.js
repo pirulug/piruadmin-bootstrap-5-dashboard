@@ -9,9 +9,6 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const WebpackBarPlugin = require("webpackbar");
-const packageJson = require("./package.json");
-
 const opts = {
   rootDir: process.cwd(),
   devBuild: process.env.NODE_ENV !== "production",
@@ -23,20 +20,17 @@ const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
   fileName.endsWith(".pug")
 );
 
-// Genera un número aleatorio entre 1024 y 65535
-const randomPort = Math.floor(Math.random() * (65535 - 1024) + 1024);
-
 module.exports = {
   entry: {
     app: "./src/js/app.js",
-    // featherIcons: "./src/js/modulos/feathericons.js",
-    // chartjs: "./src/js/modulos/chartjs.js",
-    // flatpickr: "./src/js/modulos/flatpickr.js",
-    // vectorMaps: "./src/js/modulos/vector-maps.js",
+    feathericons: "./src/plugins/feathericons/feathericons.js",
+    chartjs: "./src/plugins/chartjs/chartjs.js",
+    flatpickr: "./src/plugins/flatpickr/flatpickr.js",
+    vectormaps: "./src/plugins/vectormaps/vectormaps.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  devtool:
-    process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
+  // devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
+  devtool: false,
   output: {
     path: Path.join(opts.rootDir, "dist"),
     pathinfo: opts.devBuild,
@@ -51,23 +45,23 @@ module.exports = {
         terserOptions: {
           ecma: 6,
         },
+        extractComments: false,
       }),
-      new CssMinimizerPlugin({}),
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: ["default", { discardComments: { removeAll: true } }],
+        },
+      }),
     ],
     runtimeChunk: false,
   },
   plugins: [
-    new WebpackBarPlugin({
-      color: "#ff0055", // Cambia el color de la barra de progreso
-      name: packageJson.name || "My App", // Cambia el nombre que se muestra en la barra de progreso
-      minimal: false, // Muestra información detallada incluso en modo minimal
-    }),
     // DELETE
     new CleanWebpackPlugin(),
     // Extract css files to seperate bundle
     new MiniCssExtractPlugin({
-      filename: "css/app.css",
-      chunkFilename: "css/app.css",
+      filename: "css/[name].css",
+      chunkFilename: "css/[name].css",
     }),
     // Copy fonts and images to dist
     new CopyWebpackPlugin({
@@ -168,7 +162,7 @@ module.exports = {
     },
     watchFiles: ["src/js/**/*.js", "src/scss/**/*.scss", "src/view/**/*.pug"],
     compress: true,
-    port: randomPort,
+    port: 8989,
     // open: {
     //   app: {
     //     name: "firefox",
