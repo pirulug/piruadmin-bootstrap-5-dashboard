@@ -1,0 +1,23 @@
+@import "~sweetalert2/src/sweetalert2";
+
+// VARIABLES
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_variables-dark";
+@import "~bootstrap/scss/_mixins";
+@import "../../scss/base/variables";
+@import "../../scss/base/variables-dark";
+
+.swal2-modal {
+  background: $body-bg;
+  color: $body-color;
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .swal2-modal {
+      background: $body-bg-dark;
+      color: $body-color-dark;
+    }
+  }
+}

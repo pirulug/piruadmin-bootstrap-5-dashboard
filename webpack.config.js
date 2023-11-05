@@ -27,6 +27,8 @@ module.exports = {
     chartjs: "./src/plugins/chartjs/chartjs.js",
     flatpickr: "./src/plugins/flatpickr/flatpickr.js",
     vectormaps: "./src/plugins/vectormaps/vectormaps.js",
+    fontawesome: "./src/plugins/fontawesome/fontawesome.js",
+    sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   // devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",

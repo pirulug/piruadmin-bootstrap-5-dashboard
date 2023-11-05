@@ -44,11 +44,11 @@
     const themeIcon = document.querySelector("#bd-theme .theme-icon-active");
 
     if (theme === "light") {
-      themeIcon.innerHTML = '<i class="fa fa-sun me-1"></i>';
+      themeIcon.innerHTML = '<i class="fa fa-sun"></i>';
     } else if (theme === "dark") {
-      themeIcon.innerHTML = '<i class="fa fa-moon me-1"></i>';
+      themeIcon.innerHTML = '<i class="fa fa-moon"></i>';
     } else {
-      themeIcon.innerHTML = '<i class="fa fa-circle-half-stroke me-1"></i>';
+      themeIcon.innerHTML = '<i class="fa fa-circle-half-stroke"></i>';
     }
   };
 

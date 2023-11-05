@@ -67,6 +67,7 @@
     "feather-icons": "4.29.1",
     "flatpickr": "4.6.13",
     "jsvectormap": "1.5.3",
-    "simplebar": "6.2.5"
+    "simplebar": "6.2.5",
+    "sweetalert2": "^11.9.0"
   }
 }
