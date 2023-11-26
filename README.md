@@ -1,25 +1,26 @@
+# AdminPirulug Bootstrap 5 Dashboard
+
 <div align="center">
   <img src="./src/img/logo.png" alt="Logo">
 </div>
 
-<h1 align="center">AdminPiru Bootstrap 5 Dashboard</h1>
+<h1 align="center">Panel de Administración Bootstrap 5 de AdminPirulug</h1>
 
 <p align="center">
   <img src="./src/img/background.png" alt="AdminPirulug">
 </p>
 
-<p align="center">A professional Bootstrap 5 based dashboard and admin template that comes with hundreds of UI components, forms, tables, charts, pages, and icons. AdminPirulug does not require jQuery and neither does one of the third-party libraries that AdminPirulug uses.</p>
-
+<p align="center">Un panel de administración y plantilla de administración profesional basada en Bootstrap 5 que cuenta con cientos de componentes de IU, formularios, tablas, gráficos, páginas e iconos. AdminPirulug no requiere jQuery, ni lo hace una de las bibliotecas de terceros que AdminPiru utiliza.</p>
 
 <p align="center">
-	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Demo Page</a> | 
-	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Documentation Page</a>
+	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Página de Demostración</a> | 
+	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Página de Documentación</a>
 </p>
 
-## License
+## Licencia
 
-AdminPirulug is under [MIT License](./LICENSE).
+AdminPirulug se distribuye bajo la [Licencia MIT](./LICENSE).
 
-## Author
+## Autor
 
-AdminPirulug is created by <a href="https://github.com/pirulug">Pirulug</a>.
+AdminPirulug fue creado por <a href="https://github.com/pirulug">Pirulug</a>.

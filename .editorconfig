@@ -1,7 +1,31 @@
+# Configuración predeterminada para todos los archivos
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Configuración específica para archivos Pug
 [*.pug]
 indent_style = space
 indent_size = 2
 
+# Configuración específica para archivos HTML
 [*.html]
+indent_style = space
+indent_size = 2
+
+# Configuración específica para archivos JavaScript
+[*.js]
+indent_style = space
+indent_size = 2
+
+# Configuración específica para archivos CSS
+[*.css]
+indent_style = space
+indent_size = 2
+
+# Configuración específica para archivos SCSS
+[*.scss]
 indent_style = space
 indent_size = 2
