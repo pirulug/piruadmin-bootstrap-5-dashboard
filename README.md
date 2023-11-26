@@ -1,5 +1,3 @@
-# AdminPirulug Bootstrap 5 Dashboard
-
 <div align="center">
   <img src="./src/img/logo.png" alt="Logo">
 </div>
@@ -10,7 +8,7 @@
   <img src="./src/img/background.png" alt="AdminPirulug">
 </p>
 
-<p align="center">Un panel de administración y plantilla de administración profesional basada en Bootstrap 5 que cuenta con cientos de componentes de IU, formularios, tablas, gráficos, páginas e iconos. AdminPirulug no requiere jQuery, ni lo hace una de las bibliotecas de terceros que AdminPiru utiliza.</p>
+<p align="center">Una plantilla de administración y panel profesional basada en Bootstrap 5, equipada con una amplia variedad de componentes de interfaz de usuario, formularios, tablas, gráficos, páginas e iconos. AdminPirulug se distingue por no depender de jQuery ni de ninguna de las bibliotecas de terceros utilizadas por AdminPiru.</p>
 
 <p align="center">
 	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Página de Demostración</a> | 
