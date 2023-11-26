@@ -2,7 +2,7 @@
   <img src="./src/img/logo.png" alt="Logo">
 </div>
 
-<h1 align="center">Panel de Administración Bootstrap 5 de AdminPirulug</h1>
+<h1 align="center">AdminPiru - Panel de Administración Bootstrap 5</h1>
 
 <p align="center">
   <img src="./src/img/background.png" alt="AdminPirulug">
