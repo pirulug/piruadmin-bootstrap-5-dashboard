@@ -1,18 +1,17 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2021, // O la versión más reciente de ECMAScript que estás utilizando
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
   "env": {
-    "browser": true, // Para entornos de navegador como window y document
-    "node": true, // Para entornos Node.js
-    "es2021": true // Activa características ES2021
+    "browser": true, 
+    "node": true, 
+    "es2021": true 
   },
-  "extends": ["eslint:recommended"], // Usa reglas recomendadas por ESLint
+  "extends": ["eslint:recommended"],
   "rules": {
-    // Agrega reglas específicas según tus preferencias y necesidades
-    "indent": ["error", 2], // Establece la sangría a 2 espacios
-    "quotes": ["error", "single"], // Utiliza comillas simples
-    "semi": ["error", "always"] // Asegura que haya punto y coma al final de las sentencias
+    "indent": ["error", 2], 
+    "quotes": ["error", "single"], 
+    "semi": ["error", "always"] 
   }
 }
