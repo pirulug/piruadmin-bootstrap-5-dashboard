@@ -55,7 +55,7 @@ block scripts
           label: "Sales ($)",
           fill: true,
           backgroundColor: "transparent",
-          borderColor: window.theme.primary,
+          borderColor: "#ff0055",
           data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
         }, {
           label: "Orders",
@@ -82,25 +82,7 @@ block scripts
             propagate: false
           }
         },
-        scales: {
-          xAxes: [{
-            reverse: true,
-            gridLines: {
-              color: "rgba(0,0,0,0.05)"
-            }
-          }],
-          yAxes: [{
-            ticks: {
-              stepSize: 500
-            },
-            display: true,
-            borderDash: [5, 5],
-            gridLines: {
-              color: "rgba(0,0,0,0)",
-              fontColor: "#fff"
-            }
-          }]
-        }
+        
       }
     });
 
@@ -111,10 +93,10 @@ block scripts
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [{
           label: "Last year",
-          backgroundColor: window.theme.primary,
-          borderColor: window.theme.primary,
-          hoverBackgroundColor: window.theme.primary,
-          hoverBorderColor: window.theme.primary,
+          backgroundColor: "#ff0055",
+          borderColor: "#ff0055",
+          hoverBackgroundColor: "#ff0055",
+          hoverBorderColor: "#ff0055",
           data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
           barPercentage: .75,
           categoryPercentage: .5
@@ -134,23 +116,7 @@ block scripts
         legend: {
           display: false
         },
-        scales: {
-          yAxes: [{
-            gridLines: {
-              display: false
-            },
-            stacked: false,
-            ticks: {
-              stepSize: 20
-            }
-          }],
-          xAxes: [{
-            stacked: false,
-            gridLines: {
-              color: "transparent"
-            }
-          }]
-        }
+        
       }
     });
 
@@ -162,9 +128,9 @@ block scripts
         datasets: [{
           data: [260, 125, 54, 146],
           backgroundColor: [
-            window.theme.primary,
-            window.theme.success,
-            window.theme.warning,
+            "#ff0055",
+            "#17a2b8",
+            "#dc3545",
             "#dee2e6"
           ],
           borderColor: "transparent"
@@ -179,7 +145,7 @@ block scripts
       }
     });
 
-	
+
     // Pie chart
     new Chart(document.getElementById("chartjs-pie"), {
       type: "pie",
@@ -188,12 +154,12 @@ block scripts
         datasets: [{
           data: [260, 125, 54, 146],
           backgroundColor: [
-            window.theme.primary,
-            window.theme.warning,
-            window.theme.danger,
+            "#ff0055",
+            "#17a2b8",
+            "#dc3545",
             "#dee2e6"
-          ],
-          borderColor: "transparent"
+    ],
+    borderColor: "transparent"
         }]
       },
       options: {
