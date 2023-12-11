@@ -1,8 +1,10 @@
 <div align="center">
   <img src="./src/img/logo.png" alt="Logo">
+</div>
 
-# AdminPiru - Bootstrap 5 Dashboard
+<h1 align="center">AdminPiru - Bootstrap 5 Dashboard</h1>
 
+<p align="center">
   <img src="./src/img/background.png" alt="AdminPirulug">
 </p>
 
