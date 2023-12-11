@@ -6,6 +6,11 @@
 
 ## [v1.0.1] - 05/11/2023
 
-- **Añadido:**
-  - Se incorporó SweetAlert
+- **Add:**
+  - SweetAlert
+
+## [v1.1.0] - 10/12/2023
+
+- **Add:**
+  - Font Poppins and Fira Code
 
