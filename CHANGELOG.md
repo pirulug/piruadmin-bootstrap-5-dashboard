@@ -1,11 +1,3 @@
-# Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-### [1.0.3](https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/compare/v1.0.2...v1.0.3) (2023-12-15)
-
-### [1.0.2](https://github.com/pirulug/admin-pirulug/compare/v1.1.0...v1.0.2) (2023-12-15)
-
 # Registro de Cambios
 
 ## [v1.0.0] - 04/08/2023
