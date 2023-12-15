@@ -1,7 +1,7 @@
 {
   "homepage": "https://pirulug.github.io/admin-pirulug",
   "name": "piruadmin-bootstrap-5-dashboard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Admin dashboard bootstrap 5",
   "keywords": [
     "template",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pirulug/admin-pirulug.git"
+    "url": "git+https://github.com/pirulug/piruadmin-bootstrap-5-dashboard.git"
   },
   "devDependencies": {
     "@babel/core": "7.23.6",
