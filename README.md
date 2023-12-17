@@ -11,8 +11,8 @@
 <p align="center">A professional administration and dashboard template based on Bootstrap 5, equipped with a wide variety of user interface components, forms, tables, charts, pages, and icons. AdminPirulug stands out by not relying on jQuery or any third-party libraries used by AdminPiru.</p>
 
 <p align="center">
-	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Demo Page</a> | 
-	<a href="https://pirulug.github.io/adminpiru-bootstrap-5-dashboard/">Documentation Page</a>
+	<a href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard">Demo Page</a> | 
+	<a href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard">Documentation Page</a>
 </p>
 
 ## Build Tools
