@@ -9,6 +9,316 @@ block content
     .col-xl-9.mx-auto
       h6.mb-0.text-uppercase Basic Table
       hr
+      .card.mb-3
+        .card-body
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Date
+                  th.text-center(scope='col') Sales
+                  th.text-center(scope='col') Status
+              tbody
+                tr
+                  td Shaun Park
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 25 Apr
+                  td.text-center 320
+                  td.text-center
+                    span.badge.badge-light-success Approved
+                tr
+                  td Alma Clarke
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 26 Apr
+                  td.text-center 110
+                  td.text-center
+                    span.badge.badge-light-secondary Pending
+                tr
+                  td Vincent Carpenter
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 05 May
+                  td.text-center 210
+                  td.text-center
+                    span.badge.badge-light-danger Rejected
+                tr
+                  td Xavier
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 18 May
+                  td.text-center 784
+                  td.text-center
+                    span.badge.badge-light-info In Progress
+      
+      h6.mb-0.text-uppercase Bordered Table
+      hr
+      .card.mb-3
+        .card-body
+          .table-responsive
+            table.table.table-bordered
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Date
+                  th.text-center(scope='col') Sales
+                  th.text-center(scope='col') Status
+              tbody
+                tr
+                  td Shaun Park
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 25 Apr
+                  td.text-center 320
+                  td.text-center
+                    span.badge.badge-light-success Approved
+                tr
+                  td Alma Clarke
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 26 Apr
+                  td.text-center 110
+                  td.text-center
+                    span.badge.badge-light-secondary Pending
+                tr
+                  td Vincent Carpenter
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 05 May
+                  td.text-center 210
+                  td.text-center
+                    span.badge.badge-light-danger Rejected
+                tr
+                  td Xavier
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 18 May
+                  td.text-center 784
+                  td.text-center
+                    span.badge.badge-light-info In Progress
+      
+      h6.mb-0.text-uppercase Bordered striped
+      hr
+      .card.mb-3
+        .card-body
+          .table-responsive
+            table.table.table-striped
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Date
+                  th.text-center(scope='col') Sales
+                  th.text-center(scope='col') Status
+              tbody
+                tr
+                  td Shaun Park
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 25 Apr
+                  td.text-center 320
+                  td.text-center
+                    span.badge.badge-light-success Approved
+                tr
+                  td Alma Clarke
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 26 Apr
+                  td.text-center 110
+                  td.text-center
+                    span.badge.badge-light-secondary Pending
+                tr
+                  td Vincent Carpenter
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 05 May
+                  td.text-center 210
+                  td.text-center
+                    span.badge.badge-light-danger Rejected
+                tr
+                  td Xavier
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 18 May
+                  td.text-center 784
+                  td.text-center
+                    span.badge.badge-light-info In Progress
+      
+      h6.mb-0.text-uppercase Bordered striped
+      hr
+      .card.mb-3
+        .card-body
+          .table-responsive
+            table.table.table-striped-columns
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Date
+                  th.text-center(scope='col') Sales
+                  th.text-center(scope='col') Status
+              tbody
+                tr
+                  td Shaun Park
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 25 Apr
+                  td.text-center 320
+                  td.text-center
+                    span.badge.badge-light-success Approved
+                tr
+                  td Alma Clarke
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 26 Apr
+                  td.text-center 110
+                  td.text-center
+                    span.badge.badge-light-secondary Pending
+                tr
+                  td Vincent Carpenter
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 05 May
+                  td.text-center 210
+                  td.text-center
+                    span.badge.badge-light-danger Rejected
+                tr
+                  td Xavier
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 18 May
+                  td.text-center 784
+                  td.text-center
+                    span.badge.badge-light-info In Progress
+      
+      h6.mb-0.text-uppercase Bordered striped
+      hr
+      .card.mb-3
+        .card-body
+          .table-responsive
+            table.table.table-hover
+              thead
+                tr
+                  th(scope='col') Name
+                  th(scope='col') Date
+                  th.text-center(scope='col') Sales
+                  th.text-center(scope='col') Status
+              tbody
+                tr
+                  td Shaun Park
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 25 Apr
+                  td.text-center 320
+                  td.text-center
+                    span.badge.badge-light-success Approved
+                tr
+                  td Alma Clarke
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 26 Apr
+                  td.text-center 110
+                  td.text-center
+                    span.badge.badge-light-secondary Pending
+                tr
+                  td Vincent Carpenter
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 05 May
+                  td.text-center 210
+                  td.text-center
+                    span.badge.badge-light-danger Rejected
+                tr
+                  td Xavier
+                  td
+                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
+                      line(x1='16' y1='2' x2='16' y2='6')
+                      line(x1='8' y1='2' x2='8' y2='6')
+                      line(x1='3' y1='10' x2='21' y2='10')
+                    span.table-inner-text 18 May
+                  td.text-center 784
+                  td.text-center
+                    span.badge.badge-light-info In Progress
+
+      h6.mb-0.text-uppercase Basic Table
+      hr
       .card
         .card-body
           table.table.mb-0
@@ -40,49 +350,49 @@ block content
           table.table.mb-0.table-striped
             thead
               tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
+                th #
+                th First
+                th Last
+                th Handle
             tbody
               tr
-                th(scope='row') 1
+                th 1
                 td Mark
                 td Otto
                 td @mdo
               tr
-                th(scope='row') 2
+                th 2
                 td Jacob
                 td Thornton
                 td @fat
               tr
-                th(scope='row') 3
+                th 3
                 td(colspan='2') Larry the Bird
                 td @twitter
       h6.mb-0.text-uppercase Dark Table
       hr
       .card
         .card-body
-          table.table.mb-0.table-dark.table-striped
+          table.table.table-dark.table-striped
             thead
               tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
+                th #
+                th First
+                th Last
+                th Handle
             tbody
               tr
-                th(scope='row') 1
+                th 1
                 td Mark
                 td Otto
                 td @mdo
               tr
-                th(scope='row') 2
+                th 2
                 td Jacob
                 td Thornton
                 td @fat
               tr
-                th(scope='row') 3
+                th 3
                 td(colspan='2') Larry the Bird
                 td @twitter
       h6.mb-0.text-uppercase Hoverable rows

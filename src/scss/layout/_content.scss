@@ -4,13 +4,24 @@
   width: 100vw;
   max-width: 100vw;
   direction: ltr;
+  background: $body-bg-alt;
+  border-radius: 0;
 
   @include media-breakpoint-up(md) {
     width: auto;
     max-width: auto;
+    border-radius: $border-radius 0 0 $border-radius;
   }
 
   @include media-breakpoint-up(lg) {
-    padding: $content-padding-desktop;  
+    padding: $content-padding-desktop;
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .content {
+      background: $body-bg-alt-dark;
+    }
   }
 }
