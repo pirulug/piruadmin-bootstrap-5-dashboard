@@ -1,0 +1,159 @@
+@import "~@yaireo/tagify/src/tagify";
+
+// VARIABLES
+@import "~bootstrap/scss/_functions";
+@import "../../scss/base/variables";
+@import "../../scss/base/variables-dark";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_variables-dark";
+@import "~bootstrap/scss/_mixins";
+
+.tagify {
+  display: block;
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  @include font-size($input-font-size);
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  appearance: none; // Fix appearance for date inputs in Safari
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: $input-border-width solid $input-border-color;
+
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($input-border-radius, 0);
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // &:hover {
+  //   border: 1px solid #1b2e4b;
+  // }
+
+  &.tagify--focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+
+.tagify__tag > div {
+  background: $body-bg-alt;
+  color: $body-color;
+  border-radius: $border-radius;
+}
+
+.tagify__tag {
+  > div::before {
+    box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset;
+    background: $body-bg-alt;
+  }
+
+  &.tagify--notAllowed:not(.tagify__tag--editable) div::before {
+    box-shadow: none !important;
+  }
+}
+
+.tagify__tag__removeBtn {
+  color: $body-color;
+  background: $body-bg-alt;
+  font-size: 1rem;
+  padding: 0.6rem;
+
+  &:after {
+    margin-left: 0.5px;
+  }
+
+  &:hover {
+    background: #f00;
+  }
+}
+
+.tagify__tag {
+  &:focus div::before,
+  &:hover:not([readonly]) div::before {
+    box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset;
+  }
+}
+
+.tagify__tag__removeBtn:hover + div::before {
+  box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset !important;
+}
+
+.tagify__tag__avatar-wrap img {
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  border-radius: 6px;
+}
+
+.tagify__tag:hover .tagify__tag__avatar-wrap {
+  transform: scale(1.6) translateX(-10%);
+}
+
+.tagify__input::before {
+  color: #bfc9d4;
+  margin-top: 3px;
+}
+
+.tagify__dropdown__wrapper {
+  background: #0e1726;
+  border: 1px solid $dark;
+  box-shadow: 0 0.1px 0px rgb(0 0 0 / 0%), 0 0.2px 0px rgb(0 0 0 / 0%),
+    0 0.4px 0px rgb(0 0 0 / 0%), 0 0.6px 0px rgb(0 0 0 / 0%),
+    0 0.9px 0px rgb(0 0 0 / 1%), 0 1.2px 0px rgb(0 0 0 / 1%),
+    0 1.8px 0px rgb(0 0 0 / 1%), 0 2.6px 0px rgb(0 0 0 / 1%),
+    0 3.9px 0px rgb(0 0 0 / 1%), 0 7px 0px rgb(0 0 0 / 1%);
+}
+
+// .tagify__input:focus:empty::before {
+//   color: #bfc9d4;
+// }
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .tagify__tag > div {
+      background: $body-bg-alt-dark;
+      color: $body-color-dark;
+    }
+
+    .tagify__tag {
+      > div::before {
+        box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
+          inset;
+        background: $body-bg-alt-dark;
+      }
+    }
+
+    .tagify__tag__removeBtn {
+      color: $body-color-dark;
+      background: $body-bg-alt-dark;
+
+      &:hover {
+        background: #f00;
+      }
+    }
+
+    .tagify__tag {
+      &:focus div::before,
+      &:hover:not([readonly]) div::before {
+        box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
+          inset;
+      }
+    }
+
+    .tagify__tag__removeBtn:hover + div::before {
+      box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
+        inset !important;
+    }
+  }
+}

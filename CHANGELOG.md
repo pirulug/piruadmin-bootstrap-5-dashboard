@@ -14,3 +14,9 @@
 - **Add:**
   - Font Poppins and Fira Code
 
+## [v1.1.1] - 17/12/23
+- **Change:**
+  - Change Font Nunito and Fira Code
+  - Improved table styles
+- **Add:**
+  - Tagify
