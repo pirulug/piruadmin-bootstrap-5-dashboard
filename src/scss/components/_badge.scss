@@ -1,0 +1,18 @@
+// .badge-light-{color}
+@each $color, $value in $theme-colors {
+  .badge-light-#{$color} {
+    color: shade-color($value, 80%);
+    background-color: tint-color($value, 80%);
+    border: 1px solid tint-color($value, 80%);
+  }
+
+  @if $enable-dark-mode {
+    @include color-mode(dark) {
+      .badge-light-#{$color} {
+        color: tint-color($value, 40%);
+        background-color: shade-color($value, 80%);
+        border: 1px solid shade-color($value, 80%);
+      }
+    }
+  }
+}

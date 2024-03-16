@@ -1,11 +1,11 @@
 .btn {
-  // box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
-  //transition: all 0.3s ease-out;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
 
-  // &:hover {
-  //   box-shadow: none;
-  //   transform: translateY(-3px);
-  // }
+  &:hover {
+    box-shadow: none;
+    transform: translateY(-3px);
+  }
 
   .feather {
     width: 14px;
@@ -13,11 +13,21 @@
   }
 }
 
+.btn-group .btn,
+.btn-group-vertical .btn,
+.input-group .btn {
+  &:hover,
+  &:focus {
+    transform: none;
+  }
+}
+
+// .btn-{color}
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-color($white);
     @include button-color-hover($white);
-    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -26,7 +36,7 @@
     @include button-variant($value, $value);
     @include button-color($white);
     @include button-color-hover($white);
-    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -36,17 +46,48 @@
   @include button-color-hover($gray-800);
 }
 
+// .btn-outline-{color}
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
     @include button-color-hover($white);
-    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
+
 @each $color, $value in $social-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
     @include button-color-hover($white);
-    //box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+  }
+}
+
+// .btn-light-{color}
+@each $color, $value in $theme-colors {
+  .btn-light-#{$color} {
+    color: shade-color($value, 80%);
+    background-color: tint-color($value, 80%);
+    border: 1px solid tint-color($value, 80%);
+
+    &:hover {
+      background-color: tint-color($value, 80%);
+      border: 1px solid tint-color($value, 80%);
+      color: shade-colorr($value, 80%);
+    }
+  }
+
+  @if $enable-dark-mode {
+    @include color-mode(dark) {
+      .btn-light-#{$color} {
+        color: tint-color($value, 40%);
+        background-color: shade-color($value, 80%);
+        border: 1px solid shade-color($value, 80%);
+
+        &:hover {
+          background-color: shade-color($value, 80%);
+          border: 1px solid shade-color($value, 80%);
+          color: tint-color($value, 40%);
+        }
+      }
+    }
   }
 }

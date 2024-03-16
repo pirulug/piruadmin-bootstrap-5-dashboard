@@ -4,7 +4,31 @@ append config
   -pageName = 'Blank Page'
   -pageUrl = 'pages-blank'
 
+block styles
+  link(rel="stylesheet", href="css/toastifyjs.css")
+
+block scripts 
+  script(src='js/toastifyjs.js')
+  script.
+    Toastify({
+      text: "This is a toast",
+      className: "info",
+      close: true,
+      gravity: "bottom",
+      position: "right",
+      style: {
+        background: "blue",
+      }
+    }).showToast();
+
 block content
+
+  .card   
+    .card-body 
+      .input-group.mb-3
+        input.form-control(type='text' placeholder="Recipient's username")
+        button#button-addon2.btn.btn-outline-primary(type='button') Button
+
 
   .row
     .col-12

@@ -1,0 +1,22 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Tagify'
+  -pageUrl = 'forms-tagify'
+
+block styles 
+  link(href='css/tagify.css' rel='stylesheet' type='text/css')
+
+block scripts 
+  script(src='js/tagify.js')
+  script.
+    var input = document.querySelector('input[name=basic]');
+    new Tagify(input)
+    
+block content
+
+  .card 
+    .card-header 
+      h3.header-title Basic
+    .card-body 
+      input(name="basic" value="tag1, tag 2, tag 3")

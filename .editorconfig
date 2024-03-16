@@ -1,7 +1,25 @@
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
 [*.pug]
 indent_style = space
 indent_size = 2
 
 [*.html]
+indent_style = space
+indent_size = 2
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.scss]
 indent_style = space
 indent_size = 2

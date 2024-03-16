@@ -64,6 +64,7 @@
     overflow: auto;
   }
 }
+
 @each $color, $value in $theme-colors {
   .tab-#{$color} {
     @include tab-color($value);

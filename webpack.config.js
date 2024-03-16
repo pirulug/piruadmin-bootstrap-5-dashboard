@@ -28,6 +28,8 @@ module.exports = {
     flatpickr: "./src/plugins/flatpickr/flatpickr.js",
     vectormaps: "./src/plugins/vectormaps/vectormaps.js",
     fontawesome: "./src/plugins/fontawesome/fontawesome.js",
+    tagify: "./src/plugins/tagify/tagify.js",
+    toastifyjs: "./src/plugins/toastifyjs/toastifyjs.js",
     sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",

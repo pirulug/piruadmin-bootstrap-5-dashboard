@@ -4,7 +4,7 @@
   min-width: 0;
   min-height: 100vh;
   transition: $sidebar-transition;
-  // background: $body-bg;
+  background: $body-bg;
   flex-direction: column;
   overflow: hidden;
   border-top-left-radius: 0;
@@ -14,7 +14,7 @@
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .main {
-      // background: $body-bg-dark;
+      background: $body-bg-dark;
     }
   }
 }
