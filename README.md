@@ -2,7 +2,7 @@
   <img src="./src/img/logo.png" alt="Logo">
 </div>
 
-<h1 align="center">AdminPiru - Bootstrap 5 Dashboard</h1>
+<h1 align="center">PiruAdmin - Bootstrap 5 Dashboard</h1>
 
 <p align="center">
   <img src="./src/img/background.png" alt="AdminPirulug">
