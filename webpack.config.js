@@ -2,12 +2,13 @@ const Webpack = require("webpack");
 const Path = require("path");
 const Fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BeautifyHtmlWebpackPlugin = require("@sumotto/beautify-html-webpack-plugin");
+const PrettifyWebpackPlugin = require("pirulug-prettify-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 
 const opts = {
   rootDir: process.cwd(),
@@ -94,16 +95,20 @@ module.exports = {
         })
     ),
     // Beautify
-    new BeautifyHtmlWebpackPlugin({
-      end_with_newline: true,
-      indent_size: 2,
-      indent_with_tabs: true,
-      indent_inner_html: true,
-      preserve_newlines: true,
-      extra_liners: ["!--"],
-      unformatted: [],
-      inline: [],
+    new PrettifyWebpackPlugin({
+      printWidth: 100,
+      tabWidth: 2,
+      useTabs: false,
+      singleQuote: true,
+      htmlWhitespaceSensitivity: "ignore",
+      endOfLine: "auto",
+      htmlWhitespaceSensitivity: "css",
+      jsxBracketSameLine: false,
+      htmlWhitespaceSensitivity: "ignore",
+      proseWrap: "always",
     }),
+    // Eliminar archivos vacios
+    new DeleteEmptyFilesPlugin(__dirname, "dist"),
   ],
   module: {
     rules: [
@@ -149,7 +154,14 @@ module.exports = {
       // Pug
       {
         test: /\.pug$/,
-        use: ["pug-loader?{pretty:true}"],
+        use: [
+          {
+            loader: "pirulug-pug-loader",
+            options: {
+              pretty: true,
+            },
+          },
+        ],
       },
     ],
   },
