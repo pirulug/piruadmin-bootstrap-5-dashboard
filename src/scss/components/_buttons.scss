@@ -1,11 +1,11 @@
 .btn {
-  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-out;
+  // box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.1);
+  // transition: all 0.3s ease-out;
 
-  &:hover {
-    box-shadow: none;
-    transform: translateY(-3px);
-  }
+  // &:hover {
+  //   box-shadow: none;
+  //   transform: translateY(-3px);
+  // }
 
   .feather {
     width: 14px;
@@ -27,7 +27,7 @@
   .btn-#{$color} {
     @include button-color($white);
     @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    // box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -36,7 +36,7 @@
     @include button-variant($value, $value);
     @include button-color($white);
     @include button-color-hover($white);
-    box-shadow: 0 10px 20px -10px rgba($value, 0.59);
+    // box-shadow: 0 10px 20px -10px rgba($value, 0.59);
   }
 }
 
@@ -69,9 +69,9 @@
     border: 1px solid tint-color($value, 80%);
 
     &:hover {
-      background-color: tint-color($value, 80%);
-      border: 1px solid tint-color($value, 80%);
       color: shade-colorr($value, 80%);
+      background-color: tint-color($value, 90%);
+      border: 1px solid tint-color($value, 90%);
     }
   }
 
@@ -83,9 +83,9 @@
         border: 1px solid shade-color($value, 80%);
 
         &:hover {
-          background-color: shade-color($value, 80%);
-          border: 1px solid shade-color($value, 80%);
           color: tint-color($value, 40%);
+          background-color: shade-color($value, 90%);
+          border: 1px solid shade-color($value, 90%);
         }
       }
     }
