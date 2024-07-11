@@ -18,7 +18,7 @@ const opts = {
 // PUG
 const PAGES_DIR = `${Path.resolve(__dirname, "src")}/view/pages`;
 const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
-  fileName.endsWith(".pug")
+  fileName.endsWith(".pug"),
 );
 
 module.exports = {
@@ -92,7 +92,7 @@ module.exports = {
             preventAttributesEscaping: false,
           },
           inject: false,
-        })
+        }),
     ),
     // Beautify
     new PrettifyWebpackPlugin({
@@ -128,11 +128,16 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-          },
+          "css-loader",
           "postcss-loader",
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                quietDeps: true,
+              },
+            },
+          },
         ],
       },
       // Load fonts
