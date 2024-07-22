@@ -69,7 +69,7 @@
     "flatpickr": "4.6.13",
     "jsvectormap": "1.6.0",
     "simplebar": "6.2.7",
-    "sweetalert2": "^11.12.2",
+    "sweetalert2": "^11.12.3",
     "toastify-js": "^1.12.0"
   }
 }

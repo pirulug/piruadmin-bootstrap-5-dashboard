@@ -1,5 +1,5 @@
 // @import "~@yaireo/tagify/src/tagify.scss";
-@import "../../../node_modules/@yaireo/tagify/src/tagify.scss";
+@import "../../../node_modules/@yaireo/tagify/dist/tagify.css";
 
 // VARIABLES
 @import "~bootstrap/scss/_functions";
@@ -10,8 +10,8 @@
 @import "~bootstrap/scss/_mixins";
 
 .tagify {
-  display: block;
-  width: 100%;
+  // display: block;
+  // width: 100%;
   padding: $input-padding-y $input-padding-x;
   font-family: $input-font-family;
   @include font-size($input-font-size);
@@ -109,11 +109,17 @@
 .tagify__dropdown__wrapper {
   background: #0e1726;
   border: 1px solid $dark;
-  box-shadow: 0 0.1px 0px rgb(0 0 0 / 0%), 0 0.2px 0px rgb(0 0 0 / 0%),
-    0 0.4px 0px rgb(0 0 0 / 0%), 0 0.6px 0px rgb(0 0 0 / 0%),
-    0 0.9px 0px rgb(0 0 0 / 1%), 0 1.2px 0px rgb(0 0 0 / 1%),
-    0 1.8px 0px rgb(0 0 0 / 1%), 0 2.6px 0px rgb(0 0 0 / 1%),
-    0 3.9px 0px rgb(0 0 0 / 1%), 0 7px 0px rgb(0 0 0 / 1%);
+  box-shadow:
+    0 0.1px 0px rgb(0 0 0 / 0%),
+    0 0.2px 0px rgb(0 0 0 / 0%),
+    0 0.4px 0px rgb(0 0 0 / 0%),
+    0 0.6px 0px rgb(0 0 0 / 0%),
+    0 0.9px 0px rgb(0 0 0 / 1%),
+    0 1.2px 0px rgb(0 0 0 / 1%),
+    0 1.8px 0px rgb(0 0 0 / 1%),
+    0 2.6px 0px rgb(0 0 0 / 1%),
+    0 3.9px 0px rgb(0 0 0 / 1%),
+    0 7px 0px rgb(0 0 0 / 1%);
 }
 
 // .tagify__input:focus:empty::before {

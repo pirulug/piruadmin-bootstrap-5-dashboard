@@ -10,6 +10,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 
+const menuItems = require("./menuItems");
+
 const opts = {
   rootDir: process.cwd(),
   devBuild: process.env.NODE_ENV !== "production",
@@ -32,6 +34,7 @@ module.exports = {
     tagify: "./src/plugins/tagify/tagify.js",
     toastifyjs: "./src/plugins/toastifyjs/toastifyjs.js",
     sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
+    custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   // devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
@@ -150,7 +153,7 @@ module.exports = {
       },
       // Load images
       {
-        test: /\.(png|jpg|jpeg|gif)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(png|jpg|jpeg|gif|webp)(\?v=\d+\.\d+\.\d+)?$/,
         type: "asset/resource",
         generator: {
           filename: "img/[name][ext]",
@@ -184,11 +187,6 @@ module.exports = {
     watchFiles: ["src/js/**/*.js", "src/scss/**/*.scss", "src/view/**/*.pug"],
     compress: true,
     port: 8989,
-    // open: {
-    //   app: {
-    //     name: "firefox",
-    //   },
-    // },
     open: true,
     liveReload: true,
   },

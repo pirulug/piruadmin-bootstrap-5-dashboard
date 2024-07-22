@@ -1,84 +1,221 @@
-mixin header(title)
-  li.sidebar-header
-    | #{title}
+block config
 
-mixin item(title, url, icon)
-  li.sidebar-item(class=(pageUrl === url ? "active" : undefined))
-    a.sidebar-link(href=`${url}` + ".html")
-      i.align-middle(data-feather=`${icon}`)
-      span.align-middle #{title}
-
-mixin subItem(title, href, icon, id, pages)
-
-  - var isActive
-  each page in pages
-    if pageUrl === page
-      -isActive = "si"
-
-  li.sidebar-item(class=(isActive === "si" ? "active" : undefined))
-    a.sidebar-link(class=(isActive === "si" ? undefined : "collapsed") data-bs-target=`#${id}` data-bs-toggle='collapse')
-      i.align-middle(data-feather=`${icon}`)
-      span.align-middle #{title}
-    ul.sidebar-dropdown.list-unstyled.collapse(class=(isActive === "si" ? "show" : undefined) id=`${id}` data-bs-parent='#sidebar')    
-      block
-
-mixin subLink(title, url)
-  li.sidebar-item(class=(pageUrl === url ? "active" : undefined))
-    a.sidebar-link(href=`${url}` + ".html") #{title}
-
+- var menuItems = [
+-   {
+-     "title": "Dashboard",
+-     "path": "dashboard",
+-     "icon": "sliders",
+-     "link": "dashboard"
+-   },
+-   {
+-     "title": "Pages",
+-     "header": true,
+-   },
+-   {
+-     "title": "Pages",
+-     "path": "pages",
+-     "icon": "file",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Settings",
+-         "path": "pages-settings",
+-         "link": "pages-settings"
+-       },
+-       {
+-         "title": "Blank Page",
+-         "path": "pages-blank",
+-         "link": "pages-blank"
+-       }
+-     ]
+-   },
+-   {
+-     "title": "Profile",
+-     "path": "pages-profile",
+-     "icon": "user",
+-     "link": "pages-profile"
+-   },
+-   {
+-     "title": "Auth",
+-     "path": "auth",
+-     "icon": "users",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Sign In",
+-         "path": "auth-sign-in",
+-         "link": "auth-sign-in"
+-       },
+-       {
+-         "title": "Sign Up",
+-         "path": "auth-sign-up",
+-         "link": "auth-sign-up"
+-       },
+-       {
+-         "title": "Reset Password",
+-         "path": "auth-reset-password",
+-         "link": "auth-reset-password"
+-       },
+-       {
+-         "title": "Reccover Password",
+-         "path": "auth-recover-password",
+-         "link": "auth-recover-password"
+-       }
+-     ]
+-   },
+-   {
+-     "title": "Erros",
+-     "path": "errors",
+-     "icon": "coffee",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "404",
+-         "path": "error-404",
+-         "link": "error-404"
+-       },
+-       {
+-         "title": "500",
+-         "path": "error-500",
+-         "link": "error-500"
+-       }
+-     ]
+-   },
+-   {
+-     "title": "Tools & Components",
+-     "header": true,
+-   },
+-   {
+-     "title": "UI Elements",
+-     "path": "ui-elementsth",
+-     "icon": "users",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Buttons",
+-         "path": "ui-buttons",
+-         "link": "ui-buttons"
+-       },
+-       {
+-         "title": "Cards",
+-         "path": "ui-cards",
+-         "link": "ui-cards"
+-       },
+-       {
+-         "title": "General UI",
+-         "path": "ui-general",
+-         "link": "ui-general"
+-       },
+-       {
+-         "title": "Images",
+-         "path": "ui-images",
+-         "link": "ui-images"
+-       },
+-       {
+-         "title": "Tabs",
+-         "path": "ui-tabs",
+-         "link": "ui-tabs"
+-       }
+-     ]
+-   },
+-   {
+-     "title": "Tables",
+-     "path": "tables",
+-     "icon": "grid",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Table bootstrap",
+-         "path": "table-bootstrap",
+-         "link": "table-bootstrap"
+-       }
+-     ]
+-   },
+-   {
+-     "title": "Forms",
+-     "path": "forms",
+-     "icon": "file",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Basics inputs",
+-         "path": "forms-basic-inputs",
+-         "link": "forms-basic-inputs"
+-       },
+-       {
+-         "title": "Tagify",
+-         "path": "forms-tagify",
+-         "link": "forms-tagify"
+-       },
+-     ]
+-   },
+-   {
+-     "title": "Icons",
+-     "path": "icons",
+-     "icon": "coffee",
+-     "collapsed": true,
+-     "items": [
+-       {
+-         "title": "Feather",
+-         "path": "icons-feather",
+-         "link": "icons-feather"
+-       },
+-       {
+-         "title": "Font Awesome",
+-         "path": "icons-awesome",
+-         "link": "icons-awesome"
+-       },
+-     ]
+-   },
+-   {
+-     "title": "Plugins & Addons",
+-     "header": true,
+-   },
+-   {
+-     "title": "Charts",
+-     "path": "charts-chartjs",
+-     "icon": "bar-chart-2",
+-     "link": "charts-chartjs"
+-   },
+-   {
+-     "title": "Maps",
+-     "path": "maps-google",
+-     "icon": "map",
+-     "link": "maps-google"
+-   },
+-   {
+-     "title": "SweetAlert",
+-     "path": "sweetalert",
+-     "icon": "bell",
+-     "link": "sweetalert"
+-   },
+- ]
 
 nav#sidebar.sidebar.js-sidebar
   .sidebar-content.js-simplebar
     a.sidebar-brand(href='index.html')
       span.sidebar-brand-text.align-middle #{siteName}
     ul.sidebar-nav
+      each item in menuItems
+        if item.collapsed 
 
-      +item("Dashboard", "dashboard", "sliders")
+          - var itemPaths = item.items.map(i => i.path)
+          - var isActive = itemPaths.includes(pageUrl)  // Usar includes para la verificación
 
-      +header('Pages')
+          li.sidebar-item(class=(isActive ? 'active' : ''))
+            a.sidebar-link(class=(isActive ? '' : 'collapsed') data-bs-target=`#${item.path}` data-bs-toggle="collapse")
+              i.align-middle(data-feather=item.icon)
+              span.align-middle= item.title
+            ul.sidebar-dropdown.list-unstyled.collapse(id=item.path, data-bs-parent="#sidebar", class=(isActive ? 'show' : ''))
+              each subItem in item.items
+                li.sidebar-item(class=(pageUrl === subItem.path ? 'active' : ''))
+                  a.sidebar-link(href=`${subItem.link}.html`)= subItem.title
 
-      +subItem("Pages", "#", "file", "pages", ["pages-settings","pages-blank"])        
-        +subLink("Settings", "pages-settings")
-        +subLink("Blank Page", "pages-blank")
+        else if item.header
+          li.sidebar-header= item.title
 
-      +item("Profile", "pages-profile", "user")
-
-      +subItem("Auth", "#", "users", "auth", ["auth-sign-in","auth-sign-up","auth-reset-password","auth-recover-password"])        
-        +subLink("Sign In", "auth-sign-in")
-        +subLink("Sign Up", "auth-sign-up")
-        +subLink("Reset Password", "auth-reset-password")
-        +subLink("Reccover Password", "auth-recover-password")
-        
-      +subItem("Erros", "#", "coffee", "errors", ["error-404", "error-500"]) 
-        +subLink("404", "error-404")
-        +subLink("500", "error-500")
-
-      +header('Tools & Components')
-
-      +subItem("UI Elements", "#", "users", "ui-elements",  ["ui-buttons", "ui-cards", "ui-general", "ui-images", "ui-tabs"])
-        +subLink("Buttons", "ui-buttons")
-        +subLink("Cards", "ui-cards")
-        +subLink("General UI", "ui-general")
-        +subLink("Images", "ui-images")
-        +subLink("Tabs", "ui-tabs")
-
-      +subItem("Tables", "#", "grid", "tables", ["table-bootstrap"]) 
-        +subLink("Table bootstrap", "table-bootstrap")
-        //- dataTables
-
-      +subItem("Forms", "#", "file", "forms", ["forms-basic-inputs","forms-tagify"]) 
-        +subLink("Basics inputs", "forms-basic-inputs")
-        +subLink("Tagify", "forms-tagify")
-        //- +subLink("Form layouts", "forms-layouts")
-        //- +subLink("Input groups", "forms-input-groups")
-
-      +subItem("Icons", "#", "coffee", "iconos", ["icons-feather","icons-awesome"]) 
-        +subLink("Feather", "icons-feather")
-        +subLink("Font Awesome", "icons-awesome")
-
-      +header("Plugins & Addons")
-
-      +item("Charts", "charts-chartjs", "bar-chart-2")
-
-      +item("Maps", "maps-google", "map")
-      +item("SweetAlert", "sweetalert", "bell")
+        else
+          li.sidebar-item(class=(pageUrl === item.path ? 'active' : ''))
+            a.sidebar-link(href=`${item.link}.html`)
+              i.align-middle(data-feather=item.icon)
+              span.align-middle= item.title
