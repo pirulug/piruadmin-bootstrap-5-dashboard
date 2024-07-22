@@ -10,8 +10,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 
-const menuItems = require("./menuItems");
-
 const opts = {
   rootDir: process.cwd(),
   devBuild: process.env.NODE_ENV !== "production",
