@@ -39,6 +39,14 @@ html(lang='en')
     link(rel="stylesheet" href="css/fontawesome.css")
     link(href='css/app.css', rel='stylesheet')
 
+    script.
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+
   body
 
     include ../includes/blog-nav

@@ -36,6 +36,15 @@ html(lang="en")
     // Css Bootstrap
     link(rel="stylesheet" href="css/fontawesome.css")
     link(rel="stylesheet" href="css/app.css")
+
+    script.
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+      
   body
   
     main.wrapper

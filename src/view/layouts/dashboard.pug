@@ -3,7 +3,7 @@ include ../config/config
 block config
 
 doctype html
-html(lang="es" data-bs-theme="dark")
+html(lang="es")
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
@@ -37,6 +37,14 @@ html(lang="es" data-bs-theme="dark")
     // Css Bootstrap
     link(rel="stylesheet" href="css/fontawesome.css")
     link(rel="stylesheet" href="css/app.css")
+
+    script.
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
 
     block styles
   //- body(data-bs-spy="scroll" data-bs-target="#navbar-example")
