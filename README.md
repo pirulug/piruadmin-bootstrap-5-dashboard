@@ -4,6 +4,12 @@
 
 <h1 align="center">PiruAdmin - Bootstrap 5 Dashboard</h1>
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/pirulug/piruadmin-bootstrap-5-dashboard?color=ff0055&style=for-the-badge)
+[![GitHub issues](https://img.shields.io/github/issues/pirulug/piruadmin-bootstrap-5-dashboard?color=%23ff0055&style=for-the-badge)](https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/issues)
+[![GitHub forks](https://img.shields.io/github/forks/pirulug/piruadmin-bootstrap-5-dashboard?color=ff0055&style=for-the-badge)](https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/network)
+[![GitHub stars](https://img.shields.io/github/stars/pirulug/piruadmin-bootstrap-5-dashboard?color=ff0055&style=for-the-badge)](https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/stargazers)
+[![GitHub license](https://img.shields.io/github/license/pirulug/piruadmin-bootstrap-5-dashboard?color=ff0055&style=for-the-badge)](https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/blob/master/LICENSE.txt)
+
 <p align="center">
   <img src="./src/img/background.png" alt="AdminPirulug">
 </p>
