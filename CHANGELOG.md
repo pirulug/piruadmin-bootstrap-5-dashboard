@@ -26,3 +26,9 @@
 - General improvements
 - **Add:**
   - ToastifyJs
+  - 
+## [v1.3.0] - 18/08/24
+- I update packages
+- General improvements
+- **Add:**
+  - Lite Youtube
