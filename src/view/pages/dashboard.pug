@@ -8,65 +8,48 @@ block content
 
   .row.g-4
     .col-sm-6.col-xl-3
-      .card.border-left-primary.mb-3
+      .card.mb-3
         .card-body
           .row
-            .col.mt-0
-              h5.card-title Sales
             .col-auto
               .stat.stat-primary
                 i.align-middle(data-feather='truck')
-          h1.mt-1.mb-3 2.382
-          .mb-0
-            span.text-danger
-              i.mdi.mdi-arrow-bottom-right
-              |  -3.65%
-            span.text-muted Since last week
+            .col.mt-0
+              h5.text-end Sales
+          h2.h1.mt-1.mb-0.text-end 2.382
+          
     .col-sm-6.col-xl-3 
       .card.mb-3
         .card-body
           .row
-            .col.mt-0
-              h5.card-title Visitors
             .col-auto
               .stat.stat-success
                 i.align-middle(data-feather='users')
-          h1.mt-1.mb-3 14.212
-          .mb-0
-            span.text-success
-              i.mdi.mdi-arrow-bottom-right
-              |  5.25%
-            span.text-muted Since last week
+            .col.mt-0
+              h5.text-end Visitors
+          h2.h1.mt-1.mb-0.text-end 14.212
+          
     .col-sm-6.col-xl-3
       .card.mb-3
         .card-body
           .row
-            .col.mt-0
-              h5.card-title Earnings
             .col-auto
               .stat.stat-info
                 i.align-middle(data-feather='dollar-sign')
-          h1.mt-1.mb-3 $21.300
-          .mb-0
-            span.text-success
-              i.mdi.mdi-arrow-bottom-right
-              |  6.65%
-            span.text-muted Since last week
+            .col.mt-0
+              h5.text-end Earnings
+          h2.h1.mt-1.mb-0.text-end $21.300
+          
     .col-sm-6.col-xl-3  
       .card.mb-3
         .card-body
           .row
-            .col.mt-0
-              h5.card-title Orders
             .col-auto
               .stat.stat-danger
                 i.align-middle(data-feather='shopping-cart')
-          h1.mt-1.mb-3 64
-          .mb-0
-            span.text-danger
-              i.mdi.mdi-arrow-bottom-right
-              |  -2.25%
-            span.text-muted Since last week
+            .col.mt-0
+              h5.text-end Orders
+          h2.h1.mt-1.mb-0.text-end 64
 
   .row.g-4
     .col-12.col-md-12.col-xxl-6.d-flex.order-3.order-xxl-2
@@ -81,7 +64,7 @@ block content
           h5.card-title.mb-0 Real-Time
         .card-body.px-4
 
-          canvas#chartjs-dashboard-bar(style='height:350px;')
+          canvas#chartjs-dashboard-bar
 
   .row
     .col-12.d-flex
@@ -166,25 +149,46 @@ block scripts
         type: 'line',
         data: {
             labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
-            datasets: [{
-                label: 'Total de Visitas',
+            datasets: [
+              {
+                label: 'Buys',
                 borderColor: '#ff0055',
                 backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
                 data: [
-                  1000,
-                  500,
-                  48254,
-                  4554,
-                  85555,
-                  364564,
-                  457878,
-                  45455,
-                  2,
-                  100,
-                  1545,
-                  95454
+                  0,
+                  20,
+                  30,
+                  60,
+                  50,
+                  80,
+                  70,
+                  20,
+                  30,
+                  90,
+                  80,
+                  70
                 ]              
-            }]
+            },
+              {
+                label: 'Sales',
+                borderColor: '#e67e22',
+                backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
+                data: [
+                  0,
+                  90,
+                  30,
+                  10,
+                  20,
+                  70,
+                  10,
+                  60,
+                  50,
+                  80,
+                  70,
+                  80
+                ]              
+            }
+            ]
         },
         options: {
             scales: {
@@ -201,16 +205,29 @@ block scripts
       type: "bar",
       data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
-        datasets: [{
-          label: "This year",
-          backgroundColor: window.theme.primary,
-          borderColor: window.theme.primary,
-          hoverBackgroundColor: window.theme.primary,
-          hoverBorderColor: window.theme.primary,
-          data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+        datasets: [
+          {
+          label: "USA",
+          backgroundColor: "#9b59b6",
+          data: [80, 79, 76, 99, 55, 62, 48, 4, 55, 73, 45, 60],
           barPercentage: .75,
           categoryPercentage: .5
-        }]
+        },
+          {
+          label: "UK",
+          backgroundColor: "#e67e22",
+          data: [73, 55, 45, 76, 48, 55, 62, 80, 79, 4, 60, 99],
+          barPercentage: .75,
+          categoryPercentage: .5
+        },
+          {
+          label: "PEN",
+          backgroundColor: "#3498db",
+          data: [48, 73, 4, 99, 79, 80, 62, 60, 76, 55, 55, 45],
+          barPercentage: .75,
+          categoryPercentage: .5
+        },
+        ]
       },
       options: {
         maintainAspectRatio: false,
