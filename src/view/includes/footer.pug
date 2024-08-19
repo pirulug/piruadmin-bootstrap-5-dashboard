@@ -6,11 +6,17 @@ footer.footer
       .col-6.text-start
         p.mb-0
           a.text-muted(href='index.html')
-            strong #{siteName}
-          |  &copy;
-          i #{description}
+            |  &copy;&nbsp;
+            strong #{siteName}&nbsp;
+          | All Right Reserved.
+          //-i #{description}
       .col-6.text-end
-        ul.list-inline
+        p.mb-0 
+          | Designed By&nbsp;
+          a.text-muted(href="http://github.com/pirulug", target="_blank") Pirulug
+          //-| Distributed 
+          //-a(href="http://", target="_blank") By: ThemeWagon
+        //-ul.list-inline
           li.list-inline-item
             a.text-muted(href='#') Support
           li.list-inline-item
