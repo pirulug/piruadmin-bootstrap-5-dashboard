@@ -11,13 +11,13 @@ block scripts
   script(src='js/toastifyjs.js')
   script.
     Toastify({
-      text: "This is a toast",
+      text: "Un toast",
       className: "info",
       close: true,
       gravity: "bottom",
       position: "right",
       style: {
-        background: "blue",
+        background: "info",
       }
     }).showToast();
 
@@ -25,46 +25,4 @@ block content
 
   .card   
     .card-body 
-      .input-group.mb-3
-        input.form-control(type='text' placeholder="Recipient's username")
-        button#button-addon2.btn.btn-outline-primary(type='button') Button
-
-
-  .row
-    .col-12
-      .card
-        .card-header
-          h5.card-title.mb-0 Empty card
-        .card-body
-
-          .d-flex
-            i(data-feather="sun")
-            .form-check.form-switch.form-switch-sm
-              input#switchThemeSelect.form-check-input(type='checkbox')
-              label.form-check-label(for='switchThemeSelect')
-            i(data-feather="moon")
-
-          .form-check.form-switch.form-switch-sm
-            input#flexSwitchCheckDefault.form-check-input(type='checkbox')
-            label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
-          .form-check.form-switch.form-switch-sm
-            input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-            label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
-          .form-check.form-switch.form-switch-md
-            input#flexSwitchCheckDefault.form-check-input(type='checkbox')
-            label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
-          .form-check.form-switch.form-switch-md
-            input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-            label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
-          .form-check.form-switch.form-switch-lg
-            input#flexSwitchCheckDefault.form-check-input(type='checkbox')
-            label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
-          .form-check.form-switch.form-switch-lg
-            input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-            label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
-          .form-check.form-switch.form-switch-xl
-            input#flexSwitchCheckDefault.form-check-input(type='checkbox')
-            label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
-          .form-check.form-switch.form-switch-xl
-            input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-            label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
+      
