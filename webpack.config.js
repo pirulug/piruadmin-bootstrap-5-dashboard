@@ -32,6 +32,7 @@ module.exports = {
     tagify: "./src/plugins/tagify/tagify.js",
     toastifyjs: "./src/plugins/toastifyjs/toastifyjs.js",
     sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
+    liteyoutube: "./src/plugins/liteyoutube/liteyoutube.js",
     custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
