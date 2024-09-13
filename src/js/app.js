@@ -1,9 +1,9 @@
 import "../scss/app.scss";
 
 // Bootstrap
-import "./modulos/bootstrap";
+import "./modules/bootstrap";
 
-import "./modulos/theme";
-import "./modulos/darkLigthMode";
+import "./modules/theme";
+import "./modules/darkLightMode";
 
-import "./modulos/sidebar";
+import "./modules/sidebar";
