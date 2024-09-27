@@ -23,7 +23,7 @@ const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
 
 module.exports = {
   entry: {
-    app: "./src/js/app.js",
+    piruadmin: "./src/js/piruadmin.js",
     feathericons: "./src/plugins/feathericons/feathericons.js",
     chartjs: "./src/plugins/chartjs/chartjs.js",
     flatpickr: "./src/plugins/flatpickr/flatpickr.js",

@@ -1,4 +1,4 @@
-import "../scss/app.scss";
+import "../scss/piruadmin.scss";
 
 // Bootstrap
 import "./modules/bootstrap";
