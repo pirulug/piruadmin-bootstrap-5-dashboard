@@ -1,0 +1,8202 @@
+[
+  {
+    "name": "0-circle",
+    "label": "0-circle"
+  },
+  {
+    "name": "0-circle-fill",
+    "label": "0-circle-fill"
+  },
+  {
+    "name": "0-square",
+    "label": "0-square"
+  },
+  {
+    "name": "0-square-fill",
+    "label": "0-square-fill"
+  },
+  {
+    "name": "1-circle",
+    "label": "1-circle"
+  },
+  {
+    "name": "1-circle-fill",
+    "label": "1-circle-fill"
+  },
+  {
+    "name": "1-square",
+    "label": "1-square"
+  },
+  {
+    "name": "1-square-fill",
+    "label": "1-square-fill"
+  },
+  {
+    "name": "123",
+    "label": "123"
+  },
+  {
+    "name": "2-circle",
+    "label": "2-circle"
+  },
+  {
+    "name": "2-circle-fill",
+    "label": "2-circle-fill"
+  },
+  {
+    "name": "2-square",
+    "label": "2-square"
+  },
+  {
+    "name": "2-square-fill",
+    "label": "2-square-fill"
+  },
+  {
+    "name": "3-circle",
+    "label": "3-circle"
+  },
+  {
+    "name": "3-circle-fill",
+    "label": "3-circle-fill"
+  },
+  {
+    "name": "3-square",
+    "label": "3-square"
+  },
+  {
+    "name": "3-square-fill",
+    "label": "3-square-fill"
+  },
+  {
+    "name": "4-circle",
+    "label": "4-circle"
+  },
+  {
+    "name": "4-circle-fill",
+    "label": "4-circle-fill"
+  },
+  {
+    "name": "4-square",
+    "label": "4-square"
+  },
+  {
+    "name": "4-square-fill",
+    "label": "4-square-fill"
+  },
+  {
+    "name": "5-circle",
+    "label": "5-circle"
+  },
+  {
+    "name": "5-circle-fill",
+    "label": "5-circle-fill"
+  },
+  {
+    "name": "5-square",
+    "label": "5-square"
+  },
+  {
+    "name": "5-square-fill",
+    "label": "5-square-fill"
+  },
+  {
+    "name": "6-circle",
+    "label": "6-circle"
+  },
+  {
+    "name": "6-circle-fill",
+    "label": "6-circle-fill"
+  },
+  {
+    "name": "6-square",
+    "label": "6-square"
+  },
+  {
+    "name": "6-square-fill",
+    "label": "6-square-fill"
+  },
+  {
+    "name": "7-circle",
+    "label": "7-circle"
+  },
+  {
+    "name": "7-circle-fill",
+    "label": "7-circle-fill"
+  },
+  {
+    "name": "7-square",
+    "label": "7-square"
+  },
+  {
+    "name": "7-square-fill",
+    "label": "7-square-fill"
+  },
+  {
+    "name": "8-circle",
+    "label": "8-circle"
+  },
+  {
+    "name": "8-circle-fill",
+    "label": "8-circle-fill"
+  },
+  {
+    "name": "8-square",
+    "label": "8-square"
+  },
+  {
+    "name": "8-square-fill",
+    "label": "8-square-fill"
+  },
+  {
+    "name": "9-circle",
+    "label": "9-circle"
+  },
+  {
+    "name": "9-circle-fill",
+    "label": "9-circle-fill"
+  },
+  {
+    "name": "9-square",
+    "label": "9-square"
+  },
+  {
+    "name": "9-square-fill",
+    "label": "9-square-fill"
+  },
+  {
+    "name": "activity",
+    "label": "activity"
+  },
+  {
+    "name": "airplane",
+    "label": "airplane"
+  },
+  {
+    "name": "airplane-engines",
+    "label": "airplane-engines"
+  },
+  {
+    "name": "airplane-engines-fill",
+    "label": "airplane-engines-fill"
+  },
+  {
+    "name": "airplane-fill",
+    "label": "airplane-fill"
+  },
+  {
+    "name": "alarm",
+    "label": "alarm"
+  },
+  {
+    "name": "alarm-fill",
+    "label": "alarm-fill"
+  },
+  {
+    "name": "alexa",
+    "label": "alexa"
+  },
+  {
+    "name": "align-bottom",
+    "label": "align-bottom"
+  },
+  {
+    "name": "align-center",
+    "label": "align-center"
+  },
+  {
+    "name": "align-end",
+    "label": "align-end"
+  },
+  {
+    "name": "align-middle",
+    "label": "align-middle"
+  },
+  {
+    "name": "align-start",
+    "label": "align-start"
+  },
+  {
+    "name": "align-top",
+    "label": "align-top"
+  },
+  {
+    "name": "alipay",
+    "label": "alipay"
+  },
+  {
+    "name": "alphabet",
+    "label": "alphabet"
+  },
+  {
+    "name": "alphabet-uppercase",
+    "label": "alphabet-uppercase"
+  },
+  {
+    "name": "alt",
+    "label": "alt"
+  },
+  {
+    "name": "amazon",
+    "label": "amazon"
+  },
+  {
+    "name": "amd",
+    "label": "amd"
+  },
+  {
+    "name": "android",
+    "label": "android"
+  },
+  {
+    "name": "android2",
+    "label": "android2"
+  },
+  {
+    "name": "app",
+    "label": "app"
+  },
+  {
+    "name": "app-indicator",
+    "label": "app-indicator"
+  },
+  {
+    "name": "apple",
+    "label": "apple"
+  },
+  {
+    "name": "archive",
+    "label": "archive"
+  },
+  {
+    "name": "archive-fill",
+    "label": "archive-fill"
+  },
+  {
+    "name": "arrow-90deg-down",
+    "label": "arrow-90deg-down"
+  },
+  {
+    "name": "arrow-90deg-left",
+    "label": "arrow-90deg-left"
+  },
+  {
+    "name": "arrow-90deg-right",
+    "label": "arrow-90deg-right"
+  },
+  {
+    "name": "arrow-90deg-up",
+    "label": "arrow-90deg-up"
+  },
+  {
+    "name": "arrow-bar-down",
+    "label": "arrow-bar-down"
+  },
+  {
+    "name": "arrow-bar-left",
+    "label": "arrow-bar-left"
+  },
+  {
+    "name": "arrow-bar-right",
+    "label": "arrow-bar-right"
+  },
+  {
+    "name": "arrow-bar-up",
+    "label": "arrow-bar-up"
+  },
+  {
+    "name": "arrow-clockwise",
+    "label": "arrow-clockwise"
+  },
+  {
+    "name": "arrow-counterclockwise",
+    "label": "arrow-counterclockwise"
+  },
+  {
+    "name": "arrow-down",
+    "label": "arrow-down"
+  },
+  {
+    "name": "arrow-down-circle",
+    "label": "arrow-down-circle"
+  },
+  {
+    "name": "arrow-down-circle-fill",
+    "label": "arrow-down-circle-fill"
+  },
+  {
+    "name": "arrow-down-left",
+    "label": "arrow-down-left"
+  },
+  {
+    "name": "arrow-down-left-circle",
+    "label": "arrow-down-left-circle"
+  },
+  {
+    "name": "arrow-down-left-circle-fill",
+    "label": "arrow-down-left-circle-fill"
+  },
+  {
+    "name": "arrow-down-left-square",
+    "label": "arrow-down-left-square"
+  },
+  {
+    "name": "arrow-down-left-square-fill",
+    "label": "arrow-down-left-square-fill"
+  },
+  {
+    "name": "arrow-down-right",
+    "label": "arrow-down-right"
+  },
+  {
+    "name": "arrow-down-right-circle",
+    "label": "arrow-down-right-circle"
+  },
+  {
+    "name": "arrow-down-right-circle-fill",
+    "label": "arrow-down-right-circle-fill"
+  },
+  {
+    "name": "arrow-down-right-square",
+    "label": "arrow-down-right-square"
+  },
+  {
+    "name": "arrow-down-right-square-fill",
+    "label": "arrow-down-right-square-fill"
+  },
+  {
+    "name": "arrow-down-short",
+    "label": "arrow-down-short"
+  },
+  {
+    "name": "arrow-down-square",
+    "label": "arrow-down-square"
+  },
+  {
+    "name": "arrow-down-square-fill",
+    "label": "arrow-down-square-fill"
+  },
+  {
+    "name": "arrow-down-up",
+    "label": "arrow-down-up"
+  },
+  {
+    "name": "arrow-left",
+    "label": "arrow-left"
+  },
+  {
+    "name": "arrow-left-circle",
+    "label": "arrow-left-circle"
+  },
+  {
+    "name": "arrow-left-circle-fill",
+    "label": "arrow-left-circle-fill"
+  },
+  {
+    "name": "arrow-left-right",
+    "label": "arrow-left-right"
+  },
+  {
+    "name": "arrow-left-short",
+    "label": "arrow-left-short"
+  },
+  {
+    "name": "arrow-left-square",
+    "label": "arrow-left-square"
+  },
+  {
+    "name": "arrow-left-square-fill",
+    "label": "arrow-left-square-fill"
+  },
+  {
+    "name": "arrow-repeat",
+    "label": "arrow-repeat"
+  },
+  {
+    "name": "arrow-return-left",
+    "label": "arrow-return-left"
+  },
+  {
+    "name": "arrow-return-right",
+    "label": "arrow-return-right"
+  },
+  {
+    "name": "arrow-right",
+    "label": "arrow-right"
+  },
+  {
+    "name": "arrow-right-circle",
+    "label": "arrow-right-circle"
+  },
+  {
+    "name": "arrow-right-circle-fill",
+    "label": "arrow-right-circle-fill"
+  },
+  {
+    "name": "arrow-right-short",
+    "label": "arrow-right-short"
+  },
+  {
+    "name": "arrow-right-square",
+    "label": "arrow-right-square"
+  },
+  {
+    "name": "arrow-right-square-fill",
+    "label": "arrow-right-square-fill"
+  },
+  {
+    "name": "arrow-through-heart",
+    "label": "arrow-through-heart"
+  },
+  {
+    "name": "arrow-through-heart-fill",
+    "label": "arrow-through-heart-fill"
+  },
+  {
+    "name": "arrow-up",
+    "label": "arrow-up"
+  },
+  {
+    "name": "arrow-up-circle",
+    "label": "arrow-up-circle"
+  },
+  {
+    "name": "arrow-up-circle-fill",
+    "label": "arrow-up-circle-fill"
+  },
+  {
+    "name": "arrow-up-left",
+    "label": "arrow-up-left"
+  },
+  {
+    "name": "arrow-up-left-circle",
+    "label": "arrow-up-left-circle"
+  },
+  {
+    "name": "arrow-up-left-circle-fill",
+    "label": "arrow-up-left-circle-fill"
+  },
+  {
+    "name": "arrow-up-left-square",
+    "label": "arrow-up-left-square"
+  },
+  {
+    "name": "arrow-up-left-square-fill",
+    "label": "arrow-up-left-square-fill"
+  },
+  {
+    "name": "arrow-up-right",
+    "label": "arrow-up-right"
+  },
+  {
+    "name": "arrow-up-right-circle",
+    "label": "arrow-up-right-circle"
+  },
+  {
+    "name": "arrow-up-right-circle-fill",
+    "label": "arrow-up-right-circle-fill"
+  },
+  {
+    "name": "arrow-up-right-square",
+    "label": "arrow-up-right-square"
+  },
+  {
+    "name": "arrow-up-right-square-fill",
+    "label": "arrow-up-right-square-fill"
+  },
+  {
+    "name": "arrow-up-short",
+    "label": "arrow-up-short"
+  },
+  {
+    "name": "arrow-up-square",
+    "label": "arrow-up-square"
+  },
+  {
+    "name": "arrow-up-square-fill",
+    "label": "arrow-up-square-fill"
+  },
+  {
+    "name": "arrows",
+    "label": "arrows"
+  },
+  {
+    "name": "arrows-angle-contract",
+    "label": "arrows-angle-contract"
+  },
+  {
+    "name": "arrows-angle-expand",
+    "label": "arrows-angle-expand"
+  },
+  {
+    "name": "arrows-collapse",
+    "label": "arrows-collapse"
+  },
+  {
+    "name": "arrows-collapse-vertical",
+    "label": "arrows-collapse-vertical"
+  },
+  {
+    "name": "arrows-expand",
+    "label": "arrows-expand"
+  },
+  {
+    "name": "arrows-expand-vertical",
+    "label": "arrows-expand-vertical"
+  },
+  {
+    "name": "arrows-fullscreen",
+    "label": "arrows-fullscreen"
+  },
+  {
+    "name": "arrows-move",
+    "label": "arrows-move"
+  },
+  {
+    "name": "arrows-vertical",
+    "label": "arrows-vertical"
+  },
+  {
+    "name": "aspect-ratio",
+    "label": "aspect-ratio"
+  },
+  {
+    "name": "aspect-ratio-fill",
+    "label": "aspect-ratio-fill"
+  },
+  {
+    "name": "asterisk",
+    "label": "asterisk"
+  },
+  {
+    "name": "at",
+    "label": "at"
+  },
+  {
+    "name": "award",
+    "label": "award"
+  },
+  {
+    "name": "award-fill",
+    "label": "award-fill"
+  },
+  {
+    "name": "back",
+    "label": "back"
+  },
+  {
+    "name": "backpack",
+    "label": "backpack"
+  },
+  {
+    "name": "backpack-fill",
+    "label": "backpack-fill"
+  },
+  {
+    "name": "backpack2",
+    "label": "backpack2"
+  },
+  {
+    "name": "backpack2-fill",
+    "label": "backpack2-fill"
+  },
+  {
+    "name": "backpack3",
+    "label": "backpack3"
+  },
+  {
+    "name": "backpack3-fill",
+    "label": "backpack3-fill"
+  },
+  {
+    "name": "backpack4",
+    "label": "backpack4"
+  },
+  {
+    "name": "backpack4-fill",
+    "label": "backpack4-fill"
+  },
+  {
+    "name": "backspace",
+    "label": "backspace"
+  },
+  {
+    "name": "backspace-fill",
+    "label": "backspace-fill"
+  },
+  {
+    "name": "backspace-reverse",
+    "label": "backspace-reverse"
+  },
+  {
+    "name": "backspace-reverse-fill",
+    "label": "backspace-reverse-fill"
+  },
+  {
+    "name": "badge-3d",
+    "label": "badge-3d"
+  },
+  {
+    "name": "badge-3d-fill",
+    "label": "badge-3d-fill"
+  },
+  {
+    "name": "badge-4k",
+    "label": "badge-4k"
+  },
+  {
+    "name": "badge-4k-fill",
+    "label": "badge-4k-fill"
+  },
+  {
+    "name": "badge-8k",
+    "label": "badge-8k"
+  },
+  {
+    "name": "badge-8k-fill",
+    "label": "badge-8k-fill"
+  },
+  {
+    "name": "badge-ad",
+    "label": "badge-ad"
+  },
+  {
+    "name": "badge-ad-fill",
+    "label": "badge-ad-fill"
+  },
+  {
+    "name": "badge-ar",
+    "label": "badge-ar"
+  },
+  {
+    "name": "badge-ar-fill",
+    "label": "badge-ar-fill"
+  },
+  {
+    "name": "badge-cc",
+    "label": "badge-cc"
+  },
+  {
+    "name": "badge-cc-fill",
+    "label": "badge-cc-fill"
+  },
+  {
+    "name": "badge-hd",
+    "label": "badge-hd"
+  },
+  {
+    "name": "badge-hd-fill",
+    "label": "badge-hd-fill"
+  },
+  {
+    "name": "badge-sd",
+    "label": "badge-sd"
+  },
+  {
+    "name": "badge-sd-fill",
+    "label": "badge-sd-fill"
+  },
+  {
+    "name": "badge-tm",
+    "label": "badge-tm"
+  },
+  {
+    "name": "badge-tm-fill",
+    "label": "badge-tm-fill"
+  },
+  {
+    "name": "badge-vo",
+    "label": "badge-vo"
+  },
+  {
+    "name": "badge-vo-fill",
+    "label": "badge-vo-fill"
+  },
+  {
+    "name": "badge-vr",
+    "label": "badge-vr"
+  },
+  {
+    "name": "badge-vr-fill",
+    "label": "badge-vr-fill"
+  },
+  {
+    "name": "badge-wc",
+    "label": "badge-wc"
+  },
+  {
+    "name": "badge-wc-fill",
+    "label": "badge-wc-fill"
+  },
+  {
+    "name": "bag",
+    "label": "bag"
+  },
+  {
+    "name": "bag-check",
+    "label": "bag-check"
+  },
+  {
+    "name": "bag-check-fill",
+    "label": "bag-check-fill"
+  },
+  {
+    "name": "bag-dash",
+    "label": "bag-dash"
+  },
+  {
+    "name": "bag-dash-fill",
+    "label": "bag-dash-fill"
+  },
+  {
+    "name": "bag-fill",
+    "label": "bag-fill"
+  },
+  {
+    "name": "bag-heart",
+    "label": "bag-heart"
+  },
+  {
+    "name": "bag-heart-fill",
+    "label": "bag-heart-fill"
+  },
+  {
+    "name": "bag-plus",
+    "label": "bag-plus"
+  },
+  {
+    "name": "bag-plus-fill",
+    "label": "bag-plus-fill"
+  },
+  {
+    "name": "bag-x",
+    "label": "bag-x"
+  },
+  {
+    "name": "bag-x-fill",
+    "label": "bag-x-fill"
+  },
+  {
+    "name": "balloon",
+    "label": "balloon"
+  },
+  {
+    "name": "balloon-fill",
+    "label": "balloon-fill"
+  },
+  {
+    "name": "balloon-heart",
+    "label": "balloon-heart"
+  },
+  {
+    "name": "balloon-heart-fill",
+    "label": "balloon-heart-fill"
+  },
+  {
+    "name": "ban",
+    "label": "ban"
+  },
+  {
+    "name": "ban-fill",
+    "label": "ban-fill"
+  },
+  {
+    "name": "bandaid",
+    "label": "bandaid"
+  },
+  {
+    "name": "bandaid-fill",
+    "label": "bandaid-fill"
+  },
+  {
+    "name": "bank",
+    "label": "bank"
+  },
+  {
+    "name": "bank2",
+    "label": "bank2"
+  },
+  {
+    "name": "bar-chart",
+    "label": "bar-chart"
+  },
+  {
+    "name": "bar-chart-fill",
+    "label": "bar-chart-fill"
+  },
+  {
+    "name": "bar-chart-line",
+    "label": "bar-chart-line"
+  },
+  {
+    "name": "bar-chart-line-fill",
+    "label": "bar-chart-line-fill"
+  },
+  {
+    "name": "bar-chart-steps",
+    "label": "bar-chart-steps"
+  },
+  {
+    "name": "basket",
+    "label": "basket"
+  },
+  {
+    "name": "basket-fill",
+    "label": "basket-fill"
+  },
+  {
+    "name": "basket2",
+    "label": "basket2"
+  },
+  {
+    "name": "basket2-fill",
+    "label": "basket2-fill"
+  },
+  {
+    "name": "basket3",
+    "label": "basket3"
+  },
+  {
+    "name": "basket3-fill",
+    "label": "basket3-fill"
+  },
+  {
+    "name": "battery",
+    "label": "battery"
+  },
+  {
+    "name": "battery-charging",
+    "label": "battery-charging"
+  },
+  {
+    "name": "battery-full",
+    "label": "battery-full"
+  },
+  {
+    "name": "battery-half",
+    "label": "battery-half"
+  },
+  {
+    "name": "behance",
+    "label": "behance"
+  },
+  {
+    "name": "bell",
+    "label": "bell"
+  },
+  {
+    "name": "bell-fill",
+    "label": "bell-fill"
+  },
+  {
+    "name": "bell-slash",
+    "label": "bell-slash"
+  },
+  {
+    "name": "bell-slash-fill",
+    "label": "bell-slash-fill"
+  },
+  {
+    "name": "bezier",
+    "label": "bezier"
+  },
+  {
+    "name": "bezier2",
+    "label": "bezier2"
+  },
+  {
+    "name": "bicycle",
+    "label": "bicycle"
+  },
+  {
+    "name": "bing",
+    "label": "bing"
+  },
+  {
+    "name": "binoculars",
+    "label": "binoculars"
+  },
+  {
+    "name": "binoculars-fill",
+    "label": "binoculars-fill"
+  },
+  {
+    "name": "blockquote-left",
+    "label": "blockquote-left"
+  },
+  {
+    "name": "blockquote-right",
+    "label": "blockquote-right"
+  },
+  {
+    "name": "bluetooth",
+    "label": "bluetooth"
+  },
+  {
+    "name": "body-text",
+    "label": "body-text"
+  },
+  {
+    "name": "book",
+    "label": "book"
+  },
+  {
+    "name": "book-fill",
+    "label": "book-fill"
+  },
+  {
+    "name": "book-half",
+    "label": "book-half"
+  },
+  {
+    "name": "bookmark",
+    "label": "bookmark"
+  },
+  {
+    "name": "bookmark-check",
+    "label": "bookmark-check"
+  },
+  {
+    "name": "bookmark-check-fill",
+    "label": "bookmark-check-fill"
+  },
+  {
+    "name": "bookmark-dash",
+    "label": "bookmark-dash"
+  },
+  {
+    "name": "bookmark-dash-fill",
+    "label": "bookmark-dash-fill"
+  },
+  {
+    "name": "bookmark-fill",
+    "label": "bookmark-fill"
+  },
+  {
+    "name": "bookmark-heart",
+    "label": "bookmark-heart"
+  },
+  {
+    "name": "bookmark-heart-fill",
+    "label": "bookmark-heart-fill"
+  },
+  {
+    "name": "bookmark-plus",
+    "label": "bookmark-plus"
+  },
+  {
+    "name": "bookmark-plus-fill",
+    "label": "bookmark-plus-fill"
+  },
+  {
+    "name": "bookmark-star",
+    "label": "bookmark-star"
+  },
+  {
+    "name": "bookmark-star-fill",
+    "label": "bookmark-star-fill"
+  },
+  {
+    "name": "bookmark-x",
+    "label": "bookmark-x"
+  },
+  {
+    "name": "bookmark-x-fill",
+    "label": "bookmark-x-fill"
+  },
+  {
+    "name": "bookmarks",
+    "label": "bookmarks"
+  },
+  {
+    "name": "bookmarks-fill",
+    "label": "bookmarks-fill"
+  },
+  {
+    "name": "bookshelf",
+    "label": "bookshelf"
+  },
+  {
+    "name": "boombox",
+    "label": "boombox"
+  },
+  {
+    "name": "boombox-fill",
+    "label": "boombox-fill"
+  },
+  {
+    "name": "bootstrap",
+    "label": "bootstrap"
+  },
+  {
+    "name": "bootstrap-fill",
+    "label": "bootstrap-fill"
+  },
+  {
+    "name": "bootstrap-reboot",
+    "label": "bootstrap-reboot"
+  },
+  {
+    "name": "border",
+    "label": "border"
+  },
+  {
+    "name": "border-all",
+    "label": "border-all"
+  },
+  {
+    "name": "border-bottom",
+    "label": "border-bottom"
+  },
+  {
+    "name": "border-center",
+    "label": "border-center"
+  },
+  {
+    "name": "border-inner",
+    "label": "border-inner"
+  },
+  {
+    "name": "border-left",
+    "label": "border-left"
+  },
+  {
+    "name": "border-middle",
+    "label": "border-middle"
+  },
+  {
+    "name": "border-outer",
+    "label": "border-outer"
+  },
+  {
+    "name": "border-right",
+    "label": "border-right"
+  },
+  {
+    "name": "border-style",
+    "label": "border-style"
+  },
+  {
+    "name": "border-top",
+    "label": "border-top"
+  },
+  {
+    "name": "border-width",
+    "label": "border-width"
+  },
+  {
+    "name": "bounding-box",
+    "label": "bounding-box"
+  },
+  {
+    "name": "bounding-box-circles",
+    "label": "bounding-box-circles"
+  },
+  {
+    "name": "box",
+    "label": "box"
+  },
+  {
+    "name": "box-arrow-down",
+    "label": "box-arrow-down"
+  },
+  {
+    "name": "box-arrow-down-left",
+    "label": "box-arrow-down-left"
+  },
+  {
+    "name": "box-arrow-down-right",
+    "label": "box-arrow-down-right"
+  },
+  {
+    "name": "box-arrow-in-down",
+    "label": "box-arrow-in-down"
+  },
+  {
+    "name": "box-arrow-in-down-left",
+    "label": "box-arrow-in-down-left"
+  },
+  {
+    "name": "box-arrow-in-down-right",
+    "label": "box-arrow-in-down-right"
+  },
+  {
+    "name": "box-arrow-in-left",
+    "label": "box-arrow-in-left"
+  },
+  {
+    "name": "box-arrow-in-right",
+    "label": "box-arrow-in-right"
+  },
+  {
+    "name": "box-arrow-in-up",
+    "label": "box-arrow-in-up"
+  },
+  {
+    "name": "box-arrow-in-up-left",
+    "label": "box-arrow-in-up-left"
+  },
+  {
+    "name": "box-arrow-in-up-right",
+    "label": "box-arrow-in-up-right"
+  },
+  {
+    "name": "box-arrow-left",
+    "label": "box-arrow-left"
+  },
+  {
+    "name": "box-arrow-right",
+    "label": "box-arrow-right"
+  },
+  {
+    "name": "box-arrow-up",
+    "label": "box-arrow-up"
+  },
+  {
+    "name": "box-arrow-up-left",
+    "label": "box-arrow-up-left"
+  },
+  {
+    "name": "box-arrow-up-right",
+    "label": "box-arrow-up-right"
+  },
+  {
+    "name": "box-fill",
+    "label": "box-fill"
+  },
+  {
+    "name": "box-seam",
+    "label": "box-seam"
+  },
+  {
+    "name": "box-seam-fill",
+    "label": "box-seam-fill"
+  },
+  {
+    "name": "box2",
+    "label": "box2"
+  },
+  {
+    "name": "box2-fill",
+    "label": "box2-fill"
+  },
+  {
+    "name": "box2-heart",
+    "label": "box2-heart"
+  },
+  {
+    "name": "box2-heart-fill",
+    "label": "box2-heart-fill"
+  },
+  {
+    "name": "boxes",
+    "label": "boxes"
+  },
+  {
+    "name": "braces",
+    "label": "braces"
+  },
+  {
+    "name": "braces-asterisk",
+    "label": "braces-asterisk"
+  },
+  {
+    "name": "bricks",
+    "label": "bricks"
+  },
+  {
+    "name": "briefcase",
+    "label": "briefcase"
+  },
+  {
+    "name": "briefcase-fill",
+    "label": "briefcase-fill"
+  },
+  {
+    "name": "brightness-alt-high",
+    "label": "brightness-alt-high"
+  },
+  {
+    "name": "brightness-alt-high-fill",
+    "label": "brightness-alt-high-fill"
+  },
+  {
+    "name": "brightness-alt-low",
+    "label": "brightness-alt-low"
+  },
+  {
+    "name": "brightness-alt-low-fill",
+    "label": "brightness-alt-low-fill"
+  },
+  {
+    "name": "brightness-high",
+    "label": "brightness-high"
+  },
+  {
+    "name": "brightness-high-fill",
+    "label": "brightness-high-fill"
+  },
+  {
+    "name": "brightness-low",
+    "label": "brightness-low"
+  },
+  {
+    "name": "brightness-low-fill",
+    "label": "brightness-low-fill"
+  },
+  {
+    "name": "brilliance",
+    "label": "brilliance"
+  },
+  {
+    "name": "broadcast",
+    "label": "broadcast"
+  },
+  {
+    "name": "broadcast-pin",
+    "label": "broadcast-pin"
+  },
+  {
+    "name": "browser-chrome",
+    "label": "browser-chrome"
+  },
+  {
+    "name": "browser-edge",
+    "label": "browser-edge"
+  },
+  {
+    "name": "browser-firefox",
+    "label": "browser-firefox"
+  },
+  {
+    "name": "browser-safari",
+    "label": "browser-safari"
+  },
+  {
+    "name": "brush",
+    "label": "brush"
+  },
+  {
+    "name": "brush-fill",
+    "label": "brush-fill"
+  },
+  {
+    "name": "bucket",
+    "label": "bucket"
+  },
+  {
+    "name": "bucket-fill",
+    "label": "bucket-fill"
+  },
+  {
+    "name": "bug",
+    "label": "bug"
+  },
+  {
+    "name": "bug-fill",
+    "label": "bug-fill"
+  },
+  {
+    "name": "building",
+    "label": "building"
+  },
+  {
+    "name": "building-add",
+    "label": "building-add"
+  },
+  {
+    "name": "building-check",
+    "label": "building-check"
+  },
+  {
+    "name": "building-dash",
+    "label": "building-dash"
+  },
+  {
+    "name": "building-down",
+    "label": "building-down"
+  },
+  {
+    "name": "building-exclamation",
+    "label": "building-exclamation"
+  },
+  {
+    "name": "building-fill",
+    "label": "building-fill"
+  },
+  {
+    "name": "building-fill-add",
+    "label": "building-fill-add"
+  },
+  {
+    "name": "building-fill-check",
+    "label": "building-fill-check"
+  },
+  {
+    "name": "building-fill-dash",
+    "label": "building-fill-dash"
+  },
+  {
+    "name": "building-fill-down",
+    "label": "building-fill-down"
+  },
+  {
+    "name": "building-fill-exclamation",
+    "label": "building-fill-exclamation"
+  },
+  {
+    "name": "building-fill-gear",
+    "label": "building-fill-gear"
+  },
+  {
+    "name": "building-fill-lock",
+    "label": "building-fill-lock"
+  },
+  {
+    "name": "building-fill-slash",
+    "label": "building-fill-slash"
+  },
+  {
+    "name": "building-fill-up",
+    "label": "building-fill-up"
+  },
+  {
+    "name": "building-fill-x",
+    "label": "building-fill-x"
+  },
+  {
+    "name": "building-gear",
+    "label": "building-gear"
+  },
+  {
+    "name": "building-lock",
+    "label": "building-lock"
+  },
+  {
+    "name": "building-slash",
+    "label": "building-slash"
+  },
+  {
+    "name": "building-up",
+    "label": "building-up"
+  },
+  {
+    "name": "building-x",
+    "label": "building-x"
+  },
+  {
+    "name": "buildings",
+    "label": "buildings"
+  },
+  {
+    "name": "buildings-fill",
+    "label": "buildings-fill"
+  },
+  {
+    "name": "bullseye",
+    "label": "bullseye"
+  },
+  {
+    "name": "bus-front",
+    "label": "bus-front"
+  },
+  {
+    "name": "bus-front-fill",
+    "label": "bus-front-fill"
+  },
+  {
+    "name": "c-circle",
+    "label": "c-circle"
+  },
+  {
+    "name": "c-circle-fill",
+    "label": "c-circle-fill"
+  },
+  {
+    "name": "c-square",
+    "label": "c-square"
+  },
+  {
+    "name": "c-square-fill",
+    "label": "c-square-fill"
+  },
+  {
+    "name": "cake",
+    "label": "cake"
+  },
+  {
+    "name": "cake-fill",
+    "label": "cake-fill"
+  },
+  {
+    "name": "cake2",
+    "label": "cake2"
+  },
+  {
+    "name": "cake2-fill",
+    "label": "cake2-fill"
+  },
+  {
+    "name": "calculator",
+    "label": "calculator"
+  },
+  {
+    "name": "calculator-fill",
+    "label": "calculator-fill"
+  },
+  {
+    "name": "calendar",
+    "label": "calendar"
+  },
+  {
+    "name": "calendar-check",
+    "label": "calendar-check"
+  },
+  {
+    "name": "calendar-check-fill",
+    "label": "calendar-check-fill"
+  },
+  {
+    "name": "calendar-date",
+    "label": "calendar-date"
+  },
+  {
+    "name": "calendar-date-fill",
+    "label": "calendar-date-fill"
+  },
+  {
+    "name": "calendar-day",
+    "label": "calendar-day"
+  },
+  {
+    "name": "calendar-day-fill",
+    "label": "calendar-day-fill"
+  },
+  {
+    "name": "calendar-event",
+    "label": "calendar-event"
+  },
+  {
+    "name": "calendar-event-fill",
+    "label": "calendar-event-fill"
+  },
+  {
+    "name": "calendar-fill",
+    "label": "calendar-fill"
+  },
+  {
+    "name": "calendar-heart",
+    "label": "calendar-heart"
+  },
+  {
+    "name": "calendar-heart-fill",
+    "label": "calendar-heart-fill"
+  },
+  {
+    "name": "calendar-minus",
+    "label": "calendar-minus"
+  },
+  {
+    "name": "calendar-minus-fill",
+    "label": "calendar-minus-fill"
+  },
+  {
+    "name": "calendar-month",
+    "label": "calendar-month"
+  },
+  {
+    "name": "calendar-month-fill",
+    "label": "calendar-month-fill"
+  },
+  {
+    "name": "calendar-plus",
+    "label": "calendar-plus"
+  },
+  {
+    "name": "calendar-plus-fill",
+    "label": "calendar-plus-fill"
+  },
+  {
+    "name": "calendar-range",
+    "label": "calendar-range"
+  },
+  {
+    "name": "calendar-range-fill",
+    "label": "calendar-range-fill"
+  },
+  {
+    "name": "calendar-week",
+    "label": "calendar-week"
+  },
+  {
+    "name": "calendar-week-fill",
+    "label": "calendar-week-fill"
+  },
+  {
+    "name": "calendar-x",
+    "label": "calendar-x"
+  },
+  {
+    "name": "calendar-x-fill",
+    "label": "calendar-x-fill"
+  },
+  {
+    "name": "calendar2",
+    "label": "calendar2"
+  },
+  {
+    "name": "calendar2-check",
+    "label": "calendar2-check"
+  },
+  {
+    "name": "calendar2-check-fill",
+    "label": "calendar2-check-fill"
+  },
+  {
+    "name": "calendar2-date",
+    "label": "calendar2-date"
+  },
+  {
+    "name": "calendar2-date-fill",
+    "label": "calendar2-date-fill"
+  },
+  {
+    "name": "calendar2-day",
+    "label": "calendar2-day"
+  },
+  {
+    "name": "calendar2-day-fill",
+    "label": "calendar2-day-fill"
+  },
+  {
+    "name": "calendar2-event",
+    "label": "calendar2-event"
+  },
+  {
+    "name": "calendar2-event-fill",
+    "label": "calendar2-event-fill"
+  },
+  {
+    "name": "calendar2-fill",
+    "label": "calendar2-fill"
+  },
+  {
+    "name": "calendar2-heart",
+    "label": "calendar2-heart"
+  },
+  {
+    "name": "calendar2-heart-fill",
+    "label": "calendar2-heart-fill"
+  },
+  {
+    "name": "calendar2-minus",
+    "label": "calendar2-minus"
+  },
+  {
+    "name": "calendar2-minus-fill",
+    "label": "calendar2-minus-fill"
+  },
+  {
+    "name": "calendar2-month",
+    "label": "calendar2-month"
+  },
+  {
+    "name": "calendar2-month-fill",
+    "label": "calendar2-month-fill"
+  },
+  {
+    "name": "calendar2-plus",
+    "label": "calendar2-plus"
+  },
+  {
+    "name": "calendar2-plus-fill",
+    "label": "calendar2-plus-fill"
+  },
+  {
+    "name": "calendar2-range",
+    "label": "calendar2-range"
+  },
+  {
+    "name": "calendar2-range-fill",
+    "label": "calendar2-range-fill"
+  },
+  {
+    "name": "calendar2-week",
+    "label": "calendar2-week"
+  },
+  {
+    "name": "calendar2-week-fill",
+    "label": "calendar2-week-fill"
+  },
+  {
+    "name": "calendar2-x",
+    "label": "calendar2-x"
+  },
+  {
+    "name": "calendar2-x-fill",
+    "label": "calendar2-x-fill"
+  },
+  {
+    "name": "calendar3",
+    "label": "calendar3"
+  },
+  {
+    "name": "calendar3-event",
+    "label": "calendar3-event"
+  },
+  {
+    "name": "calendar3-event-fill",
+    "label": "calendar3-event-fill"
+  },
+  {
+    "name": "calendar3-fill",
+    "label": "calendar3-fill"
+  },
+  {
+    "name": "calendar3-range",
+    "label": "calendar3-range"
+  },
+  {
+    "name": "calendar3-range-fill",
+    "label": "calendar3-range-fill"
+  },
+  {
+    "name": "calendar3-week",
+    "label": "calendar3-week"
+  },
+  {
+    "name": "calendar3-week-fill",
+    "label": "calendar3-week-fill"
+  },
+  {
+    "name": "calendar4",
+    "label": "calendar4"
+  },
+  {
+    "name": "calendar4-event",
+    "label": "calendar4-event"
+  },
+  {
+    "name": "calendar4-range",
+    "label": "calendar4-range"
+  },
+  {
+    "name": "calendar4-week",
+    "label": "calendar4-week"
+  },
+  {
+    "name": "camera",
+    "label": "camera"
+  },
+  {
+    "name": "camera-fill",
+    "label": "camera-fill"
+  },
+  {
+    "name": "camera-reels",
+    "label": "camera-reels"
+  },
+  {
+    "name": "camera-reels-fill",
+    "label": "camera-reels-fill"
+  },
+  {
+    "name": "camera-video",
+    "label": "camera-video"
+  },
+  {
+    "name": "camera-video-fill",
+    "label": "camera-video-fill"
+  },
+  {
+    "name": "camera-video-off",
+    "label": "camera-video-off"
+  },
+  {
+    "name": "camera-video-off-fill",
+    "label": "camera-video-off-fill"
+  },
+  {
+    "name": "camera2",
+    "label": "camera2"
+  },
+  {
+    "name": "capslock",
+    "label": "capslock"
+  },
+  {
+    "name": "capslock-fill",
+    "label": "capslock-fill"
+  },
+  {
+    "name": "capsule",
+    "label": "capsule"
+  },
+  {
+    "name": "capsule-pill",
+    "label": "capsule-pill"
+  },
+  {
+    "name": "car-front",
+    "label": "car-front"
+  },
+  {
+    "name": "car-front-fill",
+    "label": "car-front-fill"
+  },
+  {
+    "name": "card-checklist",
+    "label": "card-checklist"
+  },
+  {
+    "name": "card-heading",
+    "label": "card-heading"
+  },
+  {
+    "name": "card-image",
+    "label": "card-image"
+  },
+  {
+    "name": "card-list",
+    "label": "card-list"
+  },
+  {
+    "name": "card-text",
+    "label": "card-text"
+  },
+  {
+    "name": "caret-down",
+    "label": "caret-down"
+  },
+  {
+    "name": "caret-down-fill",
+    "label": "caret-down-fill"
+  },
+  {
+    "name": "caret-down-square",
+    "label": "caret-down-square"
+  },
+  {
+    "name": "caret-down-square-fill",
+    "label": "caret-down-square-fill"
+  },
+  {
+    "name": "caret-left",
+    "label": "caret-left"
+  },
+  {
+    "name": "caret-left-fill",
+    "label": "caret-left-fill"
+  },
+  {
+    "name": "caret-left-square",
+    "label": "caret-left-square"
+  },
+  {
+    "name": "caret-left-square-fill",
+    "label": "caret-left-square-fill"
+  },
+  {
+    "name": "caret-right",
+    "label": "caret-right"
+  },
+  {
+    "name": "caret-right-fill",
+    "label": "caret-right-fill"
+  },
+  {
+    "name": "caret-right-square",
+    "label": "caret-right-square"
+  },
+  {
+    "name": "caret-right-square-fill",
+    "label": "caret-right-square-fill"
+  },
+  {
+    "name": "caret-up",
+    "label": "caret-up"
+  },
+  {
+    "name": "caret-up-fill",
+    "label": "caret-up-fill"
+  },
+  {
+    "name": "caret-up-square",
+    "label": "caret-up-square"
+  },
+  {
+    "name": "caret-up-square-fill",
+    "label": "caret-up-square-fill"
+  },
+  {
+    "name": "cart",
+    "label": "cart"
+  },
+  {
+    "name": "cart-check",
+    "label": "cart-check"
+  },
+  {
+    "name": "cart-check-fill",
+    "label": "cart-check-fill"
+  },
+  {
+    "name": "cart-dash",
+    "label": "cart-dash"
+  },
+  {
+    "name": "cart-dash-fill",
+    "label": "cart-dash-fill"
+  },
+  {
+    "name": "cart-fill",
+    "label": "cart-fill"
+  },
+  {
+    "name": "cart-plus",
+    "label": "cart-plus"
+  },
+  {
+    "name": "cart-plus-fill",
+    "label": "cart-plus-fill"
+  },
+  {
+    "name": "cart-x",
+    "label": "cart-x"
+  },
+  {
+    "name": "cart-x-fill",
+    "label": "cart-x-fill"
+  },
+  {
+    "name": "cart2",
+    "label": "cart2"
+  },
+  {
+    "name": "cart3",
+    "label": "cart3"
+  },
+  {
+    "name": "cart4",
+    "label": "cart4"
+  },
+  {
+    "name": "cash",
+    "label": "cash"
+  },
+  {
+    "name": "cash-coin",
+    "label": "cash-coin"
+  },
+  {
+    "name": "cash-stack",
+    "label": "cash-stack"
+  },
+  {
+    "name": "cassette",
+    "label": "cassette"
+  },
+  {
+    "name": "cassette-fill",
+    "label": "cassette-fill"
+  },
+  {
+    "name": "cast",
+    "label": "cast"
+  },
+  {
+    "name": "cc-circle",
+    "label": "cc-circle"
+  },
+  {
+    "name": "cc-circle-fill",
+    "label": "cc-circle-fill"
+  },
+  {
+    "name": "cc-square",
+    "label": "cc-square"
+  },
+  {
+    "name": "cc-square-fill",
+    "label": "cc-square-fill"
+  },
+  {
+    "name": "chat",
+    "label": "chat"
+  },
+  {
+    "name": "chat-dots",
+    "label": "chat-dots"
+  },
+  {
+    "name": "chat-dots-fill",
+    "label": "chat-dots-fill"
+  },
+  {
+    "name": "chat-fill",
+    "label": "chat-fill"
+  },
+  {
+    "name": "chat-heart",
+    "label": "chat-heart"
+  },
+  {
+    "name": "chat-heart-fill",
+    "label": "chat-heart-fill"
+  },
+  {
+    "name": "chat-left",
+    "label": "chat-left"
+  },
+  {
+    "name": "chat-left-dots",
+    "label": "chat-left-dots"
+  },
+  {
+    "name": "chat-left-dots-fill",
+    "label": "chat-left-dots-fill"
+  },
+  {
+    "name": "chat-left-fill",
+    "label": "chat-left-fill"
+  },
+  {
+    "name": "chat-left-heart",
+    "label": "chat-left-heart"
+  },
+  {
+    "name": "chat-left-heart-fill",
+    "label": "chat-left-heart-fill"
+  },
+  {
+    "name": "chat-left-quote",
+    "label": "chat-left-quote"
+  },
+  {
+    "name": "chat-left-quote-fill",
+    "label": "chat-left-quote-fill"
+  },
+  {
+    "name": "chat-left-text",
+    "label": "chat-left-text"
+  },
+  {
+    "name": "chat-left-text-fill",
+    "label": "chat-left-text-fill"
+  },
+  {
+    "name": "chat-quote",
+    "label": "chat-quote"
+  },
+  {
+    "name": "chat-quote-fill",
+    "label": "chat-quote-fill"
+  },
+  {
+    "name": "chat-right",
+    "label": "chat-right"
+  },
+  {
+    "name": "chat-right-dots",
+    "label": "chat-right-dots"
+  },
+  {
+    "name": "chat-right-dots-fill",
+    "label": "chat-right-dots-fill"
+  },
+  {
+    "name": "chat-right-fill",
+    "label": "chat-right-fill"
+  },
+  {
+    "name": "chat-right-heart",
+    "label": "chat-right-heart"
+  },
+  {
+    "name": "chat-right-heart-fill",
+    "label": "chat-right-heart-fill"
+  },
+  {
+    "name": "chat-right-quote",
+    "label": "chat-right-quote"
+  },
+  {
+    "name": "chat-right-quote-fill",
+    "label": "chat-right-quote-fill"
+  },
+  {
+    "name": "chat-right-text",
+    "label": "chat-right-text"
+  },
+  {
+    "name": "chat-right-text-fill",
+    "label": "chat-right-text-fill"
+  },
+  {
+    "name": "chat-square",
+    "label": "chat-square"
+  },
+  {
+    "name": "chat-square-dots",
+    "label": "chat-square-dots"
+  },
+  {
+    "name": "chat-square-dots-fill",
+    "label": "chat-square-dots-fill"
+  },
+  {
+    "name": "chat-square-fill",
+    "label": "chat-square-fill"
+  },
+  {
+    "name": "chat-square-heart",
+    "label": "chat-square-heart"
+  },
+  {
+    "name": "chat-square-heart-fill",
+    "label": "chat-square-heart-fill"
+  },
+  {
+    "name": "chat-square-quote",
+    "label": "chat-square-quote"
+  },
+  {
+    "name": "chat-square-quote-fill",
+    "label": "chat-square-quote-fill"
+  },
+  {
+    "name": "chat-square-text",
+    "label": "chat-square-text"
+  },
+  {
+    "name": "chat-square-text-fill",
+    "label": "chat-square-text-fill"
+  },
+  {
+    "name": "chat-text",
+    "label": "chat-text"
+  },
+  {
+    "name": "chat-text-fill",
+    "label": "chat-text-fill"
+  },
+  {
+    "name": "check",
+    "label": "check"
+  },
+  {
+    "name": "check-all",
+    "label": "check-all"
+  },
+  {
+    "name": "check-circle",
+    "label": "check-circle"
+  },
+  {
+    "name": "check-circle-fill",
+    "label": "check-circle-fill"
+  },
+  {
+    "name": "check-lg",
+    "label": "check-lg"
+  },
+  {
+    "name": "check-square",
+    "label": "check-square"
+  },
+  {
+    "name": "check-square-fill",
+    "label": "check-square-fill"
+  },
+  {
+    "name": "check2",
+    "label": "check2"
+  },
+  {
+    "name": "check2-all",
+    "label": "check2-all"
+  },
+  {
+    "name": "check2-circle",
+    "label": "check2-circle"
+  },
+  {
+    "name": "check2-square",
+    "label": "check2-square"
+  },
+  {
+    "name": "chevron-bar-contract",
+    "label": "chevron-bar-contract"
+  },
+  {
+    "name": "chevron-bar-down",
+    "label": "chevron-bar-down"
+  },
+  {
+    "name": "chevron-bar-expand",
+    "label": "chevron-bar-expand"
+  },
+  {
+    "name": "chevron-bar-left",
+    "label": "chevron-bar-left"
+  },
+  {
+    "name": "chevron-bar-right",
+    "label": "chevron-bar-right"
+  },
+  {
+    "name": "chevron-bar-up",
+    "label": "chevron-bar-up"
+  },
+  {
+    "name": "chevron-compact-down",
+    "label": "chevron-compact-down"
+  },
+  {
+    "name": "chevron-compact-left",
+    "label": "chevron-compact-left"
+  },
+  {
+    "name": "chevron-compact-right",
+    "label": "chevron-compact-right"
+  },
+  {
+    "name": "chevron-compact-up",
+    "label": "chevron-compact-up"
+  },
+  {
+    "name": "chevron-contract",
+    "label": "chevron-contract"
+  },
+  {
+    "name": "chevron-double-down",
+    "label": "chevron-double-down"
+  },
+  {
+    "name": "chevron-double-left",
+    "label": "chevron-double-left"
+  },
+  {
+    "name": "chevron-double-right",
+    "label": "chevron-double-right"
+  },
+  {
+    "name": "chevron-double-up",
+    "label": "chevron-double-up"
+  },
+  {
+    "name": "chevron-down",
+    "label": "chevron-down"
+  },
+  {
+    "name": "chevron-expand",
+    "label": "chevron-expand"
+  },
+  {
+    "name": "chevron-left",
+    "label": "chevron-left"
+  },
+  {
+    "name": "chevron-right",
+    "label": "chevron-right"
+  },
+  {
+    "name": "chevron-up",
+    "label": "chevron-up"
+  },
+  {
+    "name": "circle",
+    "label": "circle"
+  },
+  {
+    "name": "circle-fill",
+    "label": "circle-fill"
+  },
+  {
+    "name": "circle-half",
+    "label": "circle-half"
+  },
+  {
+    "name": "circle-square",
+    "label": "circle-square"
+  },
+  {
+    "name": "clipboard",
+    "label": "clipboard"
+  },
+  {
+    "name": "clipboard-check",
+    "label": "clipboard-check"
+  },
+  {
+    "name": "clipboard-check-fill",
+    "label": "clipboard-check-fill"
+  },
+  {
+    "name": "clipboard-data",
+    "label": "clipboard-data"
+  },
+  {
+    "name": "clipboard-data-fill",
+    "label": "clipboard-data-fill"
+  },
+  {
+    "name": "clipboard-fill",
+    "label": "clipboard-fill"
+  },
+  {
+    "name": "clipboard-heart",
+    "label": "clipboard-heart"
+  },
+  {
+    "name": "clipboard-heart-fill",
+    "label": "clipboard-heart-fill"
+  },
+  {
+    "name": "clipboard-minus",
+    "label": "clipboard-minus"
+  },
+  {
+    "name": "clipboard-minus-fill",
+    "label": "clipboard-minus-fill"
+  },
+  {
+    "name": "clipboard-plus",
+    "label": "clipboard-plus"
+  },
+  {
+    "name": "clipboard-plus-fill",
+    "label": "clipboard-plus-fill"
+  },
+  {
+    "name": "clipboard-pulse",
+    "label": "clipboard-pulse"
+  },
+  {
+    "name": "clipboard-x",
+    "label": "clipboard-x"
+  },
+  {
+    "name": "clipboard-x-fill",
+    "label": "clipboard-x-fill"
+  },
+  {
+    "name": "clipboard2",
+    "label": "clipboard2"
+  },
+  {
+    "name": "clipboard2-check",
+    "label": "clipboard2-check"
+  },
+  {
+    "name": "clipboard2-check-fill",
+    "label": "clipboard2-check-fill"
+  },
+  {
+    "name": "clipboard2-data",
+    "label": "clipboard2-data"
+  },
+  {
+    "name": "clipboard2-data-fill",
+    "label": "clipboard2-data-fill"
+  },
+  {
+    "name": "clipboard2-fill",
+    "label": "clipboard2-fill"
+  },
+  {
+    "name": "clipboard2-heart",
+    "label": "clipboard2-heart"
+  },
+  {
+    "name": "clipboard2-heart-fill",
+    "label": "clipboard2-heart-fill"
+  },
+  {
+    "name": "clipboard2-minus",
+    "label": "clipboard2-minus"
+  },
+  {
+    "name": "clipboard2-minus-fill",
+    "label": "clipboard2-minus-fill"
+  },
+  {
+    "name": "clipboard2-plus",
+    "label": "clipboard2-plus"
+  },
+  {
+    "name": "clipboard2-plus-fill",
+    "label": "clipboard2-plus-fill"
+  },
+  {
+    "name": "clipboard2-pulse",
+    "label": "clipboard2-pulse"
+  },
+  {
+    "name": "clipboard2-pulse-fill",
+    "label": "clipboard2-pulse-fill"
+  },
+  {
+    "name": "clipboard2-x",
+    "label": "clipboard2-x"
+  },
+  {
+    "name": "clipboard2-x-fill",
+    "label": "clipboard2-x-fill"
+  },
+  {
+    "name": "clock",
+    "label": "clock"
+  },
+  {
+    "name": "clock-fill",
+    "label": "clock-fill"
+  },
+  {
+    "name": "clock-history",
+    "label": "clock-history"
+  },
+  {
+    "name": "cloud",
+    "label": "cloud"
+  },
+  {
+    "name": "cloud-arrow-down",
+    "label": "cloud-arrow-down"
+  },
+  {
+    "name": "cloud-arrow-down-fill",
+    "label": "cloud-arrow-down-fill"
+  },
+  {
+    "name": "cloud-arrow-up",
+    "label": "cloud-arrow-up"
+  },
+  {
+    "name": "cloud-arrow-up-fill",
+    "label": "cloud-arrow-up-fill"
+  },
+  {
+    "name": "cloud-check",
+    "label": "cloud-check"
+  },
+  {
+    "name": "cloud-check-fill",
+    "label": "cloud-check-fill"
+  },
+  {
+    "name": "cloud-download",
+    "label": "cloud-download"
+  },
+  {
+    "name": "cloud-download-fill",
+    "label": "cloud-download-fill"
+  },
+  {
+    "name": "cloud-drizzle",
+    "label": "cloud-drizzle"
+  },
+  {
+    "name": "cloud-drizzle-fill",
+    "label": "cloud-drizzle-fill"
+  },
+  {
+    "name": "cloud-fill",
+    "label": "cloud-fill"
+  },
+  {
+    "name": "cloud-fog",
+    "label": "cloud-fog"
+  },
+  {
+    "name": "cloud-fog-fill",
+    "label": "cloud-fog-fill"
+  },
+  {
+    "name": "cloud-fog2",
+    "label": "cloud-fog2"
+  },
+  {
+    "name": "cloud-fog2-fill",
+    "label": "cloud-fog2-fill"
+  },
+  {
+    "name": "cloud-hail",
+    "label": "cloud-hail"
+  },
+  {
+    "name": "cloud-hail-fill",
+    "label": "cloud-hail-fill"
+  },
+  {
+    "name": "cloud-haze",
+    "label": "cloud-haze"
+  },
+  {
+    "name": "cloud-haze-fill",
+    "label": "cloud-haze-fill"
+  },
+  {
+    "name": "cloud-haze2",
+    "label": "cloud-haze2"
+  },
+  {
+    "name": "cloud-haze2-fill",
+    "label": "cloud-haze2-fill"
+  },
+  {
+    "name": "cloud-lightning",
+    "label": "cloud-lightning"
+  },
+  {
+    "name": "cloud-lightning-fill",
+    "label": "cloud-lightning-fill"
+  },
+  {
+    "name": "cloud-lightning-rain",
+    "label": "cloud-lightning-rain"
+  },
+  {
+    "name": "cloud-lightning-rain-fill",
+    "label": "cloud-lightning-rain-fill"
+  },
+  {
+    "name": "cloud-minus",
+    "label": "cloud-minus"
+  },
+  {
+    "name": "cloud-minus-fill",
+    "label": "cloud-minus-fill"
+  },
+  {
+    "name": "cloud-moon",
+    "label": "cloud-moon"
+  },
+  {
+    "name": "cloud-moon-fill",
+    "label": "cloud-moon-fill"
+  },
+  {
+    "name": "cloud-plus",
+    "label": "cloud-plus"
+  },
+  {
+    "name": "cloud-plus-fill",
+    "label": "cloud-plus-fill"
+  },
+  {
+    "name": "cloud-rain",
+    "label": "cloud-rain"
+  },
+  {
+    "name": "cloud-rain-fill",
+    "label": "cloud-rain-fill"
+  },
+  {
+    "name": "cloud-rain-heavy",
+    "label": "cloud-rain-heavy"
+  },
+  {
+    "name": "cloud-rain-heavy-fill",
+    "label": "cloud-rain-heavy-fill"
+  },
+  {
+    "name": "cloud-slash",
+    "label": "cloud-slash"
+  },
+  {
+    "name": "cloud-slash-fill",
+    "label": "cloud-slash-fill"
+  },
+  {
+    "name": "cloud-sleet",
+    "label": "cloud-sleet"
+  },
+  {
+    "name": "cloud-sleet-fill",
+    "label": "cloud-sleet-fill"
+  },
+  {
+    "name": "cloud-snow",
+    "label": "cloud-snow"
+  },
+  {
+    "name": "cloud-snow-fill",
+    "label": "cloud-snow-fill"
+  },
+  {
+    "name": "cloud-sun",
+    "label": "cloud-sun"
+  },
+  {
+    "name": "cloud-sun-fill",
+    "label": "cloud-sun-fill"
+  },
+  {
+    "name": "cloud-upload",
+    "label": "cloud-upload"
+  },
+  {
+    "name": "cloud-upload-fill",
+    "label": "cloud-upload-fill"
+  },
+  {
+    "name": "clouds",
+    "label": "clouds"
+  },
+  {
+    "name": "clouds-fill",
+    "label": "clouds-fill"
+  },
+  {
+    "name": "cloudy",
+    "label": "cloudy"
+  },
+  {
+    "name": "cloudy-fill",
+    "label": "cloudy-fill"
+  },
+  {
+    "name": "code",
+    "label": "code"
+  },
+  {
+    "name": "code-slash",
+    "label": "code-slash"
+  },
+  {
+    "name": "code-square",
+    "label": "code-square"
+  },
+  {
+    "name": "coin",
+    "label": "coin"
+  },
+  {
+    "name": "collection",
+    "label": "collection"
+  },
+  {
+    "name": "collection-fill",
+    "label": "collection-fill"
+  },
+  {
+    "name": "collection-play",
+    "label": "collection-play"
+  },
+  {
+    "name": "collection-play-fill",
+    "label": "collection-play-fill"
+  },
+  {
+    "name": "columns",
+    "label": "columns"
+  },
+  {
+    "name": "columns-gap",
+    "label": "columns-gap"
+  },
+  {
+    "name": "command",
+    "label": "command"
+  },
+  {
+    "name": "compass",
+    "label": "compass"
+  },
+  {
+    "name": "compass-fill",
+    "label": "compass-fill"
+  },
+  {
+    "name": "cone",
+    "label": "cone"
+  },
+  {
+    "name": "cone-striped",
+    "label": "cone-striped"
+  },
+  {
+    "name": "controller",
+    "label": "controller"
+  },
+  {
+    "name": "cookie",
+    "label": "cookie"
+  },
+  {
+    "name": "copy",
+    "label": "copy"
+  },
+  {
+    "name": "cpu",
+    "label": "cpu"
+  },
+  {
+    "name": "cpu-fill",
+    "label": "cpu-fill"
+  },
+  {
+    "name": "credit-card",
+    "label": "credit-card"
+  },
+  {
+    "name": "credit-card-2-back",
+    "label": "credit-card-2-back"
+  },
+  {
+    "name": "credit-card-2-back-fill",
+    "label": "credit-card-2-back-fill"
+  },
+  {
+    "name": "credit-card-2-front",
+    "label": "credit-card-2-front"
+  },
+  {
+    "name": "credit-card-2-front-fill",
+    "label": "credit-card-2-front-fill"
+  },
+  {
+    "name": "credit-card-fill",
+    "label": "credit-card-fill"
+  },
+  {
+    "name": "crop",
+    "label": "crop"
+  },
+  {
+    "name": "crosshair",
+    "label": "crosshair"
+  },
+  {
+    "name": "crosshair2",
+    "label": "crosshair2"
+  },
+  {
+    "name": "cup",
+    "label": "cup"
+  },
+  {
+    "name": "cup-fill",
+    "label": "cup-fill"
+  },
+  {
+    "name": "cup-hot",
+    "label": "cup-hot"
+  },
+  {
+    "name": "cup-hot-fill",
+    "label": "cup-hot-fill"
+  },
+  {
+    "name": "cup-straw",
+    "label": "cup-straw"
+  },
+  {
+    "name": "currency-bitcoin",
+    "label": "currency-bitcoin"
+  },
+  {
+    "name": "currency-dollar",
+    "label": "currency-dollar"
+  },
+  {
+    "name": "currency-euro",
+    "label": "currency-euro"
+  },
+  {
+    "name": "currency-exchange",
+    "label": "currency-exchange"
+  },
+  {
+    "name": "currency-pound",
+    "label": "currency-pound"
+  },
+  {
+    "name": "currency-rupee",
+    "label": "currency-rupee"
+  },
+  {
+    "name": "currency-yen",
+    "label": "currency-yen"
+  },
+  {
+    "name": "cursor",
+    "label": "cursor"
+  },
+  {
+    "name": "cursor-fill",
+    "label": "cursor-fill"
+  },
+  {
+    "name": "cursor-text",
+    "label": "cursor-text"
+  },
+  {
+    "name": "dash",
+    "label": "dash"
+  },
+  {
+    "name": "dash-circle",
+    "label": "dash-circle"
+  },
+  {
+    "name": "dash-circle-dotted",
+    "label": "dash-circle-dotted"
+  },
+  {
+    "name": "dash-circle-fill",
+    "label": "dash-circle-fill"
+  },
+  {
+    "name": "dash-lg",
+    "label": "dash-lg"
+  },
+  {
+    "name": "dash-square",
+    "label": "dash-square"
+  },
+  {
+    "name": "dash-square-dotted",
+    "label": "dash-square-dotted"
+  },
+  {
+    "name": "dash-square-fill",
+    "label": "dash-square-fill"
+  },
+  {
+    "name": "database",
+    "label": "database"
+  },
+  {
+    "name": "database-add",
+    "label": "database-add"
+  },
+  {
+    "name": "database-check",
+    "label": "database-check"
+  },
+  {
+    "name": "database-dash",
+    "label": "database-dash"
+  },
+  {
+    "name": "database-down",
+    "label": "database-down"
+  },
+  {
+    "name": "database-exclamation",
+    "label": "database-exclamation"
+  },
+  {
+    "name": "database-fill",
+    "label": "database-fill"
+  },
+  {
+    "name": "database-fill-add",
+    "label": "database-fill-add"
+  },
+  {
+    "name": "database-fill-check",
+    "label": "database-fill-check"
+  },
+  {
+    "name": "database-fill-dash",
+    "label": "database-fill-dash"
+  },
+  {
+    "name": "database-fill-down",
+    "label": "database-fill-down"
+  },
+  {
+    "name": "database-fill-exclamation",
+    "label": "database-fill-exclamation"
+  },
+  {
+    "name": "database-fill-gear",
+    "label": "database-fill-gear"
+  },
+  {
+    "name": "database-fill-lock",
+    "label": "database-fill-lock"
+  },
+  {
+    "name": "database-fill-slash",
+    "label": "database-fill-slash"
+  },
+  {
+    "name": "database-fill-up",
+    "label": "database-fill-up"
+  },
+  {
+    "name": "database-fill-x",
+    "label": "database-fill-x"
+  },
+  {
+    "name": "database-gear",
+    "label": "database-gear"
+  },
+  {
+    "name": "database-lock",
+    "label": "database-lock"
+  },
+  {
+    "name": "database-slash",
+    "label": "database-slash"
+  },
+  {
+    "name": "database-up",
+    "label": "database-up"
+  },
+  {
+    "name": "database-x",
+    "label": "database-x"
+  },
+  {
+    "name": "device-hdd",
+    "label": "device-hdd"
+  },
+  {
+    "name": "device-hdd-fill",
+    "label": "device-hdd-fill"
+  },
+  {
+    "name": "device-ssd",
+    "label": "device-ssd"
+  },
+  {
+    "name": "device-ssd-fill",
+    "label": "device-ssd-fill"
+  },
+  {
+    "name": "diagram-2",
+    "label": "diagram-2"
+  },
+  {
+    "name": "diagram-2-fill",
+    "label": "diagram-2-fill"
+  },
+  {
+    "name": "diagram-3",
+    "label": "diagram-3"
+  },
+  {
+    "name": "diagram-3-fill",
+    "label": "diagram-3-fill"
+  },
+  {
+    "name": "diamond",
+    "label": "diamond"
+  },
+  {
+    "name": "diamond-fill",
+    "label": "diamond-fill"
+  },
+  {
+    "name": "diamond-half",
+    "label": "diamond-half"
+  },
+  {
+    "name": "dice-1",
+    "label": "dice-1"
+  },
+  {
+    "name": "dice-1-fill",
+    "label": "dice-1-fill"
+  },
+  {
+    "name": "dice-2",
+    "label": "dice-2"
+  },
+  {
+    "name": "dice-2-fill",
+    "label": "dice-2-fill"
+  },
+  {
+    "name": "dice-3",
+    "label": "dice-3"
+  },
+  {
+    "name": "dice-3-fill",
+    "label": "dice-3-fill"
+  },
+  {
+    "name": "dice-4",
+    "label": "dice-4"
+  },
+  {
+    "name": "dice-4-fill",
+    "label": "dice-4-fill"
+  },
+  {
+    "name": "dice-5",
+    "label": "dice-5"
+  },
+  {
+    "name": "dice-5-fill",
+    "label": "dice-5-fill"
+  },
+  {
+    "name": "dice-6",
+    "label": "dice-6"
+  },
+  {
+    "name": "dice-6-fill",
+    "label": "dice-6-fill"
+  },
+  {
+    "name": "disc",
+    "label": "disc"
+  },
+  {
+    "name": "disc-fill",
+    "label": "disc-fill"
+  },
+  {
+    "name": "discord",
+    "label": "discord"
+  },
+  {
+    "name": "display",
+    "label": "display"
+  },
+  {
+    "name": "display-fill",
+    "label": "display-fill"
+  },
+  {
+    "name": "displayport",
+    "label": "displayport"
+  },
+  {
+    "name": "displayport-fill",
+    "label": "displayport-fill"
+  },
+  {
+    "name": "distribute-horizontal",
+    "label": "distribute-horizontal"
+  },
+  {
+    "name": "distribute-vertical",
+    "label": "distribute-vertical"
+  },
+  {
+    "name": "door-closed",
+    "label": "door-closed"
+  },
+  {
+    "name": "door-closed-fill",
+    "label": "door-closed-fill"
+  },
+  {
+    "name": "door-open",
+    "label": "door-open"
+  },
+  {
+    "name": "door-open-fill",
+    "label": "door-open-fill"
+  },
+  {
+    "name": "dot",
+    "label": "dot"
+  },
+  {
+    "name": "download",
+    "label": "download"
+  },
+  {
+    "name": "dpad",
+    "label": "dpad"
+  },
+  {
+    "name": "dpad-fill",
+    "label": "dpad-fill"
+  },
+  {
+    "name": "dribbble",
+    "label": "dribbble"
+  },
+  {
+    "name": "dropbox",
+    "label": "dropbox"
+  },
+  {
+    "name": "droplet",
+    "label": "droplet"
+  },
+  {
+    "name": "droplet-fill",
+    "label": "droplet-fill"
+  },
+  {
+    "name": "droplet-half",
+    "label": "droplet-half"
+  },
+  {
+    "name": "duffle",
+    "label": "duffle"
+  },
+  {
+    "name": "duffle-fill",
+    "label": "duffle-fill"
+  },
+  {
+    "name": "ear",
+    "label": "ear"
+  },
+  {
+    "name": "ear-fill",
+    "label": "ear-fill"
+  },
+  {
+    "name": "earbuds",
+    "label": "earbuds"
+  },
+  {
+    "name": "easel",
+    "label": "easel"
+  },
+  {
+    "name": "easel-fill",
+    "label": "easel-fill"
+  },
+  {
+    "name": "easel2",
+    "label": "easel2"
+  },
+  {
+    "name": "easel2-fill",
+    "label": "easel2-fill"
+  },
+  {
+    "name": "easel3",
+    "label": "easel3"
+  },
+  {
+    "name": "easel3-fill",
+    "label": "easel3-fill"
+  },
+  {
+    "name": "egg",
+    "label": "egg"
+  },
+  {
+    "name": "egg-fill",
+    "label": "egg-fill"
+  },
+  {
+    "name": "egg-fried",
+    "label": "egg-fried"
+  },
+  {
+    "name": "eject",
+    "label": "eject"
+  },
+  {
+    "name": "eject-fill",
+    "label": "eject-fill"
+  },
+  {
+    "name": "emoji-angry",
+    "label": "emoji-angry"
+  },
+  {
+    "name": "emoji-angry-fill",
+    "label": "emoji-angry-fill"
+  },
+  {
+    "name": "emoji-astonished",
+    "label": "emoji-astonished"
+  },
+  {
+    "name": "emoji-astonished-fill",
+    "label": "emoji-astonished-fill"
+  },
+  {
+    "name": "emoji-dizzy",
+    "label": "emoji-dizzy"
+  },
+  {
+    "name": "emoji-dizzy-fill",
+    "label": "emoji-dizzy-fill"
+  },
+  {
+    "name": "emoji-expressionless",
+    "label": "emoji-expressionless"
+  },
+  {
+    "name": "emoji-expressionless-fill",
+    "label": "emoji-expressionless-fill"
+  },
+  {
+    "name": "emoji-frown",
+    "label": "emoji-frown"
+  },
+  {
+    "name": "emoji-frown-fill",
+    "label": "emoji-frown-fill"
+  },
+  {
+    "name": "emoji-grimace",
+    "label": "emoji-grimace"
+  },
+  {
+    "name": "emoji-grimace-fill",
+    "label": "emoji-grimace-fill"
+  },
+  {
+    "name": "emoji-grin",
+    "label": "emoji-grin"
+  },
+  {
+    "name": "emoji-grin-fill",
+    "label": "emoji-grin-fill"
+  },
+  {
+    "name": "emoji-heart-eyes",
+    "label": "emoji-heart-eyes"
+  },
+  {
+    "name": "emoji-heart-eyes-fill",
+    "label": "emoji-heart-eyes-fill"
+  },
+  {
+    "name": "emoji-kiss",
+    "label": "emoji-kiss"
+  },
+  {
+    "name": "emoji-kiss-fill",
+    "label": "emoji-kiss-fill"
+  },
+  {
+    "name": "emoji-laughing",
+    "label": "emoji-laughing"
+  },
+  {
+    "name": "emoji-laughing-fill",
+    "label": "emoji-laughing-fill"
+  },
+  {
+    "name": "emoji-neutral",
+    "label": "emoji-neutral"
+  },
+  {
+    "name": "emoji-neutral-fill",
+    "label": "emoji-neutral-fill"
+  },
+  {
+    "name": "emoji-smile",
+    "label": "emoji-smile"
+  },
+  {
+    "name": "emoji-smile-fill",
+    "label": "emoji-smile-fill"
+  },
+  {
+    "name": "emoji-smile-upside-down",
+    "label": "emoji-smile-upside-down"
+  },
+  {
+    "name": "emoji-smile-upside-down-fill",
+    "label": "emoji-smile-upside-down-fill"
+  },
+  {
+    "name": "emoji-sunglasses",
+    "label": "emoji-sunglasses"
+  },
+  {
+    "name": "emoji-sunglasses-fill",
+    "label": "emoji-sunglasses-fill"
+  },
+  {
+    "name": "emoji-surprise",
+    "label": "emoji-surprise"
+  },
+  {
+    "name": "emoji-surprise-fill",
+    "label": "emoji-surprise-fill"
+  },
+  {
+    "name": "emoji-tear",
+    "label": "emoji-tear"
+  },
+  {
+    "name": "emoji-tear-fill",
+    "label": "emoji-tear-fill"
+  },
+  {
+    "name": "emoji-wink",
+    "label": "emoji-wink"
+  },
+  {
+    "name": "emoji-wink-fill",
+    "label": "emoji-wink-fill"
+  },
+  {
+    "name": "envelope",
+    "label": "envelope"
+  },
+  {
+    "name": "envelope-arrow-down",
+    "label": "envelope-arrow-down"
+  },
+  {
+    "name": "envelope-arrow-down-fill",
+    "label": "envelope-arrow-down-fill"
+  },
+  {
+    "name": "envelope-arrow-up",
+    "label": "envelope-arrow-up"
+  },
+  {
+    "name": "envelope-arrow-up-fill",
+    "label": "envelope-arrow-up-fill"
+  },
+  {
+    "name": "envelope-at",
+    "label": "envelope-at"
+  },
+  {
+    "name": "envelope-at-fill",
+    "label": "envelope-at-fill"
+  },
+  {
+    "name": "envelope-check",
+    "label": "envelope-check"
+  },
+  {
+    "name": "envelope-check-fill",
+    "label": "envelope-check-fill"
+  },
+  {
+    "name": "envelope-dash",
+    "label": "envelope-dash"
+  },
+  {
+    "name": "envelope-dash-fill",
+    "label": "envelope-dash-fill"
+  },
+  {
+    "name": "envelope-exclamation",
+    "label": "envelope-exclamation"
+  },
+  {
+    "name": "envelope-exclamation-fill",
+    "label": "envelope-exclamation-fill"
+  },
+  {
+    "name": "envelope-fill",
+    "label": "envelope-fill"
+  },
+  {
+    "name": "envelope-heart",
+    "label": "envelope-heart"
+  },
+  {
+    "name": "envelope-heart-fill",
+    "label": "envelope-heart-fill"
+  },
+  {
+    "name": "envelope-open",
+    "label": "envelope-open"
+  },
+  {
+    "name": "envelope-open-fill",
+    "label": "envelope-open-fill"
+  },
+  {
+    "name": "envelope-open-heart",
+    "label": "envelope-open-heart"
+  },
+  {
+    "name": "envelope-open-heart-fill",
+    "label": "envelope-open-heart-fill"
+  },
+  {
+    "name": "envelope-paper",
+    "label": "envelope-paper"
+  },
+  {
+    "name": "envelope-paper-fill",
+    "label": "envelope-paper-fill"
+  },
+  {
+    "name": "envelope-paper-heart",
+    "label": "envelope-paper-heart"
+  },
+  {
+    "name": "envelope-paper-heart-fill",
+    "label": "envelope-paper-heart-fill"
+  },
+  {
+    "name": "envelope-plus",
+    "label": "envelope-plus"
+  },
+  {
+    "name": "envelope-plus-fill",
+    "label": "envelope-plus-fill"
+  },
+  {
+    "name": "envelope-slash",
+    "label": "envelope-slash"
+  },
+  {
+    "name": "envelope-slash-fill",
+    "label": "envelope-slash-fill"
+  },
+  {
+    "name": "envelope-x",
+    "label": "envelope-x"
+  },
+  {
+    "name": "envelope-x-fill",
+    "label": "envelope-x-fill"
+  },
+  {
+    "name": "eraser",
+    "label": "eraser"
+  },
+  {
+    "name": "eraser-fill",
+    "label": "eraser-fill"
+  },
+  {
+    "name": "escape",
+    "label": "escape"
+  },
+  {
+    "name": "ethernet",
+    "label": "ethernet"
+  },
+  {
+    "name": "ev-front",
+    "label": "ev-front"
+  },
+  {
+    "name": "ev-front-fill",
+    "label": "ev-front-fill"
+  },
+  {
+    "name": "ev-station",
+    "label": "ev-station"
+  },
+  {
+    "name": "ev-station-fill",
+    "label": "ev-station-fill"
+  },
+  {
+    "name": "exclamation",
+    "label": "exclamation"
+  },
+  {
+    "name": "exclamation-circle",
+    "label": "exclamation-circle"
+  },
+  {
+    "name": "exclamation-circle-fill",
+    "label": "exclamation-circle-fill"
+  },
+  {
+    "name": "exclamation-diamond",
+    "label": "exclamation-diamond"
+  },
+  {
+    "name": "exclamation-diamond-fill",
+    "label": "exclamation-diamond-fill"
+  },
+  {
+    "name": "exclamation-lg",
+    "label": "exclamation-lg"
+  },
+  {
+    "name": "exclamation-octagon",
+    "label": "exclamation-octagon"
+  },
+  {
+    "name": "exclamation-octagon-fill",
+    "label": "exclamation-octagon-fill"
+  },
+  {
+    "name": "exclamation-square",
+    "label": "exclamation-square"
+  },
+  {
+    "name": "exclamation-square-fill",
+    "label": "exclamation-square-fill"
+  },
+  {
+    "name": "exclamation-triangle",
+    "label": "exclamation-triangle"
+  },
+  {
+    "name": "exclamation-triangle-fill",
+    "label": "exclamation-triangle-fill"
+  },
+  {
+    "name": "exclude",
+    "label": "exclude"
+  },
+  {
+    "name": "explicit",
+    "label": "explicit"
+  },
+  {
+    "name": "explicit-fill",
+    "label": "explicit-fill"
+  },
+  {
+    "name": "exposure",
+    "label": "exposure"
+  },
+  {
+    "name": "eye",
+    "label": "eye"
+  },
+  {
+    "name": "eye-fill",
+    "label": "eye-fill"
+  },
+  {
+    "name": "eye-slash",
+    "label": "eye-slash"
+  },
+  {
+    "name": "eye-slash-fill",
+    "label": "eye-slash-fill"
+  },
+  {
+    "name": "eyedropper",
+    "label": "eyedropper"
+  },
+  {
+    "name": "eyeglasses",
+    "label": "eyeglasses"
+  },
+  {
+    "name": "facebook",
+    "label": "facebook"
+  },
+  {
+    "name": "fan",
+    "label": "fan"
+  },
+  {
+    "name": "fast-forward",
+    "label": "fast-forward"
+  },
+  {
+    "name": "fast-forward-btn",
+    "label": "fast-forward-btn"
+  },
+  {
+    "name": "fast-forward-btn-fill",
+    "label": "fast-forward-btn-fill"
+  },
+  {
+    "name": "fast-forward-circle",
+    "label": "fast-forward-circle"
+  },
+  {
+    "name": "fast-forward-circle-fill",
+    "label": "fast-forward-circle-fill"
+  },
+  {
+    "name": "fast-forward-fill",
+    "label": "fast-forward-fill"
+  },
+  {
+    "name": "feather",
+    "label": "feather"
+  },
+  {
+    "name": "feather2",
+    "label": "feather2"
+  },
+  {
+    "name": "file",
+    "label": "file"
+  },
+  {
+    "name": "file-arrow-down",
+    "label": "file-arrow-down"
+  },
+  {
+    "name": "file-arrow-down-fill",
+    "label": "file-arrow-down-fill"
+  },
+  {
+    "name": "file-arrow-up",
+    "label": "file-arrow-up"
+  },
+  {
+    "name": "file-arrow-up-fill",
+    "label": "file-arrow-up-fill"
+  },
+  {
+    "name": "file-bar-graph",
+    "label": "file-bar-graph"
+  },
+  {
+    "name": "file-bar-graph-fill",
+    "label": "file-bar-graph-fill"
+  },
+  {
+    "name": "file-binary",
+    "label": "file-binary"
+  },
+  {
+    "name": "file-binary-fill",
+    "label": "file-binary-fill"
+  },
+  {
+    "name": "file-break",
+    "label": "file-break"
+  },
+  {
+    "name": "file-break-fill",
+    "label": "file-break-fill"
+  },
+  {
+    "name": "file-check",
+    "label": "file-check"
+  },
+  {
+    "name": "file-check-fill",
+    "label": "file-check-fill"
+  },
+  {
+    "name": "file-code",
+    "label": "file-code"
+  },
+  {
+    "name": "file-code-fill",
+    "label": "file-code-fill"
+  },
+  {
+    "name": "file-diff",
+    "label": "file-diff"
+  },
+  {
+    "name": "file-diff-fill",
+    "label": "file-diff-fill"
+  },
+  {
+    "name": "file-earmark",
+    "label": "file-earmark"
+  },
+  {
+    "name": "file-earmark-arrow-down",
+    "label": "file-earmark-arrow-down"
+  },
+  {
+    "name": "file-earmark-arrow-down-fill",
+    "label": "file-earmark-arrow-down-fill"
+  },
+  {
+    "name": "file-earmark-arrow-up",
+    "label": "file-earmark-arrow-up"
+  },
+  {
+    "name": "file-earmark-arrow-up-fill",
+    "label": "file-earmark-arrow-up-fill"
+  },
+  {
+    "name": "file-earmark-bar-graph",
+    "label": "file-earmark-bar-graph"
+  },
+  {
+    "name": "file-earmark-bar-graph-fill",
+    "label": "file-earmark-bar-graph-fill"
+  },
+  {
+    "name": "file-earmark-binary",
+    "label": "file-earmark-binary"
+  },
+  {
+    "name": "file-earmark-binary-fill",
+    "label": "file-earmark-binary-fill"
+  },
+  {
+    "name": "file-earmark-break",
+    "label": "file-earmark-break"
+  },
+  {
+    "name": "file-earmark-break-fill",
+    "label": "file-earmark-break-fill"
+  },
+  {
+    "name": "file-earmark-check",
+    "label": "file-earmark-check"
+  },
+  {
+    "name": "file-earmark-check-fill",
+    "label": "file-earmark-check-fill"
+  },
+  {
+    "name": "file-earmark-code",
+    "label": "file-earmark-code"
+  },
+  {
+    "name": "file-earmark-code-fill",
+    "label": "file-earmark-code-fill"
+  },
+  {
+    "name": "file-earmark-diff",
+    "label": "file-earmark-diff"
+  },
+  {
+    "name": "file-earmark-diff-fill",
+    "label": "file-earmark-diff-fill"
+  },
+  {
+    "name": "file-earmark-easel",
+    "label": "file-earmark-easel"
+  },
+  {
+    "name": "file-earmark-easel-fill",
+    "label": "file-earmark-easel-fill"
+  },
+  {
+    "name": "file-earmark-excel",
+    "label": "file-earmark-excel"
+  },
+  {
+    "name": "file-earmark-excel-fill",
+    "label": "file-earmark-excel-fill"
+  },
+  {
+    "name": "file-earmark-fill",
+    "label": "file-earmark-fill"
+  },
+  {
+    "name": "file-earmark-font",
+    "label": "file-earmark-font"
+  },
+  {
+    "name": "file-earmark-font-fill",
+    "label": "file-earmark-font-fill"
+  },
+  {
+    "name": "file-earmark-image",
+    "label": "file-earmark-image"
+  },
+  {
+    "name": "file-earmark-image-fill",
+    "label": "file-earmark-image-fill"
+  },
+  {
+    "name": "file-earmark-lock",
+    "label": "file-earmark-lock"
+  },
+  {
+    "name": "file-earmark-lock-fill",
+    "label": "file-earmark-lock-fill"
+  },
+  {
+    "name": "file-earmark-lock2",
+    "label": "file-earmark-lock2"
+  },
+  {
+    "name": "file-earmark-lock2-fill",
+    "label": "file-earmark-lock2-fill"
+  },
+  {
+    "name": "file-earmark-medical",
+    "label": "file-earmark-medical"
+  },
+  {
+    "name": "file-earmark-medical-fill",
+    "label": "file-earmark-medical-fill"
+  },
+  {
+    "name": "file-earmark-minus",
+    "label": "file-earmark-minus"
+  },
+  {
+    "name": "file-earmark-minus-fill",
+    "label": "file-earmark-minus-fill"
+  },
+  {
+    "name": "file-earmark-music",
+    "label": "file-earmark-music"
+  },
+  {
+    "name": "file-earmark-music-fill",
+    "label": "file-earmark-music-fill"
+  },
+  {
+    "name": "file-earmark-pdf",
+    "label": "file-earmark-pdf"
+  },
+  {
+    "name": "file-earmark-pdf-fill",
+    "label": "file-earmark-pdf-fill"
+  },
+  {
+    "name": "file-earmark-person",
+    "label": "file-earmark-person"
+  },
+  {
+    "name": "file-earmark-person-fill",
+    "label": "file-earmark-person-fill"
+  },
+  {
+    "name": "file-earmark-play",
+    "label": "file-earmark-play"
+  },
+  {
+    "name": "file-earmark-play-fill",
+    "label": "file-earmark-play-fill"
+  },
+  {
+    "name": "file-earmark-plus",
+    "label": "file-earmark-plus"
+  },
+  {
+    "name": "file-earmark-plus-fill",
+    "label": "file-earmark-plus-fill"
+  },
+  {
+    "name": "file-earmark-post",
+    "label": "file-earmark-post"
+  },
+  {
+    "name": "file-earmark-post-fill",
+    "label": "file-earmark-post-fill"
+  },
+  {
+    "name": "file-earmark-ppt",
+    "label": "file-earmark-ppt"
+  },
+  {
+    "name": "file-earmark-ppt-fill",
+    "label": "file-earmark-ppt-fill"
+  },
+  {
+    "name": "file-earmark-richtext",
+    "label": "file-earmark-richtext"
+  },
+  {
+    "name": "file-earmark-richtext-fill",
+    "label": "file-earmark-richtext-fill"
+  },
+  {
+    "name": "file-earmark-ruled",
+    "label": "file-earmark-ruled"
+  },
+  {
+    "name": "file-earmark-ruled-fill",
+    "label": "file-earmark-ruled-fill"
+  },
+  {
+    "name": "file-earmark-slides",
+    "label": "file-earmark-slides"
+  },
+  {
+    "name": "file-earmark-slides-fill",
+    "label": "file-earmark-slides-fill"
+  },
+  {
+    "name": "file-earmark-spreadsheet",
+    "label": "file-earmark-spreadsheet"
+  },
+  {
+    "name": "file-earmark-spreadsheet-fill",
+    "label": "file-earmark-spreadsheet-fill"
+  },
+  {
+    "name": "file-earmark-text",
+    "label": "file-earmark-text"
+  },
+  {
+    "name": "file-earmark-text-fill",
+    "label": "file-earmark-text-fill"
+  },
+  {
+    "name": "file-earmark-word",
+    "label": "file-earmark-word"
+  },
+  {
+    "name": "file-earmark-word-fill",
+    "label": "file-earmark-word-fill"
+  },
+  {
+    "name": "file-earmark-x",
+    "label": "file-earmark-x"
+  },
+  {
+    "name": "file-earmark-x-fill",
+    "label": "file-earmark-x-fill"
+  },
+  {
+    "name": "file-earmark-zip",
+    "label": "file-earmark-zip"
+  },
+  {
+    "name": "file-earmark-zip-fill",
+    "label": "file-earmark-zip-fill"
+  },
+  {
+    "name": "file-easel",
+    "label": "file-easel"
+  },
+  {
+    "name": "file-easel-fill",
+    "label": "file-easel-fill"
+  },
+  {
+    "name": "file-excel",
+    "label": "file-excel"
+  },
+  {
+    "name": "file-excel-fill",
+    "label": "file-excel-fill"
+  },
+  {
+    "name": "file-fill",
+    "label": "file-fill"
+  },
+  {
+    "name": "file-font",
+    "label": "file-font"
+  },
+  {
+    "name": "file-font-fill",
+    "label": "file-font-fill"
+  },
+  {
+    "name": "file-image",
+    "label": "file-image"
+  },
+  {
+    "name": "file-image-fill",
+    "label": "file-image-fill"
+  },
+  {
+    "name": "file-lock",
+    "label": "file-lock"
+  },
+  {
+    "name": "file-lock-fill",
+    "label": "file-lock-fill"
+  },
+  {
+    "name": "file-lock2",
+    "label": "file-lock2"
+  },
+  {
+    "name": "file-lock2-fill",
+    "label": "file-lock2-fill"
+  },
+  {
+    "name": "file-medical",
+    "label": "file-medical"
+  },
+  {
+    "name": "file-medical-fill",
+    "label": "file-medical-fill"
+  },
+  {
+    "name": "file-minus",
+    "label": "file-minus"
+  },
+  {
+    "name": "file-minus-fill",
+    "label": "file-minus-fill"
+  },
+  {
+    "name": "file-music",
+    "label": "file-music"
+  },
+  {
+    "name": "file-music-fill",
+    "label": "file-music-fill"
+  },
+  {
+    "name": "file-pdf",
+    "label": "file-pdf"
+  },
+  {
+    "name": "file-pdf-fill",
+    "label": "file-pdf-fill"
+  },
+  {
+    "name": "file-person",
+    "label": "file-person"
+  },
+  {
+    "name": "file-person-fill",
+    "label": "file-person-fill"
+  },
+  {
+    "name": "file-play",
+    "label": "file-play"
+  },
+  {
+    "name": "file-play-fill",
+    "label": "file-play-fill"
+  },
+  {
+    "name": "file-plus",
+    "label": "file-plus"
+  },
+  {
+    "name": "file-plus-fill",
+    "label": "file-plus-fill"
+  },
+  {
+    "name": "file-post",
+    "label": "file-post"
+  },
+  {
+    "name": "file-post-fill",
+    "label": "file-post-fill"
+  },
+  {
+    "name": "file-ppt",
+    "label": "file-ppt"
+  },
+  {
+    "name": "file-ppt-fill",
+    "label": "file-ppt-fill"
+  },
+  {
+    "name": "file-richtext",
+    "label": "file-richtext"
+  },
+  {
+    "name": "file-richtext-fill",
+    "label": "file-richtext-fill"
+  },
+  {
+    "name": "file-ruled",
+    "label": "file-ruled"
+  },
+  {
+    "name": "file-ruled-fill",
+    "label": "file-ruled-fill"
+  },
+  {
+    "name": "file-slides",
+    "label": "file-slides"
+  },
+  {
+    "name": "file-slides-fill",
+    "label": "file-slides-fill"
+  },
+  {
+    "name": "file-spreadsheet",
+    "label": "file-spreadsheet"
+  },
+  {
+    "name": "file-spreadsheet-fill",
+    "label": "file-spreadsheet-fill"
+  },
+  {
+    "name": "file-text",
+    "label": "file-text"
+  },
+  {
+    "name": "file-text-fill",
+    "label": "file-text-fill"
+  },
+  {
+    "name": "file-word",
+    "label": "file-word"
+  },
+  {
+    "name": "file-word-fill",
+    "label": "file-word-fill"
+  },
+  {
+    "name": "file-x",
+    "label": "file-x"
+  },
+  {
+    "name": "file-x-fill",
+    "label": "file-x-fill"
+  },
+  {
+    "name": "file-zip",
+    "label": "file-zip"
+  },
+  {
+    "name": "file-zip-fill",
+    "label": "file-zip-fill"
+  },
+  {
+    "name": "files",
+    "label": "files"
+  },
+  {
+    "name": "files-alt",
+    "label": "files-alt"
+  },
+  {
+    "name": "filetype-aac",
+    "label": "filetype-aac"
+  },
+  {
+    "name": "filetype-ai",
+    "label": "filetype-ai"
+  },
+  {
+    "name": "filetype-bmp",
+    "label": "filetype-bmp"
+  },
+  {
+    "name": "filetype-cs",
+    "label": "filetype-cs"
+  },
+  {
+    "name": "filetype-css",
+    "label": "filetype-css"
+  },
+  {
+    "name": "filetype-csv",
+    "label": "filetype-csv"
+  },
+  {
+    "name": "filetype-doc",
+    "label": "filetype-doc"
+  },
+  {
+    "name": "filetype-docx",
+    "label": "filetype-docx"
+  },
+  {
+    "name": "filetype-exe",
+    "label": "filetype-exe"
+  },
+  {
+    "name": "filetype-gif",
+    "label": "filetype-gif"
+  },
+  {
+    "name": "filetype-heic",
+    "label": "filetype-heic"
+  },
+  {
+    "name": "filetype-html",
+    "label": "filetype-html"
+  },
+  {
+    "name": "filetype-java",
+    "label": "filetype-java"
+  },
+  {
+    "name": "filetype-jpg",
+    "label": "filetype-jpg"
+  },
+  {
+    "name": "filetype-js",
+    "label": "filetype-js"
+  },
+  {
+    "name": "filetype-json",
+    "label": "filetype-json"
+  },
+  {
+    "name": "filetype-jsx",
+    "label": "filetype-jsx"
+  },
+  {
+    "name": "filetype-key",
+    "label": "filetype-key"
+  },
+  {
+    "name": "filetype-m4p",
+    "label": "filetype-m4p"
+  },
+  {
+    "name": "filetype-md",
+    "label": "filetype-md"
+  },
+  {
+    "name": "filetype-mdx",
+    "label": "filetype-mdx"
+  },
+  {
+    "name": "filetype-mov",
+    "label": "filetype-mov"
+  },
+  {
+    "name": "filetype-mp3",
+    "label": "filetype-mp3"
+  },
+  {
+    "name": "filetype-mp4",
+    "label": "filetype-mp4"
+  },
+  {
+    "name": "filetype-otf",
+    "label": "filetype-otf"
+  },
+  {
+    "name": "filetype-pdf",
+    "label": "filetype-pdf"
+  },
+  {
+    "name": "filetype-php",
+    "label": "filetype-php"
+  },
+  {
+    "name": "filetype-png",
+    "label": "filetype-png"
+  },
+  {
+    "name": "filetype-ppt",
+    "label": "filetype-ppt"
+  },
+  {
+    "name": "filetype-pptx",
+    "label": "filetype-pptx"
+  },
+  {
+    "name": "filetype-psd",
+    "label": "filetype-psd"
+  },
+  {
+    "name": "filetype-py",
+    "label": "filetype-py"
+  },
+  {
+    "name": "filetype-raw",
+    "label": "filetype-raw"
+  },
+  {
+    "name": "filetype-rb",
+    "label": "filetype-rb"
+  },
+  {
+    "name": "filetype-sass",
+    "label": "filetype-sass"
+  },
+  {
+    "name": "filetype-scss",
+    "label": "filetype-scss"
+  },
+  {
+    "name": "filetype-sh",
+    "label": "filetype-sh"
+  },
+  {
+    "name": "filetype-sql",
+    "label": "filetype-sql"
+  },
+  {
+    "name": "filetype-svg",
+    "label": "filetype-svg"
+  },
+  {
+    "name": "filetype-tiff",
+    "label": "filetype-tiff"
+  },
+  {
+    "name": "filetype-tsx",
+    "label": "filetype-tsx"
+  },
+  {
+    "name": "filetype-ttf",
+    "label": "filetype-ttf"
+  },
+  {
+    "name": "filetype-txt",
+    "label": "filetype-txt"
+  },
+  {
+    "name": "filetype-wav",
+    "label": "filetype-wav"
+  },
+  {
+    "name": "filetype-woff",
+    "label": "filetype-woff"
+  },
+  {
+    "name": "filetype-xls",
+    "label": "filetype-xls"
+  },
+  {
+    "name": "filetype-xlsx",
+    "label": "filetype-xlsx"
+  },
+  {
+    "name": "filetype-xml",
+    "label": "filetype-xml"
+  },
+  {
+    "name": "filetype-yml",
+    "label": "filetype-yml"
+  },
+  {
+    "name": "film",
+    "label": "film"
+  },
+  {
+    "name": "filter",
+    "label": "filter"
+  },
+  {
+    "name": "filter-circle",
+    "label": "filter-circle"
+  },
+  {
+    "name": "filter-circle-fill",
+    "label": "filter-circle-fill"
+  },
+  {
+    "name": "filter-left",
+    "label": "filter-left"
+  },
+  {
+    "name": "filter-right",
+    "label": "filter-right"
+  },
+  {
+    "name": "filter-square",
+    "label": "filter-square"
+  },
+  {
+    "name": "filter-square-fill",
+    "label": "filter-square-fill"
+  },
+  {
+    "name": "fingerprint",
+    "label": "fingerprint"
+  },
+  {
+    "name": "fire",
+    "label": "fire"
+  },
+  {
+    "name": "flag",
+    "label": "flag"
+  },
+  {
+    "name": "flag-fill",
+    "label": "flag-fill"
+  },
+  {
+    "name": "floppy",
+    "label": "floppy"
+  },
+  {
+    "name": "floppy-fill",
+    "label": "floppy-fill"
+  },
+  {
+    "name": "floppy2",
+    "label": "floppy2"
+  },
+  {
+    "name": "floppy2-fill",
+    "label": "floppy2-fill"
+  },
+  {
+    "name": "flower1",
+    "label": "flower1"
+  },
+  {
+    "name": "flower2",
+    "label": "flower2"
+  },
+  {
+    "name": "flower3",
+    "label": "flower3"
+  },
+  {
+    "name": "folder",
+    "label": "folder"
+  },
+  {
+    "name": "folder-check",
+    "label": "folder-check"
+  },
+  {
+    "name": "folder-fill",
+    "label": "folder-fill"
+  },
+  {
+    "name": "folder-minus",
+    "label": "folder-minus"
+  },
+  {
+    "name": "folder-plus",
+    "label": "folder-plus"
+  },
+  {
+    "name": "folder-symlink",
+    "label": "folder-symlink"
+  },
+  {
+    "name": "folder-symlink-fill",
+    "label": "folder-symlink-fill"
+  },
+  {
+    "name": "folder-x",
+    "label": "folder-x"
+  },
+  {
+    "name": "folder2",
+    "label": "folder2"
+  },
+  {
+    "name": "folder2-open",
+    "label": "folder2-open"
+  },
+  {
+    "name": "fonts",
+    "label": "fonts"
+  },
+  {
+    "name": "forward",
+    "label": "forward"
+  },
+  {
+    "name": "forward-fill",
+    "label": "forward-fill"
+  },
+  {
+    "name": "front",
+    "label": "front"
+  },
+  {
+    "name": "fuel-pump",
+    "label": "fuel-pump"
+  },
+  {
+    "name": "fuel-pump-diesel",
+    "label": "fuel-pump-diesel"
+  },
+  {
+    "name": "fuel-pump-diesel-fill",
+    "label": "fuel-pump-diesel-fill"
+  },
+  {
+    "name": "fuel-pump-fill",
+    "label": "fuel-pump-fill"
+  },
+  {
+    "name": "fullscreen",
+    "label": "fullscreen"
+  },
+  {
+    "name": "fullscreen-exit",
+    "label": "fullscreen-exit"
+  },
+  {
+    "name": "funnel",
+    "label": "funnel"
+  },
+  {
+    "name": "funnel-fill",
+    "label": "funnel-fill"
+  },
+  {
+    "name": "gear",
+    "label": "gear"
+  },
+  {
+    "name": "gear-fill",
+    "label": "gear-fill"
+  },
+  {
+    "name": "gear-wide",
+    "label": "gear-wide"
+  },
+  {
+    "name": "gear-wide-connected",
+    "label": "gear-wide-connected"
+  },
+  {
+    "name": "gem",
+    "label": "gem"
+  },
+  {
+    "name": "gender-ambiguous",
+    "label": "gender-ambiguous"
+  },
+  {
+    "name": "gender-female",
+    "label": "gender-female"
+  },
+  {
+    "name": "gender-male",
+    "label": "gender-male"
+  },
+  {
+    "name": "gender-neuter",
+    "label": "gender-neuter"
+  },
+  {
+    "name": "gender-trans",
+    "label": "gender-trans"
+  },
+  {
+    "name": "geo",
+    "label": "geo"
+  },
+  {
+    "name": "geo-alt",
+    "label": "geo-alt"
+  },
+  {
+    "name": "geo-alt-fill",
+    "label": "geo-alt-fill"
+  },
+  {
+    "name": "geo-fill",
+    "label": "geo-fill"
+  },
+  {
+    "name": "gift",
+    "label": "gift"
+  },
+  {
+    "name": "gift-fill",
+    "label": "gift-fill"
+  },
+  {
+    "name": "git",
+    "label": "git"
+  },
+  {
+    "name": "github",
+    "label": "github"
+  },
+  {
+    "name": "gitlab",
+    "label": "gitlab"
+  },
+  {
+    "name": "globe",
+    "label": "globe"
+  },
+  {
+    "name": "globe-americas",
+    "label": "globe-americas"
+  },
+  {
+    "name": "globe-asia-australia",
+    "label": "globe-asia-australia"
+  },
+  {
+    "name": "globe-central-south-asia",
+    "label": "globe-central-south-asia"
+  },
+  {
+    "name": "globe-europe-africa",
+    "label": "globe-europe-africa"
+  },
+  {
+    "name": "globe2",
+    "label": "globe2"
+  },
+  {
+    "name": "google",
+    "label": "google"
+  },
+  {
+    "name": "google-play",
+    "label": "google-play"
+  },
+  {
+    "name": "gpu-card",
+    "label": "gpu-card"
+  },
+  {
+    "name": "graph-down",
+    "label": "graph-down"
+  },
+  {
+    "name": "graph-down-arrow",
+    "label": "graph-down-arrow"
+  },
+  {
+    "name": "graph-up",
+    "label": "graph-up"
+  },
+  {
+    "name": "graph-up-arrow",
+    "label": "graph-up-arrow"
+  },
+  {
+    "name": "grid",
+    "label": "grid"
+  },
+  {
+    "name": "grid-1x2",
+    "label": "grid-1x2"
+  },
+  {
+    "name": "grid-1x2-fill",
+    "label": "grid-1x2-fill"
+  },
+  {
+    "name": "grid-3x2",
+    "label": "grid-3x2"
+  },
+  {
+    "name": "grid-3x2-gap",
+    "label": "grid-3x2-gap"
+  },
+  {
+    "name": "grid-3x2-gap-fill",
+    "label": "grid-3x2-gap-fill"
+  },
+  {
+    "name": "grid-3x3",
+    "label": "grid-3x3"
+  },
+  {
+    "name": "grid-3x3-gap",
+    "label": "grid-3x3-gap"
+  },
+  {
+    "name": "grid-3x3-gap-fill",
+    "label": "grid-3x3-gap-fill"
+  },
+  {
+    "name": "grid-fill",
+    "label": "grid-fill"
+  },
+  {
+    "name": "grip-horizontal",
+    "label": "grip-horizontal"
+  },
+  {
+    "name": "grip-vertical",
+    "label": "grip-vertical"
+  },
+  {
+    "name": "h-circle",
+    "label": "h-circle"
+  },
+  {
+    "name": "h-circle-fill",
+    "label": "h-circle-fill"
+  },
+  {
+    "name": "h-square",
+    "label": "h-square"
+  },
+  {
+    "name": "h-square-fill",
+    "label": "h-square-fill"
+  },
+  {
+    "name": "hammer",
+    "label": "hammer"
+  },
+  {
+    "name": "hand-index",
+    "label": "hand-index"
+  },
+  {
+    "name": "hand-index-fill",
+    "label": "hand-index-fill"
+  },
+  {
+    "name": "hand-index-thumb",
+    "label": "hand-index-thumb"
+  },
+  {
+    "name": "hand-index-thumb-fill",
+    "label": "hand-index-thumb-fill"
+  },
+  {
+    "name": "hand-thumbs-down",
+    "label": "hand-thumbs-down"
+  },
+  {
+    "name": "hand-thumbs-down-fill",
+    "label": "hand-thumbs-down-fill"
+  },
+  {
+    "name": "hand-thumbs-up",
+    "label": "hand-thumbs-up"
+  },
+  {
+    "name": "hand-thumbs-up-fill",
+    "label": "hand-thumbs-up-fill"
+  },
+  {
+    "name": "handbag",
+    "label": "handbag"
+  },
+  {
+    "name": "handbag-fill",
+    "label": "handbag-fill"
+  },
+  {
+    "name": "hash",
+    "label": "hash"
+  },
+  {
+    "name": "hdd",
+    "label": "hdd"
+  },
+  {
+    "name": "hdd-fill",
+    "label": "hdd-fill"
+  },
+  {
+    "name": "hdd-network",
+    "label": "hdd-network"
+  },
+  {
+    "name": "hdd-network-fill",
+    "label": "hdd-network-fill"
+  },
+  {
+    "name": "hdd-rack",
+    "label": "hdd-rack"
+  },
+  {
+    "name": "hdd-rack-fill",
+    "label": "hdd-rack-fill"
+  },
+  {
+    "name": "hdd-stack",
+    "label": "hdd-stack"
+  },
+  {
+    "name": "hdd-stack-fill",
+    "label": "hdd-stack-fill"
+  },
+  {
+    "name": "hdmi",
+    "label": "hdmi"
+  },
+  {
+    "name": "hdmi-fill",
+    "label": "hdmi-fill"
+  },
+  {
+    "name": "headphones",
+    "label": "headphones"
+  },
+  {
+    "name": "headset",
+    "label": "headset"
+  },
+  {
+    "name": "headset-vr",
+    "label": "headset-vr"
+  },
+  {
+    "name": "heart",
+    "label": "heart"
+  },
+  {
+    "name": "heart-arrow",
+    "label": "heart-arrow"
+  },
+  {
+    "name": "heart-fill",
+    "label": "heart-fill"
+  },
+  {
+    "name": "heart-half",
+    "label": "heart-half"
+  },
+  {
+    "name": "heart-pulse",
+    "label": "heart-pulse"
+  },
+  {
+    "name": "heart-pulse-fill",
+    "label": "heart-pulse-fill"
+  },
+  {
+    "name": "heartbreak",
+    "label": "heartbreak"
+  },
+  {
+    "name": "heartbreak-fill",
+    "label": "heartbreak-fill"
+  },
+  {
+    "name": "hearts",
+    "label": "hearts"
+  },
+  {
+    "name": "heptagon",
+    "label": "heptagon"
+  },
+  {
+    "name": "heptagon-fill",
+    "label": "heptagon-fill"
+  },
+  {
+    "name": "heptagon-half",
+    "label": "heptagon-half"
+  },
+  {
+    "name": "hexagon",
+    "label": "hexagon"
+  },
+  {
+    "name": "hexagon-fill",
+    "label": "hexagon-fill"
+  },
+  {
+    "name": "hexagon-half",
+    "label": "hexagon-half"
+  },
+  {
+    "name": "highlighter",
+    "label": "highlighter"
+  },
+  {
+    "name": "highlights",
+    "label": "highlights"
+  },
+  {
+    "name": "hospital",
+    "label": "hospital"
+  },
+  {
+    "name": "hospital-fill",
+    "label": "hospital-fill"
+  },
+  {
+    "name": "hourglass",
+    "label": "hourglass"
+  },
+  {
+    "name": "hourglass-bottom",
+    "label": "hourglass-bottom"
+  },
+  {
+    "name": "hourglass-split",
+    "label": "hourglass-split"
+  },
+  {
+    "name": "hourglass-top",
+    "label": "hourglass-top"
+  },
+  {
+    "name": "house",
+    "label": "house"
+  },
+  {
+    "name": "house-add",
+    "label": "house-add"
+  },
+  {
+    "name": "house-add-fill",
+    "label": "house-add-fill"
+  },
+  {
+    "name": "house-check",
+    "label": "house-check"
+  },
+  {
+    "name": "house-check-fill",
+    "label": "house-check-fill"
+  },
+  {
+    "name": "house-dash",
+    "label": "house-dash"
+  },
+  {
+    "name": "house-dash-fill",
+    "label": "house-dash-fill"
+  },
+  {
+    "name": "house-door",
+    "label": "house-door"
+  },
+  {
+    "name": "house-door-fill",
+    "label": "house-door-fill"
+  },
+  {
+    "name": "house-down",
+    "label": "house-down"
+  },
+  {
+    "name": "house-down-fill",
+    "label": "house-down-fill"
+  },
+  {
+    "name": "house-exclamation",
+    "label": "house-exclamation"
+  },
+  {
+    "name": "house-exclamation-fill",
+    "label": "house-exclamation-fill"
+  },
+  {
+    "name": "house-fill",
+    "label": "house-fill"
+  },
+  {
+    "name": "house-gear",
+    "label": "house-gear"
+  },
+  {
+    "name": "house-gear-fill",
+    "label": "house-gear-fill"
+  },
+  {
+    "name": "house-heart",
+    "label": "house-heart"
+  },
+  {
+    "name": "house-heart-fill",
+    "label": "house-heart-fill"
+  },
+  {
+    "name": "house-lock",
+    "label": "house-lock"
+  },
+  {
+    "name": "house-lock-fill",
+    "label": "house-lock-fill"
+  },
+  {
+    "name": "house-slash",
+    "label": "house-slash"
+  },
+  {
+    "name": "house-slash-fill",
+    "label": "house-slash-fill"
+  },
+  {
+    "name": "house-up",
+    "label": "house-up"
+  },
+  {
+    "name": "house-up-fill",
+    "label": "house-up-fill"
+  },
+  {
+    "name": "house-x",
+    "label": "house-x"
+  },
+  {
+    "name": "house-x-fill",
+    "label": "house-x-fill"
+  },
+  {
+    "name": "houses",
+    "label": "houses"
+  },
+  {
+    "name": "houses-fill",
+    "label": "houses-fill"
+  },
+  {
+    "name": "hr",
+    "label": "hr"
+  },
+  {
+    "name": "hurricane",
+    "label": "hurricane"
+  },
+  {
+    "name": "hypnotize",
+    "label": "hypnotize"
+  },
+  {
+    "name": "image",
+    "label": "image"
+  },
+  {
+    "name": "image-alt",
+    "label": "image-alt"
+  },
+  {
+    "name": "image-fill",
+    "label": "image-fill"
+  },
+  {
+    "name": "images",
+    "label": "images"
+  },
+  {
+    "name": "inbox",
+    "label": "inbox"
+  },
+  {
+    "name": "inbox-fill",
+    "label": "inbox-fill"
+  },
+  {
+    "name": "inboxes",
+    "label": "inboxes"
+  },
+  {
+    "name": "inboxes-fill",
+    "label": "inboxes-fill"
+  },
+  {
+    "name": "incognito",
+    "label": "incognito"
+  },
+  {
+    "name": "indent",
+    "label": "indent"
+  },
+  {
+    "name": "infinity",
+    "label": "infinity"
+  },
+  {
+    "name": "info",
+    "label": "info"
+  },
+  {
+    "name": "info-circle",
+    "label": "info-circle"
+  },
+  {
+    "name": "info-circle-fill",
+    "label": "info-circle-fill"
+  },
+  {
+    "name": "info-lg",
+    "label": "info-lg"
+  },
+  {
+    "name": "info-square",
+    "label": "info-square"
+  },
+  {
+    "name": "info-square-fill",
+    "label": "info-square-fill"
+  },
+  {
+    "name": "input-cursor",
+    "label": "input-cursor"
+  },
+  {
+    "name": "input-cursor-text",
+    "label": "input-cursor-text"
+  },
+  {
+    "name": "instagram",
+    "label": "instagram"
+  },
+  {
+    "name": "intersect",
+    "label": "intersect"
+  },
+  {
+    "name": "journal",
+    "label": "journal"
+  },
+  {
+    "name": "journal-album",
+    "label": "journal-album"
+  },
+  {
+    "name": "journal-arrow-down",
+    "label": "journal-arrow-down"
+  },
+  {
+    "name": "journal-arrow-up",
+    "label": "journal-arrow-up"
+  },
+  {
+    "name": "journal-bookmark",
+    "label": "journal-bookmark"
+  },
+  {
+    "name": "journal-bookmark-fill",
+    "label": "journal-bookmark-fill"
+  },
+  {
+    "name": "journal-check",
+    "label": "journal-check"
+  },
+  {
+    "name": "journal-code",
+    "label": "journal-code"
+  },
+  {
+    "name": "journal-medical",
+    "label": "journal-medical"
+  },
+  {
+    "name": "journal-minus",
+    "label": "journal-minus"
+  },
+  {
+    "name": "journal-plus",
+    "label": "journal-plus"
+  },
+  {
+    "name": "journal-richtext",
+    "label": "journal-richtext"
+  },
+  {
+    "name": "journal-text",
+    "label": "journal-text"
+  },
+  {
+    "name": "journal-x",
+    "label": "journal-x"
+  },
+  {
+    "name": "journals",
+    "label": "journals"
+  },
+  {
+    "name": "joystick",
+    "label": "joystick"
+  },
+  {
+    "name": "justify",
+    "label": "justify"
+  },
+  {
+    "name": "justify-left",
+    "label": "justify-left"
+  },
+  {
+    "name": "justify-right",
+    "label": "justify-right"
+  },
+  {
+    "name": "kanban",
+    "label": "kanban"
+  },
+  {
+    "name": "kanban-fill",
+    "label": "kanban-fill"
+  },
+  {
+    "name": "key",
+    "label": "key"
+  },
+  {
+    "name": "key-fill",
+    "label": "key-fill"
+  },
+  {
+    "name": "keyboard",
+    "label": "keyboard"
+  },
+  {
+    "name": "keyboard-fill",
+    "label": "keyboard-fill"
+  },
+  {
+    "name": "ladder",
+    "label": "ladder"
+  },
+  {
+    "name": "lamp",
+    "label": "lamp"
+  },
+  {
+    "name": "lamp-fill",
+    "label": "lamp-fill"
+  },
+  {
+    "name": "laptop",
+    "label": "laptop"
+  },
+  {
+    "name": "laptop-fill",
+    "label": "laptop-fill"
+  },
+  {
+    "name": "layer-backward",
+    "label": "layer-backward"
+  },
+  {
+    "name": "layer-forward",
+    "label": "layer-forward"
+  },
+  {
+    "name": "layers",
+    "label": "layers"
+  },
+  {
+    "name": "layers-fill",
+    "label": "layers-fill"
+  },
+  {
+    "name": "layers-half",
+    "label": "layers-half"
+  },
+  {
+    "name": "layout-sidebar",
+    "label": "layout-sidebar"
+  },
+  {
+    "name": "layout-sidebar-inset",
+    "label": "layout-sidebar-inset"
+  },
+  {
+    "name": "layout-sidebar-inset-reverse",
+    "label": "layout-sidebar-inset-reverse"
+  },
+  {
+    "name": "layout-sidebar-reverse",
+    "label": "layout-sidebar-reverse"
+  },
+  {
+    "name": "layout-split",
+    "label": "layout-split"
+  },
+  {
+    "name": "layout-text-sidebar",
+    "label": "layout-text-sidebar"
+  },
+  {
+    "name": "layout-text-sidebar-reverse",
+    "label": "layout-text-sidebar-reverse"
+  },
+  {
+    "name": "layout-text-window",
+    "label": "layout-text-window"
+  },
+  {
+    "name": "layout-text-window-reverse",
+    "label": "layout-text-window-reverse"
+  },
+  {
+    "name": "layout-three-columns",
+    "label": "layout-three-columns"
+  },
+  {
+    "name": "layout-wtf",
+    "label": "layout-wtf"
+  },
+  {
+    "name": "life-preserver",
+    "label": "life-preserver"
+  },
+  {
+    "name": "lightbulb",
+    "label": "lightbulb"
+  },
+  {
+    "name": "lightbulb-fill",
+    "label": "lightbulb-fill"
+  },
+  {
+    "name": "lightbulb-off",
+    "label": "lightbulb-off"
+  },
+  {
+    "name": "lightbulb-off-fill",
+    "label": "lightbulb-off-fill"
+  },
+  {
+    "name": "lightning",
+    "label": "lightning"
+  },
+  {
+    "name": "lightning-charge",
+    "label": "lightning-charge"
+  },
+  {
+    "name": "lightning-charge-fill",
+    "label": "lightning-charge-fill"
+  },
+  {
+    "name": "lightning-fill",
+    "label": "lightning-fill"
+  },
+  {
+    "name": "line",
+    "label": "line"
+  },
+  {
+    "name": "link",
+    "label": "link"
+  },
+  {
+    "name": "link-45deg",
+    "label": "link-45deg"
+  },
+  {
+    "name": "linkedin",
+    "label": "linkedin"
+  },
+  {
+    "name": "list",
+    "label": "list"
+  },
+  {
+    "name": "list-check",
+    "label": "list-check"
+  },
+  {
+    "name": "list-columns",
+    "label": "list-columns"
+  },
+  {
+    "name": "list-columns-reverse",
+    "label": "list-columns-reverse"
+  },
+  {
+    "name": "list-nested",
+    "label": "list-nested"
+  },
+  {
+    "name": "list-ol",
+    "label": "list-ol"
+  },
+  {
+    "name": "list-stars",
+    "label": "list-stars"
+  },
+  {
+    "name": "list-task",
+    "label": "list-task"
+  },
+  {
+    "name": "list-ul",
+    "label": "list-ul"
+  },
+  {
+    "name": "lock",
+    "label": "lock"
+  },
+  {
+    "name": "lock-fill",
+    "label": "lock-fill"
+  },
+  {
+    "name": "luggage",
+    "label": "luggage"
+  },
+  {
+    "name": "luggage-fill",
+    "label": "luggage-fill"
+  },
+  {
+    "name": "lungs",
+    "label": "lungs"
+  },
+  {
+    "name": "lungs-fill",
+    "label": "lungs-fill"
+  },
+  {
+    "name": "magic",
+    "label": "magic"
+  },
+  {
+    "name": "magnet",
+    "label": "magnet"
+  },
+  {
+    "name": "magnet-fill",
+    "label": "magnet-fill"
+  },
+  {
+    "name": "mailbox",
+    "label": "mailbox"
+  },
+  {
+    "name": "mailbox-flag",
+    "label": "mailbox-flag"
+  },
+  {
+    "name": "mailbox2",
+    "label": "mailbox2"
+  },
+  {
+    "name": "mailbox2-flag",
+    "label": "mailbox2-flag"
+  },
+  {
+    "name": "map",
+    "label": "map"
+  },
+  {
+    "name": "map-fill",
+    "label": "map-fill"
+  },
+  {
+    "name": "markdown",
+    "label": "markdown"
+  },
+  {
+    "name": "markdown-fill",
+    "label": "markdown-fill"
+  },
+  {
+    "name": "marker-tip",
+    "label": "marker-tip"
+  },
+  {
+    "name": "mask",
+    "label": "mask"
+  },
+  {
+    "name": "mastodon",
+    "label": "mastodon"
+  },
+  {
+    "name": "medium",
+    "label": "medium"
+  },
+  {
+    "name": "megaphone",
+    "label": "megaphone"
+  },
+  {
+    "name": "megaphone-fill",
+    "label": "megaphone-fill"
+  },
+  {
+    "name": "memory",
+    "label": "memory"
+  },
+  {
+    "name": "menu-app",
+    "label": "menu-app"
+  },
+  {
+    "name": "menu-app-fill",
+    "label": "menu-app-fill"
+  },
+  {
+    "name": "menu-button",
+    "label": "menu-button"
+  },
+  {
+    "name": "menu-button-fill",
+    "label": "menu-button-fill"
+  },
+  {
+    "name": "menu-button-wide",
+    "label": "menu-button-wide"
+  },
+  {
+    "name": "menu-button-wide-fill",
+    "label": "menu-button-wide-fill"
+  },
+  {
+    "name": "menu-down",
+    "label": "menu-down"
+  },
+  {
+    "name": "menu-up",
+    "label": "menu-up"
+  },
+  {
+    "name": "messenger",
+    "label": "messenger"
+  },
+  {
+    "name": "meta",
+    "label": "meta"
+  },
+  {
+    "name": "mic",
+    "label": "mic"
+  },
+  {
+    "name": "mic-fill",
+    "label": "mic-fill"
+  },
+  {
+    "name": "mic-mute",
+    "label": "mic-mute"
+  },
+  {
+    "name": "mic-mute-fill",
+    "label": "mic-mute-fill"
+  },
+  {
+    "name": "microsoft",
+    "label": "microsoft"
+  },
+  {
+    "name": "microsoft-teams",
+    "label": "microsoft-teams"
+  },
+  {
+    "name": "minecart",
+    "label": "minecart"
+  },
+  {
+    "name": "minecart-loaded",
+    "label": "minecart-loaded"
+  },
+  {
+    "name": "modem",
+    "label": "modem"
+  },
+  {
+    "name": "modem-fill",
+    "label": "modem-fill"
+  },
+  {
+    "name": "moisture",
+    "label": "moisture"
+  },
+  {
+    "name": "moon",
+    "label": "moon"
+  },
+  {
+    "name": "moon-fill",
+    "label": "moon-fill"
+  },
+  {
+    "name": "moon-stars",
+    "label": "moon-stars"
+  },
+  {
+    "name": "moon-stars-fill",
+    "label": "moon-stars-fill"
+  },
+  {
+    "name": "mortarboard",
+    "label": "mortarboard"
+  },
+  {
+    "name": "mortarboard-fill",
+    "label": "mortarboard-fill"
+  },
+  {
+    "name": "motherboard",
+    "label": "motherboard"
+  },
+  {
+    "name": "motherboard-fill",
+    "label": "motherboard-fill"
+  },
+  {
+    "name": "mouse",
+    "label": "mouse"
+  },
+  {
+    "name": "mouse-fill",
+    "label": "mouse-fill"
+  },
+  {
+    "name": "mouse2",
+    "label": "mouse2"
+  },
+  {
+    "name": "mouse2-fill",
+    "label": "mouse2-fill"
+  },
+  {
+    "name": "mouse3",
+    "label": "mouse3"
+  },
+  {
+    "name": "mouse3-fill",
+    "label": "mouse3-fill"
+  },
+  {
+    "name": "music-note",
+    "label": "music-note"
+  },
+  {
+    "name": "music-note-beamed",
+    "label": "music-note-beamed"
+  },
+  {
+    "name": "music-note-list",
+    "label": "music-note-list"
+  },
+  {
+    "name": "music-player",
+    "label": "music-player"
+  },
+  {
+    "name": "music-player-fill",
+    "label": "music-player-fill"
+  },
+  {
+    "name": "newspaper",
+    "label": "newspaper"
+  },
+  {
+    "name": "nintendo-switch",
+    "label": "nintendo-switch"
+  },
+  {
+    "name": "node-minus",
+    "label": "node-minus"
+  },
+  {
+    "name": "node-minus-fill",
+    "label": "node-minus-fill"
+  },
+  {
+    "name": "node-plus",
+    "label": "node-plus"
+  },
+  {
+    "name": "node-plus-fill",
+    "label": "node-plus-fill"
+  },
+  {
+    "name": "noise-reduction",
+    "label": "noise-reduction"
+  },
+  {
+    "name": "nut",
+    "label": "nut"
+  },
+  {
+    "name": "nut-fill",
+    "label": "nut-fill"
+  },
+  {
+    "name": "nvidia",
+    "label": "nvidia"
+  },
+  {
+    "name": "nvme",
+    "label": "nvme"
+  },
+  {
+    "name": "nvme-fill",
+    "label": "nvme-fill"
+  },
+  {
+    "name": "octagon",
+    "label": "octagon"
+  },
+  {
+    "name": "octagon-fill",
+    "label": "octagon-fill"
+  },
+  {
+    "name": "octagon-half",
+    "label": "octagon-half"
+  },
+  {
+    "name": "opencollective",
+    "label": "opencollective"
+  },
+  {
+    "name": "optical-audio",
+    "label": "optical-audio"
+  },
+  {
+    "name": "optical-audio-fill",
+    "label": "optical-audio-fill"
+  },
+  {
+    "name": "option",
+    "label": "option"
+  },
+  {
+    "name": "outlet",
+    "label": "outlet"
+  },
+  {
+    "name": "p-circle",
+    "label": "p-circle"
+  },
+  {
+    "name": "p-circle-fill",
+    "label": "p-circle-fill"
+  },
+  {
+    "name": "p-square",
+    "label": "p-square"
+  },
+  {
+    "name": "p-square-fill",
+    "label": "p-square-fill"
+  },
+  {
+    "name": "paint-bucket",
+    "label": "paint-bucket"
+  },
+  {
+    "name": "palette",
+    "label": "palette"
+  },
+  {
+    "name": "palette-fill",
+    "label": "palette-fill"
+  },
+  {
+    "name": "palette2",
+    "label": "palette2"
+  },
+  {
+    "name": "paperclip",
+    "label": "paperclip"
+  },
+  {
+    "name": "paragraph",
+    "label": "paragraph"
+  },
+  {
+    "name": "pass",
+    "label": "pass"
+  },
+  {
+    "name": "pass-fill",
+    "label": "pass-fill"
+  },
+  {
+    "name": "passport",
+    "label": "passport"
+  },
+  {
+    "name": "passport-fill",
+    "label": "passport-fill"
+  },
+  {
+    "name": "patch-check",
+    "label": "patch-check"
+  },
+  {
+    "name": "patch-check-fill",
+    "label": "patch-check-fill"
+  },
+  {
+    "name": "patch-exclamation",
+    "label": "patch-exclamation"
+  },
+  {
+    "name": "patch-exclamation-fill",
+    "label": "patch-exclamation-fill"
+  },
+  {
+    "name": "patch-minus",
+    "label": "patch-minus"
+  },
+  {
+    "name": "patch-minus-fill",
+    "label": "patch-minus-fill"
+  },
+  {
+    "name": "patch-plus",
+    "label": "patch-plus"
+  },
+  {
+    "name": "patch-plus-fill",
+    "label": "patch-plus-fill"
+  },
+  {
+    "name": "patch-question",
+    "label": "patch-question"
+  },
+  {
+    "name": "patch-question-fill",
+    "label": "patch-question-fill"
+  },
+  {
+    "name": "pause",
+    "label": "pause"
+  },
+  {
+    "name": "pause-btn",
+    "label": "pause-btn"
+  },
+  {
+    "name": "pause-btn-fill",
+    "label": "pause-btn-fill"
+  },
+  {
+    "name": "pause-circle",
+    "label": "pause-circle"
+  },
+  {
+    "name": "pause-circle-fill",
+    "label": "pause-circle-fill"
+  },
+  {
+    "name": "pause-fill",
+    "label": "pause-fill"
+  },
+  {
+    "name": "paypal",
+    "label": "paypal"
+  },
+  {
+    "name": "pc",
+    "label": "pc"
+  },
+  {
+    "name": "pc-display",
+    "label": "pc-display"
+  },
+  {
+    "name": "pc-display-horizontal",
+    "label": "pc-display-horizontal"
+  },
+  {
+    "name": "pc-horizontal",
+    "label": "pc-horizontal"
+  },
+  {
+    "name": "pci-card",
+    "label": "pci-card"
+  },
+  {
+    "name": "pci-card-network",
+    "label": "pci-card-network"
+  },
+  {
+    "name": "pci-card-sound",
+    "label": "pci-card-sound"
+  },
+  {
+    "name": "peace",
+    "label": "peace"
+  },
+  {
+    "name": "peace-fill",
+    "label": "peace-fill"
+  },
+  {
+    "name": "pen",
+    "label": "pen"
+  },
+  {
+    "name": "pen-fill",
+    "label": "pen-fill"
+  },
+  {
+    "name": "pencil",
+    "label": "pencil"
+  },
+  {
+    "name": "pencil-fill",
+    "label": "pencil-fill"
+  },
+  {
+    "name": "pencil-square",
+    "label": "pencil-square"
+  },
+  {
+    "name": "pentagon",
+    "label": "pentagon"
+  },
+  {
+    "name": "pentagon-fill",
+    "label": "pentagon-fill"
+  },
+  {
+    "name": "pentagon-half",
+    "label": "pentagon-half"
+  },
+  {
+    "name": "people",
+    "label": "people"
+  },
+  {
+    "name": "people-fill",
+    "label": "people-fill"
+  },
+  {
+    "name": "percent",
+    "label": "percent"
+  },
+  {
+    "name": "person",
+    "label": "person"
+  },
+  {
+    "name": "person-add",
+    "label": "person-add"
+  },
+  {
+    "name": "person-arms-up",
+    "label": "person-arms-up"
+  },
+  {
+    "name": "person-badge",
+    "label": "person-badge"
+  },
+  {
+    "name": "person-badge-fill",
+    "label": "person-badge-fill"
+  },
+  {
+    "name": "person-bounding-box",
+    "label": "person-bounding-box"
+  },
+  {
+    "name": "person-check",
+    "label": "person-check"
+  },
+  {
+    "name": "person-check-fill",
+    "label": "person-check-fill"
+  },
+  {
+    "name": "person-circle",
+    "label": "person-circle"
+  },
+  {
+    "name": "person-dash",
+    "label": "person-dash"
+  },
+  {
+    "name": "person-dash-fill",
+    "label": "person-dash-fill"
+  },
+  {
+    "name": "person-down",
+    "label": "person-down"
+  },
+  {
+    "name": "person-exclamation",
+    "label": "person-exclamation"
+  },
+  {
+    "name": "person-fill",
+    "label": "person-fill"
+  },
+  {
+    "name": "person-fill-add",
+    "label": "person-fill-add"
+  },
+  {
+    "name": "person-fill-check",
+    "label": "person-fill-check"
+  },
+  {
+    "name": "person-fill-dash",
+    "label": "person-fill-dash"
+  },
+  {
+    "name": "person-fill-down",
+    "label": "person-fill-down"
+  },
+  {
+    "name": "person-fill-exclamation",
+    "label": "person-fill-exclamation"
+  },
+  {
+    "name": "person-fill-gear",
+    "label": "person-fill-gear"
+  },
+  {
+    "name": "person-fill-lock",
+    "label": "person-fill-lock"
+  },
+  {
+    "name": "person-fill-slash",
+    "label": "person-fill-slash"
+  },
+  {
+    "name": "person-fill-up",
+    "label": "person-fill-up"
+  },
+  {
+    "name": "person-fill-x",
+    "label": "person-fill-x"
+  },
+  {
+    "name": "person-gear",
+    "label": "person-gear"
+  },
+  {
+    "name": "person-heart",
+    "label": "person-heart"
+  },
+  {
+    "name": "person-hearts",
+    "label": "person-hearts"
+  },
+  {
+    "name": "person-lines-fill",
+    "label": "person-lines-fill"
+  },
+  {
+    "name": "person-lock",
+    "label": "person-lock"
+  },
+  {
+    "name": "person-plus",
+    "label": "person-plus"
+  },
+  {
+    "name": "person-plus-fill",
+    "label": "person-plus-fill"
+  },
+  {
+    "name": "person-raised-hand",
+    "label": "person-raised-hand"
+  },
+  {
+    "name": "person-rolodex",
+    "label": "person-rolodex"
+  },
+  {
+    "name": "person-slash",
+    "label": "person-slash"
+  },
+  {
+    "name": "person-square",
+    "label": "person-square"
+  },
+  {
+    "name": "person-standing",
+    "label": "person-standing"
+  },
+  {
+    "name": "person-standing-dress",
+    "label": "person-standing-dress"
+  },
+  {
+    "name": "person-up",
+    "label": "person-up"
+  },
+  {
+    "name": "person-vcard",
+    "label": "person-vcard"
+  },
+  {
+    "name": "person-vcard-fill",
+    "label": "person-vcard-fill"
+  },
+  {
+    "name": "person-video",
+    "label": "person-video"
+  },
+  {
+    "name": "person-video2",
+    "label": "person-video2"
+  },
+  {
+    "name": "person-video3",
+    "label": "person-video3"
+  },
+  {
+    "name": "person-walking",
+    "label": "person-walking"
+  },
+  {
+    "name": "person-wheelchair",
+    "label": "person-wheelchair"
+  },
+  {
+    "name": "person-workspace",
+    "label": "person-workspace"
+  },
+  {
+    "name": "person-x",
+    "label": "person-x"
+  },
+  {
+    "name": "person-x-fill",
+    "label": "person-x-fill"
+  },
+  {
+    "name": "phone",
+    "label": "phone"
+  },
+  {
+    "name": "phone-fill",
+    "label": "phone-fill"
+  },
+  {
+    "name": "phone-flip",
+    "label": "phone-flip"
+  },
+  {
+    "name": "phone-landscape",
+    "label": "phone-landscape"
+  },
+  {
+    "name": "phone-landscape-fill",
+    "label": "phone-landscape-fill"
+  },
+  {
+    "name": "phone-vibrate",
+    "label": "phone-vibrate"
+  },
+  {
+    "name": "phone-vibrate-fill",
+    "label": "phone-vibrate-fill"
+  },
+  {
+    "name": "pie-chart",
+    "label": "pie-chart"
+  },
+  {
+    "name": "pie-chart-fill",
+    "label": "pie-chart-fill"
+  },
+  {
+    "name": "piggy-bank",
+    "label": "piggy-bank"
+  },
+  {
+    "name": "piggy-bank-fill",
+    "label": "piggy-bank-fill"
+  },
+  {
+    "name": "pin",
+    "label": "pin"
+  },
+  {
+    "name": "pin-angle",
+    "label": "pin-angle"
+  },
+  {
+    "name": "pin-angle-fill",
+    "label": "pin-angle-fill"
+  },
+  {
+    "name": "pin-fill",
+    "label": "pin-fill"
+  },
+  {
+    "name": "pin-map",
+    "label": "pin-map"
+  },
+  {
+    "name": "pin-map-fill",
+    "label": "pin-map-fill"
+  },
+  {
+    "name": "pinterest",
+    "label": "pinterest"
+  },
+  {
+    "name": "pip",
+    "label": "pip"
+  },
+  {
+    "name": "pip-fill",
+    "label": "pip-fill"
+  },
+  {
+    "name": "play",
+    "label": "play"
+  },
+  {
+    "name": "play-btn",
+    "label": "play-btn"
+  },
+  {
+    "name": "play-btn-fill",
+    "label": "play-btn-fill"
+  },
+  {
+    "name": "play-circle",
+    "label": "play-circle"
+  },
+  {
+    "name": "play-circle-fill",
+    "label": "play-circle-fill"
+  },
+  {
+    "name": "play-fill",
+    "label": "play-fill"
+  },
+  {
+    "name": "playstation",
+    "label": "playstation"
+  },
+  {
+    "name": "plug",
+    "label": "plug"
+  },
+  {
+    "name": "plug-fill",
+    "label": "plug-fill"
+  },
+  {
+    "name": "plugin",
+    "label": "plugin"
+  },
+  {
+    "name": "plus",
+    "label": "plus"
+  },
+  {
+    "name": "plus-circle",
+    "label": "plus-circle"
+  },
+  {
+    "name": "plus-circle-dotted",
+    "label": "plus-circle-dotted"
+  },
+  {
+    "name": "plus-circle-fill",
+    "label": "plus-circle-fill"
+  },
+  {
+    "name": "plus-lg",
+    "label": "plus-lg"
+  },
+  {
+    "name": "plus-slash-minus",
+    "label": "plus-slash-minus"
+  },
+  {
+    "name": "plus-square",
+    "label": "plus-square"
+  },
+  {
+    "name": "plus-square-dotted",
+    "label": "plus-square-dotted"
+  },
+  {
+    "name": "plus-square-fill",
+    "label": "plus-square-fill"
+  },
+  {
+    "name": "postage",
+    "label": "postage"
+  },
+  {
+    "name": "postage-fill",
+    "label": "postage-fill"
+  },
+  {
+    "name": "postage-heart",
+    "label": "postage-heart"
+  },
+  {
+    "name": "postage-heart-fill",
+    "label": "postage-heart-fill"
+  },
+  {
+    "name": "postcard",
+    "label": "postcard"
+  },
+  {
+    "name": "postcard-fill",
+    "label": "postcard-fill"
+  },
+  {
+    "name": "postcard-heart",
+    "label": "postcard-heart"
+  },
+  {
+    "name": "postcard-heart-fill",
+    "label": "postcard-heart-fill"
+  },
+  {
+    "name": "power",
+    "label": "power"
+  },
+  {
+    "name": "prescription",
+    "label": "prescription"
+  },
+  {
+    "name": "prescription2",
+    "label": "prescription2"
+  },
+  {
+    "name": "printer",
+    "label": "printer"
+  },
+  {
+    "name": "printer-fill",
+    "label": "printer-fill"
+  },
+  {
+    "name": "projector",
+    "label": "projector"
+  },
+  {
+    "name": "projector-fill",
+    "label": "projector-fill"
+  },
+  {
+    "name": "puzzle",
+    "label": "puzzle"
+  },
+  {
+    "name": "puzzle-fill",
+    "label": "puzzle-fill"
+  },
+  {
+    "name": "qr-code",
+    "label": "qr-code"
+  },
+  {
+    "name": "qr-code-scan",
+    "label": "qr-code-scan"
+  },
+  {
+    "name": "question",
+    "label": "question"
+  },
+  {
+    "name": "question-circle",
+    "label": "question-circle"
+  },
+  {
+    "name": "question-circle-fill",
+    "label": "question-circle-fill"
+  },
+  {
+    "name": "question-diamond",
+    "label": "question-diamond"
+  },
+  {
+    "name": "question-diamond-fill",
+    "label": "question-diamond-fill"
+  },
+  {
+    "name": "question-lg",
+    "label": "question-lg"
+  },
+  {
+    "name": "question-octagon",
+    "label": "question-octagon"
+  },
+  {
+    "name": "question-octagon-fill",
+    "label": "question-octagon-fill"
+  },
+  {
+    "name": "question-square",
+    "label": "question-square"
+  },
+  {
+    "name": "question-square-fill",
+    "label": "question-square-fill"
+  },
+  {
+    "name": "quora",
+    "label": "quora"
+  },
+  {
+    "name": "quote",
+    "label": "quote"
+  },
+  {
+    "name": "r-circle",
+    "label": "r-circle"
+  },
+  {
+    "name": "r-circle-fill",
+    "label": "r-circle-fill"
+  },
+  {
+    "name": "r-square",
+    "label": "r-square"
+  },
+  {
+    "name": "r-square-fill",
+    "label": "r-square-fill"
+  },
+  {
+    "name": "radar",
+    "label": "radar"
+  },
+  {
+    "name": "radioactive",
+    "label": "radioactive"
+  },
+  {
+    "name": "rainbow",
+    "label": "rainbow"
+  },
+  {
+    "name": "receipt",
+    "label": "receipt"
+  },
+  {
+    "name": "receipt-cutoff",
+    "label": "receipt-cutoff"
+  },
+  {
+    "name": "reception-0",
+    "label": "reception-0"
+  },
+  {
+    "name": "reception-1",
+    "label": "reception-1"
+  },
+  {
+    "name": "reception-2",
+    "label": "reception-2"
+  },
+  {
+    "name": "reception-3",
+    "label": "reception-3"
+  },
+  {
+    "name": "reception-4",
+    "label": "reception-4"
+  },
+  {
+    "name": "record",
+    "label": "record"
+  },
+  {
+    "name": "record-btn",
+    "label": "record-btn"
+  },
+  {
+    "name": "record-btn-fill",
+    "label": "record-btn-fill"
+  },
+  {
+    "name": "record-circle",
+    "label": "record-circle"
+  },
+  {
+    "name": "record-circle-fill",
+    "label": "record-circle-fill"
+  },
+  {
+    "name": "record-fill",
+    "label": "record-fill"
+  },
+  {
+    "name": "record2",
+    "label": "record2"
+  },
+  {
+    "name": "record2-fill",
+    "label": "record2-fill"
+  },
+  {
+    "name": "recycle",
+    "label": "recycle"
+  },
+  {
+    "name": "reddit",
+    "label": "reddit"
+  },
+  {
+    "name": "regex",
+    "label": "regex"
+  },
+  {
+    "name": "repeat",
+    "label": "repeat"
+  },
+  {
+    "name": "repeat-1",
+    "label": "repeat-1"
+  },
+  {
+    "name": "reply",
+    "label": "reply"
+  },
+  {
+    "name": "reply-all",
+    "label": "reply-all"
+  },
+  {
+    "name": "reply-all-fill",
+    "label": "reply-all-fill"
+  },
+  {
+    "name": "reply-fill",
+    "label": "reply-fill"
+  },
+  {
+    "name": "rewind",
+    "label": "rewind"
+  },
+  {
+    "name": "rewind-btn",
+    "label": "rewind-btn"
+  },
+  {
+    "name": "rewind-btn-fill",
+    "label": "rewind-btn-fill"
+  },
+  {
+    "name": "rewind-circle",
+    "label": "rewind-circle"
+  },
+  {
+    "name": "rewind-circle-fill",
+    "label": "rewind-circle-fill"
+  },
+  {
+    "name": "rewind-fill",
+    "label": "rewind-fill"
+  },
+  {
+    "name": "robot",
+    "label": "robot"
+  },
+  {
+    "name": "rocket",
+    "label": "rocket"
+  },
+  {
+    "name": "rocket-fill",
+    "label": "rocket-fill"
+  },
+  {
+    "name": "rocket-takeoff",
+    "label": "rocket-takeoff"
+  },
+  {
+    "name": "rocket-takeoff-fill",
+    "label": "rocket-takeoff-fill"
+  },
+  {
+    "name": "router",
+    "label": "router"
+  },
+  {
+    "name": "router-fill",
+    "label": "router-fill"
+  },
+  {
+    "name": "rss",
+    "label": "rss"
+  },
+  {
+    "name": "rss-fill",
+    "label": "rss-fill"
+  },
+  {
+    "name": "rulers",
+    "label": "rulers"
+  },
+  {
+    "name": "safe",
+    "label": "safe"
+  },
+  {
+    "name": "safe-fill",
+    "label": "safe-fill"
+  },
+  {
+    "name": "safe2",
+    "label": "safe2"
+  },
+  {
+    "name": "safe2-fill",
+    "label": "safe2-fill"
+  },
+  {
+    "name": "save",
+    "label": "save"
+  },
+  {
+    "name": "save-fill",
+    "label": "save-fill"
+  },
+  {
+    "name": "save2",
+    "label": "save2"
+  },
+  {
+    "name": "save2-fill",
+    "label": "save2-fill"
+  },
+  {
+    "name": "scissors",
+    "label": "scissors"
+  },
+  {
+    "name": "scooter",
+    "label": "scooter"
+  },
+  {
+    "name": "screwdriver",
+    "label": "screwdriver"
+  },
+  {
+    "name": "sd-card",
+    "label": "sd-card"
+  },
+  {
+    "name": "sd-card-fill",
+    "label": "sd-card-fill"
+  },
+  {
+    "name": "search",
+    "label": "search"
+  },
+  {
+    "name": "search-heart",
+    "label": "search-heart"
+  },
+  {
+    "name": "search-heart-fill",
+    "label": "search-heart-fill"
+  },
+  {
+    "name": "segmented-nav",
+    "label": "segmented-nav"
+  },
+  {
+    "name": "send",
+    "label": "send"
+  },
+  {
+    "name": "send-arrow-down",
+    "label": "send-arrow-down"
+  },
+  {
+    "name": "send-arrow-down-fill",
+    "label": "send-arrow-down-fill"
+  },
+  {
+    "name": "send-arrow-up",
+    "label": "send-arrow-up"
+  },
+  {
+    "name": "send-arrow-up-fill",
+    "label": "send-arrow-up-fill"
+  },
+  {
+    "name": "send-check",
+    "label": "send-check"
+  },
+  {
+    "name": "send-check-fill",
+    "label": "send-check-fill"
+  },
+  {
+    "name": "send-dash",
+    "label": "send-dash"
+  },
+  {
+    "name": "send-dash-fill",
+    "label": "send-dash-fill"
+  },
+  {
+    "name": "send-exclamation",
+    "label": "send-exclamation"
+  },
+  {
+    "name": "send-exclamation-fill",
+    "label": "send-exclamation-fill"
+  },
+  {
+    "name": "send-fill",
+    "label": "send-fill"
+  },
+  {
+    "name": "send-plus",
+    "label": "send-plus"
+  },
+  {
+    "name": "send-plus-fill",
+    "label": "send-plus-fill"
+  },
+  {
+    "name": "send-slash",
+    "label": "send-slash"
+  },
+  {
+    "name": "send-slash-fill",
+    "label": "send-slash-fill"
+  },
+  {
+    "name": "send-x",
+    "label": "send-x"
+  },
+  {
+    "name": "send-x-fill",
+    "label": "send-x-fill"
+  },
+  {
+    "name": "server",
+    "label": "server"
+  },
+  {
+    "name": "shadows",
+    "label": "shadows"
+  },
+  {
+    "name": "share",
+    "label": "share"
+  },
+  {
+    "name": "share-fill",
+    "label": "share-fill"
+  },
+  {
+    "name": "shield",
+    "label": "shield"
+  },
+  {
+    "name": "shield-check",
+    "label": "shield-check"
+  },
+  {
+    "name": "shield-exclamation",
+    "label": "shield-exclamation"
+  },
+  {
+    "name": "shield-fill",
+    "label": "shield-fill"
+  },
+  {
+    "name": "shield-fill-check",
+    "label": "shield-fill-check"
+  },
+  {
+    "name": "shield-fill-exclamation",
+    "label": "shield-fill-exclamation"
+  },
+  {
+    "name": "shield-fill-minus",
+    "label": "shield-fill-minus"
+  },
+  {
+    "name": "shield-fill-plus",
+    "label": "shield-fill-plus"
+  },
+  {
+    "name": "shield-fill-x",
+    "label": "shield-fill-x"
+  },
+  {
+    "name": "shield-lock",
+    "label": "shield-lock"
+  },
+  {
+    "name": "shield-lock-fill",
+    "label": "shield-lock-fill"
+  },
+  {
+    "name": "shield-minus",
+    "label": "shield-minus"
+  },
+  {
+    "name": "shield-plus",
+    "label": "shield-plus"
+  },
+  {
+    "name": "shield-shaded",
+    "label": "shield-shaded"
+  },
+  {
+    "name": "shield-slash",
+    "label": "shield-slash"
+  },
+  {
+    "name": "shield-slash-fill",
+    "label": "shield-slash-fill"
+  },
+  {
+    "name": "shield-x",
+    "label": "shield-x"
+  },
+  {
+    "name": "shift",
+    "label": "shift"
+  },
+  {
+    "name": "shift-fill",
+    "label": "shift-fill"
+  },
+  {
+    "name": "shop",
+    "label": "shop"
+  },
+  {
+    "name": "shop-window",
+    "label": "shop-window"
+  },
+  {
+    "name": "shuffle",
+    "label": "shuffle"
+  },
+  {
+    "name": "sign-dead-end",
+    "label": "sign-dead-end"
+  },
+  {
+    "name": "sign-dead-end-fill",
+    "label": "sign-dead-end-fill"
+  },
+  {
+    "name": "sign-do-not-enter",
+    "label": "sign-do-not-enter"
+  },
+  {
+    "name": "sign-do-not-enter-fill",
+    "label": "sign-do-not-enter-fill"
+  },
+  {
+    "name": "sign-intersection",
+    "label": "sign-intersection"
+  },
+  {
+    "name": "sign-intersection-fill",
+    "label": "sign-intersection-fill"
+  },
+  {
+    "name": "sign-intersection-side",
+    "label": "sign-intersection-side"
+  },
+  {
+    "name": "sign-intersection-side-fill",
+    "label": "sign-intersection-side-fill"
+  },
+  {
+    "name": "sign-intersection-t",
+    "label": "sign-intersection-t"
+  },
+  {
+    "name": "sign-intersection-t-fill",
+    "label": "sign-intersection-t-fill"
+  },
+  {
+    "name": "sign-intersection-y",
+    "label": "sign-intersection-y"
+  },
+  {
+    "name": "sign-intersection-y-fill",
+    "label": "sign-intersection-y-fill"
+  },
+  {
+    "name": "sign-merge-left",
+    "label": "sign-merge-left"
+  },
+  {
+    "name": "sign-merge-left-fill",
+    "label": "sign-merge-left-fill"
+  },
+  {
+    "name": "sign-merge-right",
+    "label": "sign-merge-right"
+  },
+  {
+    "name": "sign-merge-right-fill",
+    "label": "sign-merge-right-fill"
+  },
+  {
+    "name": "sign-no-left-turn",
+    "label": "sign-no-left-turn"
+  },
+  {
+    "name": "sign-no-left-turn-fill",
+    "label": "sign-no-left-turn-fill"
+  },
+  {
+    "name": "sign-no-parking",
+    "label": "sign-no-parking"
+  },
+  {
+    "name": "sign-no-parking-fill",
+    "label": "sign-no-parking-fill"
+  },
+  {
+    "name": "sign-no-right-turn",
+    "label": "sign-no-right-turn"
+  },
+  {
+    "name": "sign-no-right-turn-fill",
+    "label": "sign-no-right-turn-fill"
+  },
+  {
+    "name": "sign-railroad",
+    "label": "sign-railroad"
+  },
+  {
+    "name": "sign-railroad-fill",
+    "label": "sign-railroad-fill"
+  },
+  {
+    "name": "sign-stop",
+    "label": "sign-stop"
+  },
+  {
+    "name": "sign-stop-fill",
+    "label": "sign-stop-fill"
+  },
+  {
+    "name": "sign-stop-lights",
+    "label": "sign-stop-lights"
+  },
+  {
+    "name": "sign-stop-lights-fill",
+    "label": "sign-stop-lights-fill"
+  },
+  {
+    "name": "sign-turn-left",
+    "label": "sign-turn-left"
+  },
+  {
+    "name": "sign-turn-left-fill",
+    "label": "sign-turn-left-fill"
+  },
+  {
+    "name": "sign-turn-right",
+    "label": "sign-turn-right"
+  },
+  {
+    "name": "sign-turn-right-fill",
+    "label": "sign-turn-right-fill"
+  },
+  {
+    "name": "sign-turn-slight-left",
+    "label": "sign-turn-slight-left"
+  },
+  {
+    "name": "sign-turn-slight-left-fill",
+    "label": "sign-turn-slight-left-fill"
+  },
+  {
+    "name": "sign-turn-slight-right",
+    "label": "sign-turn-slight-right"
+  },
+  {
+    "name": "sign-turn-slight-right-fill",
+    "label": "sign-turn-slight-right-fill"
+  },
+  {
+    "name": "sign-yield",
+    "label": "sign-yield"
+  },
+  {
+    "name": "sign-yield-fill",
+    "label": "sign-yield-fill"
+  },
+  {
+    "name": "signal",
+    "label": "signal"
+  },
+  {
+    "name": "signpost",
+    "label": "signpost"
+  },
+  {
+    "name": "signpost-2",
+    "label": "signpost-2"
+  },
+  {
+    "name": "signpost-2-fill",
+    "label": "signpost-2-fill"
+  },
+  {
+    "name": "signpost-fill",
+    "label": "signpost-fill"
+  },
+  {
+    "name": "signpost-split",
+    "label": "signpost-split"
+  },
+  {
+    "name": "signpost-split-fill",
+    "label": "signpost-split-fill"
+  },
+  {
+    "name": "sim",
+    "label": "sim"
+  },
+  {
+    "name": "sim-fill",
+    "label": "sim-fill"
+  },
+  {
+    "name": "sim-slash",
+    "label": "sim-slash"
+  },
+  {
+    "name": "sim-slash-fill",
+    "label": "sim-slash-fill"
+  },
+  {
+    "name": "sina-weibo",
+    "label": "sina-weibo"
+  },
+  {
+    "name": "skip-backward",
+    "label": "skip-backward"
+  },
+  {
+    "name": "skip-backward-btn",
+    "label": "skip-backward-btn"
+  },
+  {
+    "name": "skip-backward-btn-fill",
+    "label": "skip-backward-btn-fill"
+  },
+  {
+    "name": "skip-backward-circle",
+    "label": "skip-backward-circle"
+  },
+  {
+    "name": "skip-backward-circle-fill",
+    "label": "skip-backward-circle-fill"
+  },
+  {
+    "name": "skip-backward-fill",
+    "label": "skip-backward-fill"
+  },
+  {
+    "name": "skip-end",
+    "label": "skip-end"
+  },
+  {
+    "name": "skip-end-btn",
+    "label": "skip-end-btn"
+  },
+  {
+    "name": "skip-end-btn-fill",
+    "label": "skip-end-btn-fill"
+  },
+  {
+    "name": "skip-end-circle",
+    "label": "skip-end-circle"
+  },
+  {
+    "name": "skip-end-circle-fill",
+    "label": "skip-end-circle-fill"
+  },
+  {
+    "name": "skip-end-fill",
+    "label": "skip-end-fill"
+  },
+  {
+    "name": "skip-forward",
+    "label": "skip-forward"
+  },
+  {
+    "name": "skip-forward-btn",
+    "label": "skip-forward-btn"
+  },
+  {
+    "name": "skip-forward-btn-fill",
+    "label": "skip-forward-btn-fill"
+  },
+  {
+    "name": "skip-forward-circle",
+    "label": "skip-forward-circle"
+  },
+  {
+    "name": "skip-forward-circle-fill",
+    "label": "skip-forward-circle-fill"
+  },
+  {
+    "name": "skip-forward-fill",
+    "label": "skip-forward-fill"
+  },
+  {
+    "name": "skip-start",
+    "label": "skip-start"
+  },
+  {
+    "name": "skip-start-btn",
+    "label": "skip-start-btn"
+  },
+  {
+    "name": "skip-start-btn-fill",
+    "label": "skip-start-btn-fill"
+  },
+  {
+    "name": "skip-start-circle",
+    "label": "skip-start-circle"
+  },
+  {
+    "name": "skip-start-circle-fill",
+    "label": "skip-start-circle-fill"
+  },
+  {
+    "name": "skip-start-fill",
+    "label": "skip-start-fill"
+  },
+  {
+    "name": "skype",
+    "label": "skype"
+  },
+  {
+    "name": "slack",
+    "label": "slack"
+  },
+  {
+    "name": "slash",
+    "label": "slash"
+  },
+  {
+    "name": "slash-circle",
+    "label": "slash-circle"
+  },
+  {
+    "name": "slash-circle-fill",
+    "label": "slash-circle-fill"
+  },
+  {
+    "name": "slash-lg",
+    "label": "slash-lg"
+  },
+  {
+    "name": "slash-square",
+    "label": "slash-square"
+  },
+  {
+    "name": "slash-square-fill",
+    "label": "slash-square-fill"
+  },
+  {
+    "name": "sliders",
+    "label": "sliders"
+  },
+  {
+    "name": "sliders2",
+    "label": "sliders2"
+  },
+  {
+    "name": "sliders2-vertical",
+    "label": "sliders2-vertical"
+  },
+  {
+    "name": "smartwatch",
+    "label": "smartwatch"
+  },
+  {
+    "name": "snapchat",
+    "label": "snapchat"
+  },
+  {
+    "name": "snow",
+    "label": "snow"
+  },
+  {
+    "name": "snow2",
+    "label": "snow2"
+  },
+  {
+    "name": "snow3",
+    "label": "snow3"
+  },
+  {
+    "name": "sort-alpha-down",
+    "label": "sort-alpha-down"
+  },
+  {
+    "name": "sort-alpha-down-alt",
+    "label": "sort-alpha-down-alt"
+  },
+  {
+    "name": "sort-alpha-up",
+    "label": "sort-alpha-up"
+  },
+  {
+    "name": "sort-alpha-up-alt",
+    "label": "sort-alpha-up-alt"
+  },
+  {
+    "name": "sort-down",
+    "label": "sort-down"
+  },
+  {
+    "name": "sort-down-alt",
+    "label": "sort-down-alt"
+  },
+  {
+    "name": "sort-numeric-down",
+    "label": "sort-numeric-down"
+  },
+  {
+    "name": "sort-numeric-down-alt",
+    "label": "sort-numeric-down-alt"
+  },
+  {
+    "name": "sort-numeric-up",
+    "label": "sort-numeric-up"
+  },
+  {
+    "name": "sort-numeric-up-alt",
+    "label": "sort-numeric-up-alt"
+  },
+  {
+    "name": "sort-up",
+    "label": "sort-up"
+  },
+  {
+    "name": "sort-up-alt",
+    "label": "sort-up-alt"
+  },
+  {
+    "name": "soundwave",
+    "label": "soundwave"
+  },
+  {
+    "name": "sourceforge",
+    "label": "sourceforge"
+  },
+  {
+    "name": "speaker",
+    "label": "speaker"
+  },
+  {
+    "name": "speaker-fill",
+    "label": "speaker-fill"
+  },
+  {
+    "name": "speedometer",
+    "label": "speedometer"
+  },
+  {
+    "name": "speedometer2",
+    "label": "speedometer2"
+  },
+  {
+    "name": "spellcheck",
+    "label": "spellcheck"
+  },
+  {
+    "name": "spotify",
+    "label": "spotify"
+  },
+  {
+    "name": "square",
+    "label": "square"
+  },
+  {
+    "name": "square-fill",
+    "label": "square-fill"
+  },
+  {
+    "name": "square-half",
+    "label": "square-half"
+  },
+  {
+    "name": "stack",
+    "label": "stack"
+  },
+  {
+    "name": "stack-overflow",
+    "label": "stack-overflow"
+  },
+  {
+    "name": "star",
+    "label": "star"
+  },
+  {
+    "name": "star-fill",
+    "label": "star-fill"
+  },
+  {
+    "name": "star-half",
+    "label": "star-half"
+  },
+  {
+    "name": "stars",
+    "label": "stars"
+  },
+  {
+    "name": "steam",
+    "label": "steam"
+  },
+  {
+    "name": "stickies",
+    "label": "stickies"
+  },
+  {
+    "name": "stickies-fill",
+    "label": "stickies-fill"
+  },
+  {
+    "name": "sticky",
+    "label": "sticky"
+  },
+  {
+    "name": "sticky-fill",
+    "label": "sticky-fill"
+  },
+  {
+    "name": "stop",
+    "label": "stop"
+  },
+  {
+    "name": "stop-btn",
+    "label": "stop-btn"
+  },
+  {
+    "name": "stop-btn-fill",
+    "label": "stop-btn-fill"
+  },
+  {
+    "name": "stop-circle",
+    "label": "stop-circle"
+  },
+  {
+    "name": "stop-circle-fill",
+    "label": "stop-circle-fill"
+  },
+  {
+    "name": "stop-fill",
+    "label": "stop-fill"
+  },
+  {
+    "name": "stoplights",
+    "label": "stoplights"
+  },
+  {
+    "name": "stoplights-fill",
+    "label": "stoplights-fill"
+  },
+  {
+    "name": "stopwatch",
+    "label": "stopwatch"
+  },
+  {
+    "name": "stopwatch-fill",
+    "label": "stopwatch-fill"
+  },
+  {
+    "name": "strava",
+    "label": "strava"
+  },
+  {
+    "name": "stripe",
+    "label": "stripe"
+  },
+  {
+    "name": "subscript",
+    "label": "subscript"
+  },
+  {
+    "name": "substack",
+    "label": "substack"
+  },
+  {
+    "name": "subtract",
+    "label": "subtract"
+  },
+  {
+    "name": "suit-club",
+    "label": "suit-club"
+  },
+  {
+    "name": "suit-club-fill",
+    "label": "suit-club-fill"
+  },
+  {
+    "name": "suit-diamond",
+    "label": "suit-diamond"
+  },
+  {
+    "name": "suit-diamond-fill",
+    "label": "suit-diamond-fill"
+  },
+  {
+    "name": "suit-heart",
+    "label": "suit-heart"
+  },
+  {
+    "name": "suit-heart-fill",
+    "label": "suit-heart-fill"
+  },
+  {
+    "name": "suit-spade",
+    "label": "suit-spade"
+  },
+  {
+    "name": "suit-spade-fill",
+    "label": "suit-spade-fill"
+  },
+  {
+    "name": "suitcase",
+    "label": "suitcase"
+  },
+  {
+    "name": "suitcase-fill",
+    "label": "suitcase-fill"
+  },
+  {
+    "name": "suitcase-lg",
+    "label": "suitcase-lg"
+  },
+  {
+    "name": "suitcase-lg-fill",
+    "label": "suitcase-lg-fill"
+  },
+  {
+    "name": "suitcase2",
+    "label": "suitcase2"
+  },
+  {
+    "name": "suitcase2-fill",
+    "label": "suitcase2-fill"
+  },
+  {
+    "name": "sun",
+    "label": "sun"
+  },
+  {
+    "name": "sun-fill",
+    "label": "sun-fill"
+  },
+  {
+    "name": "sunglasses",
+    "label": "sunglasses"
+  },
+  {
+    "name": "sunrise",
+    "label": "sunrise"
+  },
+  {
+    "name": "sunrise-fill",
+    "label": "sunrise-fill"
+  },
+  {
+    "name": "sunset",
+    "label": "sunset"
+  },
+  {
+    "name": "sunset-fill",
+    "label": "sunset-fill"
+  },
+  {
+    "name": "superscript",
+    "label": "superscript"
+  },
+  {
+    "name": "symmetry-horizontal",
+    "label": "symmetry-horizontal"
+  },
+  {
+    "name": "symmetry-vertical",
+    "label": "symmetry-vertical"
+  },
+  {
+    "name": "table",
+    "label": "table"
+  },
+  {
+    "name": "tablet",
+    "label": "tablet"
+  },
+  {
+    "name": "tablet-fill",
+    "label": "tablet-fill"
+  },
+  {
+    "name": "tablet-landscape",
+    "label": "tablet-landscape"
+  },
+  {
+    "name": "tablet-landscape-fill",
+    "label": "tablet-landscape-fill"
+  },
+  {
+    "name": "tag",
+    "label": "tag"
+  },
+  {
+    "name": "tag-fill",
+    "label": "tag-fill"
+  },
+  {
+    "name": "tags",
+    "label": "tags"
+  },
+  {
+    "name": "tags-fill",
+    "label": "tags-fill"
+  },
+  {
+    "name": "taxi-front",
+    "label": "taxi-front"
+  },
+  {
+    "name": "taxi-front-fill",
+    "label": "taxi-front-fill"
+  },
+  {
+    "name": "telegram",
+    "label": "telegram"
+  },
+  {
+    "name": "telephone",
+    "label": "telephone"
+  },
+  {
+    "name": "telephone-fill",
+    "label": "telephone-fill"
+  },
+  {
+    "name": "telephone-forward",
+    "label": "telephone-forward"
+  },
+  {
+    "name": "telephone-forward-fill",
+    "label": "telephone-forward-fill"
+  },
+  {
+    "name": "telephone-inbound",
+    "label": "telephone-inbound"
+  },
+  {
+    "name": "telephone-inbound-fill",
+    "label": "telephone-inbound-fill"
+  },
+  {
+    "name": "telephone-minus",
+    "label": "telephone-minus"
+  },
+  {
+    "name": "telephone-minus-fill",
+    "label": "telephone-minus-fill"
+  },
+  {
+    "name": "telephone-outbound",
+    "label": "telephone-outbound"
+  },
+  {
+    "name": "telephone-outbound-fill",
+    "label": "telephone-outbound-fill"
+  },
+  {
+    "name": "telephone-plus",
+    "label": "telephone-plus"
+  },
+  {
+    "name": "telephone-plus-fill",
+    "label": "telephone-plus-fill"
+  },
+  {
+    "name": "telephone-x",
+    "label": "telephone-x"
+  },
+  {
+    "name": "telephone-x-fill",
+    "label": "telephone-x-fill"
+  },
+  {
+    "name": "tencent-qq",
+    "label": "tencent-qq"
+  },
+  {
+    "name": "terminal",
+    "label": "terminal"
+  },
+  {
+    "name": "terminal-dash",
+    "label": "terminal-dash"
+  },
+  {
+    "name": "terminal-fill",
+    "label": "terminal-fill"
+  },
+  {
+    "name": "terminal-plus",
+    "label": "terminal-plus"
+  },
+  {
+    "name": "terminal-split",
+    "label": "terminal-split"
+  },
+  {
+    "name": "terminal-x",
+    "label": "terminal-x"
+  },
+  {
+    "name": "text-center",
+    "label": "text-center"
+  },
+  {
+    "name": "text-indent-left",
+    "label": "text-indent-left"
+  },
+  {
+    "name": "text-indent-right",
+    "label": "text-indent-right"
+  },
+  {
+    "name": "text-left",
+    "label": "text-left"
+  },
+  {
+    "name": "text-paragraph",
+    "label": "text-paragraph"
+  },
+  {
+    "name": "text-right",
+    "label": "text-right"
+  },
+  {
+    "name": "text-wrap",
+    "label": "text-wrap"
+  },
+  {
+    "name": "textarea",
+    "label": "textarea"
+  },
+  {
+    "name": "textarea-resize",
+    "label": "textarea-resize"
+  },
+  {
+    "name": "textarea-t",
+    "label": "textarea-t"
+  },
+  {
+    "name": "thermometer",
+    "label": "thermometer"
+  },
+  {
+    "name": "thermometer-half",
+    "label": "thermometer-half"
+  },
+  {
+    "name": "thermometer-high",
+    "label": "thermometer-high"
+  },
+  {
+    "name": "thermometer-low",
+    "label": "thermometer-low"
+  },
+  {
+    "name": "thermometer-snow",
+    "label": "thermometer-snow"
+  },
+  {
+    "name": "thermometer-sun",
+    "label": "thermometer-sun"
+  },
+  {
+    "name": "threads",
+    "label": "threads"
+  },
+  {
+    "name": "threads-fill",
+    "label": "threads-fill"
+  },
+  {
+    "name": "three-dots",
+    "label": "three-dots"
+  },
+  {
+    "name": "three-dots-vertical",
+    "label": "three-dots-vertical"
+  },
+  {
+    "name": "thunderbolt",
+    "label": "thunderbolt"
+  },
+  {
+    "name": "thunderbolt-fill",
+    "label": "thunderbolt-fill"
+  },
+  {
+    "name": "ticket",
+    "label": "ticket"
+  },
+  {
+    "name": "ticket-detailed",
+    "label": "ticket-detailed"
+  },
+  {
+    "name": "ticket-detailed-fill",
+    "label": "ticket-detailed-fill"
+  },
+  {
+    "name": "ticket-fill",
+    "label": "ticket-fill"
+  },
+  {
+    "name": "ticket-perforated",
+    "label": "ticket-perforated"
+  },
+  {
+    "name": "ticket-perforated-fill",
+    "label": "ticket-perforated-fill"
+  },
+  {
+    "name": "tiktok",
+    "label": "tiktok"
+  },
+  {
+    "name": "toggle-off",
+    "label": "toggle-off"
+  },
+  {
+    "name": "toggle-on",
+    "label": "toggle-on"
+  },
+  {
+    "name": "toggle2-off",
+    "label": "toggle2-off"
+  },
+  {
+    "name": "toggle2-on",
+    "label": "toggle2-on"
+  },
+  {
+    "name": "toggles",
+    "label": "toggles"
+  },
+  {
+    "name": "toggles2",
+    "label": "toggles2"
+  },
+  {
+    "name": "tools",
+    "label": "tools"
+  },
+  {
+    "name": "tornado",
+    "label": "tornado"
+  },
+  {
+    "name": "train-freight-front",
+    "label": "train-freight-front"
+  },
+  {
+    "name": "train-freight-front-fill",
+    "label": "train-freight-front-fill"
+  },
+  {
+    "name": "train-front",
+    "label": "train-front"
+  },
+  {
+    "name": "train-front-fill",
+    "label": "train-front-fill"
+  },
+  {
+    "name": "train-lightrail-front",
+    "label": "train-lightrail-front"
+  },
+  {
+    "name": "train-lightrail-front-fill",
+    "label": "train-lightrail-front-fill"
+  },
+  {
+    "name": "translate",
+    "label": "translate"
+  },
+  {
+    "name": "transparency",
+    "label": "transparency"
+  },
+  {
+    "name": "trash",
+    "label": "trash"
+  },
+  {
+    "name": "trash-fill",
+    "label": "trash-fill"
+  },
+  {
+    "name": "trash2",
+    "label": "trash2"
+  },
+  {
+    "name": "trash2-fill",
+    "label": "trash2-fill"
+  },
+  {
+    "name": "trash3",
+    "label": "trash3"
+  },
+  {
+    "name": "trash3-fill",
+    "label": "trash3-fill"
+  },
+  {
+    "name": "tree",
+    "label": "tree"
+  },
+  {
+    "name": "tree-fill",
+    "label": "tree-fill"
+  },
+  {
+    "name": "trello",
+    "label": "trello"
+  },
+  {
+    "name": "triangle",
+    "label": "triangle"
+  },
+  {
+    "name": "triangle-fill",
+    "label": "triangle-fill"
+  },
+  {
+    "name": "triangle-half",
+    "label": "triangle-half"
+  },
+  {
+    "name": "trophy",
+    "label": "trophy"
+  },
+  {
+    "name": "trophy-fill",
+    "label": "trophy-fill"
+  },
+  {
+    "name": "tropical-storm",
+    "label": "tropical-storm"
+  },
+  {
+    "name": "truck",
+    "label": "truck"
+  },
+  {
+    "name": "truck-flatbed",
+    "label": "truck-flatbed"
+  },
+  {
+    "name": "truck-front",
+    "label": "truck-front"
+  },
+  {
+    "name": "truck-front-fill",
+    "label": "truck-front-fill"
+  },
+  {
+    "name": "tsunami",
+    "label": "tsunami"
+  },
+  {
+    "name": "tv",
+    "label": "tv"
+  },
+  {
+    "name": "tv-fill",
+    "label": "tv-fill"
+  },
+  {
+    "name": "twitch",
+    "label": "twitch"
+  },
+  {
+    "name": "twitter",
+    "label": "twitter"
+  },
+  {
+    "name": "twitter-x",
+    "label": "twitter-x"
+  },
+  {
+    "name": "type",
+    "label": "type"
+  },
+  {
+    "name": "type-bold",
+    "label": "type-bold"
+  },
+  {
+    "name": "type-h1",
+    "label": "type-h1"
+  },
+  {
+    "name": "type-h2",
+    "label": "type-h2"
+  },
+  {
+    "name": "type-h3",
+    "label": "type-h3"
+  },
+  {
+    "name": "type-h4",
+    "label": "type-h4"
+  },
+  {
+    "name": "type-h5",
+    "label": "type-h5"
+  },
+  {
+    "name": "type-h6",
+    "label": "type-h6"
+  },
+  {
+    "name": "type-italic",
+    "label": "type-italic"
+  },
+  {
+    "name": "type-strikethrough",
+    "label": "type-strikethrough"
+  },
+  {
+    "name": "type-underline",
+    "label": "type-underline"
+  },
+  {
+    "name": "ubuntu",
+    "label": "ubuntu"
+  },
+  {
+    "name": "ui-checks",
+    "label": "ui-checks"
+  },
+  {
+    "name": "ui-checks-grid",
+    "label": "ui-checks-grid"
+  },
+  {
+    "name": "ui-radios",
+    "label": "ui-radios"
+  },
+  {
+    "name": "ui-radios-grid",
+    "label": "ui-radios-grid"
+  },
+  {
+    "name": "umbrella",
+    "label": "umbrella"
+  },
+  {
+    "name": "umbrella-fill",
+    "label": "umbrella-fill"
+  },
+  {
+    "name": "unindent",
+    "label": "unindent"
+  },
+  {
+    "name": "union",
+    "label": "union"
+  },
+  {
+    "name": "unity",
+    "label": "unity"
+  },
+  {
+    "name": "universal-access",
+    "label": "universal-access"
+  },
+  {
+    "name": "universal-access-circle",
+    "label": "universal-access-circle"
+  },
+  {
+    "name": "unlock",
+    "label": "unlock"
+  },
+  {
+    "name": "unlock-fill",
+    "label": "unlock-fill"
+  },
+  {
+    "name": "upc",
+    "label": "upc"
+  },
+  {
+    "name": "upc-scan",
+    "label": "upc-scan"
+  },
+  {
+    "name": "upload",
+    "label": "upload"
+  },
+  {
+    "name": "usb",
+    "label": "usb"
+  },
+  {
+    "name": "usb-c",
+    "label": "usb-c"
+  },
+  {
+    "name": "usb-c-fill",
+    "label": "usb-c-fill"
+  },
+  {
+    "name": "usb-drive",
+    "label": "usb-drive"
+  },
+  {
+    "name": "usb-drive-fill",
+    "label": "usb-drive-fill"
+  },
+  {
+    "name": "usb-fill",
+    "label": "usb-fill"
+  },
+  {
+    "name": "usb-micro",
+    "label": "usb-micro"
+  },
+  {
+    "name": "usb-micro-fill",
+    "label": "usb-micro-fill"
+  },
+  {
+    "name": "usb-mini",
+    "label": "usb-mini"
+  },
+  {
+    "name": "usb-mini-fill",
+    "label": "usb-mini-fill"
+  },
+  {
+    "name": "usb-plug",
+    "label": "usb-plug"
+  },
+  {
+    "name": "usb-plug-fill",
+    "label": "usb-plug-fill"
+  },
+  {
+    "name": "usb-symbol",
+    "label": "usb-symbol"
+  },
+  {
+    "name": "valentine",
+    "label": "valentine"
+  },
+  {
+    "name": "valentine2",
+    "label": "valentine2"
+  },
+  {
+    "name": "vector-pen",
+    "label": "vector-pen"
+  },
+  {
+    "name": "view-list",
+    "label": "view-list"
+  },
+  {
+    "name": "view-stacked",
+    "label": "view-stacked"
+  },
+  {
+    "name": "vignette",
+    "label": "vignette"
+  },
+  {
+    "name": "vimeo",
+    "label": "vimeo"
+  },
+  {
+    "name": "vinyl",
+    "label": "vinyl"
+  },
+  {
+    "name": "vinyl-fill",
+    "label": "vinyl-fill"
+  },
+  {
+    "name": "virus",
+    "label": "virus"
+  },
+  {
+    "name": "virus2",
+    "label": "virus2"
+  },
+  {
+    "name": "voicemail",
+    "label": "voicemail"
+  },
+  {
+    "name": "volume-down",
+    "label": "volume-down"
+  },
+  {
+    "name": "volume-down-fill",
+    "label": "volume-down-fill"
+  },
+  {
+    "name": "volume-mute",
+    "label": "volume-mute"
+  },
+  {
+    "name": "volume-mute-fill",
+    "label": "volume-mute-fill"
+  },
+  {
+    "name": "volume-off",
+    "label": "volume-off"
+  },
+  {
+    "name": "volume-off-fill",
+    "label": "volume-off-fill"
+  },
+  {
+    "name": "volume-up",
+    "label": "volume-up"
+  },
+  {
+    "name": "volume-up-fill",
+    "label": "volume-up-fill"
+  },
+  {
+    "name": "vr",
+    "label": "vr"
+  },
+  {
+    "name": "wallet",
+    "label": "wallet"
+  },
+  {
+    "name": "wallet-fill",
+    "label": "wallet-fill"
+  },
+  {
+    "name": "wallet2",
+    "label": "wallet2"
+  },
+  {
+    "name": "watch",
+    "label": "watch"
+  },
+  {
+    "name": "water",
+    "label": "water"
+  },
+  {
+    "name": "webcam",
+    "label": "webcam"
+  },
+  {
+    "name": "webcam-fill",
+    "label": "webcam-fill"
+  },
+  {
+    "name": "wechat",
+    "label": "wechat"
+  },
+  {
+    "name": "whatsapp",
+    "label": "whatsapp"
+  },
+  {
+    "name": "wifi",
+    "label": "wifi"
+  },
+  {
+    "name": "wifi-1",
+    "label": "wifi-1"
+  },
+  {
+    "name": "wifi-2",
+    "label": "wifi-2"
+  },
+  {
+    "name": "wifi-off",
+    "label": "wifi-off"
+  },
+  {
+    "name": "wikipedia",
+    "label": "wikipedia"
+  },
+  {
+    "name": "wind",
+    "label": "wind"
+  },
+  {
+    "name": "window",
+    "label": "window"
+  },
+  {
+    "name": "window-dash",
+    "label": "window-dash"
+  },
+  {
+    "name": "window-desktop",
+    "label": "window-desktop"
+  },
+  {
+    "name": "window-dock",
+    "label": "window-dock"
+  },
+  {
+    "name": "window-fullscreen",
+    "label": "window-fullscreen"
+  },
+  {
+    "name": "window-plus",
+    "label": "window-plus"
+  },
+  {
+    "name": "window-sidebar",
+    "label": "window-sidebar"
+  },
+  {
+    "name": "window-split",
+    "label": "window-split"
+  },
+  {
+    "name": "window-stack",
+    "label": "window-stack"
+  },
+  {
+    "name": "window-x",
+    "label": "window-x"
+  },
+  {
+    "name": "windows",
+    "label": "windows"
+  },
+  {
+    "name": "wordpress",
+    "label": "wordpress"
+  },
+  {
+    "name": "wrench",
+    "label": "wrench"
+  },
+  {
+    "name": "wrench-adjustable",
+    "label": "wrench-adjustable"
+  },
+  {
+    "name": "wrench-adjustable-circle",
+    "label": "wrench-adjustable-circle"
+  },
+  {
+    "name": "wrench-adjustable-circle-fill",
+    "label": "wrench-adjustable-circle-fill"
+  },
+  {
+    "name": "x",
+    "label": "x"
+  },
+  {
+    "name": "x-circle",
+    "label": "x-circle"
+  },
+  {
+    "name": "x-circle-fill",
+    "label": "x-circle-fill"
+  },
+  {
+    "name": "x-diamond",
+    "label": "x-diamond"
+  },
+  {
+    "name": "x-diamond-fill",
+    "label": "x-diamond-fill"
+  },
+  {
+    "name": "x-lg",
+    "label": "x-lg"
+  },
+  {
+    "name": "x-octagon",
+    "label": "x-octagon"
+  },
+  {
+    "name": "x-octagon-fill",
+    "label": "x-octagon-fill"
+  },
+  {
+    "name": "x-square",
+    "label": "x-square"
+  },
+  {
+    "name": "x-square-fill",
+    "label": "x-square-fill"
+  },
+  {
+    "name": "xbox",
+    "label": "xbox"
+  },
+  {
+    "name": "yelp",
+    "label": "yelp"
+  },
+  {
+    "name": "yin-yang",
+    "label": "yin-yang"
+  },
+  {
+    "name": "youtube",
+    "label": "youtube"
+  },
+  {
+    "name": "zoom-in",
+    "label": "zoom-in"
+  },
+  {
+    "name": "zoom-out",
+    "label": "zoom-out"
+  }
+]

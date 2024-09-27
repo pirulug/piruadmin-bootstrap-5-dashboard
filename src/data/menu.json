@@ -169,6 +169,11 @@
         "title": "Font Awesome",
         "path": "icons-awesome",
         "link": "icons-awesome"
+      },
+      {
+        "title": "Bootstrap Icons",
+        "path": "icons-bootstrap",
+        "link": "icons-bootstrap"
       }
     ]
   },
