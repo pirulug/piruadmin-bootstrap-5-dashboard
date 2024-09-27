@@ -1,0 +1,10252 @@
+[
+  {
+    "name": "0",
+    "label": "0",
+    "type": "solid"
+  },
+  {
+    "name": "1",
+    "label": "1",
+    "type": "solid"
+  },
+  {
+    "name": "2",
+    "label": "2",
+    "type": "solid"
+  },
+  {
+    "name": "3",
+    "label": "3",
+    "type": "solid"
+  },
+  {
+    "name": "4",
+    "label": "4",
+    "type": "solid"
+  },
+  {
+    "name": "42-group",
+    "label": "42-group",
+    "type": "brands"
+  },
+  {
+    "name": "5",
+    "label": "5",
+    "type": "solid"
+  },
+  {
+    "name": "500px",
+    "label": "500px",
+    "type": "brands"
+  },
+  {
+    "name": "6",
+    "label": "6",
+    "type": "solid"
+  },
+  {
+    "name": "7",
+    "label": "7",
+    "type": "solid"
+  },
+  {
+    "name": "8",
+    "label": "8",
+    "type": "solid"
+  },
+  {
+    "name": "9",
+    "label": "9",
+    "type": "solid"
+  },
+  {
+    "name": "a",
+    "label": "a",
+    "type": "solid"
+  },
+  {
+    "name": "accessible-icon",
+    "label": "accessible-icon",
+    "type": "brands"
+  },
+  {
+    "name": "accusoft",
+    "label": "accusoft",
+    "type": "brands"
+  },
+  {
+    "name": "address-book",
+    "label": "address-book",
+    "type": "solid"
+  },
+  {
+    "name": "address-book",
+    "label": "address-book",
+    "type": "regular"
+  },
+  {
+    "name": "address-card",
+    "label": "address-card",
+    "type": "solid"
+  },
+  {
+    "name": "address-card",
+    "label": "address-card",
+    "type": "regular"
+  },
+  {
+    "name": "adn",
+    "label": "adn",
+    "type": "brands"
+  },
+  {
+    "name": "adversal",
+    "label": "adversal",
+    "type": "brands"
+  },
+  {
+    "name": "affiliatetheme",
+    "label": "affiliatetheme",
+    "type": "brands"
+  },
+  {
+    "name": "airbnb",
+    "label": "airbnb",
+    "type": "brands"
+  },
+  {
+    "name": "algolia",
+    "label": "algolia",
+    "type": "brands"
+  },
+  {
+    "name": "align-center",
+    "label": "align-center",
+    "type": "solid"
+  },
+  {
+    "name": "align-justify",
+    "label": "align-justify",
+    "type": "solid"
+  },
+  {
+    "name": "align-left",
+    "label": "align-left",
+    "type": "solid"
+  },
+  {
+    "name": "align-right",
+    "label": "align-right",
+    "type": "solid"
+  },
+  {
+    "name": "alipay",
+    "label": "alipay",
+    "type": "brands"
+  },
+  {
+    "name": "amazon",
+    "label": "amazon",
+    "type": "brands"
+  },
+  {
+    "name": "amazon-pay",
+    "label": "amazon-pay",
+    "type": "brands"
+  },
+  {
+    "name": "amilia",
+    "label": "amilia",
+    "type": "brands"
+  },
+  {
+    "name": "anchor",
+    "label": "anchor",
+    "type": "solid"
+  },
+  {
+    "name": "anchor-circle-check",
+    "label": "anchor-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "anchor-circle-exclamation",
+    "label": "anchor-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "anchor-circle-xmark",
+    "label": "anchor-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "anchor-lock",
+    "label": "anchor-lock",
+    "type": "solid"
+  },
+  {
+    "name": "android",
+    "label": "android",
+    "type": "brands"
+  },
+  {
+    "name": "angellist",
+    "label": "angellist",
+    "type": "brands"
+  },
+  {
+    "name": "angle-down",
+    "label": "angle-down",
+    "type": "solid"
+  },
+  {
+    "name": "angle-left",
+    "label": "angle-left",
+    "type": "solid"
+  },
+  {
+    "name": "angle-right",
+    "label": "angle-right",
+    "type": "solid"
+  },
+  {
+    "name": "angle-up",
+    "label": "angle-up",
+    "type": "solid"
+  },
+  {
+    "name": "angles-down",
+    "label": "angles-down",
+    "type": "solid"
+  },
+  {
+    "name": "angles-left",
+    "label": "angles-left",
+    "type": "solid"
+  },
+  {
+    "name": "angles-right",
+    "label": "angles-right",
+    "type": "solid"
+  },
+  {
+    "name": "angles-up",
+    "label": "angles-up",
+    "type": "solid"
+  },
+  {
+    "name": "angrycreative",
+    "label": "angrycreative",
+    "type": "brands"
+  },
+  {
+    "name": "angular",
+    "label": "angular",
+    "type": "brands"
+  },
+  {
+    "name": "ankh",
+    "label": "ankh",
+    "type": "solid"
+  },
+  {
+    "name": "app-store",
+    "label": "app-store",
+    "type": "brands"
+  },
+  {
+    "name": "app-store-ios",
+    "label": "app-store-ios",
+    "type": "brands"
+  },
+  {
+    "name": "apper",
+    "label": "apper",
+    "type": "brands"
+  },
+  {
+    "name": "apple",
+    "label": "apple",
+    "type": "brands"
+  },
+  {
+    "name": "apple-pay",
+    "label": "apple-pay",
+    "type": "brands"
+  },
+  {
+    "name": "apple-whole",
+    "label": "apple-whole",
+    "type": "solid"
+  },
+  {
+    "name": "archway",
+    "label": "archway",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down",
+    "label": "arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-1-9",
+    "label": "arrow-down-1-9",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-9-1",
+    "label": "arrow-down-9-1",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-a-z",
+    "label": "arrow-down-a-z",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-long",
+    "label": "arrow-down-long",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-short-wide",
+    "label": "arrow-down-short-wide",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-up-across-line",
+    "label": "arrow-down-up-across-line",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-up-lock",
+    "label": "arrow-down-up-lock",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-wide-short",
+    "label": "arrow-down-wide-short",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-down-z-a",
+    "label": "arrow-down-z-a",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-left",
+    "label": "arrow-left",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-left-long",
+    "label": "arrow-left-long",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-pointer",
+    "label": "arrow-pointer",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right",
+    "label": "arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right-arrow-left",
+    "label": "arrow-right-arrow-left",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right-from-bracket",
+    "label": "arrow-right-from-bracket",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right-long",
+    "label": "arrow-right-long",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right-to-bracket",
+    "label": "arrow-right-to-bracket",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-right-to-city",
+    "label": "arrow-right-to-city",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-rotate-left",
+    "label": "arrow-rotate-left",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-rotate-right",
+    "label": "arrow-rotate-right",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-trend-down",
+    "label": "arrow-trend-down",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-trend-up",
+    "label": "arrow-trend-up",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-turn-down",
+    "label": "arrow-turn-down",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-turn-up",
+    "label": "arrow-turn-up",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up",
+    "label": "arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-1-9",
+    "label": "arrow-up-1-9",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-9-1",
+    "label": "arrow-up-9-1",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-a-z",
+    "label": "arrow-up-a-z",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-from-bracket",
+    "label": "arrow-up-from-bracket",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-from-ground-water",
+    "label": "arrow-up-from-ground-water",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-from-water-pump",
+    "label": "arrow-up-from-water-pump",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-long",
+    "label": "arrow-up-long",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-right-dots",
+    "label": "arrow-up-right-dots",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-right-from-square",
+    "label": "arrow-up-right-from-square",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-short-wide",
+    "label": "arrow-up-short-wide",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-wide-short",
+    "label": "arrow-up-wide-short",
+    "type": "solid"
+  },
+  {
+    "name": "arrow-up-z-a",
+    "label": "arrow-up-z-a",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-down-to-line",
+    "label": "arrows-down-to-line",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-down-to-people",
+    "label": "arrows-down-to-people",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-left-right",
+    "label": "arrows-left-right",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-left-right-to-line",
+    "label": "arrows-left-right-to-line",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-rotate",
+    "label": "arrows-rotate",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-spin",
+    "label": "arrows-spin",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-split-up-and-left",
+    "label": "arrows-split-up-and-left",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-to-circle",
+    "label": "arrows-to-circle",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-to-dot",
+    "label": "arrows-to-dot",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-to-eye",
+    "label": "arrows-to-eye",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-turn-right",
+    "label": "arrows-turn-right",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-turn-to-dots",
+    "label": "arrows-turn-to-dots",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-up-down",
+    "label": "arrows-up-down",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-up-down-left-right",
+    "label": "arrows-up-down-left-right",
+    "type": "solid"
+  },
+  {
+    "name": "arrows-up-to-line",
+    "label": "arrows-up-to-line",
+    "type": "solid"
+  },
+  {
+    "name": "artstation",
+    "label": "artstation",
+    "type": "brands"
+  },
+  {
+    "name": "asterisk",
+    "label": "asterisk",
+    "type": "solid"
+  },
+  {
+    "name": "asymmetrik",
+    "label": "asymmetrik",
+    "type": "brands"
+  },
+  {
+    "name": "at",
+    "label": "at",
+    "type": "solid"
+  },
+  {
+    "name": "atlassian",
+    "label": "atlassian",
+    "type": "brands"
+  },
+  {
+    "name": "atom",
+    "label": "atom",
+    "type": "solid"
+  },
+  {
+    "name": "audible",
+    "label": "audible",
+    "type": "brands"
+  },
+  {
+    "name": "audio-description",
+    "label": "audio-description",
+    "type": "solid"
+  },
+  {
+    "name": "austral-sign",
+    "label": "austral-sign",
+    "type": "solid"
+  },
+  {
+    "name": "autoprefixer",
+    "label": "autoprefixer",
+    "type": "brands"
+  },
+  {
+    "name": "avianex",
+    "label": "avianex",
+    "type": "brands"
+  },
+  {
+    "name": "aviato",
+    "label": "aviato",
+    "type": "brands"
+  },
+  {
+    "name": "award",
+    "label": "award",
+    "type": "solid"
+  },
+  {
+    "name": "aws",
+    "label": "aws",
+    "type": "brands"
+  },
+  {
+    "name": "b",
+    "label": "b",
+    "type": "solid"
+  },
+  {
+    "name": "baby",
+    "label": "baby",
+    "type": "solid"
+  },
+  {
+    "name": "baby-carriage",
+    "label": "baby-carriage",
+    "type": "solid"
+  },
+  {
+    "name": "backward",
+    "label": "backward",
+    "type": "solid"
+  },
+  {
+    "name": "backward-fast",
+    "label": "backward-fast",
+    "type": "solid"
+  },
+  {
+    "name": "backward-step",
+    "label": "backward-step",
+    "type": "solid"
+  },
+  {
+    "name": "bacon",
+    "label": "bacon",
+    "type": "solid"
+  },
+  {
+    "name": "bacteria",
+    "label": "bacteria",
+    "type": "solid"
+  },
+  {
+    "name": "bacterium",
+    "label": "bacterium",
+    "type": "solid"
+  },
+  {
+    "name": "bag-shopping",
+    "label": "bag-shopping",
+    "type": "solid"
+  },
+  {
+    "name": "bahai",
+    "label": "bahai",
+    "type": "solid"
+  },
+  {
+    "name": "baht-sign",
+    "label": "baht-sign",
+    "type": "solid"
+  },
+  {
+    "name": "ban",
+    "label": "ban",
+    "type": "solid"
+  },
+  {
+    "name": "ban-smoking",
+    "label": "ban-smoking",
+    "type": "solid"
+  },
+  {
+    "name": "bandage",
+    "label": "bandage",
+    "type": "solid"
+  },
+  {
+    "name": "bandcamp",
+    "label": "bandcamp",
+    "type": "brands"
+  },
+  {
+    "name": "bangladeshi-taka-sign",
+    "label": "bangladeshi-taka-sign",
+    "type": "solid"
+  },
+  {
+    "name": "barcode",
+    "label": "barcode",
+    "type": "solid"
+  },
+  {
+    "name": "bars",
+    "label": "bars",
+    "type": "solid"
+  },
+  {
+    "name": "bars-progress",
+    "label": "bars-progress",
+    "type": "solid"
+  },
+  {
+    "name": "bars-staggered",
+    "label": "bars-staggered",
+    "type": "solid"
+  },
+  {
+    "name": "baseball",
+    "label": "baseball",
+    "type": "solid"
+  },
+  {
+    "name": "baseball-bat-ball",
+    "label": "baseball-bat-ball",
+    "type": "solid"
+  },
+  {
+    "name": "basket-shopping",
+    "label": "basket-shopping",
+    "type": "solid"
+  },
+  {
+    "name": "basketball",
+    "label": "basketball",
+    "type": "solid"
+  },
+  {
+    "name": "bath",
+    "label": "bath",
+    "type": "solid"
+  },
+  {
+    "name": "battery-empty",
+    "label": "battery-empty",
+    "type": "solid"
+  },
+  {
+    "name": "battery-full",
+    "label": "battery-full",
+    "type": "solid"
+  },
+  {
+    "name": "battery-half",
+    "label": "battery-half",
+    "type": "solid"
+  },
+  {
+    "name": "battery-quarter",
+    "label": "battery-quarter",
+    "type": "solid"
+  },
+  {
+    "name": "battery-three-quarters",
+    "label": "battery-three-quarters",
+    "type": "solid"
+  },
+  {
+    "name": "battle-net",
+    "label": "battle-net",
+    "type": "brands"
+  },
+  {
+    "name": "bed",
+    "label": "bed",
+    "type": "solid"
+  },
+  {
+    "name": "bed-pulse",
+    "label": "bed-pulse",
+    "type": "solid"
+  },
+  {
+    "name": "beer-mug-empty",
+    "label": "beer-mug-empty",
+    "type": "solid"
+  },
+  {
+    "name": "behance",
+    "label": "behance",
+    "type": "brands"
+  },
+  {
+    "name": "bell",
+    "label": "bell",
+    "type": "solid"
+  },
+  {
+    "name": "bell",
+    "label": "bell",
+    "type": "regular"
+  },
+  {
+    "name": "bell-concierge",
+    "label": "bell-concierge",
+    "type": "solid"
+  },
+  {
+    "name": "bell-slash",
+    "label": "bell-slash",
+    "type": "solid"
+  },
+  {
+    "name": "bell-slash",
+    "label": "bell-slash",
+    "type": "regular"
+  },
+  {
+    "name": "bezier-curve",
+    "label": "bezier-curve",
+    "type": "solid"
+  },
+  {
+    "name": "bicycle",
+    "label": "bicycle",
+    "type": "solid"
+  },
+  {
+    "name": "bilibili",
+    "label": "bilibili",
+    "type": "brands"
+  },
+  {
+    "name": "bimobject",
+    "label": "bimobject",
+    "type": "brands"
+  },
+  {
+    "name": "binoculars",
+    "label": "binoculars",
+    "type": "solid"
+  },
+  {
+    "name": "biohazard",
+    "label": "biohazard",
+    "type": "solid"
+  },
+  {
+    "name": "bitbucket",
+    "label": "bitbucket",
+    "type": "brands"
+  },
+  {
+    "name": "bitcoin",
+    "label": "bitcoin",
+    "type": "brands"
+  },
+  {
+    "name": "bitcoin-sign",
+    "label": "bitcoin-sign",
+    "type": "solid"
+  },
+  {
+    "name": "bity",
+    "label": "bity",
+    "type": "brands"
+  },
+  {
+    "name": "black-tie",
+    "label": "black-tie",
+    "type": "brands"
+  },
+  {
+    "name": "blackberry",
+    "label": "blackberry",
+    "type": "brands"
+  },
+  {
+    "name": "blender",
+    "label": "blender",
+    "type": "solid"
+  },
+  {
+    "name": "blender-phone",
+    "label": "blender-phone",
+    "type": "solid"
+  },
+  {
+    "name": "blog",
+    "label": "blog",
+    "type": "solid"
+  },
+  {
+    "name": "blogger",
+    "label": "blogger",
+    "type": "brands"
+  },
+  {
+    "name": "blogger-b",
+    "label": "blogger-b",
+    "type": "brands"
+  },
+  {
+    "name": "bluesky",
+    "label": "bluesky",
+    "type": "brands"
+  },
+  {
+    "name": "bluetooth",
+    "label": "bluetooth",
+    "type": "brands"
+  },
+  {
+    "name": "bluetooth-b",
+    "label": "bluetooth-b",
+    "type": "brands"
+  },
+  {
+    "name": "bold",
+    "label": "bold",
+    "type": "solid"
+  },
+  {
+    "name": "bolt",
+    "label": "bolt",
+    "type": "solid"
+  },
+  {
+    "name": "bolt-lightning",
+    "label": "bolt-lightning",
+    "type": "solid"
+  },
+  {
+    "name": "bomb",
+    "label": "bomb",
+    "type": "solid"
+  },
+  {
+    "name": "bone",
+    "label": "bone",
+    "type": "solid"
+  },
+  {
+    "name": "bong",
+    "label": "bong",
+    "type": "solid"
+  },
+  {
+    "name": "book",
+    "label": "book",
+    "type": "solid"
+  },
+  {
+    "name": "book-atlas",
+    "label": "book-atlas",
+    "type": "solid"
+  },
+  {
+    "name": "book-bible",
+    "label": "book-bible",
+    "type": "solid"
+  },
+  {
+    "name": "book-bookmark",
+    "label": "book-bookmark",
+    "type": "solid"
+  },
+  {
+    "name": "book-journal-whills",
+    "label": "book-journal-whills",
+    "type": "solid"
+  },
+  {
+    "name": "book-medical",
+    "label": "book-medical",
+    "type": "solid"
+  },
+  {
+    "name": "book-open",
+    "label": "book-open",
+    "type": "solid"
+  },
+  {
+    "name": "book-open-reader",
+    "label": "book-open-reader",
+    "type": "solid"
+  },
+  {
+    "name": "book-quran",
+    "label": "book-quran",
+    "type": "solid"
+  },
+  {
+    "name": "book-skull",
+    "label": "book-skull",
+    "type": "solid"
+  },
+  {
+    "name": "book-tanakh",
+    "label": "book-tanakh",
+    "type": "solid"
+  },
+  {
+    "name": "bookmark",
+    "label": "bookmark",
+    "type": "solid"
+  },
+  {
+    "name": "bookmark",
+    "label": "bookmark",
+    "type": "regular"
+  },
+  {
+    "name": "bootstrap",
+    "label": "bootstrap",
+    "type": "brands"
+  },
+  {
+    "name": "border-all",
+    "label": "border-all",
+    "type": "solid"
+  },
+  {
+    "name": "border-none",
+    "label": "border-none",
+    "type": "solid"
+  },
+  {
+    "name": "border-top-left",
+    "label": "border-top-left",
+    "type": "solid"
+  },
+  {
+    "name": "bore-hole",
+    "label": "bore-hole",
+    "type": "solid"
+  },
+  {
+    "name": "bots",
+    "label": "bots",
+    "type": "brands"
+  },
+  {
+    "name": "bottle-droplet",
+    "label": "bottle-droplet",
+    "type": "solid"
+  },
+  {
+    "name": "bottle-water",
+    "label": "bottle-water",
+    "type": "solid"
+  },
+  {
+    "name": "bowl-food",
+    "label": "bowl-food",
+    "type": "solid"
+  },
+  {
+    "name": "bowl-rice",
+    "label": "bowl-rice",
+    "type": "solid"
+  },
+  {
+    "name": "bowling-ball",
+    "label": "bowling-ball",
+    "type": "solid"
+  },
+  {
+    "name": "box",
+    "label": "box",
+    "type": "solid"
+  },
+  {
+    "name": "box-archive",
+    "label": "box-archive",
+    "type": "solid"
+  },
+  {
+    "name": "box-open",
+    "label": "box-open",
+    "type": "solid"
+  },
+  {
+    "name": "box-tissue",
+    "label": "box-tissue",
+    "type": "solid"
+  },
+  {
+    "name": "boxes-packing",
+    "label": "boxes-packing",
+    "type": "solid"
+  },
+  {
+    "name": "boxes-stacked",
+    "label": "boxes-stacked",
+    "type": "solid"
+  },
+  {
+    "name": "braille",
+    "label": "braille",
+    "type": "solid"
+  },
+  {
+    "name": "brain",
+    "label": "brain",
+    "type": "solid"
+  },
+  {
+    "name": "brave",
+    "label": "brave",
+    "type": "brands"
+  },
+  {
+    "name": "brave-reverse",
+    "label": "brave-reverse",
+    "type": "brands"
+  },
+  {
+    "name": "brazilian-real-sign",
+    "label": "brazilian-real-sign",
+    "type": "solid"
+  },
+  {
+    "name": "bread-slice",
+    "label": "bread-slice",
+    "type": "solid"
+  },
+  {
+    "name": "bridge",
+    "label": "bridge",
+    "type": "solid"
+  },
+  {
+    "name": "bridge-circle-check",
+    "label": "bridge-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "bridge-circle-exclamation",
+    "label": "bridge-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "bridge-circle-xmark",
+    "label": "bridge-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "bridge-lock",
+    "label": "bridge-lock",
+    "type": "solid"
+  },
+  {
+    "name": "bridge-water",
+    "label": "bridge-water",
+    "type": "solid"
+  },
+  {
+    "name": "briefcase",
+    "label": "briefcase",
+    "type": "solid"
+  },
+  {
+    "name": "briefcase-medical",
+    "label": "briefcase-medical",
+    "type": "solid"
+  },
+  {
+    "name": "broom",
+    "label": "broom",
+    "type": "solid"
+  },
+  {
+    "name": "broom-ball",
+    "label": "broom-ball",
+    "type": "solid"
+  },
+  {
+    "name": "brush",
+    "label": "brush",
+    "type": "solid"
+  },
+  {
+    "name": "btc",
+    "label": "btc",
+    "type": "brands"
+  },
+  {
+    "name": "bucket",
+    "label": "bucket",
+    "type": "solid"
+  },
+  {
+    "name": "buffer",
+    "label": "buffer",
+    "type": "brands"
+  },
+  {
+    "name": "bug",
+    "label": "bug",
+    "type": "solid"
+  },
+  {
+    "name": "bug-slash",
+    "label": "bug-slash",
+    "type": "solid"
+  },
+  {
+    "name": "bugs",
+    "label": "bugs",
+    "type": "solid"
+  },
+  {
+    "name": "building",
+    "label": "building",
+    "type": "solid"
+  },
+  {
+    "name": "building",
+    "label": "building",
+    "type": "regular"
+  },
+  {
+    "name": "building-circle-arrow-right",
+    "label": "building-circle-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "building-circle-check",
+    "label": "building-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "building-circle-exclamation",
+    "label": "building-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "building-circle-xmark",
+    "label": "building-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "building-columns",
+    "label": "building-columns",
+    "type": "solid"
+  },
+  {
+    "name": "building-flag",
+    "label": "building-flag",
+    "type": "solid"
+  },
+  {
+    "name": "building-lock",
+    "label": "building-lock",
+    "type": "solid"
+  },
+  {
+    "name": "building-ngo",
+    "label": "building-ngo",
+    "type": "solid"
+  },
+  {
+    "name": "building-shield",
+    "label": "building-shield",
+    "type": "solid"
+  },
+  {
+    "name": "building-un",
+    "label": "building-un",
+    "type": "solid"
+  },
+  {
+    "name": "building-user",
+    "label": "building-user",
+    "type": "solid"
+  },
+  {
+    "name": "building-wheat",
+    "label": "building-wheat",
+    "type": "solid"
+  },
+  {
+    "name": "bullhorn",
+    "label": "bullhorn",
+    "type": "solid"
+  },
+  {
+    "name": "bullseye",
+    "label": "bullseye",
+    "type": "solid"
+  },
+  {
+    "name": "burger",
+    "label": "burger",
+    "type": "solid"
+  },
+  {
+    "name": "buromobelexperte",
+    "label": "buromobelexperte",
+    "type": "brands"
+  },
+  {
+    "name": "burst",
+    "label": "burst",
+    "type": "solid"
+  },
+  {
+    "name": "bus",
+    "label": "bus",
+    "type": "solid"
+  },
+  {
+    "name": "bus-simple",
+    "label": "bus-simple",
+    "type": "solid"
+  },
+  {
+    "name": "business-time",
+    "label": "business-time",
+    "type": "solid"
+  },
+  {
+    "name": "buy-n-large",
+    "label": "buy-n-large",
+    "type": "brands"
+  },
+  {
+    "name": "buysellads",
+    "label": "buysellads",
+    "type": "brands"
+  },
+  {
+    "name": "c",
+    "label": "c",
+    "type": "solid"
+  },
+  {
+    "name": "cable-car",
+    "label": "cable-car",
+    "type": "solid"
+  },
+  {
+    "name": "cake-candles",
+    "label": "cake-candles",
+    "type": "solid"
+  },
+  {
+    "name": "calculator",
+    "label": "calculator",
+    "type": "solid"
+  },
+  {
+    "name": "calendar",
+    "label": "calendar",
+    "type": "solid"
+  },
+  {
+    "name": "calendar",
+    "label": "calendar",
+    "type": "regular"
+  },
+  {
+    "name": "calendar-check",
+    "label": "calendar-check",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-check",
+    "label": "calendar-check",
+    "type": "regular"
+  },
+  {
+    "name": "calendar-day",
+    "label": "calendar-day",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-days",
+    "label": "calendar-days",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-days",
+    "label": "calendar-days",
+    "type": "regular"
+  },
+  {
+    "name": "calendar-minus",
+    "label": "calendar-minus",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-minus",
+    "label": "calendar-minus",
+    "type": "regular"
+  },
+  {
+    "name": "calendar-plus",
+    "label": "calendar-plus",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-plus",
+    "label": "calendar-plus",
+    "type": "regular"
+  },
+  {
+    "name": "calendar-week",
+    "label": "calendar-week",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-xmark",
+    "label": "calendar-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "calendar-xmark",
+    "label": "calendar-xmark",
+    "type": "regular"
+  },
+  {
+    "name": "camera",
+    "label": "camera",
+    "type": "solid"
+  },
+  {
+    "name": "camera-retro",
+    "label": "camera-retro",
+    "type": "solid"
+  },
+  {
+    "name": "camera-rotate",
+    "label": "camera-rotate",
+    "type": "solid"
+  },
+  {
+    "name": "campground",
+    "label": "campground",
+    "type": "solid"
+  },
+  {
+    "name": "canadian-maple-leaf",
+    "label": "canadian-maple-leaf",
+    "type": "brands"
+  },
+  {
+    "name": "candy-cane",
+    "label": "candy-cane",
+    "type": "solid"
+  },
+  {
+    "name": "cannabis",
+    "label": "cannabis",
+    "type": "solid"
+  },
+  {
+    "name": "capsules",
+    "label": "capsules",
+    "type": "solid"
+  },
+  {
+    "name": "car",
+    "label": "car",
+    "type": "solid"
+  },
+  {
+    "name": "car-battery",
+    "label": "car-battery",
+    "type": "solid"
+  },
+  {
+    "name": "car-burst",
+    "label": "car-burst",
+    "type": "solid"
+  },
+  {
+    "name": "car-on",
+    "label": "car-on",
+    "type": "solid"
+  },
+  {
+    "name": "car-rear",
+    "label": "car-rear",
+    "type": "solid"
+  },
+  {
+    "name": "car-side",
+    "label": "car-side",
+    "type": "solid"
+  },
+  {
+    "name": "car-tunnel",
+    "label": "car-tunnel",
+    "type": "solid"
+  },
+  {
+    "name": "caravan",
+    "label": "caravan",
+    "type": "solid"
+  },
+  {
+    "name": "caret-down",
+    "label": "caret-down",
+    "type": "solid"
+  },
+  {
+    "name": "caret-left",
+    "label": "caret-left",
+    "type": "solid"
+  },
+  {
+    "name": "caret-right",
+    "label": "caret-right",
+    "type": "solid"
+  },
+  {
+    "name": "caret-up",
+    "label": "caret-up",
+    "type": "solid"
+  },
+  {
+    "name": "carrot",
+    "label": "carrot",
+    "type": "solid"
+  },
+  {
+    "name": "cart-arrow-down",
+    "label": "cart-arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "cart-flatbed",
+    "label": "cart-flatbed",
+    "type": "solid"
+  },
+  {
+    "name": "cart-flatbed-suitcase",
+    "label": "cart-flatbed-suitcase",
+    "type": "solid"
+  },
+  {
+    "name": "cart-plus",
+    "label": "cart-plus",
+    "type": "solid"
+  },
+  {
+    "name": "cart-shopping",
+    "label": "cart-shopping",
+    "type": "solid"
+  },
+  {
+    "name": "cash-register",
+    "label": "cash-register",
+    "type": "solid"
+  },
+  {
+    "name": "cat",
+    "label": "cat",
+    "type": "solid"
+  },
+  {
+    "name": "cc-amazon-pay",
+    "label": "cc-amazon-pay",
+    "type": "brands"
+  },
+  {
+    "name": "cc-amex",
+    "label": "cc-amex",
+    "type": "brands"
+  },
+  {
+    "name": "cc-apple-pay",
+    "label": "cc-apple-pay",
+    "type": "brands"
+  },
+  {
+    "name": "cc-diners-club",
+    "label": "cc-diners-club",
+    "type": "brands"
+  },
+  {
+    "name": "cc-discover",
+    "label": "cc-discover",
+    "type": "brands"
+  },
+  {
+    "name": "cc-jcb",
+    "label": "cc-jcb",
+    "type": "brands"
+  },
+  {
+    "name": "cc-mastercard",
+    "label": "cc-mastercard",
+    "type": "brands"
+  },
+  {
+    "name": "cc-paypal",
+    "label": "cc-paypal",
+    "type": "brands"
+  },
+  {
+    "name": "cc-stripe",
+    "label": "cc-stripe",
+    "type": "brands"
+  },
+  {
+    "name": "cc-visa",
+    "label": "cc-visa",
+    "type": "brands"
+  },
+  {
+    "name": "cedi-sign",
+    "label": "cedi-sign",
+    "type": "solid"
+  },
+  {
+    "name": "cent-sign",
+    "label": "cent-sign",
+    "type": "solid"
+  },
+  {
+    "name": "centercode",
+    "label": "centercode",
+    "type": "brands"
+  },
+  {
+    "name": "centos",
+    "label": "centos",
+    "type": "brands"
+  },
+  {
+    "name": "certificate",
+    "label": "certificate",
+    "type": "solid"
+  },
+  {
+    "name": "chair",
+    "label": "chair",
+    "type": "solid"
+  },
+  {
+    "name": "chalkboard",
+    "label": "chalkboard",
+    "type": "solid"
+  },
+  {
+    "name": "chalkboard-user",
+    "label": "chalkboard-user",
+    "type": "solid"
+  },
+  {
+    "name": "champagne-glasses",
+    "label": "champagne-glasses",
+    "type": "solid"
+  },
+  {
+    "name": "charging-station",
+    "label": "charging-station",
+    "type": "solid"
+  },
+  {
+    "name": "chart-area",
+    "label": "chart-area",
+    "type": "solid"
+  },
+  {
+    "name": "chart-bar",
+    "label": "chart-bar",
+    "type": "solid"
+  },
+  {
+    "name": "chart-bar",
+    "label": "chart-bar",
+    "type": "regular"
+  },
+  {
+    "name": "chart-column",
+    "label": "chart-column",
+    "type": "solid"
+  },
+  {
+    "name": "chart-gantt",
+    "label": "chart-gantt",
+    "type": "solid"
+  },
+  {
+    "name": "chart-line",
+    "label": "chart-line",
+    "type": "solid"
+  },
+  {
+    "name": "chart-pie",
+    "label": "chart-pie",
+    "type": "solid"
+  },
+  {
+    "name": "chart-simple",
+    "label": "chart-simple",
+    "type": "solid"
+  },
+  {
+    "name": "check",
+    "label": "check",
+    "type": "solid"
+  },
+  {
+    "name": "check-double",
+    "label": "check-double",
+    "type": "solid"
+  },
+  {
+    "name": "check-to-slot",
+    "label": "check-to-slot",
+    "type": "solid"
+  },
+  {
+    "name": "cheese",
+    "label": "cheese",
+    "type": "solid"
+  },
+  {
+    "name": "chess",
+    "label": "chess",
+    "type": "solid"
+  },
+  {
+    "name": "chess-bishop",
+    "label": "chess-bishop",
+    "type": "solid"
+  },
+  {
+    "name": "chess-bishop",
+    "label": "chess-bishop",
+    "type": "regular"
+  },
+  {
+    "name": "chess-board",
+    "label": "chess-board",
+    "type": "solid"
+  },
+  {
+    "name": "chess-king",
+    "label": "chess-king",
+    "type": "solid"
+  },
+  {
+    "name": "chess-king",
+    "label": "chess-king",
+    "type": "regular"
+  },
+  {
+    "name": "chess-knight",
+    "label": "chess-knight",
+    "type": "solid"
+  },
+  {
+    "name": "chess-knight",
+    "label": "chess-knight",
+    "type": "regular"
+  },
+  {
+    "name": "chess-pawn",
+    "label": "chess-pawn",
+    "type": "solid"
+  },
+  {
+    "name": "chess-pawn",
+    "label": "chess-pawn",
+    "type": "regular"
+  },
+  {
+    "name": "chess-queen",
+    "label": "chess-queen",
+    "type": "solid"
+  },
+  {
+    "name": "chess-queen",
+    "label": "chess-queen",
+    "type": "regular"
+  },
+  {
+    "name": "chess-rook",
+    "label": "chess-rook",
+    "type": "solid"
+  },
+  {
+    "name": "chess-rook",
+    "label": "chess-rook",
+    "type": "regular"
+  },
+  {
+    "name": "chevron-down",
+    "label": "chevron-down",
+    "type": "solid"
+  },
+  {
+    "name": "chevron-left",
+    "label": "chevron-left",
+    "type": "solid"
+  },
+  {
+    "name": "chevron-right",
+    "label": "chevron-right",
+    "type": "solid"
+  },
+  {
+    "name": "chevron-up",
+    "label": "chevron-up",
+    "type": "solid"
+  },
+  {
+    "name": "child",
+    "label": "child",
+    "type": "solid"
+  },
+  {
+    "name": "child-combatant",
+    "label": "child-combatant",
+    "type": "solid"
+  },
+  {
+    "name": "child-dress",
+    "label": "child-dress",
+    "type": "solid"
+  },
+  {
+    "name": "child-reaching",
+    "label": "child-reaching",
+    "type": "solid"
+  },
+  {
+    "name": "children",
+    "label": "children",
+    "type": "solid"
+  },
+  {
+    "name": "chrome",
+    "label": "chrome",
+    "type": "brands"
+  },
+  {
+    "name": "chromecast",
+    "label": "chromecast",
+    "type": "brands"
+  },
+  {
+    "name": "church",
+    "label": "church",
+    "type": "solid"
+  },
+  {
+    "name": "circle",
+    "label": "circle",
+    "type": "solid"
+  },
+  {
+    "name": "circle",
+    "label": "circle",
+    "type": "regular"
+  },
+  {
+    "name": "circle-arrow-down",
+    "label": "circle-arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "circle-arrow-left",
+    "label": "circle-arrow-left",
+    "type": "solid"
+  },
+  {
+    "name": "circle-arrow-right",
+    "label": "circle-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "circle-arrow-up",
+    "label": "circle-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "circle-check",
+    "label": "circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "circle-check",
+    "label": "circle-check",
+    "type": "regular"
+  },
+  {
+    "name": "circle-chevron-down",
+    "label": "circle-chevron-down",
+    "type": "solid"
+  },
+  {
+    "name": "circle-chevron-left",
+    "label": "circle-chevron-left",
+    "type": "solid"
+  },
+  {
+    "name": "circle-chevron-right",
+    "label": "circle-chevron-right",
+    "type": "solid"
+  },
+  {
+    "name": "circle-chevron-up",
+    "label": "circle-chevron-up",
+    "type": "solid"
+  },
+  {
+    "name": "circle-dollar-to-slot",
+    "label": "circle-dollar-to-slot",
+    "type": "solid"
+  },
+  {
+    "name": "circle-dot",
+    "label": "circle-dot",
+    "type": "solid"
+  },
+  {
+    "name": "circle-dot",
+    "label": "circle-dot",
+    "type": "regular"
+  },
+  {
+    "name": "circle-down",
+    "label": "circle-down",
+    "type": "solid"
+  },
+  {
+    "name": "circle-down",
+    "label": "circle-down",
+    "type": "regular"
+  },
+  {
+    "name": "circle-exclamation",
+    "label": "circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "circle-h",
+    "label": "circle-h",
+    "type": "solid"
+  },
+  {
+    "name": "circle-half-stroke",
+    "label": "circle-half-stroke",
+    "type": "solid"
+  },
+  {
+    "name": "circle-info",
+    "label": "circle-info",
+    "type": "solid"
+  },
+  {
+    "name": "circle-left",
+    "label": "circle-left",
+    "type": "solid"
+  },
+  {
+    "name": "circle-left",
+    "label": "circle-left",
+    "type": "regular"
+  },
+  {
+    "name": "circle-minus",
+    "label": "circle-minus",
+    "type": "solid"
+  },
+  {
+    "name": "circle-nodes",
+    "label": "circle-nodes",
+    "type": "solid"
+  },
+  {
+    "name": "circle-notch",
+    "label": "circle-notch",
+    "type": "solid"
+  },
+  {
+    "name": "circle-pause",
+    "label": "circle-pause",
+    "type": "solid"
+  },
+  {
+    "name": "circle-pause",
+    "label": "circle-pause",
+    "type": "regular"
+  },
+  {
+    "name": "circle-play",
+    "label": "circle-play",
+    "type": "solid"
+  },
+  {
+    "name": "circle-play",
+    "label": "circle-play",
+    "type": "regular"
+  },
+  {
+    "name": "circle-plus",
+    "label": "circle-plus",
+    "type": "solid"
+  },
+  {
+    "name": "circle-question",
+    "label": "circle-question",
+    "type": "solid"
+  },
+  {
+    "name": "circle-question",
+    "label": "circle-question",
+    "type": "regular"
+  },
+  {
+    "name": "circle-radiation",
+    "label": "circle-radiation",
+    "type": "solid"
+  },
+  {
+    "name": "circle-right",
+    "label": "circle-right",
+    "type": "solid"
+  },
+  {
+    "name": "circle-right",
+    "label": "circle-right",
+    "type": "regular"
+  },
+  {
+    "name": "circle-stop",
+    "label": "circle-stop",
+    "type": "solid"
+  },
+  {
+    "name": "circle-stop",
+    "label": "circle-stop",
+    "type": "regular"
+  },
+  {
+    "name": "circle-up",
+    "label": "circle-up",
+    "type": "solid"
+  },
+  {
+    "name": "circle-up",
+    "label": "circle-up",
+    "type": "regular"
+  },
+  {
+    "name": "circle-user",
+    "label": "circle-user",
+    "type": "solid"
+  },
+  {
+    "name": "circle-user",
+    "label": "circle-user",
+    "type": "regular"
+  },
+  {
+    "name": "circle-xmark",
+    "label": "circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "circle-xmark",
+    "label": "circle-xmark",
+    "type": "regular"
+  },
+  {
+    "name": "city",
+    "label": "city",
+    "type": "solid"
+  },
+  {
+    "name": "clapperboard",
+    "label": "clapperboard",
+    "type": "solid"
+  },
+  {
+    "name": "clipboard",
+    "label": "clipboard",
+    "type": "solid"
+  },
+  {
+    "name": "clipboard",
+    "label": "clipboard",
+    "type": "regular"
+  },
+  {
+    "name": "clipboard-check",
+    "label": "clipboard-check",
+    "type": "solid"
+  },
+  {
+    "name": "clipboard-list",
+    "label": "clipboard-list",
+    "type": "solid"
+  },
+  {
+    "name": "clipboard-question",
+    "label": "clipboard-question",
+    "type": "solid"
+  },
+  {
+    "name": "clipboard-user",
+    "label": "clipboard-user",
+    "type": "solid"
+  },
+  {
+    "name": "clock",
+    "label": "clock",
+    "type": "solid"
+  },
+  {
+    "name": "clock",
+    "label": "clock",
+    "type": "regular"
+  },
+  {
+    "name": "clock-rotate-left",
+    "label": "clock-rotate-left",
+    "type": "solid"
+  },
+  {
+    "name": "clone",
+    "label": "clone",
+    "type": "solid"
+  },
+  {
+    "name": "clone",
+    "label": "clone",
+    "type": "regular"
+  },
+  {
+    "name": "closed-captioning",
+    "label": "closed-captioning",
+    "type": "solid"
+  },
+  {
+    "name": "closed-captioning",
+    "label": "closed-captioning",
+    "type": "regular"
+  },
+  {
+    "name": "cloud",
+    "label": "cloud",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-arrow-down",
+    "label": "cloud-arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-arrow-up",
+    "label": "cloud-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-bolt",
+    "label": "cloud-bolt",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-meatball",
+    "label": "cloud-meatball",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-moon",
+    "label": "cloud-moon",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-moon-rain",
+    "label": "cloud-moon-rain",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-rain",
+    "label": "cloud-rain",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-showers-heavy",
+    "label": "cloud-showers-heavy",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-showers-water",
+    "label": "cloud-showers-water",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-sun",
+    "label": "cloud-sun",
+    "type": "solid"
+  },
+  {
+    "name": "cloud-sun-rain",
+    "label": "cloud-sun-rain",
+    "type": "solid"
+  },
+  {
+    "name": "cloudflare",
+    "label": "cloudflare",
+    "type": "brands"
+  },
+  {
+    "name": "cloudscale",
+    "label": "cloudscale",
+    "type": "brands"
+  },
+  {
+    "name": "cloudsmith",
+    "label": "cloudsmith",
+    "type": "brands"
+  },
+  {
+    "name": "cloudversify",
+    "label": "cloudversify",
+    "type": "brands"
+  },
+  {
+    "name": "clover",
+    "label": "clover",
+    "type": "solid"
+  },
+  {
+    "name": "cmplid",
+    "label": "cmplid",
+    "type": "brands"
+  },
+  {
+    "name": "code",
+    "label": "code",
+    "type": "solid"
+  },
+  {
+    "name": "code-branch",
+    "label": "code-branch",
+    "type": "solid"
+  },
+  {
+    "name": "code-commit",
+    "label": "code-commit",
+    "type": "solid"
+  },
+  {
+    "name": "code-compare",
+    "label": "code-compare",
+    "type": "solid"
+  },
+  {
+    "name": "code-fork",
+    "label": "code-fork",
+    "type": "solid"
+  },
+  {
+    "name": "code-merge",
+    "label": "code-merge",
+    "type": "solid"
+  },
+  {
+    "name": "code-pull-request",
+    "label": "code-pull-request",
+    "type": "solid"
+  },
+  {
+    "name": "codepen",
+    "label": "codepen",
+    "type": "brands"
+  },
+  {
+    "name": "codiepie",
+    "label": "codiepie",
+    "type": "brands"
+  },
+  {
+    "name": "coins",
+    "label": "coins",
+    "type": "solid"
+  },
+  {
+    "name": "colon-sign",
+    "label": "colon-sign",
+    "type": "solid"
+  },
+  {
+    "name": "comment",
+    "label": "comment",
+    "type": "solid"
+  },
+  {
+    "name": "comment",
+    "label": "comment",
+    "type": "regular"
+  },
+  {
+    "name": "comment-dollar",
+    "label": "comment-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "comment-dots",
+    "label": "comment-dots",
+    "type": "solid"
+  },
+  {
+    "name": "comment-dots",
+    "label": "comment-dots",
+    "type": "regular"
+  },
+  {
+    "name": "comment-medical",
+    "label": "comment-medical",
+    "type": "solid"
+  },
+  {
+    "name": "comment-slash",
+    "label": "comment-slash",
+    "type": "solid"
+  },
+  {
+    "name": "comment-sms",
+    "label": "comment-sms",
+    "type": "solid"
+  },
+  {
+    "name": "comments",
+    "label": "comments",
+    "type": "solid"
+  },
+  {
+    "name": "comments",
+    "label": "comments",
+    "type": "regular"
+  },
+  {
+    "name": "comments-dollar",
+    "label": "comments-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "compact-disc",
+    "label": "compact-disc",
+    "type": "solid"
+  },
+  {
+    "name": "compass",
+    "label": "compass",
+    "type": "solid"
+  },
+  {
+    "name": "compass",
+    "label": "compass",
+    "type": "regular"
+  },
+  {
+    "name": "compass-drafting",
+    "label": "compass-drafting",
+    "type": "solid"
+  },
+  {
+    "name": "compress",
+    "label": "compress",
+    "type": "solid"
+  },
+  {
+    "name": "computer",
+    "label": "computer",
+    "type": "solid"
+  },
+  {
+    "name": "computer-mouse",
+    "label": "computer-mouse",
+    "type": "solid"
+  },
+  {
+    "name": "confluence",
+    "label": "confluence",
+    "type": "brands"
+  },
+  {
+    "name": "connectdevelop",
+    "label": "connectdevelop",
+    "type": "brands"
+  },
+  {
+    "name": "contao",
+    "label": "contao",
+    "type": "brands"
+  },
+  {
+    "name": "cookie",
+    "label": "cookie",
+    "type": "solid"
+  },
+  {
+    "name": "cookie-bite",
+    "label": "cookie-bite",
+    "type": "solid"
+  },
+  {
+    "name": "copy",
+    "label": "copy",
+    "type": "solid"
+  },
+  {
+    "name": "copy",
+    "label": "copy",
+    "type": "regular"
+  },
+  {
+    "name": "copyright",
+    "label": "copyright",
+    "type": "solid"
+  },
+  {
+    "name": "copyright",
+    "label": "copyright",
+    "type": "regular"
+  },
+  {
+    "name": "cotton-bureau",
+    "label": "cotton-bureau",
+    "type": "brands"
+  },
+  {
+    "name": "couch",
+    "label": "couch",
+    "type": "solid"
+  },
+  {
+    "name": "cow",
+    "label": "cow",
+    "type": "solid"
+  },
+  {
+    "name": "cpanel",
+    "label": "cpanel",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons",
+    "label": "creative-commons",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-by",
+    "label": "creative-commons-by",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-nc",
+    "label": "creative-commons-nc",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-nc-eu",
+    "label": "creative-commons-nc-eu",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-nc-jp",
+    "label": "creative-commons-nc-jp",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-nd",
+    "label": "creative-commons-nd",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-pd",
+    "label": "creative-commons-pd",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-pd-alt",
+    "label": "creative-commons-pd-alt",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-remix",
+    "label": "creative-commons-remix",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-sa",
+    "label": "creative-commons-sa",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-sampling",
+    "label": "creative-commons-sampling",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-sampling-plus",
+    "label": "creative-commons-sampling-plus",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-share",
+    "label": "creative-commons-share",
+    "type": "brands"
+  },
+  {
+    "name": "creative-commons-zero",
+    "label": "creative-commons-zero",
+    "type": "brands"
+  },
+  {
+    "name": "credit-card",
+    "label": "credit-card",
+    "type": "solid"
+  },
+  {
+    "name": "credit-card",
+    "label": "credit-card",
+    "type": "regular"
+  },
+  {
+    "name": "critical-role",
+    "label": "critical-role",
+    "type": "brands"
+  },
+  {
+    "name": "crop",
+    "label": "crop",
+    "type": "solid"
+  },
+  {
+    "name": "crop-simple",
+    "label": "crop-simple",
+    "type": "solid"
+  },
+  {
+    "name": "cross",
+    "label": "cross",
+    "type": "solid"
+  },
+  {
+    "name": "crosshairs",
+    "label": "crosshairs",
+    "type": "solid"
+  },
+  {
+    "name": "crow",
+    "label": "crow",
+    "type": "solid"
+  },
+  {
+    "name": "crown",
+    "label": "crown",
+    "type": "solid"
+  },
+  {
+    "name": "crutch",
+    "label": "crutch",
+    "type": "solid"
+  },
+  {
+    "name": "cruzeiro-sign",
+    "label": "cruzeiro-sign",
+    "type": "solid"
+  },
+  {
+    "name": "css3",
+    "label": "css3",
+    "type": "brands"
+  },
+  {
+    "name": "css3-alt",
+    "label": "css3-alt",
+    "type": "brands"
+  },
+  {
+    "name": "cube",
+    "label": "cube",
+    "type": "solid"
+  },
+  {
+    "name": "cubes",
+    "label": "cubes",
+    "type": "solid"
+  },
+  {
+    "name": "cubes-stacked",
+    "label": "cubes-stacked",
+    "type": "solid"
+  },
+  {
+    "name": "cuttlefish",
+    "label": "cuttlefish",
+    "type": "brands"
+  },
+  {
+    "name": "d",
+    "label": "d",
+    "type": "solid"
+  },
+  {
+    "name": "d-and-d",
+    "label": "d-and-d",
+    "type": "brands"
+  },
+  {
+    "name": "d-and-d-beyond",
+    "label": "d-and-d-beyond",
+    "type": "brands"
+  },
+  {
+    "name": "dailymotion",
+    "label": "dailymotion",
+    "type": "brands"
+  },
+  {
+    "name": "dart-lang",
+    "label": "dart-lang",
+    "type": "brands"
+  },
+  {
+    "name": "dashcube",
+    "label": "dashcube",
+    "type": "brands"
+  },
+  {
+    "name": "database",
+    "label": "database",
+    "type": "solid"
+  },
+  {
+    "name": "debian",
+    "label": "debian",
+    "type": "brands"
+  },
+  {
+    "name": "deezer",
+    "label": "deezer",
+    "type": "brands"
+  },
+  {
+    "name": "delete-left",
+    "label": "delete-left",
+    "type": "solid"
+  },
+  {
+    "name": "delicious",
+    "label": "delicious",
+    "type": "brands"
+  },
+  {
+    "name": "democrat",
+    "label": "democrat",
+    "type": "solid"
+  },
+  {
+    "name": "deploydog",
+    "label": "deploydog",
+    "type": "brands"
+  },
+  {
+    "name": "deskpro",
+    "label": "deskpro",
+    "type": "brands"
+  },
+  {
+    "name": "desktop",
+    "label": "desktop",
+    "type": "solid"
+  },
+  {
+    "name": "dev",
+    "label": "dev",
+    "type": "brands"
+  },
+  {
+    "name": "deviantart",
+    "label": "deviantart",
+    "type": "brands"
+  },
+  {
+    "name": "dharmachakra",
+    "label": "dharmachakra",
+    "type": "solid"
+  },
+  {
+    "name": "dhl",
+    "label": "dhl",
+    "type": "brands"
+  },
+  {
+    "name": "diagram-next",
+    "label": "diagram-next",
+    "type": "solid"
+  },
+  {
+    "name": "diagram-predecessor",
+    "label": "diagram-predecessor",
+    "type": "solid"
+  },
+  {
+    "name": "diagram-project",
+    "label": "diagram-project",
+    "type": "solid"
+  },
+  {
+    "name": "diagram-successor",
+    "label": "diagram-successor",
+    "type": "solid"
+  },
+  {
+    "name": "diamond",
+    "label": "diamond",
+    "type": "solid"
+  },
+  {
+    "name": "diamond-turn-right",
+    "label": "diamond-turn-right",
+    "type": "solid"
+  },
+  {
+    "name": "diaspora",
+    "label": "diaspora",
+    "type": "brands"
+  },
+  {
+    "name": "dice",
+    "label": "dice",
+    "type": "solid"
+  },
+  {
+    "name": "dice-d20",
+    "label": "dice-d20",
+    "type": "solid"
+  },
+  {
+    "name": "dice-d6",
+    "label": "dice-d6",
+    "type": "solid"
+  },
+  {
+    "name": "dice-five",
+    "label": "dice-five",
+    "type": "solid"
+  },
+  {
+    "name": "dice-four",
+    "label": "dice-four",
+    "type": "solid"
+  },
+  {
+    "name": "dice-one",
+    "label": "dice-one",
+    "type": "solid"
+  },
+  {
+    "name": "dice-six",
+    "label": "dice-six",
+    "type": "solid"
+  },
+  {
+    "name": "dice-three",
+    "label": "dice-three",
+    "type": "solid"
+  },
+  {
+    "name": "dice-two",
+    "label": "dice-two",
+    "type": "solid"
+  },
+  {
+    "name": "digg",
+    "label": "digg",
+    "type": "brands"
+  },
+  {
+    "name": "digital-ocean",
+    "label": "digital-ocean",
+    "type": "brands"
+  },
+  {
+    "name": "discord",
+    "label": "discord",
+    "type": "brands"
+  },
+  {
+    "name": "discourse",
+    "label": "discourse",
+    "type": "brands"
+  },
+  {
+    "name": "disease",
+    "label": "disease",
+    "type": "solid"
+  },
+  {
+    "name": "display",
+    "label": "display",
+    "type": "solid"
+  },
+  {
+    "name": "divide",
+    "label": "divide",
+    "type": "solid"
+  },
+  {
+    "name": "dna",
+    "label": "dna",
+    "type": "solid"
+  },
+  {
+    "name": "dochub",
+    "label": "dochub",
+    "type": "brands"
+  },
+  {
+    "name": "docker",
+    "label": "docker",
+    "type": "brands"
+  },
+  {
+    "name": "dog",
+    "label": "dog",
+    "type": "solid"
+  },
+  {
+    "name": "dollar-sign",
+    "label": "dollar-sign",
+    "type": "solid"
+  },
+  {
+    "name": "dolly",
+    "label": "dolly",
+    "type": "solid"
+  },
+  {
+    "name": "dong-sign",
+    "label": "dong-sign",
+    "type": "solid"
+  },
+  {
+    "name": "door-closed",
+    "label": "door-closed",
+    "type": "solid"
+  },
+  {
+    "name": "door-open",
+    "label": "door-open",
+    "type": "solid"
+  },
+  {
+    "name": "dove",
+    "label": "dove",
+    "type": "solid"
+  },
+  {
+    "name": "down-left-and-up-right-to-center",
+    "label": "down-left-and-up-right-to-center",
+    "type": "solid"
+  },
+  {
+    "name": "down-long",
+    "label": "down-long",
+    "type": "solid"
+  },
+  {
+    "name": "download",
+    "label": "download",
+    "type": "solid"
+  },
+  {
+    "name": "draft2digital",
+    "label": "draft2digital",
+    "type": "brands"
+  },
+  {
+    "name": "dragon",
+    "label": "dragon",
+    "type": "solid"
+  },
+  {
+    "name": "draw-polygon",
+    "label": "draw-polygon",
+    "type": "solid"
+  },
+  {
+    "name": "dribbble",
+    "label": "dribbble",
+    "type": "brands"
+  },
+  {
+    "name": "dropbox",
+    "label": "dropbox",
+    "type": "brands"
+  },
+  {
+    "name": "droplet",
+    "label": "droplet",
+    "type": "solid"
+  },
+  {
+    "name": "droplet-slash",
+    "label": "droplet-slash",
+    "type": "solid"
+  },
+  {
+    "name": "drum",
+    "label": "drum",
+    "type": "solid"
+  },
+  {
+    "name": "drum-steelpan",
+    "label": "drum-steelpan",
+    "type": "solid"
+  },
+  {
+    "name": "drumstick-bite",
+    "label": "drumstick-bite",
+    "type": "solid"
+  },
+  {
+    "name": "drupal",
+    "label": "drupal",
+    "type": "brands"
+  },
+  {
+    "name": "dumbbell",
+    "label": "dumbbell",
+    "type": "solid"
+  },
+  {
+    "name": "dumpster",
+    "label": "dumpster",
+    "type": "solid"
+  },
+  {
+    "name": "dumpster-fire",
+    "label": "dumpster-fire",
+    "type": "solid"
+  },
+  {
+    "name": "dungeon",
+    "label": "dungeon",
+    "type": "solid"
+  },
+  {
+    "name": "dyalog",
+    "label": "dyalog",
+    "type": "brands"
+  },
+  {
+    "name": "e",
+    "label": "e",
+    "type": "solid"
+  },
+  {
+    "name": "ear-deaf",
+    "label": "ear-deaf",
+    "type": "solid"
+  },
+  {
+    "name": "ear-listen",
+    "label": "ear-listen",
+    "type": "solid"
+  },
+  {
+    "name": "earlybirds",
+    "label": "earlybirds",
+    "type": "brands"
+  },
+  {
+    "name": "earth-africa",
+    "label": "earth-africa",
+    "type": "solid"
+  },
+  {
+    "name": "earth-americas",
+    "label": "earth-americas",
+    "type": "solid"
+  },
+  {
+    "name": "earth-asia",
+    "label": "earth-asia",
+    "type": "solid"
+  },
+  {
+    "name": "earth-europe",
+    "label": "earth-europe",
+    "type": "solid"
+  },
+  {
+    "name": "earth-oceania",
+    "label": "earth-oceania",
+    "type": "solid"
+  },
+  {
+    "name": "ebay",
+    "label": "ebay",
+    "type": "brands"
+  },
+  {
+    "name": "edge",
+    "label": "edge",
+    "type": "brands"
+  },
+  {
+    "name": "edge-legacy",
+    "label": "edge-legacy",
+    "type": "brands"
+  },
+  {
+    "name": "egg",
+    "label": "egg",
+    "type": "solid"
+  },
+  {
+    "name": "eject",
+    "label": "eject",
+    "type": "solid"
+  },
+  {
+    "name": "elementor",
+    "label": "elementor",
+    "type": "brands"
+  },
+  {
+    "name": "elevator",
+    "label": "elevator",
+    "type": "solid"
+  },
+  {
+    "name": "ellipsis",
+    "label": "ellipsis",
+    "type": "solid"
+  },
+  {
+    "name": "ellipsis-vertical",
+    "label": "ellipsis-vertical",
+    "type": "solid"
+  },
+  {
+    "name": "ello",
+    "label": "ello",
+    "type": "brands"
+  },
+  {
+    "name": "ember",
+    "label": "ember",
+    "type": "brands"
+  },
+  {
+    "name": "empire",
+    "label": "empire",
+    "type": "brands"
+  },
+  {
+    "name": "envelope",
+    "label": "envelope",
+    "type": "solid"
+  },
+  {
+    "name": "envelope",
+    "label": "envelope",
+    "type": "regular"
+  },
+  {
+    "name": "envelope-circle-check",
+    "label": "envelope-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "envelope-open",
+    "label": "envelope-open",
+    "type": "solid"
+  },
+  {
+    "name": "envelope-open",
+    "label": "envelope-open",
+    "type": "regular"
+  },
+  {
+    "name": "envelope-open-text",
+    "label": "envelope-open-text",
+    "type": "solid"
+  },
+  {
+    "name": "envelopes-bulk",
+    "label": "envelopes-bulk",
+    "type": "solid"
+  },
+  {
+    "name": "envira",
+    "label": "envira",
+    "type": "brands"
+  },
+  {
+    "name": "equals",
+    "label": "equals",
+    "type": "solid"
+  },
+  {
+    "name": "eraser",
+    "label": "eraser",
+    "type": "solid"
+  },
+  {
+    "name": "erlang",
+    "label": "erlang",
+    "type": "brands"
+  },
+  {
+    "name": "ethereum",
+    "label": "ethereum",
+    "type": "brands"
+  },
+  {
+    "name": "ethernet",
+    "label": "ethernet",
+    "type": "solid"
+  },
+  {
+    "name": "etsy",
+    "label": "etsy",
+    "type": "brands"
+  },
+  {
+    "name": "euro-sign",
+    "label": "euro-sign",
+    "type": "solid"
+  },
+  {
+    "name": "evernote",
+    "label": "evernote",
+    "type": "brands"
+  },
+  {
+    "name": "exclamation",
+    "label": "exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "expand",
+    "label": "expand",
+    "type": "solid"
+  },
+  {
+    "name": "expeditedssl",
+    "label": "expeditedssl",
+    "type": "brands"
+  },
+  {
+    "name": "explosion",
+    "label": "explosion",
+    "type": "solid"
+  },
+  {
+    "name": "eye",
+    "label": "eye",
+    "type": "solid"
+  },
+  {
+    "name": "eye",
+    "label": "eye",
+    "type": "regular"
+  },
+  {
+    "name": "eye-dropper",
+    "label": "eye-dropper",
+    "type": "solid"
+  },
+  {
+    "name": "eye-low-vision",
+    "label": "eye-low-vision",
+    "type": "solid"
+  },
+  {
+    "name": "eye-slash",
+    "label": "eye-slash",
+    "type": "solid"
+  },
+  {
+    "name": "eye-slash",
+    "label": "eye-slash",
+    "type": "regular"
+  },
+  {
+    "name": "f",
+    "label": "f",
+    "type": "solid"
+  },
+  {
+    "name": "face-angry",
+    "label": "face-angry",
+    "type": "solid"
+  },
+  {
+    "name": "face-angry",
+    "label": "face-angry",
+    "type": "regular"
+  },
+  {
+    "name": "face-dizzy",
+    "label": "face-dizzy",
+    "type": "solid"
+  },
+  {
+    "name": "face-dizzy",
+    "label": "face-dizzy",
+    "type": "regular"
+  },
+  {
+    "name": "face-flushed",
+    "label": "face-flushed",
+    "type": "solid"
+  },
+  {
+    "name": "face-flushed",
+    "label": "face-flushed",
+    "type": "regular"
+  },
+  {
+    "name": "face-frown",
+    "label": "face-frown",
+    "type": "solid"
+  },
+  {
+    "name": "face-frown",
+    "label": "face-frown",
+    "type": "regular"
+  },
+  {
+    "name": "face-frown-open",
+    "label": "face-frown-open",
+    "type": "solid"
+  },
+  {
+    "name": "face-frown-open",
+    "label": "face-frown-open",
+    "type": "regular"
+  },
+  {
+    "name": "face-grimace",
+    "label": "face-grimace",
+    "type": "solid"
+  },
+  {
+    "name": "face-grimace",
+    "label": "face-grimace",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin",
+    "label": "face-grin",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin",
+    "label": "face-grin",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-beam",
+    "label": "face-grin-beam",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-beam",
+    "label": "face-grin-beam",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-beam-sweat",
+    "label": "face-grin-beam-sweat",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-beam-sweat",
+    "label": "face-grin-beam-sweat",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-hearts",
+    "label": "face-grin-hearts",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-hearts",
+    "label": "face-grin-hearts",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-squint",
+    "label": "face-grin-squint",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-squint",
+    "label": "face-grin-squint",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-squint-tears",
+    "label": "face-grin-squint-tears",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-squint-tears",
+    "label": "face-grin-squint-tears",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-stars",
+    "label": "face-grin-stars",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-stars",
+    "label": "face-grin-stars",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-tears",
+    "label": "face-grin-tears",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-tears",
+    "label": "face-grin-tears",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-tongue",
+    "label": "face-grin-tongue",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-tongue",
+    "label": "face-grin-tongue",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-tongue-squint",
+    "label": "face-grin-tongue-squint",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-tongue-squint",
+    "label": "face-grin-tongue-squint",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-tongue-wink",
+    "label": "face-grin-tongue-wink",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-tongue-wink",
+    "label": "face-grin-tongue-wink",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-wide",
+    "label": "face-grin-wide",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-wide",
+    "label": "face-grin-wide",
+    "type": "regular"
+  },
+  {
+    "name": "face-grin-wink",
+    "label": "face-grin-wink",
+    "type": "solid"
+  },
+  {
+    "name": "face-grin-wink",
+    "label": "face-grin-wink",
+    "type": "regular"
+  },
+  {
+    "name": "face-kiss",
+    "label": "face-kiss",
+    "type": "solid"
+  },
+  {
+    "name": "face-kiss",
+    "label": "face-kiss",
+    "type": "regular"
+  },
+  {
+    "name": "face-kiss-beam",
+    "label": "face-kiss-beam",
+    "type": "solid"
+  },
+  {
+    "name": "face-kiss-beam",
+    "label": "face-kiss-beam",
+    "type": "regular"
+  },
+  {
+    "name": "face-kiss-wink-heart",
+    "label": "face-kiss-wink-heart",
+    "type": "solid"
+  },
+  {
+    "name": "face-kiss-wink-heart",
+    "label": "face-kiss-wink-heart",
+    "type": "regular"
+  },
+  {
+    "name": "face-laugh",
+    "label": "face-laugh",
+    "type": "solid"
+  },
+  {
+    "name": "face-laugh",
+    "label": "face-laugh",
+    "type": "regular"
+  },
+  {
+    "name": "face-laugh-beam",
+    "label": "face-laugh-beam",
+    "type": "solid"
+  },
+  {
+    "name": "face-laugh-beam",
+    "label": "face-laugh-beam",
+    "type": "regular"
+  },
+  {
+    "name": "face-laugh-squint",
+    "label": "face-laugh-squint",
+    "type": "solid"
+  },
+  {
+    "name": "face-laugh-squint",
+    "label": "face-laugh-squint",
+    "type": "regular"
+  },
+  {
+    "name": "face-laugh-wink",
+    "label": "face-laugh-wink",
+    "type": "solid"
+  },
+  {
+    "name": "face-laugh-wink",
+    "label": "face-laugh-wink",
+    "type": "regular"
+  },
+  {
+    "name": "face-meh",
+    "label": "face-meh",
+    "type": "solid"
+  },
+  {
+    "name": "face-meh",
+    "label": "face-meh",
+    "type": "regular"
+  },
+  {
+    "name": "face-meh-blank",
+    "label": "face-meh-blank",
+    "type": "solid"
+  },
+  {
+    "name": "face-meh-blank",
+    "label": "face-meh-blank",
+    "type": "regular"
+  },
+  {
+    "name": "face-rolling-eyes",
+    "label": "face-rolling-eyes",
+    "type": "solid"
+  },
+  {
+    "name": "face-rolling-eyes",
+    "label": "face-rolling-eyes",
+    "type": "regular"
+  },
+  {
+    "name": "face-sad-cry",
+    "label": "face-sad-cry",
+    "type": "solid"
+  },
+  {
+    "name": "face-sad-cry",
+    "label": "face-sad-cry",
+    "type": "regular"
+  },
+  {
+    "name": "face-sad-tear",
+    "label": "face-sad-tear",
+    "type": "solid"
+  },
+  {
+    "name": "face-sad-tear",
+    "label": "face-sad-tear",
+    "type": "regular"
+  },
+  {
+    "name": "face-smile",
+    "label": "face-smile",
+    "type": "solid"
+  },
+  {
+    "name": "face-smile",
+    "label": "face-smile",
+    "type": "regular"
+  },
+  {
+    "name": "face-smile-beam",
+    "label": "face-smile-beam",
+    "type": "solid"
+  },
+  {
+    "name": "face-smile-beam",
+    "label": "face-smile-beam",
+    "type": "regular"
+  },
+  {
+    "name": "face-smile-wink",
+    "label": "face-smile-wink",
+    "type": "solid"
+  },
+  {
+    "name": "face-smile-wink",
+    "label": "face-smile-wink",
+    "type": "regular"
+  },
+  {
+    "name": "face-surprise",
+    "label": "face-surprise",
+    "type": "solid"
+  },
+  {
+    "name": "face-surprise",
+    "label": "face-surprise",
+    "type": "regular"
+  },
+  {
+    "name": "face-tired",
+    "label": "face-tired",
+    "type": "solid"
+  },
+  {
+    "name": "face-tired",
+    "label": "face-tired",
+    "type": "regular"
+  },
+  {
+    "name": "facebook",
+    "label": "facebook",
+    "type": "brands"
+  },
+  {
+    "name": "facebook-f",
+    "label": "facebook-f",
+    "type": "brands"
+  },
+  {
+    "name": "facebook-messenger",
+    "label": "facebook-messenger",
+    "type": "brands"
+  },
+  {
+    "name": "fan",
+    "label": "fan",
+    "type": "solid"
+  },
+  {
+    "name": "fantasy-flight-games",
+    "label": "fantasy-flight-games",
+    "type": "brands"
+  },
+  {
+    "name": "faucet",
+    "label": "faucet",
+    "type": "solid"
+  },
+  {
+    "name": "faucet-drip",
+    "label": "faucet-drip",
+    "type": "solid"
+  },
+  {
+    "name": "fax",
+    "label": "fax",
+    "type": "solid"
+  },
+  {
+    "name": "feather",
+    "label": "feather",
+    "type": "solid"
+  },
+  {
+    "name": "feather-pointed",
+    "label": "feather-pointed",
+    "type": "solid"
+  },
+  {
+    "name": "fedex",
+    "label": "fedex",
+    "type": "brands"
+  },
+  {
+    "name": "fedora",
+    "label": "fedora",
+    "type": "brands"
+  },
+  {
+    "name": "ferry",
+    "label": "ferry",
+    "type": "solid"
+  },
+  {
+    "name": "figma",
+    "label": "figma",
+    "type": "brands"
+  },
+  {
+    "name": "file",
+    "label": "file",
+    "type": "solid"
+  },
+  {
+    "name": "file",
+    "label": "file",
+    "type": "regular"
+  },
+  {
+    "name": "file-arrow-down",
+    "label": "file-arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "file-arrow-up",
+    "label": "file-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "file-audio",
+    "label": "file-audio",
+    "type": "solid"
+  },
+  {
+    "name": "file-audio",
+    "label": "file-audio",
+    "type": "regular"
+  },
+  {
+    "name": "file-circle-check",
+    "label": "file-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "file-circle-exclamation",
+    "label": "file-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "file-circle-minus",
+    "label": "file-circle-minus",
+    "type": "solid"
+  },
+  {
+    "name": "file-circle-plus",
+    "label": "file-circle-plus",
+    "type": "solid"
+  },
+  {
+    "name": "file-circle-question",
+    "label": "file-circle-question",
+    "type": "solid"
+  },
+  {
+    "name": "file-circle-xmark",
+    "label": "file-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "file-code",
+    "label": "file-code",
+    "type": "solid"
+  },
+  {
+    "name": "file-code",
+    "label": "file-code",
+    "type": "regular"
+  },
+  {
+    "name": "file-contract",
+    "label": "file-contract",
+    "type": "solid"
+  },
+  {
+    "name": "file-csv",
+    "label": "file-csv",
+    "type": "solid"
+  },
+  {
+    "name": "file-excel",
+    "label": "file-excel",
+    "type": "solid"
+  },
+  {
+    "name": "file-excel",
+    "label": "file-excel",
+    "type": "regular"
+  },
+  {
+    "name": "file-export",
+    "label": "file-export",
+    "type": "solid"
+  },
+  {
+    "name": "file-image",
+    "label": "file-image",
+    "type": "solid"
+  },
+  {
+    "name": "file-image",
+    "label": "file-image",
+    "type": "regular"
+  },
+  {
+    "name": "file-import",
+    "label": "file-import",
+    "type": "solid"
+  },
+  {
+    "name": "file-invoice",
+    "label": "file-invoice",
+    "type": "solid"
+  },
+  {
+    "name": "file-invoice-dollar",
+    "label": "file-invoice-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "file-lines",
+    "label": "file-lines",
+    "type": "solid"
+  },
+  {
+    "name": "file-lines",
+    "label": "file-lines",
+    "type": "regular"
+  },
+  {
+    "name": "file-medical",
+    "label": "file-medical",
+    "type": "solid"
+  },
+  {
+    "name": "file-pdf",
+    "label": "file-pdf",
+    "type": "solid"
+  },
+  {
+    "name": "file-pdf",
+    "label": "file-pdf",
+    "type": "regular"
+  },
+  {
+    "name": "file-pen",
+    "label": "file-pen",
+    "type": "solid"
+  },
+  {
+    "name": "file-powerpoint",
+    "label": "file-powerpoint",
+    "type": "solid"
+  },
+  {
+    "name": "file-powerpoint",
+    "label": "file-powerpoint",
+    "type": "regular"
+  },
+  {
+    "name": "file-prescription",
+    "label": "file-prescription",
+    "type": "solid"
+  },
+  {
+    "name": "file-shield",
+    "label": "file-shield",
+    "type": "solid"
+  },
+  {
+    "name": "file-signature",
+    "label": "file-signature",
+    "type": "solid"
+  },
+  {
+    "name": "file-video",
+    "label": "file-video",
+    "type": "solid"
+  },
+  {
+    "name": "file-video",
+    "label": "file-video",
+    "type": "regular"
+  },
+  {
+    "name": "file-waveform",
+    "label": "file-waveform",
+    "type": "solid"
+  },
+  {
+    "name": "file-word",
+    "label": "file-word",
+    "type": "solid"
+  },
+  {
+    "name": "file-word",
+    "label": "file-word",
+    "type": "regular"
+  },
+  {
+    "name": "file-zipper",
+    "label": "file-zipper",
+    "type": "solid"
+  },
+  {
+    "name": "file-zipper",
+    "label": "file-zipper",
+    "type": "regular"
+  },
+  {
+    "name": "fill",
+    "label": "fill",
+    "type": "solid"
+  },
+  {
+    "name": "fill-drip",
+    "label": "fill-drip",
+    "type": "solid"
+  },
+  {
+    "name": "film",
+    "label": "film",
+    "type": "solid"
+  },
+  {
+    "name": "filter",
+    "label": "filter",
+    "type": "solid"
+  },
+  {
+    "name": "filter-circle-dollar",
+    "label": "filter-circle-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "filter-circle-xmark",
+    "label": "filter-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "fingerprint",
+    "label": "fingerprint",
+    "type": "solid"
+  },
+  {
+    "name": "fire",
+    "label": "fire",
+    "type": "solid"
+  },
+  {
+    "name": "fire-burner",
+    "label": "fire-burner",
+    "type": "solid"
+  },
+  {
+    "name": "fire-extinguisher",
+    "label": "fire-extinguisher",
+    "type": "solid"
+  },
+  {
+    "name": "fire-flame-curved",
+    "label": "fire-flame-curved",
+    "type": "solid"
+  },
+  {
+    "name": "fire-flame-simple",
+    "label": "fire-flame-simple",
+    "type": "solid"
+  },
+  {
+    "name": "firefox",
+    "label": "firefox",
+    "type": "brands"
+  },
+  {
+    "name": "firefox-browser",
+    "label": "firefox-browser",
+    "type": "brands"
+  },
+  {
+    "name": "first-order",
+    "label": "first-order",
+    "type": "brands"
+  },
+  {
+    "name": "first-order-alt",
+    "label": "first-order-alt",
+    "type": "brands"
+  },
+  {
+    "name": "firstdraft",
+    "label": "firstdraft",
+    "type": "brands"
+  },
+  {
+    "name": "fish",
+    "label": "fish",
+    "type": "solid"
+  },
+  {
+    "name": "fish-fins",
+    "label": "fish-fins",
+    "type": "solid"
+  },
+  {
+    "name": "flag",
+    "label": "flag",
+    "type": "solid"
+  },
+  {
+    "name": "flag",
+    "label": "flag",
+    "type": "regular"
+  },
+  {
+    "name": "flag-checkered",
+    "label": "flag-checkered",
+    "type": "solid"
+  },
+  {
+    "name": "flag-usa",
+    "label": "flag-usa",
+    "type": "solid"
+  },
+  {
+    "name": "flask",
+    "label": "flask",
+    "type": "solid"
+  },
+  {
+    "name": "flask-vial",
+    "label": "flask-vial",
+    "type": "solid"
+  },
+  {
+    "name": "flickr",
+    "label": "flickr",
+    "type": "brands"
+  },
+  {
+    "name": "flipboard",
+    "label": "flipboard",
+    "type": "brands"
+  },
+  {
+    "name": "floppy-disk",
+    "label": "floppy-disk",
+    "type": "solid"
+  },
+  {
+    "name": "floppy-disk",
+    "label": "floppy-disk",
+    "type": "regular"
+  },
+  {
+    "name": "florin-sign",
+    "label": "florin-sign",
+    "type": "solid"
+  },
+  {
+    "name": "flutter",
+    "label": "flutter",
+    "type": "brands"
+  },
+  {
+    "name": "fly",
+    "label": "fly",
+    "type": "brands"
+  },
+  {
+    "name": "folder",
+    "label": "folder",
+    "type": "solid"
+  },
+  {
+    "name": "folder",
+    "label": "folder",
+    "type": "regular"
+  },
+  {
+    "name": "folder-closed",
+    "label": "folder-closed",
+    "type": "solid"
+  },
+  {
+    "name": "folder-closed",
+    "label": "folder-closed",
+    "type": "regular"
+  },
+  {
+    "name": "folder-minus",
+    "label": "folder-minus",
+    "type": "solid"
+  },
+  {
+    "name": "folder-open",
+    "label": "folder-open",
+    "type": "solid"
+  },
+  {
+    "name": "folder-open",
+    "label": "folder-open",
+    "type": "regular"
+  },
+  {
+    "name": "folder-plus",
+    "label": "folder-plus",
+    "type": "solid"
+  },
+  {
+    "name": "folder-tree",
+    "label": "folder-tree",
+    "type": "solid"
+  },
+  {
+    "name": "font",
+    "label": "font",
+    "type": "solid"
+  },
+  {
+    "name": "font-awesome",
+    "label": "font-awesome",
+    "type": "solid"
+  },
+  {
+    "name": "font-awesome",
+    "label": "font-awesome",
+    "type": "regular"
+  },
+  {
+    "name": "font-awesome",
+    "label": "font-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "fonticons",
+    "label": "fonticons",
+    "type": "brands"
+  },
+  {
+    "name": "fonticons-fi",
+    "label": "fonticons-fi",
+    "type": "brands"
+  },
+  {
+    "name": "football",
+    "label": "football",
+    "type": "solid"
+  },
+  {
+    "name": "fort-awesome",
+    "label": "fort-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "fort-awesome-alt",
+    "label": "fort-awesome-alt",
+    "type": "brands"
+  },
+  {
+    "name": "forumbee",
+    "label": "forumbee",
+    "type": "brands"
+  },
+  {
+    "name": "forward",
+    "label": "forward",
+    "type": "solid"
+  },
+  {
+    "name": "forward-fast",
+    "label": "forward-fast",
+    "type": "solid"
+  },
+  {
+    "name": "forward-step",
+    "label": "forward-step",
+    "type": "solid"
+  },
+  {
+    "name": "foursquare",
+    "label": "foursquare",
+    "type": "brands"
+  },
+  {
+    "name": "franc-sign",
+    "label": "franc-sign",
+    "type": "solid"
+  },
+  {
+    "name": "free-code-camp",
+    "label": "free-code-camp",
+    "type": "brands"
+  },
+  {
+    "name": "freebsd",
+    "label": "freebsd",
+    "type": "brands"
+  },
+  {
+    "name": "frog",
+    "label": "frog",
+    "type": "solid"
+  },
+  {
+    "name": "fulcrum",
+    "label": "fulcrum",
+    "type": "brands"
+  },
+  {
+    "name": "futbol",
+    "label": "futbol",
+    "type": "solid"
+  },
+  {
+    "name": "futbol",
+    "label": "futbol",
+    "type": "regular"
+  },
+  {
+    "name": "g",
+    "label": "g",
+    "type": "solid"
+  },
+  {
+    "name": "galactic-republic",
+    "label": "galactic-republic",
+    "type": "brands"
+  },
+  {
+    "name": "galactic-senate",
+    "label": "galactic-senate",
+    "type": "brands"
+  },
+  {
+    "name": "gamepad",
+    "label": "gamepad",
+    "type": "solid"
+  },
+  {
+    "name": "gas-pump",
+    "label": "gas-pump",
+    "type": "solid"
+  },
+  {
+    "name": "gauge",
+    "label": "gauge",
+    "type": "solid"
+  },
+  {
+    "name": "gauge-high",
+    "label": "gauge-high",
+    "type": "solid"
+  },
+  {
+    "name": "gauge-simple",
+    "label": "gauge-simple",
+    "type": "solid"
+  },
+  {
+    "name": "gauge-simple-high",
+    "label": "gauge-simple-high",
+    "type": "solid"
+  },
+  {
+    "name": "gavel",
+    "label": "gavel",
+    "type": "solid"
+  },
+  {
+    "name": "gear",
+    "label": "gear",
+    "type": "solid"
+  },
+  {
+    "name": "gears",
+    "label": "gears",
+    "type": "solid"
+  },
+  {
+    "name": "gem",
+    "label": "gem",
+    "type": "solid"
+  },
+  {
+    "name": "gem",
+    "label": "gem",
+    "type": "regular"
+  },
+  {
+    "name": "genderless",
+    "label": "genderless",
+    "type": "solid"
+  },
+  {
+    "name": "get-pocket",
+    "label": "get-pocket",
+    "type": "brands"
+  },
+  {
+    "name": "gg",
+    "label": "gg",
+    "type": "brands"
+  },
+  {
+    "name": "gg-circle",
+    "label": "gg-circle",
+    "type": "brands"
+  },
+  {
+    "name": "ghost",
+    "label": "ghost",
+    "type": "solid"
+  },
+  {
+    "name": "gift",
+    "label": "gift",
+    "type": "solid"
+  },
+  {
+    "name": "gifts",
+    "label": "gifts",
+    "type": "solid"
+  },
+  {
+    "name": "git",
+    "label": "git",
+    "type": "brands"
+  },
+  {
+    "name": "git-alt",
+    "label": "git-alt",
+    "type": "brands"
+  },
+  {
+    "name": "github",
+    "label": "github",
+    "type": "brands"
+  },
+  {
+    "name": "github-alt",
+    "label": "github-alt",
+    "type": "brands"
+  },
+  {
+    "name": "gitkraken",
+    "label": "gitkraken",
+    "type": "brands"
+  },
+  {
+    "name": "gitlab",
+    "label": "gitlab",
+    "type": "brands"
+  },
+  {
+    "name": "gitter",
+    "label": "gitter",
+    "type": "brands"
+  },
+  {
+    "name": "glass-water",
+    "label": "glass-water",
+    "type": "solid"
+  },
+  {
+    "name": "glass-water-droplet",
+    "label": "glass-water-droplet",
+    "type": "solid"
+  },
+  {
+    "name": "glasses",
+    "label": "glasses",
+    "type": "solid"
+  },
+  {
+    "name": "glide",
+    "label": "glide",
+    "type": "brands"
+  },
+  {
+    "name": "glide-g",
+    "label": "glide-g",
+    "type": "brands"
+  },
+  {
+    "name": "globe",
+    "label": "globe",
+    "type": "solid"
+  },
+  {
+    "name": "gofore",
+    "label": "gofore",
+    "type": "brands"
+  },
+  {
+    "name": "golang",
+    "label": "golang",
+    "type": "brands"
+  },
+  {
+    "name": "golf-ball-tee",
+    "label": "golf-ball-tee",
+    "type": "solid"
+  },
+  {
+    "name": "goodreads",
+    "label": "goodreads",
+    "type": "brands"
+  },
+  {
+    "name": "goodreads-g",
+    "label": "goodreads-g",
+    "type": "brands"
+  },
+  {
+    "name": "google",
+    "label": "google",
+    "type": "brands"
+  },
+  {
+    "name": "google-drive",
+    "label": "google-drive",
+    "type": "brands"
+  },
+  {
+    "name": "google-pay",
+    "label": "google-pay",
+    "type": "brands"
+  },
+  {
+    "name": "google-play",
+    "label": "google-play",
+    "type": "brands"
+  },
+  {
+    "name": "google-plus",
+    "label": "google-plus",
+    "type": "brands"
+  },
+  {
+    "name": "google-plus-g",
+    "label": "google-plus-g",
+    "type": "brands"
+  },
+  {
+    "name": "google-scholar",
+    "label": "google-scholar",
+    "type": "brands"
+  },
+  {
+    "name": "google-wallet",
+    "label": "google-wallet",
+    "type": "brands"
+  },
+  {
+    "name": "gopuram",
+    "label": "gopuram",
+    "type": "solid"
+  },
+  {
+    "name": "graduation-cap",
+    "label": "graduation-cap",
+    "type": "solid"
+  },
+  {
+    "name": "gratipay",
+    "label": "gratipay",
+    "type": "brands"
+  },
+  {
+    "name": "grav",
+    "label": "grav",
+    "type": "brands"
+  },
+  {
+    "name": "greater-than",
+    "label": "greater-than",
+    "type": "solid"
+  },
+  {
+    "name": "greater-than-equal",
+    "label": "greater-than-equal",
+    "type": "solid"
+  },
+  {
+    "name": "grip",
+    "label": "grip",
+    "type": "solid"
+  },
+  {
+    "name": "grip-lines",
+    "label": "grip-lines",
+    "type": "solid"
+  },
+  {
+    "name": "grip-lines-vertical",
+    "label": "grip-lines-vertical",
+    "type": "solid"
+  },
+  {
+    "name": "grip-vertical",
+    "label": "grip-vertical",
+    "type": "solid"
+  },
+  {
+    "name": "gripfire",
+    "label": "gripfire",
+    "type": "brands"
+  },
+  {
+    "name": "group-arrows-rotate",
+    "label": "group-arrows-rotate",
+    "type": "solid"
+  },
+  {
+    "name": "grunt",
+    "label": "grunt",
+    "type": "brands"
+  },
+  {
+    "name": "guarani-sign",
+    "label": "guarani-sign",
+    "type": "solid"
+  },
+  {
+    "name": "guilded",
+    "label": "guilded",
+    "type": "brands"
+  },
+  {
+    "name": "guitar",
+    "label": "guitar",
+    "type": "solid"
+  },
+  {
+    "name": "gulp",
+    "label": "gulp",
+    "type": "brands"
+  },
+  {
+    "name": "gun",
+    "label": "gun",
+    "type": "solid"
+  },
+  {
+    "name": "h",
+    "label": "h",
+    "type": "solid"
+  },
+  {
+    "name": "hacker-news",
+    "label": "hacker-news",
+    "type": "brands"
+  },
+  {
+    "name": "hackerrank",
+    "label": "hackerrank",
+    "type": "brands"
+  },
+  {
+    "name": "hammer",
+    "label": "hammer",
+    "type": "solid"
+  },
+  {
+    "name": "hamsa",
+    "label": "hamsa",
+    "type": "solid"
+  },
+  {
+    "name": "hand",
+    "label": "hand",
+    "type": "solid"
+  },
+  {
+    "name": "hand",
+    "label": "hand",
+    "type": "regular"
+  },
+  {
+    "name": "hand-back-fist",
+    "label": "hand-back-fist",
+    "type": "solid"
+  },
+  {
+    "name": "hand-back-fist",
+    "label": "hand-back-fist",
+    "type": "regular"
+  },
+  {
+    "name": "hand-dots",
+    "label": "hand-dots",
+    "type": "solid"
+  },
+  {
+    "name": "hand-fist",
+    "label": "hand-fist",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding",
+    "label": "hand-holding",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding-dollar",
+    "label": "hand-holding-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding-droplet",
+    "label": "hand-holding-droplet",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding-hand",
+    "label": "hand-holding-hand",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding-heart",
+    "label": "hand-holding-heart",
+    "type": "solid"
+  },
+  {
+    "name": "hand-holding-medical",
+    "label": "hand-holding-medical",
+    "type": "solid"
+  },
+  {
+    "name": "hand-lizard",
+    "label": "hand-lizard",
+    "type": "solid"
+  },
+  {
+    "name": "hand-lizard",
+    "label": "hand-lizard",
+    "type": "regular"
+  },
+  {
+    "name": "hand-middle-finger",
+    "label": "hand-middle-finger",
+    "type": "solid"
+  },
+  {
+    "name": "hand-peace",
+    "label": "hand-peace",
+    "type": "solid"
+  },
+  {
+    "name": "hand-peace",
+    "label": "hand-peace",
+    "type": "regular"
+  },
+  {
+    "name": "hand-point-down",
+    "label": "hand-point-down",
+    "type": "solid"
+  },
+  {
+    "name": "hand-point-down",
+    "label": "hand-point-down",
+    "type": "regular"
+  },
+  {
+    "name": "hand-point-left",
+    "label": "hand-point-left",
+    "type": "solid"
+  },
+  {
+    "name": "hand-point-left",
+    "label": "hand-point-left",
+    "type": "regular"
+  },
+  {
+    "name": "hand-point-right",
+    "label": "hand-point-right",
+    "type": "solid"
+  },
+  {
+    "name": "hand-point-right",
+    "label": "hand-point-right",
+    "type": "regular"
+  },
+  {
+    "name": "hand-point-up",
+    "label": "hand-point-up",
+    "type": "solid"
+  },
+  {
+    "name": "hand-point-up",
+    "label": "hand-point-up",
+    "type": "regular"
+  },
+  {
+    "name": "hand-pointer",
+    "label": "hand-pointer",
+    "type": "solid"
+  },
+  {
+    "name": "hand-pointer",
+    "label": "hand-pointer",
+    "type": "regular"
+  },
+  {
+    "name": "hand-scissors",
+    "label": "hand-scissors",
+    "type": "solid"
+  },
+  {
+    "name": "hand-scissors",
+    "label": "hand-scissors",
+    "type": "regular"
+  },
+  {
+    "name": "hand-sparkles",
+    "label": "hand-sparkles",
+    "type": "solid"
+  },
+  {
+    "name": "hand-spock",
+    "label": "hand-spock",
+    "type": "solid"
+  },
+  {
+    "name": "hand-spock",
+    "label": "hand-spock",
+    "type": "regular"
+  },
+  {
+    "name": "handcuffs",
+    "label": "handcuffs",
+    "type": "solid"
+  },
+  {
+    "name": "hands",
+    "label": "hands",
+    "type": "solid"
+  },
+  {
+    "name": "hands-asl-interpreting",
+    "label": "hands-asl-interpreting",
+    "type": "solid"
+  },
+  {
+    "name": "hands-bound",
+    "label": "hands-bound",
+    "type": "solid"
+  },
+  {
+    "name": "hands-bubbles",
+    "label": "hands-bubbles",
+    "type": "solid"
+  },
+  {
+    "name": "hands-clapping",
+    "label": "hands-clapping",
+    "type": "solid"
+  },
+  {
+    "name": "hands-holding",
+    "label": "hands-holding",
+    "type": "solid"
+  },
+  {
+    "name": "hands-holding-child",
+    "label": "hands-holding-child",
+    "type": "solid"
+  },
+  {
+    "name": "hands-holding-circle",
+    "label": "hands-holding-circle",
+    "type": "solid"
+  },
+  {
+    "name": "hands-praying",
+    "label": "hands-praying",
+    "type": "solid"
+  },
+  {
+    "name": "handshake",
+    "label": "handshake",
+    "type": "solid"
+  },
+  {
+    "name": "handshake",
+    "label": "handshake",
+    "type": "regular"
+  },
+  {
+    "name": "handshake-angle",
+    "label": "handshake-angle",
+    "type": "solid"
+  },
+  {
+    "name": "handshake-simple",
+    "label": "handshake-simple",
+    "type": "solid"
+  },
+  {
+    "name": "handshake-simple-slash",
+    "label": "handshake-simple-slash",
+    "type": "solid"
+  },
+  {
+    "name": "handshake-slash",
+    "label": "handshake-slash",
+    "type": "solid"
+  },
+  {
+    "name": "hanukiah",
+    "label": "hanukiah",
+    "type": "solid"
+  },
+  {
+    "name": "hard-drive",
+    "label": "hard-drive",
+    "type": "solid"
+  },
+  {
+    "name": "hard-drive",
+    "label": "hard-drive",
+    "type": "regular"
+  },
+  {
+    "name": "hashnode",
+    "label": "hashnode",
+    "type": "brands"
+  },
+  {
+    "name": "hashtag",
+    "label": "hashtag",
+    "type": "solid"
+  },
+  {
+    "name": "hat-cowboy",
+    "label": "hat-cowboy",
+    "type": "solid"
+  },
+  {
+    "name": "hat-cowboy-side",
+    "label": "hat-cowboy-side",
+    "type": "solid"
+  },
+  {
+    "name": "hat-wizard",
+    "label": "hat-wizard",
+    "type": "solid"
+  },
+  {
+    "name": "head-side-cough",
+    "label": "head-side-cough",
+    "type": "solid"
+  },
+  {
+    "name": "head-side-cough-slash",
+    "label": "head-side-cough-slash",
+    "type": "solid"
+  },
+  {
+    "name": "head-side-mask",
+    "label": "head-side-mask",
+    "type": "solid"
+  },
+  {
+    "name": "head-side-virus",
+    "label": "head-side-virus",
+    "type": "solid"
+  },
+  {
+    "name": "heading",
+    "label": "heading",
+    "type": "solid"
+  },
+  {
+    "name": "headphones",
+    "label": "headphones",
+    "type": "solid"
+  },
+  {
+    "name": "headphones-simple",
+    "label": "headphones-simple",
+    "type": "solid"
+  },
+  {
+    "name": "headset",
+    "label": "headset",
+    "type": "solid"
+  },
+  {
+    "name": "heart",
+    "label": "heart",
+    "type": "solid"
+  },
+  {
+    "name": "heart",
+    "label": "heart",
+    "type": "regular"
+  },
+  {
+    "name": "heart-circle-bolt",
+    "label": "heart-circle-bolt",
+    "type": "solid"
+  },
+  {
+    "name": "heart-circle-check",
+    "label": "heart-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "heart-circle-exclamation",
+    "label": "heart-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "heart-circle-minus",
+    "label": "heart-circle-minus",
+    "type": "solid"
+  },
+  {
+    "name": "heart-circle-plus",
+    "label": "heart-circle-plus",
+    "type": "solid"
+  },
+  {
+    "name": "heart-circle-xmark",
+    "label": "heart-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "heart-crack",
+    "label": "heart-crack",
+    "type": "solid"
+  },
+  {
+    "name": "heart-pulse",
+    "label": "heart-pulse",
+    "type": "solid"
+  },
+  {
+    "name": "helicopter",
+    "label": "helicopter",
+    "type": "solid"
+  },
+  {
+    "name": "helicopter-symbol",
+    "label": "helicopter-symbol",
+    "type": "solid"
+  },
+  {
+    "name": "helmet-safety",
+    "label": "helmet-safety",
+    "type": "solid"
+  },
+  {
+    "name": "helmet-un",
+    "label": "helmet-un",
+    "type": "solid"
+  },
+  {
+    "name": "highlighter",
+    "label": "highlighter",
+    "type": "solid"
+  },
+  {
+    "name": "hill-avalanche",
+    "label": "hill-avalanche",
+    "type": "solid"
+  },
+  {
+    "name": "hill-rockslide",
+    "label": "hill-rockslide",
+    "type": "solid"
+  },
+  {
+    "name": "hippo",
+    "label": "hippo",
+    "type": "solid"
+  },
+  {
+    "name": "hips",
+    "label": "hips",
+    "type": "brands"
+  },
+  {
+    "name": "hire-a-helper",
+    "label": "hire-a-helper",
+    "type": "brands"
+  },
+  {
+    "name": "hive",
+    "label": "hive",
+    "type": "brands"
+  },
+  {
+    "name": "hockey-puck",
+    "label": "hockey-puck",
+    "type": "solid"
+  },
+  {
+    "name": "holly-berry",
+    "label": "holly-berry",
+    "type": "solid"
+  },
+  {
+    "name": "hooli",
+    "label": "hooli",
+    "type": "brands"
+  },
+  {
+    "name": "hornbill",
+    "label": "hornbill",
+    "type": "brands"
+  },
+  {
+    "name": "horse",
+    "label": "horse",
+    "type": "solid"
+  },
+  {
+    "name": "horse-head",
+    "label": "horse-head",
+    "type": "solid"
+  },
+  {
+    "name": "hospital",
+    "label": "hospital",
+    "type": "solid"
+  },
+  {
+    "name": "hospital",
+    "label": "hospital",
+    "type": "regular"
+  },
+  {
+    "name": "hospital-user",
+    "label": "hospital-user",
+    "type": "solid"
+  },
+  {
+    "name": "hot-tub-person",
+    "label": "hot-tub-person",
+    "type": "solid"
+  },
+  {
+    "name": "hotdog",
+    "label": "hotdog",
+    "type": "solid"
+  },
+  {
+    "name": "hotel",
+    "label": "hotel",
+    "type": "solid"
+  },
+  {
+    "name": "hotjar",
+    "label": "hotjar",
+    "type": "brands"
+  },
+  {
+    "name": "hourglass",
+    "label": "hourglass",
+    "type": "solid"
+  },
+  {
+    "name": "hourglass",
+    "label": "hourglass",
+    "type": "regular"
+  },
+  {
+    "name": "hourglass-end",
+    "label": "hourglass-end",
+    "type": "solid"
+  },
+  {
+    "name": "hourglass-half",
+    "label": "hourglass-half",
+    "type": "solid"
+  },
+  {
+    "name": "hourglass-half",
+    "label": "hourglass-half",
+    "type": "regular"
+  },
+  {
+    "name": "hourglass-start",
+    "label": "hourglass-start",
+    "type": "solid"
+  },
+  {
+    "name": "house",
+    "label": "house",
+    "type": "solid"
+  },
+  {
+    "name": "house-chimney",
+    "label": "house-chimney",
+    "type": "solid"
+  },
+  {
+    "name": "house-chimney-crack",
+    "label": "house-chimney-crack",
+    "type": "solid"
+  },
+  {
+    "name": "house-chimney-medical",
+    "label": "house-chimney-medical",
+    "type": "solid"
+  },
+  {
+    "name": "house-chimney-user",
+    "label": "house-chimney-user",
+    "type": "solid"
+  },
+  {
+    "name": "house-chimney-window",
+    "label": "house-chimney-window",
+    "type": "solid"
+  },
+  {
+    "name": "house-circle-check",
+    "label": "house-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "house-circle-exclamation",
+    "label": "house-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "house-circle-xmark",
+    "label": "house-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "house-crack",
+    "label": "house-crack",
+    "type": "solid"
+  },
+  {
+    "name": "house-fire",
+    "label": "house-fire",
+    "type": "solid"
+  },
+  {
+    "name": "house-flag",
+    "label": "house-flag",
+    "type": "solid"
+  },
+  {
+    "name": "house-flood-water",
+    "label": "house-flood-water",
+    "type": "solid"
+  },
+  {
+    "name": "house-flood-water-circle-arrow-right",
+    "label": "house-flood-water-circle-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "house-laptop",
+    "label": "house-laptop",
+    "type": "solid"
+  },
+  {
+    "name": "house-lock",
+    "label": "house-lock",
+    "type": "solid"
+  },
+  {
+    "name": "house-medical",
+    "label": "house-medical",
+    "type": "solid"
+  },
+  {
+    "name": "house-medical-circle-check",
+    "label": "house-medical-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "house-medical-circle-exclamation",
+    "label": "house-medical-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "house-medical-circle-xmark",
+    "label": "house-medical-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "house-medical-flag",
+    "label": "house-medical-flag",
+    "type": "solid"
+  },
+  {
+    "name": "house-signal",
+    "label": "house-signal",
+    "type": "solid"
+  },
+  {
+    "name": "house-tsunami",
+    "label": "house-tsunami",
+    "type": "solid"
+  },
+  {
+    "name": "house-user",
+    "label": "house-user",
+    "type": "solid"
+  },
+  {
+    "name": "houzz",
+    "label": "houzz",
+    "type": "brands"
+  },
+  {
+    "name": "hryvnia-sign",
+    "label": "hryvnia-sign",
+    "type": "solid"
+  },
+  {
+    "name": "html5",
+    "label": "html5",
+    "type": "brands"
+  },
+  {
+    "name": "hubspot",
+    "label": "hubspot",
+    "type": "brands"
+  },
+  {
+    "name": "hurricane",
+    "label": "hurricane",
+    "type": "solid"
+  },
+  {
+    "name": "i",
+    "label": "i",
+    "type": "solid"
+  },
+  {
+    "name": "i-cursor",
+    "label": "i-cursor",
+    "type": "solid"
+  },
+  {
+    "name": "ice-cream",
+    "label": "ice-cream",
+    "type": "solid"
+  },
+  {
+    "name": "icicles",
+    "label": "icicles",
+    "type": "solid"
+  },
+  {
+    "name": "icons",
+    "label": "icons",
+    "type": "solid"
+  },
+  {
+    "name": "id-badge",
+    "label": "id-badge",
+    "type": "solid"
+  },
+  {
+    "name": "id-badge",
+    "label": "id-badge",
+    "type": "regular"
+  },
+  {
+    "name": "id-card",
+    "label": "id-card",
+    "type": "solid"
+  },
+  {
+    "name": "id-card",
+    "label": "id-card",
+    "type": "regular"
+  },
+  {
+    "name": "id-card-clip",
+    "label": "id-card-clip",
+    "type": "solid"
+  },
+  {
+    "name": "ideal",
+    "label": "ideal",
+    "type": "brands"
+  },
+  {
+    "name": "igloo",
+    "label": "igloo",
+    "type": "solid"
+  },
+  {
+    "name": "image",
+    "label": "image",
+    "type": "solid"
+  },
+  {
+    "name": "image",
+    "label": "image",
+    "type": "regular"
+  },
+  {
+    "name": "image-portrait",
+    "label": "image-portrait",
+    "type": "solid"
+  },
+  {
+    "name": "images",
+    "label": "images",
+    "type": "solid"
+  },
+  {
+    "name": "images",
+    "label": "images",
+    "type": "regular"
+  },
+  {
+    "name": "imdb",
+    "label": "imdb",
+    "type": "brands"
+  },
+  {
+    "name": "inbox",
+    "label": "inbox",
+    "type": "solid"
+  },
+  {
+    "name": "indent",
+    "label": "indent",
+    "type": "solid"
+  },
+  {
+    "name": "indian-rupee-sign",
+    "label": "indian-rupee-sign",
+    "type": "solid"
+  },
+  {
+    "name": "industry",
+    "label": "industry",
+    "type": "solid"
+  },
+  {
+    "name": "infinity",
+    "label": "infinity",
+    "type": "solid"
+  },
+  {
+    "name": "info",
+    "label": "info",
+    "type": "solid"
+  },
+  {
+    "name": "instagram",
+    "label": "instagram",
+    "type": "brands"
+  },
+  {
+    "name": "instalod",
+    "label": "instalod",
+    "type": "brands"
+  },
+  {
+    "name": "intercom",
+    "label": "intercom",
+    "type": "brands"
+  },
+  {
+    "name": "internet-explorer",
+    "label": "internet-explorer",
+    "type": "brands"
+  },
+  {
+    "name": "invision",
+    "label": "invision",
+    "type": "brands"
+  },
+  {
+    "name": "ioxhost",
+    "label": "ioxhost",
+    "type": "brands"
+  },
+  {
+    "name": "italic",
+    "label": "italic",
+    "type": "solid"
+  },
+  {
+    "name": "itch-io",
+    "label": "itch-io",
+    "type": "brands"
+  },
+  {
+    "name": "itunes",
+    "label": "itunes",
+    "type": "brands"
+  },
+  {
+    "name": "itunes-note",
+    "label": "itunes-note",
+    "type": "brands"
+  },
+  {
+    "name": "j",
+    "label": "j",
+    "type": "solid"
+  },
+  {
+    "name": "jar",
+    "label": "jar",
+    "type": "solid"
+  },
+  {
+    "name": "jar-wheat",
+    "label": "jar-wheat",
+    "type": "solid"
+  },
+  {
+    "name": "java",
+    "label": "java",
+    "type": "brands"
+  },
+  {
+    "name": "jedi",
+    "label": "jedi",
+    "type": "solid"
+  },
+  {
+    "name": "jedi-order",
+    "label": "jedi-order",
+    "type": "brands"
+  },
+  {
+    "name": "jenkins",
+    "label": "jenkins",
+    "type": "brands"
+  },
+  {
+    "name": "jet-fighter",
+    "label": "jet-fighter",
+    "type": "solid"
+  },
+  {
+    "name": "jet-fighter-up",
+    "label": "jet-fighter-up",
+    "type": "solid"
+  },
+  {
+    "name": "jira",
+    "label": "jira",
+    "type": "brands"
+  },
+  {
+    "name": "joget",
+    "label": "joget",
+    "type": "brands"
+  },
+  {
+    "name": "joint",
+    "label": "joint",
+    "type": "solid"
+  },
+  {
+    "name": "joomla",
+    "label": "joomla",
+    "type": "brands"
+  },
+  {
+    "name": "js",
+    "label": "js",
+    "type": "brands"
+  },
+  {
+    "name": "jsfiddle",
+    "label": "jsfiddle",
+    "type": "brands"
+  },
+  {
+    "name": "jug-detergent",
+    "label": "jug-detergent",
+    "type": "solid"
+  },
+  {
+    "name": "jxl",
+    "label": "jxl",
+    "type": "brands"
+  },
+  {
+    "name": "k",
+    "label": "k",
+    "type": "solid"
+  },
+  {
+    "name": "kaaba",
+    "label": "kaaba",
+    "type": "solid"
+  },
+  {
+    "name": "kaggle",
+    "label": "kaggle",
+    "type": "brands"
+  },
+  {
+    "name": "key",
+    "label": "key",
+    "type": "solid"
+  },
+  {
+    "name": "keybase",
+    "label": "keybase",
+    "type": "brands"
+  },
+  {
+    "name": "keyboard",
+    "label": "keyboard",
+    "type": "solid"
+  },
+  {
+    "name": "keyboard",
+    "label": "keyboard",
+    "type": "regular"
+  },
+  {
+    "name": "keycdn",
+    "label": "keycdn",
+    "type": "brands"
+  },
+  {
+    "name": "khanda",
+    "label": "khanda",
+    "type": "solid"
+  },
+  {
+    "name": "kickstarter",
+    "label": "kickstarter",
+    "type": "brands"
+  },
+  {
+    "name": "kickstarter-k",
+    "label": "kickstarter-k",
+    "type": "brands"
+  },
+  {
+    "name": "kip-sign",
+    "label": "kip-sign",
+    "type": "solid"
+  },
+  {
+    "name": "kit-medical",
+    "label": "kit-medical",
+    "type": "solid"
+  },
+  {
+    "name": "kitchen-set",
+    "label": "kitchen-set",
+    "type": "solid"
+  },
+  {
+    "name": "kiwi-bird",
+    "label": "kiwi-bird",
+    "type": "solid"
+  },
+  {
+    "name": "korvue",
+    "label": "korvue",
+    "type": "brands"
+  },
+  {
+    "name": "l",
+    "label": "l",
+    "type": "solid"
+  },
+  {
+    "name": "land-mine-on",
+    "label": "land-mine-on",
+    "type": "solid"
+  },
+  {
+    "name": "landmark",
+    "label": "landmark",
+    "type": "solid"
+  },
+  {
+    "name": "landmark-dome",
+    "label": "landmark-dome",
+    "type": "solid"
+  },
+  {
+    "name": "landmark-flag",
+    "label": "landmark-flag",
+    "type": "solid"
+  },
+  {
+    "name": "language",
+    "label": "language",
+    "type": "solid"
+  },
+  {
+    "name": "laptop",
+    "label": "laptop",
+    "type": "solid"
+  },
+  {
+    "name": "laptop-code",
+    "label": "laptop-code",
+    "type": "solid"
+  },
+  {
+    "name": "laptop-file",
+    "label": "laptop-file",
+    "type": "solid"
+  },
+  {
+    "name": "laptop-medical",
+    "label": "laptop-medical",
+    "type": "solid"
+  },
+  {
+    "name": "laravel",
+    "label": "laravel",
+    "type": "brands"
+  },
+  {
+    "name": "lari-sign",
+    "label": "lari-sign",
+    "type": "solid"
+  },
+  {
+    "name": "lastfm",
+    "label": "lastfm",
+    "type": "brands"
+  },
+  {
+    "name": "layer-group",
+    "label": "layer-group",
+    "type": "solid"
+  },
+  {
+    "name": "leaf",
+    "label": "leaf",
+    "type": "solid"
+  },
+  {
+    "name": "leanpub",
+    "label": "leanpub",
+    "type": "brands"
+  },
+  {
+    "name": "left-long",
+    "label": "left-long",
+    "type": "solid"
+  },
+  {
+    "name": "left-right",
+    "label": "left-right",
+    "type": "solid"
+  },
+  {
+    "name": "lemon",
+    "label": "lemon",
+    "type": "solid"
+  },
+  {
+    "name": "lemon",
+    "label": "lemon",
+    "type": "regular"
+  },
+  {
+    "name": "less",
+    "label": "less",
+    "type": "brands"
+  },
+  {
+    "name": "less-than",
+    "label": "less-than",
+    "type": "solid"
+  },
+  {
+    "name": "less-than-equal",
+    "label": "less-than-equal",
+    "type": "solid"
+  },
+  {
+    "name": "letterboxd",
+    "label": "letterboxd",
+    "type": "brands"
+  },
+  {
+    "name": "life-ring",
+    "label": "life-ring",
+    "type": "solid"
+  },
+  {
+    "name": "life-ring",
+    "label": "life-ring",
+    "type": "regular"
+  },
+  {
+    "name": "lightbulb",
+    "label": "lightbulb",
+    "type": "solid"
+  },
+  {
+    "name": "lightbulb",
+    "label": "lightbulb",
+    "type": "regular"
+  },
+  {
+    "name": "line",
+    "label": "line",
+    "type": "brands"
+  },
+  {
+    "name": "lines-leaning",
+    "label": "lines-leaning",
+    "type": "solid"
+  },
+  {
+    "name": "link",
+    "label": "link",
+    "type": "solid"
+  },
+  {
+    "name": "link-slash",
+    "label": "link-slash",
+    "type": "solid"
+  },
+  {
+    "name": "linkedin",
+    "label": "linkedin",
+    "type": "brands"
+  },
+  {
+    "name": "linkedin-in",
+    "label": "linkedin-in",
+    "type": "brands"
+  },
+  {
+    "name": "linode",
+    "label": "linode",
+    "type": "brands"
+  },
+  {
+    "name": "linux",
+    "label": "linux",
+    "type": "brands"
+  },
+  {
+    "name": "lira-sign",
+    "label": "lira-sign",
+    "type": "solid"
+  },
+  {
+    "name": "list",
+    "label": "list",
+    "type": "solid"
+  },
+  {
+    "name": "list-check",
+    "label": "list-check",
+    "type": "solid"
+  },
+  {
+    "name": "list-ol",
+    "label": "list-ol",
+    "type": "solid"
+  },
+  {
+    "name": "list-ul",
+    "label": "list-ul",
+    "type": "solid"
+  },
+  {
+    "name": "litecoin-sign",
+    "label": "litecoin-sign",
+    "type": "solid"
+  },
+  {
+    "name": "location-arrow",
+    "label": "location-arrow",
+    "type": "solid"
+  },
+  {
+    "name": "location-crosshairs",
+    "label": "location-crosshairs",
+    "type": "solid"
+  },
+  {
+    "name": "location-dot",
+    "label": "location-dot",
+    "type": "solid"
+  },
+  {
+    "name": "location-pin",
+    "label": "location-pin",
+    "type": "solid"
+  },
+  {
+    "name": "location-pin-lock",
+    "label": "location-pin-lock",
+    "type": "solid"
+  },
+  {
+    "name": "lock",
+    "label": "lock",
+    "type": "solid"
+  },
+  {
+    "name": "lock-open",
+    "label": "lock-open",
+    "type": "solid"
+  },
+  {
+    "name": "locust",
+    "label": "locust",
+    "type": "solid"
+  },
+  {
+    "name": "lungs",
+    "label": "lungs",
+    "type": "solid"
+  },
+  {
+    "name": "lungs-virus",
+    "label": "lungs-virus",
+    "type": "solid"
+  },
+  {
+    "name": "lyft",
+    "label": "lyft",
+    "type": "brands"
+  },
+  {
+    "name": "m",
+    "label": "m",
+    "type": "solid"
+  },
+  {
+    "name": "magento",
+    "label": "magento",
+    "type": "brands"
+  },
+  {
+    "name": "magnet",
+    "label": "magnet",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass",
+    "label": "magnifying-glass",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-arrow-right",
+    "label": "magnifying-glass-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-chart",
+    "label": "magnifying-glass-chart",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-dollar",
+    "label": "magnifying-glass-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-location",
+    "label": "magnifying-glass-location",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-minus",
+    "label": "magnifying-glass-minus",
+    "type": "solid"
+  },
+  {
+    "name": "magnifying-glass-plus",
+    "label": "magnifying-glass-plus",
+    "type": "solid"
+  },
+  {
+    "name": "mailchimp",
+    "label": "mailchimp",
+    "type": "brands"
+  },
+  {
+    "name": "manat-sign",
+    "label": "manat-sign",
+    "type": "solid"
+  },
+  {
+    "name": "mandalorian",
+    "label": "mandalorian",
+    "type": "brands"
+  },
+  {
+    "name": "map",
+    "label": "map",
+    "type": "solid"
+  },
+  {
+    "name": "map",
+    "label": "map",
+    "type": "regular"
+  },
+  {
+    "name": "map-location",
+    "label": "map-location",
+    "type": "solid"
+  },
+  {
+    "name": "map-location-dot",
+    "label": "map-location-dot",
+    "type": "solid"
+  },
+  {
+    "name": "map-pin",
+    "label": "map-pin",
+    "type": "solid"
+  },
+  {
+    "name": "markdown",
+    "label": "markdown",
+    "type": "brands"
+  },
+  {
+    "name": "marker",
+    "label": "marker",
+    "type": "solid"
+  },
+  {
+    "name": "mars",
+    "label": "mars",
+    "type": "solid"
+  },
+  {
+    "name": "mars-and-venus",
+    "label": "mars-and-venus",
+    "type": "solid"
+  },
+  {
+    "name": "mars-and-venus-burst",
+    "label": "mars-and-venus-burst",
+    "type": "solid"
+  },
+  {
+    "name": "mars-double",
+    "label": "mars-double",
+    "type": "solid"
+  },
+  {
+    "name": "mars-stroke",
+    "label": "mars-stroke",
+    "type": "solid"
+  },
+  {
+    "name": "mars-stroke-right",
+    "label": "mars-stroke-right",
+    "type": "solid"
+  },
+  {
+    "name": "mars-stroke-up",
+    "label": "mars-stroke-up",
+    "type": "solid"
+  },
+  {
+    "name": "martini-glass",
+    "label": "martini-glass",
+    "type": "solid"
+  },
+  {
+    "name": "martini-glass-citrus",
+    "label": "martini-glass-citrus",
+    "type": "solid"
+  },
+  {
+    "name": "martini-glass-empty",
+    "label": "martini-glass-empty",
+    "type": "solid"
+  },
+  {
+    "name": "mask",
+    "label": "mask",
+    "type": "solid"
+  },
+  {
+    "name": "mask-face",
+    "label": "mask-face",
+    "type": "solid"
+  },
+  {
+    "name": "mask-ventilator",
+    "label": "mask-ventilator",
+    "type": "solid"
+  },
+  {
+    "name": "masks-theater",
+    "label": "masks-theater",
+    "type": "solid"
+  },
+  {
+    "name": "mastodon",
+    "label": "mastodon",
+    "type": "brands"
+  },
+  {
+    "name": "mattress-pillow",
+    "label": "mattress-pillow",
+    "type": "solid"
+  },
+  {
+    "name": "maxcdn",
+    "label": "maxcdn",
+    "type": "brands"
+  },
+  {
+    "name": "maximize",
+    "label": "maximize",
+    "type": "solid"
+  },
+  {
+    "name": "mdb",
+    "label": "mdb",
+    "type": "brands"
+  },
+  {
+    "name": "medal",
+    "label": "medal",
+    "type": "solid"
+  },
+  {
+    "name": "medapps",
+    "label": "medapps",
+    "type": "brands"
+  },
+  {
+    "name": "medium",
+    "label": "medium",
+    "type": "brands"
+  },
+  {
+    "name": "medrt",
+    "label": "medrt",
+    "type": "brands"
+  },
+  {
+    "name": "meetup",
+    "label": "meetup",
+    "type": "brands"
+  },
+  {
+    "name": "megaport",
+    "label": "megaport",
+    "type": "brands"
+  },
+  {
+    "name": "memory",
+    "label": "memory",
+    "type": "solid"
+  },
+  {
+    "name": "mendeley",
+    "label": "mendeley",
+    "type": "brands"
+  },
+  {
+    "name": "menorah",
+    "label": "menorah",
+    "type": "solid"
+  },
+  {
+    "name": "mercury",
+    "label": "mercury",
+    "type": "solid"
+  },
+  {
+    "name": "message",
+    "label": "message",
+    "type": "solid"
+  },
+  {
+    "name": "message",
+    "label": "message",
+    "type": "regular"
+  },
+  {
+    "name": "meta",
+    "label": "meta",
+    "type": "brands"
+  },
+  {
+    "name": "meteor",
+    "label": "meteor",
+    "type": "solid"
+  },
+  {
+    "name": "microblog",
+    "label": "microblog",
+    "type": "brands"
+  },
+  {
+    "name": "microchip",
+    "label": "microchip",
+    "type": "solid"
+  },
+  {
+    "name": "microphone",
+    "label": "microphone",
+    "type": "solid"
+  },
+  {
+    "name": "microphone-lines",
+    "label": "microphone-lines",
+    "type": "solid"
+  },
+  {
+    "name": "microphone-lines-slash",
+    "label": "microphone-lines-slash",
+    "type": "solid"
+  },
+  {
+    "name": "microphone-slash",
+    "label": "microphone-slash",
+    "type": "solid"
+  },
+  {
+    "name": "microscope",
+    "label": "microscope",
+    "type": "solid"
+  },
+  {
+    "name": "microsoft",
+    "label": "microsoft",
+    "type": "brands"
+  },
+  {
+    "name": "mill-sign",
+    "label": "mill-sign",
+    "type": "solid"
+  },
+  {
+    "name": "minimize",
+    "label": "minimize",
+    "type": "solid"
+  },
+  {
+    "name": "mintbit",
+    "label": "mintbit",
+    "type": "brands"
+  },
+  {
+    "name": "minus",
+    "label": "minus",
+    "type": "solid"
+  },
+  {
+    "name": "mitten",
+    "label": "mitten",
+    "type": "solid"
+  },
+  {
+    "name": "mix",
+    "label": "mix",
+    "type": "brands"
+  },
+  {
+    "name": "mixcloud",
+    "label": "mixcloud",
+    "type": "brands"
+  },
+  {
+    "name": "mixer",
+    "label": "mixer",
+    "type": "brands"
+  },
+  {
+    "name": "mizuni",
+    "label": "mizuni",
+    "type": "brands"
+  },
+  {
+    "name": "mobile",
+    "label": "mobile",
+    "type": "solid"
+  },
+  {
+    "name": "mobile-button",
+    "label": "mobile-button",
+    "type": "solid"
+  },
+  {
+    "name": "mobile-retro",
+    "label": "mobile-retro",
+    "type": "solid"
+  },
+  {
+    "name": "mobile-screen",
+    "label": "mobile-screen",
+    "type": "solid"
+  },
+  {
+    "name": "mobile-screen-button",
+    "label": "mobile-screen-button",
+    "type": "solid"
+  },
+  {
+    "name": "modx",
+    "label": "modx",
+    "type": "brands"
+  },
+  {
+    "name": "monero",
+    "label": "monero",
+    "type": "brands"
+  },
+  {
+    "name": "money-bill",
+    "label": "money-bill",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-1",
+    "label": "money-bill-1",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-1",
+    "label": "money-bill-1",
+    "type": "regular"
+  },
+  {
+    "name": "money-bill-1-wave",
+    "label": "money-bill-1-wave",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-transfer",
+    "label": "money-bill-transfer",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-trend-up",
+    "label": "money-bill-trend-up",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-wave",
+    "label": "money-bill-wave",
+    "type": "solid"
+  },
+  {
+    "name": "money-bill-wheat",
+    "label": "money-bill-wheat",
+    "type": "solid"
+  },
+  {
+    "name": "money-bills",
+    "label": "money-bills",
+    "type": "solid"
+  },
+  {
+    "name": "money-check",
+    "label": "money-check",
+    "type": "solid"
+  },
+  {
+    "name": "money-check-dollar",
+    "label": "money-check-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "monument",
+    "label": "monument",
+    "type": "solid"
+  },
+  {
+    "name": "moon",
+    "label": "moon",
+    "type": "solid"
+  },
+  {
+    "name": "moon",
+    "label": "moon",
+    "type": "regular"
+  },
+  {
+    "name": "mortar-pestle",
+    "label": "mortar-pestle",
+    "type": "solid"
+  },
+  {
+    "name": "mosque",
+    "label": "mosque",
+    "type": "solid"
+  },
+  {
+    "name": "mosquito",
+    "label": "mosquito",
+    "type": "solid"
+  },
+  {
+    "name": "mosquito-net",
+    "label": "mosquito-net",
+    "type": "solid"
+  },
+  {
+    "name": "motorcycle",
+    "label": "motorcycle",
+    "type": "solid"
+  },
+  {
+    "name": "mound",
+    "label": "mound",
+    "type": "solid"
+  },
+  {
+    "name": "mountain",
+    "label": "mountain",
+    "type": "solid"
+  },
+  {
+    "name": "mountain-city",
+    "label": "mountain-city",
+    "type": "solid"
+  },
+  {
+    "name": "mountain-sun",
+    "label": "mountain-sun",
+    "type": "solid"
+  },
+  {
+    "name": "mug-hot",
+    "label": "mug-hot",
+    "type": "solid"
+  },
+  {
+    "name": "mug-saucer",
+    "label": "mug-saucer",
+    "type": "solid"
+  },
+  {
+    "name": "music",
+    "label": "music",
+    "type": "solid"
+  },
+  {
+    "name": "n",
+    "label": "n",
+    "type": "solid"
+  },
+  {
+    "name": "naira-sign",
+    "label": "naira-sign",
+    "type": "solid"
+  },
+  {
+    "name": "napster",
+    "label": "napster",
+    "type": "brands"
+  },
+  {
+    "name": "neos",
+    "label": "neos",
+    "type": "brands"
+  },
+  {
+    "name": "network-wired",
+    "label": "network-wired",
+    "type": "solid"
+  },
+  {
+    "name": "neuter",
+    "label": "neuter",
+    "type": "solid"
+  },
+  {
+    "name": "newspaper",
+    "label": "newspaper",
+    "type": "solid"
+  },
+  {
+    "name": "newspaper",
+    "label": "newspaper",
+    "type": "regular"
+  },
+  {
+    "name": "nfc-directional",
+    "label": "nfc-directional",
+    "type": "brands"
+  },
+  {
+    "name": "nfc-symbol",
+    "label": "nfc-symbol",
+    "type": "brands"
+  },
+  {
+    "name": "nimblr",
+    "label": "nimblr",
+    "type": "brands"
+  },
+  {
+    "name": "node",
+    "label": "node",
+    "type": "brands"
+  },
+  {
+    "name": "node-js",
+    "label": "node-js",
+    "type": "brands"
+  },
+  {
+    "name": "not-equal",
+    "label": "not-equal",
+    "type": "solid"
+  },
+  {
+    "name": "notdef",
+    "label": "notdef",
+    "type": "solid"
+  },
+  {
+    "name": "note-sticky",
+    "label": "note-sticky",
+    "type": "solid"
+  },
+  {
+    "name": "note-sticky",
+    "label": "note-sticky",
+    "type": "regular"
+  },
+  {
+    "name": "notes-medical",
+    "label": "notes-medical",
+    "type": "solid"
+  },
+  {
+    "name": "npm",
+    "label": "npm",
+    "type": "brands"
+  },
+  {
+    "name": "ns8",
+    "label": "ns8",
+    "type": "brands"
+  },
+  {
+    "name": "nutritionix",
+    "label": "nutritionix",
+    "type": "brands"
+  },
+  {
+    "name": "o",
+    "label": "o",
+    "type": "solid"
+  },
+  {
+    "name": "object-group",
+    "label": "object-group",
+    "type": "solid"
+  },
+  {
+    "name": "object-group",
+    "label": "object-group",
+    "type": "regular"
+  },
+  {
+    "name": "object-ungroup",
+    "label": "object-ungroup",
+    "type": "solid"
+  },
+  {
+    "name": "object-ungroup",
+    "label": "object-ungroup",
+    "type": "regular"
+  },
+  {
+    "name": "octopus-deploy",
+    "label": "octopus-deploy",
+    "type": "brands"
+  },
+  {
+    "name": "odnoklassniki",
+    "label": "odnoklassniki",
+    "type": "brands"
+  },
+  {
+    "name": "odysee",
+    "label": "odysee",
+    "type": "brands"
+  },
+  {
+    "name": "oil-can",
+    "label": "oil-can",
+    "type": "solid"
+  },
+  {
+    "name": "oil-well",
+    "label": "oil-well",
+    "type": "solid"
+  },
+  {
+    "name": "old-republic",
+    "label": "old-republic",
+    "type": "brands"
+  },
+  {
+    "name": "om",
+    "label": "om",
+    "type": "solid"
+  },
+  {
+    "name": "opencart",
+    "label": "opencart",
+    "type": "brands"
+  },
+  {
+    "name": "openid",
+    "label": "openid",
+    "type": "brands"
+  },
+  {
+    "name": "opensuse",
+    "label": "opensuse",
+    "type": "brands"
+  },
+  {
+    "name": "opera",
+    "label": "opera",
+    "type": "brands"
+  },
+  {
+    "name": "optin-monster",
+    "label": "optin-monster",
+    "type": "brands"
+  },
+  {
+    "name": "orcid",
+    "label": "orcid",
+    "type": "brands"
+  },
+  {
+    "name": "osi",
+    "label": "osi",
+    "type": "brands"
+  },
+  {
+    "name": "otter",
+    "label": "otter",
+    "type": "solid"
+  },
+  {
+    "name": "outdent",
+    "label": "outdent",
+    "type": "solid"
+  },
+  {
+    "name": "p",
+    "label": "p",
+    "type": "solid"
+  },
+  {
+    "name": "padlet",
+    "label": "padlet",
+    "type": "brands"
+  },
+  {
+    "name": "page4",
+    "label": "page4",
+    "type": "brands"
+  },
+  {
+    "name": "pagelines",
+    "label": "pagelines",
+    "type": "brands"
+  },
+  {
+    "name": "pager",
+    "label": "pager",
+    "type": "solid"
+  },
+  {
+    "name": "paint-roller",
+    "label": "paint-roller",
+    "type": "solid"
+  },
+  {
+    "name": "paintbrush",
+    "label": "paintbrush",
+    "type": "solid"
+  },
+  {
+    "name": "palette",
+    "label": "palette",
+    "type": "solid"
+  },
+  {
+    "name": "palfed",
+    "label": "palfed",
+    "type": "brands"
+  },
+  {
+    "name": "pallet",
+    "label": "pallet",
+    "type": "solid"
+  },
+  {
+    "name": "panorama",
+    "label": "panorama",
+    "type": "solid"
+  },
+  {
+    "name": "paper-plane",
+    "label": "paper-plane",
+    "type": "solid"
+  },
+  {
+    "name": "paper-plane",
+    "label": "paper-plane",
+    "type": "regular"
+  },
+  {
+    "name": "paperclip",
+    "label": "paperclip",
+    "type": "solid"
+  },
+  {
+    "name": "parachute-box",
+    "label": "parachute-box",
+    "type": "solid"
+  },
+  {
+    "name": "paragraph",
+    "label": "paragraph",
+    "type": "solid"
+  },
+  {
+    "name": "passport",
+    "label": "passport",
+    "type": "solid"
+  },
+  {
+    "name": "paste",
+    "label": "paste",
+    "type": "solid"
+  },
+  {
+    "name": "paste",
+    "label": "paste",
+    "type": "regular"
+  },
+  {
+    "name": "patreon",
+    "label": "patreon",
+    "type": "brands"
+  },
+  {
+    "name": "pause",
+    "label": "pause",
+    "type": "solid"
+  },
+  {
+    "name": "paw",
+    "label": "paw",
+    "type": "solid"
+  },
+  {
+    "name": "paypal",
+    "label": "paypal",
+    "type": "brands"
+  },
+  {
+    "name": "peace",
+    "label": "peace",
+    "type": "solid"
+  },
+  {
+    "name": "pen",
+    "label": "pen",
+    "type": "solid"
+  },
+  {
+    "name": "pen-clip",
+    "label": "pen-clip",
+    "type": "solid"
+  },
+  {
+    "name": "pen-fancy",
+    "label": "pen-fancy",
+    "type": "solid"
+  },
+  {
+    "name": "pen-nib",
+    "label": "pen-nib",
+    "type": "solid"
+  },
+  {
+    "name": "pen-ruler",
+    "label": "pen-ruler",
+    "type": "solid"
+  },
+  {
+    "name": "pen-to-square",
+    "label": "pen-to-square",
+    "type": "solid"
+  },
+  {
+    "name": "pen-to-square",
+    "label": "pen-to-square",
+    "type": "regular"
+  },
+  {
+    "name": "pencil",
+    "label": "pencil",
+    "type": "solid"
+  },
+  {
+    "name": "people-arrows",
+    "label": "people-arrows",
+    "type": "solid"
+  },
+  {
+    "name": "people-carry-box",
+    "label": "people-carry-box",
+    "type": "solid"
+  },
+  {
+    "name": "people-group",
+    "label": "people-group",
+    "type": "solid"
+  },
+  {
+    "name": "people-line",
+    "label": "people-line",
+    "type": "solid"
+  },
+  {
+    "name": "people-pulling",
+    "label": "people-pulling",
+    "type": "solid"
+  },
+  {
+    "name": "people-robbery",
+    "label": "people-robbery",
+    "type": "solid"
+  },
+  {
+    "name": "people-roof",
+    "label": "people-roof",
+    "type": "solid"
+  },
+  {
+    "name": "pepper-hot",
+    "label": "pepper-hot",
+    "type": "solid"
+  },
+  {
+    "name": "perbyte",
+    "label": "perbyte",
+    "type": "brands"
+  },
+  {
+    "name": "percent",
+    "label": "percent",
+    "type": "solid"
+  },
+  {
+    "name": "periscope",
+    "label": "periscope",
+    "type": "brands"
+  },
+  {
+    "name": "person",
+    "label": "person",
+    "type": "solid"
+  },
+  {
+    "name": "person-arrow-down-to-line",
+    "label": "person-arrow-down-to-line",
+    "type": "solid"
+  },
+  {
+    "name": "person-arrow-up-from-line",
+    "label": "person-arrow-up-from-line",
+    "type": "solid"
+  },
+  {
+    "name": "person-biking",
+    "label": "person-biking",
+    "type": "solid"
+  },
+  {
+    "name": "person-booth",
+    "label": "person-booth",
+    "type": "solid"
+  },
+  {
+    "name": "person-breastfeeding",
+    "label": "person-breastfeeding",
+    "type": "solid"
+  },
+  {
+    "name": "person-burst",
+    "label": "person-burst",
+    "type": "solid"
+  },
+  {
+    "name": "person-cane",
+    "label": "person-cane",
+    "type": "solid"
+  },
+  {
+    "name": "person-chalkboard",
+    "label": "person-chalkboard",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-check",
+    "label": "person-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-exclamation",
+    "label": "person-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-minus",
+    "label": "person-circle-minus",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-plus",
+    "label": "person-circle-plus",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-question",
+    "label": "person-circle-question",
+    "type": "solid"
+  },
+  {
+    "name": "person-circle-xmark",
+    "label": "person-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "person-digging",
+    "label": "person-digging",
+    "type": "solid"
+  },
+  {
+    "name": "person-dots-from-line",
+    "label": "person-dots-from-line",
+    "type": "solid"
+  },
+  {
+    "name": "person-dress",
+    "label": "person-dress",
+    "type": "solid"
+  },
+  {
+    "name": "person-dress-burst",
+    "label": "person-dress-burst",
+    "type": "solid"
+  },
+  {
+    "name": "person-drowning",
+    "label": "person-drowning",
+    "type": "solid"
+  },
+  {
+    "name": "person-falling",
+    "label": "person-falling",
+    "type": "solid"
+  },
+  {
+    "name": "person-falling-burst",
+    "label": "person-falling-burst",
+    "type": "solid"
+  },
+  {
+    "name": "person-half-dress",
+    "label": "person-half-dress",
+    "type": "solid"
+  },
+  {
+    "name": "person-harassing",
+    "label": "person-harassing",
+    "type": "solid"
+  },
+  {
+    "name": "person-hiking",
+    "label": "person-hiking",
+    "type": "solid"
+  },
+  {
+    "name": "person-military-pointing",
+    "label": "person-military-pointing",
+    "type": "solid"
+  },
+  {
+    "name": "person-military-rifle",
+    "label": "person-military-rifle",
+    "type": "solid"
+  },
+  {
+    "name": "person-military-to-person",
+    "label": "person-military-to-person",
+    "type": "solid"
+  },
+  {
+    "name": "person-praying",
+    "label": "person-praying",
+    "type": "solid"
+  },
+  {
+    "name": "person-pregnant",
+    "label": "person-pregnant",
+    "type": "solid"
+  },
+  {
+    "name": "person-rays",
+    "label": "person-rays",
+    "type": "solid"
+  },
+  {
+    "name": "person-rifle",
+    "label": "person-rifle",
+    "type": "solid"
+  },
+  {
+    "name": "person-running",
+    "label": "person-running",
+    "type": "solid"
+  },
+  {
+    "name": "person-shelter",
+    "label": "person-shelter",
+    "type": "solid"
+  },
+  {
+    "name": "person-skating",
+    "label": "person-skating",
+    "type": "solid"
+  },
+  {
+    "name": "person-skiing",
+    "label": "person-skiing",
+    "type": "solid"
+  },
+  {
+    "name": "person-skiing-nordic",
+    "label": "person-skiing-nordic",
+    "type": "solid"
+  },
+  {
+    "name": "person-snowboarding",
+    "label": "person-snowboarding",
+    "type": "solid"
+  },
+  {
+    "name": "person-swimming",
+    "label": "person-swimming",
+    "type": "solid"
+  },
+  {
+    "name": "person-through-window",
+    "label": "person-through-window",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking",
+    "label": "person-walking",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking-arrow-loop-left",
+    "label": "person-walking-arrow-loop-left",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking-arrow-right",
+    "label": "person-walking-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking-dashed-line-arrow-right",
+    "label": "person-walking-dashed-line-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking-luggage",
+    "label": "person-walking-luggage",
+    "type": "solid"
+  },
+  {
+    "name": "person-walking-with-cane",
+    "label": "person-walking-with-cane",
+    "type": "solid"
+  },
+  {
+    "name": "peseta-sign",
+    "label": "peseta-sign",
+    "type": "solid"
+  },
+  {
+    "name": "peso-sign",
+    "label": "peso-sign",
+    "type": "solid"
+  },
+  {
+    "name": "phabricator",
+    "label": "phabricator",
+    "type": "brands"
+  },
+  {
+    "name": "phoenix-framework",
+    "label": "phoenix-framework",
+    "type": "brands"
+  },
+  {
+    "name": "phoenix-squadron",
+    "label": "phoenix-squadron",
+    "type": "brands"
+  },
+  {
+    "name": "phone",
+    "label": "phone",
+    "type": "solid"
+  },
+  {
+    "name": "phone-flip",
+    "label": "phone-flip",
+    "type": "solid"
+  },
+  {
+    "name": "phone-slash",
+    "label": "phone-slash",
+    "type": "solid"
+  },
+  {
+    "name": "phone-volume",
+    "label": "phone-volume",
+    "type": "solid"
+  },
+  {
+    "name": "photo-film",
+    "label": "photo-film",
+    "type": "solid"
+  },
+  {
+    "name": "php",
+    "label": "php",
+    "type": "brands"
+  },
+  {
+    "name": "pied-piper",
+    "label": "pied-piper",
+    "type": "brands"
+  },
+  {
+    "name": "pied-piper-alt",
+    "label": "pied-piper-alt",
+    "type": "brands"
+  },
+  {
+    "name": "pied-piper-hat",
+    "label": "pied-piper-hat",
+    "type": "brands"
+  },
+  {
+    "name": "pied-piper-pp",
+    "label": "pied-piper-pp",
+    "type": "brands"
+  },
+  {
+    "name": "piggy-bank",
+    "label": "piggy-bank",
+    "type": "solid"
+  },
+  {
+    "name": "pills",
+    "label": "pills",
+    "type": "solid"
+  },
+  {
+    "name": "pinterest",
+    "label": "pinterest",
+    "type": "brands"
+  },
+  {
+    "name": "pinterest-p",
+    "label": "pinterest-p",
+    "type": "brands"
+  },
+  {
+    "name": "pix",
+    "label": "pix",
+    "type": "brands"
+  },
+  {
+    "name": "pixiv",
+    "label": "pixiv",
+    "type": "brands"
+  },
+  {
+    "name": "pizza-slice",
+    "label": "pizza-slice",
+    "type": "solid"
+  },
+  {
+    "name": "place-of-worship",
+    "label": "place-of-worship",
+    "type": "solid"
+  },
+  {
+    "name": "plane",
+    "label": "plane",
+    "type": "solid"
+  },
+  {
+    "name": "plane-arrival",
+    "label": "plane-arrival",
+    "type": "solid"
+  },
+  {
+    "name": "plane-circle-check",
+    "label": "plane-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "plane-circle-exclamation",
+    "label": "plane-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "plane-circle-xmark",
+    "label": "plane-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "plane-departure",
+    "label": "plane-departure",
+    "type": "solid"
+  },
+  {
+    "name": "plane-lock",
+    "label": "plane-lock",
+    "type": "solid"
+  },
+  {
+    "name": "plane-slash",
+    "label": "plane-slash",
+    "type": "solid"
+  },
+  {
+    "name": "plane-up",
+    "label": "plane-up",
+    "type": "solid"
+  },
+  {
+    "name": "plant-wilt",
+    "label": "plant-wilt",
+    "type": "solid"
+  },
+  {
+    "name": "plate-wheat",
+    "label": "plate-wheat",
+    "type": "solid"
+  },
+  {
+    "name": "play",
+    "label": "play",
+    "type": "solid"
+  },
+  {
+    "name": "playstation",
+    "label": "playstation",
+    "type": "brands"
+  },
+  {
+    "name": "plug",
+    "label": "plug",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-bolt",
+    "label": "plug-circle-bolt",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-check",
+    "label": "plug-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-exclamation",
+    "label": "plug-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-minus",
+    "label": "plug-circle-minus",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-plus",
+    "label": "plug-circle-plus",
+    "type": "solid"
+  },
+  {
+    "name": "plug-circle-xmark",
+    "label": "plug-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "plus",
+    "label": "plus",
+    "type": "solid"
+  },
+  {
+    "name": "plus-minus",
+    "label": "plus-minus",
+    "type": "solid"
+  },
+  {
+    "name": "podcast",
+    "label": "podcast",
+    "type": "solid"
+  },
+  {
+    "name": "poo",
+    "label": "poo",
+    "type": "solid"
+  },
+  {
+    "name": "poo-storm",
+    "label": "poo-storm",
+    "type": "solid"
+  },
+  {
+    "name": "poop",
+    "label": "poop",
+    "type": "solid"
+  },
+  {
+    "name": "power-off",
+    "label": "power-off",
+    "type": "solid"
+  },
+  {
+    "name": "prescription",
+    "label": "prescription",
+    "type": "solid"
+  },
+  {
+    "name": "prescription-bottle",
+    "label": "prescription-bottle",
+    "type": "solid"
+  },
+  {
+    "name": "prescription-bottle-medical",
+    "label": "prescription-bottle-medical",
+    "type": "solid"
+  },
+  {
+    "name": "print",
+    "label": "print",
+    "type": "solid"
+  },
+  {
+    "name": "product-hunt",
+    "label": "product-hunt",
+    "type": "brands"
+  },
+  {
+    "name": "pump-medical",
+    "label": "pump-medical",
+    "type": "solid"
+  },
+  {
+    "name": "pump-soap",
+    "label": "pump-soap",
+    "type": "solid"
+  },
+  {
+    "name": "pushed",
+    "label": "pushed",
+    "type": "brands"
+  },
+  {
+    "name": "puzzle-piece",
+    "label": "puzzle-piece",
+    "type": "solid"
+  },
+  {
+    "name": "python",
+    "label": "python",
+    "type": "brands"
+  },
+  {
+    "name": "q",
+    "label": "q",
+    "type": "solid"
+  },
+  {
+    "name": "qq",
+    "label": "qq",
+    "type": "brands"
+  },
+  {
+    "name": "qrcode",
+    "label": "qrcode",
+    "type": "solid"
+  },
+  {
+    "name": "question",
+    "label": "question",
+    "type": "solid"
+  },
+  {
+    "name": "quinscape",
+    "label": "quinscape",
+    "type": "brands"
+  },
+  {
+    "name": "quora",
+    "label": "quora",
+    "type": "brands"
+  },
+  {
+    "name": "quote-left",
+    "label": "quote-left",
+    "type": "solid"
+  },
+  {
+    "name": "quote-right",
+    "label": "quote-right",
+    "type": "solid"
+  },
+  {
+    "name": "r",
+    "label": "r",
+    "type": "solid"
+  },
+  {
+    "name": "r-project",
+    "label": "r-project",
+    "type": "brands"
+  },
+  {
+    "name": "radiation",
+    "label": "radiation",
+    "type": "solid"
+  },
+  {
+    "name": "radio",
+    "label": "radio",
+    "type": "solid"
+  },
+  {
+    "name": "rainbow",
+    "label": "rainbow",
+    "type": "solid"
+  },
+  {
+    "name": "ranking-star",
+    "label": "ranking-star",
+    "type": "solid"
+  },
+  {
+    "name": "raspberry-pi",
+    "label": "raspberry-pi",
+    "type": "brands"
+  },
+  {
+    "name": "ravelry",
+    "label": "ravelry",
+    "type": "brands"
+  },
+  {
+    "name": "react",
+    "label": "react",
+    "type": "brands"
+  },
+  {
+    "name": "reacteurope",
+    "label": "reacteurope",
+    "type": "brands"
+  },
+  {
+    "name": "readme",
+    "label": "readme",
+    "type": "brands"
+  },
+  {
+    "name": "rebel",
+    "label": "rebel",
+    "type": "brands"
+  },
+  {
+    "name": "receipt",
+    "label": "receipt",
+    "type": "solid"
+  },
+  {
+    "name": "record-vinyl",
+    "label": "record-vinyl",
+    "type": "solid"
+  },
+  {
+    "name": "rectangle-ad",
+    "label": "rectangle-ad",
+    "type": "solid"
+  },
+  {
+    "name": "rectangle-list",
+    "label": "rectangle-list",
+    "type": "solid"
+  },
+  {
+    "name": "rectangle-list",
+    "label": "rectangle-list",
+    "type": "regular"
+  },
+  {
+    "name": "rectangle-xmark",
+    "label": "rectangle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "rectangle-xmark",
+    "label": "rectangle-xmark",
+    "type": "regular"
+  },
+  {
+    "name": "recycle",
+    "label": "recycle",
+    "type": "solid"
+  },
+  {
+    "name": "red-river",
+    "label": "red-river",
+    "type": "brands"
+  },
+  {
+    "name": "reddit",
+    "label": "reddit",
+    "type": "brands"
+  },
+  {
+    "name": "reddit-alien",
+    "label": "reddit-alien",
+    "type": "brands"
+  },
+  {
+    "name": "redhat",
+    "label": "redhat",
+    "type": "brands"
+  },
+  {
+    "name": "registered",
+    "label": "registered",
+    "type": "solid"
+  },
+  {
+    "name": "registered",
+    "label": "registered",
+    "type": "regular"
+  },
+  {
+    "name": "renren",
+    "label": "renren",
+    "type": "brands"
+  },
+  {
+    "name": "repeat",
+    "label": "repeat",
+    "type": "solid"
+  },
+  {
+    "name": "reply",
+    "label": "reply",
+    "type": "solid"
+  },
+  {
+    "name": "reply-all",
+    "label": "reply-all",
+    "type": "solid"
+  },
+  {
+    "name": "replyd",
+    "label": "replyd",
+    "type": "brands"
+  },
+  {
+    "name": "republican",
+    "label": "republican",
+    "type": "solid"
+  },
+  {
+    "name": "researchgate",
+    "label": "researchgate",
+    "type": "brands"
+  },
+  {
+    "name": "resolving",
+    "label": "resolving",
+    "type": "brands"
+  },
+  {
+    "name": "restroom",
+    "label": "restroom",
+    "type": "solid"
+  },
+  {
+    "name": "retweet",
+    "label": "retweet",
+    "type": "solid"
+  },
+  {
+    "name": "rev",
+    "label": "rev",
+    "type": "brands"
+  },
+  {
+    "name": "ribbon",
+    "label": "ribbon",
+    "type": "solid"
+  },
+  {
+    "name": "right-from-bracket",
+    "label": "right-from-bracket",
+    "type": "solid"
+  },
+  {
+    "name": "right-left",
+    "label": "right-left",
+    "type": "solid"
+  },
+  {
+    "name": "right-long",
+    "label": "right-long",
+    "type": "solid"
+  },
+  {
+    "name": "right-to-bracket",
+    "label": "right-to-bracket",
+    "type": "solid"
+  },
+  {
+    "name": "ring",
+    "label": "ring",
+    "type": "solid"
+  },
+  {
+    "name": "road",
+    "label": "road",
+    "type": "solid"
+  },
+  {
+    "name": "road-barrier",
+    "label": "road-barrier",
+    "type": "solid"
+  },
+  {
+    "name": "road-bridge",
+    "label": "road-bridge",
+    "type": "solid"
+  },
+  {
+    "name": "road-circle-check",
+    "label": "road-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "road-circle-exclamation",
+    "label": "road-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "road-circle-xmark",
+    "label": "road-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "road-lock",
+    "label": "road-lock",
+    "type": "solid"
+  },
+  {
+    "name": "road-spikes",
+    "label": "road-spikes",
+    "type": "solid"
+  },
+  {
+    "name": "robot",
+    "label": "robot",
+    "type": "solid"
+  },
+  {
+    "name": "rocket",
+    "label": "rocket",
+    "type": "solid"
+  },
+  {
+    "name": "rocketchat",
+    "label": "rocketchat",
+    "type": "brands"
+  },
+  {
+    "name": "rockrms",
+    "label": "rockrms",
+    "type": "brands"
+  },
+  {
+    "name": "rotate",
+    "label": "rotate",
+    "type": "solid"
+  },
+  {
+    "name": "rotate-left",
+    "label": "rotate-left",
+    "type": "solid"
+  },
+  {
+    "name": "rotate-right",
+    "label": "rotate-right",
+    "type": "solid"
+  },
+  {
+    "name": "route",
+    "label": "route",
+    "type": "solid"
+  },
+  {
+    "name": "rss",
+    "label": "rss",
+    "type": "solid"
+  },
+  {
+    "name": "ruble-sign",
+    "label": "ruble-sign",
+    "type": "solid"
+  },
+  {
+    "name": "rug",
+    "label": "rug",
+    "type": "solid"
+  },
+  {
+    "name": "ruler",
+    "label": "ruler",
+    "type": "solid"
+  },
+  {
+    "name": "ruler-combined",
+    "label": "ruler-combined",
+    "type": "solid"
+  },
+  {
+    "name": "ruler-horizontal",
+    "label": "ruler-horizontal",
+    "type": "solid"
+  },
+  {
+    "name": "ruler-vertical",
+    "label": "ruler-vertical",
+    "type": "solid"
+  },
+  {
+    "name": "rupee-sign",
+    "label": "rupee-sign",
+    "type": "solid"
+  },
+  {
+    "name": "rupiah-sign",
+    "label": "rupiah-sign",
+    "type": "solid"
+  },
+  {
+    "name": "rust",
+    "label": "rust",
+    "type": "brands"
+  },
+  {
+    "name": "s",
+    "label": "s",
+    "type": "solid"
+  },
+  {
+    "name": "sack-dollar",
+    "label": "sack-dollar",
+    "type": "solid"
+  },
+  {
+    "name": "sack-xmark",
+    "label": "sack-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "safari",
+    "label": "safari",
+    "type": "brands"
+  },
+  {
+    "name": "sailboat",
+    "label": "sailboat",
+    "type": "solid"
+  },
+  {
+    "name": "salesforce",
+    "label": "salesforce",
+    "type": "brands"
+  },
+  {
+    "name": "sass",
+    "label": "sass",
+    "type": "brands"
+  },
+  {
+    "name": "satellite",
+    "label": "satellite",
+    "type": "solid"
+  },
+  {
+    "name": "satellite-dish",
+    "label": "satellite-dish",
+    "type": "solid"
+  },
+  {
+    "name": "scale-balanced",
+    "label": "scale-balanced",
+    "type": "solid"
+  },
+  {
+    "name": "scale-unbalanced",
+    "label": "scale-unbalanced",
+    "type": "solid"
+  },
+  {
+    "name": "scale-unbalanced-flip",
+    "label": "scale-unbalanced-flip",
+    "type": "solid"
+  },
+  {
+    "name": "schlix",
+    "label": "schlix",
+    "type": "brands"
+  },
+  {
+    "name": "school",
+    "label": "school",
+    "type": "solid"
+  },
+  {
+    "name": "school-circle-check",
+    "label": "school-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "school-circle-exclamation",
+    "label": "school-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "school-circle-xmark",
+    "label": "school-circle-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "school-flag",
+    "label": "school-flag",
+    "type": "solid"
+  },
+  {
+    "name": "school-lock",
+    "label": "school-lock",
+    "type": "solid"
+  },
+  {
+    "name": "scissors",
+    "label": "scissors",
+    "type": "solid"
+  },
+  {
+    "name": "screenpal",
+    "label": "screenpal",
+    "type": "brands"
+  },
+  {
+    "name": "screwdriver",
+    "label": "screwdriver",
+    "type": "solid"
+  },
+  {
+    "name": "screwdriver-wrench",
+    "label": "screwdriver-wrench",
+    "type": "solid"
+  },
+  {
+    "name": "scribd",
+    "label": "scribd",
+    "type": "brands"
+  },
+  {
+    "name": "scroll",
+    "label": "scroll",
+    "type": "solid"
+  },
+  {
+    "name": "scroll-torah",
+    "label": "scroll-torah",
+    "type": "solid"
+  },
+  {
+    "name": "sd-card",
+    "label": "sd-card",
+    "type": "solid"
+  },
+  {
+    "name": "searchengin",
+    "label": "searchengin",
+    "type": "brands"
+  },
+  {
+    "name": "section",
+    "label": "section",
+    "type": "solid"
+  },
+  {
+    "name": "seedling",
+    "label": "seedling",
+    "type": "solid"
+  },
+  {
+    "name": "sellcast",
+    "label": "sellcast",
+    "type": "brands"
+  },
+  {
+    "name": "sellsy",
+    "label": "sellsy",
+    "type": "brands"
+  },
+  {
+    "name": "server",
+    "label": "server",
+    "type": "solid"
+  },
+  {
+    "name": "servicestack",
+    "label": "servicestack",
+    "type": "brands"
+  },
+  {
+    "name": "shapes",
+    "label": "shapes",
+    "type": "solid"
+  },
+  {
+    "name": "share",
+    "label": "share",
+    "type": "solid"
+  },
+  {
+    "name": "share-from-square",
+    "label": "share-from-square",
+    "type": "solid"
+  },
+  {
+    "name": "share-from-square",
+    "label": "share-from-square",
+    "type": "regular"
+  },
+  {
+    "name": "share-nodes",
+    "label": "share-nodes",
+    "type": "solid"
+  },
+  {
+    "name": "sheet-plastic",
+    "label": "sheet-plastic",
+    "type": "solid"
+  },
+  {
+    "name": "shekel-sign",
+    "label": "shekel-sign",
+    "type": "solid"
+  },
+  {
+    "name": "shield",
+    "label": "shield",
+    "type": "solid"
+  },
+  {
+    "name": "shield-cat",
+    "label": "shield-cat",
+    "type": "solid"
+  },
+  {
+    "name": "shield-dog",
+    "label": "shield-dog",
+    "type": "solid"
+  },
+  {
+    "name": "shield-halved",
+    "label": "shield-halved",
+    "type": "solid"
+  },
+  {
+    "name": "shield-heart",
+    "label": "shield-heart",
+    "type": "solid"
+  },
+  {
+    "name": "shield-virus",
+    "label": "shield-virus",
+    "type": "solid"
+  },
+  {
+    "name": "ship",
+    "label": "ship",
+    "type": "solid"
+  },
+  {
+    "name": "shirt",
+    "label": "shirt",
+    "type": "solid"
+  },
+  {
+    "name": "shirtsinbulk",
+    "label": "shirtsinbulk",
+    "type": "brands"
+  },
+  {
+    "name": "shoe-prints",
+    "label": "shoe-prints",
+    "type": "solid"
+  },
+  {
+    "name": "shoelace",
+    "label": "shoelace",
+    "type": "brands"
+  },
+  {
+    "name": "shop",
+    "label": "shop",
+    "type": "solid"
+  },
+  {
+    "name": "shop-lock",
+    "label": "shop-lock",
+    "type": "solid"
+  },
+  {
+    "name": "shop-slash",
+    "label": "shop-slash",
+    "type": "solid"
+  },
+  {
+    "name": "shopify",
+    "label": "shopify",
+    "type": "brands"
+  },
+  {
+    "name": "shopware",
+    "label": "shopware",
+    "type": "brands"
+  },
+  {
+    "name": "shower",
+    "label": "shower",
+    "type": "solid"
+  },
+  {
+    "name": "shrimp",
+    "label": "shrimp",
+    "type": "solid"
+  },
+  {
+    "name": "shuffle",
+    "label": "shuffle",
+    "type": "solid"
+  },
+  {
+    "name": "shuttle-space",
+    "label": "shuttle-space",
+    "type": "solid"
+  },
+  {
+    "name": "sign-hanging",
+    "label": "sign-hanging",
+    "type": "solid"
+  },
+  {
+    "name": "signal",
+    "label": "signal",
+    "type": "solid"
+  },
+  {
+    "name": "signal-messenger",
+    "label": "signal-messenger",
+    "type": "brands"
+  },
+  {
+    "name": "signature",
+    "label": "signature",
+    "type": "solid"
+  },
+  {
+    "name": "signs-post",
+    "label": "signs-post",
+    "type": "solid"
+  },
+  {
+    "name": "sim-card",
+    "label": "sim-card",
+    "type": "solid"
+  },
+  {
+    "name": "simplybuilt",
+    "label": "simplybuilt",
+    "type": "brands"
+  },
+  {
+    "name": "sink",
+    "label": "sink",
+    "type": "solid"
+  },
+  {
+    "name": "sistrix",
+    "label": "sistrix",
+    "type": "brands"
+  },
+  {
+    "name": "sitemap",
+    "label": "sitemap",
+    "type": "solid"
+  },
+  {
+    "name": "sith",
+    "label": "sith",
+    "type": "brands"
+  },
+  {
+    "name": "sitrox",
+    "label": "sitrox",
+    "type": "brands"
+  },
+  {
+    "name": "sketch",
+    "label": "sketch",
+    "type": "brands"
+  },
+  {
+    "name": "skull",
+    "label": "skull",
+    "type": "solid"
+  },
+  {
+    "name": "skull-crossbones",
+    "label": "skull-crossbones",
+    "type": "solid"
+  },
+  {
+    "name": "skyatlas",
+    "label": "skyatlas",
+    "type": "brands"
+  },
+  {
+    "name": "skype",
+    "label": "skype",
+    "type": "brands"
+  },
+  {
+    "name": "slack",
+    "label": "slack",
+    "type": "brands"
+  },
+  {
+    "name": "slash",
+    "label": "slash",
+    "type": "solid"
+  },
+  {
+    "name": "sleigh",
+    "label": "sleigh",
+    "type": "solid"
+  },
+  {
+    "name": "sliders",
+    "label": "sliders",
+    "type": "solid"
+  },
+  {
+    "name": "slideshare",
+    "label": "slideshare",
+    "type": "brands"
+  },
+  {
+    "name": "smog",
+    "label": "smog",
+    "type": "solid"
+  },
+  {
+    "name": "smoking",
+    "label": "smoking",
+    "type": "solid"
+  },
+  {
+    "name": "snapchat",
+    "label": "snapchat",
+    "type": "brands"
+  },
+  {
+    "name": "snowflake",
+    "label": "snowflake",
+    "type": "solid"
+  },
+  {
+    "name": "snowflake",
+    "label": "snowflake",
+    "type": "regular"
+  },
+  {
+    "name": "snowman",
+    "label": "snowman",
+    "type": "solid"
+  },
+  {
+    "name": "snowplow",
+    "label": "snowplow",
+    "type": "solid"
+  },
+  {
+    "name": "soap",
+    "label": "soap",
+    "type": "solid"
+  },
+  {
+    "name": "socks",
+    "label": "socks",
+    "type": "solid"
+  },
+  {
+    "name": "solar-panel",
+    "label": "solar-panel",
+    "type": "solid"
+  },
+  {
+    "name": "sort",
+    "label": "sort",
+    "type": "solid"
+  },
+  {
+    "name": "sort-down",
+    "label": "sort-down",
+    "type": "solid"
+  },
+  {
+    "name": "sort-up",
+    "label": "sort-up",
+    "type": "solid"
+  },
+  {
+    "name": "soundcloud",
+    "label": "soundcloud",
+    "type": "brands"
+  },
+  {
+    "name": "sourcetree",
+    "label": "sourcetree",
+    "type": "brands"
+  },
+  {
+    "name": "spa",
+    "label": "spa",
+    "type": "solid"
+  },
+  {
+    "name": "space-awesome",
+    "label": "space-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "spaghetti-monster-flying",
+    "label": "spaghetti-monster-flying",
+    "type": "solid"
+  },
+  {
+    "name": "speakap",
+    "label": "speakap",
+    "type": "brands"
+  },
+  {
+    "name": "speaker-deck",
+    "label": "speaker-deck",
+    "type": "brands"
+  },
+  {
+    "name": "spell-check",
+    "label": "spell-check",
+    "type": "solid"
+  },
+  {
+    "name": "spider",
+    "label": "spider",
+    "type": "solid"
+  },
+  {
+    "name": "spinner",
+    "label": "spinner",
+    "type": "solid"
+  },
+  {
+    "name": "splotch",
+    "label": "splotch",
+    "type": "solid"
+  },
+  {
+    "name": "spoon",
+    "label": "spoon",
+    "type": "solid"
+  },
+  {
+    "name": "spotify",
+    "label": "spotify",
+    "type": "brands"
+  },
+  {
+    "name": "spray-can",
+    "label": "spray-can",
+    "type": "solid"
+  },
+  {
+    "name": "spray-can-sparkles",
+    "label": "spray-can-sparkles",
+    "type": "solid"
+  },
+  {
+    "name": "square",
+    "label": "square",
+    "type": "solid"
+  },
+  {
+    "name": "square",
+    "label": "square",
+    "type": "regular"
+  },
+  {
+    "name": "square-arrow-up-right",
+    "label": "square-arrow-up-right",
+    "type": "solid"
+  },
+  {
+    "name": "square-behance",
+    "label": "square-behance",
+    "type": "brands"
+  },
+  {
+    "name": "square-caret-down",
+    "label": "square-caret-down",
+    "type": "solid"
+  },
+  {
+    "name": "square-caret-down",
+    "label": "square-caret-down",
+    "type": "regular"
+  },
+  {
+    "name": "square-caret-left",
+    "label": "square-caret-left",
+    "type": "solid"
+  },
+  {
+    "name": "square-caret-left",
+    "label": "square-caret-left",
+    "type": "regular"
+  },
+  {
+    "name": "square-caret-right",
+    "label": "square-caret-right",
+    "type": "solid"
+  },
+  {
+    "name": "square-caret-right",
+    "label": "square-caret-right",
+    "type": "regular"
+  },
+  {
+    "name": "square-caret-up",
+    "label": "square-caret-up",
+    "type": "solid"
+  },
+  {
+    "name": "square-caret-up",
+    "label": "square-caret-up",
+    "type": "regular"
+  },
+  {
+    "name": "square-check",
+    "label": "square-check",
+    "type": "solid"
+  },
+  {
+    "name": "square-check",
+    "label": "square-check",
+    "type": "regular"
+  },
+  {
+    "name": "square-dribbble",
+    "label": "square-dribbble",
+    "type": "brands"
+  },
+  {
+    "name": "square-envelope",
+    "label": "square-envelope",
+    "type": "solid"
+  },
+  {
+    "name": "square-facebook",
+    "label": "square-facebook",
+    "type": "brands"
+  },
+  {
+    "name": "square-font-awesome",
+    "label": "square-font-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "square-font-awesome-stroke",
+    "label": "square-font-awesome-stroke",
+    "type": "brands"
+  },
+  {
+    "name": "square-full",
+    "label": "square-full",
+    "type": "solid"
+  },
+  {
+    "name": "square-full",
+    "label": "square-full",
+    "type": "regular"
+  },
+  {
+    "name": "square-git",
+    "label": "square-git",
+    "type": "brands"
+  },
+  {
+    "name": "square-github",
+    "label": "square-github",
+    "type": "brands"
+  },
+  {
+    "name": "square-gitlab",
+    "label": "square-gitlab",
+    "type": "brands"
+  },
+  {
+    "name": "square-google-plus",
+    "label": "square-google-plus",
+    "type": "brands"
+  },
+  {
+    "name": "square-h",
+    "label": "square-h",
+    "type": "solid"
+  },
+  {
+    "name": "square-hacker-news",
+    "label": "square-hacker-news",
+    "type": "brands"
+  },
+  {
+    "name": "square-instagram",
+    "label": "square-instagram",
+    "type": "brands"
+  },
+  {
+    "name": "square-js",
+    "label": "square-js",
+    "type": "brands"
+  },
+  {
+    "name": "square-lastfm",
+    "label": "square-lastfm",
+    "type": "brands"
+  },
+  {
+    "name": "square-letterboxd",
+    "label": "square-letterboxd",
+    "type": "brands"
+  },
+  {
+    "name": "square-minus",
+    "label": "square-minus",
+    "type": "solid"
+  },
+  {
+    "name": "square-minus",
+    "label": "square-minus",
+    "type": "regular"
+  },
+  {
+    "name": "square-nfi",
+    "label": "square-nfi",
+    "type": "solid"
+  },
+  {
+    "name": "square-odnoklassniki",
+    "label": "square-odnoklassniki",
+    "type": "brands"
+  },
+  {
+    "name": "square-parking",
+    "label": "square-parking",
+    "type": "solid"
+  },
+  {
+    "name": "square-pen",
+    "label": "square-pen",
+    "type": "solid"
+  },
+  {
+    "name": "square-person-confined",
+    "label": "square-person-confined",
+    "type": "solid"
+  },
+  {
+    "name": "square-phone",
+    "label": "square-phone",
+    "type": "solid"
+  },
+  {
+    "name": "square-phone-flip",
+    "label": "square-phone-flip",
+    "type": "solid"
+  },
+  {
+    "name": "square-pied-piper",
+    "label": "square-pied-piper",
+    "type": "brands"
+  },
+  {
+    "name": "square-pinterest",
+    "label": "square-pinterest",
+    "type": "brands"
+  },
+  {
+    "name": "square-plus",
+    "label": "square-plus",
+    "type": "solid"
+  },
+  {
+    "name": "square-plus",
+    "label": "square-plus",
+    "type": "regular"
+  },
+  {
+    "name": "square-poll-horizontal",
+    "label": "square-poll-horizontal",
+    "type": "solid"
+  },
+  {
+    "name": "square-poll-vertical",
+    "label": "square-poll-vertical",
+    "type": "solid"
+  },
+  {
+    "name": "square-reddit",
+    "label": "square-reddit",
+    "type": "brands"
+  },
+  {
+    "name": "square-root-variable",
+    "label": "square-root-variable",
+    "type": "solid"
+  },
+  {
+    "name": "square-rss",
+    "label": "square-rss",
+    "type": "solid"
+  },
+  {
+    "name": "square-share-nodes",
+    "label": "square-share-nodes",
+    "type": "solid"
+  },
+  {
+    "name": "square-snapchat",
+    "label": "square-snapchat",
+    "type": "brands"
+  },
+  {
+    "name": "square-steam",
+    "label": "square-steam",
+    "type": "brands"
+  },
+  {
+    "name": "square-threads",
+    "label": "square-threads",
+    "type": "brands"
+  },
+  {
+    "name": "square-tumblr",
+    "label": "square-tumblr",
+    "type": "brands"
+  },
+  {
+    "name": "square-twitter",
+    "label": "square-twitter",
+    "type": "brands"
+  },
+  {
+    "name": "square-up-right",
+    "label": "square-up-right",
+    "type": "solid"
+  },
+  {
+    "name": "square-upwork",
+    "label": "square-upwork",
+    "type": "brands"
+  },
+  {
+    "name": "square-viadeo",
+    "label": "square-viadeo",
+    "type": "brands"
+  },
+  {
+    "name": "square-vimeo",
+    "label": "square-vimeo",
+    "type": "brands"
+  },
+  {
+    "name": "square-virus",
+    "label": "square-virus",
+    "type": "solid"
+  },
+  {
+    "name": "square-web-awesome",
+    "label": "square-web-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "square-web-awesome-stroke",
+    "label": "square-web-awesome-stroke",
+    "type": "brands"
+  },
+  {
+    "name": "square-whatsapp",
+    "label": "square-whatsapp",
+    "type": "brands"
+  },
+  {
+    "name": "square-x-twitter",
+    "label": "square-x-twitter",
+    "type": "brands"
+  },
+  {
+    "name": "square-xing",
+    "label": "square-xing",
+    "type": "brands"
+  },
+  {
+    "name": "square-xmark",
+    "label": "square-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "square-youtube",
+    "label": "square-youtube",
+    "type": "brands"
+  },
+  {
+    "name": "squarespace",
+    "label": "squarespace",
+    "type": "brands"
+  },
+  {
+    "name": "stack-exchange",
+    "label": "stack-exchange",
+    "type": "brands"
+  },
+  {
+    "name": "stack-overflow",
+    "label": "stack-overflow",
+    "type": "brands"
+  },
+  {
+    "name": "stackpath",
+    "label": "stackpath",
+    "type": "brands"
+  },
+  {
+    "name": "staff-snake",
+    "label": "staff-snake",
+    "type": "solid"
+  },
+  {
+    "name": "stairs",
+    "label": "stairs",
+    "type": "solid"
+  },
+  {
+    "name": "stamp",
+    "label": "stamp",
+    "type": "solid"
+  },
+  {
+    "name": "stapler",
+    "label": "stapler",
+    "type": "solid"
+  },
+  {
+    "name": "star",
+    "label": "star",
+    "type": "solid"
+  },
+  {
+    "name": "star",
+    "label": "star",
+    "type": "regular"
+  },
+  {
+    "name": "star-and-crescent",
+    "label": "star-and-crescent",
+    "type": "solid"
+  },
+  {
+    "name": "star-half",
+    "label": "star-half",
+    "type": "solid"
+  },
+  {
+    "name": "star-half",
+    "label": "star-half",
+    "type": "regular"
+  },
+  {
+    "name": "star-half-stroke",
+    "label": "star-half-stroke",
+    "type": "solid"
+  },
+  {
+    "name": "star-half-stroke",
+    "label": "star-half-stroke",
+    "type": "regular"
+  },
+  {
+    "name": "star-of-david",
+    "label": "star-of-david",
+    "type": "solid"
+  },
+  {
+    "name": "star-of-life",
+    "label": "star-of-life",
+    "type": "solid"
+  },
+  {
+    "name": "staylinked",
+    "label": "staylinked",
+    "type": "brands"
+  },
+  {
+    "name": "steam",
+    "label": "steam",
+    "type": "brands"
+  },
+  {
+    "name": "steam-symbol",
+    "label": "steam-symbol",
+    "type": "brands"
+  },
+  {
+    "name": "sterling-sign",
+    "label": "sterling-sign",
+    "type": "solid"
+  },
+  {
+    "name": "stethoscope",
+    "label": "stethoscope",
+    "type": "solid"
+  },
+  {
+    "name": "sticker-mule",
+    "label": "sticker-mule",
+    "type": "brands"
+  },
+  {
+    "name": "stop",
+    "label": "stop",
+    "type": "solid"
+  },
+  {
+    "name": "stopwatch",
+    "label": "stopwatch",
+    "type": "solid"
+  },
+  {
+    "name": "stopwatch-20",
+    "label": "stopwatch-20",
+    "type": "solid"
+  },
+  {
+    "name": "store",
+    "label": "store",
+    "type": "solid"
+  },
+  {
+    "name": "store-slash",
+    "label": "store-slash",
+    "type": "solid"
+  },
+  {
+    "name": "strava",
+    "label": "strava",
+    "type": "brands"
+  },
+  {
+    "name": "street-view",
+    "label": "street-view",
+    "type": "solid"
+  },
+  {
+    "name": "strikethrough",
+    "label": "strikethrough",
+    "type": "solid"
+  },
+  {
+    "name": "stripe",
+    "label": "stripe",
+    "type": "brands"
+  },
+  {
+    "name": "stripe-s",
+    "label": "stripe-s",
+    "type": "brands"
+  },
+  {
+    "name": "stroopwafel",
+    "label": "stroopwafel",
+    "type": "solid"
+  },
+  {
+    "name": "stubber",
+    "label": "stubber",
+    "type": "brands"
+  },
+  {
+    "name": "studiovinari",
+    "label": "studiovinari",
+    "type": "brands"
+  },
+  {
+    "name": "stumbleupon",
+    "label": "stumbleupon",
+    "type": "brands"
+  },
+  {
+    "name": "stumbleupon-circle",
+    "label": "stumbleupon-circle",
+    "type": "brands"
+  },
+  {
+    "name": "subscript",
+    "label": "subscript",
+    "type": "solid"
+  },
+  {
+    "name": "suitcase",
+    "label": "suitcase",
+    "type": "solid"
+  },
+  {
+    "name": "suitcase-medical",
+    "label": "suitcase-medical",
+    "type": "solid"
+  },
+  {
+    "name": "suitcase-rolling",
+    "label": "suitcase-rolling",
+    "type": "solid"
+  },
+  {
+    "name": "sun",
+    "label": "sun",
+    "type": "solid"
+  },
+  {
+    "name": "sun",
+    "label": "sun",
+    "type": "regular"
+  },
+  {
+    "name": "sun-plant-wilt",
+    "label": "sun-plant-wilt",
+    "type": "solid"
+  },
+  {
+    "name": "superpowers",
+    "label": "superpowers",
+    "type": "brands"
+  },
+  {
+    "name": "superscript",
+    "label": "superscript",
+    "type": "solid"
+  },
+  {
+    "name": "supple",
+    "label": "supple",
+    "type": "brands"
+  },
+  {
+    "name": "suse",
+    "label": "suse",
+    "type": "brands"
+  },
+  {
+    "name": "swatchbook",
+    "label": "swatchbook",
+    "type": "solid"
+  },
+  {
+    "name": "swift",
+    "label": "swift",
+    "type": "brands"
+  },
+  {
+    "name": "symfony",
+    "label": "symfony",
+    "type": "brands"
+  },
+  {
+    "name": "synagogue",
+    "label": "synagogue",
+    "type": "solid"
+  },
+  {
+    "name": "syringe",
+    "label": "syringe",
+    "type": "solid"
+  },
+  {
+    "name": "t",
+    "label": "t",
+    "type": "solid"
+  },
+  {
+    "name": "table",
+    "label": "table",
+    "type": "solid"
+  },
+  {
+    "name": "table-cells",
+    "label": "table-cells",
+    "type": "solid"
+  },
+  {
+    "name": "table-cells-column-lock",
+    "label": "table-cells-column-lock",
+    "type": "solid"
+  },
+  {
+    "name": "table-cells-large",
+    "label": "table-cells-large",
+    "type": "solid"
+  },
+  {
+    "name": "table-cells-row-lock",
+    "label": "table-cells-row-lock",
+    "type": "solid"
+  },
+  {
+    "name": "table-cells-row-unlock",
+    "label": "table-cells-row-unlock",
+    "type": "solid"
+  },
+  {
+    "name": "table-columns",
+    "label": "table-columns",
+    "type": "solid"
+  },
+  {
+    "name": "table-list",
+    "label": "table-list",
+    "type": "solid"
+  },
+  {
+    "name": "table-tennis-paddle-ball",
+    "label": "table-tennis-paddle-ball",
+    "type": "solid"
+  },
+  {
+    "name": "tablet",
+    "label": "tablet",
+    "type": "solid"
+  },
+  {
+    "name": "tablet-button",
+    "label": "tablet-button",
+    "type": "solid"
+  },
+  {
+    "name": "tablet-screen-button",
+    "label": "tablet-screen-button",
+    "type": "solid"
+  },
+  {
+    "name": "tablets",
+    "label": "tablets",
+    "type": "solid"
+  },
+  {
+    "name": "tachograph-digital",
+    "label": "tachograph-digital",
+    "type": "solid"
+  },
+  {
+    "name": "tag",
+    "label": "tag",
+    "type": "solid"
+  },
+  {
+    "name": "tags",
+    "label": "tags",
+    "type": "solid"
+  },
+  {
+    "name": "tape",
+    "label": "tape",
+    "type": "solid"
+  },
+  {
+    "name": "tarp",
+    "label": "tarp",
+    "type": "solid"
+  },
+  {
+    "name": "tarp-droplet",
+    "label": "tarp-droplet",
+    "type": "solid"
+  },
+  {
+    "name": "taxi",
+    "label": "taxi",
+    "type": "solid"
+  },
+  {
+    "name": "teamspeak",
+    "label": "teamspeak",
+    "type": "brands"
+  },
+  {
+    "name": "teeth",
+    "label": "teeth",
+    "type": "solid"
+  },
+  {
+    "name": "teeth-open",
+    "label": "teeth-open",
+    "type": "solid"
+  },
+  {
+    "name": "telegram",
+    "label": "telegram",
+    "type": "brands"
+  },
+  {
+    "name": "temperature-arrow-down",
+    "label": "temperature-arrow-down",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-arrow-up",
+    "label": "temperature-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-empty",
+    "label": "temperature-empty",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-full",
+    "label": "temperature-full",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-half",
+    "label": "temperature-half",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-high",
+    "label": "temperature-high",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-low",
+    "label": "temperature-low",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-quarter",
+    "label": "temperature-quarter",
+    "type": "solid"
+  },
+  {
+    "name": "temperature-three-quarters",
+    "label": "temperature-three-quarters",
+    "type": "solid"
+  },
+  {
+    "name": "tencent-weibo",
+    "label": "tencent-weibo",
+    "type": "brands"
+  },
+  {
+    "name": "tenge-sign",
+    "label": "tenge-sign",
+    "type": "solid"
+  },
+  {
+    "name": "tent",
+    "label": "tent",
+    "type": "solid"
+  },
+  {
+    "name": "tent-arrow-down-to-line",
+    "label": "tent-arrow-down-to-line",
+    "type": "solid"
+  },
+  {
+    "name": "tent-arrow-left-right",
+    "label": "tent-arrow-left-right",
+    "type": "solid"
+  },
+  {
+    "name": "tent-arrow-turn-left",
+    "label": "tent-arrow-turn-left",
+    "type": "solid"
+  },
+  {
+    "name": "tent-arrows-down",
+    "label": "tent-arrows-down",
+    "type": "solid"
+  },
+  {
+    "name": "tents",
+    "label": "tents",
+    "type": "solid"
+  },
+  {
+    "name": "terminal",
+    "label": "terminal",
+    "type": "solid"
+  },
+  {
+    "name": "text-height",
+    "label": "text-height",
+    "type": "solid"
+  },
+  {
+    "name": "text-slash",
+    "label": "text-slash",
+    "type": "solid"
+  },
+  {
+    "name": "text-width",
+    "label": "text-width",
+    "type": "solid"
+  },
+  {
+    "name": "the-red-yeti",
+    "label": "the-red-yeti",
+    "type": "brands"
+  },
+  {
+    "name": "themeco",
+    "label": "themeco",
+    "type": "brands"
+  },
+  {
+    "name": "themeisle",
+    "label": "themeisle",
+    "type": "brands"
+  },
+  {
+    "name": "thermometer",
+    "label": "thermometer",
+    "type": "solid"
+  },
+  {
+    "name": "think-peaks",
+    "label": "think-peaks",
+    "type": "brands"
+  },
+  {
+    "name": "threads",
+    "label": "threads",
+    "type": "brands"
+  },
+  {
+    "name": "thumbs-down",
+    "label": "thumbs-down",
+    "type": "solid"
+  },
+  {
+    "name": "thumbs-down",
+    "label": "thumbs-down",
+    "type": "regular"
+  },
+  {
+    "name": "thumbs-up",
+    "label": "thumbs-up",
+    "type": "solid"
+  },
+  {
+    "name": "thumbs-up",
+    "label": "thumbs-up",
+    "type": "regular"
+  },
+  {
+    "name": "thumbtack",
+    "label": "thumbtack",
+    "type": "solid"
+  },
+  {
+    "name": "thumbtack-slash",
+    "label": "thumbtack-slash",
+    "type": "solid"
+  },
+  {
+    "name": "ticket",
+    "label": "ticket",
+    "type": "solid"
+  },
+  {
+    "name": "ticket-simple",
+    "label": "ticket-simple",
+    "type": "solid"
+  },
+  {
+    "name": "tiktok",
+    "label": "tiktok",
+    "type": "brands"
+  },
+  {
+    "name": "timeline",
+    "label": "timeline",
+    "type": "solid"
+  },
+  {
+    "name": "toggle-off",
+    "label": "toggle-off",
+    "type": "solid"
+  },
+  {
+    "name": "toggle-on",
+    "label": "toggle-on",
+    "type": "solid"
+  },
+  {
+    "name": "toilet",
+    "label": "toilet",
+    "type": "solid"
+  },
+  {
+    "name": "toilet-paper",
+    "label": "toilet-paper",
+    "type": "solid"
+  },
+  {
+    "name": "toilet-paper-slash",
+    "label": "toilet-paper-slash",
+    "type": "solid"
+  },
+  {
+    "name": "toilet-portable",
+    "label": "toilet-portable",
+    "type": "solid"
+  },
+  {
+    "name": "toilets-portable",
+    "label": "toilets-portable",
+    "type": "solid"
+  },
+  {
+    "name": "toolbox",
+    "label": "toolbox",
+    "type": "solid"
+  },
+  {
+    "name": "tooth",
+    "label": "tooth",
+    "type": "solid"
+  },
+  {
+    "name": "torii-gate",
+    "label": "torii-gate",
+    "type": "solid"
+  },
+  {
+    "name": "tornado",
+    "label": "tornado",
+    "type": "solid"
+  },
+  {
+    "name": "tower-broadcast",
+    "label": "tower-broadcast",
+    "type": "solid"
+  },
+  {
+    "name": "tower-cell",
+    "label": "tower-cell",
+    "type": "solid"
+  },
+  {
+    "name": "tower-observation",
+    "label": "tower-observation",
+    "type": "solid"
+  },
+  {
+    "name": "tractor",
+    "label": "tractor",
+    "type": "solid"
+  },
+  {
+    "name": "trade-federation",
+    "label": "trade-federation",
+    "type": "brands"
+  },
+  {
+    "name": "trademark",
+    "label": "trademark",
+    "type": "solid"
+  },
+  {
+    "name": "traffic-light",
+    "label": "traffic-light",
+    "type": "solid"
+  },
+  {
+    "name": "trailer",
+    "label": "trailer",
+    "type": "solid"
+  },
+  {
+    "name": "train",
+    "label": "train",
+    "type": "solid"
+  },
+  {
+    "name": "train-subway",
+    "label": "train-subway",
+    "type": "solid"
+  },
+  {
+    "name": "train-tram",
+    "label": "train-tram",
+    "type": "solid"
+  },
+  {
+    "name": "transgender",
+    "label": "transgender",
+    "type": "solid"
+  },
+  {
+    "name": "trash",
+    "label": "trash",
+    "type": "solid"
+  },
+  {
+    "name": "trash-arrow-up",
+    "label": "trash-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "trash-can",
+    "label": "trash-can",
+    "type": "solid"
+  },
+  {
+    "name": "trash-can",
+    "label": "trash-can",
+    "type": "regular"
+  },
+  {
+    "name": "trash-can-arrow-up",
+    "label": "trash-can-arrow-up",
+    "type": "solid"
+  },
+  {
+    "name": "tree",
+    "label": "tree",
+    "type": "solid"
+  },
+  {
+    "name": "tree-city",
+    "label": "tree-city",
+    "type": "solid"
+  },
+  {
+    "name": "trello",
+    "label": "trello",
+    "type": "brands"
+  },
+  {
+    "name": "triangle-exclamation",
+    "label": "triangle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "trophy",
+    "label": "trophy",
+    "type": "solid"
+  },
+  {
+    "name": "trowel",
+    "label": "trowel",
+    "type": "solid"
+  },
+  {
+    "name": "trowel-bricks",
+    "label": "trowel-bricks",
+    "type": "solid"
+  },
+  {
+    "name": "truck",
+    "label": "truck",
+    "type": "solid"
+  },
+  {
+    "name": "truck-arrow-right",
+    "label": "truck-arrow-right",
+    "type": "solid"
+  },
+  {
+    "name": "truck-droplet",
+    "label": "truck-droplet",
+    "type": "solid"
+  },
+  {
+    "name": "truck-fast",
+    "label": "truck-fast",
+    "type": "solid"
+  },
+  {
+    "name": "truck-field",
+    "label": "truck-field",
+    "type": "solid"
+  },
+  {
+    "name": "truck-field-un",
+    "label": "truck-field-un",
+    "type": "solid"
+  },
+  {
+    "name": "truck-front",
+    "label": "truck-front",
+    "type": "solid"
+  },
+  {
+    "name": "truck-medical",
+    "label": "truck-medical",
+    "type": "solid"
+  },
+  {
+    "name": "truck-monster",
+    "label": "truck-monster",
+    "type": "solid"
+  },
+  {
+    "name": "truck-moving",
+    "label": "truck-moving",
+    "type": "solid"
+  },
+  {
+    "name": "truck-pickup",
+    "label": "truck-pickup",
+    "type": "solid"
+  },
+  {
+    "name": "truck-plane",
+    "label": "truck-plane",
+    "type": "solid"
+  },
+  {
+    "name": "truck-ramp-box",
+    "label": "truck-ramp-box",
+    "type": "solid"
+  },
+  {
+    "name": "tty",
+    "label": "tty",
+    "type": "solid"
+  },
+  {
+    "name": "tumblr",
+    "label": "tumblr",
+    "type": "brands"
+  },
+  {
+    "name": "turkish-lira-sign",
+    "label": "turkish-lira-sign",
+    "type": "solid"
+  },
+  {
+    "name": "turn-down",
+    "label": "turn-down",
+    "type": "solid"
+  },
+  {
+    "name": "turn-up",
+    "label": "turn-up",
+    "type": "solid"
+  },
+  {
+    "name": "tv",
+    "label": "tv",
+    "type": "solid"
+  },
+  {
+    "name": "twitch",
+    "label": "twitch",
+    "type": "brands"
+  },
+  {
+    "name": "twitter",
+    "label": "twitter",
+    "type": "brands"
+  },
+  {
+    "name": "typo3",
+    "label": "typo3",
+    "type": "brands"
+  },
+  {
+    "name": "u",
+    "label": "u",
+    "type": "solid"
+  },
+  {
+    "name": "uber",
+    "label": "uber",
+    "type": "brands"
+  },
+  {
+    "name": "ubuntu",
+    "label": "ubuntu",
+    "type": "brands"
+  },
+  {
+    "name": "uikit",
+    "label": "uikit",
+    "type": "brands"
+  },
+  {
+    "name": "umbraco",
+    "label": "umbraco",
+    "type": "brands"
+  },
+  {
+    "name": "umbrella",
+    "label": "umbrella",
+    "type": "solid"
+  },
+  {
+    "name": "umbrella-beach",
+    "label": "umbrella-beach",
+    "type": "solid"
+  },
+  {
+    "name": "uncharted",
+    "label": "uncharted",
+    "type": "brands"
+  },
+  {
+    "name": "underline",
+    "label": "underline",
+    "type": "solid"
+  },
+  {
+    "name": "uniregistry",
+    "label": "uniregistry",
+    "type": "brands"
+  },
+  {
+    "name": "unity",
+    "label": "unity",
+    "type": "brands"
+  },
+  {
+    "name": "universal-access",
+    "label": "universal-access",
+    "type": "solid"
+  },
+  {
+    "name": "unlock",
+    "label": "unlock",
+    "type": "solid"
+  },
+  {
+    "name": "unlock-keyhole",
+    "label": "unlock-keyhole",
+    "type": "solid"
+  },
+  {
+    "name": "unsplash",
+    "label": "unsplash",
+    "type": "brands"
+  },
+  {
+    "name": "untappd",
+    "label": "untappd",
+    "type": "brands"
+  },
+  {
+    "name": "up-down",
+    "label": "up-down",
+    "type": "solid"
+  },
+  {
+    "name": "up-down-left-right",
+    "label": "up-down-left-right",
+    "type": "solid"
+  },
+  {
+    "name": "up-long",
+    "label": "up-long",
+    "type": "solid"
+  },
+  {
+    "name": "up-right-and-down-left-from-center",
+    "label": "up-right-and-down-left-from-center",
+    "type": "solid"
+  },
+  {
+    "name": "up-right-from-square",
+    "label": "up-right-from-square",
+    "type": "solid"
+  },
+  {
+    "name": "upload",
+    "label": "upload",
+    "type": "solid"
+  },
+  {
+    "name": "ups",
+    "label": "ups",
+    "type": "brands"
+  },
+  {
+    "name": "upwork",
+    "label": "upwork",
+    "type": "brands"
+  },
+  {
+    "name": "usb",
+    "label": "usb",
+    "type": "brands"
+  },
+  {
+    "name": "user",
+    "label": "user",
+    "type": "solid"
+  },
+  {
+    "name": "user",
+    "label": "user",
+    "type": "regular"
+  },
+  {
+    "name": "user-astronaut",
+    "label": "user-astronaut",
+    "type": "solid"
+  },
+  {
+    "name": "user-check",
+    "label": "user-check",
+    "type": "solid"
+  },
+  {
+    "name": "user-clock",
+    "label": "user-clock",
+    "type": "solid"
+  },
+  {
+    "name": "user-doctor",
+    "label": "user-doctor",
+    "type": "solid"
+  },
+  {
+    "name": "user-gear",
+    "label": "user-gear",
+    "type": "solid"
+  },
+  {
+    "name": "user-graduate",
+    "label": "user-graduate",
+    "type": "solid"
+  },
+  {
+    "name": "user-group",
+    "label": "user-group",
+    "type": "solid"
+  },
+  {
+    "name": "user-injured",
+    "label": "user-injured",
+    "type": "solid"
+  },
+  {
+    "name": "user-large",
+    "label": "user-large",
+    "type": "solid"
+  },
+  {
+    "name": "user-large-slash",
+    "label": "user-large-slash",
+    "type": "solid"
+  },
+  {
+    "name": "user-lock",
+    "label": "user-lock",
+    "type": "solid"
+  },
+  {
+    "name": "user-minus",
+    "label": "user-minus",
+    "type": "solid"
+  },
+  {
+    "name": "user-ninja",
+    "label": "user-ninja",
+    "type": "solid"
+  },
+  {
+    "name": "user-nurse",
+    "label": "user-nurse",
+    "type": "solid"
+  },
+  {
+    "name": "user-pen",
+    "label": "user-pen",
+    "type": "solid"
+  },
+  {
+    "name": "user-plus",
+    "label": "user-plus",
+    "type": "solid"
+  },
+  {
+    "name": "user-secret",
+    "label": "user-secret",
+    "type": "solid"
+  },
+  {
+    "name": "user-shield",
+    "label": "user-shield",
+    "type": "solid"
+  },
+  {
+    "name": "user-slash",
+    "label": "user-slash",
+    "type": "solid"
+  },
+  {
+    "name": "user-tag",
+    "label": "user-tag",
+    "type": "solid"
+  },
+  {
+    "name": "user-tie",
+    "label": "user-tie",
+    "type": "solid"
+  },
+  {
+    "name": "user-xmark",
+    "label": "user-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "users",
+    "label": "users",
+    "type": "solid"
+  },
+  {
+    "name": "users-between-lines",
+    "label": "users-between-lines",
+    "type": "solid"
+  },
+  {
+    "name": "users-gear",
+    "label": "users-gear",
+    "type": "solid"
+  },
+  {
+    "name": "users-line",
+    "label": "users-line",
+    "type": "solid"
+  },
+  {
+    "name": "users-rays",
+    "label": "users-rays",
+    "type": "solid"
+  },
+  {
+    "name": "users-rectangle",
+    "label": "users-rectangle",
+    "type": "solid"
+  },
+  {
+    "name": "users-slash",
+    "label": "users-slash",
+    "type": "solid"
+  },
+  {
+    "name": "users-viewfinder",
+    "label": "users-viewfinder",
+    "type": "solid"
+  },
+  {
+    "name": "usps",
+    "label": "usps",
+    "type": "brands"
+  },
+  {
+    "name": "ussunnah",
+    "label": "ussunnah",
+    "type": "brands"
+  },
+  {
+    "name": "utensils",
+    "label": "utensils",
+    "type": "solid"
+  },
+  {
+    "name": "v",
+    "label": "v",
+    "type": "solid"
+  },
+  {
+    "name": "vaadin",
+    "label": "vaadin",
+    "type": "brands"
+  },
+  {
+    "name": "van-shuttle",
+    "label": "van-shuttle",
+    "type": "solid"
+  },
+  {
+    "name": "vault",
+    "label": "vault",
+    "type": "solid"
+  },
+  {
+    "name": "vector-square",
+    "label": "vector-square",
+    "type": "solid"
+  },
+  {
+    "name": "venus",
+    "label": "venus",
+    "type": "solid"
+  },
+  {
+    "name": "venus-double",
+    "label": "venus-double",
+    "type": "solid"
+  },
+  {
+    "name": "venus-mars",
+    "label": "venus-mars",
+    "type": "solid"
+  },
+  {
+    "name": "vest",
+    "label": "vest",
+    "type": "solid"
+  },
+  {
+    "name": "vest-patches",
+    "label": "vest-patches",
+    "type": "solid"
+  },
+  {
+    "name": "viacoin",
+    "label": "viacoin",
+    "type": "brands"
+  },
+  {
+    "name": "viadeo",
+    "label": "viadeo",
+    "type": "brands"
+  },
+  {
+    "name": "vial",
+    "label": "vial",
+    "type": "solid"
+  },
+  {
+    "name": "vial-circle-check",
+    "label": "vial-circle-check",
+    "type": "solid"
+  },
+  {
+    "name": "vial-virus",
+    "label": "vial-virus",
+    "type": "solid"
+  },
+  {
+    "name": "vials",
+    "label": "vials",
+    "type": "solid"
+  },
+  {
+    "name": "viber",
+    "label": "viber",
+    "type": "brands"
+  },
+  {
+    "name": "video",
+    "label": "video",
+    "type": "solid"
+  },
+  {
+    "name": "video-slash",
+    "label": "video-slash",
+    "type": "solid"
+  },
+  {
+    "name": "vihara",
+    "label": "vihara",
+    "type": "solid"
+  },
+  {
+    "name": "vimeo",
+    "label": "vimeo",
+    "type": "brands"
+  },
+  {
+    "name": "vimeo-v",
+    "label": "vimeo-v",
+    "type": "brands"
+  },
+  {
+    "name": "vine",
+    "label": "vine",
+    "type": "brands"
+  },
+  {
+    "name": "virus",
+    "label": "virus",
+    "type": "solid"
+  },
+  {
+    "name": "virus-covid",
+    "label": "virus-covid",
+    "type": "solid"
+  },
+  {
+    "name": "virus-covid-slash",
+    "label": "virus-covid-slash",
+    "type": "solid"
+  },
+  {
+    "name": "virus-slash",
+    "label": "virus-slash",
+    "type": "solid"
+  },
+  {
+    "name": "viruses",
+    "label": "viruses",
+    "type": "solid"
+  },
+  {
+    "name": "vk",
+    "label": "vk",
+    "type": "brands"
+  },
+  {
+    "name": "vnv",
+    "label": "vnv",
+    "type": "brands"
+  },
+  {
+    "name": "voicemail",
+    "label": "voicemail",
+    "type": "solid"
+  },
+  {
+    "name": "volcano",
+    "label": "volcano",
+    "type": "solid"
+  },
+  {
+    "name": "volleyball",
+    "label": "volleyball",
+    "type": "solid"
+  },
+  {
+    "name": "volume-high",
+    "label": "volume-high",
+    "type": "solid"
+  },
+  {
+    "name": "volume-low",
+    "label": "volume-low",
+    "type": "solid"
+  },
+  {
+    "name": "volume-off",
+    "label": "volume-off",
+    "type": "solid"
+  },
+  {
+    "name": "volume-xmark",
+    "label": "volume-xmark",
+    "type": "solid"
+  },
+  {
+    "name": "vr-cardboard",
+    "label": "vr-cardboard",
+    "type": "solid"
+  },
+  {
+    "name": "vuejs",
+    "label": "vuejs",
+    "type": "brands"
+  },
+  {
+    "name": "w",
+    "label": "w",
+    "type": "solid"
+  },
+  {
+    "name": "walkie-talkie",
+    "label": "walkie-talkie",
+    "type": "solid"
+  },
+  {
+    "name": "wallet",
+    "label": "wallet",
+    "type": "solid"
+  },
+  {
+    "name": "wand-magic",
+    "label": "wand-magic",
+    "type": "solid"
+  },
+  {
+    "name": "wand-magic-sparkles",
+    "label": "wand-magic-sparkles",
+    "type": "solid"
+  },
+  {
+    "name": "wand-sparkles",
+    "label": "wand-sparkles",
+    "type": "solid"
+  },
+  {
+    "name": "warehouse",
+    "label": "warehouse",
+    "type": "solid"
+  },
+  {
+    "name": "watchman-monitoring",
+    "label": "watchman-monitoring",
+    "type": "brands"
+  },
+  {
+    "name": "water",
+    "label": "water",
+    "type": "solid"
+  },
+  {
+    "name": "water-ladder",
+    "label": "water-ladder",
+    "type": "solid"
+  },
+  {
+    "name": "wave-square",
+    "label": "wave-square",
+    "type": "solid"
+  },
+  {
+    "name": "waze",
+    "label": "waze",
+    "type": "brands"
+  },
+  {
+    "name": "web-awesome",
+    "label": "web-awesome",
+    "type": "solid"
+  },
+  {
+    "name": "web-awesome",
+    "label": "web-awesome",
+    "type": "brands"
+  },
+  {
+    "name": "webflow",
+    "label": "webflow",
+    "type": "brands"
+  },
+  {
+    "name": "weebly",
+    "label": "weebly",
+    "type": "brands"
+  },
+  {
+    "name": "weibo",
+    "label": "weibo",
+    "type": "brands"
+  },
+  {
+    "name": "weight-hanging",
+    "label": "weight-hanging",
+    "type": "solid"
+  },
+  {
+    "name": "weight-scale",
+    "label": "weight-scale",
+    "type": "solid"
+  },
+  {
+    "name": "weixin",
+    "label": "weixin",
+    "type": "brands"
+  },
+  {
+    "name": "whatsapp",
+    "label": "whatsapp",
+    "type": "brands"
+  },
+  {
+    "name": "wheat-awn",
+    "label": "wheat-awn",
+    "type": "solid"
+  },
+  {
+    "name": "wheat-awn-circle-exclamation",
+    "label": "wheat-awn-circle-exclamation",
+    "type": "solid"
+  },
+  {
+    "name": "wheelchair",
+    "label": "wheelchair",
+    "type": "solid"
+  },
+  {
+    "name": "wheelchair-move",
+    "label": "wheelchair-move",
+    "type": "solid"
+  },
+  {
+    "name": "whiskey-glass",
+    "label": "whiskey-glass",
+    "type": "solid"
+  },
+  {
+    "name": "whmcs",
+    "label": "whmcs",
+    "type": "brands"
+  },
+  {
+    "name": "wifi",
+    "label": "wifi",
+    "type": "solid"
+  },
+  {
+    "name": "wikipedia-w",
+    "label": "wikipedia-w",
+    "type": "brands"
+  },
+  {
+    "name": "wind",
+    "label": "wind",
+    "type": "solid"
+  },
+  {
+    "name": "window-maximize",
+    "label": "window-maximize",
+    "type": "solid"
+  },
+  {
+    "name": "window-maximize",
+    "label": "window-maximize",
+    "type": "regular"
+  },
+  {
+    "name": "window-minimize",
+    "label": "window-minimize",
+    "type": "solid"
+  },
+  {
+    "name": "window-minimize",
+    "label": "window-minimize",
+    "type": "regular"
+  },
+  {
+    "name": "window-restore",
+    "label": "window-restore",
+    "type": "solid"
+  },
+  {
+    "name": "window-restore",
+    "label": "window-restore",
+    "type": "regular"
+  },
+  {
+    "name": "windows",
+    "label": "windows",
+    "type": "brands"
+  },
+  {
+    "name": "wine-bottle",
+    "label": "wine-bottle",
+    "type": "solid"
+  },
+  {
+    "name": "wine-glass",
+    "label": "wine-glass",
+    "type": "solid"
+  },
+  {
+    "name": "wine-glass-empty",
+    "label": "wine-glass-empty",
+    "type": "solid"
+  },
+  {
+    "name": "wirsindhandwerk",
+    "label": "wirsindhandwerk",
+    "type": "brands"
+  },
+  {
+    "name": "wix",
+    "label": "wix",
+    "type": "brands"
+  },
+  {
+    "name": "wizards-of-the-coast",
+    "label": "wizards-of-the-coast",
+    "type": "brands"
+  },
+  {
+    "name": "wodu",
+    "label": "wodu",
+    "type": "brands"
+  },
+  {
+    "name": "wolf-pack-battalion",
+    "label": "wolf-pack-battalion",
+    "type": "brands"
+  },
+  {
+    "name": "won-sign",
+    "label": "won-sign",
+    "type": "solid"
+  },
+  {
+    "name": "wordpress",
+    "label": "wordpress",
+    "type": "brands"
+  },
+  {
+    "name": "wordpress-simple",
+    "label": "wordpress-simple",
+    "type": "brands"
+  },
+  {
+    "name": "worm",
+    "label": "worm",
+    "type": "solid"
+  },
+  {
+    "name": "wpbeginner",
+    "label": "wpbeginner",
+    "type": "brands"
+  },
+  {
+    "name": "wpexplorer",
+    "label": "wpexplorer",
+    "type": "brands"
+  },
+  {
+    "name": "wpforms",
+    "label": "wpforms",
+    "type": "brands"
+  },
+  {
+    "name": "wpressr",
+    "label": "wpressr",
+    "type": "brands"
+  },
+  {
+    "name": "wrench",
+    "label": "wrench",
+    "type": "solid"
+  },
+  {
+    "name": "x",
+    "label": "x",
+    "type": "solid"
+  },
+  {
+    "name": "x-ray",
+    "label": "x-ray",
+    "type": "solid"
+  },
+  {
+    "name": "x-twitter",
+    "label": "x-twitter",
+    "type": "brands"
+  },
+  {
+    "name": "xbox",
+    "label": "xbox",
+    "type": "brands"
+  },
+  {
+    "name": "xing",
+    "label": "xing",
+    "type": "brands"
+  },
+  {
+    "name": "xmark",
+    "label": "xmark",
+    "type": "solid"
+  },
+  {
+    "name": "xmarks-lines",
+    "label": "xmarks-lines",
+    "type": "solid"
+  },
+  {
+    "name": "y",
+    "label": "y",
+    "type": "solid"
+  },
+  {
+    "name": "y-combinator",
+    "label": "y-combinator",
+    "type": "brands"
+  },
+  {
+    "name": "yahoo",
+    "label": "yahoo",
+    "type": "brands"
+  },
+  {
+    "name": "yammer",
+    "label": "yammer",
+    "type": "brands"
+  },
+  {
+    "name": "yandex",
+    "label": "yandex",
+    "type": "brands"
+  },
+  {
+    "name": "yandex-international",
+    "label": "yandex-international",
+    "type": "brands"
+  },
+  {
+    "name": "yarn",
+    "label": "yarn",
+    "type": "brands"
+  },
+  {
+    "name": "yelp",
+    "label": "yelp",
+    "type": "brands"
+  },
+  {
+    "name": "yen-sign",
+    "label": "yen-sign",
+    "type": "solid"
+  },
+  {
+    "name": "yin-yang",
+    "label": "yin-yang",
+    "type": "solid"
+  },
+  {
+    "name": "yoast",
+    "label": "yoast",
+    "type": "brands"
+  },
+  {
+    "name": "youtube",
+    "label": "youtube",
+    "type": "brands"
+  },
+  {
+    "name": "z",
+    "label": "z",
+    "type": "solid"
+  },
+  {
+    "name": "zhihu",
+    "label": "zhihu",
+    "type": "brands"
+  }
+]
