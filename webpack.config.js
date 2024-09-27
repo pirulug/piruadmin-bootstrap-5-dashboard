@@ -170,6 +170,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.json$/,
+        type: "javascript/auto",
+        use: [
+          {
+            loader: "json-loader",
+          },
+        ],
+      },
     ],
   },
   resolve: {
@@ -183,7 +192,12 @@ module.exports = {
     static: {
       directory: Path.join(__dirname, "dist"),
     },
-    watchFiles: ["src/js/**/*.js", "src/scss/**/*.scss", "src/view/**/*.pug"],
+    watchFiles: [
+      "src/data/**/*.json",
+      "src/js/**/*.js",
+      "src/scss/**/*.scss",
+      "src/view/**/*.pug",
+    ],
     compress: true,
     port: 8989,
     open: true,
