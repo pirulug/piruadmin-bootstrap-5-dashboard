@@ -13,8 +13,8 @@
 }
 
 .avatar {
-  --#{$prefix}avatar-color: var(--#{$prefix}body-bg);
-  --#{$prefix}avatar-bg: var(--#{$prefix}body-color);
+  --#{$prefix}avatar-color: var(--#{$prefix}body-color);
+  --#{$prefix}avatar-bg: transparent;
   --#{$prefix}avatar-with: 3rem;
   --#{$prefix}avatar-height: 3rem;
   --#{$prefix}avatar-font-size: 1.5rem;
@@ -33,24 +33,26 @@
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
-
-  .avatar-status {
-    width: var(--#{$prefix}avatar-status-with);
-    height: var(--#{$prefix}avatar-status-height);
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    bottom: 0;
-    right: 0;
-  }
+  position: relative;
 
   img {
-    height: var(--#{$prefix}avatar-height);
-    width: var(--#{$prefix}avatar-height);
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
   }
+}
+
+.avatar-status {
+  width: var(--#{$prefix}avatar-status-with);
+  height: var(--#{$prefix}avatar-status-height);
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
 
 // @each $color, $value in $theme-colors {
