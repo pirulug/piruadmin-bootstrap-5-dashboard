@@ -24,16 +24,16 @@ $grays: (
   "900": $gray-900,
 ) !default;
 
-$blue: #3498db !default;
-$indigo: #9b59b6 !default;
-$purple: #e74c3c !default;
+$blue: #2980b9 !default;
+$indigo: #8e44ad !default;
+$purple: #9b59b6 !default;
 $pink: #ff0055 !default;
-$red: #ef2b2b !default;
+$red: #e74c3c !default;
 $orange: #e67e22 !default;
-$yellow: #f1c40f !default;
-$green: #2ecc71 !default;
+$yellow: #f39c12 !default;
+$green: #27ae60 !default;
 $teal: #1abc9c !default;
-$cyan: #3498db !default;
+$cyan: #16a085 !default;
 
 $colors: (
   "blue": $blue,
@@ -52,20 +52,60 @@ $colors: (
   "gray-dark": $gray-800,
 ) !default;
 
-// Social colors
+// Definición de variables de colores base
+$facebook: #1877f2 !default;
+$twitter: #1da1f2 !default;
+$google: #4285f4 !default;
+$youtube: #ff0000 !default;
+$linkedin: #0a66c2 !default;
+$instagram: #e1306c !default;
+$pinterest: #e60023 !default;
+$snapchat: #fffc00 !default;
+$tiktok: #010101 !default;
+$whatsapp: #25d366 !default;
+$amazon: #ff9900 !default;
+$microsoft: #737373 !default;
+$apple: #a2aaad !default;
+$samsung: #1428a0 !default;
+$tesla: #e31937 !default;
+$spotify: #1db954 !default;
+$netflix: #e50914 !default;
+$adobe: #ff0000 !default;
+$nvidia: #76b900 !default;
+$paypal: #003087 !default;
+$github: #181717 !default;
+$dribbble: #ea4c89 !default;
+$vimeo: #1ab7ea !default;
+$flickr: #0063dc !default;
+$bitbucket: #2684ff !default;
+
+// Mapa de colores unificado
 $social-colors: (
-  "facebook": #3b5998,
-  "twitter": #1da1f2,
-  "google": #dc4e41,
-  "youtube": #f00,
-  "vimeo": #1ab7ea,
-  "dribbble": #ea4c89,
-  "github": #181717,
-  "instagram": #e4405f,
-  "pinterest": #bd081c,
-  "flickr": #0063dc,
-  "bitbucket": #0052cc,
-  "microsoft": #2f2f2f,
+  "facebook": $facebook,
+  "twitter": $twitter,
+  "google": $google,
+  "youtube": $youtube,
+  "linkedin": $linkedin,
+  "instagram": $instagram,
+  "pinterest": $pinterest,
+  "snapchat": $snapchat,
+  "tiktok": $tiktok,
+  "whatsapp": $whatsapp,
+  "amazon": $amazon,
+  "microsoft": $microsoft,
+  "apple": $apple,
+  "samsung": $samsung,
+  "tesla": $tesla,
+  "spotify": $spotify,
+  "netflix": $netflix,
+  "adobe": $adobe,
+  "nvidia": $nvidia,
+  "paypal": $paypal,
+  "github": $github,
+  "dribbble": $dribbble,
+  "vimeo": $vimeo,
+  "flickr": $flickr,
+  "bitbucket": $bitbucket,
 ) !default;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
