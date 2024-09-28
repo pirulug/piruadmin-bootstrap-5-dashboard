@@ -1,0 +1,75 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Avatar'
+  -pageUrl = 'ui-avatar'
+
+block content
+  .card.mb-3
+    .card-header 
+      h5.card-title.m-0 Default Avatar
+    .card-body
+      p To create a default avatar, use the 
+        code .avatar 
+        | class. Set the height and width of the image using inline attributes.
+        
+      .avatar.bg-primary.me-3
+        i.fa.fa-user
+      .avatar.bg-secondary.me-3
+        | AS
+      .avatar.me-3
+        img(src="https://dummyimage.com/100x50/fff/000.jpg", alt="")
+
+  .card.mb-3
+    .card-header 
+      h5.card-title.m-0 Avatar Sizes
+    .card-body
+      p Use class 
+        code .avatar-{sm|lg|xl} 
+        | along with 
+        code .avatar 
+        | to modify the size of your avatar.
+        
+      .mb-3
+        .avatar.bg-primary.avatar-sm.me-3
+          i.fa.fa-user
+        .avatar.bg-secondary.me-3
+          | AS
+        .avatar.bg-info.avatar-lg.me-3
+          i.fa.fa-user
+
+      .mb-3
+        .avatar.bg-success.avatar-sm.me-3
+          | AS
+        .avatar.bg-danger.me-3
+          | AS
+        .avatar.bg-warning.avatar-lg.me-3
+          | AS
+
+      div
+        .avatar.avatar-sm.me-3
+          img(src="https://dummyimage.com/100x150/fff/000.jpg", alt="")
+        .avatar.me-3
+          img(src="https://dummyimage.com/100x150/fff/000.jpg", alt="")
+        .avatar.avatar-lg.me-3
+          img(src="https://dummyimage.com/200x200/fff/000.jpg", alt="")
+    
+  .card.mb-3
+    .card-header 
+      h5.card-title.m-0 Avatar Status
+    .card-body
+      p To add a status indicator to your avatar, use the class 
+        code .avatar-status 
+        | and 
+        code .bg-{color} 
+        | after the avatar element.
+
+      .avatar.bg-danger.avatar-sm.position-relative.me-3
+        img(src="https://dummyimage.com/50x50/fff/000.jpg", alt="User")
+        span.avatar-status.bg-danger
+      .avatar.bg-info.position-relative.me-3
+        img(src="https://dummyimage.com/50x50/fff/000.jpg", alt="User")
+        span.avatar-status.bg-info
+      .avatar.avatar-lg.position-relative.me-3
+        img(src="https://dummyimage.com/200x200/fff/000.jpg", alt="User")
+        span.avatar-status.bg-success

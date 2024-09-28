@@ -120,6 +120,11 @@
         "title": "Tabs",
         "path": "ui-tabs",
         "link": "ui-tabs"
+      },
+      {
+        "title": "Avatar",
+        "path": "ui-avatar",
+        "link": "ui-avatar"
       }
     ]
   },
