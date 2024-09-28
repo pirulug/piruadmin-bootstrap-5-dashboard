@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Tagify | PiruAdmin</title>
-    <meta name="title" content="Tagify | PiruAdmin">
+    <title>Avatar | PiruAdmin</title>
+    <meta name="title" content="Avatar | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/forms-tagify.html">
-    <meta property="og:title" content="Tagify | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-avatar.html">
+    <meta property="og:title" content="Avatar | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/forms-tagify.html">
-    <meta property="twitter:title" content="Tagify | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-avatar.html">
+    <meta property="twitter:title" content="Avatar | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -39,7 +39,6 @@
       })();
       
     </script>
-    <link href="css/tagify.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="wrapper">
@@ -74,14 +73,14 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General UI</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-images.html">Images</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-avatar.html">Avatar</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="ui-avatar.html">Avatar</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse"><i class="align-middle" data-feather="grid"></i><span class="align-middle">Tables</span></a>
@@ -89,10 +88,10 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="table-bootstrap.html">Table Bootstrap</a></li>
               </ul>
             </li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="forms" data-bs-parent="#sidebar">
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a></li>
-                <li class="sidebar-item active"><a class="sidebar-link" href="forms-tagify.html">Tagify</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="forms-tagify.html">Tagify</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Icons</span></a>
@@ -220,14 +219,51 @@
         <!-- Content-->
         <div class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Tagify</h1>
+            <h1 class="h3 d-inline align-middle">Avatar</h1>
           </div>
-          <div class="card"> 
+          <div class="card mb-3">
             <div class="card-header"> 
-              <h3 class="header-title">Basic</h3>
+              <h5 class="card-title m-0">Default Avatar</h5>
             </div>
-            <div class="card-body"> 
-              <input class="form-control" name="basic" value="tag1, tag 2, tag 3">
+            <div class="card-body">
+              <p>To create a default avatar, use the <code>.avatar </code>class. Set the height and width of the image using inline attributes.</p>
+              <div class="avatar bg-primary me-3"><i class="fa fa-user"></i></div>
+              <div class="avatar bg-secondary me-3">AS</div>
+              <div class="avatar me-3"><img src="https://dummyimage.com/100x50/fff/000.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header"> 
+              <h5 class="card-title m-0">Avatar Sizes</h5>
+            </div>
+            <div class="card-body">
+              <p>Use class <code>.avatar-{sm|lg|xl} </code>along with <code>.avatar </code>to modify the size of your avatar.</p>
+              <div class="mb-3">
+                <div class="avatar bg-primary avatar-sm me-3"><i class="fa fa-user"></i></div>
+                <div class="avatar bg-secondary me-3">AS</div>
+                <div class="avatar bg-info avatar-lg me-3"><i class="fa fa-user"></i></div>
+              </div>
+              <div class="mb-3">
+                <div class="avatar bg-success avatar-sm me-3">AS</div>
+                <div class="avatar bg-danger me-3">AS</div>
+                <div class="avatar bg-warning avatar-lg me-3">AS</div>
+              </div>
+              <div>
+                <div class="avatar avatar-sm me-3"><img src="https://dummyimage.com/100x150/fff/000.jpg" alt=""></div>
+                <div class="avatar me-3"><img src="https://dummyimage.com/100x150/fff/000.jpg" alt=""></div>
+                <div class="avatar avatar-lg me-3"><img src="https://dummyimage.com/200x200/fff/000.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-header"> 
+              <h5 class="card-title m-0">Avatar Status</h5>
+            </div>
+            <div class="card-body">
+              <p>To add a status indicator to your avatar, use the class <code>.avatar-status </code>and <code>.bg-{color} </code>after the avatar element.</p>
+              <div class="avatar bg-danger avatar-sm position-relative me-3"><img src="https://dummyimage.com/50x50/fff/000.jpg" alt="User"><span class="avatar-status bg-danger"></span></div>
+              <div class="avatar bg-info position-relative me-3"><img src="https://dummyimage.com/50x50/fff/000.jpg" alt="User"><span class="avatar-status bg-info"></span></div>
+              <div class="avatar avatar-lg position-relative me-3"><img src="https://dummyimage.com/200x200/fff/000.jpg" alt="User"><span class="avatar-status bg-success"></span></div>
             </div>
           </div>
         </div>
@@ -251,11 +287,5 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="js/tagify.js"></script>
-    <script>
-      var input = document.querySelector('input[name=basic]');
-      new Tagify(input)
-      
-    </script>
   </body>
 </html>
