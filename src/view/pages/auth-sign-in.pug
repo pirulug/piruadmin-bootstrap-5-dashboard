@@ -10,14 +10,17 @@ block content
     .row.vh-100
       .col-sm-10.col-md-8.col-lg-6.col-xl-5.mx-auto.d-table.h-100
         .d-table-cell.align-middle
-          .text-center.mt-4
+          //-.text-center.mt-4
             h1.h2 Welcome back!
             p.lead
               | Sign in to your account to continue
-          .card
+          .card.position-relative
+            .wd-50.bg-body.p-2.shadow.rounded.position-absolute.translate-middle.top-0.start-50
+              img.img-fluid.m-1(src='img/logo.png' width="40" height="40" alt='')
             .card-body
               .m-sm-3
-                
+                h2.m-0 Sign In
+                p.text-muted Enter your email and password to login
                 form
                   .mb-3
                     label.form-label Email
@@ -34,26 +37,43 @@ block content
                   .d-grid.gap-2.mt-3
                     a.btn.btn-primary(href='/') Sign in
                 
-                .row
+                //-.row
                   .col
                     hr
-                  .col-auto.text-uppercase.d-flex.align-items-center Or
+                  .col-auto.d-flex.align-items-center Or continue with
                   .col
                     hr
+                .separator 
+                  span.separator-text Or continue with
 
-                .d-grid.gap-2.mb-3
-                  a.btn.btn-google(href='/')
+                //- Dividers con diferentes alineaciones
+                //- .separator.separator-left
+                //-   span.separator-text Left
+
+                //- .separator.separator-left-center
+                //-   span.separator-text Left-Center
+
+                //- .separator
+                //-   span.separator-text Center (Default)
+
+                //- .separator.separator-right-center
+                //-   span.separator-text Right-Center
+
+                //- .separator.separator-right
+                //-   span.separator-text Right
+
+                .d-flex.gap-2
+                  a.flex-fill.btn.btn-google(href='/')
                     i.fab.fa-fw.fa-google
-                    |  Sign in with Google
-                  a.btn.btn-facebook(href='/')
+                  a.flex-fill.btn.btn-facebook(href='/')
                     i.fab.fa-fw.fa-facebook-f
-                    |  Sign in with Facebook
-                  a.btn.btn-microsoft(href='/')
-                    i.fab.fa-fw.fa-microsoft
-                    |  Sign in with Microsoft
-          .text-center.mb-3
-            | Don&apos;t have an account? 
-            a(href='/auth-sign-up.html') Sign up
+                  a.flex-fill.btn.btn-github(href='/')
+                    i.fab.fa-fw.fa-github
+
+                .text-center.mt-3 
+                  |Don&apos;t have an account? 
+                  a(href='/auth-sign-up.html') Sign up
+
 
 
 

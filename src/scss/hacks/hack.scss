@@ -27,3 +27,52 @@
     width: 20px;
   }
 }
+
+// Separator
+
+.separator {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  margin: 1rem 0;
+
+  .separator-text {
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    font-weight: 700;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 9999px;
+      border-top: 1px solid #dfe3e7;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+    }
+  }
+
+  &.separator-left .separator-text {
+    float: left;
+  }
+
+  &.separator-left-center .separator-text {
+    left: -25%;
+  }
+
+  &.separator-right-center .separator-text {
+    left: 25%;
+  }
+
+  &.separator-right .separator-text {
+    float: right;
+  }
+}

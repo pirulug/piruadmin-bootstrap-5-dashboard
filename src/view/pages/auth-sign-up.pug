@@ -10,13 +10,15 @@ block content
     .row.vh-100
       .col-sm-10.col-md-8.col-lg-6.col-xl-5.mx-auto.d-table.h-100
         .d-table-cell.align-middle
-          .text-center.mt-4
-            h1.h2 Get started
-            p.lead
-              | Start creating the best possible user experience for you customers.
-          .card
+          .card.position-relative
+            .wd-50.bg-body.p-2.shadow.rounded.position-absolute.translate-middle.top-0.start-50
+              img.img-fluid.m-1(src='img/logo.png' width="40" height="40" alt='')
+
             .card-body
               .m-sm-3
+
+                h2.m-0 Sign Up
+                p.text-muted Enter your email and password to register
                 
                 form
                   .mb-3
@@ -31,24 +33,17 @@ block content
                   .d-grid.gap-2.mt-3
                     a.btn.btn-primary(href='/') Sign up
                 
-                .row
-                  .col
-                    hr
-                  .col-auto.text-uppercase.d-flex.align-items-center Or
-                  .col
-                    hr
+                .separator 
+                  span.separator-text Or continue with
 
-                .d-grid.gap-2.mb-3
-                  a.btn.btn-google(href='/')
+                .d-flex.gap-2
+                  a.flex-fill.btn.btn-google(href='/')
                     i.fab.fa-fw.fa-google
-                    |  Sign up with Google
-                  a.btn.btn-facebook(href='/')
+                  a.flex-fill.btn.btn-facebook(href='/')
                     i.fab.fa-fw.fa-facebook-f
-                    |  Sign up with Facebook
-                  a.btn.btn-microsoft(href='/')
-                    i.fab.fa-fw.fa-microsoft
-                    |  Sign up with Microsoft
+                  a.flex-fill.btn.btn-github(href='/')
+                    i.fab.fa-fw.fa-github
 
-          .text-center.mb-3
-            | Already have account? 
-            a(href='/auth-sign-in.html') Log In
+                .text-center.mt-3
+                  | Already have account? 
+                  a(href='/auth-sign-in.html') Log In
