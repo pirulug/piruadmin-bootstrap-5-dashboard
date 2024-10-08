@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -46,13 +46,12 @@
         <div class="row vh-100">
           <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
             <div class="d-table-cell align-middle">
-              <div class="text-center mt-4">
-                <h1 class="h2">Welcome back!</h1>
-                <p class="lead">Sign in to your account to continue</p>
-              </div>
-              <div class="card">
+              <div class="card position-relative">
+                <div class="wd-50 bg-body p-2 shadow rounded position-absolute translate-middle top-0 start-50"><img class="img-fluid m-1" src="img/logo.png" width="40" height="40" alt=""></div>
                 <div class="card-body">
                   <div class="m-sm-3">
+                    <h2 class="m-0">Sign In</h2>
+                    <p class="text-muted">Enter your email and password to login</p>
                     <form>
                       <div class="mb-3">
                         <label class="form-label">Email</label>
@@ -70,20 +69,13 @@
                       </div>
                       <div class="d-grid gap-2 mt-3"><a class="btn btn-primary" href="/">Sign in</a></div>
                     </form>
-                    <div class="row">
-                      <div class="col">
-                        <hr>
-                      </div>
-                      <div class="col-auto text-uppercase d-flex align-items-center">Or</div>
-                      <div class="col">
-                        <hr>
-                      </div>
-                    </div>
-                    <div class="d-grid gap-2 mb-3"><a class="btn btn-google" href="/"><i class="fab fa-fw fa-google"></i> Sign in with Google</a><a class="btn btn-facebook" href="/"><i class="fab fa-fw fa-facebook-f"></i> Sign in with Facebook</a><a class="btn btn-microsoft" href="/"><i class="fab fa-fw fa-microsoft"></i> Sign in with Microsoft</a></div>
+                    <div class="separator"> <span class="separator-text">Or continue with</span></div>
+                    <div class="d-flex gap-2"><a class="flex-fill btn btn-google" href="/"><i class="fab fa-fw fa-google"></i></a><a class="flex-fill btn btn-facebook" href="/"><i class="fab fa-fw fa-facebook-f"></i></a><a class="flex-fill btn btn-github" href="/"><i class="fab fa-fw fa-github"></i></a></div>
+                    <div class="text-center mt-3">
+                       Don&apos;t have an account? <a href="/auth-sign-up.html">Sign up</a></div>
                   </div>
                 </div>
               </div>
-              <div class="text-center mb-3">Don&apos;t have an account? <a href="/auth-sign-up.html">Sign up</a></div>
             </div>
           </div>
         </div>
