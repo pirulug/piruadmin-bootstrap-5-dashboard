@@ -50,6 +50,8 @@ html(lang="es")
   //- body(data-bs-spy="scroll" data-bs-target="#navbar-example")
   body
 
+    include ../includes/loader
+
     .wrapper
       include ../includes/sidebar
 
@@ -67,6 +69,9 @@ html(lang="es")
         // Footer
         include ../includes/footer
 
+      // Back to top
+      a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top(href='#')
+        i.fa.fa-arrow-up
     // Dark & Ligth
     //- include ../includes/dark-ligth
 
