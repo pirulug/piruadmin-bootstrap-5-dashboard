@@ -182,6 +182,12 @@ module.exports = {
       },
     ],
   },
+  ignoreWarnings: [
+    (warning) =>
+      /Global built-in functions are deprecated/.test(warning.message) ||
+      /Sass @import rules are deprecated/.test(warning.message) ||
+      /deprecation warnings omitted/.test(warning.message),
+  ],
   resolve: {
     extensions: [".js", ".scss"],
     modules: ["node_modules"],

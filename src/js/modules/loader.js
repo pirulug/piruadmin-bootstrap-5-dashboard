@@ -8,5 +8,3 @@ var spinner = function () {
   }, 1);
 };
 spinner();
-
-console.log(document.getElementById("spinner"));
