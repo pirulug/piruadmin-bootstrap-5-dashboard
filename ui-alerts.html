@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Dashboard | PiruAdmin</title>
-    <meta name="title" content="Dashboard | PiruAdmin">
+    <title>Alerts | PiruAdmin</title>
+    <meta name="title" content="Alerts | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard.html">
-    <meta property="og:title" content="Dashboard | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-alerts.html">
+    <meta property="og:title" content="Alerts | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard.html">
-    <meta property="twitter:title" content="Dashboard | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-alerts.html">
+    <meta property="twitter:title" content="Alerts | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -49,7 +49,7 @@
       <nav class="sidebar js-sidebar" id="sidebar">
         <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item active"><a class="sidebar-link" href="dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
+            <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
@@ -77,9 +77,9 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
+                <li class="sidebar-item active"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General UI</a></li>
@@ -225,167 +225,275 @@
         <!-- Content-->
         <div class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Dashboard</h1>
-          </div>
-          <div class="row g-4">
-            <div class="col-sm-6 col-xl-3">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-primary"><i class="align-middle" data-feather="truck"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Sales</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">2.382</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3"> 
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-success"><i class="align-middle" data-feather="users"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Visitors</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">14.212</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-info"><i class="align-middle" data-feather="dollar-sign"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Earnings</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">$21.300</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3"> 
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-danger"><i class="align-middle" data-feather="shopping-cart"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Orders</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">64</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row g-4">
-            <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-              <div class="card mb-3 flex-fill w-100">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Recent Movement</h5>
-                </div>
-                <div class="card-body py-3">
-                  <canvas id="chartjs-dashboard-line"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-              <div class="card mb-3 flex-fill w-100">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Real-Time</h5>
-                </div>
-                <div class="card-body px-4">
-                  <canvas id="chartjs-dashboard-bar"></canvas>
-                </div>
-              </div>
-            </div>
+            <h1 class="h3 d-inline align-middle">Alerts</h1>
           </div>
           <div class="row">
-            <div class="col-12 d-flex">
-              <div class="card flex-fill overflow-hidden">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Latest Projects</h5>
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Basic alerts</h2>
+                  <p class="text-secondary">Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
+                  <div class="alert alert-success" role="alert">Wow! Everything worked!</div>
+                  <div class="alert alert-warning" role="alert">Uh oh, something went wrong</div>
+                  <div class="alert alert-danger" role="alert">I&apos;m so sorry&mldr;</div>
+                  <div class="alert alert-info" role="alert">Did you know?</div>
                 </div>
-                <table class="table table-hover my-0">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th class="d-none d-xl-table-cell">Start Date</th>
-                      <th class="d-none d-xl-table-cell">End Date</th>
-                      <th>Status</th>
-                      <th class="d-none d-md-table-cell">Assignee</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Project Apollo</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                    </tr>
-                    <tr>
-                      <td>Project Fireball</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-danger">Cancelled</span></td>
-                      <td class="d-none d-md-table-cell">William Harris</td>
-                    </tr>
-                    <tr>
-                      <td>Project Hades</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                    </tr>
-                    <tr>
-                      <td>Project Nitro</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-warning">In progress</span></td>
-                      <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                    </tr>
-                    <tr>
-                      <td>Project Phoenix</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">William Harris</td>
-                    </tr>
-                    <tr>
-                      <td>Project X</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                    </tr>
-                    <tr>
-                      <td>Project Romeo</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Christina Mason</td>
-                    </tr>
-                    <tr>
-                      <td>Project Wombat</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-warning">In progress</span></td>
-                      <td class="d-none d-md-table-cell">William Harris</td>
-                    </tr>
-                  </tbody>
-                </table>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Alerts with icon</h2>
+                  <p class="text-secondary">Build on any alert by adding an optional icon.</p>
+                  <div class="alert alert-success" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/check-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 12l5 5l10 -10"></path>
+                        </svg>
+                      </div>
+                      <div>Wow! Everything worked!</div>
+                    </div>
+                  </div>
+                  <div class="alert alert-warning" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M12 9v4"></path>
+                          <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>Uh oh, something went wrong</div>
+                    </div>
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 8v4"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>I&apos;m so sorry&mldr;</div>
+                    </div>
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/info-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 9h.01"></path>
+                          <path d="M11 12h1v4h1"></path>
+                        </svg>
+                      </div>
+                      <div>Did you know?</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Dismissible alerts</h2>
+                  <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
+                  <div class="alert alert-success alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/check-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 12l5 5l10 -10"></path>
+                        </svg>
+                      </div>
+                      <div>Wow! Everything worked!</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-warning alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M12 9v4"></path>
+                          <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>Uh oh, something went wrong</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-danger alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 8v4"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>I&apos;m so sorry&mldr;</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-info alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/info-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 9h.01"></path>
+                          <path d="M11 12h1v4h1"></path>
+                        </svg>
+                      </div>
+                      <div>Did you know?</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Alert with a description</h2>
+                  <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
+                  <div class="alert alert-success" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/check-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 12l5 5l10 -10"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="alert-title">This is a custom alert box!</h4>
+                        <div class="text-secondary">Your account has been saved!</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-warning" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-triangle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M12 9v4"></path>
+                          <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="alert-title">This is a custom alert box!</h4>
+                        <div class="text-secondary">Sorry! There was a problem with your request.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/alert-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 8v4"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="alert-title">This is a custom alert box!</h4>
+                        <div class="text-secondary">Something went wrong. Please try again.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/info-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 9h.01"></path>
+                          <path d="M11 12h1v4h1"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 class="alert-title">This is a custom alert box!</h4>
+                        <div class="text-secondary">Here is something that you might like to know.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Important alerts</h2>
+                  <div class="alert alert-important alert-success alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M5 12l5 5l10 -10"></path>
+                        </svg>
+                      </div>
+                      <div>Wow! Everything worked!</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-important alert-warning alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M12 9v4"></path>
+                          <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>Uh oh, something went wrong</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-important alert-danger alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 8v4"></path>
+                          <path d="M12 16h.01"></path>
+                        </svg>
+                      </div>
+                      <div>I&apos;m so sorry&mldr;</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                  <div class="alert alert-important alert-info alert-dismissible" role="alert">
+                    <div class="d-flex">
+                      <div>
+                        <!-- Download SVG icon from http://tabler-icons.io/i/info-circle-->
+                        <svg class="icon alert-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                          <path d="M12 9h.01"></path>
+                          <path d="M11 12h1v4h1"></path>
+                        </svg>
+                      </div>
+                      <div>Did you know?</div>
+                    </div><a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -411,101 +519,5 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script>
-      const ctx = document.getElementById('chartjs-dashboard-line').getContext('2d');
-      //- const labels = Utils.months({count: 7});
-      const myChart = new Chart(ctx, {
-          type: 'line',
-          data: {
-              labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
-              datasets: [
-                {
-                  label: 'Buys',
-                  borderColor: '#ff0055',
-                  backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                  data: [
-                    0,
-                    20,
-                    30,
-                    60,
-                    50,
-                    80,
-                    70,
-                    20,
-                    30,
-                    90,
-                    80,
-                    70
-                  ]              
-              },
-                {
-                  label: 'Sales',
-                  borderColor: '#e67e22',
-                  backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                  data: [
-                    0,
-                    90,
-                    30,
-                    10,
-                    20,
-                    70,
-                    10,
-                    60,
-                    50,
-                    80,
-                    70,
-                    80
-                  ]              
-              }
-              ]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
-      
-      
-      // Bar chart
-      new Chart(document.getElementById("chartjs-dashboard-bar"), {
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
-          datasets: [
-            {
-            label: "USA",
-            backgroundColor: "#9b59b6",
-            data: [80, 79, 76, 99, 55, 62, 48, 4, 55, 73, 45, 60],
-            barPercentage: .75,
-            categoryPercentage: .5
-          },
-            {
-            label: "UK",
-            backgroundColor: "#e67e22",
-            data: [73, 55, 45, 76, 48, 55, 62, 80, 79, 4, 60, 99],
-            barPercentage: .75,
-            categoryPercentage: .5
-          },
-            {
-            label: "PEN",
-            backgroundColor: "#3498db",
-            data: [48, 73, 4, 99, 79, 80, 62, 60, 76, 55, 55, 45],
-            barPercentage: .75,
-            categoryPercentage: .5
-          },
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-        }
-      });
-    </script>
   </body>
 </html>
