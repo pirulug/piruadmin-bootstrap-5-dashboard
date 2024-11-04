@@ -1,0 +1,229 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Alerts'
+  -pageUrl = 'ui-alerts'
+
+block content
+
+  .row
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Basic alerts
+          p.text-secondary
+            | Wrap any text and an optional dismiss button in 
+            code .alert
+            |  and one of the four contextual classes (e.g., 
+            code .alert-success
+            | ) for basic alert messages.
+          .alert.alert-success(role='alert')
+            | Wow! Everything worked!
+          .alert.alert-warning(role='alert')
+            | Uh oh, something went wrong
+          .alert.alert-danger(role='alert')
+            | I&apos;m so sorry&mldr;
+          .alert.alert-info(role='alert')
+            | Did you know?
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Alerts with icon
+          p.text-secondary Build on any alert by adding an optional icon.
+          .alert.alert-success(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/check
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M5 12l5 5l10 -10')
+              div
+                | Wow! Everything worked!
+          .alert.alert-warning(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-triangle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M12 9v4')
+                  path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
+                  path(d='M12 16h.01')
+              div
+                | Uh oh, something went wrong
+          .alert.alert-danger(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 8v4')
+                  path(d='M12 16h.01')
+              div
+                | I&apos;m so sorry&mldr;
+          .alert.alert-info(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/info-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 9h.01')
+                  path(d='M11 12h1v4h1')
+              div
+                | Did you know?
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Dismissible alerts
+          p.text-secondary
+            | Build on any alert by adding an optional 
+            code .alert-dismissible
+            |  and close button.
+          .alert.alert-success.alert-dismissible(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/check
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M5 12l5 5l10 -10')
+              div
+                | Wow! Everything worked!
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-warning.alert-dismissible(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-triangle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M12 9v4')
+                  path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
+                  path(d='M12 16h.01')
+              div
+                | Uh oh, something went wrong
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-danger.alert-dismissible(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 8v4')
+                  path(d='M12 16h.01')
+              div
+                | I&apos;m so sorry&mldr;
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-info.alert-dismissible(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/info-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 9h.01')
+                  path(d='M11 12h1v4h1')
+              div
+                | Did you know?
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Alert with a description
+          p.text-secondary
+            | Build on any alert by adding an optional 
+            code .alert-dismissible
+            |  and close button.
+          .alert.alert-success(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/check
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M5 12l5 5l10 -10')
+              div
+                h4.alert-title This is a custom alert box!
+                .text-secondary Your account has been saved!
+          .alert.alert-warning(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-triangle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M12 9v4')
+                  path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
+                  path(d='M12 16h.01')
+              div
+                h4.alert-title This is a custom alert box!
+                .text-secondary Sorry! There was a problem with your request.
+          .alert.alert-danger(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/alert-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 8v4')
+                  path(d='M12 16h.01')
+              div
+                h4.alert-title This is a custom alert box!
+                .text-secondary Something went wrong. Please try again.
+          .alert.alert-info(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/info-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 9h.01')
+                  path(d='M11 12h1v4h1')
+              div
+                h4.alert-title This is a custom alert box!
+                .text-secondary Here is something that you might like to know.
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Important alerts
+          .alert.alert-important.alert-success.alert-dismissible(role='alert')
+            .d-flex
+              div
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M5 12l5 5l10 -10')
+              div
+                | Wow! Everything worked!
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-important.alert-warning.alert-dismissible(role='alert')
+            .d-flex
+              div
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M12 9v4')
+                  path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
+                  path(d='M12 16h.01')
+              div
+                | Uh oh, something went wrong
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-important.alert-danger.alert-dismissible(role='alert')
+            .d-flex
+              div
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 8v4')
+                  path(d='M12 16h.01')
+              div
+                | I&apos;m so sorry&mldr;
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+          .alert.alert-important.alert-info.alert-dismissible(role='alert')
+            .d-flex
+              div
+                // Download SVG icon from http://tabler-icons.io/i/info-circle
+                svg.icon.alert-icon(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                  path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                  path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
+                  path(d='M12 9h.01')
+                  path(d='M11 12h1v4h1')
+              div
+                | Did you know?
+            a.btn-close(data-bs-dismiss='alert' aria-label='close')

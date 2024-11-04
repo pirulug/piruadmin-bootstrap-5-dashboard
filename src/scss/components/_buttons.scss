@@ -39,40 +39,53 @@
         $value,
         $value,
         $color: $white,
+        $hover-color: $white,
         $disabled-color: $white
       );
     } @else {
-      @include button-variant($value, $value);
+      @include button-variant(
+        $value,
+        $value,
+        $color: $white,
+        $disabled-color: $white,
+        $hover-color: $white,
+        $active-color: $white
+      );
     }
-  }
-}
-
-@each $color, $value in $social-colors {
-  .btn-#{$color} {
-    @include button-variant(
-      $value,
-      $value,
-      $color: $white,
-      $disabled-color: $white,
-      $hover-color: $white
-    );
   }
 }
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
-    @if $color == "primary" {
-      @include button-outline-variant($value, $color-hover: $white);
-    } @else {
+    @if $color == "dark" {
       @include button-outline-variant($value);
+    } @else if $color == "light" {
+      @include button-outline-variant($value);
+    } @else {
+      @include button-outline-variant(
+        $value,
+        $color-hover: $white,
+        $active-color: $white
+      );
     }
   }
 }
 
+//
+// Social Colors
+
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+//
+// outline socials
+
 @each $color, $value in $social-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
-    @include button-color-hover($white);
   }
 }
 
@@ -85,7 +98,8 @@
       $border: tint-color($value, 80%),
       $color: shade-color($value, 80%),
       $disabled-color: shade-color($value, 80%),
-      $hover-color: shade-color($value, 80%)
+      $hover-color: shade-color($value, 80%),
+      $active-background: shade-color($value, 80%)
     );
   }
 
@@ -98,7 +112,9 @@
           $color: tint-color($value, 40%),
           $disabled-color: shade-color($value, 50%),
           $hover-background: shade-color($value, 50%),
-          $hover-color: tint-color($value, 40%)
+          $hover-color: tint-color($value, 40%),
+          $active-background: shade-color($value, 50%),
+          $active-color: tint-color($value, 40%)
         );
       }
     }
@@ -107,4 +123,8 @@
 
 .btn-check:checked + .btn {
   color: #fff;
+}
+
+.btn-close {
+  cursor: pointer;
 }

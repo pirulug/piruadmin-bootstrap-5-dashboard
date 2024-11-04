@@ -24,16 +24,18 @@ $grays: (
   "900": $gray-900,
 ) !default;
 
-$blue: #2980b9 !default;
-$indigo: #8e44ad !default;
-$purple: #9b59b6 !default;
+$blue: #066fd1 !default;
+$azure: #4299e1 !default;
+$indigo: #4263eb !default;
+$purple: #ae3ec9 !default;
 $pink: #ff0055 !default;
-$red: #e74c3c !default;
-$orange: #e67e22 !default;
-$yellow: #f39c12 !default;
-$green: #27ae60 !default;
-$teal: #1abc9c !default;
-$cyan: #16a085 !default;
+$red: #d63939 !default;
+$orange: #f76707 !default;
+$yellow: #f59f00 !default;
+$lime: #74b816 !default;
+$green: #2fb344 !default;
+$teal: #0ca678 !default;
+$cyan: #17a2b8 !default;
 
 $colors: (
   "blue": $blue,
@@ -55,6 +57,7 @@ $colors: (
 // Definición de variables de colores base
 $facebook: #1877f2 !default;
 $twitter: #1da1f2 !default;
+$x-twitter: #000 !default;
 $google: #4285f4 !default;
 $youtube: #ff0000 !default;
 $linkedin: #0a66c2 !default;
@@ -83,6 +86,7 @@ $bitbucket: #2684ff !default;
 $social-colors: (
   "facebook": $facebook,
   "twitter": $twitter,
+  "x-twitter": $x-twitter,
   "google": $google,
   "youtube": $youtube,
   "linkedin": $linkedin,
@@ -345,7 +349,7 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
-$dark: $gray-900 !default;
+$dark: #1a1a1a !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -584,6 +588,10 @@ $aspect-ratios: (
 ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
+
+//Icons
+$icon-stroke-width: 1.5 !default;
+$icon-size: 1.25rem !default;
 
 // Typography
 //

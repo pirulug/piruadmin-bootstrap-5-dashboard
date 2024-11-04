@@ -97,6 +97,11 @@
     "collapsed": true,
     "items": [
       {
+        "title": "Alerts",
+        "path": "ui-alerts",
+        "link": "ui-alerts"
+      },
+      {
         "title": "Buttons",
         "path": "ui-buttons",
         "link": "ui-buttons"

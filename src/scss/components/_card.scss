@@ -1,3 +1,44 @@
 // .card {
 //   overflow: hidden;
 // }
+
+$card-status-size: 3px;
+
+/**
+Card status
+ */
+.card-status-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $card-status-size;
+  border-radius: var(--#{$prefix}card-border-radius) var(--#{$prefix}card-border-radius) 0 0;
+}
+
+.card-status-start {
+  position: absolute;
+  right: auto;
+  bottom: 0;
+  width: $card-status-size;
+  height: 100%;
+  border-radius: var(--#{$prefix}card-border-radius) 0 0 var(--#{$prefix}card-border-radius);
+}
+
+.card-status-bottom {
+  position: absolute;
+  top: initial;
+  bottom: 0;
+  width: 100%;
+  height: $card-status-size;
+  border-radius: 0 0 var(--#{$prefix}card-border-radius) var(--#{$prefix}card-border-radius);
+}
+
+.card-status-end {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: $card-status-size;
+  height: 100%;
+  border-radius:  0 var(--#{$prefix}card-border-radius) var(--#{$prefix}card-border-radius) 0;
+}
