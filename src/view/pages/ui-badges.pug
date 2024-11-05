@@ -1,0 +1,116 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Badges'
+  -pageUrl = 'ui-badges'
+
+block content
+
+  .row
+    .col-5
+      .card.mb-3
+        .card-body
+          h1
+            | Example heading 
+            span.badge.text-bg-secondary New
+          h2
+            | Example heading 
+            span.badge.text-bg-secondary New
+          h3
+            | Example heading 
+            span.badge.text-bg-secondary New
+          h4
+            | Example heading 
+            span.badge.text-bg-secondary New
+          h5
+            | Example heading 
+            span.badge.text-bg-secondary New
+          h6
+            | Example heading 
+            span.badge.text-bg-secondary New
+    .col-7
+      .row
+        .col-12
+          .card.mb-3
+            .card-body
+              div
+                span.m-1.badge.badge-blue Blue
+                span.m-1.badge.badge-azure Azure
+                span.m-1.badge.badge-indigo Indigo
+                span.m-1.badge.badge-purple Purple
+                span.m-1.badge.badge-pink Pink
+                span.m-1.badge.badge-red Red
+                span.m-1.badge.badge-orange Orange
+                span.m-1.badge.badge-yellow Yellow
+                span.m-1.badge.badge-lime Lime
+                span.m-1.badge.badge-green Green
+                span.m-1.badge.badge-teal Teal
+                span.m-1.badge.badge-cyan Cyan
+        
+              div
+                span.m-1.badge.badge-light-blue Blue
+                span.m-1.badge.badge-light-azure Azure
+                span.m-1.badge.badge-light-indigo Indigo
+                span.m-1.badge.badge-light-purple Purple
+                span.m-1.badge.badge-light-pink Pink
+                span.m-1.badge.badge-light-red Red
+                span.m-1.badge.badge-light-orange Orange
+                span.m-1.badge.badge-light-yellow Yellow
+                span.m-1.badge.badge-light-lime Lime
+                span.m-1.badge.badge-light-green Green
+                span.m-1.badge.badge-light-teal Teal
+                span.m-1.badge.badge-light-cyan Cyan
+        
+              div
+                span.m-1.badge.badge-outline-blue Blue
+                span.m-1.badge.badge-outline-azure Azure
+                span.m-1.badge.badge-outline-indigo Indigo
+                span.m-1.badge.badge-outline-purple Purple
+                span.m-1.badge.badge-outline-pink Pink
+                span.m-1.badge.badge-outline-red Red
+                span.m-1.badge.badge-outline-orange Orange
+                span.m-1.badge.badge-outline-yellow Yellow
+                span.m-1.badge.badge-outline-lime Lime
+                span.m-1.badge.badge-outline-green Green
+                span.m-1.badge.badge-outline-teal Teal
+                span.m-1.badge.badge-outline-cyan Cyan
+        .col-12
+          .card.mb-3
+            .card-body
+              div
+                span.m-1.badge.badge-primary primary
+                span.m-1.badge.badge-secondary secondary
+                span.m-1.badge.badge-success success
+                span.m-1.badge.badge-danger danger
+                span.m-1.badge.badge-warning warning
+                span.m-1.badge.badge-info info
+                span.m-1.badge.badge-light light
+                span.m-1.badge.badge-dark dark
+              div
+                span.m-1.badge.badge-light-primary primary
+                span.m-1.badge.badge-light-secondary secondary
+                span.m-1.badge.badge-light-success success
+                span.m-1.badge.badge-light-danger danger
+                span.m-1.badge.badge-light-warning warning
+                span.m-1.badge.badge-light-info info
+                span.m-1.badge.badge-light-light light
+                span.m-1.badge.badge-light-dark dark
+              div
+                span.m-1.badge.badge-outline-primary primary
+                span.m-1.badge.badge-outline-secondary secondary
+                span.m-1.badge.badge-outline-success success
+                span.m-1.badge.badge-outline-danger danger
+                span.m-1.badge.badge-outline-warning warning
+                span.m-1.badge.badge-outline-info info
+                span.m-1.badge.badge-outline-light light
+                span.m-1.badge.badge-outline-dark dark
+  .card 
+    .card-body
+      button.btn.btn-secondary.position-relative 
+        | Inbox
+        span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger 
+          | 99+
+      button.btn.btn-secondary.position-relative 
+        | Inbox
+        span.position-absolute.top-0.start-100.translate-middle.p-2.bg-danger.border.border-light.rounded-circle
+

@@ -5,6 +5,7 @@
 @import "base/typography";
 @import "base/variables";
 @import "base/variables-dark";
+@import "base/maps";
 
 // Third-party Libraries
 @import "~bootstrap/scss/bootstrap"; // Bootstrap
@@ -17,6 +18,7 @@
 @import "components/alerts";
 @import "components/avatar";
 @import "components/badge";
+@import "components/badges";
 @import "components/buttons";
 @import "components/card";
 @import "components/dropdown";

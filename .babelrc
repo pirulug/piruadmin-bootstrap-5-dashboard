@@ -3,7 +3,12 @@
     [
       "@babel/preset-env",
       {
-        "modules": false
+        "modules": false,
+        "targets": {
+          "esmodules": true // Para apuntar a ES modules que son parte de ES2020
+        },
+        "useBuiltIns": "entry",
+        "corejs": 3 // Puedes ajustar esto según la versión que estés usando
       }
     ]
   ]

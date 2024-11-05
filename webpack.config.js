@@ -195,6 +195,9 @@ module.exports = {
       request$: "xhr",
     },
   },
+  cache: {
+    type: "filesystem",
+  },
   devServer: {
     static: {
       directory: Path.join(__dirname, "dist"),

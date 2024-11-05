@@ -102,6 +102,11 @@
         "link": "ui-alerts"
       },
       {
+        "title": "Badges",
+        "path": "ui-badges",
+        "link": "ui-badges"
+      },
+      {
         "title": "Buttons",
         "path": "ui-buttons",
         "link": "ui-buttons"
