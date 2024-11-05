@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Profile | PiruAdmin</title>
-    <meta name="title" content="Profile | PiruAdmin">
+    <title>Badges | PiruAdmin</title>
+    <meta name="title" content="Badges | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/account-profile.html">
-    <meta property="og:title" content="Profile | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-badges.html">
+    <meta property="og:title" content="Badges | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/account-profile.html">
-    <meta property="twitter:title" content="Profile | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui-badges.html">
+    <meta property="twitter:title" content="Badges | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -65,9 +65,9 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="auth-recover-password.html">Recover Password</a></li>
               </ul>
             </li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="account" data-bs-parent="#sidebar">
-                <li class="sidebar-item active"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -77,10 +77,10 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General UI</a></li>
@@ -226,97 +226,51 @@
         <!-- Content-->
         <div class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Profile</h1>
+            <h1 class="h3 d-inline align-middle">Badges</h1>
           </div>
           <div class="row">
-            <div class="col-md-3 col-xl-4">
+            <div class="col-5">
               <div class="card mb-3">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Profile Details</h5>
-                </div>
-                <div class="card-body text-center"><img class="img-fluid rounded-circle mb-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Christina Mason" width="128" height="128">
-                  <h5 class="card-title mb-0">Christina Mason</h5>
-                  <div class="text-muted mb-2">Lead Developer</div>
-                  <div><a class="btn btn-primary btn-sm" href="#">Follow</a><a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span> Message</a></div>
-                </div>
-                <hr class="my-0">
                 <div class="card-body">
-                  <h5 class="h6 card-title">Skills</h5><a class="badge bg-primary me-1 my-1" href="#">HTML</a><a class="badge bg-primary me-1 my-1" href="#">JavaScript</a><a class="badge bg-primary me-1 my-1" href="#">Sass</a><a class="badge bg-primary me-1 my-1" href="#">Angular</a><a class="badge bg-primary me-1 my-1" href="#">Vue</a><a class="badge bg-primary me-1 my-1" href="#">React</a><a class="badge bg-primary me-1 my-1" href="#">Redux</a><a class="badge bg-primary me-1 my-1" href="#">UI</a><a class="badge bg-primary me-1 my-1" href="#">UX</a>
-                </div>
-                <hr class="my-0">
-                <div class="card-body">
-                  <h5 class="h6 card-title">About</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="home"></span> Lives in <a href="#">San Francisco, SA</a></li>
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="briefcase"></span> Works at <a href="#">GitHub</a></li>
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="map-pin"></span> From <a href="#">Boston</a></li>
-                  </ul>
-                </div>
-                <hr class="my-0">
-                <div class="card-body">
-                  <h5 class="h6 card-title">Elsewhere</h5>
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="home"></i>Website</span><a href="#">https://pirulug.com</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="twitter"></i>Twitter</span><a href="#">@pirulug</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="facebook"></i>Facebook</span><a href="#">pirulug</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="instagram"></i>Instagram</span><a href="#">pirulug</a></li>
-                  </ul>
+                  <h1>Example heading <span class="badge text-bg-secondary">New</span></h1>
+                  <h2>Example heading <span class="badge text-bg-secondary">New</span></h2>
+                  <h3>Example heading <span class="badge text-bg-secondary">New</span></h3>
+                  <h4>Example heading <span class="badge text-bg-secondary">New</span></h4>
+                  <h5>Example heading <span class="badge text-bg-secondary">New</span></h5>
+                  <h6>Example heading <span class="badge text-bg-secondary">New</span></h6>
                 </div>
               </div>
             </div>
-            <div class="col-md-9 col-xl-8">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Activities</h5>
+            <div class="col-7">
+              <div class="row">
+                <div class="col-12">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div><span class="m-1 badge badge-blue">Blue</span><span class="m-1 badge badge-azure">Azure</span><span class="m-1 badge badge-indigo">Indigo</span><span class="m-1 badge badge-purple">Purple</span><span class="m-1 badge badge-pink">Pink</span><span class="m-1 badge badge-red">Red</span><span class="m-1 badge badge-orange">Orange</span><span class="m-1 badge badge-yellow">Yellow</span><span class="m-1 badge badge-lime">Lime</span><span class="m-1 badge badge-green">Green</span><span class="m-1 badge badge-teal">Teal</span><span class="m-1 badge badge-cyan">Cyan</span></div>
+                      <div><span class="m-1 badge badge-light-blue">Blue</span><span class="m-1 badge badge-light-azure">Azure</span><span class="m-1 badge badge-light-indigo">Indigo</span><span class="m-1 badge badge-light-purple">Purple</span><span class="m-1 badge badge-light-pink">Pink</span><span class="m-1 badge badge-light-red">Red</span><span class="m-1 badge badge-light-orange">Orange</span><span class="m-1 badge badge-light-yellow">Yellow</span><span class="m-1 badge badge-light-lime">Lime</span><span class="m-1 badge badge-light-green">Green</span><span class="m-1 badge badge-light-teal">Teal</span><span class="m-1 badge badge-light-cyan">Cyan</span></div>
+                      <div><span class="m-1 badge badge-outline-blue">Blue</span><span class="m-1 badge badge-outline-azure">Azure</span><span class="m-1 badge badge-outline-indigo">Indigo</span><span class="m-1 badge badge-outline-purple">Purple</span><span class="m-1 badge badge-outline-pink">Pink</span><span class="m-1 badge badge-outline-red">Red</span><span class="m-1 badge badge-outline-orange">Orange</span><span class="m-1 badge badge-outline-yellow">Yellow</span><span class="m-1 badge badge-outline-lime">Lime</span><span class="m-1 badge badge-outline-green">Green</span><span class="m-1 badge badge-outline-teal">Teal</span><span class="m-1 badge badge-outline-cyan">Cyan</span></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="card-body h-100">
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Vanessa Tucker">
-                    <div class="flex-grow-1"><small class="float-end text-navy">5m ago</small><strong>Vanessa Tucker</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Today 7:51 pm</small><br></div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Charles Hall">
-                    <div class="flex-grow-1"><small class="float-end text-navy">30m ago</small><strong>Charles Hall</strong> posted something on <strong>Christina Mason</strong>&apos;s timeline<br><small class="text-muted">Today 7:21 pm</small>
-                      <div class="border text-sm text-muted p-2 mt-1">
-                        Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-                        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-                      </div><a class="btn btn-sm btn-danger mt-1" href="#"><i class="feather-sm" data-feather="heart"></i> Like</a>
+                <div class="col-12">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div><span class="m-1 badge badge-primary">primary</span><span class="m-1 badge badge-secondary">secondary</span><span class="m-1 badge badge-success">success</span><span class="m-1 badge badge-danger">danger</span><span class="m-1 badge badge-warning">warning</span><span class="m-1 badge badge-info">info</span><span class="m-1 badge badge-light">light</span><span class="m-1 badge badge-dark">dark</span></div>
+                      <div><span class="m-1 badge badge-light-primary">primary</span><span class="m-1 badge badge-light-secondary">secondary</span><span class="m-1 badge badge-light-success">success</span><span class="m-1 badge badge-light-danger">danger</span><span class="m-1 badge badge-light-warning">warning</span><span class="m-1 badge badge-light-info">info</span><span class="m-1 badge badge-light-light">light</span><span class="m-1 badge badge-light-dark">dark</span></div>
+                      <div><span class="m-1 badge badge-outline-primary">primary</span><span class="m-1 badge badge-outline-secondary">secondary</span><span class="m-1 badge badge-outline-success">success</span><span class="m-1 badge badge-outline-danger">danger</span><span class="m-1 badge badge-outline-warning">warning</span><span class="m-1 badge badge-outline-info">info</span><span class="m-1 badge badge-outline-light">light</span><span class="m-1 badge badge-outline-dark">dark</span></div>
                     </div>
                   </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1h ago</small><strong>Christina Mason</strong> posted a new blog<br><small class="text-muted">Today 6:35 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="William Harris">
-                    <div class="flex-grow-1"><small class="float-end text-navy">3h ago</small><strong>William Harris</strong> posted two photos on <strong>Christina Mason</strong>&apos;s timeline<br><small class="text-muted">Today 5:12 pm</small>
-                      <div class="row g-0 mt-1">
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3"><img class="img-fluid pe-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Unsplash"></div>
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3"><img class="img-fluid pe-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Unsplash"></div>
-                      </div><a class="btn btn-sm btn-danger mt-1" href="#"><i class="feather-sm" data-feather="heart"></i> Like</a>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="William Harris">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>William Harris</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Yesterday 3:12 pm</small>
-                      <div class="d-flex align-items-start mt-1"><a class="pe-3" href="#"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason"></a>
-                        <div class="flex-grow-1">
-                          <div class="border text-sm text-muted p-2 mt-1">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>Christina Mason</strong> posted a new blog<br><small class="text-muted">Yesterday 2:43 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Charles Hall">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>Charles Hall</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Yesterdag 1:51 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-grid"><a class="btn btn-primary" href="#">Load more</a></div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="card"> 
+            <div class="card-body">
+              <button class="btn btn-secondary position-relative">
+                 Inbox<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                   99+</span></button>
+              <button class="btn btn-secondary position-relative">
+                 Inbox<span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"></span></button>
             </div>
           </div>
         </div>
