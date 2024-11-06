@@ -1,35 +1,10 @@
 .alert {
-  --#{$prefix}alert-color: #{var(--#{$prefix}secondary)};
-  --#{$prefix}alert-bg: #{var(--#{$prefix}bg-surface)};
-  border: var(--#{$prefix}border-width) var(--#{$prefix}border-style)
-    var(--#{$prefix}border-color);
-  border-left: 0.25rem var(--#{$prefix}border-style)
-    var(--#{$prefix}alert-color);
-  // box-shadow: $alert-shadow;
+  display: flex;
+  align-items: center;
+  border-left: 0.25rem solid var(--#{$prefix}alert-color);
 
   > :last-child {
     margin-bottom: 0;
-  }
-}
-
-.alert-important {
-  border-color: transparent;
-  background: var(--#{$prefix}alert-color);
-  color: #fff;
-
-  .alert-icon,
-  .alert-link,
-  .alert-title {
-    color: inherit;
-  }
-
-  .alert-link:hover {
-    color: inherit;
-  }
-
-  .btn-close {
-    filter: var(--#{$prefix}btn-close-white-filter);
-    cursor: pointer;
   }
 }
 
@@ -40,23 +15,30 @@
   }
 }
 
+.alert-heading {
+  font-weight: bold;
+}
+
 @each $name, $color in $theme-colors {
   .alert-#{$name} {
-    --#{$prefix}alert-color: var(--#{$prefix}#{$name});
+    border-left-color: $color;
   }
 }
 
 .alert-icon {
-  color: var(--#{$prefix}alert-color);
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-  margin: -0.125rem $alert-padding-x -0.125rem 0;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  width: 30px;
+
+  svg {
+    width: 100%;
+  }
+
+  i {
+    width: 100%;
+  }
 }
 
-.alert-title {
-  font-size: $h4-font-size;
-  // line-height: $h4-line-height;
-  font-weight: $font-weight-bold;
-  margin-bottom: 0.25rem;
-  color: var(--#{$prefix}alert-color);
+.alert-message {
+  width: 100%;
 }
