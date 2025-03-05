@@ -10,7 +10,7 @@
   @include media-breakpoint-up(md) {
     width: auto;
     max-width: auto;
-    border-radius: $border-radius 0 0 $border-radius;
+    // border-radius: $border-radius 0 0 $border-radius;
   }
 
   @include media-breakpoint-up(lg) {
