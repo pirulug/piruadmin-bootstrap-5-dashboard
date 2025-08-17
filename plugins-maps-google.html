@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Pages Settings | PiruAdmin</title>
-    <meta name="title" content="Pages Settings | PiruAdmin">
+    <title>Google Maps | PiruAdmin</title>
+    <meta name="title" content="Google Maps | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-settings.html">
-    <meta property="og:title" content="Pages Settings | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-maps-google.html">
+    <meta property="og:title" content="Google Maps | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-settings.html">
-    <meta property="twitter:title" content="Pages Settings | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-maps-google.html">
+    <meta property="twitter:title" content="Google Maps | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -52,9 +52,9 @@
           <ul class="sidebar-nav">
             <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
             <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item active"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
               </ul>
             </li>
@@ -109,11 +109,11 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="plugins" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
               </ul>
             </li>
           </ul>
@@ -231,118 +231,28 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Pages Settings</h1>
+            <h1 class="h3 d-inline align-middle">Google Maps</h1>
           </div>
           <div class="row">
-            <div class="col-md-3 col-xl-2">
+            <div class="col-12 col-lg-6">
               <div class="card mb-3">
                 <div class="card-header">
-                  <h5 class="card-title mb-0">Profile Settings</h5>
+                  <h5 class="card-title">Default Map</h5>
+                  <h6 class="card-subtitle text-muted">Displays the default road map view.</h6>
                 </div>
-                <div class="list-group list-group-flush" role="tablist"><a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#settings" role="tab">Account</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#password" role="tab">Password</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Privacy and safety</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Email notifications</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Web notifications</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Widgets</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Your data</a><a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#" role="tab">Delete account</a></div>
+                <div class="card-body">
+                  <div class="content" id="default_map" style="height: 300px;"></div>
+                </div>
               </div>
             </div>
-            <div class="col-md-9 col-xl-10">
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="settings" role="tabpanel">
-                  <div class="card mb-3">
-                    <div class="card-header">
-                      <h5 class="card-title mb-0">Public info</h5>
-                    </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="row">
-                          <div class="col-md-8">
-                            <div class="mb-3">
-                              <label class="form-label" for="inputUsername">Username</label>
-                              <input class="form-control" id="inputUsername" type="text" placeholder="Username">
-                            </div>
-                            <div class="mb-3">
-                              <label class="form-label" for="inputUsername">Biography</label>
-                              <textarea class="form-control" id="inputBio" rows="2" placeholder="Tell something about yourself"></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="text-center"><img class="rounded-circle img-responsive mt-2" alt="Charles Hall" src="https://dummyimage.com/400x400/000/fff.jpg" width="128" height="128">
-                              <div class="mt-2"><span class="btn btn-primary"><i class="fas fa-upload"></i> Upload</span></div><small>For best results, use an image at least 128px by 128px in .jpg format</small>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Save changes</button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="card mb-3">
-                    <div class="card-header">
-                      <h5 class="card-title mb-0">Private info</h5>
-                    </div>
-                    <div class="card-body">
-                      <form>
-                        <div class="row">
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="inputFirstName">First name</label>
-                            <input class="form-control" id="inputFirstName" type="text" placeholder="First name">
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="inputLastName">Last name</label>
-                            <input class="form-control" id="inputLastName" type="text" placeholder="Last name">
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputEmail4">Email</label>
-                          <input class="form-control" id="inputEmail4" type="email" placeholder="Email">
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputAddress">Address</label>
-                          <input class="form-control" id="inputAddress" type="text" placeholder="1234 Main St">
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputAddress2">Address 2</label>
-                          <input class="form-control" id="inputAddress2" type="text" placeholder="Apartment, studio, or floor">
-                        </div>
-                        <div class="row">
-                          <div class="mb-3 col-md-6">
-                            <label class="form-label" for="inputCity">City</label>
-                            <input class="form-control" id="inputCity" type="text">
-                          </div>
-                          <div class="mb-3 col-md-4">
-                            <label class="form-label" for="inputState">State</label>
-                            <select class="form-control" id="inputState">
-                              <option selected="">Choose...</option>
-                              <option>...</option>
-                            </select>
-                          </div>
-                          <div class="mb-3 col-md-2">
-                            <label class="form-label" for="inputZip">Zip</label>
-                            <input class="form-control" id="inputZip" type="text">
-                          </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Save changes</button>
-                      </form>
-                    </div>
-                  </div>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Hybrid Map</h5>
+                  <h6 class="card-subtitle text-muted">Displays a mixture of normal and satellite views.</h6>
                 </div>
-                <div class="tab-pane fade" id="password" role="tabpanel">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title">Password</h5>
-                      <form>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputPasswordCurrent">Current password</label>
-                          <input class="form-control" id="inputPasswordCurrent" type="password"><small><a href="#">Forgot your password?</a></small>
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputPasswordNew">New password</label>
-                          <input class="form-control" id="inputPasswordNew" type="password">
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="inputPasswordNew2">Verify password</label>
-                          <input class="form-control" id="inputPasswordNew2" type="password">
-                        </div>
-                        <button class="btn btn-primary" type="submit">Save changes</button>
-                      </form>
-                    </div>
-                  </div>
+                <div class="card-body">
+                  <div class="content" id="hybrid_map" style="height: 300px;"></div>
                 </div>
               </div>
             </div>
@@ -369,5 +279,28 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&amp;callback=initMaps" async defer="defer"></script>
+    <script>
+      function initMaps() {
+        var defaultMap = {
+          zoom: 14,
+          center: {
+            lat: 40.712784,
+            lng: -74.005941
+          },
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        new google.maps.Map(document.getElementById("default_map"), defaultMap);
+        var hybridMap = {
+          zoom: 14,
+          center: {
+            lat: 40.712784,
+            lng: -74.005941
+          },
+          mapTypeId: google.maps.MapTypeId.HYBRID
+        };
+        new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
+        }
+    </script>
   </body>
 </html>

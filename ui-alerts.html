@@ -29,6 +29,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrapicons.css">
     <link rel="stylesheet" href="css/piruadmin.css">
     <script>
       (function () {
@@ -68,6 +69,7 @@
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -77,7 +79,7 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item active"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
@@ -107,10 +109,13 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-header">Plugins &amp; Addons</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html"><i class="align-middle" data-feather="bar-chart-2"></i><span class="align-middle">Charts</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html"><i class="align-middle" data-feather="map"></i><span class="align-middle">Maps</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="sweetalert.html"><i class="align-middle" data-feather="bell"></i><span class="align-middle">SweetAlert 2</span></a></li>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -119,7 +124,7 @@
 <nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
           <li>
             <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
@@ -217,7 +222,7 @@
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"> <i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
     </ul>
@@ -229,152 +234,129 @@
             <h1 class="h3 d-inline align-middle">Alerts</h1>
           </div>
           <div class="row">
+            <!-- Basic alerts-->
             <div class="col-lg-6">
               <div class="card mb-3">
                 <div class="card-body">
                   <h2 class="card-title">Basic alerts</h2>
-                  <p class="text-secondary">Wrap any text and an optional dismiss button in <code>.alert</code> and one of the four contextual classes (e.g., <code>.alert-success</code>) for basic alert messages.</p>
-                  <div class="alert alert-success" role="alert">Wow! Everything worked!</div>
-                  <div class="alert alert-warning" role="alert">Uh oh, something went wrong</div>
-                  <div class="alert alert-danger" role="alert">I&apos;m so sorry&mldr;</div>
-                  <div class="alert alert-info" role="alert">Did you know?</div>
+                  <p class="text-secondary">Use<code>.alert</code> with contextual classes for basic messages.</p>
+                  <div class="alert alert-primary" role="alert">This is a primary alert — check it out!</div>
+                  <div class="alert alert-secondary" role="alert">This is a secondary alert — check it out!</div>
+                  <div class="alert alert-success" role="alert">This is a success alert — check it out!</div>
+                  <div class="alert alert-info" role="alert">This is an info alert — check it out!</div>
+                  <div class="alert alert-warning" role="alert">This is a warning alert — check it out!</div>
+                  <div class="alert alert-danger" role="alert">This is a danger alert — check it out!</div>
+                  <div class="alert alert-light" role="alert">This is a light alert — check it out!</div>
+                  <div class="alert alert-dark" role="alert">This is a dark alert — check it out!</div>
                 </div>
               </div>
             </div>
+            <!-- Alerts with icon-->
             <div class="col-lg-6">
               <div class="card mb-3">
                 <div class="card-body">
                   <h2 class="card-title">Alerts with icon</h2>
-                  <p class="text-secondary">Build on any alert by adding an optional icon.</p>
-                  <div class="alert alert-success" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                      </svg>
-                    </div>Wow! Everything worked!
+                  <p class="text-secondary">Add<code>.alert-media</code> to combine an icon with alert content.</p>
+                  <div class="alert alert-primary alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
+                    <div class="alert-body">Primary alert with icon</div>
                   </div>
-                  <div class="alert alert-warning" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 9v4"></path>
-                        <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
-                        <path d="M12 16h.01"></path>
-                      </svg>
-                    </div>Uh oh, something went wrong
+                  <div class="alert alert-secondary alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
+                    <div class="alert-body">Secondary alert with icon</div>
                   </div>
-                  <div class="alert alert-danger" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M12 8v4"></path>
-                        <path d="M12 16h.01"></path>
-                      </svg>
-                    </div>I&apos;m so sorry&mldr;
+                  <div class="alert alert-success alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="alert-body">Success alert with icon</div>
                   </div>
-                  <div class="alert alert-info" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M12 9h.01"></path>
-                        <path d="M11 12h1v4h1"></path>
-                      </svg>
-                    </div>Did you know?
+                  <div class="alert alert-info alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div class="alert-body">Info alert with icon</div>
+                  </div>
+                  <div class="alert alert-warning alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="alert-body">Warning alert with icon</div>
+                  </div>
+                  <div class="alert alert-danger alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                    <div class="alert-body">Danger alert with icon</div>
+                  </div>
+                  <div class="alert alert-light alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-regular fa-circle"></i></div>
+                    <div class="alert-body">Light alert with icon</div>
+                  </div>
+                  <div class="alert alert-dark alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
+                    <div class="alert-body">Dark alert with icon</div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Outline alerts-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Outline alerts</h2>
+                  <p class="text-secondary">Use<code>.alert-outline-*</code> for subtle transparent alerts.</p>
+                  <div class="alert alert-outline-primary" role="alert">Outline primary alert</div>
+                  <div class="alert alert-outline-secondary" role="alert">Outline secondary alert</div>
+                  <div class="alert alert-outline-success" role="alert">Outline success alert</div>
+                  <div class="alert alert-outline-info" role="alert">Outline info alert</div>
+                  <div class="alert alert-outline-warning" role="alert">Outline warning alert</div>
+                  <div class="alert alert-outline-danger" role="alert">Outline danger alert</div>
+                  <div class="alert alert-outline-light" role="alert">Outline light alert</div>
+                  <div class="alert alert-outline-dark" role="alert">Outline dark alert</div>
+                </div>
+              </div>
+            </div>
+            <!-- Dismissible alerts-->
             <div class="col-lg-6">
               <div class="card mb-3">
                 <div class="card-body">
                   <h2 class="card-title">Dismissible alerts</h2>
-                  <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
-                  <div class="alert alert-success alert-dismissible" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                      </svg>
-                    </div>Wow! Everything worked!<a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  <p class="text-secondary">Add<code>.alert-dismissible</code> with a close button.</p>
+                  <div class="alert alert-success alert-media alert-dismissible" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="alert-body">Operation successful!</div>
+                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
-                  <div class="alert alert-warning alert-dismissible" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M12 9v4"></path>
-                        <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"></path>
-                        <path d="M12 16h.01"></path>
-                      </svg>
-                    </div>Uh oh, something went wrong<a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  <div class="alert alert-warning alert-media alert-dismissible" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="alert-body">Something went wrong</div>
+                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
-                  <div class="alert alert-danger alert-dismissible" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M12 8v4"></path>
-                        <path d="M12 16h.01"></path>
-                      </svg>
-                    </div>I&apos;m so sorry&mldr;<a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  <div class="alert alert-danger alert-media alert-dismissible" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                    <div class="alert-body">Critical error detected</div>
+                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
-                  <div class="alert alert-info alert-dismissible" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                        <path d="M12 9h.01"></path>
-                        <path d="M11 12h1v4h1"></path>
-                      </svg>
-                    </div>Did you know?<a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                  <div class="alert alert-info alert-media alert-dismissible" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div class="alert-body">Here’s some information</div>
+                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- Alerts with heading & description-->
             <div class="col-lg-6">
               <div class="card mb-3">
                 <div class="card-body">
-                  <h2 class="card-title">Alert with a description</h2>
-                  <p class="text-secondary">Build on any alert by adding an optional <code>.alert-dismissible</code> and close button.</p>
-                  <div class="alert alert-primary" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                      </svg>
-                    </div>
-                    <div class="alert-message">
-                      <h4 class="alert-heading">This is a custom alert box!</h4>
-                      <div class="text-secondary">Your account has been saved!</div><a class="alert-link">an example link</a>
+                  <h2 class="card-title">Alerts with description</h2>
+                  <p class="text-secondary">Build on<code>.alert-body</code> with headings, links, or extra content.</p>
+                  <div class="alert alert-success alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="alert-body">
+                      <h4 class="alert-heading">Success!</h4>
+                      <p class="text-secondary">Your account has been saved successfully.</p><a class="alert-link" href="#">View details</a>
                     </div>
                   </div>
-                  <div class="alert alert-secondary" role="alert">
-                    <div class="alert-icon"><i class="fa fa-circle"></i></div>
-                    <div class="alert-message">
-                      <h4 class="alert-heading">This is a custom alert box!</h4>
-                      <div class="text-secondary">Your account has been saved!</div><a class="alert-link">an example link</a>
-                    </div>
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    <div class="alert-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M5 12l5 5l10 -10"></path>
-                      </svg>
-                    </div>
-                    <div class="alert-message">
-                      <h4 class="alert-heading">This is a custom alert box!</h4>
-                      <div class="text-secondary">Your account has been saved!</div><a class="alert-link">an example link</a>
-                    </div>
-                  </div>
-                  <div class="alert alert-danger" role="alert">
-                    <div class="alert-icon"><i class="fa fa-circle"></i></div>
-                    <div class="alert-message">
-                      <h4 class="alert-heading">This is a custom alert box!</h4>
-                      <div class="text-secondary">Your account has been saved!</div>
-                      <hr><a class="alert-link" href="#">Example Link</a>
+                  <div class="alert alert-danger alert-media" role="alert">
+                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                    <div class="alert-body">
+                      <h4 class="alert-heading">Error!</h4>
+                      <p class="text-secondary">Something went wrong during saving.</p>
+                      <hr><a class="alert-link" href="#">Try again</a>
                     </div>
                   </div>
                 </div>

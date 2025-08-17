@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Charts | PiruAdmin</title>
-    <meta name="title" content="Charts | PiruAdmin">
+    <title>Profile Settings | PiruAdmin</title>
+    <meta name="title" content="Profile Settings | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/charts-chartjs.html">
-    <meta property="og:title" content="Charts | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/account-settings.html">
+    <meta property="og:title" content="Profile Settings | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/charts-chartjs.html">
-    <meta property="twitter:title" content="Charts | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/account-settings.html">
+    <meta property="twitter:title" content="Profile Settings | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -29,6 +29,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrapicons.css">
     <link rel="stylesheet" href="css/piruadmin.css">
     <script>
       (function () {
@@ -39,6 +40,19 @@
       })();
       
     </script>
+    <style>
+      .card .position-absolute img {
+        max-width: 170px;
+      }
+      
+      @media (max-width: 576px) {
+        .card .position-absolute img {
+          max-width: 120px;
+        }
+      }
+      
+      
+    </style>
   </head>
   <body>
 <!-- Loader-->
@@ -65,9 +79,10 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="auth-recover-password.html">Recover Password</a></li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="account" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -77,7 +92,7 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
@@ -107,10 +122,13 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-header">Plugins &amp; Addons</li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="charts-chartjs.html"><i class="align-middle" data-feather="bar-chart-2"></i><span class="align-middle">Charts</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html"><i class="align-middle" data-feather="map"></i><span class="align-middle">Maps</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="sweetalert.html"><i class="align-middle" data-feather="bell"></i><span class="align-middle">SweetAlert 2</span></a></li>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -119,7 +137,7 @@
 <nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
           <li>
             <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
@@ -217,7 +235,7 @@
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"> <i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
     </ul>
@@ -226,59 +244,202 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Charts</h1>
+            <h1 class="h3 d-inline align-middle">Profile Settings</h1>
           </div>
-          <div class="row">
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3 flex-fill w-100">
-                <div class="card-header">
-                  <h5 class="card-title">Line Chart</h5>
-                  <h6 class="card-subtitle text-muted">A line chart is a way of plotting data points on a line.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart">
-                    <canvas id="chartjs-line"></canvas>
+          <!-- Navigation - estilo moderno con íconos-->
+          <div class="tab tab-vertical">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item"><a class="nav-link active" href="#" data-bs-toggle="pill" data-bs-target=".tab-account" role="tab" aria-selected="true"><i class="bi bi-person-circle me-2"></i>Account</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target=".tab-info" role="tab" aria-selected="false"><i class="bi bi-info-circle me-2"></i>Information</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target=".tab-security" role="tab" aria-selected="false"><i class="bi bi-shield-lock me-2"></i>Security</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="pill" data-bs-target=".tab-social" role="tab" aria-selected="false"><i class="bi bi-share me-2"></i>Social</a></li>
+            </ul>
+            <!-- Tab Content-->
+            <div class="tab-content">
+              <!-- Account-->
+              <div class="tab-pane fade show active tab-account" role="tabpanel">
+                <h4 class="tab-title"><i class="bi bi-person-badge me-2"></i>Account Settings</h4>
+                <form>
+                  <div class="d-flex flex-column flex-sm-row mb-3 align-items-center">
+                    <figure class="me-sm-3 mb-3 mb-sm-0"><img class="rounded-circle" width="100" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Pirulug Avatar"></figure>
+                    <div class="text-center text-sm-start">
+                      <p class="fw-bold mb-2">Pirulug</p>
+                      <div class="btn-group">
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-upload me-1"></i>Change</button>
+                        <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i>Remove</button>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <!-- Datos básicos-->
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Name</label>
+                      <input class="form-control" type="text" value="Pirulug">
+                      <label class="form-label mt-2">Username</label>
+                      <input class="form-control" type="text" value="pirulug">
+                      <label class="form-label mt-2">Email</label>
+                      <input class="form-control" type="email" value="pirulug@localhost.test">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Role</label>
+                      <select class="form-select">
+                        <option>Admin</option>
+                        <option selected="selected">Developer</option>
+                        <option>User</option>
+                      </select>
+                      <label class="form-label mt-2">Status</label>
+                      <select class="form-select">
+                        <option selected="selected">Active</option>
+                        <option>Blocked</option>
+                      </select>
+                      <label class="form-label mt-2">Department</label>
+                      <select class="form-select">
+                        <option selected="selected">Development</option>
+                        <option>Management</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Permissions colapsable-->
+                  <div class="accordion mt-4">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#permCollapse"><i class="bi bi-key-fill me-2"></i>Permissions</button>
+                      </h2>
+                      <div class="accordion-collapse collapse" id="permCollapse">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-sm table-hover align-middle">
+                              <thead class="table-light">
+                                <tr>
+                                  <th>Module</th>
+                                  <th>View</th>
+                                  <th>Edit</th>
+                                  <th>Create</th>
+                                  <th>Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Users</td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Projects</td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Reports</td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox" checked="checked">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox">
+                                  </td>
+                                  <td>
+                                    <input class="form-check-input" type="checkbox">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary mt-3"><i class="bi bi-check2-circle me-2"></i>Save Changes</button>
+                </form>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3">
-                <div class="card-header">
-                  <h5 class="card-title">Bar Chart</h5>
-                  <h6 class="card-subtitle text-muted">A bar chart provides a way of showing data values represented as vertical bars.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart">
-                    <canvas id="chartjs-bar"></canvas>
+              <!-- Information-->
+              <div class="tab-pane fade tab-info" role="tabpanel">
+                <h6 class="tab-title"><i class="bi bi-info-circle me-2"></i>Personal Information</h6>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Birth Date</label>
+                      <input class="form-control" type="date" value="2000-01-01">
+                      <label class="form-label mt-2">Phone</label>
+                      <input class="form-control" type="text" value="+51 987654321">
+                      <label class="form-label mt-2">Website</label>
+                      <input class="form-control" type="url" value="http://pirulug.test/">
+                      <label class="form-label mt-2">Languages</label>
+                      <input class="form-control" type="text" value="Spanish, English">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Address Line 1</label>
+                      <input class="form-control" type="text" value="Calle Localhost 123">
+                      <label class="form-label mt-2">City</label>
+                      <input class="form-control" type="text" value="Huancayo">
+                      <label class="form-label mt-2">State</label>
+                      <input class="form-control" type="text" value="Junín">
+                      <label class="form-label mt-2">Country</label>
+                      <input class="form-control" type="text" value="Perú">
+                    </div>
                   </div>
-                </div>
+                  <button class="btn btn-primary mt-3"><i class="bi bi-check2-circle me-2"></i>Save Changes</button>
+                </form>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Doughnut Chart</h5>
-                  <h6 class="card-subtitle text-muted">Doughnut charts are excellent at showing the relational proportions between data.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart chart-sm">
-                    <canvas id="chartjs-doughnut"></canvas>
+              <!-- Security-->
+              <div class="tab-pane fade tab-security" role="tabpanel">
+                <h6 class="tab-title"><i class="bi bi-shield-lock me-2"></i>Security</h6>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Old Password</label>
+                      <input class="form-control" type="password">
+                      <label class="form-label mt-2">New Password</label>
+                      <input class="form-control" type="password">
+                      <label class="form-label mt-2">Repeat New Password</label>
+                      <input class="form-control" type="password">
+                    </div>
                   </div>
-                </div>
+                  <button class="btn btn-danger mt-3"><i class="bi bi-shield-check me-2"></i>Update Password</button>
+                </form>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Pie Chart</h5>
-                  <h6 class="card-subtitle text-muted">Pie charts are excellent at showing the relational proportions between data.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart chart-sm">
-                    <canvas id="chartjs-pie"></canvas>
+              <!-- Social-->
+              <div class="tab-pane fade tab-social" role="tabpanel">
+                <h6 class="tab-title"><i class="bi bi-share me-2"></i>Social Links</h6>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Twitter</label>
+                      <input class="form-control" type="url" value="https://twitter.com/pirulug">
+                      <label class="form-label mt-2">Facebook</label>
+                      <input class="form-control" type="url" value="https://www.facebook.com/pirulug">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Instagram</label>
+                      <input class="form-control" type="url" value="https://www.instagram.com/pirulug/">
+                      <label class="form-label mt-2">GitHub</label>
+                      <input class="form-control" type="url" value="https://github.com/pirulug">
+                    </div>
                   </div>
-                </div>
+                  <button class="btn btn-primary mt-3"><i class="fa fa-check me-2"></i>Save Changes</button>
+                </form>
               </div>
             </div>
           </div>
@@ -304,131 +465,5 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script>
-      // Line chart
-      new Chart(document.getElementById("chartjs-line"), {
-        type: "line",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Sales ($)",
-            fill: true,
-            backgroundColor: "transparent",
-            borderColor: "#ff0055",
-            data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
-          }, {
-            label: "Orders",
-            fill: true,
-            backgroundColor: "transparent",
-            borderColor: "#adb5bd",
-            borderDash: [4, 4],
-            data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-          tooltips: {
-            intersect: false
-          },
-          hover: {
-            intersect: true
-          },
-          plugins: {
-            filler: {
-              propagate: false
-            }
-          },
-          
-        }
-      });
-      
-      // Bar chart
-      new Chart(document.getElementById("chartjs-bar"), {
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Last year",
-            backgroundColor: "#ff0055",
-            borderColor: "#ff0055",
-            hoverBackgroundColor: "#ff0055",
-            hoverBorderColor: "#ff0055",
-            data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-            barPercentage: .75,
-            categoryPercentage: .5
-          }, {
-            label: "This year",
-            backgroundColor: "#dee2e6",
-            borderColor: "#dee2e6",
-            hoverBackgroundColor: "#dee2e6",
-            hoverBorderColor: "#dee2e6",
-            data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
-            barPercentage: .75,
-            categoryPercentage: .5
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-          
-        }
-      });
-      
-      // Doughnut chart
-      new Chart(document.getElementById("chartjs-doughnut"), {
-        type: "doughnut",
-        data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
-          datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-            ],
-            borderColor: "transparent"
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          cutoutPercentage: 65,
-          legend: {
-            display: false
-          }
-        }
-      });
-      
-      
-      // Pie chart
-      new Chart(document.getElementById("chartjs-pie"), {
-        type: "pie",
-        data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
-          datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-      ],
-      borderColor: "transparent"
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          }
-        }
-      });
-    </script>
   </body>
 </html>

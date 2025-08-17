@@ -46,8 +46,7 @@
         <div class="row vh-100">
           <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
             <div class="d-table-cell align-middle">
-              <div class="card position-relative">
-                <div class="wd-50 bg-body p-2 shadow rounded position-absolute translate-middle top-0 start-50"><img class="img-fluid m-1" src="img/logo.png" width="40" height="40" alt=""></div>
+              <div class="card">
                 <div class="card-body">
                   <div class="m-sm-3">
                     <h2 class="m-0">Sign In</h2>
@@ -59,7 +58,10 @@
                       </div>
                       <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input class="form-control" type="password" name="password" placeholder="Enter your password"><small><a href="/auth-reset-password.html">Forgot password?</a></small>
+                        <div class="input-group" id="show_hide_password">
+                          <input class="form-control border-end-0" id="inputChoosePassword" type="password" name="password" value="12345678" placeholder="Enter your password">
+                          <button class="input-group-text bg-transparent" id="togglePassword" type="button"><i class="fa fa-eye-slash"></i></button>
+                        </div><small><a href="/auth-reset-password.html">Forgot password?</a></small>
                       </div>
                       <div>
                         <div class="form-check align-items-center">
@@ -69,10 +71,9 @@
                       </div>
                       <div class="d-grid gap-2 mt-3"><a class="btn btn-primary" href="/">Sign in</a></div>
                     </form>
-                    <div class="separator"> <span class="separator-text">Or continue with</span></div>
+                    <div class="separator"><span class="separator-text">Or continue with</span></div>
                     <div class="d-flex gap-2"><a class="flex-fill btn btn-google" href="/"><i class="fab fa-fw fa-google"></i></a><a class="flex-fill btn btn-facebook" href="/"><i class="fab fa-fw fa-facebook-f"></i></a><a class="flex-fill btn btn-github" href="/"><i class="fab fa-fw fa-github"></i></a></div>
-                    <div class="text-center mt-3">
-                       Don&apos;t have an account? <a href="/auth-sign-up.html">Sign up</a></div>
+                    <div class="text-center mt-3">Don&apos;t have an account?<a href="/auth-sign-up.html">Sign up</a></div>
                   </div>
                 </div>
               </div>
@@ -98,5 +99,36 @@
 </div>
     <!-- Js Bootstrap-->
     <script src="js/piruadmin.js"></script>
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("inputChoosePassword");
+      const icon = togglePassword.querySelector("i");
+      
+      togglePassword.addEventListener("click", () => {
+        // guardar selección actual
+        let start = passwordInput.selectionStart;
+        let end = passwordInput.selectionEnd;
+      
+        // cambiar tipo
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+      
+        // asegurar foco
+        passwordInput.focus();
+      
+        // si no hay selección previa, mover al final
+        if (start === 0 && end === 0) {
+          const len = passwordInput.value.length;
+          passwordInput.setSelectionRange(len, len);
+        } else {
+          // restaurar selección previa
+          passwordInput.setSelectionRange(start, end);
+        }
+      
+        // alternar ícono
+        icon.classList.toggle("fa-eye");
+        icon.classList.toggle("fa-eye-slash");
+      });
+    </script>
   </body>
 </html>

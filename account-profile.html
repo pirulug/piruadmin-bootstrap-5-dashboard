@@ -29,6 +29,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrapicons.css">
     <link rel="stylesheet" href="css/piruadmin.css">
     <script>
       (function () {
@@ -39,6 +40,20 @@
       })();
       
     </script>
+    <style>
+      /* Avatar que se superpone sobre el cover */
+      .card .position-absolute img {
+        max-width: 170px;
+      }
+      
+      @media (max-width: 576px) {
+        .card .position-absolute img {
+          max-width: 120px; /* avatar más pequeño en móviles */
+        }
+      }
+      
+      
+    </style>
   </head>
   <body>
 <!-- Loader-->
@@ -68,6 +83,7 @@
             <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse show" id="account" data-bs-parent="#sidebar">
                 <li class="sidebar-item active"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -77,7 +93,7 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
@@ -107,10 +123,13 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-header">Plugins &amp; Addons</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html"><i class="align-middle" data-feather="bar-chart-2"></i><span class="align-middle">Charts</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html"><i class="align-middle" data-feather="map"></i><span class="align-middle">Maps</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="sweetalert.html"><i class="align-middle" data-feather="bell"></i><span class="align-middle">SweetAlert 2</span></a></li>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -119,7 +138,7 @@
 <nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
           <li>
             <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
@@ -217,7 +236,7 @@
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"> <i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
     </ul>
@@ -228,93 +247,60 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Profile</h1>
           </div>
+          <div class="card mb-3">
+            <div class="card-body p-4">
+              <div class="position-relative mb-5"><img class="img-fluid w-100 rounded shadow" src="https://dummyimage.com/1200x300/ddd/000.jpg" alt="Cover Image">
+                <div class="position-absolute top-100 start-50 translate-middle"><img class="img-fluid rounded-circle border border-3 border-white shadow" src="https://dummyimage.com/200x200/000/fff.jpg" width="170" height="170" alt="Pirulug Avatar"></div>
+              </div>
+              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-5 text-center text-md-start">
+                <div>
+                  <h3 class="mb-1">Pirulug</h3>
+                  <p class="mb-0">Developer & Open Source Enthusiast<br>Perú</p>
+                </div>
+                <div class="mt-3 mt-md-0"><a class="btn btn-primary px-4" href="https://github.com/Pirulug" target="_blank"><i class="bi bi-github me-2"></i>Follow on GitHub</a></div>
+              </div>
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <button class="btn btn-sm btn-outline-secondary" type="button">Python</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">Open Source</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">Backend</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">DevOps</button>
+              </div>
+            </div>
+          </div>
           <div class="row">
-            <div class="col-md-3 col-xl-4">
+            <div class="col-md-4">
               <div class="card mb-3">
-                <div class="card-header">
-                  <h5 class="card-title mb-0">Profile Details</h5>
-                </div>
-                <div class="card-body text-center"><img class="img-fluid rounded-circle mb-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Christina Mason" width="128" height="128">
-                  <h5 class="card-title mb-0">Christina Mason</h5>
-                  <div class="text-muted mb-2">Lead Developer</div>
-                  <div><a class="btn btn-primary btn-sm" href="#">Follow</a><a class="btn btn-primary btn-sm" href="#"><span data-feather="message-square"></span> Message</a></div>
-                </div>
-                <hr class="my-0">
-                <div class="card-body">
-                  <h5 class="h6 card-title">Skills</h5><a class="badge bg-primary me-1 my-1" href="#">HTML</a><a class="badge bg-primary me-1 my-1" href="#">JavaScript</a><a class="badge bg-primary me-1 my-1" href="#">Sass</a><a class="badge bg-primary me-1 my-1" href="#">Angular</a><a class="badge bg-primary me-1 my-1" href="#">Vue</a><a class="badge bg-primary me-1 my-1" href="#">React</a><a class="badge bg-primary me-1 my-1" href="#">Redux</a><a class="badge bg-primary me-1 my-1" href="#">UI</a><a class="badge bg-primary me-1 my-1" href="#">UX</a>
-                </div>
-                <hr class="my-0">
                 <div class="card-body">
                   <h5 class="h6 card-title">About</h5>
                   <ul class="list-unstyled mb-0">
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="home"></span> Lives in <a href="#">San Francisco, SA</a></li>
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="briefcase"></span> Works at <a href="#">GitHub</a></li>
-                    <li class="mb-1"><span class="feather-sm me-1" data-feather="map-pin"></span> From <a href="#">Boston</a></li>
+                    <li class="mb-1"><i class="bi bi-house me-1"></i>Lives in<a href="#">Perú</a></li>
+                    <li class="mb-1"><i class="bi bi-briefcase me-1"></i>Works on<a href="https://github.com/Pirulug" target="_blank">GitHub Projects</a></li>
+                    <li class="mb-1"><i class="bi bi-geo-alt me-1"></i>From<a href="#">Huaraz</a></li>
                   </ul>
                 </div>
                 <hr class="my-0">
                 <div class="card-body">
                   <h5 class="h6 card-title">Elsewhere</h5>
                   <ul class="list-unstyled mb-0">
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="home"></i>Website</span><a href="#">https://pirulug.com</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="twitter"></i>Twitter</span><a href="#">@pirulug</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="facebook"></i>Facebook</span><a href="#">pirulug</a></li>
-                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="align-middle feather-sm me-1" data-feather="instagram"></i>Instagram</span><a href="#">pirulug</a></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-github me-1"></i>GitHub</span><a href="https://github.com/Pirulug" target="_blank">@Pirulug</a></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-twitter me-1"></i>Twitter</span><a href="https://twitter.com/Pirulug" target="_blank">@Pirulug</a></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-facebook me-1"></i>Facebook</span><a href="#">Pirulug</a></li>
+                    <li class="mb-1 d-flex justify-content-between align-items-center flex-wrap"><span><i class="bi bi-instagram me-1"></i>Instagram</span><a href="#">@Pirulug</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-md-9 col-xl-8">
+            <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
                   <h5 class="card-title mb-0">Activities</h5>
                 </div>
                 <div class="card-body h-100">
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Vanessa Tucker">
-                    <div class="flex-grow-1"><small class="float-end text-navy">5m ago</small><strong>Vanessa Tucker</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Today 7:51 pm</small><br></div>
+                  <div class="d-flex align-items-start mb-3"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Pirulug">
+                    <div class="flex-grow-1"><small class="float-end text-primary">now</small><strong>Pirulug</strong> pushed new commits to<strong>GitHub</strong><br><small class="text-muted">Today</small></div>
                   </div>
                   <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Charles Hall">
-                    <div class="flex-grow-1"><small class="float-end text-navy">30m ago</small><strong>Charles Hall</strong> posted something on <strong>Christina Mason</strong>&apos;s timeline<br><small class="text-muted">Today 7:21 pm</small>
-                      <div class="border text-sm text-muted p-2 mt-1">
-                        Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-                        pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
-                      </div><a class="btn btn-sm btn-danger mt-1" href="#"><i class="feather-sm" data-feather="heart"></i> Like</a>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1h ago</small><strong>Christina Mason</strong> posted a new blog<br><small class="text-muted">Today 6:35 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="William Harris">
-                    <div class="flex-grow-1"><small class="float-end text-navy">3h ago</small><strong>William Harris</strong> posted two photos on <strong>Christina Mason</strong>&apos;s timeline<br><small class="text-muted">Today 5:12 pm</small>
-                      <div class="row g-0 mt-1">
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3"><img class="img-fluid pe-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Unsplash"></div>
-                        <div class="col-6 col-md-4 col-lg-4 col-xl-3"><img class="img-fluid pe-2" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Unsplash"></div>
-                      </div><a class="btn btn-sm btn-danger mt-1" href="#"><i class="feather-sm" data-feather="heart"></i> Like</a>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="William Harris">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>William Harris</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Yesterday 3:12 pm</small>
-                      <div class="d-flex align-items-start mt-1"><a class="pe-3" href="#"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason"></a>
-                        <div class="flex-grow-1">
-                          <div class="border text-sm text-muted p-2 mt-1">Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Christina Mason">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>Christina Mason</strong> posted a new blog<br><small class="text-muted">Yesterday 2:43 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-flex align-items-start"><img class="rounded-circle me-2" src="https://dummyimage.com/200x200/000/fff.jpg" width="36" height="36" alt="Charles Hall">
-                    <div class="flex-grow-1"><small class="float-end text-navy">1d ago</small><strong>Charles Hall</strong> started following <strong>Christina Mason</strong><br><small class="text-muted">Yesterdag 1:51 pm</small></div>
-                  </div>
-                  <hr>
-                  <div class="d-grid"><a class="btn btn-primary" href="#">Load more</a></div>
+                  <div class="d-grid"><a class="btn btn-primary" href="https://github.com/Pirulug" target="_blank">See more on GitHub</a></div>
                 </div>
               </div>
             </div>

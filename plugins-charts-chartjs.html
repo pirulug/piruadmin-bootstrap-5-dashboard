@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Google Maps | PiruAdmin</title>
-    <meta name="title" content="Google Maps | PiruAdmin">
+    <title>Charts | PiruAdmin</title>
+    <meta name="title" content="Charts | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/maps-google.html">
-    <meta property="og:title" content="Google Maps | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-charts-chartjs.html">
+    <meta property="og:title" content="Charts | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/maps-google.html">
-    <meta property="twitter:title" content="Google Maps | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-charts-chartjs.html">
+    <meta property="twitter:title" content="Charts | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -29,6 +29,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrapicons.css">
     <link rel="stylesheet" href="css/piruadmin.css">
     <script>
       (function () {
@@ -68,6 +69,7 @@
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -77,7 +79,7 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
@@ -107,10 +109,13 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-header">Plugins &amp; Addons</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html"><i class="align-middle" data-feather="bar-chart-2"></i><span class="align-middle">Charts</span></a></li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="maps-google.html"><i class="align-middle" data-feather="map"></i><span class="align-middle">Maps</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="sweetalert.html"><i class="align-middle" data-feather="bell"></i><span class="align-middle">SweetAlert 2</span></a></li>
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="plugins" data-bs-parent="#sidebar">
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -119,7 +124,7 @@
 <nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
           <li>
             <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
@@ -217,7 +222,7 @@
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"> <i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
     </ul>
@@ -226,28 +231,58 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Google Maps</h1>
+            <h1 class="h3 d-inline align-middle">Charts</h1>
           </div>
           <div class="row">
             <div class="col-12 col-lg-6">
-              <div class="card mb-3">
+              <div class="card mb-3 flex-fill w-100">
                 <div class="card-header">
-                  <h5 class="card-title">Default Map</h5>
-                  <h6 class="card-subtitle text-muted">Displays the default road map view.</h6>
+                  <h5 class="card-title">Line Chart</h5>
+                  <h6 class="card-subtitle text-muted">A line chart is a way of plotting data points on a line.</h6>
                 </div>
                 <div class="card-body">
-                  <div class="content" id="default_map" style="height: 300px;"></div>
+                  <div class="chart">
+                    <canvas id="chartjs-line"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Bar Chart</h5>
+                  <h6 class="card-subtitle text-muted">A bar chart provides a way of showing data values represented as vertical bars.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-bar"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-6">
               <div class="card">
                 <div class="card-header">
-                  <h5 class="card-title">Hybrid Map</h5>
-                  <h6 class="card-subtitle text-muted">Displays a mixture of normal and satellite views.</h6>
+                  <h5 class="card-title">Doughnut Chart</h5>
+                  <h6 class="card-subtitle text-muted">Doughnut charts are excellent at showing the relational proportions between data.</h6>
                 </div>
                 <div class="card-body">
-                  <div class="content" id="hybrid_map" style="height: 300px;"></div>
+                  <div class="chart chart-sm">
+                    <canvas id="chartjs-doughnut"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Pie Chart</h5>
+                  <h6 class="card-subtitle text-muted">Pie charts are excellent at showing the relational proportions between data.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart chart-sm">
+                    <canvas id="chartjs-pie"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
@@ -274,28 +309,131 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&amp;callback=initMaps" async defer="defer"></script>
+    <script src="js/chartjs.js"></script>
     <script>
-      function initMaps() {
-        var defaultMap = {
-          zoom: 14,
-          center: {
-            lat: 40.712784,
-            lng: -74.005941
+      // Line chart
+      new Chart(document.getElementById("chartjs-line"), {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          datasets: [{
+            label: "Sales ($)",
+            fill: true,
+            backgroundColor: "transparent",
+            borderColor: "#ff0055",
+            data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
+          }, {
+            label: "Orders",
+            fill: true,
+            backgroundColor: "transparent",
+            borderColor: "#adb5bd",
+            borderDash: [4, 4],
+            data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: false
           },
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        new google.maps.Map(document.getElementById("default_map"), defaultMap);
-        var hybridMap = {
-          zoom: 14,
-          center: {
-            lat: 40.712784,
-            lng: -74.005941
+          tooltips: {
+            intersect: false
           },
-          mapTypeId: google.maps.MapTypeId.HYBRID
-        };
-        new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
+          hover: {
+            intersect: true
+          },
+          plugins: {
+            filler: {
+              propagate: false
+            }
+          },
+      
         }
+      });
+      
+      // Bar chart
+      new Chart(document.getElementById("chartjs-bar"), {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          datasets: [{
+            label: "Last year",
+            backgroundColor: "#ff0055",
+            borderColor: "#ff0055",
+            hoverBackgroundColor: "#ff0055",
+            hoverBorderColor: "#ff0055",
+            data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+            barPercentage: .75,
+            categoryPercentage: .5
+          }, {
+            label: "This year",
+            backgroundColor: "#dee2e6",
+            borderColor: "#dee2e6",
+            hoverBackgroundColor: "#dee2e6",
+            hoverBorderColor: "#dee2e6",
+            data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
+            barPercentage: .75,
+            categoryPercentage: .5
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: false
+          },
+      
+        }
+      });
+      
+      // Doughnut chart
+      new Chart(document.getElementById("chartjs-doughnut"), {
+        type: "doughnut",
+        data: {
+          labels: ["Social", "Search Engines", "Direct", "Other"],
+          datasets: [{
+            data: [260, 125, 54, 146],
+            backgroundColor: [
+              "#ff0055",
+              "#17a2b8",
+              "#dc3545",
+              "#dee2e6"
+            ],
+            borderColor: "transparent"
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          cutoutPercentage: 65,
+          legend: {
+            display: false
+          }
+        }
+      });
+      
+      
+      // Pie chart
+      new Chart(document.getElementById("chartjs-pie"), {
+        type: "pie",
+        data: {
+          labels: ["Social", "Search Engines", "Direct", "Other"],
+          datasets: [{
+            data: [260, 125, 54, 146],
+            backgroundColor: [
+              "#ff0055",
+              "#17a2b8",
+              "#dc3545",
+              "#dee2e6"
+      ],
+      borderColor: "transparent"
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          legend: {
+            display: false
+          }
+        }
+      });
     </script>
   </body>
 </html>

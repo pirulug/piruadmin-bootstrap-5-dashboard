@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>SweetAlert | PiruAdmin</title>
-    <meta name="title" content="SweetAlert | PiruAdmin">
+    <title>SweetAlert 2 | PiruAdmin</title>
+    <meta name="title" content="SweetAlert 2 | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/sweetalert.html">
-    <meta property="og:title" content="SweetAlert | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-sweetalert.html">
+    <meta property="og:title" content="SweetAlert 2 | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/sweetalert.html">
-    <meta property="twitter:title" content="SweetAlert | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-sweetalert.html">
+    <meta property="twitter:title" content="SweetAlert 2 | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -29,6 +29,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
     <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/bootstrapicons.css">
     <link rel="stylesheet" href="css/piruadmin.css">
     <script>
       (function () {
@@ -40,6 +41,7 @@
       
     </script>
     <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="css/prismjs.css">
   </head>
   <body>
 <!-- Loader-->
@@ -69,6 +71,7 @@
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
@@ -78,7 +81,7 @@
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">UI Elements</span></a>
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
@@ -108,10 +111,13 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-header">Plugins &amp; Addons</li>
-            <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html"><i class="align-middle" data-feather="bar-chart-2"></i><span class="align-middle">Charts</span></a></li>
-            <li class="sidebar-item"><a class="sidebar-link" href="maps-google.html"><i class="align-middle" data-feather="map"></i><span class="align-middle">Maps</span></a></li>
-            <li class="sidebar-item active"><a class="sidebar-link" href="sweetalert.html"><i class="align-middle" data-feather="bell"></i><span class="align-middle">SweetAlert 2</span></a></li>
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="plugins" data-bs-parent="#sidebar">
+                <li class="sidebar-item active"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -120,7 +126,7 @@
 <nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
   <div class="navbar-collapse collapse">
     <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
           <li>
             <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
@@ -218,7 +224,7 @@
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
         <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"> <i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
     </ul>
@@ -227,41 +233,162 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">SweetAlert</h1>
+            <h1 class="h3 d-inline align-middle">SweetAlert 2</h1>
           </div>
-          <div class="card mb-3">
-            <div class="card-body">
-              <button class="btn btn-primary" id="basic">Basic</button>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-4 col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-outline-success" id="success">Success</button>
+          <div class="row g-3">
+            <!-- Basic-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-primary" id="sweet-basic" type="button"><i class="bi bi-lightning-charge me-1"></i>Basic</button>
                   </div>
-                </div>
-                <div class="col-md-4 col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-outline-danger" id="error">Error</button>
-                  </div>
-                </div>
-                <div class="col-md-4 col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-outline-warning" id="warning">Warning</button>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire('Hello world!');
+</code></pre>
                   </div>
                 </div>
               </div>
-              <div class="row mt-3">
-                <div class="col-md-6 col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-outline-info" id="info">Info</button>
+            </div>
+            <!-- Success-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-success" id="sweet-success" type="button"><i class="bi bi-check-circle me-1"></i>Success</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire("Good job!", "You clicked the button!", "success");
+</code></pre>
                   </div>
                 </div>
-                <div class="col-md-6 col-12">
-                  <div class="d-grid">
-                    <button class="btn btn-outline-secondary" id="question">Question</button>
+              </div>
+            </div>
+            <!-- Warning-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-warning" id="sweet-warning" type="button"><i class="bi bi-exclamation-triangle me-1"></i>Warning</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire("Careful!", "This is a warning!", "warning");
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Error-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-danger" id="sweet-error" type="button"><i class="bi bi-x-circle me-1"></i>Error</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire("Oops...", "Something went wrong!", "error");
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Info-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-info" id="sweet-info" type="button"><i class="bi bi-info-circle me-1"></i>Info</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire("FYI", "Some info for you.", "info");
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Question-->
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-secondary" id="sweet-question" type="button"><i class="bi bi-question-circle me-1"></i>Question</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire("Are you sure?", "", "question");
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Multiple-->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-primary" id="sweet-multiple" type="button"><i class="bi bi-arrow-repeat me-1"></i>Success or Cancel</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire({
+  title: "Are you sure?",
+  showCancelButton: true,
+  confirmButtonText: "Yes",
+  icon: "warning"
+});
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Prompt-->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-primary" id="sweet-prompt" type="button"><i class="bi bi-pencil-square me-1"></i>Prompt</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire({
+  title: "Enter your name",
+  input: "text",
+  showCancelButton: true,
+  inputValidator: (value) => {
+    if (!value) return "You need to write something!";
+  }
+});
+</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Ajax-->
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="pt-4 pb-4 text-center">
+                    <button class="btn btn-primary" id="sweet-ajax" type="button"><i class="bi bi-cloud-download me-1"></i>Ajax</button>
+                  </div>
+                  <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                    <button class="copy-btn" type="button">Copy</button>
+                    <pre class="language-js"><code class="language-js">Swal.fire({
+  title: "Loading...",
+  html: "Please wait...",
+  allowOutsideClick: false,
+  didOpen: () => {
+    Swal.showLoading();
+    setTimeout(() => {
+      Swal.fire("Done!", "Ajax request finished", "success");
+    }, 2000);
+  }
+});
+</code></pre>
                   </div>
                 </div>
               </div>
@@ -289,42 +416,128 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="js/sweetalert2.js"> </script>
+    <script src="js/sweetalert2.js"></script>
+    <script src="js/prismjs.js"></script>
     <script>
-      document.getElementById("basic").addEventListener("click", (e) => {
-        Swal.fire("Any fool can use a computer")
-      })
+      // Básicos
+      document.getElementById("sweet-basic").addEventListener("click", () => {
+        Swal.fire("Hello World!");
+      });
+      document.getElementById("sweet-success").addEventListener("click", () => {
+        Swal.fire("Good job!", "You clicked the button!", "success");
+      });
+      document.getElementById("sweet-warning").addEventListener("click", () => {
+        Swal.fire("Careful!", "This is a warning!", "warning");
+      });
+      document.getElementById("sweet-error").addEventListener("click", () => {
+        Swal.fire("Oops...", "Something went wrong!", "error");
+      });
+      document.getElementById("sweet-info").addEventListener("click", () => {
+        Swal.fire("FYI", "Some info for you.", "info");
+      });
+      document.getElementById("sweet-question").addEventListener("click", () => {
+        Swal.fire("Are you sure?", "", "question");
+      });
       
-      document.getElementById("success").addEventListener("click", (e) => {
+      // Con confirmación
+      document.getElementById("sweet-multiple").addEventListener("click", () => {
         Swal.fire({
-          icon: "success",
-          title: "Success",
-        })
-      })
-      document.getElementById("error").addEventListener("click", (e) => {
+          title: "Are you sure?",
+          showCancelButton: true,
+          confirmButtonText: "Yes",
+          cancelButtonText: "No",
+          icon: "warning"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire("Done!", "Your action was confirmed.", "success");
+          }
+        });
+      });
+      
+      // Prompt
+      document.getElementById("sweet-prompt").addEventListener("click", () => {
         Swal.fire({
-          icon: "error",
-          title: "Error",
-        })
-      })
-      document.getElementById("warning").addEventListener("click", (e) => {
+          title: "Enter your name",
+          input: "text",
+          inputLabel: "Your name",
+          showCancelButton: true,
+          inputValidator: (value) => {
+            if (!value) return "You need to write something!";
+          }
+        }).then(result => {
+          if (result.value) {
+            Swal.fire(`Hello, ${result.value}`);
+          }
+        });
+      });
+      
+      // Ajax
+      document.getElementById("sweet-ajax").addEventListener("click", () => {
         Swal.fire({
-          icon: "warning",
-          title: "Warning",
-        })
-      })
-      document.getElementById("info").addEventListener("click", (e) => {
-        Swal.fire({
-          icon: "info",
-          title: "Info",
-        })
-      })
-      document.getElementById("question").addEventListener("click", (e) => {
-        Swal.fire({
-          icon: "question",
-          title: "Question",
-        })
-      })
+          title: "Loading...",
+          html: "Please wait...",
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+            setTimeout(() => {
+              Swal.fire("Done!", "Ajax request finished", "success");
+            }, 2000);
+          }
+        });
+      });
+      
+    </script>
+    <script>
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.nextElementSibling?.innerText;
+          if (!code) return;
+      
+          // Prioridad a Clipboard API moderna
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(code).then(() => {
+              showCopySuccess(btn);
+            }).catch(err => {
+              console.error('Clipboard API failed', err);
+              fallbackCopy(code, btn);
+            });
+          } else {
+            fallbackCopy(code, btn);
+          }
+        });
+      });
+      
+      function fallbackCopy(text, btn) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed'; // Evita scroll
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+      
+        try {
+          const successful = document.execCommand('copy');
+          if (successful) {
+            showCopySuccess(btn);
+          } else {
+            alert("No se pudo copiar el texto");
+          }
+        } catch (err) {
+          console.error('Fallback copy failed', err);
+          alert("Error al copiar");
+        }
+      
+        document.body.removeChild(textarea);
+      }
+      
+      function showCopySuccess(btn) {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 1500);
+      }
     </script>
   </body>
 </html>
