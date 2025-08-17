@@ -1,0 +1,205 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Profile Settings'
+  -pageUrl = 'account-settings'
+
+block styles
+  style.
+    .card .position-absolute img {
+      max-width: 170px;
+    }
+
+    @media (max-width: 576px) {
+      .card .position-absolute img {
+        max-width: 120px;
+      }
+    }
+
+
+block content
+
+  // Navigation - estilo moderno con íconos
+  .tab.tab-vertical
+    ul.nav.nav-tabs(role='tablist')
+      li.nav-item
+        a.nav-link.active(href="#" data-bs-toggle='pill' data-bs-target='.tab-account' role='tab' aria-selected='true')
+          i.bi.bi-person-circle.me-2
+          | Account
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-info' role='tab' aria-selected='false')
+          i.bi.bi-info-circle.me-2
+          | Information
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-security' role='tab' aria-selected='false')
+          i.bi.bi-shield-lock.me-2
+          | Security
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-social' role='tab' aria-selected='false')
+          i.bi.bi-share.me-2
+          | Social
+
+    // Tab Content
+    .tab-content
+
+      // Account
+      .tab-pane.fade.show.active.tab-account(role='tabpanel')
+        h4.tab-title
+          i.bi.bi-person-badge.me-2
+          | Account Settings
+        form
+          .d-flex.flex-column.flex-sm-row.mb-3.align-items-center
+            figure.me-sm-3.mb-3.mb-sm-0
+              img.rounded-circle(width='100' src='https://dummyimage.com/200x200/000/fff.jpg' alt='Pirulug Avatar')
+            div.text-center.text-sm-start
+              p.fw-bold.mb-2 Pirulug
+              .btn-group
+                button.btn.btn-outline-primary.btn-sm
+                  i.bi.bi-upload.me-1
+                  | Change
+                button.btn.btn-outline-danger.btn-sm
+                  i.bi.bi-trash.me-1
+                  | Remove
+
+          // Datos básicos
+          .row.g-3
+            .col-md-6
+              label.form-label Name
+              input.form-control(type='text' value='Pirulug')
+              label.form-label.mt-2 Username
+              input.form-control(type='text' value='pirulug')
+              label.form-label.mt-2 Email
+              input.form-control(type='email' value='pirulug@localhost.test')
+            .col-md-6
+              label.form-label Role
+              select.form-select
+                option Admin
+                option(selected) Developer
+                option User
+              label.form-label.mt-2 Status
+              select.form-select
+                option(selected) Active
+                option Blocked
+              label.form-label.mt-2 Department
+              select.form-select
+                option(selected) Development
+                option Management
+
+          // Permissions colapsable
+          .accordion.mt-4
+            .accordion-item
+              h2.accordion-header
+                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#permCollapse')
+                  i.bi.bi-key-fill.me-2
+                  | Permissions
+              #permCollapse.accordion-collapse.collapse
+                .accordion-body
+                  .table-responsive
+                    table.table.table-sm.table-hover.align-middle
+                      thead.table-light
+                        tr
+                          th Module
+                          th View
+                          th Edit
+                          th Create
+                          th Delete
+                      tbody
+                        tr
+                          td Users
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox')
+                        tr
+                          td Projects
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox')
+                          td: input.form-check-input(type='checkbox')
+                        tr
+                          td Reports
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox' checked)
+                          td: input.form-check-input(type='checkbox')
+                          td: input.form-check-input(type='checkbox')
+
+          button.btn.btn-primary.mt-3
+            i.bi.bi-check2-circle.me-2
+            | Save Changes
+
+      // Information
+      .tab-pane.fade.tab-info(role='tabpanel')
+
+          h6.tab-title
+            i.bi.bi-info-circle.me-2
+            | Personal Information
+
+          form
+            .row.g-3
+              .col-md-6
+                label.form-label Birth Date
+                input.form-control(type='date' value='2000-01-01')
+                label.form-label.mt-2 Phone
+                input.form-control(type='text' value='+51 987654321')
+                label.form-label.mt-2 Website
+                input.form-control(type='url' value='http://pirulug.test/')
+                label.form-label.mt-2 Languages
+                input.form-control(type='text' value='Spanish, English')
+              .col-md-6
+                label.form-label Address Line 1
+                input.form-control(type='text' value='Calle Localhost 123')
+                label.form-label.mt-2 City
+                input.form-control(type='text' value='Huancayo')
+                label.form-label.mt-2 State
+                input.form-control(type='text' value='Junín')
+                label.form-label.mt-2 Country
+                input.form-control(type='text' value='Perú')
+
+            button.btn.btn-primary.mt-3
+              i.bi.bi-check2-circle.me-2
+              | Save Changes
+
+      // Security
+      .tab-pane.fade.tab-security(role='tabpanel')
+
+          h6.tab-title
+            i.bi.bi-shield-lock.me-2
+            | Security
+
+          form
+            .row.g-3
+              .col-md-6
+                label.form-label Old Password
+                input.form-control(type='password')
+                label.form-label.mt-2 New Password
+                input.form-control(type='password')
+                label.form-label.mt-2 Repeat New Password
+                input.form-control(type='password')
+
+            button.btn.btn-danger.mt-3
+              i.bi.bi-shield-check.me-2
+              | Update Password
+
+      // Social
+      .tab-pane.fade.tab-social(role='tabpanel')
+
+          h6.tab-title
+            i.bi.bi-share.me-2
+            | Social Links
+
+          form
+            .row.g-3
+              .col-md-6
+                label.form-label Twitter
+                input.form-control(type='url' value='https://twitter.com/pirulug')
+                label.form-label.mt-2 Facebook
+                input.form-control(type='url' value='https://www.facebook.com/pirulug')
+              .col-md-6
+                label.form-label Instagram
+                input.form-control(type='url' value='https://www.instagram.com/pirulug/')
+                label.form-label.mt-2 GitHub
+                input.form-control(type='url' value='https://github.com/pirulug')
+
+            button.btn.btn-primary.mt-3
+              i.fa.fa-check.me-2
+              | Save Changes

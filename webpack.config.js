@@ -34,6 +34,7 @@ module.exports = {
     toastifyjs: "./src/plugins/toastifyjs/toastifyjs.js",
     sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
     liteyoutube: "./src/plugins/liteyoutube/liteyoutube.js",
+    prismjs: "./src/plugins/prismjs/prismjs.js",
     custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",

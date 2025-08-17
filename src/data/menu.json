@@ -65,6 +65,11 @@
         "title": "Profile",
         "path": "account-profile",
         "link": "account-profile"
+      },
+      {
+        "title": "Settings",
+        "path": "account-settings",
+        "link": "account-settings"
       }
     ]
   },
@@ -93,7 +98,7 @@
   {
     "title": "UI Elements",
     "path": "ui-elements",
-    "icon": "users",
+    "icon": "box",
     "collapsed": true,
     "items": [
       {
@@ -193,25 +198,26 @@
     ]
   },
   {
-    "title": "Plugins & Addons",
-    "header": true
-  },
-  {
-    "title": "Charts",
-    "path": "charts-chartjs",
-    "icon": "bar-chart-2",
-    "link": "charts-chartjs"
-  },
-  {
-    "title": "Maps",
-    "path": "maps-google",
-    "icon": "map",
-    "link": "maps-google"
-  },
-  {
-    "title": "SweetAlert 2",
-    "path": "sweetalert",
-    "icon": "bell",
-    "link": "sweetalert"
+    "title": "Plugins",
+    "path": "plugins",
+    "icon": "zap",
+    "collapsed": true,
+    "items": [
+      {
+        "title": "SweetAlert 2",
+        "path": "plugins-sweetalert",
+        "link": "plugins-sweetalert"
+      },
+      {
+        "title": "Charts",
+        "path": "plugins-charts-chartjs",
+        "link": "plugins-charts-chartjs"
+      },
+      {
+        "title": "Maps",
+        "path": "plugins-maps-google",
+        "link": "plugins-maps-google"
+      }
+    ]
   }
 ]

@@ -1,6 +1,4 @@
 .alert {
-  display: flex;
-  align-items: center;
   border-left: 0.25rem solid var(--#{$prefix}alert-color);
 
   > :last-child {
@@ -8,37 +6,44 @@
   }
 }
 
-.alert-link {
-  &,
-  &:hover {
-    color: var(--#{$prefix}alert-color);
+@each $state in map-keys($theme-colors) {
+  .alert-#{$state} {
+    --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
+    --#{$prefix}alert-bg: var(--#{$prefix}#{$state}-bg-subtle);
+    --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
+    --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
+    border-left-color: var(--#{$prefix}#{$state}-border-subtle);
   }
 }
 
-.alert-heading {
-  font-weight: bold;
-}
-
-@each $name, $color in $theme-colors {
-  .alert-#{$name} {
-    border-left-color: $color;
+@each $state in map-keys($theme-colors) {
+  .alert-outline-#{$state} {
+    --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
+    --#{$prefix}alert-bg: transparent;
+    --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
+    --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
+    border-left-color: var(--#{$prefix}#{$state}-border-subtle);
   }
 }
 
-.alert-icon {
-  flex-shrink: 0;
-  margin-right: 0.5rem;
-  width: 30px;
+// Media layout (icono + contenido)
+.alert-media {
+  display: flex;
+  align-items: center;
 
-  svg {
-    width: 100%;
+  .alert-icon {
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+    width: 30px;
+
+    svg,
+    i {
+      width: 100%;
+      height: auto;
+    }
   }
 
-  i {
-    width: 100%;
+  .alert-body {
+    flex: 1 1 auto;
   }
-}
-
-.alert-message {
-  width: 100%;
 }

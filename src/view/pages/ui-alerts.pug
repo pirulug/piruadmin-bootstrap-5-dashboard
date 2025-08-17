@@ -7,144 +7,147 @@ append config
 block content
 
   .row
+    // Basic alerts
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Basic alerts
           p.text-secondary
-            | Wrap any text and an optional dismiss button in 
+            | Use
             code .alert
-            |  and one of the four contextual classes (e.g., 
-            code .alert-success
-            | ) for basic alert messages.
-          .alert.alert-success(role='alert')
-            | Wow! Everything worked!
-          .alert.alert-warning(role='alert')
-            | Uh oh, something went wrong
-          .alert.alert-danger(role='alert')
-            | I&apos;m so sorry&mldr;
-          .alert.alert-info(role='alert')
-            | Did you know?
+            |  with contextual classes for basic messages.
+
+          .alert.alert-primary(role='alert') This is a primary alert — check it out!
+          .alert.alert-secondary(role='alert') This is a secondary alert — check it out!
+          .alert.alert-success(role='alert') This is a success alert — check it out!
+          .alert.alert-info(role='alert') This is an info alert — check it out!
+          .alert.alert-warning(role='alert') This is a warning alert — check it out!
+          .alert.alert-danger(role='alert') This is a danger alert — check it out!
+          .alert.alert-light(role='alert') This is a light alert — check it out!
+          .alert.alert-dark(role='alert') This is a dark alert — check it out!
+
+    // Alerts with icon
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Alerts with icon
-          p.text-secondary Build on any alert by adding an optional icon.
-          .alert.alert-success(role='alert')
+          p.text-secondary Add
+            code .alert-media
+            |  to combine an icon with alert content.
+
+          .alert.alert-primary.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M5 12l5 5l10 -10')
-            | Wow! Everything worked!
-          .alert.alert-warning(role='alert')
+              i.fa-solid.fa-circle
+            .alert-body Primary alert with icon
+
+          .alert.alert-secondary.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M12 9v4')
-                path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
-                path(d='M12 16h.01')
-            | Uh oh, something went wrong
-          .alert.alert-danger(role='alert')
+              i.fa-solid.fa-circle
+            .alert-body Secondary alert with icon
+
+          .alert.alert-success.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
-                path(d='M12 8v4')
-                path(d='M12 16h.01')
-            | I&apos;m so sorry&mldr;
-          .alert.alert-info(role='alert')
+              i.fa-solid.fa-circle-check
+            .alert-body Success alert with icon
+
+          .alert.alert-info.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
-                path(d='M12 9h.01')
-                path(d='M11 12h1v4h1')
-            | Did you know?
+              i.fa-solid.fa-circle-info
+            .alert-body Info alert with icon
+
+          .alert.alert-warning.alert-media(role='alert')
+            .alert-icon
+              i.fa-solid.fa-triangle-exclamation
+            .alert-body Warning alert with icon
+
+          .alert.alert-danger.alert-media(role='alert')
+            .alert-icon
+              i.fa-solid.fa-circle-xmark
+            .alert-body Danger alert with icon
+
+          .alert.alert-light.alert-media(role='alert')
+            .alert-icon
+              i.fa-regular.fa-circle
+            .alert-body Light alert with icon
+
+          .alert.alert-dark.alert-media(role='alert')
+            .alert-icon
+              i.fa-solid.fa-circle
+            .alert-body Dark alert with icon
+
+    // Outline alerts
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Outline alerts
+          p.text-secondary Use
+            code .alert-outline-*
+            |  for subtle transparent alerts.
+
+          .alert.alert-outline-primary(role='alert') Outline primary alert
+          .alert.alert-outline-secondary(role='alert') Outline secondary alert
+          .alert.alert-outline-success(role='alert') Outline success alert
+          .alert.alert-outline-info(role='alert') Outline info alert
+          .alert.alert-outline-warning(role='alert') Outline warning alert
+          .alert.alert-outline-danger(role='alert') Outline danger alert
+          .alert.alert-outline-light(role='alert') Outline light alert
+          .alert.alert-outline-dark(role='alert') Outline dark alert
+
+    // Dismissible alerts
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Dismissible alerts
-          p.text-secondary
-            | Build on any alert by adding an optional 
+          p.text-secondary Add
             code .alert-dismissible
-            |  and close button.
-          .alert.alert-success.alert-dismissible(role='alert')
+            |  with a close button.
+
+          .alert.alert-success.alert-media.alert-dismissible(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M5 12l5 5l10 -10')
-            | Wow! Everything worked!
-            a.btn-close(data-bs-dismiss='alert' aria-label='close')
-          .alert.alert-warning.alert-dismissible(role='alert')
+              i.fa-solid.fa-circle-check
+            .alert-body Operation successful!
+            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+
+          .alert.alert-warning.alert-media.alert-dismissible(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M12 9v4')
-                path(d='M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z')
-                path(d='M12 16h.01')
-            | Uh oh, something went wrong
-            a.btn-close(data-bs-dismiss='alert' aria-label='close')
-          .alert.alert-danger.alert-dismissible(role='alert')
+              i.fa-solid.fa-triangle-exclamation
+            .alert-body Something went wrong
+            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+
+          .alert.alert-danger.alert-media.alert-dismissible(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
-                path(d='M12 8v4')
-                path(d='M12 16h.01')
-            | I&apos;m so sorry&mldr;
-            a.btn-close(data-bs-dismiss='alert' aria-label='close')
-          .alert.alert-info.alert-dismissible(role='alert')
+              i.fa-solid.fa-circle-xmark
+            .alert-body Critical error detected
+            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+
+          .alert.alert-info.alert-media.alert-dismissible(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0')
-                path(d='M12 9h.01')
-                path(d='M11 12h1v4h1')
-            
-            | Did you know?
-            a.btn-close(data-bs-dismiss='alert' aria-label='close')
+              i.fa-solid.fa-circle-info
+            .alert-body Here’s some information
+            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+
+    // Alerts with heading & description
     .col-lg-6
       .card.mb-3
         .card-body
-          h2.card-title Alert with a description
-          p.text-secondary
-            | Build on any alert by adding an optional 
-            code .alert-dismissible
-            |  and close button.
+          h2.card-title Alerts with description
+          p.text-secondary Build on
+            code .alert-body
+            |  with headings, links, or extra content.
 
-          .alert.alert-primary(role='alert')
+          .alert.alert-success.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M5 12l5 5l10 -10')
-            .alert-message
-              h4.alert-heading This is a custom alert box!
-              .text-secondary Your account has been saved!
-              a.alert-link an example link
-              
-          .alert.alert-secondary(role='alert')
-            .alert-icon
-              i.fa.fa-circle
-            .alert-message
-              h4.alert-heading This is a custom alert box!
-              .text-secondary Your account has been saved!
-              a.alert-link an example link
+              i.fa-solid.fa-circle-check
+            .alert-body
+              h4.alert-heading Success!
+              p.text-secondary Your account has been saved successfully.
+              a.alert-link(href="#") View details
 
-          .alert.alert-success(role='alert')
+          .alert.alert-danger.alert-media(role='alert')
             .alert-icon
-              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                path(stroke='none' d='M0 0h24v24H0z' fill='none')
-                path(d='M5 12l5 5l10 -10')
-            .alert-message
-              h4.alert-heading This is a custom alert box!
-              .text-secondary Your account has been saved!
-              a.alert-link an example link
-
-          .alert.alert-danger(role='alert')
-            .alert-icon
-              i.fa.fa-circle
-            .alert-message
-              h4.alert-heading This is a custom alert box!
-              .text-secondary Your account has been saved!
+              i.fa-solid.fa-circle-xmark
+            .alert-body
+              h4.alert-heading Error!
+              p.text-secondary Something went wrong during saving.
               hr
-              a.alert-link(href="#") Example Link
+              a.alert-link(href="#") Try again

@@ -1,13 +1,13 @@
-.bi {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.125em;
-  fill: currentcolor;
-}
+// .bi {
+//   width: 1em;
+//   height: 1em;
+//   vertical-align: -0.125em;
+//   fill: currentcolor;
+// }
 
-.active .bi {
-  display: block !important;
-}
+// .active .bi {
+//   display: block !important;
+// }
 
 .settings-toggle {
   background: $primary;
@@ -100,4 +100,80 @@
   right: 45px;
   bottom: 45px;
   z-index: 99;
+}
+
+//
+
+.demo-code-preview {
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+  // margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #000;
+  font-family: 'Google Sans Code';
+  // font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  border: 1px solid #000;
+}
+
+.demo-code-preview pre {
+  background: transparent;
+  color: inherit;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+.demo-code-preview::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 0.7rem;
+  color: #000;
+  background-color: transparent;
+  padding: 2px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 0.7rem;
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #39ff14;
+  color: black;
+}
+
+/* 🌙 DARK MODE (opcional, cambia el verde por ámbar) */
+:root[data-bs-theme="dark"] .demo-code-preview {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+:root[data-bs-theme="dark"] .demo-code-preview::before,
+:root[data-bs-theme="dark"] .copy-btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+:root[data-bs-theme="dark"] .copy-btn:hover {
+  background-color: #fff;
+  color: black;
 }

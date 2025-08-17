@@ -2,7 +2,7 @@ extends ../layouts/dashboard
 
 append config
   -pageName = 'Charts'
-  -pageUrl = 'charts-chartjs'
+  -pageUrl = 'plugins-charts-chartjs'
 
 block content
   .row
@@ -40,7 +40,7 @@ block content
           .chart.chart-sm
             canvas#chartjs-pie
 
-block scripts 
+block scripts
 
   script(src='js/chartjs.js')
 
@@ -82,7 +82,7 @@ block scripts
             propagate: false
           }
         },
-        
+
       }
     });
 
@@ -116,7 +116,7 @@ block scripts
         legend: {
           display: false
         },
-        
+
       }
     });
 

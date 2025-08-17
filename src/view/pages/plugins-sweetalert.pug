@@ -1,0 +1,283 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'SweetAlert 2'
+  -pageUrl = 'plugins-sweetalert'
+
+block styles
+  link(rel="stylesheet", href="css/sweetalert2.css")
+  link(rel="stylesheet", href="css/prismjs.css")
+
+block content
+  .row.g-3
+    // Basic
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-basic.btn.btn-primary(type='button')
+              i.bi.bi-lightning-charge.me-1
+              | Basic
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire('Hello world!');
+
+    // Success
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-success.btn.btn-success(type='button')
+              i.bi.bi-check-circle.me-1
+              | Success
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire("Good job!", "You clicked the button!", "success");
+
+    // Warning
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-warning.btn.btn-warning(type='button')
+              i.bi.bi-exclamation-triangle.me-1
+              | Warning
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire("Careful!", "This is a warning!", "warning");
+
+    // Error
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-error.btn.btn-danger(type='button')
+              i.bi.bi-x-circle.me-1
+              | Error
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire("Oops...", "Something went wrong!", "error");
+
+    // Info
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-info.btn.btn-info(type='button')
+              i.bi.bi-info-circle.me-1
+              | Info
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire("FYI", "Some info for you.", "info");
+
+    // Question
+    .col-md-6
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-question.btn.btn-secondary(type='button')
+              i.bi.bi-question-circle.me-1
+              | Question
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire("Are you sure?", "", "question");
+
+    // Multiple
+    .col-md-12
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-multiple.btn.btn-primary(type='button')
+              i.bi.bi-arrow-repeat.me-1
+              | Success or Cancel
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire({
+                  title: "Are you sure?",
+                  showCancelButton: true,
+                  confirmButtonText: "Yes",
+                  icon: "warning"
+                });
+
+    // Prompt
+    .col-md-12
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-prompt.btn.btn-primary(type='button')
+              i.bi.bi-pencil-square.me-1
+              | Prompt
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire({
+                  title: "Enter your name",
+                  input: "text",
+                  showCancelButton: true,
+                  inputValidator: (value) => {
+                    if (!value) return "You need to write something!";
+                  }
+                });
+
+    // Ajax
+    .col-md-12
+      .card
+        .card-body
+          .pt-4.pb-4.text-center
+            button#sweet-ajax.btn.btn-primary(type='button')
+              i.bi.bi-cloud-download.me-1
+              | Ajax
+          .demo-code-preview(data-label='CODE EXAMPLE')
+            button.copy-btn(type='button') Copy
+            pre.language-js
+              code.language-js.
+                Swal.fire({
+                  title: "Loading...",
+                  html: "Please wait...",
+                  allowOutsideClick: false,
+                  didOpen: () => {
+                    Swal.showLoading();
+                    setTimeout(() => {
+                      Swal.fire("Done!", "Ajax request finished", "success");
+                    }, 2000);
+                  }
+                });
+
+block scripts
+  script(src="js/sweetalert2.js")
+  script(src="js/prismjs.js")
+
+  script.
+    // Básicos
+    document.getElementById("sweet-basic").addEventListener("click", () => {
+      Swal.fire("Hello World!");
+    });
+    document.getElementById("sweet-success").addEventListener("click", () => {
+      Swal.fire("Good job!", "You clicked the button!", "success");
+    });
+    document.getElementById("sweet-warning").addEventListener("click", () => {
+      Swal.fire("Careful!", "This is a warning!", "warning");
+    });
+    document.getElementById("sweet-error").addEventListener("click", () => {
+      Swal.fire("Oops...", "Something went wrong!", "error");
+    });
+    document.getElementById("sweet-info").addEventListener("click", () => {
+      Swal.fire("FYI", "Some info for you.", "info");
+    });
+    document.getElementById("sweet-question").addEventListener("click", () => {
+      Swal.fire("Are you sure?", "", "question");
+    });
+
+    // Con confirmación
+    document.getElementById("sweet-multiple").addEventListener("click", () => {
+      Swal.fire({
+        title: "Are you sure?",
+        showCancelButton: true,
+        confirmButtonText: "Yes",
+        cancelButtonText: "No",
+        icon: "warning"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Done!", "Your action was confirmed.", "success");
+        }
+      });
+    });
+
+    // Prompt
+    document.getElementById("sweet-prompt").addEventListener("click", () => {
+      Swal.fire({
+        title: "Enter your name",
+        input: "text",
+        inputLabel: "Your name",
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) return "You need to write something!";
+        }
+      }).then(result => {
+        if (result.value) {
+          Swal.fire(`Hello, ${result.value}`);
+        }
+      });
+    });
+
+    // Ajax
+    document.getElementById("sweet-ajax").addEventListener("click", () => {
+      Swal.fire({
+        title: "Loading...",
+        html: "Please wait...",
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+          setTimeout(() => {
+            Swal.fire("Done!", "Ajax request finished", "success");
+          }, 2000);
+        }
+      });
+    });
+
+  script.
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        // Prioridad a Clipboard API moderna
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed'; // Evita scroll
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        } else {
+          alert("No se pudo copiar el texto");
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+        alert("Error al copiar");
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }

@@ -14,9 +14,7 @@ block content
             h1.h2 Welcome back!
             p.lead
               | Sign in to your account to continue
-          .card.position-relative
-            .wd-50.bg-body.p-2.shadow.rounded.position-absolute.translate-middle.top-0.start-50
-              img.img-fluid.m-1(src='img/logo.png' width="40" height="40" alt='')
+          .card
             .card-body
               .m-sm-3
                 h2.m-0 Sign In
@@ -27,7 +25,11 @@ block content
                     input.form-control(type='email' name='email' placeholder='Enter your email')
                   .mb-3
                     label.form-label Password
-                    input.form-control(type='password' name='password' placeholder='Enter your password')
+                    //- input.form-control(type='password' name='password' placeholder='Enter your password')
+                    #show_hide_password.input-group
+                      input#inputChoosePassword.form-control.border-end-0(type='password' name='password' value='12345678' placeholder='Enter your password')
+                      button#togglePassword.input-group-text.bg-transparent(type="button")
+                        i.fa.fa-eye-slash
                     small
                       a(href='/auth-reset-password.html') Forgot password?
                   div
@@ -36,31 +38,9 @@ block content
                       label.form-check-label.text-small(for='customControlInline') Remember me
                   .d-grid.gap-2.mt-3
                     a.btn.btn-primary(href='/') Sign in
-                
-                //-.row
-                  .col
-                    hr
-                  .col-auto.d-flex.align-items-center Or continue with
-                  .col
-                    hr
-                .separator 
+
+                .separator
                   span.separator-text Or continue with
-
-                //- Dividers con diferentes alineaciones
-                //- .separator.separator-left
-                //-   span.separator-text Left
-
-                //- .separator.separator-left-center
-                //-   span.separator-text Left-Center
-
-                //- .separator
-                //-   span.separator-text Center (Default)
-
-                //- .separator.separator-right-center
-                //-   span.separator-text Right-Center
-
-                //- .separator.separator-right
-                //-   span.separator-text Right
 
                 .d-flex.gap-2
                   a.flex-fill.btn.btn-google(href='/')
@@ -70,10 +50,40 @@ block content
                   a.flex-fill.btn.btn-github(href='/')
                     i.fab.fa-fw.fa-github
 
-                .text-center.mt-3 
-                  |Don&apos;t have an account? 
+                .text-center.mt-3
+                  |Don&apos;t have an account?
                   a(href='/auth-sign-up.html') Sign up
 
 
+block scripts
 
+  script.
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordInput = document.getElementById("inputChoosePassword");
+    const icon = togglePassword.querySelector("i");
 
+    togglePassword.addEventListener("click", () => {
+      // guardar selección actual
+      let start = passwordInput.selectionStart;
+      let end = passwordInput.selectionEnd;
+
+      // cambiar tipo
+      const isPassword = passwordInput.type === "password";
+      passwordInput.type = isPassword ? "text" : "password";
+
+      // asegurar foco
+      passwordInput.focus();
+
+      // si no hay selección previa, mover al final
+      if (start === 0 && end === 0) {
+        const len = passwordInput.value.length;
+        passwordInput.setSelectionRange(len, len);
+      } else {
+        // restaurar selección previa
+        passwordInput.setSelectionRange(start, end);
+      }
+
+      // alternar ícono
+      icon.classList.toggle("fa-eye");
+      icon.classList.toggle("fa-eye-slash");
+    });

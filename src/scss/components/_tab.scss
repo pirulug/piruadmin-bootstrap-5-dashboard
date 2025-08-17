@@ -10,12 +10,18 @@
 
   .nav-tabs {
     border: 0;
+    display: flex;
+    flex-wrap: nowrap; // no se rompen las tabs
+    overflow-x: auto; // scroll horizontal en móviles
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
 
     .nav-link {
       background: transparent;
       border: 0;
       color: var(--#{$prefix}tab-color);
       padding: 0.75rem 1rem;
+      white-space: nowrap; // que no se partan las palabras
 
       &.active {
         background: var(--#{$prefix}tab-active-bg);
@@ -46,10 +52,14 @@
   }
 }
 
+// --- TAB VERTICAL ---
 .tab-vertical {
+  display: flex;
+  flex-direction: row;
+
   .nav-tabs {
     flex-direction: column;
-    float: left;
+    flex: 0 0 auto;
     border: 0;
 
     .nav-link {
@@ -61,13 +71,37 @@
   }
 
   .tab-content {
+    flex: 1;
     overflow: auto;
   }
 }
 
+// --- Responsive ---
+@media (max-width: 768px) {
+  .tab-vertical {
+    flex-direction: column;
+
+    .nav-tabs {
+      flex-direction: row;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+
+      .nav-link {
+        border-radius: 0.2rem; // más uniforme en horizontal
+      }
+    }
+
+    // .tab-content {
+    //   margin-top: 1rem;
+    // }
+  }
+}
+
+// --- Colores ---
 @each $color, $value in $theme-colors {
   .tab-#{$color} {
     @include tab-color($value);
+
     .nav-tabs {
       .nav-link {
         color: var(--#{$prefix}tab-color);
