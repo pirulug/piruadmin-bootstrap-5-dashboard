@@ -1,0 +1,128 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Timeline'
+  -pageUrl = 'pages-timeline'
+
+block styles
+  style.
+    .timeline .timeline-item {
+      padding-bottom: 20px;
+      position: relative;
+      display: flex;
+    }
+
+    .timeline .timeline-item > div:last-child {
+      flex: 1;
+    }
+
+    .timeline .timeline-item::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      bottom: 0px;
+      top: 32px;
+      left: 15px;
+      background: #e1e1e1;
+    }
+
+    .timeline .timeline-item:last-child {
+      padding-bottom: 0;
+      bottom: 0;
+    }
+
+    .timeline .timeline-item:last-child::before {
+      display: none;
+    }
+
+block scripts
+  script(src="js/liteyoutube.js")
+
+block content
+
+  .card
+    .card-body
+
+      .row
+        .col-md-12
+          .card
+            .card-body
+              .timeline
+
+                // Shared Link
+                .timeline-item.d-flex
+                  figure.avatar.avatar-sm.me-3
+                    img(src='https://dummyimage.com/60x60/ddd/000&text=MA' alt='avatar')
+                  .flex-grow-1
+                    h6.d-flex.justify-content-between.mb-2
+                      span
+                        a.link-1(href='#') Martina Ash
+                        |  shared a link
+                      span.text-muted.small Tue 8:17pm
+                    a.text-decoration-none(href='#')
+                      .border.rounded.d-flex.overflow-hidden
+                        img.w-25(src='https://dummyimage.com/200x150/ccc/555&text=Preview' alt='preview')
+                        .p-3
+                          h5.mb-1 Connection title
+                          p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                // Shared Post
+                .timeline-item.d-flex
+                  figure.avatar.avatar-success.avatar-sm.me-3
+                    span J
+                  .flex-grow-1
+                    h6.d-flex.justify-content-between.mb-2
+                      span
+                        a.link-1(href='#') Jonny Richie
+                        |  shared a post
+                      span.text-muted.small Tue 8:17pm
+                    .border.rounded.p-3
+                      p.mb-0
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid
+                        | aperiam commodi culpa debitis deserunt enim itaque laborum minima neque
+                        | nostrum pariatur perspiciatis.
+
+                // Attached File
+                .timeline-item.d-flex
+                  figure.avatar.avatar-info.avatar-sm.me-3
+                    span K
+                  .flex-grow-1
+                    h6.d-flex.justify-content-between.mb-2
+                      span
+                        a.link-1(href='#') Jonny Richie
+                        |  attached file
+                      span.text-muted.small Tue 8:17pm
+                    .border.rounded.p-3
+                      i.fa-solid.fa-file-pdf.me-2.text-danger
+                      | filename12334.pdf
+
+                // Shared Images
+                .timeline-item.d-flex
+                  figure.avatar.avatar-warning.avatar-sm.me-3
+                    i.fa-solid.fa-image
+                  .flex-grow-1
+                    h6.d-flex.justify-content-between.mb-2
+                      span
+                        a.link-1(href='#') Jonny Richie
+                        |  shared files
+                      span.text-muted.small Tue 8:17pm
+                    .row.g-2
+                      each i in [1,2,3]
+                        .col-4
+                          img.img-fluid.rounded(src=`https://dummyimage.com/300x200/ccc/555&text=Photo+${i}` alt='image')
+
+                // Shared Video
+                .timeline-item.d-flex
+                  figure.avatar.avatar-danger.avatar-sm.me-3
+                    i.fa-brands.fa-youtube
+                  .flex-grow-1
+                    h6.d-flex.justify-content-between.mb-2
+                      span
+                        a.link-1(href='#') Jonny Richie
+                        |  shared video
+                      span.text-muted.small Tue 8:17pm
+                    p.mb-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat.
+                    .ratio.ratio-16x9
+                      lite-youtube(videoid='ih2xubMaZWI')
+

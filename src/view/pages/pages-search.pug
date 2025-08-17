@@ -1,0 +1,105 @@
+extends ../layouts/dashboard
+
+append config
+  -pageName = 'Search'
+  -pageUrl = 'pages-search'
+
+block styles
+
+block scripts
+
+block content
+  // Search Section
+  .card.card-body
+    .row.justify-content-center
+      .col-md-8.text-center
+        h1.mb-4 What do you want to find?
+        form
+          .input-group.input-group-lg.mb-3.shadow-sm
+            input.form-control(
+              type='text'
+              placeholder='Search...'
+              autofocus
+            )
+            button#button-addon1.btn.btn-primary(type='button')
+              i.fa-solid.fa-magnifying-glass
+        ul.list-inline.mt-3
+          li.list-inline-item: a.text-muted(href='#') mobile
+          li.list-inline-item: a.text-muted(href='#') software
+          li.list-inline-item: a.text-muted(href='#') desktop
+          li.list-inline-item: a.text-muted(href='#') iphone
+
+  // Results Info
+  .card.card-body.mt-3
+    h5.text-muted.m-0
+      i.fa-solid.fa-magnifying-glass.me-2
+      | 12 results found for:
+      span.text-primary &nbsp;“Lorem Ipsum”
+
+  // Tabs
+  .card.card-body.mt-3
+    ul#myTab.nav.nav-pills.justify-content-center.mb-4(role='tablist')
+      li.nav-item
+        a.nav-link.active(data-bs-toggle='tab' href='#clasic' role='tab') Classic
+      li.nav-item
+        a.nav-link(data-bs-toggle='tab' href='#articles' role='tab') Articles
+      li.nav-item
+        a.nav-link(data-bs-toggle='tab' href='#photos' role='tab') Photos
+      li.nav-item
+        a.nav-link(data-bs-toggle='tab' href='#users' role='tab') Users
+
+    // Tab Content
+    #myTabContent.tab-content
+
+      // Classic Results
+      #clasic.tab-pane.fade.show.active(role='tabpanel')
+        ul.list-unstyled
+          each val, i in [1,2,3,4,5]
+            li.mb-4
+              h5.mb-1: a(href='#') Lorem ipsum dolor sit amet #{i}
+              p.text-muted.small Velit laborum sint labore consectetur dolor minim...
+              .text-muted.small
+                span.badge.bg-secondary.me-2 Trends
+                | Dec 27 2018
+
+      // Articles
+      #articles.tab-pane.fade(role='tabpanel')
+        .row.g-4
+          each val, i in [1,2,3,4,5,6]
+            .col-lg-4.col-md-6
+              .card.h-100.border
+                img.card-img-top(src=`https://dummyimage.com/600x400/ddd/555&text=Image+${i}` alt='image')
+                .card-body
+                  p.card-text Some quick example text...
+                  a.text-uppercase.small.text-primary(href='#') Read More →
+
+      // Photos
+      #photos.tab-pane.fade(role='tabpanel')
+        .row.g-3
+          each val, i in [1,2,3,4,5,6]
+            .col-xl-3.col-lg-4.col-md-6.col-sm-12
+              a(href=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}`)
+                img.img-fluid.rounded.shadow-sm(src=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}` alt='image')
+
+      // Users
+      #users.tab-pane.fade(role='tabpanel')
+        ul.list-unstyled
+          each name, i in ['Ferrel Skipsea','Lorry Lewsey','Winny Lippiatt','Salim Walklate','Sena Erangey','Decca Thorrington']
+            li.d-flex.align-items-center.mb-3
+              figure.me-3
+                img.rounded-circle(src=`https://dummyimage.com/60x60/ccc/000&text=U${i+1}` alt='avatar')
+              .flex-grow-1
+                h6.mb-0= name
+                small.text-muted User Role
+
+  // Pagination
+  .card.card-body.mt-3
+    nav
+      ul.pagination.justify-content-center.mb-0
+        li.page-item.disabled
+          a.page-link(href='#') Previous
+        li.page-item.active: a.page-link(href='#') 1
+        li.page-item: a.page-link(href='#') 2
+        li.page-item: a.page-link(href='#') 3
+        li.page-item: a.page-link(href='#') Next
+

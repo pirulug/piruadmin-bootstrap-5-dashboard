@@ -16,14 +16,19 @@
     "collapsed": true,
     "items": [
       {
-        "title": "Settings",
-        "path": "pages-settings",
-        "link": "pages-settings"
-      },
-      {
         "title": "Blank Page",
         "path": "pages-blank",
         "link": "pages-blank"
+      },
+      {
+        "title": "Timeline",
+        "path": "pages-timeline",
+        "link": "pages-timeline"
+      },
+      {
+        "title": "Search",
+        "path": "pages-search",
+        "link": "pages-search"
       }
     ]
   },

@@ -1,69 +1,119 @@
+// ------------------------------
+// Mixins
+// ------------------------------
+
 @mixin avatar-variant($background, $color: color-contrast($background)) {
   --#{$prefix}avatar-color: #{$color};
   --#{$prefix}avatar-bg: #{$background};
 }
 
-@mixin avatar-size($with, $height, $font-size) {
-  --#{$prefix}avatar-with: #{$with};
+@mixin avatar-size($width, $height, $font-size) {
+  --#{$prefix}avatar-width: #{$width};
   --#{$prefix}avatar-height: #{$height};
   --#{$prefix}avatar-font-size: #{$font-size};
 
-  --#{$prefix}avatar-status-with: #{$with * 0.3};
+  --#{$prefix}avatar-status-width: #{$width * 0.3};
   --#{$prefix}avatar-status-height: #{$height * 0.3};
 }
+
+// ------------------------------
+// Base Avatar
+// ------------------------------
 
 .avatar {
   --#{$prefix}avatar-color: var(--#{$prefix}body-color);
   --#{$prefix}avatar-bg: transparent;
-  --#{$prefix}avatar-with: 3rem;
+  --#{$prefix}avatar-width: 3rem;
   --#{$prefix}avatar-height: 3rem;
   --#{$prefix}avatar-font-size: 1.5rem;
 
-  --#{$prefix}avatar-status-with: 0.7rem;
+  --#{$prefix}avatar-status-width: 0.7rem;
   --#{$prefix}avatar-status-height: 0.7rem;
 
   display: inline-flex;
-  background: var(--#{$prefix}avatar-bg);
-  color: var(--#{$prefix}avatar-color);
-  height: var(--#{$prefix}avatar-height);
-  width: var(--#{$prefix}avatar-height);
-  font-size: var(--#{$prefix}avatar-font-size);
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
   justify-content: center;
   align-items: center;
   position: relative;
 
+  width: var(--#{$prefix}avatar-width);
+  height: var(--#{$prefix}avatar-height);
+  font-size: var(--#{$prefix}avatar-font-size);
+
+  color: var(--#{$prefix}avatar-color);
+  background: var(--#{$prefix}avatar-bg);
+
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%; // círculo por defecto
+
+  font-weight: 500;
+
   img {
-    height: 100%;
     width: 100%;
-    border-radius: 50%;
+    height: 100%;
     object-fit: cover;
+    border-radius: inherit;
     display: block;
+    background: none;
+  }
+
+  i,
+  svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    width: 1em;
+    height: 1em;
+    font-size: var(--#{$prefix}avatar-font-size); // escala con el avatar
+    color: currentColor;
+  }
+
+  [data-feather] {
+    width: var(--#{$prefix}avatar-font-size);
+    height: var(--#{$prefix}avatar-font-size);
   }
 }
 
-.avatar-status {
-  width: var(--#{$prefix}avatar-status-with);
-  height: var(--#{$prefix}avatar-status-height);
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
+// ------------------------------
+// Modo oscuro
+// ------------------------------
 
-// @each $color, $value in $theme-colors {
-//   .avatar-#{$color} {
-//     @include avatar-variant($value);
+// .avatar {
+//   --#{$prefix}avatar-bg: var(--#{$prefix}secondary-bg);
+// }
+
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     .avatar {
+//       --#{$prefix}avatar-bg: var(--#{$prefix}tertiary-bg);
+//     }
 //   }
 // }
 
-//
+// ------------------------------
+// Avatar Shapes
+// ------------------------------
+
+.avatar-rounded {
+  border-radius: 0.5rem;
+  img,
+  .avatar-title {
+    border-radius: inherit;
+  }
+}
+
+.avatar-square {
+  border-radius: 0;
+  img,
+  .avatar-title {
+    border-radius: inherit;
+  }
+}
+
+// ------------------------------
 // Avatar Sizes
-//
+// ------------------------------
 
 .avatar-sm {
   @include avatar-size(2rem, 2rem, 1rem);
@@ -73,107 +123,66 @@
   @include avatar-size(4rem, 4rem, 2rem);
 }
 
-// sm
-// md
-// lg
-// xl
-// xxl
-// .avatar {
-//   display: inline-flex;
-//   border-radius: 50%;
-//   text-align: center;
-//   vertical-align: middle;
-//   justify-content: center;
-//   position: relative;
+.avatar-xl {
+  @include avatar-size(5rem, 5rem, 2.5rem);
+}
 
-//   .avatar-content {
-//     width: 32px;
-//     height: 32px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     color: #fff;
-//     font-size: 0.875rem;
+// ------------------------------
+// Avatar Status (online/offline, etc.)
+// ------------------------------
 
-//     svg {
-//       height: 1rem;
-//     }
-//   }
+.avatar-status {
+  width: var(--#{$prefix}avatar-status-width);
+  height: var(--#{$prefix}avatar-status-height);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 1;
+}
 
-//   .avatar-status {
-//     position: absolute;
-//     width: 0.7rem;
-//     height: 0.7rem;
-//     border-radius: 50%;
-//     border: 1px solid #fff;
-//     bottom: 0;
-//     right: 0;
-//   }
+// ------------------------------
+// Avatar Colors (Bootstrap theme colors)
+// ------------------------------
 
-//   img {
-//     width: 32px;
-//     height: 32px;
-//     border-radius: 50%;
-//     object-fit: cover;
-//   }
+@each $color, $value in $theme-colors {
+  .avatar-#{$color} {
+    @include avatar-variant(
+      $background: $value,
+      $color: shade-color($value, 80%)
+    );
+  }
+}
 
-//   // Tamaños ascendentes
-//   &-sm {
-//     height: 24px;
-//     width: 24px;
-
-//     .avatar-content,
-//     img {
-//       width: 24px;
-//       height: 24px;
-//       font-size: 0.7rem;
-//     }
-//   }
-
-//   &-md {
-//     height: 32px;
-//     width: 32px;
-
-//     .avatar-content,
-//     img {
-//       width: 32px;
-//       height: 32px;
-//     }
-//   }
-
-//   &-lg {
-//     height: 48px;
-//     width: 48px;
-
-//     .avatar-content,
-//     img {
-//       width: 48px;
-//       height: 48px;
-//       font-size: 1.8rem;
-//     }
-//   }
-
-//   &-xl {
-//     height: 60px;
-//     width: 60px;
-
-//     .avatar-content,
-//     img {
-//       width: 60px;
-//       height: 60px;
-//       font-size: 2.4rem;
-//     }
-//   }
-
-//   &-xxl {
-//     height: 100px;
-//     width: 100px;
-
-//     .avatar-content,
-//     img {
-//       width: 100px;
-//       height: 100px;
-//       font-size: 3rem;
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     // solo aplica al avatar base, no a los variantes
+//     .avatar:not([class*="avatar-"]) {
+//       --#{$prefix}avatar-bg: #494949;
+//       --#{$prefix}avatar-color: #fff;
 //     }
 //   }
 // }
+
+// ------------------------------
+// Avatar Group
+// ------------------------------
+
+.avatar-group {
+  display: inline-flex;
+
+  .avatar {
+    margin-right: -1rem;
+    border: 2px solid #fff;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}

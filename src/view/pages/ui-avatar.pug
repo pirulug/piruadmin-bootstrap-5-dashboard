@@ -4,65 +4,126 @@ append config
   -pageName = 'Avatar'
   -pageUrl = 'ui-avatar'
 
+block styles
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+        autoplayVideos: true
+      });
+    });
+
+
 block content
-  .card.mb-3
-    .card-header 
-      h5.card-title.m-0 Default Avatar
+  .card
     .card-body
-      p To create a default avatar, use the 
-        code .avatar 
-        | class. Set the height and width of the image using inline attributes.
-        
-      .avatar.bg-primary.me-3
-        i.fa.fa-user
-      .avatar.bg-secondary.me-3
-        | AS
-      .avatar.me-3
-        img(src="https://dummyimage.com/100x50/fff/000.jpg", alt="")
+      figure.avatar
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+      figure.avatar.avatar-square
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+      figure.avatar.avatar-rounded
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
 
-  .card.mb-3
-    .card-header 
-      h5.card-title.m-0 Avatar Sizes
-    .card-body
-      p Use class 
-        code .avatar-{sm|lg|xl} 
-        | along with 
-        code .avatar 
-        | to modify the size of your avatar.
-        
-      .mb-3
-        .avatar.bg-primary.avatar-sm.me-3
-          i.fa.fa-user
-        .avatar.bg-secondary.me-3
-          | AS
-        .avatar.bg-info.avatar-lg.me-3
-          i.fa.fa-user
 
-      .mb-3
-        .avatar.bg-success.avatar-sm.me-3
-          | AS
-        .avatar.bg-danger.me-3
-          | AS
-        .avatar.bg-warning.avatar-lg.me-3
-          | AS
+      hr
 
-      div
-        .avatar.avatar-sm.me-3
-          img(src="https://dummyimage.com/100x150/fff/000.jpg", alt="")
-        .avatar.me-3
-          img(src="https://dummyimage.com/100x150/fff/000.jpg", alt="")
-        .avatar.avatar-lg.me-3
-          img(src="https://dummyimage.com/200x200/fff/000.jpg", alt="")
-    
-  .card.mb-3
-    .card-header 
-      h5.card-title.m-0 Avatar Status
-    .card-body
-      p To add a status indicator to your avatar, use the class 
-        code .avatar-status 
-        | and 
-        code .bg-{color} 
-        | after the avatar element.
+      figure.avatar.avatar-xl
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+      figure.avatar.avatar-lg
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+      figure.avatar
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+      figure.avatar.avatar-sm
+        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+
+      hr
+
+      figure.avatar.avatar-primary.avatar-xl: | A
+      figure.avatar.avatar-primary.avatar-lg: | B
+      figure.avatar.avatar-primary: | C
+      figure.avatar.avatar-primary.avatar-sm: | D
+
+      hr
+
+      figure.avatar.avatar-info.avatar-xl
+        i.fa.fa-circle
+      figure.avatar.avatar-info.avatar-lg
+        i.fa.fa-circle
+      figure.avatar.avatar-info
+        i.fa.fa-circle
+      figure.avatar.avatar-info.avatar-sm
+        i.fa.fa-circle
+
+      hr
+
+      figure.avatar.avatar-warning.avatar-xl
+        i.bi.bi-circle
+      figure.avatar.avatar-warning.avatar-lg
+        i.bi.bi-circle
+      figure.avatar.avatar-warning
+        i.bi.bi-circle
+      figure.avatar.avatar-warning.avatar-sm
+        i.bi.bi-circle
+
+      hr
+
+      figure.avatar.avatar-success.avatar-xl
+        i(data-feather="circle")
+      figure.avatar.avatar-success.avatar-lg
+        i(data-feather="circle")
+      figure.avatar.avatar-success
+        i(data-feather="circle")
+      figure.avatar.avatar-success.avatar-sm
+        i(data-feather="circle")
+
+      hr
+
+      .avatar-group
+        // Inicial con fondo
+        figure.avatar.avatar-success
+          | E
+        // Imagen dummy
+        figure.avatar
+          img(src='https://dummyimage.com/60x60/ddd/000&text=A' alt='avatar')
+        // FontAwesome icon
+        figure.avatar.avatar-info
+          i.fa-solid.fa-user
+        // Bootstrap Icon
+        figure.avatar.avatar-primary
+          i.bi.bi-person-fill
+        // Imagen dummy con inicial
+        figure.avatar
+          img(src='https://dummyimage.com/60x60/aaa/000&text=J' alt='avatar')
+
+      hr
+
+      // Inicial con fondo
+      figure.avatar.avatar-primary
+        | E
+
+      // Imagen dummy
+      figure.avatar
+        img(src='https://dummyimage.com/60x60/ddd/000&text=A' alt='avatar')
+
+      // FontAwesome icon
+      figure.avatar.avatar-success
+        i.fa-solid.fa-user
+
+      // Bootstrap Icon
+      figure.avatar.avatar-danger
+        i.bi.bi-person-fill
+
+      // Imagen dummy con inicial
+      figure.avatar
+        img(src='https://dummyimage.com/60x60/aaa/000&text=J' alt='avatar')
+
+      hr
 
       .avatar.avatar-sm.me-3
         img(src="https://dummyimage.com/50x50/fff/000.jpg", alt="User")
@@ -73,3 +134,37 @@ block content
       .avatar.avatar-lg.me-3
         img(src="https://dummyimage.com/200x200/fff/000.jpg", alt="User")
         span.avatar-status.bg-success
+
+      hr
+
+      figure.avatar.avatar-success.avatar-xl
+        i(data-feather="circle")
+        span.avatar-status.bg-info
+      figure.avatar.avatar-success.avatar-lg
+        i(data-feather="circle")
+        span.avatar-status.bg-info
+      figure.avatar.avatar-success
+        i(data-feather="circle")
+        span.avatar-status.bg-info
+      figure.avatar.avatar-success.avatar-sm
+        i(data-feather="circle")
+        span.avatar-status.bg-info
+
+      hr
+
+      // Avatares que abren lightbox
+      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/000/fff.jpg' data-gallery="avatars")
+        img(src='https://dummyimage.com/100x100/000/fff.jpg' alt='avatar')
+
+      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/111/fff.jpg' data-gallery="avatars")
+        img(src='https://dummyimage.com/100x100/111/fff.jpg' alt='avatar')
+
+      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/222/fff.jpg' data-gallery="avatars")
+        img(src='https://dummyimage.com/100x100/222/fff.jpg' alt='avatar')
+
+      a.glightbox(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        figure.avatar.avatar-xl.avatar-danger
+          i.fa.fa-play
+
+
+
