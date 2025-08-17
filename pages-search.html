@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Charts | PiruAdmin</title>
-    <meta name="title" content="Charts | PiruAdmin">
+    <title>Search | PiruAdmin</title>
+    <meta name="title" content="Search | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-charts-chartjs.html">
-    <meta property="og:title" content="Charts | PiruAdmin">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-search.html">
+    <meta property="og:title" content="Search | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins-charts-chartjs.html">
-    <meta property="twitter:title" content="Charts | PiruAdmin">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-search.html">
+    <meta property="twitter:title" content="Search | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -52,11 +52,11 @@
           <ul class="sidebar-nav">
             <li class="sidebar-item"><a class="sidebar-link" href="dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
             <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
+            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse show" id="pages" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="pages-timeline.html">Timeline</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-search.html">Search</a></li>
+                <li class="sidebar-item active"><a class="sidebar-link" href="pages-search.html">Search</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
@@ -110,10 +110,10 @@
                 <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="plugins" data-bs-parent="#sidebar">
+            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
+              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
                 <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
-                <li class="sidebar-item active"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
               </ul>
             </li>
@@ -232,61 +232,184 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Charts</h1>
+            <h1 class="h3 d-inline align-middle">Search</h1>
           </div>
-          <div class="row">
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3 flex-fill w-100">
-                <div class="card-header">
-                  <h5 class="card-title">Line Chart</h5>
-                  <h6 class="card-subtitle text-muted">A line chart is a way of plotting data points on a line.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart">
-                    <canvas id="chartjs-line"></canvas>
+          <!-- Search Section-->
+          <div class="card card-body">
+            <div class="row justify-content-center">
+              <div class="col-md-8 text-center">
+                <h1 class="mb-4">What do you want to find?</h1>
+                <form>
+                  <div class="input-group input-group-lg mb-3 shadow-sm">
+                    <input class="form-control" type="text" placeholder="Search..." autofocus>
+                    <button class="btn btn-primary" id="button-addon1" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+                </form>
+                <ul class="list-inline mt-3">
+                  <li class="list-inline-item"><a class="text-muted" href="#">mobile</a></li>
+                  <li class="list-inline-item"><a class="text-muted" href="#">software</a></li>
+                  <li class="list-inline-item"><a class="text-muted" href="#">desktop</a></li>
+                  <li class="list-inline-item"><a class="text-muted" href="#">iphone</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Results Info-->
+          <div class="card card-body mt-3">
+            <h5 class="text-muted m-0"><i class="fa-solid fa-magnifying-glass me-2"></i>12 results found for:<span class="text-primary">&nbsp;“Lorem Ipsum”</span></h5>
+          </div>
+          <!-- Tabs-->
+          <div class="card card-body mt-3">
+            <ul class="nav nav-pills justify-content-center mb-4" id="myTab" role="tablist">
+              <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#clasic" role="tab">Classic</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#articles" role="tab">Articles</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#photos" role="tab">Photos</a></li>
+              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#users" role="tab">Users</a></li>
+            </ul>
+            <!-- Tab Content-->
+            <div class="tab-content" id="myTabContent">
+              <!-- Classic Results-->
+              <div class="tab-pane fade show active" id="clasic" role="tabpanel">
+                <ul class="list-unstyled">
+                  <li class="mb-4">
+                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 0</a></h5>
+                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
+                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 1</a></h5>
+                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
+                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 2</a></h5>
+                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
+                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 3</a></h5>
+                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
+                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
+                  </li>
+                  <li class="mb-4">
+                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 4</a></h5>
+                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
+                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Articles-->
+              <div class="tab-pane fade" id="articles" role="tabpanel">
+                <div class="row g-4">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+0" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+1" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+2" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+3" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+4" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+5" alt="image">
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3">
-                <div class="card-header">
-                  <h5 class="card-title">Bar Chart</h5>
-                  <h6 class="card-subtitle text-muted">A bar chart provides a way of showing data values represented as vertical bars.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart">
-                    <canvas id="chartjs-bar"></canvas>
-                  </div>
+              <!-- Photos-->
+              <div class="tab-pane fade" id="photos" role="tabpanel">
+                <div class="row g-3">
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+0"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+0" alt="image"></a></div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+1"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+1" alt="image"></a></div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+2"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+2" alt="image"></a></div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+3"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+3" alt="image"></a></div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+4"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+4" alt="image"></a></div>
+                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+5"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+5" alt="image"></a></div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Doughnut Chart</h5>
-                  <h6 class="card-subtitle text-muted">Doughnut charts are excellent at showing the relational proportions between data.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart chart-sm">
-                    <canvas id="chartjs-doughnut"></canvas>
-                  </div>
-                </div>
+              <!-- Users-->
+              <div class="tab-pane fade" id="users" role="tabpanel">
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U1" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Ferrel Skipsea</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U2" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Lorry Lewsey</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U3" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Winny Lippiatt</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U4" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Salim Walklate</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U5" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Sena Erangey</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                  <li class="d-flex align-items-center mb-3">
+                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U6" alt="avatar"></figure>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-0">Decca Thorrington</h6><small class="text-muted">User Role</small>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Pie Chart</h5>
-                  <h6 class="card-subtitle text-muted">Pie charts are excellent at showing the relational proportions between data.</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart chart-sm">
-                    <canvas id="chartjs-pie"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          <!-- Pagination-->
+          <div class="card card-body mt-3">
+            <nav>
+              <ul class="pagination justify-content-center mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
           </div>
         </main>
         <!-- Footer-->
@@ -310,131 +433,5 @@
     <!-- Js Bootstrap-->
     <script src="js/feathericons.js"></script>
     <script src="js/piruadmin.js"></script>
-    <script src="js/chartjs.js"></script>
-    <script>
-      // Line chart
-      new Chart(document.getElementById("chartjs-line"), {
-        type: "line",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Sales ($)",
-            fill: true,
-            backgroundColor: "transparent",
-            borderColor: "#ff0055",
-            data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
-          }, {
-            label: "Orders",
-            fill: true,
-            backgroundColor: "transparent",
-            borderColor: "#adb5bd",
-            borderDash: [4, 4],
-            data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-          tooltips: {
-            intersect: false
-          },
-          hover: {
-            intersect: true
-          },
-          plugins: {
-            filler: {
-              propagate: false
-            }
-          },
-      
-        }
-      });
-      
-      // Bar chart
-      new Chart(document.getElementById("chartjs-bar"), {
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-          datasets: [{
-            label: "Last year",
-            backgroundColor: "#ff0055",
-            borderColor: "#ff0055",
-            hoverBackgroundColor: "#ff0055",
-            hoverBorderColor: "#ff0055",
-            data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-            barPercentage: .75,
-            categoryPercentage: .5
-          }, {
-            label: "This year",
-            backgroundColor: "#dee2e6",
-            borderColor: "#dee2e6",
-            hoverBackgroundColor: "#dee2e6",
-            hoverBorderColor: "#dee2e6",
-            data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
-            barPercentage: .75,
-            categoryPercentage: .5
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-      
-        }
-      });
-      
-      // Doughnut chart
-      new Chart(document.getElementById("chartjs-doughnut"), {
-        type: "doughnut",
-        data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
-          datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-            ],
-            borderColor: "transparent"
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          cutoutPercentage: 65,
-          legend: {
-            display: false
-          }
-        }
-      });
-      
-      
-      // Pie chart
-      new Chart(document.getElementById("chartjs-pie"), {
-        type: "pie",
-        data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
-          datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-      ],
-      borderColor: "transparent"
-          }]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          }
-        }
-      });
-    </script>
   </body>
 </html>

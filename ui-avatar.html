@@ -39,6 +39,20 @@
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
       
+    </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+          touchNavigation: true,
+          loop: true,
+          zoomable: true,
+          autoplayVideos: true
+        });
+      });
+      
+      
     </script>
   </head>
   <body>
@@ -54,8 +68,9 @@
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-settings.html">Settings</a></li>
                 <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="pages-timeline.html">Timeline</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="pages-search.html">Search</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
@@ -233,49 +248,72 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Avatar</h1>
           </div>
-          <div class="card mb-3">
-            <div class="card-header"> 
-              <h5 class="card-title m-0">Default Avatar</h5>
-            </div>
+          <div class="card">
             <div class="card-body">
-              <p>To create a default avatar, use the <code>.avatar </code>class. Set the height and width of the image using inline attributes.</p>
-              <div class="avatar bg-primary me-3"><i class="fa fa-user"></i></div>
-              <div class="avatar bg-secondary me-3">AS</div>
-              <div class="avatar me-3"><img src="https://dummyimage.com/100x50/fff/000.jpg" alt=""></div>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-header"> 
-              <h5 class="card-title m-0">Avatar Sizes</h5>
-            </div>
-            <div class="card-body">
-              <p>Use class <code>.avatar-{sm|lg|xl} </code>along with <code>.avatar </code>to modify the size of your avatar.</p>
-              <div class="mb-3">
-                <div class="avatar bg-primary avatar-sm me-3"><i class="fa fa-user"></i></div>
-                <div class="avatar bg-secondary me-3">AS</div>
-                <div class="avatar bg-info avatar-lg me-3"><i class="fa fa-user"></i></div>
+              <figure class="avatar"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <figure class="avatar avatar-square"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <figure class="avatar avatar-rounded"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <hr>
+              <figure class="avatar avatar-xl"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <figure class="avatar"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/fff/000.jpg" alt="avatar"></figure>
+              <hr>
+              <figure class="avatar avatar-primary avatar-xl">A</figure>
+              <figure class="avatar avatar-primary avatar-lg">B</figure>
+              <figure class="avatar avatar-primary">C</figure>
+              <figure class="avatar avatar-primary avatar-sm">D</figure>
+              <hr>
+              <figure class="avatar avatar-info avatar-xl"><i class="fa fa-circle"></i></figure>
+              <figure class="avatar avatar-info avatar-lg"><i class="fa fa-circle"></i></figure>
+              <figure class="avatar avatar-info"><i class="fa fa-circle"></i></figure>
+              <figure class="avatar avatar-info avatar-sm"><i class="fa fa-circle"></i></figure>
+              <hr>
+              <figure class="avatar avatar-warning avatar-xl"><i class="bi bi-circle"></i></figure>
+              <figure class="avatar avatar-warning avatar-lg"><i class="bi bi-circle"></i></figure>
+              <figure class="avatar avatar-warning"><i class="bi bi-circle"></i></figure>
+              <figure class="avatar avatar-warning avatar-sm"><i class="bi bi-circle"></i></figure>
+              <hr>
+              <figure class="avatar avatar-success avatar-xl"><i data-feather="circle"></i></figure>
+              <figure class="avatar avatar-success avatar-lg"><i data-feather="circle"></i></figure>
+              <figure class="avatar avatar-success"><i data-feather="circle"></i></figure>
+              <figure class="avatar avatar-success avatar-sm"><i data-feather="circle"></i></figure>
+              <hr>
+              <div class="avatar-group">
+                <!-- Inicial con fondo-->
+                <figure class="avatar avatar-success">E</figure>
+                <!-- Imagen dummy-->
+                <figure class="avatar"><img src="https://dummyimage.com/60x60/ddd/000&amp;text=A" alt="avatar"></figure>
+                <!-- FontAwesome icon-->
+                <figure class="avatar avatar-info"><i class="fa-solid fa-user"></i></figure>
+                <!-- Bootstrap Icon-->
+                <figure class="avatar avatar-primary"><i class="bi bi-person-fill"></i></figure>
+                <!-- Imagen dummy con inicial-->
+                <figure class="avatar"><img src="https://dummyimage.com/60x60/aaa/000&amp;text=J" alt="avatar"></figure>
               </div>
-              <div class="mb-3">
-                <div class="avatar bg-success avatar-sm me-3">AS</div>
-                <div class="avatar bg-danger me-3">AS</div>
-                <div class="avatar bg-warning avatar-lg me-3">AS</div>
-              </div>
-              <div>
-                <div class="avatar avatar-sm me-3"><img src="https://dummyimage.com/100x150/fff/000.jpg" alt=""></div>
-                <div class="avatar me-3"><img src="https://dummyimage.com/100x150/fff/000.jpg" alt=""></div>
-                <div class="avatar avatar-lg me-3"><img src="https://dummyimage.com/200x200/fff/000.jpg" alt=""></div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3">
-            <div class="card-header"> 
-              <h5 class="card-title m-0">Avatar Status</h5>
-            </div>
-            <div class="card-body">
-              <p>To add a status indicator to your avatar, use the class <code>.avatar-status </code>and <code>.bg-{color} </code>after the avatar element.</p>
+              <hr>
+              <!-- Inicial con fondo-->
+              <figure class="avatar avatar-primary">E</figure>
+              <!-- Imagen dummy-->
+              <figure class="avatar"><img src="https://dummyimage.com/60x60/ddd/000&amp;text=A" alt="avatar"></figure>
+              <!-- FontAwesome icon-->
+              <figure class="avatar avatar-success"><i class="fa-solid fa-user"></i></figure>
+              <!-- Bootstrap Icon-->
+              <figure class="avatar avatar-danger"><i class="bi bi-person-fill"></i></figure>
+              <!-- Imagen dummy con inicial-->
+              <figure class="avatar"><img src="https://dummyimage.com/60x60/aaa/000&amp;text=J" alt="avatar"></figure>
+              <hr>
               <div class="avatar avatar-sm me-3"><img src="https://dummyimage.com/50x50/fff/000.jpg" alt="User"><span class="avatar-status bg-danger"></span></div>
               <div class="avatar me-3"><img src="https://dummyimage.com/50x50/fff/000.jpg" alt="User"><span class="avatar-status bg-info"></span></div>
               <div class="avatar avatar-lg me-3"><img src="https://dummyimage.com/200x200/fff/000.jpg" alt="User"><span class="avatar-status bg-success"></span></div>
+              <hr>
+              <figure class="avatar avatar-success avatar-xl"><i data-feather="circle"></i><span class="avatar-status bg-info"></span></figure>
+              <figure class="avatar avatar-success avatar-lg"><i data-feather="circle"></i><span class="avatar-status bg-info"></span></figure>
+              <figure class="avatar avatar-success"><i data-feather="circle"></i><span class="avatar-status bg-info"></span></figure>
+              <figure class="avatar avatar-success avatar-sm"><i data-feather="circle"></i><span class="avatar-status bg-info"></span></figure>
+              <hr>
+              <!-- Avatares que abren lightbox--><a class="avatar avatar-lg glightbox" href="https://dummyimage.com/600x400/000/fff.jpg" data-gallery="avatars"><img src="https://dummyimage.com/100x100/000/fff.jpg" alt="avatar"></a><a class="avatar avatar-lg glightbox" href="https://dummyimage.com/600x400/111/fff.jpg" data-gallery="avatars"><img src="https://dummyimage.com/100x100/111/fff.jpg" alt="avatar"></a><a class="avatar avatar-lg glightbox" href="https://dummyimage.com/600x400/222/fff.jpg" data-gallery="avatars"><img src="https://dummyimage.com/100x100/222/fff.jpg" alt="avatar"></a><a class="glightbox" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <figure class="avatar avatar-xl avatar-danger"><i class="fa fa-play"></i></figure></a>
             </div>
           </div>
         </main>
