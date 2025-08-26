@@ -18,7 +18,7 @@ const opts = {
 // PUG
 const PAGES_DIR = `${Path.resolve(__dirname, "src")}/view/pages`;
 const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
-  fileName.endsWith(".pug"),
+  fileName.endsWith(".pug")
 );
 
 module.exports = {
@@ -96,7 +96,7 @@ module.exports = {
             preventAttributesEscaping: false,
           },
           inject: false,
-        }),
+        })
     ),
     // Beautify
     new PrettifyWebpackPlugin({
