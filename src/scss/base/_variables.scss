@@ -725,6 +725,7 @@ $mark-bg: $yellow-100 !default;
 // Navbar
 
 // Dropdowns
+$dropdown-box-shadow: 0;
 
 // Pagination
 
@@ -756,10 +757,17 @@ $badge-padding-x: 0.65em;
 $badge-border-radius: var(--#{$prefix}border-radius);
 
 // Modals
+$modal-content-border-color: transparent;
+$modal-header-border-color: transparent;
+$modal-footer-border-color: transparent;
 
 // Alerts
 
+// List group
+$list-group-border-color: transparent;
+
 // Progress bars
+$progress-height: 0.6rem;
 
 // Image thumbnails
 
@@ -817,7 +825,7 @@ $sidebar-transition:
 $sidebar-bg: $body-bg !default;
 
 // Sidebar brand
-$sidebar-brand-padding-y: 1.15rem !default;
+$sidebar-brand-padding-y: 0.9rem !default;
 $sidebar-brand-padding-x: 1.5rem !default;
 $sidebar-brand-font-weight: $font-weight-bold !default;
 $sidebar-brand-font-size: 1.5rem !default;
