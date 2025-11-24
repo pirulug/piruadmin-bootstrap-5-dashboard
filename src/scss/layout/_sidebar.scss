@@ -36,6 +36,7 @@ a.sidebar-link {
   color: $sidebar-link-color;
   background: $sidebar-link-bg;
   border-left-color: $sidebar-link-border-left-color;
+  margin-bottom: 0.1rem;
 
   i,
   svg {
@@ -70,7 +71,7 @@ a.sidebar-link {
   }
 }
 
-.sidebar-item.active > .sidebar-link,
+.sidebar-item.active>.sidebar-link,
 .sidebar-item.active .sidebar-link:hover {
   color: $sidebar-link-active-color;
   background: $sidebar-link-active-bg;

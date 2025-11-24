@@ -1,4 +1,8 @@
 // Footer
 footer.py-5.bg-body
   .container
-    p.m-0.text-center.text-white Copyright &copy; Your Website 2023
+    p.m-0.text-center.text-white
+      | Copyright © Pirulug 
+      span#year
+      script.
+        document.getElementById('year').textContent = new Date().getFullYear();
