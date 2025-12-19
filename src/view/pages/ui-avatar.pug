@@ -1,170 +1,259 @@
 extends ../layouts/dashboard
 
 append config
-  -pageName = 'Avatar'
+  -pageName = 'Avatar Documentation'
   -pageUrl = 'ui-avatar'
 
 block styles
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
 
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js")
   script.
     document.addEventListener("DOMContentLoaded", function () {
       const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true,
         loop: true,
-        zoomable: true,
         autoplayVideos: true
       });
     });
 
-
 block content
-  .card
-    .card-body
-      figure.avatar
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
-      figure.avatar.avatar-square
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
-      figure.avatar.avatar-rounded
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+  .row.g-4
+    // -------------------------------------------------------------------------
+    // SECCIÓN 1: INTRODUCCIÓN Y BÁSICOS
+    // -------------------------------------------------------------------------
+    .col-12.col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title Uso Básico
+          p.card-subtitle.text-muted El componente <code>.avatar</code> adapta automáticamente imágenes, texto o iconos.
+        .card-body
+          .table-responsive
+            table.table.align-middle
+              thead
+                tr
+                  th Resultado
+                  th Uso
+                  th Clase
+              tbody
+                tr
+                  td: figure.avatar: img(src='https://dummyimage.com/100x100/333/fff.jpg' alt='Avatar')
+                  td Imagen
+                  td <code>img</code>
+                tr
+                  td: figure.avatar: span AB
+                  td Texto (Iniciales)
+                  td <code>span</code>
+                tr
+                  td: figure.avatar: i.bi.bi-person
+                  td Icono
+                  td <code>i.bi...</code>
 
+    // -------------------------------------------------------------------------
+    // SECCIÓN 2: FORMAS (SHAPES)
+    // -------------------------------------------------------------------------
+    .col-12.col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title Formas
+          p.card-subtitle.text-muted Modifica el borde con clases adicionales.
+        .card-body.d-flex.justify-content-around.align-items-center
+          .text-center
+            figure.avatar.mb-2
+              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Circle')
+            div: code .avatar
+            small.d-block.text-muted (Por defecto)
 
-      hr
+          .text-center
+            figure.avatar.avatar-rounded.mb-2
+              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Rounded')
+            div: code .avatar-rounded
 
-      figure.avatar.avatar-xl
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
-      figure.avatar.avatar-lg
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
-      figure.avatar
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
-      figure.avatar.avatar-sm
-        img(src='https://dummyimage.com/100x100/fff/000.jpg' alt='avatar')
+          .text-center
+            figure.avatar.avatar-square.mb-2
+              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Square')
+            div: code .avatar-square
 
-      hr
+    // -------------------------------------------------------------------------
+    // SECCIÓN 3: TAMAÑOS (SIZES)
+    // -------------------------------------------------------------------------
+    .col-12
+      .card
+        .card-header
+          h5.card-title Tamaños Disponibles
+          p.card-subtitle.text-muted Desde XS hasta XL.
+        .card-body
+          .d-flex.flex-wrap.align-items-end.gap-4
+            .text-center
+              figure.avatar.avatar-xl.mb-2: span XL
+              div: code .avatar-xl
+            .text-center
+              figure.avatar.avatar-lg.mb-2: span LG
+              div: code .avatar-lg
+            .text-center
+              figure.avatar.mb-2: span MD
+              div: code (default)
+            .text-center
+              figure.avatar.avatar-sm.mb-2: span SM
+              div: code .avatar-sm
+            .text-center
+              figure.avatar.avatar-xs.mb-2: span XS
+              div: code .avatar-xs
 
-      figure.avatar.avatar-primary.avatar-xl: | A
-      figure.avatar.avatar-primary.avatar-lg: | B
-      figure.avatar.avatar-primary: | C
-      figure.avatar.avatar-primary.avatar-sm: | D
+    // -------------------------------------------------------------------------
+    // SECCIÓN 4: COLORES (BOOTSTRAP THEME)
+    // -------------------------------------------------------------------------
+    .col-12
+      .card
+        .card-header
+          h5.card-title Colores del Tema
+          p.card-subtitle.text-muted Usa las clases <code>.avatar-{color}</code>. El texto se ajusta automáticamente para tener contraste.
+        .card-body
+          .d-flex.flex-wrap.gap-3
+            each color in ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
+              .text-center
+                figure.avatar(class=`avatar-${color}`)
+                  span= color.charAt(0).toUpperCase() + color.charAt(1)
+                div.mt-1: code= `.${color}`
 
-      hr
+    // -------------------------------------------------------------------------
+    // SECCIÓN 5: INDICADORES DE ESTADO (STATUS)
+    // -------------------------------------------------------------------------
+    .col-12.col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title Status
+          p.card-subtitle.text-muted Añade <code>.avatar-status</code> y un color de fondo. El borde blanco/negro es automático.
+        .card-body
+          .d-flex.justify-content-around
+            // Ejemplo 1: Imagen + Online
+            div
+              figure.avatar.avatar-lg
+                img(src="https://dummyimage.com/100x100/0d6efd/fff")
+                span.avatar-status.bg-success
+              p.text-center.mt-2.small Online
 
-      figure.avatar.avatar-info.avatar-xl
-        i.fa.fa-circle
-      figure.avatar.avatar-info.avatar-lg
-        i.fa.fa-circle
-      figure.avatar.avatar-info
-        i.fa.fa-circle
-      figure.avatar.avatar-info.avatar-sm
-        i.fa.fa-circle
+            // Ejemplo 2: Iniciales + Busy
+            div
+              figure.avatar.avatar-secondary
+                span MK
+                span.avatar-status.bg-danger
+              p.text-center.mt-2.small Ocupado
 
-      hr
+            // Ejemplo 3: Icono + Away
+            div
+              figure.avatar.avatar-sm.avatar-light
+                i.bi.bi-person
+                span.avatar-status.bg-warning
+              p.text-center.mt-2.small Ausente
 
-      figure.avatar.avatar-warning.avatar-xl
-        i.bi.bi-circle
-      figure.avatar.avatar-warning.avatar-lg
-        i.bi.bi-circle
-      figure.avatar.avatar-warning
-        i.bi.bi-circle
-      figure.avatar.avatar-warning.avatar-sm
-        i.bi.bi-circle
+    // -------------------------------------------------------------------------
+    // SECCIÓN 6: GRUPOS (AVATAR GROUP)
+    // -------------------------------------------------------------------------
+    .col-12.col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title Avatar Group
+          p.card-subtitle.text-muted Agrupa avatares solapados usando <code>.avatar-group</code>.
+        .card-body.d-flex.flex-column.justify-content-center.gap-4
+          // Grupo 1: Grande
+          div
+            small.text-muted.d-block.mb-2 Grupo Grande
+            .avatar-group
+              figure.avatar.avatar-lg
+                img(src='https://dummyimage.com/100x100/444/fff&text=1')
+              figure.avatar.avatar-lg.avatar-primary
+                | A
+              figure.avatar.avatar-lg.avatar-success
+                i.bi.bi-check
+              figure.avatar.avatar-lg.avatar-secondary
+                | +3
 
-      hr
+          // Grupo 2: Pequeño
+          div
+            small.text-muted.d-block.mb-2 Grupo Pequeño
+            .avatar-group
+              figure.avatar.avatar-sm
+                img(src='https://dummyimage.com/100x100/444/fff&text=A')
+              figure.avatar.avatar-sm
+                img(src='https://dummyimage.com/100x100/555/fff&text=B')
+              figure.avatar.avatar-sm
+                img(src='https://dummyimage.com/100x100/666/fff&text=C')
+              figure.avatar.avatar-sm.avatar-dark
+                | 9+
+    
+    // -------------------------------------------------------------------
+    // DEMO DE ICONOS (FontAwesome, Bootstrap, Feather)
+    // -------------------------------------------------------------------
+    .col-12
+      .card
+        .card-header
+          h5.card-title Soporte de Iconos
+          p.card-subtitle.text-muted Todos los iconos se centran automáticamente gracias a <code>line-height: 1</code> y <code>1em</code>.
+        .card-body
+          .table-responsive
+            table.table.table-borderless.align-middle.text-center
+              thead
+                tr
+                  th Librería
+                  th XS
+                  th SM
+                  th Default
+                  th LG
+                  th XL
+              tbody
+                // FONT AWESOME
+                tr
+                  td.text-start.fw-bold Font Awesome
+                  td: figure.avatar.avatar-xs.avatar-primary: i.fa-solid.fa-user
+                  td: figure.avatar.avatar-sm.avatar-primary: i.fa-solid.fa-user
+                  td: figure.avatar.avatar-primary: i.fa-solid.fa-user
+                  td: figure.avatar.avatar-lg.avatar-primary: i.fa-solid.fa-user
+                  td: figure.avatar.avatar-xl.avatar-primary: i.fa-solid.fa-user
+                
+                // BOOTSTRAP ICONS
+                tr
+                  td.text-start.fw-bold Bootstrap Icons
+                  td: figure.avatar.avatar-xs.avatar-success: i.bi.bi-alarm
+                  td: figure.avatar.avatar-sm.avatar-success: i.bi.bi-alarm
+                  td: figure.avatar.avatar-success: i.bi.bi-alarm
+                  td: figure.avatar.avatar-lg.avatar-success: i.bi.bi-alarm
+                  td: figure.avatar.avatar-xl.avatar-success: i.bi.bi-alarm
 
-      figure.avatar.avatar-success.avatar-xl
-        i(data-feather="circle")
-      figure.avatar.avatar-success.avatar-lg
-        i(data-feather="circle")
-      figure.avatar.avatar-success
-        i(data-feather="circle")
-      figure.avatar.avatar-success.avatar-sm
-        i(data-feather="circle")
+                // FEATHER ICONS
+                tr
+                  td.text-start.fw-bold Feather Icons
+                  td: figure.avatar.avatar-xs.avatar-info: i(data-feather="anchor")
+                  td: figure.avatar.avatar-sm.avatar-info: i(data-feather="anchor")
+                  td: figure.avatar.avatar-info: i(data-feather="anchor")
+                  td: figure.avatar.avatar-lg.avatar-info: i(data-feather="anchor")
+                  td: figure.avatar.avatar-xl.avatar-info: i(data-feather="anchor")
 
-      hr
+    // -------------------------------------------------------------------------
+    // SECCIÓN 7: LIGHTBOX INTERACTIVO (REQ. ORIGINAL)
+    // -------------------------------------------------------------------------
+    .col-12
+      .card
+        .card-header
+          h5.card-title Lightbox Interactivo
+          p.card-subtitle.text-muted Integración con GLightbox para previsualizar imágenes o videos.
+        .card-body
+          .d-flex.flex-wrap.gap-3
+            // Lightbox Imagen 1
+            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/000/fff.jpg&text=Full+Image+1' data-gallery="avatars")
+              img(src='https://dummyimage.com/100x100/000/fff.jpg' alt='avatar')
 
-      .avatar-group
-        // Inicial con fondo
-        figure.avatar.avatar-success
-          | E
-        // Imagen dummy
-        figure.avatar
-          img(src='https://dummyimage.com/60x60/ddd/000&text=A' alt='avatar')
-        // FontAwesome icon
-        figure.avatar.avatar-info
-          i.fa-solid.fa-user
-        // Bootstrap Icon
-        figure.avatar.avatar-primary
-          i.bi.bi-person-fill
-        // Imagen dummy con inicial
-        figure.avatar
-          img(src='https://dummyimage.com/60x60/aaa/000&text=J' alt='avatar')
+            // Lightbox Imagen 2
+            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/333/fff.jpg&text=Full+Image+2' data-gallery="avatars")
+              img(src='https://dummyimage.com/100x100/333/fff.jpg' alt='avatar')
 
-      hr
+            // Lightbox Imagen 3 (Texto)
+            a.avatar.avatar-xl.avatar-primary.glightbox(href='https://dummyimage.com/800x600/0d6efd/fff.jpg&text=Text+Avatar' data-gallery="avatars")
+              | IMG
 
-      // Inicial con fondo
-      figure.avatar.avatar-primary
-        | E
-
-      // Imagen dummy
-      figure.avatar
-        img(src='https://dummyimage.com/60x60/ddd/000&text=A' alt='avatar')
-
-      // FontAwesome icon
-      figure.avatar.avatar-success
-        i.fa-solid.fa-user
-
-      // Bootstrap Icon
-      figure.avatar.avatar-danger
-        i.bi.bi-person-fill
-
-      // Imagen dummy con inicial
-      figure.avatar
-        img(src='https://dummyimage.com/60x60/aaa/000&text=J' alt='avatar')
-
-      hr
-
-      .avatar.avatar-sm.me-3
-        img(src="https://dummyimage.com/50x50/fff/000.jpg", alt="User")
-        span.avatar-status.bg-danger
-      .avatar.me-3
-        img(src="https://dummyimage.com/50x50/fff/000.jpg", alt="User")
-        span.avatar-status.bg-info
-      .avatar.avatar-lg.me-3
-        img(src="https://dummyimage.com/200x200/fff/000.jpg", alt="User")
-        span.avatar-status.bg-success
-
-      hr
-
-      figure.avatar.avatar-success.avatar-xl
-        i(data-feather="circle")
-        span.avatar-status.bg-info
-      figure.avatar.avatar-success.avatar-lg
-        i(data-feather="circle")
-        span.avatar-status.bg-info
-      figure.avatar.avatar-success
-        i(data-feather="circle")
-        span.avatar-status.bg-info
-      figure.avatar.avatar-success.avatar-sm
-        i(data-feather="circle")
-        span.avatar-status.bg-info
-
-      hr
-
-      // Avatares que abren lightbox
-      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/000/fff.jpg' data-gallery="avatars")
-        img(src='https://dummyimage.com/100x100/000/fff.jpg' alt='avatar')
-
-      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/111/fff.jpg' data-gallery="avatars")
-        img(src='https://dummyimage.com/100x100/111/fff.jpg' alt='avatar')
-
-      a.avatar.avatar-lg.glightbox(href='https://dummyimage.com/600x400/222/fff.jpg' data-gallery="avatars")
-        img(src='https://dummyimage.com/100x100/222/fff.jpg' alt='avatar')
-
-      a.glightbox(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-        figure.avatar.avatar-xl.avatar-danger
-          i.fa.fa-play
-
-
-
+            // Lightbox Video Youtube
+            a.glightbox(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+              figure.avatar.avatar-xl.avatar-danger
+                i.bi.bi-play-fill.fs-2

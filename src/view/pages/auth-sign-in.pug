@@ -1,89 +1,87 @@
 extends ../layouts/auth
 
 append config
-  -pageName = 'Sing In'
-  -pageUrl = 'pages-sign-in'
+  - pageName = 'Sign In'
+  - pageUrl = 'pages-sign-in'
 
 block content
+  .d-flex.min-vh-100.align-items-center.justify-content-center
+    .container
+      .row.justify-content-center
+        .col-sm-10.col-md-8.col-lg-5.col-xl-4
+          
+          .text-center.mb-4
+            .d-inline-flex.align-items-center.justify-content-center.bg-primary.text-white.rounded-3.mb-3(style="width: 48px; height: 48px;")
+              i.fa-solid.fa-layer-group.fs-4
+            h4.fw-bold.mb-1 Welcome back
+            p.text-body-secondary Sign in to manage your account
 
-  .container.d-flex.flex-column
-    .row.vh-100
-      .col-sm-10.col-md-8.col-lg-6.col-xl-5.mx-auto.d-table.h-100
-        .d-table-cell.align-middle
-          //-.text-center.mt-4
-            h1.h2 Welcome back!
-            p.lead
-              | Sign in to your account to continue
-          .card
-            .card-body
-              .m-sm-3
-                h2.m-0 Sign In
-                p.text-muted Enter your email and password to login
-                form
-                  .mb-3
-                    label.form-label Email
-                    input.form-control(type='email' name='email' placeholder='Enter your email')
-                  .mb-3
-                    label.form-label Password
-                    //- input.form-control(type='password' name='password' placeholder='Enter your password')
-                    #show_hide_password.input-group
-                      input#inputChoosePassword.form-control.border-end-0(type='password' name='password' value='12345678' placeholder='Enter your password')
-                      button#togglePassword.input-group-text.bg-transparent(type="button")
-                        i.fa.fa-eye-slash
-                    small
-                      a(href='/auth-reset-password.html') Forgot password?
-                  div
-                    .form-check.align-items-center
-                      input#customControlInline.form-check-input(type='checkbox' value='remember-me' name='remember-me' checked='')
-                      label.form-check-label.text-small(for='customControlInline') Remember me
-                  .d-grid.gap-2.mt-3
-                    a.btn.btn-primary(href='/') Sign in
+          .card.border.border-secondary-subtle.bg-body.rounded-3
+            .card-body.p-4.p-sm-5
+              
+              form
+                .mb-3
+                  label.form-label.fw-semibold(for='inputEmail') Email
+                  input#inputEmail.form-control.form-control-lg(
+                    type='email' 
+                    name='email' 
+                    placeholder='name@company.com'
+                  )
+                
+                .mb-3
+                  .d-flex.justify-content-between.align-items-center.mb-1
+                    label.form-label.fw-semibold(for='inputPassword') Password
+                    a.small.text-decoration-none(href='/auth-reset-password.html') Forgot password?
+                  
+                  .input-group.input-group-lg
+                    input#inputPassword.form-control.border-end-0(
+                      type='password' 
+                      name='password' 
+                      placeholder='Enter password'
+                    )
+                    button#togglePassword.input-group-text.bg-transparent.border-start-0(type="button")
+                      i.fa-regular.fa-eye-slash.text-body-secondary
 
-                .separator
-                  span.separator-text Or continue with
+                .mb-4
+                  .form-check
+                    input#rememberMe.form-check-input(type='checkbox' name='remember-me' checked)
+                    label.form-check-label.text-body-secondary(for='rememberMe') Remember me on this device
 
-                .d-flex.gap-2
-                  a.flex-fill.btn.btn-google(href='/')
-                    i.fab.fa-fw.fa-google
-                  a.flex-fill.btn.btn-facebook(href='/')
-                    i.fab.fa-fw.fa-facebook-f
-                  a.flex-fill.btn.btn-github(href='/')
-                    i.fab.fa-fw.fa-github
+                .d-grid.mb-4
+                  button.btn.btn-primary.btn-lg(type='submit') Sign In
 
-                .text-center.mt-3
-                  |Don&apos;t have an account?
-                  a(href='/auth-sign-up.html') Sign up
+                .position-relative.text-center.mb-4
+                  hr.border-secondary-subtle.m-0
+                  span.position-absolute.top-50.start-50.translate-middle.bg-body.px-2.text-body-secondary.small Or sign in with
 
+                .vstack.gap-2
+                  button.btn.btn-outline-secondary.w-100(type='button')
+                    i.fab.fa-google.me-2
+                    | Google
+                  button.btn.btn-outline-secondary.w-100(type='button')
+                    i.fab.fa-github.me-2
+                    | GitHub
+
+          .text-center.mt-4
+            p.text-body-secondary.mb-0 Don't have an account? 
+              a.fw-bold.text-decoration-none(href='/auth-sign-up.html') Create an account
 
 block scripts
-
   script.
     const togglePassword = document.getElementById("togglePassword");
-    const passwordInput = document.getElementById("inputChoosePassword");
+    const passwordInput = document.getElementById("inputPassword");
     const icon = togglePassword.querySelector("i");
 
     togglePassword.addEventListener("click", () => {
-      // guardar selección actual
-      let start = passwordInput.selectionStart;
-      let end = passwordInput.selectionEnd;
-
-      // cambiar tipo
       const isPassword = passwordInput.type === "password";
       passwordInput.type = isPassword ? "text" : "password";
-
-      // asegurar foco
       passwordInput.focus();
-
-      // si no hay selección previa, mover al final
-      if (start === 0 && end === 0) {
-        const len = passwordInput.value.length;
-        passwordInput.setSelectionRange(len, len);
+      
+      if(isPassword) {
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
       } else {
-        // restaurar selección previa
-        passwordInput.setSelectionRange(start, end);
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
       }
-
-      // alternar ícono
-      icon.classList.toggle("fa-eye");
-      icon.classList.toggle("fa-eye-slash");
     });

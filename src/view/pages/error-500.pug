@@ -1,20 +1,23 @@
 extends ../layouts/auth
 
 append config
-  -pageName = '500'
-  -pageUrl = 'pages-500'
+  - pageName = '500'
+  - pageUrl = 'pages-500'
 
 block content
-
-  .container.d-flex.flex-column
-    .row.vh-100
-      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
-        .d-table-cell.align-middle
-          .text-center
-            h2.display-1
-              i.fa.fa-exclamation-triangle.text-primary
-            h1.display-1.fw-bold 500
-            p.h1 Internal server error.
-            p.h2.fw-normal.mt-3.mb-4
-              | The server encountered something unexpected that didn&apos;t allow it to complete the request.
-            a.btn.btn-primary.btn-lg(href='dashboard.html') Return to website
+  .container.d-flex.flex-column.justify-content-center.min-vh-100
+    .row.justify-content-center
+      .col-md-10.col-lg-8.col-xl-6.text-center
+        .mb-4
+          i.fa.fa-exclamation-triangle.fa-5x.text-primary.mb-3(aria-hidden="true")
+        h1.display-1.fw-bold.text-primary 500
+        h2.h1.mb-3 Internal server error.
+        p.lead.text-body-secondary.mb-5
+          | The server encountered something unexpected that didn&apos;t allow it to complete the request.
+        .d-grid.gap-2.d-sm-flex.justify-content-sm-center
+          a.btn.btn-primary.btn-lg.px-4.gap-3(href='dashboard.html')
+            i.fa.fa-home.me-2
+            | Return to website
+          a.btn.btn-outline-secondary.btn-lg.px-4(href='javascript:history.back()')
+            i.fa.fa-arrow-left.me-2
+            | Go Back

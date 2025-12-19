@@ -10,13 +10,112 @@ block styles
 block scripts 
   script(src='js/tagify.js')
   script.
-    var input = document.querySelector('input[name=basic]');
-    new Tagify(input)
-    
+    // Basic
+    new Tagify(document.querySelector('input[name=basic]'));
+
+    // With whitelist
+    new Tagify(document.querySelector('input[name=whitelist]'), {
+      whitelist: ['JavaScript', 'PHP', 'Laravel', 'Node.js', 'MySQL'],
+      dropdown: {
+        enabled: 1
+      }
+    });
+
+    // Enforce whitelist
+    new Tagify(document.querySelector('input[name=enforce]'), {
+      whitelist: ['Admin', 'Editor', 'User'],
+      enforceWhitelist: true,
+      dropdown: {
+        enabled: 0
+      }
+    });
+
+    // Readonly
+    new Tagify(document.querySelector('input[name=readonly]'), {
+      readonly: true
+    });
+
+    // Max tags
+    new Tagify(document.querySelector('input[name=max]'), {
+      maxTags: 3
+    });
+
 block content
 
-  .card 
-    .card-header 
+  // =====================================================
+  // Basic Tagify
+  // =====================================================
+  .card.mb-3
+    .card-header
       h3.header-title Basic
-    .card-body 
-      input.form-control(name="basic" value="tag1, tag 2, tag 3")
+    .card-body
+      p.text-secondary
+        | Basic Tagify input using
+        code Tagify(input)
+        |  with default settings.
+      input.form-control(
+        name="basic"
+        value="tag1, tag2, tag3"
+      )
+
+  // =====================================================
+  // Tagify with whitelist
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title With whitelist
+    .card-body
+      p.text-secondary
+        | Tagify with predefined values using a whitelist.
+      input.form-control(
+        name="whitelist"
+        placeholder="Select or type a technology"
+      )
+
+  // =====================================================
+  // Enforce whitelist
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Enforce whitelist
+    .card-body
+      p.text-secondary
+        | Only allows tags defined in the whitelist using
+        code enforceWhitelist: true
+        | .
+      input.form-control(
+        name="enforce"
+        placeholder="Select a role"
+      )
+
+  // =====================================================
+  // Readonly tags
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Readonly
+    .card-body
+      p.text-secondary
+        | Read-only Tagify input using
+        code readonly: true
+        | .
+      input.form-control(
+        name="readonly"
+        value="locked, fixed, static"
+      )
+
+  // =====================================================
+  // Max tags limit
+  // =====================================================
+  .card
+    .card-header
+      h3.header-title Max tags
+    .card-body
+      p.text-secondary
+        | Limits the number of tags using
+        code maxTags: 3
+        | .
+      input.form-control(
+        name="max"
+        placeholder="Maximum 3 tags allowed"
+      )

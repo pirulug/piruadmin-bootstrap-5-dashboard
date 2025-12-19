@@ -12,21 +12,43 @@ block content
         .card-header
           h5.card-title.mb-0 Input
         .card-body
+          p.text-secondary
+            | Text inputs use the
+            code .form-control
+            |  class for standard text fields.
           input.form-control(type='text' placeholder='Input')
+
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Textarea
         .card-body
+          p.text-secondary
+            | Textareas use
+            code .form-control
+            |  with the
+            code textarea
+            |  element for multi-line input.
           textarea.form-control(rows='2' placeholder='Textarea')
+
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Checkboxes
         .card-body
+          p.text-secondary
+            | Checkboxes use
+            code .form-check
+            | ,
+            code .form-check-input
+            |  and
+            code .form-check-label
+            |  classes. Inline variants use
+            code .form-check-inline
+            | .
           div
             label.form-check
               input.form-check-input(type='checkbox' value='')
               span.form-check-label
-                | Option one is this and that&mdash;be sure to include why it&apos;s great
+                | Option one is this and that—be sure to include why it's great
             label.form-check
               input.form-check-input(type='checkbox' value='' disabled='')
               span.form-check-label
@@ -44,21 +66,39 @@ block content
               input.form-check-input(type='checkbox' value='option3' disabled='')
               span.form-check-label
                 | 3
+
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Read only
         .card-body
+          p.text-secondary
+            | Read-only inputs use
+            code .form-control
+            |  with the
+            code readonly
+            |  attribute.
           input.form-control(type='text' placeholder='Readonly input' readonly='')
+
     .col-12.col-lg-6
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Radios
         .card-body
+          p.text-secondary
+            | Radio buttons use
+            code .form-check
+            | ,
+            code .form-check-input
+            |  and
+            code .form-check-label
+            | . Inline radios use
+            code .form-check-inline
+            | .
           div
             label.form-check
               input.form-check-input(type='radio' value='option1' name='radios-example' checked='')
               span.form-check-label
-                | Option one is this and that&mdash;be sure to include why it&apos;s great
+                | Option one is this and that—be sure to include why it's great
             label.form-check
               input.form-check-input(type='radio' value='option2' name='radios-example')
               span.form-check-label
@@ -80,10 +120,17 @@ block content
               input.form-check-input(type='radio' name='inline-radios-example' value='option3' disabled='')
               span.form-check-label
                 | 3
+
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Selects
         .card-body
+          p.text-secondary
+            | Select elements use
+            code .form-select
+            |  for single selects and
+            code .form-control
+            |  for multi-select lists.
           select.form-select.mb-3
             option(selected='') Open this select menu
             option One
@@ -94,10 +141,15 @@ block content
             option Two
             option Three
             option Four
+
       .card
         .card-header
           h5.card-title.mb-0 Disabled
         .card-body
+          p.text-secondary
+            | Disabled form controls use standard form classes with the
+            code disabled
+            |  attribute.
           .mb-3
             label.form-label Disabled input
             input.form-control(type='text' placeholder='Disabled input' disabled='')
@@ -108,4 +160,4 @@ block content
           label.form-check
             input.form-check-input(type='checkbox' value='' disabled='')
             span.form-check-label
-              | Can&apos;t check this
+              | Can't check this

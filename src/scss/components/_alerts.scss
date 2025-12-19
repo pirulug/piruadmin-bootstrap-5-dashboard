@@ -1,49 +1,79 @@
 .alert {
-  border-left: 0.25rem solid var(--#{$prefix}alert-color);
+  --#{$prefix}alert-border-left-width: 0.25rem;
+
+  border-left: var(--#{$prefix}alert-border-left-width) solid var(--#{$prefix}alert-border-color);
+
+  &.alert-dismissible {
+    padding-right: 3rem;
+
+    .btn-close {
+      padding: 1.25rem 1rem;
+    }
+  }
 
   > :last-child {
     margin-bottom: 0;
   }
 }
 
+// Loop Estándar
 @each $state in map-keys($theme-colors) {
   .alert-#{$state} {
     --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
     --#{$prefix}alert-bg: var(--#{$prefix}#{$state}-bg-subtle);
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
-    border-left-color: var(--#{$prefix}#{$state}-border-subtle);
+
+    border-left-color: var(--#{$prefix}#{$state}-text-emphasis);
   }
 }
 
+// Loop Outline
 @each $state in map-keys($theme-colors) {
   .alert-outline-#{$state} {
     --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text-emphasis);
     --#{$prefix}alert-bg: transparent;
     --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
     --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text-emphasis);
-    border-left-color: var(--#{$prefix}#{$state}-border-subtle);
+
+    border-left-color: var(--#{$prefix}#{$state}-text-emphasis);
   }
 }
 
-// Media layout (icono + contenido)
+// Alert Media (Icon + Content)
 .alert-media {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   .alert-icon {
     flex-shrink: 0;
-    margin-right: 0.5rem;
-    width: 30px;
+    margin-right: 0.75rem;
+    width: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
 
     svg,
     i {
-      width: 100%;
-      height: auto;
+      width: 1em;
+      height: 1em;
+      display: block;
     }
   }
 
   .alert-body {
     flex: 1 1 auto;
+  }
+
+  &.align-items-center {
+    align-items: center;
+
+    .alert-icon {
+      margin-top: 0;
+    }
   }
 }

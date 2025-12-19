@@ -1,105 +1,112 @@
 extends ../layouts/dashboard
 
 append config
-  -pageName = 'Search'
-  -pageUrl = 'pages-search'
-
-block styles
-
-block scripts
+  - pageName = 'Search'
+  - pageUrl = 'pages-search'
 
 block content
-  // Search Section
-  .card.card-body
+  //- HERO SECTION: Search
+  //- Usamos 'bg-body-tertiary' para un fondo gris suave en light y oscuro suave en dark
+  .p-5.mb-4.bg-body.rounded-3
     .row.justify-content-center
-      .col-md-8.text-center
-        h1.mb-4 What do you want to find?
+      .col-lg-8.text-center
+        h1.display-6.fw-bold.mb-3 What do you want to find?
+        
         form
-          .input-group.input-group-lg.mb-3.shadow-sm
-            input.form-control(
+          //- Input group flat: Sin shadow, solo bordes
+          .input-group.input-group-lg.mb-3
+            input.form-control.border-primary(
               type='text'
               placeholder='Search...'
               autofocus
             )
-            button#button-addon1.btn.btn-primary(type='button')
+            button.btn.btn-primary(type='button')
               i.fa-solid.fa-magnifying-glass
-        ul.list-inline.mt-3
-          li.list-inline-item: a.text-muted(href='#') mobile
-          li.list-inline-item: a.text-muted(href='#') software
-          li.list-inline-item: a.text-muted(href='#') desktop
-          li.list-inline-item: a.text-muted(href='#') iphone
 
-  // Results Info
-  .card.card-body.mt-3
-    h5.text-muted.m-0
-      i.fa-solid.fa-magnifying-glass.me-2
-      | 12 results found for:
-      span.text-primary &nbsp;“Lorem Ipsum”
+        //- Tags con badges estilo outline/flat
+        .d-flex.justify-content-center.gap-2.mt-3.flex-wrap
+          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') mobile
+          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') software
+          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') desktop
+          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') iphone
 
-  // Tabs
-  .card.card-body.mt-3
-    ul#myTab.nav.nav-pills.justify-content-center.mb-4(role='tablist')
-      li.nav-item
-        a.nav-link.active(data-bs-toggle='tab' href='#clasic' role='tab') Classic
-      li.nav-item
-        a.nav-link(data-bs-toggle='tab' href='#articles' role='tab') Articles
-      li.nav-item
-        a.nav-link(data-bs-toggle='tab' href='#photos' role='tab') Photos
-      li.nav-item
-        a.nav-link(data-bs-toggle='tab' href='#users' role='tab') Users
+  //- MAIN CONTENT
+  .row.justify-content-center
+    .col-lg-10
+      
+      //- HEADER RESULTS & TABS
+      .d-flex.flex-column.flex-md-row.justify-content-between.align-items-center.mb-4.border-bottom.pb-3
+        h5.mb-3.mb-md-0.text-body-secondary
+          i.fa-solid.fa-magnifying-glass.me-2
+          | 12 results found for: 
+          span.text-primary “Lorem Ipsum”
 
-    // Tab Content
-    #myTabContent.tab-content
+        //- Nav Pills Flat
+        ul#myTab.nav.nav-pills(role='tablist')
+          li.nav-item
+            a.nav-link.active.rounded-pill(data-bs-toggle='tab' href='#clasic' role='tab') Classic
+          li.nav-item
+            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#articles' role='tab') Articles
+          li.nav-item
+            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#photos' role='tab') Photos
+          li.nav-item
+            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#users' role='tab') Users
 
-      // Classic Results
-      #clasic.tab-pane.fade.show.active(role='tabpanel')
-        ul.list-unstyled
-          each val, i in [1,2,3,4,5]
-            li.mb-4
-              h5.mb-1: a(href='#') Lorem ipsum dolor sit amet #{i}
-              p.text-muted.small Velit laborum sint labore consectetur dolor minim...
-              .text-muted.small
-                span.badge.bg-secondary.me-2 Trends
-                | Dec 27 2018
+      //- TABS CONTENT
+      #myTabContent.tab-content
 
-      // Articles
-      #articles.tab-pane.fade(role='tabpanel')
-        .row.g-4
-          each val, i in [1,2,3,4,5,6]
-            .col-lg-4.col-md-6
-              .card.h-100.border
-                img.card-img-top(src=`https://dummyimage.com/600x400/ddd/555&text=Image+${i}` alt='image')
-                .card-body
-                  p.card-text Some quick example text...
-                  a.text-uppercase.small.text-primary(href='#') Read More →
+        //- 1. CLASSIC LIST
+        #clasic.tab-pane.fade.show.active(role='tabpanel')
+          ul.list-unstyled
+            each val, i in [1,2,3,4,5]
+              li.mb-4.pb-4.border-bottom.border-dashed
+                h5.mb-1
+                  a.text-decoration-none.text-primary(href='#') Lorem ipsum dolor sit amet #{i}
+                p.text-body-secondary.mb-2 Velit laborum sint labore consectetur dolor minim...
+                .d-flex.align-items-center.gap-2.small
+                  span.badge.bg-secondary-subtle.text-body-secondary Trends
+                  span.text-body-tertiary Dec 27 2018
 
-      // Photos
-      #photos.tab-pane.fade(role='tabpanel')
-        .row.g-3
-          each val, i in [1,2,3,4,5,6]
-            .col-xl-3.col-lg-4.col-md-6.col-sm-12
-              a(href=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}`)
-                img.img-fluid.rounded.shadow-sm(src=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}` alt='image')
+        //- 2. ARTICLES GRID
+        #articles.tab-pane.fade(role='tabpanel')
+          .row.g-4
+            each val, i in [1,2,3,4,5,6]
+              .col-lg-4.col-md-6
+                //- Card Flat: Solo borde, sin shadow
+                .card.h-100.border.bg-transparent
+                  img.card-img-top(src=`https://dummyimage.com/600x400/ddd/555&text=Image+${i}` alt='image')
+                  .card-body
+                    h5.card-title Some quick example text
+                    p.card-text.text-body-secondary Some quick example text to build on the card title.
+                    a.btn.btn-outline-primary.btn-sm.w-100(href='#') Read More
 
-      // Users
-      #users.tab-pane.fade(role='tabpanel')
-        ul.list-unstyled
-          each name, i in ['Ferrel Skipsea','Lorry Lewsey','Winny Lippiatt','Salim Walklate','Sena Erangey','Decca Thorrington']
-            li.d-flex.align-items-center.mb-3
-              figure.me-3
-                img.rounded-circle(src=`https://dummyimage.com/60x60/ccc/000&text=U${i+1}` alt='avatar')
-              .flex-grow-1
-                h6.mb-0= name
-                small.text-muted User Role
+        //- 3. PHOTOS GRID
+        #photos.tab-pane.fade(role='tabpanel')
+          .row.g-3
+            each val, i in [1,2,3,4,5,6,7,8]
+              .col-6.col-md-4.col-xl-3
+                a.d-block.border.rounded(href='#')
+                  img.img-fluid.rounded(src=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}` alt='image')
 
-  // Pagination
-  .card.card-body.mt-3
-    nav
-      ul.pagination.justify-content-center.mb-0
-        li.page-item.disabled
-          a.page-link(href='#') Previous
-        li.page-item.active: a.page-link(href='#') 1
-        li.page-item: a.page-link(href='#') 2
-        li.page-item: a.page-link(href='#') 3
-        li.page-item: a.page-link(href='#') Next
+        //- 4. USERS LIST
+        #users.tab-pane.fade(role='tabpanel')
+          .row.g-3
+            each name, i in ['Ferrel Skipsea','Lorry Lewsey','Winny Lippiatt','Salim Walklate','Sena Erangey','Decca Thorrington']
+              .col-md-6
+                .card.card-body.border.bg-transparent
+                  .d-flex.align-items-center
+                    img.rounded-circle.me-3(src=`https://dummyimage.com/60x60/ccc/000&text=U${i+1}` alt='avatar')
+                    .flex-grow-1
+                      h6.mb-0= name
+                      small.text-body-secondary User Role
+                    button.btn.btn-outline-secondary.btn-sm Follow
 
+      //- PAGINATION
+      nav.mt-5
+        ul.pagination.justify-content-center.mb-0
+          li.page-item.disabled
+            a.page-link(href='#') Previous
+          li.page-item.active: a.page-link(href='#') 1
+          li.page-item: a.page-link(href='#') 2
+          li.page-item: a.page-link(href='#') 3
+          li.page-item: a.page-link(href='#') Next

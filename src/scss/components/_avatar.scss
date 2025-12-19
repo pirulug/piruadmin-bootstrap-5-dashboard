@@ -1,19 +1,24 @@
 // ------------------------------
+// Configuración y Variables
+// ------------------------------
+
+.avatar {
+  --#{$prefix}avatar-size: 3rem;
+  --#{$prefix}avatar-font-size: 1.25rem; // Tamaño del icono/texto
+  --#{$prefix}avatar-color: var(--#{$prefix}body-color);
+  --#{$prefix}avatar-bg: var(--#{$prefix}secondary-bg);
+  --#{$prefix}avatar-border-radius: 50%;
+  --#{$prefix}avatar-img-fit: cover;
+  --#{$prefix}avatar-ring-color: var(--#{$prefix}body-bg);
+}
+
+// ------------------------------
 // Mixins
 // ------------------------------
 
-@mixin avatar-variant($background, $color: color-contrast($background)) {
-  --#{$prefix}avatar-color: #{$color};
-  --#{$prefix}avatar-bg: #{$background};
-}
-
-@mixin avatar-size($width, $height, $font-size) {
-  --#{$prefix}avatar-width: #{$width};
-  --#{$prefix}avatar-height: #{$height};
+@mixin avatar-size($size, $font-size) {
+  --#{$prefix}avatar-size: #{$size};
   --#{$prefix}avatar-font-size: #{$font-size};
-
-  --#{$prefix}avatar-status-width: #{$width * 0.3};
-  --#{$prefix}avatar-status-height: #{$height * 0.3};
 }
 
 // ------------------------------
@@ -21,168 +26,160 @@
 // ------------------------------
 
 .avatar {
-  --#{$prefix}avatar-color: var(--#{$prefix}body-color);
-  --#{$prefix}avatar-bg: transparent;
-  --#{$prefix}avatar-width: 3rem;
-  --#{$prefix}avatar-height: 3rem;
-  --#{$prefix}avatar-font-size: 1.5rem;
-
-  --#{$prefix}avatar-status-width: 0.7rem;
-  --#{$prefix}avatar-status-height: 0.7rem;
-
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
-
-  width: var(--#{$prefix}avatar-width);
-  height: var(--#{$prefix}avatar-height);
-  font-size: var(--#{$prefix}avatar-font-size);
-
-  color: var(--#{$prefix}avatar-color);
-  background: var(--#{$prefix}avatar-bg);
-
-  text-align: center;
   vertical-align: middle;
-  border-radius: 50%; // círculo por defecto
 
-  font-weight: 500;
+  width: var(--#{$prefix}avatar-size);
+  height: var(--#{$prefix}avatar-size);
 
+  // El font-size controla el tamaño de los iconos
+  font-size: var(--#{$prefix}avatar-font-size);
+  font-weight: 600;
+  color: var(--#{$prefix}avatar-color);
+  background-color: var(--#{$prefix}avatar-bg);
+
+  border-radius: var(--#{$prefix}avatar-border-radius);
+
+  // Sombra interna sutil
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+
+  user-select: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none; // Por si es un <a>
+
+  // ------------------------------
+  // Content & Icons Alignment
+  // ------------------------------
+
+  // 1. Imágenes
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: var(--#{$prefix}avatar-img-fit);
     border-radius: inherit;
     display: block;
-    background: none;
   }
 
+  // 2. Iconos Generales (FontAwesome, Bootstrap Icons, Feather)
+  // La clave para el centrado es width/height: 1em y line-height: 1
   i,
-  svg {
+  svg,
+  span,
+  .feather,
+  [class^="bi-"],
+  [class^="fa-"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
-    width: 1em;
+
+    width: 1em; // Ocupa exactamente el tamaño de la fuente definida
     height: 1em;
-    font-size: var(--#{$prefix}avatar-font-size); // escala con el avatar
-    color: currentColor;
+    line-height: 1; // Elimina espaciado vertical extra
+
+    text-align: center;
+    color: inherit;
   }
 
-  [data-feather] {
+  // Ajuste específico para Feather Icons (suelen ser SVGs con stroke)
+  .feather {
+    stroke-width: 2px; // Un poco más grueso para mejor visibilidad
     width: var(--#{$prefix}avatar-font-size);
     height: var(--#{$prefix}avatar-font-size);
   }
 }
 
 // ------------------------------
-// Modo oscuro
+// Shapes
 // ------------------------------
-
-// .avatar {
-//   --#{$prefix}avatar-bg: var(--#{$prefix}secondary-bg);
-// }
-
-// @if $enable-dark-mode {
-//   @include color-mode(dark) {
-//     .avatar {
-//       --#{$prefix}avatar-bg: var(--#{$prefix}tertiary-bg);
-//     }
-//   }
-// }
-
-// ------------------------------
-// Avatar Shapes
-// ------------------------------
+.avatar-square {
+  --#{$prefix}avatar-border-radius: 0;
+}
 
 .avatar-rounded {
-  border-radius: 0.5rem;
-  img,
-  .avatar-title {
-    border-radius: inherit;
-  }
-}
-
-.avatar-square {
-  border-radius: 0;
-  img,
-  .avatar-title {
-    border-radius: inherit;
-  }
+  --#{$prefix}avatar-border-radius: var(--#{$prefix}border-radius);
 }
 
 // ------------------------------
-// Avatar Sizes
+// Sizes
 // ------------------------------
+.avatar-xs {
+  @include avatar-size(1.5rem, 0.75rem);
+}
 
 .avatar-sm {
-  @include avatar-size(2rem, 2rem, 1rem);
+  @include avatar-size(2rem, 0.875rem);
 }
 
 .avatar-lg {
-  @include avatar-size(4rem, 4rem, 2rem);
+  @include avatar-size(4rem, 1.75rem);
 }
 
 .avatar-xl {
-  @include avatar-size(5rem, 5rem, 2.5rem);
+  @include avatar-size(5rem, 2.5rem);
 }
 
 // ------------------------------
-// Avatar Status (online/offline, etc.)
+// Status (Fixed Geometry)
 // ------------------------------
-
 .avatar-status {
-  width: var(--#{$prefix}avatar-status-width);
-  height: var(--#{$prefix}avatar-status-height);
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -5px;
+  right: -5px;
+  transform: translate(-15%, -15%); // Centra el punto en el borde del círculo
+
+  width: 28%;
+  height: 28%;
+  min-width: 8px;
+  min-height: 8px;
+
   border-radius: 50%;
-  border: 2px solid #fff;
-  z-index: 1;
+  border: 2px solid var(--#{$prefix}avatar-ring-color);
+  background-color: var(--#{$prefix}secondary);
+  z-index: 5;
 }
 
 // ------------------------------
-// Avatar Colors (Bootstrap theme colors)
+// Colors
 // ------------------------------
-
 @each $color, $value in $theme-colors {
   .avatar-#{$color} {
-    @include avatar-variant(
-      $background: $value,
-      $color: shade-color($value, 80%)
-    );
+    --#{$prefix}avatar-bg: #{$value};
+    --#{$prefix}avatar-color: #{color-contrast($value)};
   }
 }
-
-// @if $enable-dark-mode {
-//   @include color-mode(dark) {
-//     // solo aplica al avatar base, no a los variantes
-//     .avatar:not([class*="avatar-"]) {
-//       --#{$prefix}avatar-bg: #494949;
-//       --#{$prefix}avatar-color: #fff;
-//     }
-//   }
-// }
 
 // ------------------------------
 // Avatar Group
 // ------------------------------
-
 .avatar-group {
   display: inline-flex;
+  flex-wrap: nowrap;
 
   .avatar {
-    margin-right: -1rem;
-    border: 2px solid #fff;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-right: -0.75rem;
+    border: 2px solid var(--#{$prefix}avatar-ring-color);
 
     &:hover {
-      position: relative;
-      z-index: 1;
+      z-index: 10;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// ------------------------------
+// Dark Mode
+// ------------------------------
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .avatar {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+      &:not([class*="avatar-"]) {
+        --#{$prefix}avatar-bg: var(--#{$prefix}tertiary-bg);
+      }
     }
   }
 }

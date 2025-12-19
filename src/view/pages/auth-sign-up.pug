@@ -1,83 +1,96 @@
 extends ../layouts/auth
 
 append config
-  -pageName = 'Sing Up'
-  -pageUrl = 'pages-sign-up'
+  - pageName = 'Sign Up'
+  - pageUrl = 'pages-sign-up'
 
 block content
+  .d-flex.min-vh-100.align-items-center.justify-content-center
+    .container
+      .row.justify-content-center
+        .col-sm-10.col-md-8.col-lg-5.col-xl-4
+          
+          .text-center.mb-4
+            .d-inline-flex.align-items-center.justify-content-center.bg-primary.text-white.rounded-3.mb-3(style="width: 48px; height: 48px;")
+              i.fa-solid.fa-layer-group.fs-4
+            h4.fw-bold.mb-1 Get started
+            p.text-body-secondary Create a new account to continue
 
-  .container.d-flex.flex-column
-    .row.vh-100
-      .col-sm-10.col-md-8.col-lg-6.col-xl-5.mx-auto.d-table.h-100
-        .d-table-cell.align-middle
-          .card
-            .card-body
-              .m-sm-3
+          .card.border.border-secondary-subtle.bg-body.rounded-3
+            .card-body.p-4.p-sm-5
 
-                h2.m-0 Sign Up
-                p.text-muted Enter your email and password to register
+              form
+                .mb-3
+                  label.form-label.fw-semibold(for='inputName') Full Name
+                  input#inputName.form-control.form-control-lg(
+                    type='text' 
+                    name='name' 
+                    placeholder='Enter your name'
+                  )
 
-                form
-                  .mb-3
-                    label.form-label Full name
-                    input.form-control(type='text' name='name' placeholder='Enter your name')
-                  .mb-3
-                    label.form-label Email
-                    input.form-control(type='email' name='email' placeholder='Enter your email')
-                  .mb-3
-                    label.form-label Password
-                    //- input.form-control(type='password' name='password' placeholder='Enter password')
-                    #show_hide_password.input-group
-                      input#inputChoosePassword.form-control.border-end-0(type='password' name='password' value='12345678' placeholder='Enter your password')
-                      button#togglePassword.input-group-text.bg-transparent(type="button")
-                        i.fa.fa-eye-slash
-                  .d-grid.gap-2.mt-3
-                    a.btn.btn-primary(href='/') Sign up
+                .mb-3
+                  label.form-label.fw-semibold(for='inputEmail') Email
+                  input#inputEmail.form-control.form-control-lg(
+                    type='email' 
+                    name='email' 
+                    placeholder='name@company.com'
+                  )
+                
+                .mb-3
+                  label.form-label.fw-semibold(for='inputPassword') Password
+                  .input-group.input-group-lg
+                    input#inputPassword.form-control.border-end-0(
+                      type='password' 
+                      name='password' 
+                      placeholder='Create a password'
+                    )
+                    button#togglePassword.input-group-text.bg-transparent.border-start-0(type="button")
+                      i.fa-regular.fa-eye-slash.text-body-secondary
 
-                .separator
-                  span.separator-text Or continue with
+                .mb-4
+                  .form-check
+                    input#terms.form-check-input(type='checkbox' name='terms')
+                    label.form-check-label.text-body-secondary.small(for='terms')
+                      | I agree to the 
+                      a.text-decoration-none(href='#') Terms of Service
+                      |  and 
+                      a.text-decoration-none(href='#') Privacy Policy
 
-                .d-flex.gap-2
-                  a.flex-fill.btn.btn-google(href='/')
-                    i.fab.fa-fw.fa-google
-                  a.flex-fill.btn.btn-facebook(href='/')
-                    i.fab.fa-fw.fa-facebook-f
-                  a.flex-fill.btn.btn-github(href='/')
-                    i.fab.fa-fw.fa-github
+                .d-grid.mb-4
+                  button.btn.btn-primary.btn-lg(type='submit') Sign Up
 
-                .text-center.mt-3
-                  | Already have account?
-                  a(href='/auth-sign-in.html') Log In
+                .position-relative.text-center.mb-4
+                  hr.border-secondary-subtle.m-0
+                  span.position-absolute.top-50.start-50.translate-middle.bg-body.px-2.text-body-secondary.small Or sign up with
+
+                .vstack.gap-2
+                  button.btn.btn-outline-secondary.w-100(type='button')
+                    i.fab.fa-google.me-2
+                    | Google
+                  button.btn.btn-outline-secondary.w-100(type='button')
+                    i.fab.fa-github.me-2
+                    | GitHub
+
+          .text-center.mt-4
+            p.text-body-secondary.mb-0 Already have an account? 
+              a.fw-bold.text-decoration-none(href='/auth-sign-in.html') Log In
 
 block scripts
-
   script.
     const togglePassword = document.getElementById("togglePassword");
-    const passwordInput = document.getElementById("inputChoosePassword");
+    const passwordInput = document.getElementById("inputPassword");
     const icon = togglePassword.querySelector("i");
 
     togglePassword.addEventListener("click", () => {
-      // guardar selección actual
-      let start = passwordInput.selectionStart;
-      let end = passwordInput.selectionEnd;
-
-      // cambiar tipo
       const isPassword = passwordInput.type === "password";
       passwordInput.type = isPassword ? "text" : "password";
-
-      // asegurar foco
       passwordInput.focus();
-
-      // si no hay selección previa, mover al final
-      if (start === 0 && end === 0) {
-        const len = passwordInput.value.length;
-        passwordInput.setSelectionRange(len, len);
+      
+      if(isPassword) {
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
       } else {
-        // restaurar selección previa
-        passwordInput.setSelectionRange(start, end);
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
       }
-
-      // alternar ícono
-      icon.classList.toggle("fa-eye");
-      icon.classList.toggle("fa-eye-slash");
     });

@@ -6,522 +6,223 @@ append config
 
 block content
   .row
-    .col-xl-9.mx-auto
-      h6.mb-0.text-uppercase Basic Table
-      hr
+    // =====================================================
+    // Basic table
+    // =====================================================
+    .col-lg-6
       .card.mb-3
         .card-body
+          h2.card-title Basic table
+          p.text-secondary
+            | Basic tables use the
+            code .table
+            |  class for standard data display.
+
+          table.table
+            thead
+              tr
+                th #
+                th Name
+                th Email
+                th Status
+            tbody
+              tr
+                td 1
+                td John Doe
+                td john@example.com
+                td Active
+              tr
+                td 2
+                td Jane Smith
+                td jane@example.com
+                td Inactive
+
+    // =====================================================
+    // Striped table
+    // =====================================================
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Striped table
+          p.text-secondary
+            | Striped tables use
+            code .table-striped
+            |  to add zebra-striping to rows.
+
+          table.table.table-striped
+            thead
+              tr
+                th #
+                th Product
+                th Price
+                th Stock
+            tbody
+              tr
+                td 1
+                td Laptop
+                td $1200
+                td In stock
+              tr
+                td 2
+                td Mouse
+                td $25
+                td Out of stock
+
+    // =====================================================
+    // Hover table
+    // =====================================================
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Hover table
+          p.text-secondary
+            | Hover tables use
+            code .table-hover
+            |  to highlight rows on mouse over.
+
+          table.table.table-hover
+            thead
+              tr
+                th #
+                th User
+                th Role
+                th Status
+            tbody
+              tr
+                td 1
+                td Admin
+                td Administrator
+                td Active
+              tr
+                td 2
+                td Editor
+                td Editor
+                td Active
+
+    // =====================================================
+    // Bordered table
+    // =====================================================
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Bordered table
+          p.text-secondary
+            | Bordered tables use
+            code .table-bordered
+            |  to add borders to all cells.
+
+          table.table.table-bordered
+            thead
+              tr
+                th #
+                th Order
+                th Date
+                th Total
+            tbody
+              tr
+                td 1
+                td #1023
+                td 2025-01-10
+                td $340
+              tr
+                td 2
+                td #1024
+                td 2025-01-11
+                td $180
+
+    // =====================================================
+    // Small table
+    // =====================================================
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Small table
+          p.text-secondary
+            | Compact tables use
+            code .table-sm
+            |  to reduce cell padding.
+
+          table.table.table-sm
+            thead
+              tr
+                th #
+                th File
+                th Size
+                th Type
+            tbody
+              tr
+                td 1
+                td report.pdf
+                td 1.2 MB
+                td PDF
+              tr
+                td 2
+                td image.png
+                td 540 KB
+                td PNG
+
+    // =====================================================
+    // Responsive table
+    // =====================================================
+    .col-lg-6
+      .card.mb-3
+        .card-body
+          h2.card-title Responsive table
+          p.text-secondary
+            | Responsive tables use
+            code .table-responsive
+            |  to enable horizontal scrolling on small screens.
+
           .table-responsive
             table.table
               thead
                 tr
-                  th(scope='col') Name
-                  th(scope='col') Date
-                  th.text-center(scope='col') Sales
-                  th.text-center(scope='col') Status
+                  th #
+                  th Customer
+                  th Country
+                  th Orders
+                  th Revenue
               tbody
                 tr
-                  td Shaun Park
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 25 Apr
-                  td.text-center 320
-                  td.text-center
-                    span.badge.badge-light-success Approved
+                  td 1
+                  td Carlos
+                  td Peru
+                  td 12
+                  td $2,400
                 tr
-                  td Alma Clarke
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 26 Apr
-                  td.text-center 110
-                  td.text-center
-                    span.badge.badge-light-secondary Pending
-                tr
-                  td Vincent Carpenter
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 05 May
-                  td.text-center 210
-                  td.text-center
-                    span.badge.badge-light-danger Rejected
-                tr
-                  td Xavier
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 18 May
-                  td.text-center 784
-                  td.text-center
-                    span.badge.badge-light-info In Progress
-      
-      h6.mb-0.text-uppercase Bordered Table
-      hr
-      .card.mb-3
-        .card-body
-          .table-responsive
-            table.table.table-bordered
-              thead
-                tr
-                  th(scope='col') Name
-                  th(scope='col') Date
-                  th.text-center(scope='col') Sales
-                  th.text-center(scope='col') Status
-              tbody
-                tr
-                  td Shaun Park
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 25 Apr
-                  td.text-center 320
-                  td.text-center
-                    span.badge.badge-light-success Approved
-                tr
-                  td Alma Clarke
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 26 Apr
-                  td.text-center 110
-                  td.text-center
-                    span.badge.badge-light-secondary Pending
-                tr
-                  td Vincent Carpenter
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 05 May
-                  td.text-center 210
-                  td.text-center
-                    span.badge.badge-light-danger Rejected
-                tr
-                  td Xavier
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 18 May
-                  td.text-center 784
-                  td.text-center
-                    span.badge.badge-light-info In Progress
-      
-      h6.mb-0.text-uppercase Bordered striped
-      hr
-      .card.mb-3
-        .card-body
-          .table-responsive
-            table.table.table-striped
-              thead
-                tr
-                  th(scope='col') Name
-                  th(scope='col') Date
-                  th.text-center(scope='col') Sales
-                  th.text-center(scope='col') Status
-              tbody
-                tr
-                  td Shaun Park
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 25 Apr
-                  td.text-center 320
-                  td.text-center
-                    span.badge.badge-light-success Approved
-                tr
-                  td Alma Clarke
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 26 Apr
-                  td.text-center 110
-                  td.text-center
-                    span.badge.badge-light-secondary Pending
-                tr
-                  td Vincent Carpenter
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 05 May
-                  td.text-center 210
-                  td.text-center
-                    span.badge.badge-light-danger Rejected
-                tr
-                  td Xavier
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 18 May
-                  td.text-center 784
-                  td.text-center
-                    span.badge.badge-light-info In Progress
-      
-      h6.mb-0.text-uppercase Bordered striped
-      hr
-      .card.mb-3
-        .card-body
-          .table-responsive
-            table.table.table-striped-columns
-              thead
-                tr
-                  th(scope='col') Name
-                  th(scope='col') Date
-                  th.text-center(scope='col') Sales
-                  th.text-center(scope='col') Status
-              tbody
-                tr
-                  td Shaun Park
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 25 Apr
-                  td.text-center 320
-                  td.text-center
-                    span.badge.badge-light-success Approved
-                tr
-                  td Alma Clarke
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 26 Apr
-                  td.text-center 110
-                  td.text-center
-                    span.badge.badge-light-secondary Pending
-                tr
-                  td Vincent Carpenter
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 05 May
-                  td.text-center 210
-                  td.text-center
-                    span.badge.badge-light-danger Rejected
-                tr
-                  td Xavier
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 18 May
-                  td.text-center 784
-                  td.text-center
-                    span.badge.badge-light-info In Progress
-      
-      h6.mb-0.text-uppercase Bordered striped
-      hr
-      .card.mb-3
-        .card-body
-          .table-responsive
-            table.table.table-hover
-              thead
-                tr
-                  th(scope='col') Name
-                  th(scope='col') Date
-                  th.text-center(scope='col') Sales
-                  th.text-center(scope='col') Status
-              tbody
-                tr
-                  td Shaun Park
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 25 Apr
-                  td.text-center 320
-                  td.text-center
-                    span.badge.badge-light-success Approved
-                tr
-                  td Alma Clarke
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 26 Apr
-                  td.text-center 110
-                  td.text-center
-                    span.badge.badge-light-secondary Pending
-                tr
-                  td Vincent Carpenter
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 05 May
-                  td.text-center 210
-                  td.text-center
-                    span.badge.badge-light-danger Rejected
-                tr
-                  td Xavier
-                  td
-                    svg.feather.feather-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
-                      rect(x='3' y='4' width='18' height='18' rx='2' ry='2')
-                      line(x1='16' y1='2' x2='16' y2='6')
-                      line(x1='8' y1='2' x2='8' y2='6')
-                      line(x1='3' y1='10' x2='21' y2='10')
-                    span.table-inner-text 18 May
-                  td.text-center 784
-                  td.text-center
-                    span.badge.badge-light-info In Progress
+                  td 2
+                  td Anna
+                  td Germany
+                  td 8
+                  td $1,750
 
-      h6.mb-0.text-uppercase Basic Table
-      hr
-      .card
+    // =====================================================
+    // Combined table styles
+    // =====================================================
+    .col-lg-12
+      .card.mb-3
         .card-body
-          table.table.mb-0
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Striped rows
-      hr
-      .card
-        .card-body
-          table.table.mb-0.table-striped
+          h2.card-title Combined table styles
+          p.text-secondary
+            | Tables can combine styles using
+            code .table-{striped|hover|bordered|sm}
+            |  together.
+
+          table.table.table-striped.table-hover.table-bordered
             thead
               tr
                 th #
-                th First
-                th Last
-                th Handle
+                th Project
+                th Manager
+                th Status
             tbody
               tr
-                th 1
-                td Mark
-                td Otto
-                td @mdo
+                td 1
+                td Dashboard UI
+                td Guido
+                td In progress
               tr
-                th 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Dark Table
-      hr
-      .card
-        .card-body
-          table.table.table-dark.table-striped
-            thead
-              tr
-                th #
-                th First
-                th Last
-                th Handle
-            tbody
-              tr
-                th 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Hoverable rows
-      hr
-      .card
-        .card-body
-          table.table.mb-0.table-hover
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Bordered tables
-      hr
-      .card
-        .card-body
-          table.table.table-bordered.mb-0
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Tables without borders
-      hr
-      .card
-        .card-body
-          table.table.table-borderless.mb-0
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Small tables
-      hr
-      .card
-        .card-body
-          table.table.table-sm.mb-0
-            thead
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
-      h6.mb-0.text-uppercase Table head
-      hr
-      .card
-        .card-body
-          table.table.mb-0
-            thead.table-dark
-              tr
-                th(scope='col') #
-                th(scope='col') First
-                th(scope='col') Last
-                th(scope='col') Handle
-            tbody
-              tr
-                th(scope='row') 1
-                td Mark
-                td Otto
-                td @mdo
-              tr
-                th(scope='row') 2
-                td Jacob
-                td Thornton
-                td @fat
-              tr
-                th(scope='row') 3
-                td(colspan='2') Larry the Bird
-                td @twitter
+                td 2
+                td API Integration
+                td Maria
+                td Completed

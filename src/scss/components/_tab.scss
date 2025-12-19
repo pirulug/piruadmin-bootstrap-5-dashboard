@@ -1,53 +1,102 @@
 .tab {
-  --#{$prefix}tab-color: #{$tab-color};
-  --#{$prefix}tab-bg: #{$tab-bg};
-  --#{$prefix}tab-active-color: #{$tab-active-color};
-  --#{$prefix}tab-active-bg: #{$tab-active-bg};
-  --#{$prefix}tab-hover-color: #{$tab-hover-color};
-  --#{$prefix}tab-hover-bg: #{$tab-hover-bg};
-
+  // Configuración base
   margin-bottom: 2rem;
-
+  
+  // --- NAVEGACIÓN (Corrección de Scroll) ---
   .nav-tabs {
     border: 0;
+    
+    // ESTO ARREGLA EL SCROLL:
     display: flex;
-    flex-wrap: nowrap; // no se rompen las tabs
-    overflow-x: auto; // scroll horizontal en móviles
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+    flex-wrap: nowrap;           // Fuerza una sola línea
+    overflow-x: auto;            // Habilita scroll horizontal si falta espacio
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; // Suavidad en móviles
+    scrollbar-width: thin;       // Barra fina en Firefox
+    
+    // Estética de la barra de scroll (Chrome/Edge)
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--#{$prefix}secondary-bg);
+      border-radius: 4px;
+    }
 
     .nav-link {
-      background: transparent;
       border: 0;
-      color: var(--#{$prefix}tab-color);
+      border-radius: 0.2rem 0.2rem 0 0; // Redondeo superior
       padding: 0.75rem 1rem;
-      white-space: nowrap; // que no se partan las palabras
+      font-weight: 500;
+      
+      // ESTO EVITA QUE EL TEXTO SE ROMPA:
+      white-space: nowrap;       
+      flex: 0 0 auto;            // Evita que la pestaña se encoja
 
-      &.active {
-        background: var(--#{$prefix}tab-active-bg);
-        color: var(--#{$prefix}tab-active-color);
+      transition: all 0.2s ease;
+      
+      // Iconos
+      svg, i {
+        margin-right: 0.5rem;
+        height: 18px;
+        width: 18px;
+        vertical-align: text-bottom;
       }
+
+      // Estado por defecto (Inactivo)
+      color: var(--#{$prefix}body-color);
+      background: transparent;
 
       &:hover:not(.active) {
-        background: var(--#{$prefix}tab-hover-bg);
-        color: var(--#{$prefix}tab-hover-color);
+        // Un fondo sutil al pasar el mouse
+        background-color: var(--#{$prefix}tertiary-bg);
       }
 
-      svg {
-        height: 20px;
-        width: 20px;
+      // Estado Activo (Fondo por defecto)
+      &.active {
+        // Si no tiene color específico, usa el default del tema (gris/blanco)
+        background: var(--#{$prefix}body-bg); 
+        color: var(--#{$prefix}primary);
+        border-bottom: 2px solid var(--#{$prefix}primary); // Un detalle si no es de color solido
       }
     }
   }
 
+  // --- CONTENIDO ---
   .tab-content {
-    background: var(--#{$prefix}tab-bg);
+    background: var(--#{$prefix}body-bg); // Fondo adaptable (blanco/oscuro)
     border-radius: 0 0 0.2rem 0.2rem;
-    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05);
     padding: 1.25rem;
+    // Borde sutil flat en lugar de shadow
+    border: 1px solid var(--#{$prefix}border-color); 
+    box-shadow: none; 
 
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+// --- COLORES (Restaurados Estilo Sólido) ---
+@each $color, $value in $theme-colors {
+  .tab-#{$color} {
+    
+    .nav-tabs {
+      .nav-link {
+        // En hover toma un tono suave del color
+        &:hover:not(.active) {
+           color: $value;
+           background-color: rgba($value, 0.1); 
+        }
+
+        // FONDO SÓLIDO RESTAURADO
+        &.active {
+          background-color: $value !important; // Fondo del color (ej. Azul)
+          color: #fff !important;              // Texto blanco
+          border-bottom: 0;                    // Sin borde inferior
+          border-radius: 0.2rem 0.2rem 0 0;
+        }
+      }
     }
   }
 }
@@ -61,65 +110,52 @@
     flex-direction: column;
     flex: 0 0 auto;
     border: 0;
+    border-right: 1px solid var(--#{$prefix}border-color);
+    // En vertical reseteamos el scroll horizontal a menos que sea responsive
+    overflow-x: hidden; 
+    height: 100%;
 
     .nav-link {
-      border-bottom-left-radius: 0.2rem;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: 0.2rem;
-      border-top-right-radius: 0;
+      border-radius: 0.2rem 0 0 0.2rem; // Redondeo a la izquierda
+      margin-bottom: 2px;
+      width: 100%;
+      text-align: left;
     }
   }
 
   .tab-content {
     flex: 1;
-    overflow: auto;
+    border-left: 0;
+    border-radius: 0 0.2rem 0.2rem 0;
   }
 }
 
-// --- Responsive ---
-@media (max-width: 768px) {
+// --- RESPONSIVE (Vertical se vuelve Horizontal) ---
+@include media-breakpoint-down(md) {
   .tab-vertical {
     flex-direction: column;
 
     .nav-tabs {
       flex-direction: row;
-      overflow-x: auto;
+      border-right: 0;
+      border-bottom: 1px solid var(--#{$prefix}border-color);
+      
+      // RESTAURAR SCROLL EN MÓVIL
+      overflow-x: auto; 
       flex-wrap: nowrap;
+      width: 100%;
 
       .nav-link {
-        border-radius: 0.2rem; // más uniforme en horizontal
-      }
-    }
-
-    // .tab-content {
-    //   margin-top: 1rem;
-    // }
-  }
-}
-
-// --- Colores ---
-@each $color, $value in $theme-colors {
-  .tab-#{$color} {
-    @include tab-color($value);
-
-    .nav-tabs {
-      .nav-link {
-        color: var(--#{$prefix}tab-color);
-
-        &.active {
-          color: #fff;
-        }
+        border-radius: 0.2rem 0.2rem 0 0;
+        flex: 0 0 auto;
+        margin-bottom: 0;
       }
     }
 
     .tab-content {
-      color: #fff;
+      border-left: 1px solid var(--#{$prefix}border-color); // Recupera borde
+      border-top: 0;
+      border-radius: 0 0 0.2rem 0.2rem;
     }
   }
 }
-
-// @if $enable-dark-mode {
-//   @include color-mode(dark) {
-
-//   }
-// }

@@ -3,19 +3,25 @@ extends ../layouts/dashboard
 append config
   -pageName = 'Alerts'
   -pageUrl = 'ui-alerts'
+  
 
 block content
 
   .row
+    // =====================================================
     // Basic alerts
+    // =====================================================
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Basic alerts
           p.text-secondary
-            | Use
+            | Basic alerts use the
             code .alert
-            |  with contextual classes for basic messages.
+            |  class with the following color variants:
+            code .alert-{primary|secondary|success|info|warning|danger|light|dark}
+            | .
+
 
           .alert.alert-primary(role='alert') This is a primary alert — check it out!
           .alert.alert-secondary(role='alert') This is a secondary alert — check it out!
@@ -26,14 +32,22 @@ block content
           .alert.alert-light(role='alert') This is a light alert — check it out!
           .alert.alert-dark(role='alert') This is a dark alert — check it out!
 
+    // =====================================================
     // Alerts with icon
+    // =====================================================
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Alerts with icon
-          p.text-secondary Add
+          p.text-secondary
+            | Icon alerts use
+            code .alert
+            |  combined with
             code .alert-media
-            |  to combine an icon with alert content.
+            |  and a contextual color:
+            code .alert-{primary|secondary|success|info|warning|danger|light|dark}
+            | .
+
 
           .alert.alert-primary.alert-media(role='alert')
             .alert-icon
@@ -75,14 +89,17 @@ block content
               i.fa-solid.fa-circle
             .alert-body Dark alert with icon
 
+    // =====================================================
     // Outline alerts
+    // =====================================================
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Outline alerts
-          p.text-secondary Use
-            code .alert-outline-*
-            |  for subtle transparent alerts.
+          p.text-secondary
+            | Outline alerts use
+            code .alert-outline-{primary|secondary|success|info|warning|danger|light|dark}
+            |  for subtle, low-emphasis messages.
 
           .alert.alert-outline-primary(role='alert') Outline primary alert
           .alert.alert-outline-secondary(role='alert') Outline secondary alert
@@ -93,14 +110,20 @@ block content
           .alert.alert-outline-light(role='alert') Outline light alert
           .alert.alert-outline-dark(role='alert') Outline dark alert
 
+    // =====================================================
     // Dismissible alerts
+    // =====================================================
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Dismissible alerts
-          p.text-secondary Add
+          p.text-secondary
+            | Dismissible alerts use
             code .alert-dismissible
-            |  with a close button.
+            |  together with
+            code .alert-{context}
+            |  and a close button.
+
 
           .alert.alert-success.alert-media.alert-dismissible(role='alert')
             .alert-icon
@@ -126,14 +149,19 @@ block content
             .alert-body Here’s some information
             button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
 
+    // =====================================================
     // Alerts with heading & description
+    // =====================================================
     .col-lg-6
       .card.mb-3
         .card-body
           h2.card-title Alerts with description
-          p.text-secondary Build on
+          p.text-secondary
+            | Alerts with extended content use
+            code .alert-media
+            |  and
             code .alert-body
-            |  with headings, links, or extra content.
+            |  to support headings and descriptions.
 
           .alert.alert-success.alert-media(role='alert')
             .alert-icon

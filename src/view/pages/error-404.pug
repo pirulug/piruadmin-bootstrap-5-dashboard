@@ -1,20 +1,37 @@
 extends ../layouts/auth
 
 append config
-  -pageName = '400'
-  -pageUrl = 'pages-404'
+  - pageName = '404'
+  - pageUrl = 'pages-404'
 
 block content
+  //- Usamos min-vh-100 para asegurar que ocupe toda la altura de la pantalla
+  //- d-flex y align-items-center reemplazan la tabla para el centrado vertical
+  .container.d-flex.flex-column.justify-content-center.min-vh-100
+    .row.justify-content-center
+      .col-md-10.col-lg-8.col-xl-6.text-center
+        
+        //- Icono con animación sutil y color de advertencia
+        .mb-4
+          i.fa.fa-exclamation-triangle.fa-5x.text-warning.mb-3(aria-hidden="true")
+        
+        //- Título grande (Hero)
+        h1.display-1.fw-bold.text-primary 404
+        
+        //- Mensaje principal claro
+        h2.h1.mb-3 Page not found.
+        
+        //- Descripción usando 'text-body-secondary' para que se vea bien en Dark y Light mode
+        p.lead.text-body-secondary.mb-5
+          | The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
 
-  .container.d-flex.flex-column
-    .row.vh-100
-      .col-sm-10.col-md-8.col-lg-6.mx-auto.d-table.h-100
-        .d-table-cell.align-middle
-          .text-center
-            h2.display-1
-              i.fa.fa-exclamation-triangle.text-primary
-            h1.display-1.fw-bold 404
-            p.h1 Page not found.
-            p.h2.fw-normal.mt-3.mb-4 The page you are looking for might have been removed.
-            a.btn.btn-primary(href='dashboard.html') Return to website
-
+        //- Grupo de botones para mejor UX (Opción principal y secundaria)
+        .d-grid.gap-2.d-sm-flex.justify-content-sm-center
+          a.btn.btn-primary.btn-lg.px-4.gap-3(href='dashboard.html')
+            i.fa.fa-home.me-2
+            | Return to website
+          
+          //- Botón "Atrás" usando historial del navegador
+          a.btn.btn-outline-secondary.btn-lg.px-4(href='javascript:history.back()')
+            i.fa.fa-arrow-left.me-2
+            | Go Back
