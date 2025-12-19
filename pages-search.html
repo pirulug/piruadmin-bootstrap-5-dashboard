@@ -234,182 +234,200 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Search</h1>
           </div>
-          <!-- Search Section-->
-          <div class="card card-body">
+          <div class="p-5 mb-4 bg-body rounded-3">
             <div class="row justify-content-center">
-              <div class="col-md-8 text-center">
-                <h1 class="mb-4">What do you want to find?</h1>
+              <div class="col-lg-8 text-center">
+                <h1 class="display-6 fw-bold mb-3">What do you want to find?</h1>
                 <form>
-                  <div class="input-group input-group-lg mb-3 shadow-sm">
-                    <input class="form-control" type="text" placeholder="Search..." autofocus>
-                    <button class="btn btn-primary" id="button-addon1" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  <div class="input-group input-group-lg mb-3">
+                    <input class="form-control border-primary" type="text" placeholder="Search..." autofocus>
+                    <button class="btn btn-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </div>
                 </form>
-                <ul class="list-inline mt-3">
-                  <li class="list-inline-item"><a class="text-muted" href="#">mobile</a></li>
-                  <li class="list-inline-item"><a class="text-muted" href="#">software</a></li>
-                  <li class="list-inline-item"><a class="text-muted" href="#">desktop</a></li>
-                  <li class="list-inline-item"><a class="text-muted" href="#">iphone</a></li>
-                </ul>
+                <div class="d-flex justify-content-center gap-2 mt-3 flex-wrap"><a class="badge rounded-pill bg-transparent border border-secondary text-body-secondary text-decoration-none" href="#">mobile</a><a class="badge rounded-pill bg-transparent border border-secondary text-body-secondary text-decoration-none" href="#">software</a><a class="badge rounded-pill bg-transparent border border-secondary text-body-secondary text-decoration-none" href="#">desktop</a><a class="badge rounded-pill bg-transparent border border-secondary text-body-secondary text-decoration-none" href="#">iphone</a></div>
               </div>
             </div>
           </div>
-          <!-- Results Info-->
-          <div class="card card-body mt-3">
-            <h5 class="text-muted m-0"><i class="fa-solid fa-magnifying-glass me-2"></i>12 results found for:<span class="text-primary">&nbsp;“Lorem Ipsum”</span></h5>
-          </div>
-          <!-- Tabs-->
-          <div class="card card-body mt-3">
-            <ul class="nav nav-pills justify-content-center mb-4" id="myTab" role="tablist">
-              <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#clasic" role="tab">Classic</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#articles" role="tab">Articles</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#photos" role="tab">Photos</a></li>
-              <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#users" role="tab">Users</a></li>
-            </ul>
-            <!-- Tab Content-->
-            <div class="tab-content" id="myTabContent">
-              <!-- Classic Results-->
-              <div class="tab-pane fade show active" id="clasic" role="tabpanel">
-                <ul class="list-unstyled">
-                  <li class="mb-4">
-                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 0</a></h5>
-                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
-                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
-                  </li>
-                  <li class="mb-4">
-                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 1</a></h5>
-                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
-                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
-                  </li>
-                  <li class="mb-4">
-                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 2</a></h5>
-                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
-                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
-                  </li>
-                  <li class="mb-4">
-                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 3</a></h5>
-                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
-                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
-                  </li>
-                  <li class="mb-4">
-                    <h5 class="mb-1"><a href="#">Lorem ipsum dolor sit amet 4</a></h5>
-                    <p class="text-muted small">Velit laborum sint labore consectetur dolor minim...</p>
-                    <div class="text-muted small"><span class="badge bg-secondary me-2">Trends</span>Dec 27 2018</div>
-                  </li>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4 border-bottom pb-3">
+                <h5 class="mb-3 mb-md-0 text-body-secondary"><i class="fa-solid fa-magnifying-glass me-2"></i>12 results found for: <span class="text-primary">“Lorem Ipsum”</span></h5>
+                <ul class="nav nav-pills" id="myTab" role="tablist">
+                  <li class="nav-item"><a class="nav-link active rounded-pill" data-bs-toggle="tab" href="#clasic" role="tab">Classic</a></li>
+                  <li class="nav-item"><a class="nav-link rounded-pill" data-bs-toggle="tab" href="#articles" role="tab">Articles</a></li>
+                  <li class="nav-item"><a class="nav-link rounded-pill" data-bs-toggle="tab" href="#photos" role="tab">Photos</a></li>
+                  <li class="nav-item"><a class="nav-link rounded-pill" data-bs-toggle="tab" href="#users" role="tab">Users</a></li>
                 </ul>
               </div>
-              <!-- Articles-->
-              <div class="tab-pane fade" id="articles" role="tabpanel">
-                <div class="row g-4">
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+0" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="clasic" role="tabpanel">
+                  <ul class="list-unstyled">
+                    <li class="mb-4 pb-4 border-bottom border-dashed">
+                      <h5 class="mb-1"><a class="text-decoration-none text-primary" href="#">Lorem ipsum dolor sit amet 0</a></h5>
+                      <p class="text-body-secondary mb-2">Velit laborum sint labore consectetur dolor minim...</p>
+                      <div class="d-flex align-items-center gap-2 small"><span class="badge bg-secondary-subtle text-body-secondary">Trends</span><span class="text-body-tertiary">Dec 27 2018</span></div>
+                    </li>
+                    <li class="mb-4 pb-4 border-bottom border-dashed">
+                      <h5 class="mb-1"><a class="text-decoration-none text-primary" href="#">Lorem ipsum dolor sit amet 1</a></h5>
+                      <p class="text-body-secondary mb-2">Velit laborum sint labore consectetur dolor minim...</p>
+                      <div class="d-flex align-items-center gap-2 small"><span class="badge bg-secondary-subtle text-body-secondary">Trends</span><span class="text-body-tertiary">Dec 27 2018</span></div>
+                    </li>
+                    <li class="mb-4 pb-4 border-bottom border-dashed">
+                      <h5 class="mb-1"><a class="text-decoration-none text-primary" href="#">Lorem ipsum dolor sit amet 2</a></h5>
+                      <p class="text-body-secondary mb-2">Velit laborum sint labore consectetur dolor minim...</p>
+                      <div class="d-flex align-items-center gap-2 small"><span class="badge bg-secondary-subtle text-body-secondary">Trends</span><span class="text-body-tertiary">Dec 27 2018</span></div>
+                    </li>
+                    <li class="mb-4 pb-4 border-bottom border-dashed">
+                      <h5 class="mb-1"><a class="text-decoration-none text-primary" href="#">Lorem ipsum dolor sit amet 3</a></h5>
+                      <p class="text-body-secondary mb-2">Velit laborum sint labore consectetur dolor minim...</p>
+                      <div class="d-flex align-items-center gap-2 small"><span class="badge bg-secondary-subtle text-body-secondary">Trends</span><span class="text-body-tertiary">Dec 27 2018</span></div>
+                    </li>
+                    <li class="mb-4 pb-4 border-bottom border-dashed">
+                      <h5 class="mb-1"><a class="text-decoration-none text-primary" href="#">Lorem ipsum dolor sit amet 4</a></h5>
+                      <p class="text-body-secondary mb-2">Velit laborum sint labore consectetur dolor minim...</p>
+                      <div class="d-flex align-items-center gap-2 small"><span class="badge bg-secondary-subtle text-body-secondary">Trends</span><span class="text-body-tertiary">Dec 27 2018</span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="articles" role="tabpanel">
+                  <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+0" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+1" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+2" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+3" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+4" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="card h-100 border bg-transparent"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+5" alt="image">
+                        <div class="card-body">
+                          <h5 class="card-title">Some quick example text</h5>
+                          <p class="card-text text-body-secondary">Some quick example text to build on the card title.</p><a class="btn btn-outline-primary btn-sm w-100" href="#">Read More</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+1" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                </div>
+                <div class="tab-pane fade" id="photos" role="tabpanel">
+                  <div class="row g-3">
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+0" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+1" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+2" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+3" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+4" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+5" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+6" alt="image"></a></div>
+                    <div class="col-6 col-md-4 col-xl-3"><a class="d-block border rounded" href="#"><img class="img-fluid rounded" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+7" alt="image"></a></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="users" role="tabpanel">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U1" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Ferrel Skipsea</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+2" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U2" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Lorry Lewsey</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+3" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U3" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Winny Lippiatt</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+4" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U4" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Salim Walklate</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 border"><img class="card-img-top" src="https://dummyimage.com/600x400/ddd/555&amp;text=Image+5" alt="image">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text...</p><a class="text-uppercase small text-primary" href="#">Read More →</a>
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U5" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Sena Erangey</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card card-body border bg-transparent">
+                        <div class="d-flex align-items-center"><img class="rounded-circle me-3" src="https://dummyimage.com/60x60/ccc/000&amp;text=U6" alt="avatar">
+                          <div class="flex-grow-1">
+                            <h6 class="mb-0">Decca Thorrington</h6><small class="text-body-secondary">User Role</small>
+                          </div>
+                          <button class="btn btn-outline-secondary btn-sm">Follow</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Photos-->
-              <div class="tab-pane fade" id="photos" role="tabpanel">
-                <div class="row g-3">
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+0"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+0" alt="image"></a></div>
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+1"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+1" alt="image"></a></div>
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+2"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+2" alt="image"></a></div>
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+3"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+3" alt="image"></a></div>
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+4"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+4" alt="image"></a></div>
-                  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12"><a href="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+5"><img class="img-fluid rounded shadow-sm" src="https://dummyimage.com/600x400/ddd/555&amp;text=Photo+5" alt="image"></a></div>
-                </div>
-              </div>
-              <!-- Users-->
-              <div class="tab-pane fade" id="users" role="tabpanel">
-                <ul class="list-unstyled">
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U1" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Ferrel Skipsea</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U2" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Lorry Lewsey</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U3" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Winny Lippiatt</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U4" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Salim Walklate</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U5" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Sena Erangey</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
-                  <li class="d-flex align-items-center mb-3">
-                    <figure class="me-3"><img class="rounded-circle" src="https://dummyimage.com/60x60/ccc/000&amp;text=U6" alt="avatar"></figure>
-                    <div class="flex-grow-1">
-                      <h6 class="mb-0">Decca Thorrington</h6><small class="text-muted">User Role</small>
-                    </div>
-                  </li>
+              <nav class="mt-5">
+                <ul class="pagination justify-content-center mb-0">
+                  <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
-              </div>
+              </nav>
             </div>
-          </div>
-          <!-- Pagination-->
-          <div class="card card-body mt-3">
-            <nav>
-              <ul class="pagination justify-content-center mb-0">
-                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-            </nav>
           </div>
         </main>
         <!-- Footer-->

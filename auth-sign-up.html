@@ -6,20 +6,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Primary Meta Tags-->
-    <title>Sing Up | PiruAdmin</title>
-    <meta name="title" content="Sing Up | PiruAdmin">
+    <title>Sign Up | PiruAdmin</title>
+    <meta name="title" content="Sign Up | PiruAdmin">
     <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-sign-up.html">
-    <meta property="og:title" content="Sing Up | PiruAdmin">
+    <meta property="og:title" content="Sign Up | PiruAdmin">
     <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-sign-up.html">
-    <meta property="twitter:title" content="Sing Up | PiruAdmin">
+    <meta property="twitter:title" content="Sign Up | PiruAdmin">
     <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Favicon-->
@@ -41,39 +41,55 @@
     </script>
   </head>
   <body>
-    <main class="wrapper">
-      <div class="container d-flex flex-column">
-        <div class="row vh-100">
-          <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
-            <div class="d-table-cell align-middle">
-              <div class="card">
-                <div class="card-body">
-                  <div class="m-sm-3">
-                    <h2 class="m-0">Sign Up</h2>
-                    <p class="text-muted">Enter your email and password to register</p>
-                    <form>
-                      <div class="mb-3">
-                        <label class="form-label">Full name</label>
-                        <input class="form-control" type="text" name="name" placeholder="Enter your name">
+    <main class="w-100">
+      <div class="d-flex min-vh-100 align-items-center justify-content-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-4">
+              <div class="text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 mb-3" style="width: 48px; height: 48px;"><i class="fa-solid fa-layer-group fs-4"></i></div>
+                <h4 class="fw-bold mb-1">Get started</h4>
+                <p class="text-body-secondary">Create a new account to continue</p>
+              </div>
+              <div class="card border border-secondary-subtle bg-body rounded-3">
+                <div class="card-body p-4 p-sm-5">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold" for="inputName">Full Name</label>
+                      <input class="form-control form-control-lg" id="inputName" type="text" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold" for="inputEmail">Email</label>
+                      <input class="form-control form-control-lg" id="inputEmail" type="email" name="email" placeholder="name@company.com">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold" for="inputPassword">Password</label>
+                      <div class="input-group input-group-lg">
+                        <input class="form-control border-end-0" id="inputPassword" type="password" name="password" placeholder="Create a password">
+                        <button class="input-group-text bg-transparent border-start-0" id="togglePassword" type="button"><i class="fa-regular fa-eye-slash text-body-secondary"></i></button>
                       </div>
-                      <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input class="form-control" type="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-4">
+                      <div class="form-check">
+                        <input class="form-check-input" id="terms" type="checkbox" name="terms">
+                        <label class="form-check-label text-body-secondary small" for="terms">I agree to the <a class="text-decoration-none" href="#">Terms of Service</a> and <a class="text-decoration-none" href="#">Privacy Policy</a></label>
                       </div>
-                      <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <div class="input-group" id="show_hide_password">
-                          <input class="form-control border-end-0" id="inputChoosePassword" type="password" name="password" value="12345678" placeholder="Enter your password">
-                          <button class="input-group-text bg-transparent" id="togglePassword" type="button"><i class="fa fa-eye-slash"></i></button>
-                        </div>
-                      </div>
-                      <div class="d-grid gap-2 mt-3"><a class="btn btn-primary" href="/">Sign up</a></div>
-                    </form>
-                    <div class="separator"><span class="separator-text">Or continue with</span></div>
-                    <div class="d-flex gap-2"><a class="flex-fill btn btn-google" href="/"><i class="fab fa-fw fa-google"></i></a><a class="flex-fill btn btn-facebook" href="/"><i class="fab fa-fw fa-facebook-f"></i></a><a class="flex-fill btn btn-github" href="/"><i class="fab fa-fw fa-github"></i></a></div>
-                    <div class="text-center mt-3">Already have account?<a href="/auth-sign-in.html">Log In</a></div>
-                  </div>
+                    </div>
+                    <div class="d-grid mb-4">
+                      <button class="btn btn-primary btn-lg" type="submit">Sign Up</button>
+                    </div>
+                    <div class="position-relative text-center mb-4">
+                      <hr class="border-secondary-subtle m-0"><span class="position-absolute top-50 start-50 translate-middle bg-body px-2 text-body-secondary small">Or sign up with</span>
+                    </div>
+                    <div class="vstack gap-2">
+                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-google me-2"></i>Google</button>
+                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-github me-2"></i>GitHub</button>
+                    </div>
+                  </form>
                 </div>
+              </div>
+              <div class="text-center mt-4">
+                <p class="text-body-secondary mb-0">Already have an account? <a class="fw-bold text-decoration-none" href="/auth-sign-in.html">Log In</a></p>
               </div>
             </div>
           </div>
@@ -99,33 +115,21 @@
     <script src="js/piruadmin.js"></script>
     <script>
       const togglePassword = document.getElementById("togglePassword");
-      const passwordInput = document.getElementById("inputChoosePassword");
+      const passwordInput = document.getElementById("inputPassword");
       const icon = togglePassword.querySelector("i");
       
       togglePassword.addEventListener("click", () => {
-        // guardar selección actual
-        let start = passwordInput.selectionStart;
-        let end = passwordInput.selectionEnd;
-      
-        // cambiar tipo
         const isPassword = passwordInput.type === "password";
         passwordInput.type = isPassword ? "text" : "password";
-      
-        // asegurar foco
         passwordInput.focus();
-      
-        // si no hay selección previa, mover al final
-        if (start === 0 && end === 0) {
-          const len = passwordInput.value.length;
-          passwordInput.setSelectionRange(len, len);
+        
+        if(isPassword) {
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
         } else {
-          // restaurar selección previa
-          passwordInput.setSelectionRange(start, end);
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
         }
-      
-        // alternar ícono
-        icon.classList.toggle("fa-eye");
-        icon.classList.toggle("fa-eye-slash");
       });
     </script>
   </body>

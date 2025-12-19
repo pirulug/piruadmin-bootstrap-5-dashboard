@@ -235,12 +235,64 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Tagify</h1>
           </div>
-          <div class="card"> 
-            <div class="card-header"> 
+          <!-- =====================================================-->
+          <!-- Basic Tagify-->
+          <!-- =====================================================-->
+          <div class="card mb-3">
+            <div class="card-header">
               <h3 class="header-title">Basic</h3>
             </div>
-            <div class="card-body"> 
-              <input class="form-control" name="basic" value="tag1, tag 2, tag 3">
+            <div class="card-body">
+              <p class="text-secondary">Basic Tagify input using<code>Tagify(input)</code> with default settings.</p>
+              <input class="form-control" name="basic" value="tag1, tag2, tag3">
+            </div>
+          </div>
+          <!-- =====================================================-->
+          <!-- Tagify with whitelist-->
+          <!-- =====================================================-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h3 class="header-title">With whitelist</h3>
+            </div>
+            <div class="card-body">
+              <p class="text-secondary">Tagify with predefined values using a whitelist.</p>
+              <input class="form-control" name="whitelist" placeholder="Select or type a technology">
+            </div>
+          </div>
+          <!-- =====================================================-->
+          <!-- Enforce whitelist-->
+          <!-- =====================================================-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h3 class="header-title">Enforce whitelist</h3>
+            </div>
+            <div class="card-body">
+              <p class="text-secondary">Only allows tags defined in the whitelist using<code>enforceWhitelist: true</code>.</p>
+              <input class="form-control" name="enforce" placeholder="Select a role">
+            </div>
+          </div>
+          <!-- =====================================================-->
+          <!-- Readonly tags-->
+          <!-- =====================================================-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h3 class="header-title">Readonly</h3>
+            </div>
+            <div class="card-body">
+              <p class="text-secondary">Read-only Tagify input using<code>readonly: true</code>.</p>
+              <input class="form-control" name="readonly" value="locked, fixed, static">
+            </div>
+          </div>
+          <!-- =====================================================-->
+          <!-- Max tags limit-->
+          <!-- =====================================================-->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="header-title">Max tags</h3>
+            </div>
+            <div class="card-body">
+              <p class="text-secondary">Limits the number of tags using<code>maxTags: 3</code>.</p>
+              <input class="form-control" name="max" placeholder="Maximum 3 tags allowed">
             </div>
           </div>
         </main>
@@ -267,8 +319,35 @@
     <script src="js/piruadmin.js"></script>
     <script src="js/tagify.js"></script>
     <script>
-      var input = document.querySelector('input[name=basic]');
-      new Tagify(input)
+      // Basic
+      new Tagify(document.querySelector('input[name=basic]'));
+      
+      // With whitelist
+      new Tagify(document.querySelector('input[name=whitelist]'), {
+        whitelist: ['JavaScript', 'PHP', 'Laravel', 'Node.js', 'MySQL'],
+        dropdown: {
+          enabled: 1
+        }
+      });
+      
+      // Enforce whitelist
+      new Tagify(document.querySelector('input[name=enforce]'), {
+        whitelist: ['Admin', 'Editor', 'User'],
+        enforceWhitelist: true,
+        dropdown: {
+          enabled: 0
+        }
+      });
+      
+      // Readonly
+      new Tagify(document.querySelector('input[name=readonly]'), {
+        readonly: true
+      });
+      
+      // Max tags
+      new Tagify(document.querySelector('input[name=max]'), {
+        maxTags: 3
+      });
       
     </script>
   </body>

@@ -1,4 +1,4 @@
-(()=>{var e={575:()=>{
+(()=>{var e={575(){
 /*! 
 * Copyright 2025 Pirulug (https://github.com/pirulug)
 * PrismJS 1.29.0 (https://prismjs.com)

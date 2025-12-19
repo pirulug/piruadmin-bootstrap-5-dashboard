@@ -1,4 +1,4 @@
-(()=>{var t={736:function(t){
+(()=>{var t={736(t){
 /*!
  * Toastify js 1.12.0
  * https://github.com/apvarun/toastify-js

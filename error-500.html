@@ -41,18 +41,15 @@
     </script>
   </head>
   <body>
-    <main class="wrapper">
-      <div class="container d-flex flex-column">
-        <div class="row vh-100">
-          <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-            <div class="d-table-cell align-middle">
-              <div class="text-center">
-                <h2 class="display-1"><i class="fa fa-exclamation-triangle text-primary"></i></h2>
-                <h1 class="display-1 fw-bold">500</h1>
-                <p class="h1">Internal server error.</p>
-                <p class="h2 fw-normal mt-3 mb-4">The server encountered something unexpected that didn&apos;t allow it to complete the request.</p><a class="btn btn-primary btn-lg" href="dashboard.html">Return to website</a>
-              </div>
-            </div>
+    <main class="w-100">
+      <div class="container d-flex flex-column justify-content-center min-vh-100">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-6 text-center">
+            <div class="mb-4"><i class="fa fa-exclamation-triangle fa-5x text-primary mb-3" aria-hidden="true"></i></div>
+            <h1 class="display-1 fw-bold text-primary">500</h1>
+            <h2 class="h1 mb-3">Internal server error.</h2>
+            <p class="lead text-body-secondary mb-5">The server encountered something unexpected that didn&apos;t allow it to complete the request.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"><a class="btn btn-primary btn-lg px-4 gap-3" href="dashboard.html"><i class="fa fa-home me-2"></i>Return to website</a><a class="btn btn-outline-secondary btn-lg px-4" href="javascript:history.back()"><i class="fa fa-arrow-left me-2"></i>Go Back</a></div>
           </div>
         </div>
       </div>

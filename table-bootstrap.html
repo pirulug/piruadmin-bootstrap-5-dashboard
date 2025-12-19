@@ -235,642 +235,250 @@
             <h1 class="h3 d-inline align-middle">Tables</h1>
           </div>
           <div class="row">
-            <div class="col-xl-9 mx-auto">
-              <h6 class="mb-0 text-uppercase">Basic Table</h6>
-              <hr>
+            <!-- =====================================================-->
+            <!-- Basic table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
               <div class="card mb-3">
                 <div class="card-body">
+                  <h2 class="card-title">Basic table</h2>
+                  <p class="text-secondary">Basic tables use the<code>.table</code> class for standard data display.</p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>Inactive</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- Striped table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Striped table</h2>
+                  <p class="text-secondary">Striped tables use<code>.table-striped</code> to add zebra-striping to rows.</p>
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Laptop</td>
+                        <td>$1200</td>
+                        <td>In stock</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Mouse</td>
+                        <td>$25</td>
+                        <td>Out of stock</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- Hover table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Hover table</h2>
+                  <p class="text-secondary">Hover tables use<code>.table-hover</code> to highlight rows on mouse over.</p>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>User</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Admin</td>
+                        <td>Administrator</td>
+                        <td>Active</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Editor</td>
+                        <td>Editor</td>
+                        <td>Active</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- Bordered table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Bordered table</h2>
+                  <p class="text-secondary">Bordered tables use<code>.table-bordered</code> to add borders to all cells.</p>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Order</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>#1023</td>
+                        <td>2025-01-10</td>
+                        <td>$340</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>#1024</td>
+                        <td>2025-01-11</td>
+                        <td>$180</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- Small table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Small table</h2>
+                  <p class="text-secondary">Compact tables use<code>.table-sm</code> to reduce cell padding.</p>
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>File</th>
+                        <th>Size</th>
+                        <th>Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>report.pdf</td>
+                        <td>1.2 MB</td>
+                        <td>PDF</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>image.png</td>
+                        <td>540 KB</td>
+                        <td>PNG</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- Responsive table-->
+            <!-- =====================================================-->
+            <div class="col-lg-6">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h2 class="card-title">Responsive table</h2>
+                  <p class="text-secondary">Responsive tables use<code>.table-responsive</code> to enable horizontal scrolling on small screens.</p>
                   <div class="table-responsive">
                     <table class="table">
                       <thead>
                         <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Date</th>
-                          <th class="text-center" scope="col">Sales</th>
-                          <th class="text-center" scope="col">Status</th>
+                          <th>#</th>
+                          <th>Customer</th>
+                          <th>Country</th>
+                          <th>Orders</th>
+                          <th>Revenue</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Shaun Park</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">25 Apr</span>
-                          </td>
-                          <td class="text-center">320</td>
-                          <td class="text-center"><span class="badge badge-light-success">Approved</span></td>
+                          <td>1</td>
+                          <td>Carlos</td>
+                          <td>Peru</td>
+                          <td>12</td>
+                          <td>$2,400</td>
                         </tr>
                         <tr>
-                          <td>Alma Clarke</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">26 Apr</span>
-                          </td>
-                          <td class="text-center">110</td>
-                          <td class="text-center"><span class="badge badge-light-secondary">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <td>Vincent Carpenter</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">05 May</span>
-                          </td>
-                          <td class="text-center">210</td>
-                          <td class="text-center"><span class="badge badge-light-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <td>Xavier</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">18 May</span>
-                          </td>
-                          <td class="text-center">784</td>
-                          <td class="text-center"><span class="badge badge-light-info">In Progress</span></td>
+                          <td>2</td>
+                          <td>Anna</td>
+                          <td>Germany</td>
+                          <td>8</td>
+                          <td>$1,750</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
-              <h6 class="mb-0 text-uppercase">Bordered Table</h6>
-              <hr>
+            </div>
+            <!-- =====================================================-->
+            <!-- Combined table styles-->
+            <!-- =====================================================-->
+            <div class="col-lg-12">
               <div class="card mb-3">
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Date</th>
-                          <th class="text-center" scope="col">Sales</th>
-                          <th class="text-center" scope="col">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Shaun Park</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">25 Apr</span>
-                          </td>
-                          <td class="text-center">320</td>
-                          <td class="text-center"><span class="badge badge-light-success">Approved</span></td>
-                        </tr>
-                        <tr>
-                          <td>Alma Clarke</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">26 Apr</span>
-                          </td>
-                          <td class="text-center">110</td>
-                          <td class="text-center"><span class="badge badge-light-secondary">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <td>Vincent Carpenter</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">05 May</span>
-                          </td>
-                          <td class="text-center">210</td>
-                          <td class="text-center"><span class="badge badge-light-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <td>Xavier</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">18 May</span>
-                          </td>
-                          <td class="text-center">784</td>
-                          <td class="text-center"><span class="badge badge-light-info">In Progress</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Bordered striped</h6>
-              <hr>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Date</th>
-                          <th class="text-center" scope="col">Sales</th>
-                          <th class="text-center" scope="col">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Shaun Park</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">25 Apr</span>
-                          </td>
-                          <td class="text-center">320</td>
-                          <td class="text-center"><span class="badge badge-light-success">Approved</span></td>
-                        </tr>
-                        <tr>
-                          <td>Alma Clarke</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">26 Apr</span>
-                          </td>
-                          <td class="text-center">110</td>
-                          <td class="text-center"><span class="badge badge-light-secondary">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <td>Vincent Carpenter</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">05 May</span>
-                          </td>
-                          <td class="text-center">210</td>
-                          <td class="text-center"><span class="badge badge-light-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <td>Xavier</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">18 May</span>
-                          </td>
-                          <td class="text-center">784</td>
-                          <td class="text-center"><span class="badge badge-light-info">In Progress</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Bordered striped</h6>
-              <hr>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-striped-columns">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Date</th>
-                          <th class="text-center" scope="col">Sales</th>
-                          <th class="text-center" scope="col">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Shaun Park</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">25 Apr</span>
-                          </td>
-                          <td class="text-center">320</td>
-                          <td class="text-center"><span class="badge badge-light-success">Approved</span></td>
-                        </tr>
-                        <tr>
-                          <td>Alma Clarke</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">26 Apr</span>
-                          </td>
-                          <td class="text-center">110</td>
-                          <td class="text-center"><span class="badge badge-light-secondary">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <td>Vincent Carpenter</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">05 May</span>
-                          </td>
-                          <td class="text-center">210</td>
-                          <td class="text-center"><span class="badge badge-light-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <td>Xavier</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">18 May</span>
-                          </td>
-                          <td class="text-center">784</td>
-                          <td class="text-center"><span class="badge badge-light-info">In Progress</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Bordered striped</h6>
-              <hr>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name</th>
-                          <th scope="col">Date</th>
-                          <th class="text-center" scope="col">Sales</th>
-                          <th class="text-center" scope="col">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Shaun Park</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">25 Apr</span>
-                          </td>
-                          <td class="text-center">320</td>
-                          <td class="text-center"><span class="badge badge-light-success">Approved</span></td>
-                        </tr>
-                        <tr>
-                          <td>Alma Clarke</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">26 Apr</span>
-                          </td>
-                          <td class="text-center">110</td>
-                          <td class="text-center"><span class="badge badge-light-secondary">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <td>Vincent Carpenter</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">05 May</span>
-                          </td>
-                          <td class="text-center">210</td>
-                          <td class="text-center"><span class="badge badge-light-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <td>Xavier</td>
-                          <td>
-                            <svg class="feather feather-calendar" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                              <line x1="16" y1="2" x2="16" y2="6"></line>
-                              <line x1="8" y1="2" x2="8" y2="6"></line>
-                              <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg><span class="table-inner-text">18 May</span>
-                          </td>
-                          <td class="text-center">784</td>
-                          <td class="text-center"><span class="badge badge-light-info">In Progress</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Basic Table</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Striped rows</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table mb-0 table-striped">
+                  <h2 class="card-title">Combined table styles</h2>
+                  <p class="text-secondary">Tables can combine styles using<code>.table-{striped|hover|bordered|sm}</code> together.</p>
+                  <table class="table table-striped table-hover table-bordered">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>First</th>
-                        <th>Last</th>
-                        <th>Handle</th>
+                        <th>Project</th>
+                        <th>Manager</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>1</td>
+                        <td>Dashboard UI</td>
+                        <td>Guido</td>
+                        <td>In progress</td>
                       </tr>
                       <tr>
-                        <th>2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Dark Table</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table table-dark table-striped">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>First</th>
-                        <th>Last</th>
-                        <th>Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Hoverable rows</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table mb-0 table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Bordered tables</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table table-bordered mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Tables without borders</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table table-borderless mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Small tables</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table table-sm mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <h6 class="mb-0 text-uppercase">Table head</h6>
-              <hr>
-              <div class="card">
-                <div class="card-body">
-                  <table class="table mb-0">
-                    <thead class="table-dark">
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                        <td>2</td>
+                        <td>API Integration</td>
+                        <td>Maria</td>
+                        <td>Completed</td>
                       </tr>
                     </tbody>
                   </table>

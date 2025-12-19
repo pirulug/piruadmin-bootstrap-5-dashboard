@@ -261,24 +261,28 @@
               <div class="tab-pane fade show active tab-account" role="tabpanel">
                 <h4 class="tab-title"><i class="bi bi-person-badge me-2"></i>Account Settings</h4>
                 <form>
-                  <div class="d-flex flex-column flex-sm-row mb-3 align-items-center">
-                    <figure class="me-sm-3 mb-3 mb-sm-0"><img class="rounded-circle" width="100" src="https://dummyimage.com/200x200/000/fff.jpg" alt="Pirulug Avatar"></figure>
-                    <div class="text-center text-sm-start">
-                      <p class="fw-bold mb-2">Pirulug</p>
-                      <div class="btn-group">
-                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-upload me-1"></i>Change</button>
-                        <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash me-1"></i>Remove</button>
+                  <div class="d-flex align-items-center mb-4"><img class="rounded-circle me-3 object-fit-cover" src="https://dummyimage.com/200x200/000/fff.jpg" width="80" height="80" alt="Pirulug">
+                    <div>
+                      <h4 class="mb-1">Pirulug</h4>
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-primary btn-sm" type="button"><i class="bi bi-upload me-1"></i>Upload</button>
+                        <button class="btn btn-outline-danger btn-sm" type="button"><i class="bi bi-trash"></i></button>
                       </div>
                     </div>
                   </div>
-                  <!-- Datos básicos-->
+                </form>
+                <form>
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label class="form-label">Name</label>
                       <input class="form-control" type="text" value="Pirulug">
-                      <label class="form-label mt-2">Username</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Username</label>
                       <input class="form-control" type="text" value="pirulug">
-                      <label class="form-label mt-2">Email</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email</label>
                       <input class="form-control" type="email" value="pirulug@localhost.test">
                     </div>
                     <div class="col-md-6">
@@ -288,12 +292,16 @@
                         <option selected="selected">Developer</option>
                         <option>User</option>
                       </select>
-                      <label class="form-label mt-2">Status</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Status</label>
                       <select class="form-select">
                         <option selected="selected">Active</option>
                         <option>Blocked</option>
                       </select>
-                      <label class="form-label mt-2">Department</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Department</label>
                       <select class="form-select">
                         <option selected="selected">Development</option>
                         <option>Management</option>
@@ -308,66 +316,89 @@
                       </h2>
                       <div class="accordion-collapse collapse" id="permCollapse">
                         <div class="accordion-body">
-                          <div class="table-responsive">
-                            <table class="table table-sm table-hover align-middle">
-                              <thead class="table-light">
-                                <tr>
-                                  <th>Module</th>
-                                  <th>View</th>
-                                  <th>Edit</th>
-                                  <th>Create</th>
-                                  <th>Delete</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Users</td>
-                                  <td>
+                          <div class="table-responsive"></div>
+                          <table class="table table-hover align-middle">
+                            <thead>
+                              <tr>
+                                <th>Module</th>
+                                <th class="text-center">View</th>
+                                <th class="text-center">Edit</th>
+                                <th class="text-center">Create</th>
+                                <th class="text-center">Delete</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Users</td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox">
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Projects</td>
-                                  <td>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Projects</td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox">
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>Reports</td>
-                                  <td>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Reports</td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox" checked="checked">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox">
-                                  </td>
-                                  <td>
+                                  </div>
+                                </td>
+                                <td class="text-center">
+                                  <div class="form-check form-switch d-flex justify-content-center">
                                     <input class="form-check-input" type="checkbox">
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
                     </div>
@@ -383,42 +414,63 @@
                     <div class="col-md-6">
                       <label class="form-label">Birth Date</label>
                       <input class="form-control" type="date" value="2000-01-01">
-                      <label class="form-label mt-2">Phone</label>
-                      <input class="form-control" type="text" value="+51 987654321">
-                      <label class="form-label mt-2">Website</label>
-                      <input class="form-control" type="url" value="http://pirulug.test/">
-                      <label class="form-label mt-2">Languages</label>
-                      <input class="form-control" type="text" value="Spanish, English">
                     </div>
                     <div class="col-md-6">
-                      <label class="form-label">Address Line 1</label>
+                      <label class="form-label">Phone</label>
+                      <input class="form-control" type="tel" value="+51 987654321">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Website</label>
+                      <input class="form-control" type="url" value="http://pirulug.test/">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Languages</label>
+                      <input class="form-control" type="text" value="Spanish, English">
+                    </div>
+                    <div class="col-12">
+                      <hr class="my-4">
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Address Line</label>
                       <input class="form-control" type="text" value="Calle Localhost 123">
-                      <label class="form-label mt-2">City</label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">City</label>
                       <input class="form-control" type="text" value="Huancayo">
-                      <label class="form-label mt-2">State</label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">State</label>
                       <input class="form-control" type="text" value="Junín">
-                      <label class="form-label mt-2">Country</label>
+                    </div>
+                    <div class="col-md-4">
+                      <label class="form-label">Country</label>
                       <input class="form-control" type="text" value="Perú">
                     </div>
                   </div>
-                  <button class="btn btn-primary mt-3"><i class="bi bi-check2-circle me-2"></i>Save Changes</button>
+                  <div class="d-flex justify-content-end mt-4">
+                    <button class="btn btn-primary" type="button">Save changes</button>
+                  </div>
                 </form>
               </div>
               <!-- Security-->
               <div class="tab-pane fade tab-security" role="tabpanel">
                 <h6 class="tab-title"><i class="bi bi-shield-lock me-2"></i>Security</h6>
                 <form>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label">Old Password</label>
-                      <input class="form-control" type="password">
-                      <label class="form-label mt-2">New Password</label>
-                      <input class="form-control" type="password">
-                      <label class="form-label mt-2">Repeat New Password</label>
-                      <input class="form-control" type="password">
-                    </div>
+                  <div class="mb-3">
+                    <label class="form-label">Current Password</label>
+                    <input class="form-control" type="password">
                   </div>
-                  <button class="btn btn-danger mt-3"><i class="bi bi-shield-check me-2"></i>Update Password</button>
+                  <div class="mb-3">
+                    <label class="form-label">New Password</label>
+                    <input class="form-control" type="password">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Repeat New Password</label>
+                    <input class="form-control" type="password">
+                  </div>
+                  <div class="d-flex justify-content-end mt-4">
+                    <button class="btn btn-danger" type="button">Update Password</button>
+                  </div>
                 </form>
               </div>
               <!-- Social-->
@@ -428,18 +480,32 @@
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label class="form-label">Twitter</label>
-                      <input class="form-control" type="url" value="https://twitter.com/pirulug">
-                      <label class="form-label mt-2">Facebook</label>
-                      <input class="form-control" type="url" value="https://www.facebook.com/pirulug">
+                      <div class="input-group"><span class="input-group-text"><i class="bi bi-twitter"></i></span>
+                        <input class="form-control" type="url" value="https://twitter.com/pirulug">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Facebook</label>
+                      <div class="input-group"><span class="input-group-text"><i class="bi bi-facebook"></i></span>
+                        <input class="form-control" type="url" value="https://www.facebook.com/pirulug">
+                      </div>
                     </div>
                     <div class="col-md-6">
                       <label class="form-label">Instagram</label>
-                      <input class="form-control" type="url" value="https://www.instagram.com/pirulug/">
-                      <label class="form-label mt-2">GitHub</label>
-                      <input class="form-control" type="url" value="https://github.com/pirulug">
+                      <div class="input-group"><span class="input-group-text"><i class="bi bi-instagram"></i></span>
+                        <input class="form-control" type="url" value="https://www.instagram.com/pirulug/">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">GitHub</label>
+                      <div class="input-group"><span class="input-group-text"><i class="bi bi-github"></i></span>
+                        <input class="form-control" type="url" value="https://github.com/pirulug">
+                      </div>
                     </div>
                   </div>
-                  <button class="btn btn-primary mt-3"><i class="fa fa-check me-2"></i>Save Changes</button>
+                  <div class="d-flex justify-content-end mt-4">
+                    <button class="btn btn-primary" type="button">Save changes</button>
+                  </div>
                 </form>
               </div>
             </div>

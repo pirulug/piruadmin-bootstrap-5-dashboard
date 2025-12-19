@@ -235,11 +235,12 @@
             <h1 class="h3 d-inline align-middle">Charts</h1>
           </div>
           <div class="row">
+            <!-- Line Chart-->
             <div class="col-12 col-lg-6">
               <div class="card mb-3 flex-fill w-100">
                 <div class="card-header">
                   <h5 class="card-title">Line Chart</h5>
-                  <h6 class="card-subtitle text-muted">A line chart is a way of plotting data points on a line.</h6>
+                  <h6 class="card-subtitle text-muted">Line charts use<code>type: "line"</code> and are ideal for trends over time.</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart">
@@ -248,11 +249,12 @@
                 </div>
               </div>
             </div>
+            <!-- Bar Chart-->
             <div class="col-12 col-lg-6">
               <div class="card mb-3">
                 <div class="card-header">
                   <h5 class="card-title">Bar Chart</h5>
-                  <h6 class="card-subtitle text-muted">A bar chart provides a way of showing data values represented as vertical bars.</h6>
+                  <h6 class="card-subtitle text-muted">Bar charts use<code>type: "bar"</code> to compare values between categories.</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart">
@@ -261,11 +263,12 @@
                 </div>
               </div>
             </div>
+            <!-- Doughnut Chart-->
             <div class="col-12 col-lg-6">
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header">
                   <h5 class="card-title">Doughnut Chart</h5>
-                  <h6 class="card-subtitle text-muted">Doughnut charts are excellent at showing the relational proportions between data.</h6>
+                  <h6 class="card-subtitle text-muted">Doughnut charts use<code>type: "doughnut"</code> for proportional data.</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart chart-sm">
@@ -274,15 +277,75 @@
                 </div>
               </div>
             </div>
+            <!-- Pie Chart-->
             <div class="col-12 col-lg-6">
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header">
                   <h5 class="card-title">Pie Chart</h5>
-                  <h6 class="card-subtitle text-muted">Pie charts are excellent at showing the relational proportions between data.</h6>
+                  <h6 class="card-subtitle text-muted">Pie charts use<code>type: "pie"</code> to show percentage distribution.</h6>
                 </div>
                 <div class="card-body">
                   <div class="chart chart-sm">
                     <canvas id="chartjs-pie"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- =====================================================-->
+            <!-- NEW DEMONSTRATIONS-->
+            <!-- =====================================================-->
+            <!-- Area Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Area Chart</h5>
+                  <h6 class="card-subtitle text-muted">Area charts are line charts with<code>fill: true</code> enabled.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-area"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Horizontal Bar Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Horizontal Bar Chart</h5>
+                  <h6 class="card-subtitle text-muted">Horizontal bars use<code>indexAxis: "y"</code>.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-horizontal"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Radar Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Radar Chart</h5>
+                  <h6 class="card-subtitle text-muted">Radar charts use<code>type: "radar"</code> for multi-variable comparison.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-radar"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Polar Area Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title">Polar Area Chart</h5>
+                  <h6 class="card-subtitle text-muted">Polar area charts use<code>type: "polarArea"</code>.</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-polar"></canvas>
                   </div>
                 </div>
               </div>
@@ -316,124 +379,118 @@
       new Chart(document.getElementById("chartjs-line"), {
         type: "line",
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
           datasets: [{
-            label: "Sales ($)",
-            fill: true,
-            backgroundColor: "transparent",
+            label: "Sales",
+            data: [2115,1562,1584,1892,1487,2223,2966,2448,2905,3838,2917,3327],
             borderColor: "#ff0055",
-            data: [2115, 1562, 1584, 1892, 1487, 2223, 2966, 2448, 2905, 3838, 2917, 3327]
-          }, {
-            label: "Orders",
-            fill: true,
             backgroundColor: "transparent",
-            borderColor: "#adb5bd",
-            borderDash: [4, 4],
-            data: [958, 724, 629, 883, 915, 1214, 1476, 1212, 1554, 2128, 1466, 1827]
+            fill: true
           }]
         },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-          tooltips: {
-            intersect: false
-          },
-          hover: {
-            intersect: true
-          },
-          plugins: {
-            filler: {
-              propagate: false
-            }
-          },
-      
-        }
+        options: { maintainAspectRatio: false }
       });
       
       // Bar chart
       new Chart(document.getElementById("chartjs-bar"), {
         type: "bar",
         data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          labels: ["Jan","Feb","Mar","Apr","May","Jun"],
           datasets: [{
-            label: "Last year",
-            backgroundColor: "#ff0055",
-            borderColor: "#ff0055",
-            hoverBackgroundColor: "#ff0055",
-            hoverBorderColor: "#ff0055",
-            data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-            barPercentage: .75,
-            categoryPercentage: .5
-          }, {
-            label: "This year",
-            backgroundColor: "#dee2e6",
-            borderColor: "#dee2e6",
-            hoverBackgroundColor: "#dee2e6",
-            hoverBorderColor: "#dee2e6",
-            data: [69, 66, 24, 48, 52, 51, 44, 53, 62, 79, 51, 68],
-            barPercentage: .75,
-            categoryPercentage: .5
+            label: "Revenue",
+            data: [54,67,41,55,62,45],
+            backgroundColor: "#ff0055"
           }]
         },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-      
-        }
+        options: { maintainAspectRatio: false }
       });
       
       // Doughnut chart
       new Chart(document.getElementById("chartjs-doughnut"), {
         type: "doughnut",
         data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
+          labels: ["Social","Search","Direct","Other"],
           datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-            ],
+            data: [260,125,54,146],
+            backgroundColor: ["#ff0055","#17a2b8","#dc3545","#dee2e6"],
             borderColor: "transparent"
           }]
         },
-        options: {
-          maintainAspectRatio: false,
-          cutoutPercentage: 65,
-          legend: {
-            display: false
-          }
-        }
+        options: { maintainAspectRatio: false, cutout: "65%" }
       });
-      
       
       // Pie chart
       new Chart(document.getElementById("chartjs-pie"), {
         type: "pie",
         data: {
-          labels: ["Social", "Search Engines", "Direct", "Other"],
+          labels: ["Social","Search","Direct","Other"],
           datasets: [{
-            data: [260, 125, 54, 146],
-            backgroundColor: [
-              "#ff0055",
-              "#17a2b8",
-              "#dc3545",
-              "#dee2e6"
-      ],
-      borderColor: "transparent"
+            data: [260,125,54,146],
+            backgroundColor: ["#ff0055","#17a2b8","#dc3545","#dee2e6"]
+          }]
+        },
+        options: { maintainAspectRatio: false }
+      });
+      
+      // Area chart
+      new Chart(document.getElementById("chartjs-area"), {
+        type: "line",
+        data: {
+          labels: ["Mon","Tue","Wed","Thu","Fri"],
+          datasets: [{
+            label: "Visitors",
+            data: [120,190,300,250,220],
+            borderColor: "#17a2b8",
+            backgroundColor: "rgba(23,162,184,.3)",
+            fill: true
+          }]
+        },
+        options: { maintainAspectRatio: false }
+      });
+      
+      // Horizontal bar chart
+      new Chart(document.getElementById("chartjs-horizontal"), {
+        type: "bar",
+        data: {
+          labels: ["Chrome","Firefox","Safari","Edge"],
+          datasets: [{
+            label: "Users",
+            data: [65,59,80,81],
+            backgroundColor: "#ff0055"
           }]
         },
         options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          }
+          indexAxis: "y",
+          maintainAspectRatio: false
         }
+      });
+      
+      // Radar chart
+      new Chart(document.getElementById("chartjs-radar"), {
+        type: "radar",
+        data: {
+          labels: ["Speed","Reliability","Comfort","Safety","Efficiency"],
+          datasets: [{
+            label: "Car A",
+            data: [65,59,90,81,56],
+            backgroundColor: "rgba(255,0,85,.3)",
+            borderColor: "#ff0055"
+          }]
+        },
+        options: { maintainAspectRatio: false }
+      });
+      
+      // Polar area chart
+      new Chart(document.getElementById("chartjs-polar"), {
+        type: "polarArea",
+        data: {
+          labels: ["Red","Blue","Yellow","Green"],
+          datasets: [{
+            data: [11,16,7,14],
+            backgroundColor: ["#ff0055","#17a2b8","#ffc107","#28a745"]
+          }]
+        },
+        options: { maintainAspectRatio: false }
       });
     </script>
   </body>
