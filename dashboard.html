@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Pirulug">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d6efd">
     <!-- Primary Meta Tags-->
-    <title>Dashboard | PiruAdmin</title>
-    <meta name="title" content="Dashboard | PiruAdmin">
-    <meta name="description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
-    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard">
+    <title>Dashboard - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="Dashboard - Free Bootstrap 5 Admin Template | PiruAdmin">
+    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
+    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
+    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard.html">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard.html">
     <meta property="og:title" content="Dashboard | PiruAdmin">
-    <meta property="og:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard.html">
     <meta property="twitter:title" content="Dashboard | PiruAdmin">
-    <meta property="twitter:description" content="PiruAdmin is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
+    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="twitter:creator" content="@pirulug">
     <!-- Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -44,7 +47,10 @@
   <body>
 <!-- Loader-->
 <div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
-  <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"><span class="sr-only">Loading...</span></div>
+  <div class="position-relative" style="width: 4rem; height: 4rem;">
+    <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
+    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="img/logo.png" alt="Logo" width="30" height="30"></div>
+  </div>
 </div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
@@ -221,8 +227,8 @@
       </li>
       <li class="nav-item dropdown"><a class="nav-link dropdown-toggle d-inline-block" href="#" data-bs-toggle="dropdown">
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
-        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="pages-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="account-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="account-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
@@ -234,97 +240,187 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Dashboard</h1>
           </div>
-          <div class="row g-4">
-            <div class="col-sm-6 col-xl-3">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-primary"><i class="align-middle" data-feather="truck"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Sales</h5>
-                    </div>
+          <div class="row g-4 mb-4">
+                        <div class="col-sm-6 col-xl-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                                  <div class="stat stat-primary"><i data-feather="truck"></i></div>
+                                </div>
+                                <div class="col text-end">
+                                  <h6 class="card-title text-body-secondary mb-1">Sales</h6>
+                                  <h2 class="h3 fw-bold mb-0">2.382</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                                  <div class="stat stat-success"><i data-feather="users"></i></div>
+                                </div>
+                                <div class="col text-end">
+                                  <h6 class="card-title text-body-secondary mb-1">Visitors</h6>
+                                  <h2 class="h3 fw-bold mb-0">14.212</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                                  <div class="stat stat-info"><i data-feather="dollar-sign"></i></div>
+                                </div>
+                                <div class="col text-end">
+                                  <h6 class="card-title text-body-secondary mb-1">Earnings</h6>
+                                  <h2 class="h3 fw-bold mb-0">$21.300</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                          <div class="card h-100">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-auto">
+                                  <div class="stat stat-danger"><i data-feather="shopping-cart"></i></div>
+                                </div>
+                                <div class="col text-end">
+                                  <h6 class="card-title text-body-secondary mb-1">Orders</h6>
+                                  <h2 class="h3 fw-bold mb-0">64</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+          </div>
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-7 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Recent Movement</h5>
+                </div>
+                <div class="card-body py-4">
+                  <div style="position: relative; height: 300px;">
+                    <canvas id="chartjs-dashboard-line"></canvas>
                   </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">2.382</h2>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-xl-3"> 
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-success"><i class="align-middle" data-feather="users"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Visitors</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">14.212</h2>
+            <div class="col-12 col-lg-5 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Real-Time</h5>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-info"><i class="align-middle" data-feather="dollar-sign"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Earnings</h5>
-                    </div>
+                <div class="card-body p-4">
+                  <div style="position: relative; height: 300px;">
+                    <canvas id="chartjs-dashboard-bar"></canvas>
                   </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">$21.300</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3"> 
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-auto">
-                      <div class="stat stat-danger"><i class="align-middle" data-feather="shopping-cart"></i></div>
-                    </div>
-                    <div class="col mt-0">
-                      <h5 class="text-end">Orders</h5>
-                    </div>
-                  </div>
-                  <h2 class="h1 mt-1 mb-0 text-end">64</h2>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row g-4">
-            <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-              <div class="card mb-3 flex-fill w-100">
+          <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card flex-fill w-100">
                 <div class="card-header">
-                  <h5 class="card-title mb-0">Recent Movement</h5>
+                  <h5 class="card-title mb-0">Daily Feed</h5>
                 </div>
-                <div class="card-body py-3">
-                  <canvas id="chartjs-dashboard-line"></canvas>
+                <div class="card-body">
+                  <div class="timeline-item"><strong class="d-block">New update available</strong><span class="text-body-secondary small">Just now</span>
+                    <p class="mb-0 mt-1 small">Release v1.2.0 includes better dark mode support.</p>
+                  </div>
+                  <div class="timeline-item timeline-warning"><strong class="d-block">New user registered</strong><span class="text-body-secondary small">30m ago</span>
+                    <p class="mb-0 mt-1 small">User "Pirulug" created an account.</p>
+                  </div>
+                  <div class="timeline-item timeline-success"><strong class="d-block">Big Sale!</strong><span class="text-body-secondary small">2h ago</span>
+                    <p class="mb-0 mt-1 small">Order #3422 from USA completed.</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
-              <div class="card mb-3 flex-fill w-100">
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card flex-fill w-100">
                 <div class="card-header">
-                  <h5 class="card-title mb-0">Real-Time</h5>
+                  <h5 class="card-title mb-0">Monthly Targets</h5>
                 </div>
-                <div class="card-body px-4">
-                  <canvas id="chartjs-dashboard-bar"></canvas>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-1"><span class="fw-bold">Sales Goal</span><span class="text-primary">75%</span></div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-1"><span class="fw-bold">Visitors</span><span class="text-success">50%</span></div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-1"><span class="fw-bold">Profit Margin</span><span class="text-warning">25%</span></div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="mb-0">
+                    <div class="d-flex justify-content-between mb-1"><span class="fw-bold">Churn Rate</span><span class="text-danger">10%</span></div>
+                    <div class="progress" style="height: 6px;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Browser Usage</h5>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover my-0 border-top">
+                    <tbody>
+                      <tr>
+                        <td> <i class="me-2" data-feather="chrome"> </i>Chrome</td>
+                        <td class="text-end fw-bold">45%</td>
+                      </tr>
+                      <tr>
+                        <td> <i class="me-2" data-feather="compass"> </i>Safari</td>
+                        <td class="text-end fw-bold">22%</td>
+                      </tr>
+                      <tr>
+                        <td> <i class="me-2" data-feather="globe"> </i>Edge</td>
+                        <td class="text-end fw-bold">15%</td>
+                      </tr>
+                      <tr>
+                        <td> <i class="me-2" data-feather="gitlab"> </i>Firefox</td>
+                        <td class="text-end fw-bold">10%</td>
+                      </tr>
+                      <tr>
+                        <td> <i class="me-2" data-feather="help-circle"> </i>Other</td>
+                        <td class="text-end fw-bold">8%</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 d-flex">
-              <div class="card flex-fill overflow-hidden">
+              <div class="card flex-fill">
                 <div class="card-header">
                   <h5 class="card-title mb-0">Latest Projects</h5>
                 </div>
-                <table class="table table-hover my-0">
+                <table class="table table-hover my-0 border-top">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -343,49 +439,7 @@
                       <td class="d-none d-md-table-cell">Vanessa Tucker</td>
                     </tr>
                     <tr>
-                      <td>Project Fireball</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-danger">Cancelled</span></td>
-                      <td class="d-none d-md-table-cell">William Harris</td>
-                    </tr>
-                    <tr>
-                      <td>Project Hades</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                    </tr>
-                    <tr>
-                      <td>Project Nitro</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-warning">In progress</span></td>
-                      <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                    </tr>
-                    <tr>
                       <td>Project Phoenix</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">William Harris</td>
-                    </tr>
-                    <tr>
-                      <td>Project X</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                    </tr>
-                    <tr>
-                      <td>Project Romeo</td>
-                      <td class="d-none d-xl-table-cell">01/01/2021</td>
-                      <td class="d-none d-xl-table-cell">31/06/2021</td>
-                      <td><span class="badge bg-success">Done</span></td>
-                      <td class="d-none d-md-table-cell">Christina Mason</td>
-                    </tr>
-                    <tr>
-                      <td>Project Wombat</td>
                       <td class="d-none d-xl-table-cell">01/01/2021</td>
                       <td class="d-none d-xl-table-cell">31/06/2021</td>
                       <td><span class="badge bg-warning">In progress</span></td>
@@ -420,98 +474,72 @@
     <script src="js/piruadmin.js"></script>
     <script src="js/chartjs.js"></script>
     <script>
-      const ctx = document.getElementById('chartjs-dashboard-line').getContext('2d');
-      //- const labels = Utils.months({count: 7});
-      const myChart = new Chart(ctx, {
+      document.addEventListener("DOMContentLoaded", function() {
+        
+        // Función helper para obtener variables CSS de Bootstrap
+        // Esto permite que los gráficos cambien de color si cambias el tema en CSS
+        const getVar = (variable) => getComputedStyle(document.body).getPropertyValue(variable).trim();
+      
+        // Configuración común para rejillas (Grid)
+        const gridConfig = {
+          color: 'rgba(120, 130, 140, 0.1)', // Color sutil para las líneas
+          borderColor: 'transparent' // Sin bordes duros en el chart
+        };
+      
+        const ctxLine = document.getElementById('chartjs-dashboard-line').getContext('2d');
+        new Chart(ctxLine, {
           type: 'line',
           data: {
-              labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
-              datasets: [
-                {
-                  label: 'Buys',
-                  borderColor: '#ff0055',
-                  backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                  data: [
-                    0,
-                    20,
-                    30,
-                    60,
-                    50,
-                    80,
-                    70,
-                    20,
-                    30,
-                    90,
-                    80,
-                    70
-                  ]              
-              },
-                {
-                  label: 'Sales',
-                  borderColor: '#e67e22',
-                  backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                  data: [
-                    0,
-                    90,
-                    30,
-                    10,
-                    20,
-                    70,
-                    10,
-                    60,
-                    50,
-                    80,
-                    70,
-                    80
-                  ]              
-              }
-              ]
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+            datasets: [{
+              label: 'Sales ($)',
+              fill: true,
+              backgroundColor: "rgba(255, 0, 85, 0.1)", // Primary con transparencia
+              borderColor: "#ff0055", // Bootstrap Primary color manual o getVar('--bs-primary')
+              data: [2115, 1562, 1584, 1892, 1587, 1923, 2566, 2448, 2805, 3438, 2917, 3327],
+              tension: 0.4, // Curvas suaves (Modern UI)
+              pointRadius: 0, // Sin puntos para un look más limpio
+              pointHoverRadius: 4
+            }]
           },
           options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: { intersect: false, mode: 'index' }
+            },
+            scales: {
+              x: { grid: { display: false } }, // Ocultar grid vertical para limpieza
+              y: { 
+                grid: { color: getVar('--bs-border-color-translucent') }, // Grid adaptable al tema
+                beginAtZero: true 
               }
+            }
           }
-      });
+        });
       
-      
-      // Bar chart
-      new Chart(document.getElementById("chartjs-dashboard-bar"), {
-        type: "bar",
-        data: {
-          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
-          datasets: [
-            {
-            label: "USA",
-            backgroundColor: "#9b59b6",
-            data: [80, 79, 76, 99, 55, 62, 48, 4, 55, 73, 45, 60],
-            barPercentage: .75,
-            categoryPercentage: .5
+        // Bar chart
+        new Chart(document.getElementById("chartjs-dashboard-bar"), {
+          type: "bar",
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+            datasets: [{
+              label: "Total Orders",
+              backgroundColor: "#ff0055", // Usa variable CSS
+              borderRadius: 4, // Bordes redondeados en las barras (Moderno)
+              barPercentage: 0.6,
+              data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+            }]
           },
-            {
-            label: "UK",
-            backgroundColor: "#e67e22",
-            data: [73, 55, 45, 76, 48, 55, 62, 80, 79, 4, 60, 99],
-            barPercentage: .75,
-            categoryPercentage: .5
-          },
-            {
-            label: "PEN",
-            backgroundColor: "#3498db",
-            data: [48, 73, 4, 99, 79, 80, 62, 60, 76, 55, 55, 45],
-            barPercentage: .75,
-            categoryPercentage: .5
-          },
-          ]
-        },
-        options: {
-          maintainAspectRatio: false,
-          legend: {
-            display: false
-          },
-        }
+          options: {
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false } },
+              y: { grid: { display: false }, display: false } // Ocultar eje Y para diseño minimalista
+            }
+          }
+        });
       });
     </script>
   </body>
