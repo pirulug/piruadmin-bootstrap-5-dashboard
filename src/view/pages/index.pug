@@ -5,19 +5,79 @@ append config
   -pageUrl = 'index'
 
 block header
-  // Header
-  header.bg-body-tertiary.py-5
+  //- Main Header
+  header.py-5.overflow-hidden
     .container.px-5
       .row.gx-5.justify-content-center
-        .col-lg-6
+        .col-lg-8
           .text-center.my-5
-            h1.display-5.fw-bolder.mb-2 #{siteName} Bootstrap 5 Dashboard
-            p.lead-50.mb-4 Open source dashboard powered by Bootstrap 5
-            .d-grid.gap-3.d-sm-flex.justify-content-sm-center
-              a.btn.btn-primary.btn-lg.me-1(href='dashboard.html') 
-                |Demo
-              a.btn.btn-outline-primary.btn-lg(href='dashboard.html') Documentation
+            //- Title & Subtitle
+            h1.display-5.fw-bold.mb-3 #{siteName} Dashboard
+            p.lead.text-body-secondary.mb-4
+              | Open source dashboard powered by Bootstrap 5. 
+              br.d-none.d-md-block
+              | Flat design, shadow-free, and fully responsive with dark mode support.
+
+            //- Action Buttons
+            .d-grid.gap-2.d-sm-flex.justify-content-sm-center.mb-5
+              a.btn.btn-primary.btn-lg.px-4.gap-2.d-flex.align-items-center.justify-content-center(href='dashboard.html') 
+                i(data-feather='layout')
+                | View Demo
+              a.btn.btn-outline-secondary.btn-lg.px-4.gap-2.d-flex.align-items-center.justify-content-center(href='https://github.com/pirulug/piruadmin-bootstrap-5-dashboard') 
+                i(data-feather='github')
+                | GitHub
+
+      //- BROWSER MOCKUP (Flat / Apple Style)
+      .row.justify-content-center
+        .col-lg-10.col-xl-11
+          //- Container with Border & Radius (No shadows)
+          .border.rounded-3.overflow-hidden
+
+            //- Simulated Browser Toolbar
+            .bg-body-tertiary.border-bottom.d-flex.align-items-center.px-3.py-2
+              //- The 3 dots (Mac Style)
+              .d-flex.gap-2.me-auto
+                .bg-danger.rounded-circle(style="width: 10px; height: 10px;")
+                .bg-warning.rounded-circle(style="width: 10px; height: 10px;")
+                .bg-success.rounded-circle(style="width: 10px; height: 10px;")
+
+              //- Fake Address Bar
+              .d-none.d-md-block.w-50.bg-body.border.rounded-1.text-center.text-body-secondary.small.py-1
+                i.me-1(data-feather='lock' style="width: 12px; height: 12px")
+                | https://pirulug.com/dashboard
+
+              //- Spacer
+              .d-flex.gap-2.ms-auto(style="width: 40px;")
+
+            //- Background Image
+            img.w-100.d-block(src='img/background.png' alt='Dashboard Preview')
 
 block content
-  .d-flex.justify-content-center.my-5
-    img.col-md-8.col-12.mx-auto(src='img/background.png' alt='Imagen de demostración')
+  //- Features Section
+  section.py-5
+    .container.px-5.my-5
+      .row.g-5
+        //- Feature 1
+        .col-lg-4.mb-5.mb-lg-0
+          .d-flex.align-items-center.mb-3
+            .d-flex.align-items-center.justify-content-center.bg-primary.bg-opacity-10.rounded-3(style="width: 45px; height: 45px;")
+              i.text-primary(data-feather='zap')
+            h3.h5.fw-bold.mb-0.ms-3 Lightning Fast
+          p.text-body-secondary Built purely with HTML5 and Bootstrap 5 without heavy JavaScript dependencies for maximum speed.
+
+        //- Feature 2
+        .col-lg-4.mb-5.mb-lg-0
+          .d-flex.align-items-center.mb-3
+            .d-flex.align-items-center.justify-content-center.bg-primary.bg-opacity-10.rounded-3(style="width: 45px; height: 45px;")
+              i.text-primary(data-feather='moon')
+            h3.h5.fw-bold.mb-0.ms-3 Dark Mode
+          p.text-body-secondary Automatically detects system preferences and seamlessly switches between light and dark themes.
+
+        //- Feature 3
+        .col-lg-4
+          .d-flex.align-items-center.mb-3
+            .d-flex.align-items-center.justify-content-center.bg-primary.bg-opacity-10.rounded-3(style="width: 45px; height: 45px;")
+              i.text-primary(data-feather='layout')
+            h3.h5.fw-bold.mb-0.ms-3 Flat Design
+          p.text-body-secondary A modern "Flat UI" design, removing unnecessary shadows and using subtle borders for a clean interface.
+

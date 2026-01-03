@@ -7,7 +7,6 @@
     if (storedTheme) {
       return storedTheme;
     }
-
     return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
       : "light";
@@ -28,20 +27,26 @@
 
   const showActiveTheme = (theme) => {
     const activeThemeIcon = document.querySelector(".theme-icon-active");
-    const btnToActive = document.querySelector(
-      `[data-bs-theme-value="${theme}"]`
-    );
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);
+
+    if (!activeThemeIcon || !btnToActive) {
+      return;
+    }
 
     document.querySelectorAll("[data-bs-theme-value]").forEach((element) => {
       element.classList.remove("active");
     });
 
     btnToActive.classList.add("active");
-    activeThemeIcon.innerHTML = btnToActive.innerHTML;
+    if (btnToActive.innerHTML.trim() !== "") {
+      activeThemeIcon.innerHTML = btnToActive.innerHTML;
+    }
   };
 
   const updateThemeIcon = (theme) => {
     const themeIcon = document.querySelector("#bd-theme .theme-icon-active");
+
+    if (!themeIcon) return;
 
     if (theme === "light") {
       themeIcon.innerHTML = '<i class="fa fa-sun"></i>';

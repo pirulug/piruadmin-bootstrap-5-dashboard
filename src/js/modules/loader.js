@@ -1,10 +1,18 @@
-// Spinner
 var spinner = function () {
-  setTimeout(function () {
-    var spinnerElement = document.getElementById("spinner");
-    if (spinnerElement) {
+
+  var spinnerElement = document.getElementById("spinner");
+
+  if (!spinnerElement) return;
+
+  window.addEventListener('load', function() {
+    setTimeout(function () {
       spinnerElement.classList.remove("show");
-    }
-  }, 1);
+      
+      setTimeout(function() {
+        spinnerElement.remove();
+      }, 500);
+    }, 500);
+  });
 };
+
 spinner();

@@ -6,26 +6,38 @@ html(lang="es")
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description' content='')
-    meta(name='author' content='')
-    
+
+    meta(name='author' content='Pirulug')
+
+    meta(name='robots' content='index, follow')
+
+    meta(name='theme-color' content='#0d6efd')
+
     // Primary Meta Tags
-    title #{pageName} | #{siteName}
-    meta(name='title' content=`${pageName} | ${siteName}`)
-    meta(name='description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
-    meta(name='keywords' content='bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, dashboard, admin dashboard')
+    title #{pageName} - Free Bootstrap 5 Admin Template | #{siteName}
+    meta(name='title' content=`${pageName} - Free Bootstrap 5 Admin Template | ${siteName}`)
+
+    meta(name='description' content=`${siteName} is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.`)
+
+    meta(name='keywords' content='bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss')
+
+    link(rel='canonical' href=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
+
     // Open Graph / Facebook
     meta(property='og:type' content='website')
     meta(property='og:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property='og:title' content=`${pageName} | ${siteName}`)
-    meta(property='og:description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
+    meta(property='og:description' content='Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.')
     meta(property='og:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+
     // Twitter
     meta(property='twitter:card' content='summary_large_image')
     meta(property='twitter:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property='twitter:title' content=`${pageName} | ${siteName}`)
-    meta(property='twitter:description' content=`${siteName} is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.`)
+    meta(property='twitter:description' content='Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.')
     meta(property='twitter:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+
+    meta(property='twitter:creator' content='@pirulug')
 
     // Favicon
     link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
@@ -44,15 +56,15 @@ html(lang="es")
         const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
-      
+
   body
-  
+
     main.w-100
       block content
-     
+
     // Dark & Ligth
     include ../includes/dark-ligth
-    
+
     // Js Bootstrap
     script(src='js/piruadmin.js')
 

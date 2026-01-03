@@ -26,9 +26,18 @@
 - General improvements
 - **Add:**
   - ToastifyJs
-  - 
+
 ## [v1.3.0] - 18/08/24
 - I update packages
 - General improvements
 - **Add:**
   - Lite Youtube
+
+## [v1.4.0] - 24/11/25
+- I update packages
+- General improvements
+
+## [v1.5.0] - 02/01/2026
+- Removed the Blog page from this project and migrated it to the PiruUI project.
+- Updated project dependencies.
+- Improved and updated the Dashboard.

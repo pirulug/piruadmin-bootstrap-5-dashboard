@@ -50,8 +50,8 @@ npm run build
 
 ## License
 
-AdminPirulug is distributed under the [Licencia MIT](./LICENSE).
+PiruAdmin is distributed under the [Licencia MIT](./LICENSE).
 
 ## Author
 
-AdminPirulug was created by <a href="https://github.com/pirulug">Pirulug</a>.
+PiruAdmin was created by <a href="https://github.com/pirulug">Pirulug</a>.

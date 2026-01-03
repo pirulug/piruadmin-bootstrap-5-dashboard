@@ -6,72 +6,145 @@ append config
 
 block content
 
-  .row.g-4
-    .col-sm-6.col-xl-3
-      .card.mb-3
-        .card-body
-          .row
-            .col-auto
-              .stat.stat-primary
-                i.align-middle(data-feather='truck')
-            .col.mt-0
-              h5.text-end Sales
-          h2.h1.mt-1.mb-0.text-end 2.382
-          
-    .col-sm-6.col-xl-3 
-      .card.mb-3
-        .card-body
-          .row
-            .col-auto
-              .stat.stat-success
-                i.align-middle(data-feather='users')
-            .col.mt-0
-              h5.text-end Visitors
-          h2.h1.mt-1.mb-0.text-end 14.212
-          
-    .col-sm-6.col-xl-3
-      .card.mb-3
-        .card-body
-          .row
-            .col-auto
-              .stat.stat-info
-                i.align-middle(data-feather='dollar-sign')
-            .col.mt-0
-              h5.text-end Earnings
-          h2.h1.mt-1.mb-0.text-end $21.300
-          
-    .col-sm-6.col-xl-3  
-      .card.mb-3
-        .card-body
-          .row
-            .col-auto
-              .stat.stat-danger
-                i.align-middle(data-feather='shopping-cart')
-            .col.mt-0
-              h5.text-end Orders
-          h2.h1.mt-1.mb-0.text-end 64
+  //- Fila de Estadísticas
+  .row.g-4.mb-4
+    //- Mixin para no repetir código (DRY)
+    mixin statCard(title, value, icon, color)
+      .col-sm-6.col-xl-3
+        .card.h-100
+          .card-body
+            .row.align-items-center
+              .col-auto
+                .stat(class=`stat-${color}`)
+                  i(data-feather=icon)
+              .col.text-end
+                h6.card-title.text-body-secondary.mb-1= title
+                h2.h3.fw-bold.mb-0= value
 
-  .row.g-4
-    .col-12.col-md-12.col-xxl-6.d-flex.order-3.order-xxl-2
-      .card.mb-3.flex-fill.w-100
+    +statCard('Sales', '2.382', 'truck', 'primary')
+    +statCard('Visitors', '14.212', 'users', 'success')
+    +statCard('Earnings', '$21.300', 'dollar-sign', 'info')
+    +statCard('Orders', '64', 'shopping-cart', 'danger')
+
+  //- Gráficos
+  .row.g-4.mb-4
+    .col-12.col-lg-7.d-flex
+      .card.flex-fill.w-100
         .card-header
           h5.card-title.mb-0 Recent Movement
-        .card-body.py-3
-          canvas#chartjs-dashboard-line
-    .col-12.col-md-12.col-xxl-6.d-flex.order-3.order-xxl-2
-      .card.mb-3.flex-fill.w-100
+        .card-body.py-4
+          //- Contenedor relativo para chart.js responsivo
+          div(style="position: relative; height: 300px;")
+            canvas#chartjs-dashboard-line
+
+    .col-12.col-lg-5.d-flex
+      .card.flex-fill.w-100
         .card-header
           h5.card-title.mb-0 Real-Time
-        .card-body.px-4
+        .card-body.p-4
+          div(style="position: relative; height: 300px;")
+            canvas#chartjs-dashboard-bar
 
-          canvas#chartjs-dashboard-bar
+  .row.g-4.mb-4
+    
+    //- Widget A: Actividad Reciente (Timeline)
+    .col-12.col-lg-4.d-flex
+      .card.flex-fill.w-100
+        .card-header
+          h5.card-title.mb-0 Daily Feed
+        .card-body
+          .timeline-item
+            strong.d-block New update available
+            span.text-body-secondary.small Just now
+            p.mb-0.mt-1.small Release v1.2.0 includes better dark mode support.
+          
+          .timeline-item.timeline-warning
+            strong.d-block New user registered
+            span.text-body-secondary.small 30m ago
+            p.mb-0.mt-1.small User "Pirulug" created an account.
 
+          .timeline-item.timeline-success
+            strong.d-block Big Sale!
+            span.text-body-secondary.small 2h ago
+            p.mb-0.mt-1.small Order #3422 from USA completed.
+    
+    //- Widget B: Objetivos Mensuales (Progress Bars)
+    .col-12.col-lg-4.d-flex
+      .card.flex-fill.w-100
+        .card-header
+          h5.card-title.mb-0 Monthly Targets
+        .card-body
+          
+          .mb-4
+            .d-flex.justify-content-between.mb-1
+              span.fw-bold Sales Goal
+              span.text-primary 75%
+            .progress(style="height: 6px;")
+              .progress-bar.bg-primary(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+
+          .mb-4
+            .d-flex.justify-content-between.mb-1
+              span.fw-bold Visitors
+              span.text-success 50%
+            .progress(style="height: 6px;")
+              .progress-bar.bg-success(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+
+          .mb-4
+            .d-flex.justify-content-between.mb-1
+              span.fw-bold Profit Margin
+              span.text-warning 25%
+            .progress(style="height: 6px;")
+              .progress-bar.bg-warning(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+          
+          .mb-0
+            .d-flex.justify-content-between.mb-1
+              span.fw-bold Churn Rate
+              span.text-danger 10%
+            .progress(style="height: 6px;")
+              .progress-bar.bg-danger(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+
+    //- Widget C: Navegadores (Lista simple)
+    .col-12.col-lg-4.d-flex
+      .card.flex-fill.w-100
+        .card-header
+          h5.card-title.mb-0 Browser Usage
+        .table-responsive
+          table.table.table-hover.my-0.border-top
+            tbody
+              tr
+                td 
+                  i.me-2(data-feather="chrome") 
+                  | Chrome
+                td.text-end.fw-bold 45%
+              tr
+                td 
+                  i.me-2(data-feather="compass") 
+                  | Safari
+                td.text-end.fw-bold 22%
+              tr
+                td 
+                  i.me-2(data-feather="globe") 
+                  | Edge
+                td.text-end.fw-bold 15%
+              tr
+                td 
+                  i.me-2(data-feather="gitlab") 
+                  | Firefox
+                td.text-end.fw-bold 10%
+              tr
+                td 
+                  i.me-2(data-feather="help-circle") 
+                  | Other
+                td.text-end.fw-bold 8%
+
+
+  //- 4. TABLA DE PROYECTOS (Ya existente)
   .row
     .col-12.d-flex
-      .card.flex-fill.overflow-hidden
+      .card.flex-fill
         .card-header
           h5.card-title.mb-0 Latest Projects
-        table.table.table-hover.my-0
+        table.table.table-hover.my-0.border-top
           thead
             tr
               th Name
@@ -87,50 +160,9 @@ block content
               td
                 span.badge.bg-success Done
               td.d-none.d-md-table-cell Vanessa Tucker
-            tr
-              td Project Fireball
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-danger Cancelled
-              td.d-none.d-md-table-cell William Harris
-            tr
-              td Project Hades
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-success Done
-              td.d-none.d-md-table-cell Sharon Lessman
-            tr
-              td Project Nitro
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-warning In progress
-              td.d-none.d-md-table-cell Vanessa Tucker
+            //- ... resto de filas ...
             tr
               td Project Phoenix
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-success Done
-              td.d-none.d-md-table-cell William Harris
-            tr
-              td Project X
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-success Done
-              td.d-none.d-md-table-cell Sharon Lessman
-            tr
-              td Project Romeo
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-success Done
-              td.d-none.d-md-table-cell Christina Mason
-            tr
-              td Project Wombat
               td.d-none.d-xl-table-cell 01/01/2021
               td.d-none.d-xl-table-cell 31/06/2021
               td
@@ -138,101 +170,74 @@ block content
               td.d-none.d-md-table-cell William Harris
 
 block scripts 
-
   script(src='js/chartjs.js')
-
+  
+  //- Script optimizado para Dark Mode
   script.
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      // Función helper para obtener variables CSS de Bootstrap
+      // Esto permite que los gráficos cambien de color si cambias el tema en CSS
+      const getVar = (variable) => getComputedStyle(document.body).getPropertyValue(variable).trim();
 
-    const ctx = document.getElementById('chartjs-dashboard-line').getContext('2d');
-    //- const labels = Utils.months({count: 7});
-    const myChart = new Chart(ctx, {
+      // Configuración común para rejillas (Grid)
+      const gridConfig = {
+        color: 'rgba(120, 130, 140, 0.1)', // Color sutil para las líneas
+        borderColor: 'transparent' // Sin bordes duros en el chart
+      };
+
+      const ctxLine = document.getElementById('chartjs-dashboard-line').getContext('2d');
+      new Chart(ctxLine, {
         type: 'line',
         data: {
-            labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', "Jul", "Ago", "Set", "Oct", "Nov", "Dic"],
-            datasets: [
-              {
-                label: 'Buys',
-                borderColor: '#ff0055',
-                backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                data: [
-                  0,
-                  20,
-                  30,
-                  60,
-                  50,
-                  80,
-                  70,
-                  20,
-                  30,
-                  90,
-                  80,
-                  70
-                ]              
-            },
-              {
-                label: 'Sales',
-                borderColor: '#e67e22',
-                backgroundColor: ["rgba(215, 227, 244, 1)", "rgba(215, 227, 244, 0)"],
-                data: [
-                  0,
-                  90,
-                  30,
-                  10,
-                  20,
-                  70,
-                  10,
-                  60,
-                  50,
-                  80,
-                  70,
-                  80
-                ]              
-            }
-            ]
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+          datasets: [{
+            label: 'Sales ($)',
+            fill: true,
+            backgroundColor: "rgba(255, 0, 85, 0.1)", // Primary con transparencia
+            borderColor: "#ff0055", // Bootstrap Primary color manual o getVar('--bs-primary')
+            data: [2115, 1562, 1584, 1892, 1587, 1923, 2566, 2448, 2805, 3438, 2917, 3327],
+            tension: 0.4, // Curvas suaves (Modern UI)
+            pointRadius: 0, // Sin puntos para un look más limpio
+            pointHoverRadius: 4
+          }]
         },
         options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { intersect: false, mode: 'index' }
+          },
+          scales: {
+            x: { grid: { display: false } }, // Ocultar grid vertical para limpieza
+            y: { 
+              grid: { color: getVar('--bs-border-color-translucent') }, // Grid adaptable al tema
+              beginAtZero: true 
             }
+          }
         }
-    });
+      });
 
-
-    // Bar chart
-    new Chart(document.getElementById("chartjs-dashboard-bar"), {
-      type: "bar",
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
-        datasets: [
-          {
-          label: "USA",
-          backgroundColor: "#9b59b6",
-          data: [80, 79, 76, 99, 55, 62, 48, 4, 55, 73, 45, 60],
-          barPercentage: .75,
-          categoryPercentage: .5
+      // Bar chart
+      new Chart(document.getElementById("chartjs-dashboard-bar"), {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+          datasets: [{
+            label: "Total Orders",
+            backgroundColor: "#ff0055", // Usa variable CSS
+            borderRadius: 4, // Bordes redondeados en las barras (Moderno)
+            barPercentage: 0.6,
+            data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+          }]
         },
-          {
-          label: "UK",
-          backgroundColor: "#e67e22",
-          data: [73, 55, 45, 76, 48, 55, 62, 80, 79, 4, 60, 99],
-          barPercentage: .75,
-          categoryPercentage: .5
-        },
-          {
-          label: "PEN",
-          backgroundColor: "#3498db",
-          data: [48, 73, 4, 99, 79, 80, 62, 60, 76, 55, 55, 45],
-          barPercentage: .75,
-          categoryPercentage: .5
-        },
-        ]
-      },
-      options: {
-        maintainAspectRatio: false,
-        legend: {
-          display: false
-        },
-      }
+        options: {
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false } },
+            y: { grid: { display: false }, display: false } // Ocultar eje Y para diseño minimalista
+          }
+        }
+      });
     });
