@@ -1,12 +1,13 @@
 .main {
   display: flex;
+  flex-direction: column;
   width: 100%;
   min-width: 0;
-  min-height: 100vh;
+  min-height: 100%;
+  flex: 1;
   transition: $sidebar-transition;
   background: $body-bg;
-  flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

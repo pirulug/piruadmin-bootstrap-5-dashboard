@@ -5,7 +5,7 @@ append config
   -pageUrl = 'pages-blank'
 
 block styles
-  link(rel="stylesheet", href="css/toastifyjs.css")
+  link(rel="stylesheet" href="css/toastifyjs.css")
 
 block scripts 
   script(src='js/toastifyjs.js')
@@ -23,6 +23,36 @@ block scripts
 
 block content
 
-  .card   
+  //-.card   
     .card-body 
-      
+
+  .row
+    // COLUMNA STICKY
+    .col-12.col-md-3
+      .card(style="position:sticky;top:1rem;")
+        .card-body
+          h5.card-title Sticky box
+          p.small.text-muted
+            | Este bloque debe quedarse fijo al hacer scroll.
+          ul.small
+            li Item 1
+            li Item 2
+            li Item 3
+            li Item 4
+
+    // COLUMNA CONTENIDO LARGO
+    .col-12.col-md-9
+      .card.mb-3
+        .card-body
+          h5 Contenido largo
+          p.text-muted
+            | Haz scroll para comprobar que el sticky funciona.
+
+      each val in Array(30)
+        .card.mb-3
+          .card-body
+            h6 Bloque #{val + 1}
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+

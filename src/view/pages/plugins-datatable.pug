@@ -1,0 +1,62 @@
+extends ../layouts/dashboard
+
+append config
+  - pageName = 'Datatable'
+  - pageUrl  = 'plugins-datatable'
+
+block content
+  .card
+    .card-header
+      h5.mb-0 Tabla de usuarios (100 registros)
+    .card-body
+      table#usersTable.table.table-striped.table-bordered.w-100
+        thead
+          tr
+            th ID
+            th Usuario
+            th Email
+            th Rol
+            th Estado
+        tbody
+          - for (let i = 1; i <= 100; i++)
+            tr
+              td #{i}
+              td usuario_#{i}
+              td usuario#{i}@mail.com
+              td #{i % 2 === 0 ? 'Administrador' : 'Usuario'}
+              td #{i % 3 === 0 ? 'Inactivo' : 'Activo'}
+
+block styles
+  // DataTables CSS
+  link(
+    rel="stylesheet"
+    href="css/datatables.css"
+  )
+
+block scripts
+  // jQuery (requerido por DataTables)
+  script(
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+  )
+
+  // DataTables core
+  script(src="js/datatables.js")
+
+  // Inicialización
+  script.
+    let table = new DataTable('#usersTable',{
+      responsive: true,
+        pageLength: 10,
+        lengthMenu: [5, 10, 25, 50],
+        order: [[0, 'asc']],
+
+        language: {
+          paginate: {
+          first:   '<i class="fa fa-angles-left"></i>',
+          previous:'<i class="fa fa-angle-left"></i>',
+          next:    '<i class="fa fa-angle-right"></i>',
+          last:    '<i class="fa fa-angles-right"></i>'
+        },
+          url: 'https://cdn.datatables.net/plug-ins/1.13.8/i18n/es-ES.json'
+        }
+    })

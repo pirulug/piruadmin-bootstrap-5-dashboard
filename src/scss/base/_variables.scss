@@ -737,7 +737,7 @@ $placeholder-opacity-min: 0.2 !default;
 // scss-docs-end placeholders
 
 // Cards
-$card-border-color: var(--#{$prefix}body-color-rgb) !default;
+// $card-border-color: transparent !default;
 $card-cap-bg: var(--#{$prefix}body-color-rgb) !default;
 
 // Accordion

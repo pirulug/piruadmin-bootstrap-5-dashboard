@@ -35,6 +35,7 @@ module.exports = {
     sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
     vectormaps: "./src/plugins/vectormaps/vectormaps.js",
     prismjs: "./src/plugins/prismjs/prismjs.js",
+    datatables: "./src/plugins/datatables/datatables.js",
     custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",

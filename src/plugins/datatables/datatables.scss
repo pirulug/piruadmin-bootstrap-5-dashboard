@@ -1,0 +1,161 @@
+@import "~datatables.net-dt/css/dataTables.dataTables.css";
+@import "~datatables.net-responsive-dt/css/responsive.dataTables.css";
+
+// VARIABLES
+@import "~bootstrap/scss/_functions";
+@import "../../scss/base/variables";
+@import "../../scss/base/variables-dark";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_variables-dark";
+@import "~bootstrap/scss/_mixins";
+
+// .dt-container {
+//   background: $body-bg;
+//   color: $body-color;
+// }
+
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     .dt-container {
+//       background: $body-bg-dark;
+//       color: $body-color-dark;
+//     }
+//   }
+// }
+
+
+.dt-container {
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 0.95rem !important;
+  color: #212529 !important;
+
+  /* 1. Inputs (Select y Search) */
+  .dt-input {
+    border: 1px solid $border-color !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    background-color: #fff !important;
+    color: #212529 !important;
+    font-size: 0.9rem !important;
+    outline: none !important;
+    margin-left: 8px !important;
+
+    &:focus {
+      border-color: $primary !important;
+      box-shadow: 0 0 0 0.25rem rgba($primary, 0.25) !important;
+      /* CSS puro */
+    }
+  }
+
+  /* Labels */
+  label {
+    font-weight: 500 !important;
+    color: $body-color !important;
+  }
+
+  /* 3. Info (Mostrando 1 a 10...) */
+  .dt-info {
+    color: $body-color !important;
+    font-size: 0.85rem !important;
+    padding-top: 8px !important;
+  }
+
+  /* 4. Paginación */
+  .dt-paging {
+    nav {
+      display: flex !important;
+      justify-content: flex-end !important;
+      gap: 4px !important;
+    }
+
+    .dt-paging-button {
+      border: none !important;
+      border-radius: 4px !important;
+      background: transparent !important;
+      color: $primary !important;
+      padding: 6px 12px !important;
+      font-size: 0.9rem !important;
+      cursor: pointer !important;
+      box-shadow: none !important;
+
+      &:hover:not(.disabled) {
+        background-color: rgba($primary, 0.1) !important;
+        color: $primary !important;
+        filter: brightness(0.8);
+      }
+
+
+
+      &.current {
+        background: $primary !important;
+        color: #fff !important;
+      }
+
+      &.disabled {
+        color: #ced4da !important;
+        cursor: not-allowed !important;
+      }
+    }
+  }
+}
+
+/* =========================================
+   MODO OSCURO (DARK)
+   ========================================= */
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .dt-container {
+      color: #e9ecef !important;
+
+      /* Inputs Dark */
+      .dt-input {
+        background-color: $body-bg-dark !important;
+        border-color: $border-color-dark !important;
+        color: #e9ecef !important;
+
+        &:focus {
+          border-color: $primary !important;
+          color: #fff !important;
+        }
+      }
+
+      label {
+        color: $body-color-dark !important;
+      }
+
+
+      .dt-info {
+        color: $body-color-dark !important;
+      }
+
+      .dt-paging {
+        .dt-paging-button {
+          /* Aclaramos el color primario con filtro CSS para modo oscuro */
+          color: $primary !important;
+          filter: brightness(1.2);
+
+          &:hover:not(.disabled) {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: #fff !important;
+            filter: none;
+          }
+
+          &.current {
+            background: $primary !important;
+            color: #fff !important;
+            filter: none;
+          }
+
+          &.disabled {
+            color: #6c757d !important;
+            filter: none;
+
+            &:hover {
+              color: #6c757d !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -68,6 +68,8 @@
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "chart.js": "^4.5.1",
+    "datatables.net-dt": "^2.3.6",
+    "datatables.net-responsive-dt": "^3.0.7",
     "feather-icons": "4.29.2",
     "flatpickr": "4.6.13",
     "jsvectormap": "1.7.0",

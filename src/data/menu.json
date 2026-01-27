@@ -219,6 +219,11 @@
         "link": "plugins-charts-chartjs"
       },
       {
+        "title": "datatable",
+        "path": "plugins-datatable",
+        "link": "plugins-datatable"
+      },
+      {
         "title": "Maps",
         "path": "plugins-maps-google",
         "link": "plugins-maps-google"
