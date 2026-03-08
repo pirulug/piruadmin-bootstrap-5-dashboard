@@ -1,10 +1,10 @@
 .card {
-  border-color: $body-bg;
+  border-color: transparent;
 }
 
 .card-header,
 .card-footer {
-  border-color: $body-bg;
+  border-color: transparent;
 }
 
 @if $enable-dark-mode {
@@ -13,7 +13,7 @@
     .card,
     .card-header,
     .card-footer {
-      border-color: $body-bg-dark;
+      border-color: transparent;
     }
   }
 }
