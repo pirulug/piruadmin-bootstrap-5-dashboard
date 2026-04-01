@@ -26,14 +26,14 @@
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <meta property="twitter:creator" content="@pirulug">
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="css/fontawesome.css">
-    <link rel="stylesheet" href="css/bootstrapicons.css">
-    <link rel="stylesheet" href="css/piruadmin.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/bootstrapicons.css">
+    <link rel="stylesheet" href="./css/piruadmin.css">
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -49,78 +49,81 @@
 <div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
   <div class="position-relative" style="width: 4rem; height: 4rem;">
     <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
-    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="img/logo.png" alt="Logo" width="30" height="30"></div>
+    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="./img/logo.png" alt="Logo" width="30" height="30"></div>
   </div>
 </div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
-        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
+        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="./index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item active"><a class="sidebar-link" href="dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
+            <li class="sidebar-item active"><a class="sidebar-link" href="./dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-blank.html">Blank Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-timeline.html">Timeline</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="pages-search.html">Search</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./pages/blank.html">Blank Page</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./pages/timeline.html">Timeline</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./pages/search.html">Search</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="auth" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="auth-sign-in.html">Sign In</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="auth-sign-up.html">Sign Up</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="auth-reset-password.html">Reset Password</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="auth-recover-password.html">Recover Password</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./auth/sign-in.html">Sign In</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./auth/sign-up.html">Sign Up</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./auth/reset-password.html">Reset Password</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./auth/recover-password.html">Recover Password</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="account-profile.html">Profile</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="account-settings.html">Settings</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./account/profile.html">Profile</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./account/settings.html">Settings</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="errors" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="error-404.html">404</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="error-500.html">500</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./error/404.html">404</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./error/500.html">500</a></li>
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-badges.html">Badges</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General UI</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-images.html">Images</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-tabs.html">Tabs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="ui-avatar.html">Avatar</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/alerts.html">Alerts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/badges.html">Badges</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/buttons.html">Buttons</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/cards.html">Cards</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/general.html">General UI</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/images.html">Images</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/tabs.html">Tabs</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./ui/avatar.html">Avatar</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse"><i class="align-middle" data-feather="grid"></i><span class="align-middle">Tables</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="tables" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="table-bootstrap.html">Table Bootstrap</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./tables/bootstrap.html">Table Bootstrap</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="forms-tagify.html">Tagify</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./forms/basic-inputs.html">Basic Inputs</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./forms/tagify.html">Tagify</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Icons</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="icons" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-feather.html">Feather</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-awesome.html">Font Awesome</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="icons-bootstrap.html">Bootstrap Icons</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./icons/feather.html">Feather</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./icons/awesome.html">Font Awesome</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./icons/bootstrap.html">Bootstrap Icons</a></li>
               </ul>
             </li>
             <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
               <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="plugins-sweetalert.html">SweetAlert 2</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="plugins-charts-chartjs.html">Charts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="plugins-maps-google.html">Maps</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/sweetalert.html">SweetAlert 2</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/toastify.html">Toastify JS</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/charts.html">Charts</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/datatable.html">Datatable</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/maps-google.html">Maps</a></li>
+                <li class="sidebar-item"><a class="sidebar-link" href="./plugins/lite-youtube.html">Lite YouTube</a></li>
               </ul>
             </li>
           </ul>
@@ -227,8 +230,8 @@
       </li>
       <li class="nav-item dropdown"><a class="nav-link dropdown-toggle d-inline-block" href="#" data-bs-toggle="dropdown">
           <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
-        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="account-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="account-settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="./account/profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="./account/settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
           <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
         </div>
       </li>
@@ -456,7 +459,7 @@
           <div class="container-fluid">
             <div class="row text-muted">
               <div class="col-6 text-start">
-                <p class="mb-0"><a class="text-muted" href="index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
+                <p class="mb-0"><a class="text-muted" href="./index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
               </div>
               <div class="col-6 text-end">
                 <p class="mb-0">
@@ -470,9 +473,9 @@
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="js/feathericons.js"></script>
-    <script src="js/piruadmin.js"></script>
-    <script src="js/chartjs.js"></script>
+    <script src="./js/feathericons.js"></script>
+    <script src="./js/piruadmin.js"></script>
+    <script src="./js/chartjs.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         

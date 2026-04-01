@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="author" content="Pirulug">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d6efd">
+    <!-- Primary Meta Tags-->
+    <title>Sign In - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="Sign In - Free Bootstrap 5 Admin Template | PiruAdmin">
+    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
+    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
+    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-sign-in.html">
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-sign-in.html">
+    <meta property="og:title" content="Sign In | PiruAdmin">
+    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
+    <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-sign-in.html">
+    <meta property="twitter:title" content="Sign In | PiruAdmin">
+    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
+    <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="twitter:creator" content="@pirulug">
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <!-- Css Bootstrap-->
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/piruadmin.css">
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+      
+    </script>
+  </head>
+  <body>
+    <main class="w-100">
+      <div class="d-flex min-vh-100 align-items-center justify-content-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-4">
+              <div class="text-center mb-4">
+                <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 mb-3" style="width: 48px; height: 48px;"><i class="fa-solid fa-layer-group fs-4"></i></div>
+                <h4 class="fw-bold mb-1">Welcome back</h4>
+                <p class="text-body-secondary">Sign in to manage your account</p>
+              </div>
+              <div class="card border border-secondary-subtle bg-body rounded-3">
+                <div class="card-body p-4 p-sm-5">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold" for="inputEmail">Email</label>
+                      <input class="form-control form-control-lg" id="inputEmail" type="email" name="email" placeholder="name@company.com">
+                    </div>
+                    <div class="mb-3">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <label class="form-label fw-semibold" for="inputPassword">Password</label><a class="small text-decoration-none" href="../auth/reset-password.html">Forgot password?</a>
+                      </div>
+                      <div class="input-group input-group-lg">
+                        <input class="form-control border-end-0" id="inputPassword" type="password" name="password" placeholder="Enter password">
+                        <button class="input-group-text bg-transparent border-start-0" id="togglePassword" type="button"><i class="fa-regular fa-eye-slash text-body-secondary"></i></button>
+                      </div>
+                    </div>
+                    <div class="mb-4">
+                      <div class="form-check">
+                        <input class="form-check-input" id="rememberMe" type="checkbox" name="remember-me" checked="checked">
+                        <label class="form-check-label text-body-secondary" for="rememberMe">Remember me on this device</label>
+                      </div>
+                    </div>
+                    <div class="d-grid mb-4">
+                      <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                    </div>
+                    <div class="position-relative text-center mb-4">
+                      <hr class="border-secondary-subtle m-0"><span class="position-absolute top-50 start-50 translate-middle bg-body px-2 text-body-secondary small">Or sign in with</span>
+                    </div>
+                    <div class="vstack gap-2">
+                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-google me-2"></i>Google</button>
+                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-github me-2"></i>GitHub</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <p class="text-body-secondary mb-0">Don't have an account? <a class="fw-bold text-decoration-none" href="../auth/sign-up.html">Create an account</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Dark & Ligth-->
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle z-3">
+  <button class="btn btn-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active mr-1" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></button>
+  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+    <li>
+      <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
+    </li>
+    <li>
+      <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="fa fa-moon opacity-50 me-2"></i>Dark<i class="pr-check fa fa-check ms-auto d-none"></i></button>
+    </li>
+    <li>
+      <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" aria-pressed="true"><i class="fa fa-circle-half-stroke opacity-50 me-2"></i>Auto<i class="pr-check fa fa-check ms-auto d-none"></i></button>
+    </li>
+  </ul>
+</div>
+    <!-- Js Bootstrap-->
+    <script src="../js/piruadmin.js"></script>
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("inputPassword");
+      const icon = togglePassword.querySelector("i");
+      
+      togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        passwordInput.focus();
+        
+        if(isPassword) {
+          icon.classList.remove("fa-eye-slash");
+          icon.classList.add("fa-eye");
+        } else {
+          icon.classList.remove("fa-eye");
+          icon.classList.add("fa-eye-slash");
+        }
+      });
+    </script>
+  </body>
+</html>
