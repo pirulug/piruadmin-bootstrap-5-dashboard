@@ -41,16 +41,16 @@ html(lang='en')
     meta(property='twitter:creator' content='@pirulug')
 
     // Favicon
-    link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
-    link(rel='manifest' href='img/favicon/site.webmanifest')
+    link(rel='apple-touch-icon' sizes='180x180' href=baseUrl + 'img/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href=baseUrl + 'img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href=baseUrl + 'img/favicon/favicon-16x16.png')
+    link(rel='manifest' href=baseUrl + 'img/favicon/site.webmanifest')
 
     // Core theme CSS (includes Bootstrap)
-    link(rel="stylesheet" href="css/fontawesome.css")
-    link(href='css/piruadmin.css' rel='stylesheet')
+    link(rel="stylesheet" href=baseUrl + "css/fontawesome.css")
+    link(href=baseUrl + 'css/piruadmin.css' rel='stylesheet')
 
-    link(rel='preload' href='css/piruadmin.css' as='style')
+    link(rel='preload' href=baseUrl + 'css/piruadmin.css' as='style')
 
     //- 5. SCHEMA.ORG (JSON-LD): Esto ayuda a Google a entender que es un "Software"
     script(type='application/ld+json').
@@ -98,5 +98,5 @@ html(lang='en')
     include ../includes/dark-ligth
 
     // Core theme JS
-    script(src='js/feathericons.js')
-    script(src='js/piruadmin.js')
+    script(src=baseUrl + 'js/feathericons.js')
+    script(src=baseUrl + 'js/piruadmin.js')

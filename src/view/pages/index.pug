@@ -2,7 +2,7 @@ extends ../layouts/home
 
 append config
   -pageName = 'Index'
-  -pageUrl = 'index'
+  - pageUrl = 'index'
 
 block header
   //- Main Header
@@ -20,7 +20,7 @@ block header
 
             //- Action Buttons
             .d-grid.gap-2.d-sm-flex.justify-content-sm-center.mb-5
-              a.btn.btn-primary.btn-lg.px-4.gap-2.d-flex.align-items-center.justify-content-center(href='dashboard.html') 
+              a.btn.btn-primary.btn-lg.px-4.gap-2.d-flex.align-items-center.justify-content-center(href=baseUrl + 'dashboard.html') 
                 i(data-feather='layout')
                 | View Demo
               a.btn.btn-outline-secondary.btn-lg.px-4.gap-2.d-flex.align-items-center.justify-content-center(href='https://github.com/pirulug/piruadmin-bootstrap-5-dashboard') 
@@ -50,7 +50,7 @@ block header
               .d-flex.gap-2.ms-auto(style="width: 40px;")
 
             //- Background Image
-            img.w-100.d-block(src='img/background.png' alt='Dashboard Preview')
+            img.w-100.d-block(src=baseUrl + 'img/background.png' alt='Dashboard Preview')
 
 block content
   //- Features Section

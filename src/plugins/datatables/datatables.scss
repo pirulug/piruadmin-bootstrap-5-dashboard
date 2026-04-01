@@ -1,13 +1,13 @@
-@import "~datatables.net-dt/css/dataTables.dataTables.css";
-@import "~datatables.net-responsive-dt/css/responsive.dataTables.css";
+@import "datatables.net-dt/css/dataTables.dataTables.css";
+@import "datatables.net-responsive-dt/css/responsive.dataTables.css";
 
 // VARIABLES
-@import "~bootstrap/scss/_functions";
+@import "bootstrap/scss/_functions";
 @import "../../scss/base/variables";
 @import "../../scss/base/variables-dark";
-@import "~bootstrap/scss/_variables";
-@import "~bootstrap/scss/_variables-dark";
-@import "~bootstrap/scss/_mixins";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_variables-dark";
+@import "bootstrap/scss/_mixins";
 
 // .dt-container {
 //   background: $body-bg;

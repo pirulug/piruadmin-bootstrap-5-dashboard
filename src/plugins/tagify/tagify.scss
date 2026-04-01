@@ -2,12 +2,12 @@
 @import "../../../node_modules/@yaireo/tagify/dist/tagify.css";
 
 // VARIABLES
-@import "~bootstrap/scss/_functions";
+@import "bootstrap/scss/_functions";
 @import "../../scss/base/variables";
 @import "../../scss/base/variables-dark";
-@import "~bootstrap/scss/_variables";
-@import "~bootstrap/scss/_variables-dark";
-@import "~bootstrap/scss/_mixins";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_variables-dark";
+@import "bootstrap/scss/_mixins";
 
 .tagify {
   // display: block;

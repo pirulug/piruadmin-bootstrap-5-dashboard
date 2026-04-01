@@ -41,15 +41,15 @@ html(lang="es")
     meta(property='twitter:creator' content='@pirulug')
 
     // Favicon
-    link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
-    link(rel='manifest' href='img/favicon/site.webmanifest')
+    link(rel='apple-touch-icon' sizes='180x180' href=baseUrl + 'img/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href=baseUrl + 'img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href=baseUrl + 'img/favicon/favicon-16x16.png')
+    link(rel='manifest' href=baseUrl + 'img/favicon/site.webmanifest')
 
     // Css Bootstrap
-    link(rel="stylesheet" href="css/fontawesome.css")
-    link(rel="stylesheet" href="css/bootstrapicons.css")
-    link(rel="stylesheet" href="css/piruadmin.css")
+    link(rel="stylesheet" href=baseUrl + "css/fontawesome.css")
+    link(rel="stylesheet" href=baseUrl + "css/bootstrapicons.css")
+    link(rel="stylesheet" href=baseUrl + "css/piruadmin.css")
 
     script.
       (function () {
@@ -89,8 +89,9 @@ html(lang="es")
     //- include ../includes/dark-ligth
 
     // Js Bootstrap
-    script(src='js/feathericons.js')
-    script(src='js/piruadmin.js')
+    script(src=baseUrl + 'js/feathericons.js')
+    script(src=baseUrl + 'js/piruadmin.js')
+
 
     block scripts
 

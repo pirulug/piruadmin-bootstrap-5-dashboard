@@ -1,0 +1,675 @@
+extends ../../layouts/dashboard
+
+append config
+  -pageName = 'Buttons'
+  - pageUrl = 'ui/buttons'
+
+block content
+
+  .card.mb-3
+    .card-header
+      h3.card-title Standard Buttons
+    .card-body
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Normal
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-primary.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-secondary.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-success.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-warning.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-danger.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-info.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-dark.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Active state
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-primary.active.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-secondary.active.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-success.active.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-warning.active.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-danger.active.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-info.active.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-dark.active.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light.active.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Disabled
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-primary.disabled.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-secondary.disabled.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-success.disabled.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-warning.disabled.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-danger.disabled.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-info.disabled.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-dark.disabled.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light.disabled.w-100(href='#')
+            | Light
+
+  .card.mb-3
+    .card-header
+      h3.card-title Outline Buttons
+    .card-body
+      p
+        | Use 
+        code .btn-outline-*
+        |  class for outline buttons.
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Normal
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-primary.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-secondary.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-success.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-warning.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-danger.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-info.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-dark.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-outline-light.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Active state
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-primary.active.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-secondary.active.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-success.active.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-warning.active.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-danger.active.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-info.active.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-dark.active.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-outline-light.active.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Disabled
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-primary.disabled.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-secondary.disabled.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-success.disabled.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-warning.disabled.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-danger.disabled.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-info.disabled.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-outline-dark.disabled.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-outline-light.disabled.w-100(href='#')
+            | Light
+
+  .card.mb-3
+    .card-header
+      h3.card-title Light Buttons
+    .card-body
+      p
+        | Use 
+        code .btn-light-*
+        |  class for light buttons.
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Normal
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-primary.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-secondary.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-success.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-warning.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-danger.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-info.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-dark.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light-light.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Active state
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-primary.active.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-secondary.active.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-success.active.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-warning.active.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-danger.active.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-info.active.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-dark.active.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light-light.active.w-100(href='#')
+            | Light
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Disabled
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-primary.disabled.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-secondary.disabled.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-success.disabled.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-warning.disabled.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-danger.disabled.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-info.disabled.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-light-dark.disabled.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light-light.disabled.w-100(href='#')
+            | Light
+
+  .card.mb-3
+    .card-header
+      h3.card-title Square Buttons
+    .card-body
+      p
+        | Use 
+        code .rounded-0
+        |  class for square buttons.
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Normal
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-primary.rounded-0.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-secondary.rounded-0.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-success.rounded-0.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-warning.rounded-0.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-danger.rounded-0.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-info.rounded-0.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-dark.rounded-0.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light.rounded-0.w-100(href='#')
+            | Light
+
+  .card.mb-3
+    .card-header
+      h3.card-title Pill Buttons
+    .card-body
+      p
+        | Use 
+        code .rounded-pill
+        |  class for pill buttons.
+      .row.g-2.align-items-center
+        .col-12.col-xl-2.font-weight-semibold Normal
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-primary.rounded-pill.w-100(href='#')
+            | Primary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-secondary.rounded-pill.w-100(href='#')
+            | Secondary
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-success.rounded-pill.w-100(href='#')
+            | Success
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-warning.rounded-pill.w-100(href='#')
+            | Warning
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-danger.rounded-pill.w-100(href='#')
+            | Danger
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-info.rounded-pill.w-100(href='#')
+            | Info
+        .col-6.col-sm-4.col-md-2.col-xl.py-3
+          a.btn.btn-dark.rounded-pill.w-100(href='#')
+            | Dark
+        .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
+          a.btn.btn-light.rounded-pill.w-100(href='#')
+            | Light
+
+  .card.mb-3
+    .card-header
+      h3.card-title Socials Buttons
+    .card-body
+      .row.g-2.row-cols-lg-6.row-cols-2.align-items-center
+        .col.py-3
+          a.btn.btn-facebook.w-100(href='#')
+            i.fab.fa-facebook
+            |  Facebook
+        .col.py-3
+          a.btn.btn-twitter.w-100(href='#')
+            i.fab.fa-twitter
+            |  Twitter
+        .col.py-3
+          a.btn.btn-x-twitter.w-100(href='#')
+            i.fab.fa-x-twitter
+            |  X-twitter
+        .col.py-3
+          a.btn.btn-google.w-100(href='#')
+            i.fab.fa-google
+            |  Google
+        .col.py-3
+          a.btn.btn-youtube.w-100(href='#')
+            i.fab.fa-youtube
+            |  youtube
+        .col.py-3
+          a.btn.btn-linkedin.w-100(href='#')
+            i.fab.fa-linkedin
+            | Linkedin
+        .col.py-3
+          a.btn.btn-instagram.w-100(href='#')
+            i.fab.fa-instagram
+            | Instagram
+        .col.py-3
+          a.btn.btn-pinterest.w-100(href='#')
+            i.fab.fa-pinterest
+            | Pinterest
+        .col.py-3
+          a.btn.btn-snapchat.w-100(href='#')
+            i.fab.fa-snapchat
+            | Snapchat
+        .col.py-3
+          a.btn.btn-tiktok.w-100(href='#')
+            i.fab.fa-tiktok
+            | Tiktok
+        .col.py-3
+          a.btn.btn-whatsapp.w-100(href='#')
+            i.fab.fa-whatsapp
+            | Whatsapp
+        .col.py-3
+          a.btn.btn-amazon.w-100(href='#')
+            i.fab.fa-amazon
+            | Amazon
+        .col.py-3
+          a.btn.btn-microsoft.w-100(href='#')
+            i.fab.fa-microsoft
+            | Microsoft
+        .col.py-3
+          a.btn.btn-apple.w-100(href='#')
+            i.fab.fa-apple
+            | Apple
+        .col.py-3
+          a.btn.btn-samsung.w-100(href='#')
+            i.fa.fa-circle
+            | Samsung
+        .col.py-3
+          a.btn.btn-tesla.w-100(href='#')
+            i.fa.fa-circle
+            | Tesla
+        .col.py-3
+          a.btn.btn-spotify.w-100(href='#')
+            i.fab.fa-spotify
+            | Spotify
+        .col.py-3
+          a.btn.btn-netflix.w-100(href='#')
+            i.fa.fa-circle
+            | Netflix
+        .col.py-3
+          a.btn.btn-adobe.w-100(href='#')
+            i.fa.fa-circle
+            | Adobe
+        .col.py-3
+          a.btn.btn-nvidia.w-100(href='#')
+            i.fa.fa-circle
+            |  Nvidia
+        .col.py-3
+          a.btn.btn-paypal.w-100(href='#')
+            i.fab.fa-paypal
+            |  Paypal
+        .col.py-3
+          a.btn.btn-github.w-100(href='#')
+            i.fab.fa-github
+            |  Github
+        .col.py-3
+          a.btn.btn-dribbble.w-100(href='#')
+            i.fab.fa-dribbble
+            |  Dribbble
+        .col.py-3
+          a.btn.btn-vimeo.w-100(href='#')
+            i.fab.fa-vimeo
+            |  Vimeo
+        .col.py-3
+          a.btn.btn-flickr.w-100(href='#')
+            i.fab.fa-flickr
+            | Flickr
+        .col.py-3
+          a.btn.btn-bitbucket.w-100(href='#')
+            i.fab.fa-bitbucket
+            |  Bitbucket
+
+  .card.mb-3
+    .card-body
+      .row.g-2.row-cols-lg-6.row-cols-2.align-items-center 
+        .col.py-3 
+          a.btn.btn-primary.w-100(href="#")
+            i.fa.fa-smile.me-1
+            | Primary
+        .col.py-3 
+          a.btn.btn-secondary.w-100(href="#")
+            i.fas.fa-globe-americas.me-1
+            | Secondary
+        .col.py-3 
+          a.btn.btn-success.w-100(href="#")
+            i.fa.fa-check.me-1
+            | Success
+        .col.py-3 
+          a.btn.btn-danger.w-100(href="#")
+            i.fa.fa-times.me-1
+            | Danger
+        .col.py-3 
+          a.btn.btn-warning.w-100(href="#")
+            i.fa.fa-exclamation.me-1
+            | Warning
+        .col.py-3 
+          a.btn.btn-info.w-100(href="#")
+            i.fa.fa-info.me-1
+            | Info
+      div.text-center
+            button.btn.btn-primary
+              i.far.fa-smile
+            button.btn.btn-secondary
+              i.fas.fa-globe-americas
+            button.btn.btn-success
+              i.fas.fa-check
+            button.btn.btn-danger
+              i.fas.fa-times
+            button.btn.btn-warning
+              i.fas.fa-exclamation
+            button.btn.btn-info
+              i.fas.fa-info
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Button Sizes
+          h6.card-subtitle.text-muted Fancy larger or smaller buttons.
+        .card-body.text-center
+          .mb-3
+            button.btn.btn-primary.btn-sm Small
+            button.btn.btn-primary Medium
+            button.btn.btn-primary.btn-lg Large
+          div
+            button.btn.btn-primary.btn-sm
+              i.fas.fa-globe-americas
+              |  Small
+            button.btn.btn-primary
+              i.fas.fa-globe-americas
+              |  Medium
+            button.btn.btn-primary.btn-lg
+              i.fas.fa-globe-americas
+              |  Large
+      .card.mb-3
+        .card-header
+          h5.card-title Button Dropdown
+          h6.card-subtitle.text-muted Dropdowns styles with buttons.
+        .card-body.text-center
+          .mb-3
+            .btn-group
+              button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Primary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Secondary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-success.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Success
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Danger
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Warning
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group
+              button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Info
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+          div
+            .btn-group.btn-group-sm
+              button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Primary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Secondary
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-success.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Success
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Danger
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-warning.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Warning
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+            .btn-group.btn-group-sm
+              button.btn.btn-info.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                | Info
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+                .dropdown-divider
+                a.dropdown-item(href='#') Separated link
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Button Group
+          h6.card-subtitle.text-muted Button group components.
+        .card-body
+          h6.card-subtitle.mb-2.text-muted Horizontal button group
+          .btn-group.btn-group-lg.mb-3(role='group' aria-label='Large button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          br
+          .btn-group.mb-3(role='group' aria-label='Default button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          br
+          .btn-group.btn-group-sm.mb-4(role='group' aria-label='Small button group')
+            button.btn.btn-secondary(type='button') Left
+            button.btn.btn-secondary(type='button') Middle
+            button.btn.btn-secondary(type='button') Right
+          h6.card-subtitle.mb-2.text-muted Button toolbar
+          .btn-toolbar.mb-4(role='toolbar' aria-label='Toolbar with button groups')
+            .btn-group.me-2(role='group' aria-label='First group')
+              button.btn.btn-secondary(type='button') 1
+              button.btn.btn-secondary(type='button') 2
+              button.btn.btn-secondary(type='button') 3
+              button.btn.btn-secondary(type='button') 4
+            .btn-group.me-2(role='group' aria-label='Second group')
+              button.btn.btn-secondary(type='button') 5
+              button.btn.btn-secondary(type='button') 6
+              button.btn.btn-secondary(type='button') 7
+            .btn-group(role='group' aria-label='Third group')
+              button.btn.btn-secondary(type='button') 8
+          h6.card-subtitle.mb-2.text-muted Vertical button group
+          .btn-toolbar
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-primary(type='button') Button
+              button.btn.btn-primary(type='button') Button
+              button.btn.btn-primary(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-success(type='button') Button
+              button.btn.btn-success(type='button') Button
+              button.btn.btn-success(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-warning(type='button') Button
+              button.btn.btn-warning(type='button') Button
+              button.btn.btn-warning(type='button') Button
+            .btn-group-vertical.me-2(role='group' aria-label='Vertical button group')
+              button.btn.btn-danger(type='button') Button
+              button.btn.btn-danger(type='button') Button
+              button.btn.btn-danger(type='button') Button
+

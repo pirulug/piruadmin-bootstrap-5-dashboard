@@ -41,3 +41,12 @@
 - Removed the Blog page from this project and migrated it to the PiruUI project.
 - Updated project dependencies.
 - Improved and updated the Dashboard.
+
+## [v1.6.0] - 01/04/2026
+- **Add:**
+  - Integrated Toastify JS and Lite YouTube plugins with modern interactive demo pages.
+  - Added collapsible "View Code" sections to all plugin and form demo pages for a cleaner UI.
+  - Integrated PrismJS and "Copy to Clipboard" functionality for all code examples.
+- **Improve:**
+  - Modernized the UI and structure of plugin demo pages (Charts, SweetAlert 2, Datatables, Google Maps, Tagify).
+  - Updated sidebar navigation menu with new plugin entries.

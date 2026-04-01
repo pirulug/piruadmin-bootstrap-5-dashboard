@@ -1,0 +1,136 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'Datatable'
+  - pageUrl  = 'plugins/datatable'
+
+block styles
+  // DataTables CSS
+  link(
+    rel="stylesheet"
+    href=baseUrl + "css/datatables.css"
+  )
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+
+block content
+  .card
+    .card-header
+      h5.mb-0 Tabla de usuarios (100 registros)
+    .card-body
+      table#usersTable.table.table-striped.table-bordered.w-100
+        thead
+          tr
+            th ID
+            th Usuario
+            th Email
+            th Rol
+            th Estado
+        tbody
+          - for (let i = 1; i <= 100; i++)
+            tr
+              td #{i}
+              td usuario_#{i}
+              td usuario#{i}@mail.com
+              td #{i % 2 === 0 ? 'Administrador' : 'Usuario'}
+              td #{i % 3 === 0 ? 'Inactivo' : 'Activo'}
+      
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseDatatable' aria-expanded='false' aria-controls='collapseDatatable')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseDatatable.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              let table = new DataTable('#usersTable',{
+                responsive: true,
+                pageLength: 10,
+                lengthMenu: [5, 10, 25, 50],
+                order: [[0, 'asc']],
+                language: {
+                  url: 'https://cdn.datatables.net/plug-ins/1.13.8/i18n/es-ES.json'
+                }
+              });
+
+//- styles moved to top
+
+block scripts
+  // jQuery (requerido por DataTables)
+  script(
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+  )
+
+  // DataTables core
+  script(src=baseUrl + "js/datatables.js")
+  script(src=baseUrl + "js/prismjs.js")
+
+  script.
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        } else {
+          alert("No se pudo copiar el texto");
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+        alert("Error al copiar");
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }
+
+  // Inicialización
+  script.
+    let table = new DataTable('#usersTable',{
+      responsive: true,
+        pageLength: 10,
+        lengthMenu: [5, 10, 25, 50],
+        order: [[0, 'asc']],
+
+        language: {
+          paginate: {
+          first:   '<i class="fa fa-angles-left"></i>',
+          previous:'<i class="fa fa-angle-left"></i>',
+          next:    '<i class="fa fa-angle-right"></i>',
+          last:    '<i class="fa fa-angles-right"></i>'
+        },
+          url: 'https://cdn.datatables.net/plug-ins/1.13.8/i18n/es-ES.json'
+        }
+    })

@@ -1,0 +1,133 @@
+extends ../../layouts/dashboard
+
+append config
+  -pageName = 'Google Maps'
+  - pageUrl = 'plugins/maps-google'
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+
+block content
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-3
+        .card-header
+          h5.card-title Default Map
+          h6.card-subtitle.text-muted Displays the default road map view.
+        .card-body
+          #default_map.content(style='height: 300px;')
+          .text-center.mt-3
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseMapDefault' aria-expanded='false' aria-controls='#collapseMapDefault')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseMapDefault.mt-3
+            .demo-code-preview(data-label='CODE EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-js
+                code.language-js.
+                  var defaultMap = {
+                    zoom: 14,
+                    center: { lat: 40.712784, lng: -74.005941 },
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                  };
+                  new google.maps.Map(document.getElementById("default_map"), defaultMap);
+    .col-12.col-lg-6
+      .card
+        .card-header
+          h5.card-title Hybrid Map
+          h6.card-subtitle.text-muted Displays a mixture of normal and satellite views.
+        .card-body
+          #hybrid_map.content(style='height: 300px;')
+          .text-center.mt-3
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseMapHybrid' aria-expanded='false' aria-controls='#collapseMapHybrid')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseMapHybrid.mt-3
+            .demo-code-preview(data-label='CODE EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-js
+                code.language-js.
+                  var hybridMap = {
+                    zoom: 14,
+                    center: { lat: 40.712784, lng: -74.005941 },
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                  };
+                  new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
+
+block scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&callback=initMaps' async defer)
+  script(src=baseUrl + "js/prismjs.js")
+
+  script.
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        } else {
+          alert("No se pudo copiar el texto");
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+        alert("Error al copiar");
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }
+
+  script.
+    function initMaps() {
+      var defaultMap = {
+        zoom: 14,
+        center: {
+          lat: 40.712784,
+          lng: -74.005941
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      new google.maps.Map(document.getElementById("default_map"), defaultMap);
+      var hybridMap = {
+        zoom: 14,
+        center: {
+          lat: 40.712784,
+          lng: -74.005941
+        },
+        mapTypeId: google.maps.MapTypeId.HYBRID
+      };
+      new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
+      }

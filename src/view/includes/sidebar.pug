@@ -1,11 +1,12 @@
 block config
 
-- var menuItems = require('../../data/menu.json')
+- var menuItems = menu
 
 nav#sidebar.sidebar.js-sidebar
   .sidebar-content.js-simplebar
-    a.sidebar-brand(href='index.html')
+    a.sidebar-brand(href=baseUrl + 'index.html')
       span.sidebar-brand-text.align-middle #{siteName}
+
     ul.sidebar-nav
       each item in menuItems
         if item.collapsed 
@@ -20,13 +21,15 @@ nav#sidebar.sidebar.js-sidebar
             ul.sidebar-dropdown.list-unstyled.collapse(id=item.path, data-bs-parent="#sidebar", class=(isActive ? 'show' : ''))
               each subItem in item.items
                 li.sidebar-item(class=(pageUrl === subItem.path ? 'active' : ''))
-                  a.sidebar-link(href=`${subItem.link}.html`)= subItem.title
+                  a.sidebar-link(href=baseUrl + `${subItem.link}.html`)= subItem.title
+
 
         else if item.header
           li.sidebar-header= item.title
 
         else
           li.sidebar-item(class=(pageUrl === item.path ? 'active' : ''))
-            a.sidebar-link(href=`${item.link}.html`)
+            a.sidebar-link(href=baseUrl + `${item.link}.html`)
               i.align-middle(data-feather=item.icon)
               span.align-middle= item.title
+

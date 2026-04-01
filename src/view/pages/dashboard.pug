@@ -2,7 +2,7 @@ extends ../layouts/dashboard
 
 append config
   -pageName = 'Dashboard'
-  -pageUrl = 'dashboard'
+  - pageUrl = 'dashboard'
 
 block content
 
@@ -170,7 +170,7 @@ block content
               td.d-none.d-md-table-cell William Harris
 
 block scripts 
-  script(src='js/chartjs.js')
+  script(src=baseUrl + 'js/chartjs.js')
   
   //- Script optimizado para Dark Mode
   script.

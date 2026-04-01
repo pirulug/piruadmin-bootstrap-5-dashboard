@@ -1,0 +1,85 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'Lite YouTube'
+  - pageUrl = 'plugins/lite-youtube'
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+
+block content
+  .row.g-3
+    .col-12
+      .card
+        .card-body
+          h5.card-title Basic usage
+          p.text-secondary
+            | A web component that renders YouTuber embeds faster.
+          .pt-4.pb-4.text-center
+            lite-youtube(videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)")
+          
+          .text-center.mt-3
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseLiteYoutube' aria-expanded='false' aria-controls='collapseLiteYoutube')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseLiteYoutube.mt-3
+            .demo-code-preview(data-label='CODE EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"&gt;&lt;/lite-youtube&gt;
+
+block scripts
+  script(src=baseUrl + 'js/liteyoutube.js')
+  script(src=baseUrl + "js/prismjs.js")
+
+  script.
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        } else {
+          alert("No se pudo copiar el texto");
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+        alert("Error al copiar");
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }

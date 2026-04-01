@@ -17,9 +17,47 @@ const opts = {
 
 // PUG
 const PAGES_DIR = `${Path.resolve(__dirname, "src")}/view/pages`;
-const PAGES = Fs.readdirSync(PAGES_DIR).filter((fileName) =>
-  fileName.endsWith(".pug")
-);
+
+// Read JSON data to pass to PUG templates (avoids relative path issues with require)
+const jsonData = {
+  menu: JSON.parse(
+    Fs.readFileSync(Path.resolve(__dirname, "src/data/menu.json"), "utf8")
+  ),
+  feather: JSON.parse(
+    Fs.readFileSync(
+      Path.resolve(__dirname, "src/data/feather_icons.json"),
+      "utf8"
+    )
+  ),
+  bootstrap: JSON.parse(
+    Fs.readFileSync(Path.resolve(__dirname, "src/data/boostrapicons.json"), "utf8")
+  ),
+  fontawesome: JSON.parse(
+    Fs.readFileSync(
+      Path.resolve(__dirname, "src/data/fontawesome_icons.json"),
+      "utf8"
+    )
+  ),
+};
+
+function getFiles(dir, allFiles) {
+  const files = Fs.readdirSync(dir);
+  allFiles = allFiles || [];
+  files.forEach(function (file) {
+    if (Fs.statSync(dir + "/" + file).isDirectory()) {
+      allFiles = getFiles(dir + "/" + file, allFiles);
+    } else if (file.endsWith(".pug")) {
+      allFiles.push(
+        Path.relative(PAGES_DIR, Path.join(dir, file)).replace(/\\/g, "/")
+      );
+    }
+  });
+  return allFiles;
+}
+
+const PAGES = getFiles(PAGES_DIR);
+
+
 
 module.exports = {
   entry: {
@@ -81,24 +119,32 @@ module.exports = {
       ],
     }),
     // Cargar paginas de .pug
-    ...PAGES.map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, ".html")}`,
-          minify: {
-            collapseWhitespace: false,
-            keepClosingSlash: false,
-            removeComments: false,
-            removeRedundantAttributes: false,
-            removeScriptTypeAttributes: false,
-            removeStyleLinkTypeAttributes: false,
-            useShortDoctype: false,
-            preventAttributesEscaping: false,
-          },
-          inject: false,
-        })
-    ),
+    ...PAGES.map((page) => {
+      const parts = page.split("/");
+      const baseUrl = parts.length > 1 ? "../".repeat(parts.length - 1) : "./";
+
+      return new HtmlWebpackPlugin({
+        template: `${PAGES_DIR}/${page}`,
+        filename: `./${page.replace(/\.pug/, ".html")}`,
+        templateParameters: {
+          baseUrl: baseUrl,
+          ...jsonData,
+        },
+
+        minify: {
+          collapseWhitespace: false,
+          keepClosingSlash: false,
+          removeComments: false,
+          removeRedundantAttributes: false,
+          removeScriptTypeAttributes: false,
+          removeStyleLinkTypeAttributes: false,
+          useShortDoctype: false,
+          preventAttributesEscaping: false,
+        },
+        inject: false,
+      });
+    }),
+
     // Beautify
     new PrettifyWebpackPlugin({
       printWidth: 100,
@@ -140,6 +186,7 @@ module.exports = {
             options: {
               sassOptions: {
                 quietDeps: true,
+                loadPaths: [Path.resolve(__dirname, "node_modules")],
               },
             },
           },

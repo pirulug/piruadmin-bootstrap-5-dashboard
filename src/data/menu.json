@@ -17,18 +17,18 @@
     "items": [
       {
         "title": "Blank Page",
-        "path": "pages-blank",
-        "link": "pages-blank"
+        "path": "pages/blank",
+        "link": "pages/blank"
       },
       {
         "title": "Timeline",
-        "path": "pages-timeline",
-        "link": "pages-timeline"
+        "path": "pages/timeline",
+        "link": "pages/timeline"
       },
       {
         "title": "Search",
-        "path": "pages-search",
-        "link": "pages-search"
+        "path": "pages/search",
+        "link": "pages/search"
       }
     ]
   },
@@ -40,23 +40,23 @@
     "items": [
       {
         "title": "Sign In",
-        "path": "auth-sign-in",
-        "link": "auth-sign-in"
+        "path": "auth/sign-in",
+        "link": "auth/sign-in"
       },
       {
         "title": "Sign Up",
-        "path": "auth-sign-up",
-        "link": "auth-sign-up"
+        "path": "auth/sign-up",
+        "link": "auth/sign-up"
       },
       {
         "title": "Reset Password",
-        "path": "auth-reset-password",
-        "link": "auth-reset-password"
+        "path": "auth/reset-password",
+        "link": "auth/reset-password"
       },
       {
         "title": "Recover Password",
-        "path": "auth-recover-password",
-        "link": "auth-recover-password"
+        "path": "auth/recover-password",
+        "link": "auth/recover-password"
       }
     ]
   },
@@ -68,13 +68,13 @@
     "items": [
       {
         "title": "Profile",
-        "path": "account-profile",
-        "link": "account-profile"
+        "path": "account/profile",
+        "link": "account/profile"
       },
       {
         "title": "Settings",
-        "path": "account-settings",
-        "link": "account-settings"
+        "path": "account/settings",
+        "link": "account/settings"
       }
     ]
   },
@@ -86,13 +86,13 @@
     "items": [
       {
         "title": "404",
-        "path": "error-404",
-        "link": "error-404"
+        "path": "error/404",
+        "link": "error/404"
       },
       {
         "title": "500",
-        "path": "error-500",
-        "link": "error-500"
+        "path": "error/500",
+        "link": "error/500"
       }
     ]
   },
@@ -108,43 +108,43 @@
     "items": [
       {
         "title": "Alerts",
-        "path": "ui-alerts",
-        "link": "ui-alerts"
+        "path": "ui/alerts",
+        "link": "ui/alerts"
       },
       {
         "title": "Badges",
-        "path": "ui-badges",
-        "link": "ui-badges"
+        "path": "ui/badges",
+        "link": "ui/badges"
       },
       {
         "title": "Buttons",
-        "path": "ui-buttons",
-        "link": "ui-buttons"
+        "path": "ui/buttons",
+        "link": "ui/buttons"
       },
       {
         "title": "Cards",
-        "path": "ui-cards",
-        "link": "ui-cards"
+        "path": "ui/cards",
+        "link": "ui/cards"
       },
       {
         "title": "General UI",
-        "path": "ui-general",
-        "link": "ui-general"
+        "path": "ui/general",
+        "link": "ui/general"
       },
       {
         "title": "Images",
-        "path": "ui-images",
-        "link": "ui-images"
+        "path": "ui/images",
+        "link": "ui/images"
       },
       {
         "title": "Tabs",
-        "path": "ui-tabs",
-        "link": "ui-tabs"
+        "path": "ui/tabs",
+        "link": "ui/tabs"
       },
       {
         "title": "Avatar",
-        "path": "ui-avatar",
-        "link": "ui-avatar"
+        "path": "ui/avatar",
+        "link": "ui/avatar"
       }
     ]
   },
@@ -156,8 +156,8 @@
     "items": [
       {
         "title": "Table Bootstrap",
-        "path": "table-bootstrap",
-        "link": "table-bootstrap"
+        "path": "tables/bootstrap",
+        "link": "tables/bootstrap"
       }
     ]
   },
@@ -169,13 +169,13 @@
     "items": [
       {
         "title": "Basic Inputs",
-        "path": "forms-basic-inputs",
-        "link": "forms-basic-inputs"
+        "path": "forms/basic-inputs",
+        "link": "forms/basic-inputs"
       },
       {
         "title": "Tagify",
-        "path": "forms-tagify",
-        "link": "forms-tagify"
+        "path": "forms/tagify",
+        "link": "forms/tagify"
       }
     ]
   },
@@ -187,18 +187,18 @@
     "items": [
       {
         "title": "Feather",
-        "path": "icons-feather",
-        "link": "icons-feather"
+        "path": "icons/feather",
+        "link": "icons/feather"
       },
       {
         "title": "Font Awesome",
-        "path": "icons-awesome",
-        "link": "icons-awesome"
+        "path": "icons/awesome",
+        "link": "icons/awesome"
       },
       {
         "title": "Bootstrap Icons",
-        "path": "icons-bootstrap",
-        "link": "icons-bootstrap"
+        "path": "icons/bootstrap",
+        "link": "icons/bootstrap"
       }
     ]
   },
@@ -210,23 +210,33 @@
     "items": [
       {
         "title": "SweetAlert 2",
-        "path": "plugins-sweetalert",
-        "link": "plugins-sweetalert"
+        "path": "plugins/sweetalert",
+        "link": "plugins/sweetalert"
+      },
+      {
+        "title": "Toastify JS",
+        "path": "plugins/toastify",
+        "link": "plugins/toastify"
       },
       {
         "title": "Charts",
-        "path": "plugins-charts-chartjs",
-        "link": "plugins-charts-chartjs"
+        "path": "plugins/charts",
+        "link": "plugins/charts"
       },
       {
-        "title": "datatable",
-        "path": "plugins-datatable",
-        "link": "plugins-datatable"
+        "title": "Datatable",
+        "path": "plugins/datatable",
+        "link": "plugins/datatable"
       },
       {
         "title": "Maps",
-        "path": "plugins-maps-google",
-        "link": "plugins-maps-google"
+        "path": "plugins/maps-google",
+        "link": "plugins/maps-google"
+      },
+      {
+        "title": "Lite YouTube",
+        "path": "plugins/lite-youtube",
+        "link": "plugins/lite-youtube"
       }
     ]
   }

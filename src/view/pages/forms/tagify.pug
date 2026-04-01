@@ -1,0 +1,239 @@
+extends ../../layouts/dashboard
+
+append config
+  -pageName = 'Tagify'
+  - pageUrl = 'forms/tagify'
+
+block styles 
+  link(href=baseUrl + 'css/tagify.css' rel='stylesheet' type='text/css')
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+
+block scripts 
+  script(src=baseUrl + 'js/tagify.js')
+  script(src=baseUrl + "js/prismjs.js")
+
+  script.
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        } else {
+          alert("No se pudo copiar el texto");
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+        alert("Error al copiar");
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }
+  script.
+    // Basic
+    new Tagify(document.querySelector('input[name=basic]'));
+
+    // With whitelist
+    new Tagify(document.querySelector('input[name=whitelist]'), {
+      whitelist: ['JavaScript', 'PHP', 'Laravel', 'Node.js', 'MySQL'],
+      dropdown: {
+        enabled: 1
+      }
+    });
+
+    // Enforce whitelist
+    new Tagify(document.querySelector('input[name=enforce]'), {
+      whitelist: ['Admin', 'Editor', 'User'],
+      enforceWhitelist: true,
+      dropdown: {
+        enabled: 0
+      }
+    });
+
+    // Readonly
+    new Tagify(document.querySelector('input[name=readonly]'), {
+      readonly: true
+    });
+
+    // Max tags
+    new Tagify(document.querySelector('input[name=max]'), {
+      maxTags: 3
+    });
+
+block content
+
+  // =====================================================
+  // Basic Tagify
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Basic
+    .card-body
+      p.text-secondary
+        | Basic Tagify input using
+        code Tagify(input)
+        |  with default settings.
+      input.form-control(
+        name="basic"
+        value="tag1, tag2, tag3"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTagifyBasic' aria-expanded='false' aria-controls='collapseTagifyBasic')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseTagifyBasic.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              new Tagify(document.querySelector('input[name=basic]'));
+
+  // =====================================================
+  // Tagify with whitelist
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title With whitelist
+    .card-body
+      p.text-secondary
+        | Tagify with predefined values using a whitelist.
+      input.form-control(
+        name="whitelist"
+        placeholder="Select or type a technology"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTagifyWhitelist' aria-expanded='false' aria-controls='collapseTagifyWhitelist')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseTagifyWhitelist.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              new Tagify(document.querySelector('input[name=whitelist]'), {
+                whitelist: ['JavaScript', 'PHP', 'Laravel', 'Node.js', 'MySQL'],
+                dropdown: {
+                  enabled: 1
+                }
+              });
+
+  // =====================================================
+  // Enforce whitelist
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Enforce whitelist
+    .card-body
+      p.text-secondary
+        | Only allows tags defined in the whitelist using
+        code enforceWhitelist: true
+        | .
+      input.form-control(
+        name="enforce"
+        placeholder="Select a role"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTagifyEnforce' aria-expanded='false' aria-controls='collapseTagifyEnforce')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseTagifyEnforce.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              new Tagify(document.querySelector('input[name=enforce]'), {
+                whitelist: ['Admin', 'Editor', 'User'],
+                enforceWhitelist: true,
+                dropdown: {
+                  enabled: 0
+                }
+              });
+
+  // =====================================================
+  // Readonly tags
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Readonly
+    .card-body
+      p.text-secondary
+        | Read-only Tagify input using
+        code readonly: true
+        | .
+      input.form-control(
+        name="readonly"
+        value="locked, fixed, static"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTagifyReadonly' aria-expanded='false' aria-controls='collapseTagifyReadonly')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseTagifyReadonly.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              new Tagify(document.querySelector('input[name=readonly]'), {
+                readonly: true
+              });
+
+  // =====================================================
+  // Max tags limit
+  // =====================================================
+  .card
+    .card-header
+      h3.header-title Max tags
+    .card-body
+      p.text-secondary
+        | Limits the number of tags using
+        code maxTags: 3
+        | .
+      input.form-control(
+        name="max"
+        placeholder="Maximum 3 tags allowed"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTagifyMax' aria-expanded='false' aria-controls='collapseTagifyMax')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseTagifyMax.mt-3
+        .demo-code-preview(data-label='CODE EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-js
+            code.language-js.
+              new Tagify(document.querySelector('input[name=max]'), {
+                maxTags: 3
+              });

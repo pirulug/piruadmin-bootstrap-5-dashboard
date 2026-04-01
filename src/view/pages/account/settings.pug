@@ -1,0 +1,223 @@
+extends ../../layouts/dashboard
+
+append config
+  -pageName = 'Profile Settings'
+  - pageUrl = 'account/settings'
+
+block styles
+  style.
+    .card .position-absolute img {
+      max-width: 170px;
+    }
+
+    @media (max-width: 576px) {
+      .card .position-absolute img {
+        max-width: 120px;
+      }
+    }
+
+
+block content
+
+  // Navigation - estilo moderno con íconos
+  .tab.tab-vertical
+    ul.nav.nav-tabs(role='tablist')
+      li.nav-item
+        a.nav-link.active(href="#" data-bs-toggle='pill' data-bs-target='.tab-account' role='tab' aria-selected='true')
+          i.bi.bi-person-circle.me-2
+          | Account
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-info' role='tab' aria-selected='false')
+          i.bi.bi-info-circle.me-2
+          | Information
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-security' role='tab' aria-selected='false')
+          i.bi.bi-shield-lock.me-2
+          | Security
+      li.nav-item
+        a.nav-link(href="#" data-bs-toggle='pill' data-bs-target='.tab-social' role='tab' aria-selected='false')
+          i.bi.bi-share.me-2
+          | Social
+
+    // Tab Content
+    .tab-content
+
+      // Account
+      .tab-pane.fade.show.active.tab-account(role='tabpanel')
+        h4.tab-title
+          i.bi.bi-person-badge.me-2
+          | Account Settings
+        form
+          .d-flex.align-items-center.mb-4
+            img.rounded-circle.me-3.object-fit-cover(src='https://dummyimage.com/200x200/000/fff.jpg' width='80' height='80' alt='Pirulug')
+            div
+              h4.mb-1 Pirulug
+              .d-flex.gap-2
+                button.btn.btn-primary.btn-sm(type='button')
+                  i.bi.bi-upload.me-1
+                  | Upload
+                button.btn.btn-outline-danger.btn-sm(type='button')
+                  i.bi.bi-trash
+        form
+          .row.g-3
+            .col-md-6
+              label.form-label Name
+              input.form-control(type='text' value='Pirulug')
+            .col-md-6
+              label.form-label Username
+              input.form-control(type='text' value='pirulug')
+            .col-md-6
+              label.form-label Email
+              input.form-control(type='email' value='pirulug@localhost.test')
+            .col-md-6
+              label.form-label Role
+              select.form-select
+                option Admin
+                option(selected) Developer
+                option User
+            .col-md-6
+              label.form-label Status
+              select.form-select
+                option(selected) Active
+                option Blocked
+            .col-md-6
+              label.form-label Department
+              select.form-select
+                option(selected) Development
+                option Management
+
+          // Permissions colapsable
+          .accordion.mt-4
+            .accordion-item
+              h2.accordion-header
+                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#permCollapse')
+                  i.bi.bi-key-fill.me-2
+                  | Permissions
+              #permCollapse.accordion-collapse.collapse
+                .accordion-body
+                  .table-responsive
+                  table.table.table-hover.align-middle
+                    thead
+                      tr
+                        th Module
+                        th.text-center View
+                        th.text-center Edit
+                        th.text-center Create
+                        th.text-center Delete
+                    tbody
+                      tr
+                        td Users
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox')
+                      tr
+                        td Projects
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox')
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox')
+                      tr
+                        td Reports
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox' checked)
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox')
+                        td.text-center: .form-check.form-switch.d-flex.justify-content-center: input.form-check-input(type='checkbox')
+
+          button.btn.btn-primary.mt-3
+            i.bi.bi-check2-circle.me-2
+            | Save Changes
+
+      // Information
+      .tab-pane.fade.tab-info(role='tabpanel')
+
+        h6.tab-title
+          i.bi.bi-info-circle.me-2
+          | Personal Information
+
+        form
+          .row.g-3
+            .col-md-6
+              label.form-label Birth Date
+              input.form-control(type='date' value='2000-01-01')
+            .col-md-6
+              label.form-label Phone
+              input.form-control(type='tel' value='+51 987654321')
+            .col-md-6
+              label.form-label Website
+              input.form-control(type='url' value='http://pirulug.test/')
+            .col-md-6
+              label.form-label Languages
+              input.form-control(type='text' value='Spanish, English')
+            .col-12
+              hr.my-4
+            .col-md-12
+              label.form-label Address Line
+              input.form-control(type='text' value='Calle Localhost 123')
+            .col-md-4
+              label.form-label City
+              input.form-control(type='text' value='Huancayo')
+            .col-md-4
+              label.form-label State
+              input.form-control(type='text' value='Junín')
+            .col-md-4
+              label.form-label Country
+              input.form-control(type='text' value='Perú')
+          .d-flex.justify-content-end.mt-4
+            button.btn.btn-primary(type='button') Save changes
+
+      // Security
+      .tab-pane.fade.tab-security(role='tabpanel')
+
+        h6.tab-title
+          i.bi.bi-shield-lock.me-2
+          | Security
+
+        form
+          .mb-3
+            label.form-label Current Password
+            input.form-control(type='password')
+          .mb-3
+            label.form-label New Password
+            input.form-control(type='password')
+          .mb-3
+            label.form-label Repeat New Password
+            input.form-control(type='password')
+          .d-flex.justify-content-end.mt-4
+            button.btn.btn-danger(type='button') Update Password
+
+      // Social
+      .tab-pane.fade.tab-social(role='tabpanel')
+
+        h6.tab-title
+          i.bi.bi-share.me-2
+          | Social Links
+
+        form
+          .row.g-3
+            .col-md-6
+              label.form-label Twitter
+              .input-group
+                span.input-group-text
+                  i.bi.bi-twitter
+                input.form-control(type='url' value='https://twitter.com/pirulug')
+            .col-md-6
+              label.form-label Facebook
+              .input-group
+                span.input-group-text
+                  i.bi.bi-facebook
+                input.form-control(type='url' value='https://www.facebook.com/pirulug')
+            .col-md-6
+              label.form-label Instagram
+              .input-group
+                span.input-group-text
+                  i.bi.bi-instagram
+                input.form-control(type='url' value='https://www.instagram.com/pirulug/')
+            .col-md-6
+              label.form-label GitHub
+              .input-group
+                span.input-group-text
+                  i.bi.bi-github
+                input.form-control(type='url' value='https://github.com/pirulug')
+          .d-flex.justify-content-end.mt-4
+            button.btn.btn-primary(type='button') Save changes
