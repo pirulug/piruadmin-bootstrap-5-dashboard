@@ -45,52 +45,56 @@
   </head>
   <body>
     <main class="w-100">
-      <div class="d-flex min-vh-100 align-items-center justify-content-center">
+      <div class="d-flex min-vh-100 align-items-center justify-content-center py-4">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-8 col-lg-5 col-xl-4">
+            <div class="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4">
               <div class="text-center mb-4">
-                <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 mb-3" style="width: 48px; height: 48px;"><i class="fa-solid fa-layer-group fs-4"></i></div>
-                <h4 class="fw-bold mb-1">Welcome back</h4>
-                <p class="text-body-secondary">Sign in to manage your account</p>
+                <div class="auth-logo-box d-inline-flex align-items-center justify-content-center text-white rounded-3 mb-3" style="width: 44px; height: 44px;"><i class="fa-solid fa-layer-group"></i></div>
+                <h5 class="fw-bold mb-1">Welcome Back</h5>
+                <p class="text-body-secondary small">Please enter your details to sign in.</p>
               </div>
-              <div class="card border border-secondary-subtle bg-body rounded-3">
-                <div class="card-body p-4 p-sm-5">
+              <div class="card auth-card border-0 rounded-3">
+                <div class="card-body p-4">
                   <form>
                     <div class="mb-3">
-                      <label class="form-label fw-semibold" for="inputEmail">Email</label>
-                      <input class="form-control form-control-lg" id="inputEmail" type="email" name="email" placeholder="name@company.com">
+                      <label class="form-label fw-semibold small" for="inputEmail">Email Address</label>
+                      <input class="form-control" id="inputEmail" type="email" name="email" placeholder="name@company.com">
                     </div>
                     <div class="mb-3">
                       <div class="d-flex justify-content-between align-items-center mb-1">
-                        <label class="form-label fw-semibold" for="inputPassword">Password</label><a class="small text-decoration-none" href="../auth/reset-password.html">Forgot password?</a>
+                        <label class="form-label fw-semibold small" for="inputPassword">Password</label><a class="small text-decoration-none auth-footer-link" href="../auth/reset-password.html">Forgot password?</a>
                       </div>
-                      <div class="input-group input-group-lg">
-                        <input class="form-control border-end-0" id="inputPassword" type="password" name="password" placeholder="Enter password">
-                        <button class="input-group-text bg-transparent border-start-0" id="togglePassword" type="button"><i class="fa-regular fa-eye-slash text-body-secondary"></i></button>
+                      <div class="input-group">
+                        <input class="form-control border-end-0" id="inputPassword" type="password" name="password" placeholder="Enter your password">
+                        <button class="input-group-text bg-transparent border-start-0" type="button" data-pr-toggle-password="inputPassword"><i class="fa-regular fa-eye text-body-secondary"></i></button>
                       </div>
                     </div>
-                    <div class="mb-4">
+                    <div class="mb-3">
                       <div class="form-check">
                         <input class="form-check-input" id="rememberMe" type="checkbox" name="remember-me" checked="checked">
-                        <label class="form-check-label text-body-secondary" for="rememberMe">Remember me on this device</label>
+                        <label class="form-check-label text-body-secondary small" for="rememberMe">Keep me signed in</label>
                       </div>
                     </div>
-                    <div class="d-grid mb-4">
-                      <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                    <div class="d-grid mb-3">
+                      <button class="btn btn-primary" type="submit">Sign In</button>
                     </div>
-                    <div class="position-relative text-center mb-4">
-                      <hr class="border-secondary-subtle m-0"><span class="position-absolute top-50 start-50 translate-middle bg-body px-2 text-body-secondary small">Or sign in with</span>
+                    <div class="position-relative text-center mb-3">
+                      <hr class="border-secondary-subtle m-0"><span class="position-absolute top-50 start-50 translate-middle bg-body px-2 text-body-secondary small">Or continue with</span>
                     </div>
-                    <div class="vstack gap-2">
-                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-google me-2"></i>Google</button>
-                      <button class="btn btn-outline-secondary w-100" type="button"><i class="fab fa-github me-2"></i>GitHub</button>
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-social w-100" type="button"><i class="fab fa-google me-2"></i>Google</button>
+                      </div>
+                      <div class="col-6">
+                        <button class="btn btn-outline-secondary btn-social w-100" type="button"><i class="fab fa-github me-2"></i>GitHub</button>
+                      </div>
                     </div>
                   </form>
                 </div>
               </div>
-              <div class="text-center mt-4">
-                <p class="text-body-secondary mb-0">Don't have an account? <a class="fw-bold text-decoration-none" href="../auth/sign-up.html">Create an account</a></p>
+              <div class="text-center mt-3">
+                <p class="text-body-secondary small mb-0">Don't have an account? <a class="fw-semibold text-decoration-none auth-footer-link" href="../auth/sign-up.html">Create one</a></p>
               </div>
             </div>
           </div>
@@ -114,24 +118,5 @@
 </div>
     <!-- Js Bootstrap-->
     <script src="../js/piruadmin.js"></script>
-    <script>
-      const togglePassword = document.getElementById("togglePassword");
-      const passwordInput = document.getElementById("inputPassword");
-      const icon = togglePassword.querySelector("i");
-      
-      togglePassword.addEventListener("click", () => {
-        const isPassword = passwordInput.type === "password";
-        passwordInput.type = isPassword ? "text" : "password";
-        passwordInput.focus();
-        
-        if(isPassword) {
-          icon.classList.remove("fa-eye-slash");
-          icon.classList.add("fa-eye");
-        } else {
-          icon.classList.remove("fa-eye");
-          icon.classList.add("fa-eye-slash");
-        }
-      });
-    </script>
   </body>
 </html>

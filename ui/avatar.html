@@ -7,21 +7,21 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0d6efd">
     <!-- Primary Meta Tags-->
-    <title>Avatar Documentation - Free Bootstrap 5 Admin Template | PiruAdmin</title>
-    <meta name="title" content="Avatar Documentation - Free Bootstrap 5 Admin Template | PiruAdmin">
+    <title>Avatars - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="Avatars - Free Bootstrap 5 Admin Template | PiruAdmin">
     <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
     <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
     <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
     <!-- Open Graph / Facebook-->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
-    <meta property="og:title" content="Avatar Documentation | PiruAdmin">
+    <meta property="og:title" content="Avatars | PiruAdmin">
     <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
     <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
-    <meta property="twitter:title" content="Avatar Documentation | PiruAdmin">
+    <meta property="twitter:title" content="Avatars | PiruAdmin">
     <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <meta property="twitter:creator" content="@pirulug">
@@ -44,6 +44,7 @@
       
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <link rel="stylesheet" href="../css/prismjs.css">
   </head>
   <body>
 <!-- Loader-->
@@ -242,92 +243,84 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Avatar Documentation</h1>
+            <h1 class="h3 d-inline align-middle">Avatars</h1>
           </div>
           <div class="row g-4">
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 1: INTRODUCCIÓN Y BÁSICOS-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12 col-lg-6">
+            <!-- Basic Usage-->
+            <div class="col-md-6">
               <div class="card h-100">
-                <div class="card-header">
-                  <h5 class="card-title">Uso Básico</h5>
-                  <p class="card-subtitle text-muted">El componente <code>.avatar</code> adapta automáticamente imágenes, texto o iconos.</p>
-                </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table align-middle">
-                      <thead>
-                        <tr>
-                          <th>Resultado</th>
-                          <th>Uso</th>
-                          <th>Clase</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <figure class="avatar"><img src="https://dummyimage.com/100x100/333/fff.jpg" alt="Avatar"></figure>
-                          </td>
-                          <td>Imagen</td>
-                          <td><code>img</code></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <figure class="avatar"><span>AB</span></figure>
-                          </td>
-                          <td>Texto (Iniciales)</td>
-                          <td><code>span</code></td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <figure class="avatar"><i class="bi bi-person"></i></figure>
-                          </td>
-                          <td>Icono</td>
-                          <td><code>i.bi...</code></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <h5 class="card-title">Basic Usage</h5>
+                  <p class="text-muted">The <code>.avatar</code> component automatically adapts its content, whether it's an image, text, or icon.</p>
+                  <div class="d-flex justify-content-center gap-4 py-4">
+                    <figure class="avatar mb-0"><img src="https://dummyimage.com/100x100/333/fff.png" alt="Avatar"></figure>
+                    <figure class="avatar mb-0"><span>AB</span></figure>
+                    <figure class="avatar mb-0"><i class="bi bi-person"></i></figure>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasic" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseBasic">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;!-- Image Avatar --&gt;
+&lt;figure class="avatar"&gt;
+  &lt;img src="..." alt="..."&gt;
+&lt;/figure&gt;
+
+&lt;!-- Text Avatar --&gt;
+&lt;figure class="avatar"&gt;
+  &lt;span&gt;AB&lt;/span&gt;
+&lt;/figure&gt;
+
+&lt;!-- Icon Avatar --&gt;
+&lt;figure class="avatar"&gt;
+  &lt;i class="bi bi-person"&gt;&lt;/i&gt;
+&lt;/figure&gt;
+</code></pre>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 2: FORMAS (SHAPES)-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12 col-lg-6">
+            <!-- Shapes-->
+            <div class="col-md-6">
               <div class="card h-100">
-                <div class="card-header">
-                  <h5 class="card-title">Formas</h5>
-                  <p class="card-subtitle text-muted">Modifica el borde con clases adicionales.</p>
-                </div>
-                <div class="card-body d-flex justify-content-around align-items-center">
-                  <div class="text-center">
-                    <figure class="avatar mb-2"><img src="https://dummyimage.com/100x100/6610f2/fff" alt="Circle"></figure>
-                    <div><code>.avatar</code></div><small class="d-block text-muted">(Por defecto)</small>
+                <div class="card-body">
+                  <h5 class="card-title">Shapes</h5>
+                  <p class="text-muted">Modify the border radius with <code>.avatar-rounded</code> or <code>.avatar-square</code>.</p>
+                  <div class="d-flex justify-content-center gap-4 py-4">
+                    <figure class="avatar mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Circle"></figure>
+                    <figure class="avatar avatar-rounded mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Rounded"></figure>
+                    <figure class="avatar avatar-square mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Square"></figure>
                   </div>
-                  <div class="text-center">
-                    <figure class="avatar avatar-rounded mb-2"><img src="https://dummyimage.com/100x100/6610f2/fff" alt="Rounded"></figure>
-                    <div><code>.avatar-rounded</code></div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShapes" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
                   </div>
-                  <div class="text-center">
-                    <figure class="avatar avatar-square mb-2"><img src="https://dummyimage.com/100x100/6610f2/fff" alt="Square"></figure>
-                    <div><code>.avatar-square</code></div>
+                  <div class="collapse mt-3" id="collapseShapes">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;!-- Circle (Default) --&gt;
+&lt;figure class="avatar"&gt;...&lt;/figure&gt;
+
+&lt;!-- Rounded --&gt;
+&lt;figure class="avatar avatar-rounded"&gt;...&lt;/figure&gt;
+
+&lt;!-- Square --&gt;
+&lt;figure class="avatar avatar-square"&gt;...&lt;/figure&gt;
+</code></pre>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 3: TAMAÑOS (SIZES)-->
-            <!-- --------------------------------------------------------------------------->
+            <!-- Sizes-->
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Tamaños Disponibles</h5>
-                  <p class="card-subtitle text-muted">Desde XS hasta XL.</p>
-                </div>
                 <div class="card-body">
-                  <div class="d-flex flex-wrap align-items-end gap-4">
+                  <h5 class="card-title">Available Sizes</h5>
+                  <p class="text-muted">Control avatar dimensions from <code>XS</code> to <code>XL</code> to match your UI context.</p>
+                  <div class="d-flex flex-wrap align-items-end justify-content-center gap-4 py-4">
                     <div class="text-center">
                       <figure class="avatar avatar-xl mb-2"><span>XL</span></figure>
                       <div><code>.avatar-xl</code></div>
@@ -349,219 +342,111 @@
                       <div><code>.avatar-xs</code></div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 4: COLORES (BOOTSTRAP THEME)-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Colores del Tema</h5>
-                  <p class="card-subtitle text-muted">Usa las clases <code>.avatar-{color}</code>. El texto se ajusta automáticamente para tener contraste.</p>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex flex-wrap gap-3">
-                    <div class="text-center">
-                      <figure class="avatar avatar-primary"><span>Pr</span></figure>
-                      <div class="mt-1"><code>.primary</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-secondary"><span>Se</span></figure>
-                      <div class="mt-1"><code>.secondary</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-success"><span>Su</span></figure>
-                      <div class="mt-1"><code>.success</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-danger"><span>Da</span></figure>
-                      <div class="mt-1"><code>.danger</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-warning"><span>Wa</span></figure>
-                      <div class="mt-1"><code>.warning</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-info"><span>In</span></figure>
-                      <div class="mt-1"><code>.info</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-light"><span>Li</span></figure>
-                      <div class="mt-1"><code>.light</code></div>
-                    </div>
-                    <div class="text-center">
-                      <figure class="avatar avatar-dark"><span>Da</span></figure>
-                      <div class="mt-1"><code>.dark</code></div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSizes" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseSizes">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;figure class="avatar avatar-xl"&gt;...&lt;/figure&gt;
+&lt;figure class="avatar avatar-lg"&gt;...&lt;/figure&gt;
+&lt;figure class="avatar"&gt;...&lt;/figure&gt;
+&lt;figure class="avatar avatar-sm"&gt;...&lt;/figure&gt;
+&lt;figure class="avatar avatar-xs"&gt;...&lt;/figure&gt;
+</code></pre>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 5: INDICADORES DE ESTADO (STATUS)-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12 col-lg-6">
+            <!-- Status-->
+            <div class="col-md-6">
               <div class="card h-100">
-                <div class="card-header">
-                  <h5 class="card-title">Status</h5>
-                  <p class="card-subtitle text-muted">Añade <code>.avatar-status</code> y un color de fondo. El borde blanco/negro es automático.</p>
-                </div>
                 <div class="card-body">
-                  <div class="d-flex justify-content-around">
-                    <!-- Ejemplo 1: Imagen + Online-->
-                    <div>
-                      <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/0d6efd/fff"><span class="avatar-status bg-success"></span></figure>
-                      <p class="text-center mt-2 small">Online</p>
-                    </div>
-                    <!-- Ejemplo 2: Iniciales + Busy-->
-                    <div>
-                      <figure class="avatar avatar-secondary"><span>MK</span><span class="avatar-status bg-danger"></span></figure>
-                      <p class="text-center mt-2 small">Ocupado</p>
-                    </div>
-                    <!-- Ejemplo 3: Icono + Away-->
-                    <div>
-                      <figure class="avatar avatar-sm avatar-light"><i class="bi bi-person"></i><span class="avatar-status bg-warning"></span></figure>
-                      <p class="text-center mt-2 small">Ausente</p>
+                  <h5 class="card-title">Status Indicators</h5>
+                  <p class="text-muted">Add specific <code>.avatar-status</code> indicators for online, busy, or away states.</p>
+                  <div class="d-flex justify-content-center gap-5 py-4">
+                    <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/333/fff&amp;text=U"><span class="avatar-status bg-success"></span></figure>
+                    <figure class="avatar avatar-secondary"><span>AB</span><span class="avatar-status bg-danger"></span></figure>
+                    <figure class="avatar avatar-sm avatar-light"><i class="bi bi-person"></i><span class="avatar-status bg-warning"></span></figure>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatus" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseStatus">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;figure class="avatar"&gt;
+  &lt;img src="..." alt="..."&gt;
+  &lt;span class="avatar-status bg-success"&gt;&lt;/span&gt;
+&lt;/figure&gt;
+</code></pre>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 6: GRUPOS (AVATAR GROUP)-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12 col-lg-6">
+            <!-- Avatar Groups-->
+            <div class="col-md-6">
               <div class="card h-100">
-                <div class="card-header">
-                  <h5 class="card-title">Avatar Group</h5>
-                  <p class="card-subtitle text-muted">Agrupa avatares solapados usando <code>.avatar-group</code>.</p>
-                </div>
-                <div class="card-body d-flex flex-column justify-content-center gap-4">
-                  <!-- Grupo 1: Grande-->
-                  <div><small class="text-muted d-block mb-2">Grupo Grande</small>
+                <div class="card-body">
+                  <h5 class="card-title">Avatar Groups</h5>
+                  <p class="text-muted">Stack multiple avatars together using the <code>.avatar-group</code> container.</p>
+                  <div class="d-flex flex-column justify-content-center align-items-center gap-4 py-4">
                     <div class="avatar-group">
-                      <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/444/fff&amp;text=1"></figure>
-                      <figure class="avatar avatar-lg avatar-primary">A</figure>
+                      <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/0d6efd/fff&amp;text=1"></figure>
+                      <figure class="avatar avatar-lg avatar-primary"><span>A</span></figure>
                       <figure class="avatar avatar-lg avatar-success"><i class="bi bi-check"></i></figure>
-                      <figure class="avatar avatar-lg avatar-secondary">+3</figure>
+                      <figure class="avatar avatar-lg avatar-secondary"><span>+3</span></figure>
                     </div>
-                  </div>
-                  <!-- Grupo 2: Pequeño-->
-                  <div><small class="text-muted d-block mb-2">Grupo Pequeño</small>
                     <div class="avatar-group">
                       <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/444/fff&amp;text=A"></figure>
                       <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/555/fff&amp;text=B"></figure>
-                      <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/666/fff&amp;text=C"></figure>
-                      <figure class="avatar avatar-sm avatar-dark">9+</figure>
+                      <figure class="avatar avatar-sm avatar-dark"><span>9+</span></figure>
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGroup" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseGroup">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="avatar-group"&gt;
+  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+&lt;/div&gt;
+</code></pre>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- --------------------------------------------------------------------->
-            <!-- DEMO DE ICONOS (FontAwesome, Bootstrap, Feather)-->
-            <!-- --------------------------------------------------------------------->
+            <!-- Lightbox-->
             <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Soporte de Iconos</h5>
-                  <p class="card-subtitle text-muted">Todos los iconos se centran automáticamente gracias a <code>line-height: 1</code> y <code>1em</code>.</p>
-                </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-borderless align-middle text-center">
-                      <thead>
-                        <tr>
-                          <th>Librería</th>
-                          <th>XS</th>
-                          <th>SM</th>
-                          <th>Default</th>
-                          <th>LG</th>
-                          <th>XL</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- FONT AWESOME-->
-                        <tr>
-                          <td class="text-start fw-bold">Font Awesome</td>
-                          <td>
-                            <figure class="avatar avatar-xs avatar-primary"><i class="fa-solid fa-user"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-sm avatar-primary"><i class="fa-solid fa-user"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-primary"><i class="fa-solid fa-user"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-lg avatar-primary"><i class="fa-solid fa-user"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-xl avatar-primary"><i class="fa-solid fa-user"></i></figure>
-                          </td>
-                        </tr>
-                        <!-- BOOTSTRAP ICONS-->
-                        <tr>
-                          <td class="text-start fw-bold">Bootstrap Icons</td>
-                          <td>
-                            <figure class="avatar avatar-xs avatar-success"><i class="bi bi-alarm"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-sm avatar-success"><i class="bi bi-alarm"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-success"><i class="bi bi-alarm"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-lg avatar-success"><i class="bi bi-alarm"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-xl avatar-success"><i class="bi bi-alarm"></i></figure>
-                          </td>
-                        </tr>
-                        <!-- FEATHER ICONS-->
-                        <tr>
-                          <td class="text-start fw-bold">Feather Icons</td>
-                          <td>
-                            <figure class="avatar avatar-xs avatar-info"><i data-feather="anchor"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-sm avatar-info"><i data-feather="anchor"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-info"><i data-feather="anchor"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-lg avatar-info"><i data-feather="anchor"></i></figure>
-                          </td>
-                          <td>
-                            <figure class="avatar avatar-xl avatar-info"><i data-feather="anchor"></i></figure>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <h5 class="card-title">Interactive Lightbox</h5>
+                  <p class="text-muted">Integrated with <code>GLightbox</code> to preview avatar images or videos in full size.</p>
+                  <div class="d-flex flex-wrap justify-content-center gap-3 py-4"><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/000/fff.png" data-gallery="avatars"><img src="https://dummyimage.com/100x100/000/fff.png" alt="avatar"></a><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/333/fff.png" data-gallery="avatars"><img src="https://dummyimage.com/100x100/333/fff.png" alt="avatar"></a><a class="avatar avatar-xl avatar-primary glightbox" href="https://dummyimage.com/800x600/0d6efd/fff.png" data-gallery="avatars"><span>IMG</span></a><a class="glightbox" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                      <figure class="avatar avatar-xl avatar-danger mb-0"><i class="bi bi-play-fill fs-2"></i></figure></a></div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLightbox" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- --------------------------------------------------------------------------->
-            <!-- SECCIÓN 7: LIGHTBOX INTERACTIVO (REQ. ORIGINAL)-->
-            <!-- --------------------------------------------------------------------------->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title">Lightbox Interactivo</h5>
-                  <p class="card-subtitle text-muted">Integración con GLightbox para previsualizar imágenes o videos.</p>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex flex-wrap gap-3">
-                    <!-- Lightbox Imagen 1--><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/000/fff.jpg&amp;text=Full+Image+1" data-gallery="avatars"><img src="https://dummyimage.com/100x100/000/fff.jpg" alt="avatar"></a>
-                    <!-- Lightbox Imagen 2--><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/333/fff.jpg&amp;text=Full+Image+2" data-gallery="avatars"><img src="https://dummyimage.com/100x100/333/fff.jpg" alt="avatar"></a>
-                    <!-- Lightbox Imagen 3 (Texto)--><a class="avatar avatar-xl avatar-primary glightbox" href="https://dummyimage.com/800x600/0d6efd/fff.jpg&amp;text=Text+Avatar" data-gallery="avatars">IMG</a>
-                    <!-- Lightbox Video Youtube--><a class="glightbox" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                      <figure class="avatar avatar-xl avatar-danger"><i class="bi bi-play-fill fs-2"></i></figure></a>
+                  <div class="collapse mt-3" id="collapseLightbox">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;!-- Lightbox Image --&gt;
+&lt;a class="avatar glightbox" href="large-image.jpg"&gt;
+  &lt;img src="thumb.jpg" alt="..."&gt;
+&lt;/a&gt;
+
+&lt;!-- Lightbox Video --&gt;
+&lt;a class="glightbox" href="youtube-url"&gt;
+  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+&lt;/a&gt;
+</code></pre>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -590,16 +475,64 @@
     <script src="../js/feathericons.js"></script>
     <script src="../js/piruadmin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="../js/prismjs.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const lightbox = GLightbox({
           selector: '.glightbox',
           touchNavigation: true,
-          loop: true,
-          autoplayVideos: true
+          loop: true
         });
-      });
       
+        // Clipboard Copy Handler
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const code = btn.nextElementSibling?.innerText;
+            if (!code) return;
+      
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(code).then(() => {
+                showCopySuccess(btn);
+              }).catch(err => {
+                console.error('Clipboard API failed', err);
+                fallbackCopy(code, btn);
+              });
+            } else {
+              fallbackCopy(code, btn);
+            }
+          });
+        });
+      
+        function fallbackCopy(text, btn) {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.focus();
+          textarea.select();
+      
+          try {
+            const successful = document.execCommand('copy');
+            if (successful) showCopySuccess(btn);
+          } catch (err) {
+            console.error('Fallback copy failed', err);
+          }
+          document.body.removeChild(textarea);
+        }
+      
+        function showCopySuccess(btn) {
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.classList.add('btn-success');
+          btn.classList.remove('btn-outline-secondary');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-outline-secondary');
+          }, 1500);
+        }
+      });
     </script>
   </body>
 </html>

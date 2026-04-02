@@ -43,6 +43,7 @@
       })();
       
     </script>
+    <link rel="stylesheet" href="../css/prismjs.css">
   </head>
   <body>
 <!-- Loader-->
@@ -243,52 +244,138 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Badges</h1>
           </div>
-          <div class="row g-3">
-            <div class="col-5">
+          <div class="row g-4">
+            <!-- Badges in Headings-->
+            <div class="col-md-5">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Badges in Headings</h5>
+                  <p class="text-muted">Badges scale to match the size of the immediate parent element by using relative font sizing.</p>
+                  <div class="py-4">
+                    <h1>Heading 1 <span class="badge bg-primary">New</span></h1>
+                    <h3>Heading 3 <span class="badge bg-info">Update</span></h3>
+                    <h5>Heading 5 <span class="badge bg-success">Pro</span></h5>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHeadings" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseHeadings">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;h1&gt;Example Heading &lt;span class="badge bg-primary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+&lt;h3&gt;Example Heading &lt;span class="badge bg-info"&gt;Update&lt;/span&gt;&lt;/h3&gt;
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Positioned Badges-->
+            <div class="col-md-7">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Positioned Badges</h5>
+                  <p class="text-muted">Use utilities to position a badge at the corner of a link or button, commonly used for notifications.</p>
+                  <div class="py-4 d-flex gap-4 justify-content-center flex-wrap">
+                    <button class="btn btn-primary position-relative" type="button">Inbox<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span></button>
+                    <button class="btn btn-secondary position-relative" type="button">Profile<span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle"></span></button>
+                    <button class="btn btn-dark position-relative" type="button"><i class="bi bi-bell fs-5"></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">5</span></button>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePositioned" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapsePositioned">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;!-- Simple Counter --&gt;
+&lt;button class="btn btn-primary position-relative"&gt;
+  Inbox
+  &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;99+&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Soft Notification Dot --&gt;
+&lt;button class="btn btn-secondary position-relative"&gt;
+  Profile
+  &lt;span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle"&gt;&lt;/span&gt;
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Theme Colors-->
+            <div class="col-12">
               <div class="card">
-                <div class="card-header">
-                  <h2 class="card-titleBadges">in headings</h2>
-                  <p class="text-secondary m-0">Use<code>.badge</code>together with<code>.text-bg-{color}</code>to add badges to headings.</p>
-                </div>
                 <div class="card-body">
-                  <h1>Example heading<span class="badge text-bg-secondary">New</span></h1>
-                  <h2>Example heading<span class="badge text-bg-secondary">New</span></h2>
-                  <h3>Example heading<span class="badge text-bg-secondary">New</span></h3>
-                  <h4>Example heading<span class="badge text-bg-secondary">New</span></h4>
-                  <h5>Example heading<span class="badge text-bg-secondary">New</span></h5>
-                  <h6>Example heading<span class="badge text-bg-secondary">New</span></h6>
+                  <h5 class="card-title">Professional Theme Styles</h5>
+                  <p class="text-muted">Explore our premium badge variations: Solid, Light (Soft), and Outline.</p>
+                  <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                    <!-- Solid Column-->
+                    <div class="col">
+                      <div class="p-3 border rounded h-100">
+                        <h6 class="fw-bold mb-3">Solid Badges (Default)</h6>
+                        <div class="d-flex flex-wrap gap-2"><span class="badge badge-primary">primary</span><span class="badge badge-success">success</span><span class="badge badge-danger">danger</span><span class="badge badge-warning">warning</span><span class="badge badge-info">info</span><span class="badge badge-dark">dark</span></div>
+                      </div>
+                    </div>
+                    <!-- Light Column-->
+                    <div class="col">
+                      <div class="p-3 border rounded h-100">
+                        <h6 class="fw-bold mb-3">Light Badges (Subtle)</h6>
+                        <div class="d-flex flex-wrap gap-2"><span class="badge badge-light-primary">primary</span><span class="badge badge-light-success">success</span><span class="badge badge-light-danger">danger</span><span class="badge badge-light-warning">warning</span><span class="badge badge-light-info">info</span><span class="badge badge-light-dark">dark</span></div>
+                      </div>
+                    </div>
+                    <!-- Outline Column-->
+                    <div class="col">
+                      <div class="p-3 border rounded h-100">
+                        <h6 class="fw-bold mb-3">Outline Badges (Minimal)</h6>
+                        <div class="d-flex flex-wrap gap-2"><span class="badge badge-outline-primary">primary</span><span class="badge badge-outline-success">success</span><span class="badge badge-outline-danger">danger</span><span class="badge badge-outline-warning">warning</span><span class="badge badge-outline-info">info</span><span class="badge badge-outline-dark">dark</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-4">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThemes" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseThemes">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;!-- Solid Style --&gt;
+&lt;span class="badge badge-primary"&gt;Solid&lt;/span&gt;
+
+&lt;!-- Light Style (Custom) --&gt;
+&lt;span class="badge badge-light-success"&gt;Soft&lt;/span&gt;
+
+&lt;!-- Outline Style (Custom) --&gt;
+&lt;span class="badge badge-outline-info"&gt;Minimal&lt;/span&gt;
+</code></pre>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-7">
-              <div class="card mb-3">
-                <div class="card-header">
-                  <h2 class="card-title">Basado en theme colors</h2>
-                  <p class="text-secondary m-0">Usa las clases de Bootstrap como<code>.badge-{color}</code></p>
-                </div>
+            <!-- Advanced Colors-->
+            <div class="col-12">
+              <div class="card">
                 <div class="card-body">
-                  <div><span class="m-1 badge badge-blue">Blue</span><span class="m-1 badge badge-azure">Azure</span><span class="m-1 badge badge-indigo">Indigo</span><span class="m-1 badge badge-purple">Purple</span><span class="m-1 badge badge-pink">Pink</span><span class="m-1 badge badge-red">Red</span><span class="m-1 badge badge-orange">Orange</span><span class="m-1 badge badge-yellow">Yellow</span><span class="m-1 badge badge-lime">Lime</span><span class="m-1 badge badge-green">Green</span><span class="m-1 badge badge-teal">Teal</span><span class="m-1 badge badge-cyan">Cyan</span></div>
-                  <div><span class="m-1 badge badge-light-blue">Blue</span><span class="m-1 badge badge-light-azure">Azure</span><span class="m-1 badge badge-light-indigo">Indigo</span><span class="m-1 badge badge-light-purple">Purple</span><span class="m-1 badge badge-light-pink">Pink</span><span class="m-1 badge badge-light-red">Red</span><span class="m-1 badge badge-light-orange">Orange</span><span class="m-1 badge badge-light-yellow">Yellow</span><span class="m-1 badge badge-light-lime">Lime</span><span class="m-1 badge badge-light-green">Green</span><span class="m-1 badge badge-light-teal">Teal</span><span class="m-1 badge badge-light-cyan">Cyan</span></div>
-                  <div><span class="m-1 badge badge-outline-blue">Blue</span><span class="m-1 badge badge-outline-azure">Azure</span><span class="m-1 badge badge-outline-indigo">Indigo</span><span class="m-1 badge badge-outline-purple">Purple</span><span class="m-1 badge badge-outline-pink">Pink</span><span class="m-1 badge badge-outline-red">Red</span><span class="m-1 badge badge-outline-orange">Orange</span><span class="m-1 badge badge-outline-yellow">Yellow</span><span class="m-1 badge badge-outline-lime">Lime</span><span class="m-1 badge badge-outline-green">Green</span><span class="m-1 badge badge-outline-teal">Teal</span><span class="m-1 badge badge-outline-cyan">Cyan</span></div>
+                  <h5 class="card-title">Advanced Palette</h5>
+                  <p class="text-muted">Standard colors from our design system palette.</p>
+                  <div class="py-4">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center"><span class="badge badge-blue">Blue</span><span class="badge badge-azure">Azure</span><span class="badge badge-indigo">Indigo</span><span class="badge badge-purple">Purple</span><span class="badge badge-pink">Pink</span><span class="badge badge-red">Red</span><span class="badge badge-orange">Orange</span><span class="badge badge-yellow">Yellow</span><span class="badge badge-lime">Lime</span><span class="badge badge-green">Green</span><span class="badge badge-teal">Teal</span><span class="badge badge-cyan">Cyan</span></div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePalette" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapsePalette">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;span class="badge badge-red"&gt;Red&lt;/span&gt;
+&lt;span class="badge badge-light-blue"&gt;Light Blue&lt;/span&gt;
+&lt;span class="badge badge-outline-purple"&gt;Outline Purple&lt;/span&gt;
+</code></pre>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="card mb-3">
-                <div class="card-header">
-                  <h2 class="card-title">Basado en theme colors</h2>
-                  <p class="text-muted m-0">Usa las clases de Bootstrap como<code>.badge-{color}</code><code>.badge-light-{color}</code><code>.badge-outline-{color}</code></p>
-                </div>
-                <div class="card-body">
-                  <div><span class="m-1 badge badge-primary">primary</span><span class="m-1 badge badge-secondary">secondary</span><span class="m-1 badge badge-success">success</span><span class="m-1 badge badge-danger">danger</span><span class="m-1 badge badge-warning">warning</span><span class="m-1 badge badge-info">info</span><span class="m-1 badge badge-light">light</span><span class="m-1 badge badge-dark">dark</span></div>
-                  <div><span class="m-1 badge badge-light-primary">primary</span><span class="m-1 badge badge-light-secondary">secondary</span><span class="m-1 badge badge-light-success">success</span><span class="m-1 badge badge-light-danger">danger</span><span class="m-1 badge badge-light-warning">warning</span><span class="m-1 badge badge-light-info">info</span><span class="m-1 badge badge-light-light">light</span><span class="m-1 badge badge-light-dark">dark</span></div>
-                  <div><span class="m-1 badge badge-outline-primary">primary</span><span class="m-1 badge badge-outline-secondary">secondary</span><span class="m-1 badge badge-outline-success">success</span><span class="m-1 badge badge-outline-danger">danger</span><span class="m-1 badge badge-outline-warning">warning</span><span class="m-1 badge badge-outline-info">info</span><span class="m-1 badge badge-outline-light">light</span><span class="m-1 badge badge-outline-dark">dark</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <button class="btn btn-secondary position-relative">Inbox<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span></button>
-              <button class="btn btn-secondary position-relative">Inbox<span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"></span></button>
             </div>
           </div>
         </main>
@@ -313,5 +400,42 @@
     <!-- Js Bootstrap-->
     <script src="../js/feathericons.js"></script>
     <script src="../js/piruadmin.js"></script>
+    <script src="../js/prismjs.js"></script>
+    <script>
+      // Clipboard Copy Handler
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const code = btn.nextElementSibling?.innerText;
+            if (!code) return;
+      
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
+            } else {
+              const textarea = document.createElement('textarea');
+              textarea.value = code;
+              textarea.style.position = 'fixed';
+              textarea.style.opacity = '0';
+              document.body.appendChild(textarea);
+              textarea.select();
+              try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
+              document.body.removeChild(textarea);
+            }
+          });
+        });
+      
+        function showCopySuccess(btn) {
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.classList.add('btn-success');
+          btn.classList.remove('btn-outline-secondary');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-outline-secondary');
+          }, 1500);
+        }
+      });
+    </script>
   </body>
 </html>

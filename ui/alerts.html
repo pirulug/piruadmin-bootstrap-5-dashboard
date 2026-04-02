@@ -43,6 +43,7 @@
       })();
       
     </script>
+    <link rel="stylesheet" href="../css/prismjs.css">
   </head>
   <body>
 <!-- Loader-->
@@ -243,140 +244,189 @@
           <div class="mb-3">
             <h1 class="h3 d-inline align-middle">Alerts</h1>
           </div>
-          <div class="row">
-            <!-- =====================================================-->
-            <!-- Basic alerts-->
-            <!-- =====================================================-->
+          <div class="row g-4">
+            <!-- Standard Alerts-->
             <div class="col-lg-6">
-              <div class="card mb-3">
+              <div class="card h-100">
                 <div class="card-body">
-                  <h2 class="card-title">Basic alerts</h2>
-                  <p class="text-secondary">Basic alerts use the<code>.alert</code> class with the following color variants:<code>.alert-{primary|secondary|success|info|warning|danger|light|dark}</code>.</p>
-                  <div class="alert alert-primary" role="alert">This is a primary alert — check it out!</div>
-                  <div class="alert alert-secondary" role="alert">This is a secondary alert — check it out!</div>
-                  <div class="alert alert-success" role="alert">This is a success alert — check it out!</div>
-                  <div class="alert alert-info" role="alert">This is an info alert — check it out!</div>
-                  <div class="alert alert-warning" role="alert">This is a warning alert — check it out!</div>
-                  <div class="alert alert-danger" role="alert">This is a danger alert — check it out!</div>
-                  <div class="alert alert-light" role="alert">This is a light alert — check it out!</div>
-                  <div class="alert alert-dark" role="alert">This is a dark alert — check it out!</div>
-                </div>
-              </div>
-            </div>
-            <!-- =====================================================-->
-            <!-- Alerts with icon-->
-            <!-- =====================================================-->
-            <div class="col-lg-6">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h2 class="card-title">Alerts with icon</h2>
-                  <p class="text-secondary">Icon alerts use<code>.alert</code> combined with<code>.alert-media</code> and a contextual color:<code>.alert-{primary|secondary|success|info|warning|danger|light|dark}</code>.</p>
-                  <div class="alert alert-primary alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
-                    <div class="alert-body">Primary alert with icon</div>
+                  <h5 class="card-title">Standard Alerts</h5>
+                  <p class="text-muted">Detailed feedback for various system states using <code>.alert-{color}</code>. All alerts feature a specialized left accent border.</p>
+                  <div class="py-4">
+                    <div class="alert alert-primary" role="alert">A simple primary alert—check it out!</div>
+                    <div class="alert alert-success" role="alert">Success! Your changes have been saved.</div>
+                    <div class="alert alert-danger" role="alert">Error: Something went wrong with your request.</div>
+                    <div class="alert alert-warning" role="alert">Warning: Your subscription will expire soon.</div>
                   </div>
-                  <div class="alert alert-secondary alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
-                    <div class="alert-body">Secondary alert with icon</div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStandard" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
                   </div>
-                  <div class="alert alert-success alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
-                    <div class="alert-body">Success alert with icon</div>
-                  </div>
-                  <div class="alert alert-info alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
-                    <div class="alert-body">Info alert with icon</div>
-                  </div>
-                  <div class="alert alert-warning alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                    <div class="alert-body">Warning alert with icon</div>
-                  </div>
-                  <div class="alert alert-danger alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
-                    <div class="alert-body">Danger alert with icon</div>
-                  </div>
-                  <div class="alert alert-light alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-regular fa-circle"></i></div>
-                    <div class="alert-body">Light alert with icon</div>
-                  </div>
-                  <div class="alert alert-dark alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle"></i></div>
-                    <div class="alert-body">Dark alert with icon</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- =====================================================-->
-            <!-- Outline alerts-->
-            <!-- =====================================================-->
-            <div class="col-lg-6">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h2 class="card-title">Outline alerts</h2>
-                  <p class="text-secondary">Outline alerts use<code>.alert-outline-{primary|secondary|success|info|warning|danger|light|dark}</code> for subtle, low-emphasis messages.</p>
-                  <div class="alert alert-outline-primary" role="alert">Outline primary alert</div>
-                  <div class="alert alert-outline-secondary" role="alert">Outline secondary alert</div>
-                  <div class="alert alert-outline-success" role="alert">Outline success alert</div>
-                  <div class="alert alert-outline-info" role="alert">Outline info alert</div>
-                  <div class="alert alert-outline-warning" role="alert">Outline warning alert</div>
-                  <div class="alert alert-outline-danger" role="alert">Outline danger alert</div>
-                  <div class="alert alert-outline-light" role="alert">Outline light alert</div>
-                  <div class="alert alert-outline-dark" role="alert">Outline dark alert</div>
-                </div>
-              </div>
-            </div>
-            <!-- =====================================================-->
-            <!-- Dismissible alerts-->
-            <!-- =====================================================-->
-            <div class="col-lg-6">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h2 class="card-title">Dismissible alerts</h2>
-                  <p class="text-secondary">Dismissible alerts use<code>.alert-dismissible</code> together with<code>.alert-{context}</code> and a close button.</p>
-                  <div class="alert alert-success alert-media alert-dismissible" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
-                    <div class="alert-body">Operation successful!</div>
-                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                  <div class="alert alert-warning alert-media alert-dismissible" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-                    <div class="alert-body">Something went wrong</div>
-                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                  <div class="alert alert-danger alert-media alert-dismissible" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
-                    <div class="alert-body">Critical error detected</div>
-                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                  <div class="alert alert-info alert-media alert-dismissible" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-info"></i></div>
-                    <div class="alert-body">Here’s some information</div>
-                    <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- =====================================================-->
-            <!-- Alerts with heading & description-->
-            <!-- =====================================================-->
-            <div class="col-lg-6">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h2 class="card-title">Alerts with description</h2>
-                  <p class="text-secondary">Alerts with extended content use<code>.alert-media</code> and<code>.alert-body</code> to support headings and descriptions.</p>
-                  <div class="alert alert-success alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-check"></i></div>
-                    <div class="alert-body">
-                      <h4 class="alert-heading">Success!</h4>
-                      <p class="text-secondary">Your account has been saved successfully.</p><a class="alert-link" href="#">View details</a>
+                  <div class="collapse mt-3" id="collapseStandard">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+  A simple primary alert—check it out!
+&lt;/div&gt;
+&lt;div class="alert alert-success" role="alert"&gt;
+  Success! Your changes have been saved.
+&lt;/div&gt;
+</code></pre>
                     </div>
                   </div>
-                  <div class="alert alert-danger alert-media" role="alert">
-                    <div class="alert-icon"><i class="fa-solid fa-circle-xmark"></i></div>
-                    <div class="alert-body">
-                      <h4 class="alert-heading">Error!</h4>
-                      <p class="text-secondary">Something went wrong during saving.</p>
-                      <hr><a class="alert-link" href="#">Try again</a>
+                </div>
+              </div>
+            </div>
+            <!-- Outline Alerts-->
+            <div class="col-lg-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Outline Alerts</h5>
+                  <p class="text-muted">Use <code>.alert-outline-{color}</code> for subtle, minimal emphasis messages with transparent backgrounds.</p>
+                  <div class="py-4">
+                    <div class="alert alert-outline-primary" role="alert">Minimal primary alert with outline style.</div>
+                    <div class="alert alert-outline-success" role="alert">Minimal success alert with outline style.</div>
+                    <div class="alert alert-outline-danger" role="alert">Minimal danger alert with outline style.</div>
+                    <div class="alert alert-outline-warning" role="alert">Minimal warning alert with outline style.</div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOutline" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseOutline">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="alert alert-outline-primary" role="alert"&gt;
+  Outline primary alert
+&lt;/div&gt;
+&lt;div class="alert alert-outline-success" role="alert"&gt;
+  Outline success alert
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Alerts with Icons (Media Style)-->
+            <div class="col-lg-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Icon & Media Alerts</h5>
+                  <p class="text-muted">Enhanced layouts using <code>.alert-media</code> and <code>.alert-icon</code> for perfectly aligned icons and labels.</p>
+                  <div class="py-4">
+                    <div class="alert alert-primary alert-media" role="alert">
+                      <div class="alert-icon"><i class="bi bi-info-circle"></i></div>
+                      <div class="alert-body">This is a primary alert with a standard icon.</div>
+                    </div>
+                    <div class="alert alert-success alert-media" role="alert">
+                      <div class="alert-icon"><i class="bi bi-check-circle"></i></div>
+                      <div class="alert-body">Congratulations! The task was completed successfully.</div>
+                    </div>
+                    <div class="alert alert-danger alert-media" role="alert">
+                      <div class="alert-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                      <div class="alert-body">Critical failure: Database connection lost.</div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedia" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseMedia">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary alert-media" role="alert"&gt;
+  &lt;div class="alert-icon"&gt;
+    &lt;i class="bi bi-info-circle"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;div class="alert-body"&gt;
+    This is an icon alert.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Dismissible Alerts-->
+            <div class="col-lg-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Dismissible Alerts</h5>
+                  <p class="text-muted">Toggle the dismissal of an alert from the front-end by adding <code>.alert-dismissible</code> and a close button.</p>
+                  <div class="py-4">
+                    <div class="alert alert-info alert-dismissible fade show" role="alert"><strong>Tip: </strong>You can dismiss this alert by clicking the close button on the right.
+                      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-warning alert-media alert-dismissible fade show" role="alert">
+                      <div class="alert-icon"><i class="bi bi-shield-exclamation"></i></div>
+                      <div class="alert-body"><strong>Security Warning: </strong>Your password is weak. Please update it.</div>
+                      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div class="alert alert-outline-danger alert-media alert-dismissible fade show" role="alert">
+                      <div class="alert-icon"><i class="bi bi-bug"></i></div>
+                      <div class="alert-body">System error reported in module #42.</div>
+                      <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDismiss" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseDismiss">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; This is a dismissible alert.
+  &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Advanced Rich Content-->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Advanced Content</h5>
+                  <p class="text-muted">Use components like <code>.alert-heading</code>, <code>&lt;hr&gt;</code>, and <code>.alert-link</code> for detailed communication.</p>
+                  <div class="py-4 row g-3">
+                    <div class="col-md-6">
+                      <div class="alert alert-success alert-media" role="alert">
+                        <div class="alert-icon"><i class="bi bi-cloud-check fs-2"></i></div>
+                        <div class="alert-body">
+                          <h4 class="alert-heading">All systems online!</h4>
+                          <p class="mb-0">Our servers are running at 100% capacity with no reported incidents in the last 24 hours.</p>
+                          <hr>
+                          <p class="mb-0">Ensure you check the <a class="alert-link" href="#">performance report</a> for detailed metrics.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="alert alert-outline-info alert-media" role="alert">
+                        <div class="alert-icon"><i class="bi bi-lightbulb fs-2"></i></div>
+                        <div class="alert-body">
+                          <h4 class="alert-heading">Helpful Hint</h4>
+                          <p class="mb-0">You can now integrate your cloud storage directly into the dashboard.</p>
+                          <p class="mt-2 mb-0"><a class="btn btn-sm btn-info text-white" href="#">Learn more</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseAdvanced">
+                    <div class="demo-code-preview" data-label="HTML EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre class="language-html"><code class="language-html">&lt;div class="alert alert-success alert-media" role="alert"&gt;
+  &lt;div class="alert-icon"&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="alert-body"&gt;
+    &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+    &lt;p&gt;Additional paragraph for detailed info.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;a href="#" class="alert-link"&gt;Example Link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
                     </div>
                   </div>
                 </div>
@@ -405,5 +455,42 @@
     <!-- Js Bootstrap-->
     <script src="../js/feathericons.js"></script>
     <script src="../js/piruadmin.js"></script>
+    <script src="../js/prismjs.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Clipboard Copy Handler
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const code = btn.nextElementSibling?.innerText;
+            if (!code) return;
+      
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
+            } else {
+              const textarea = document.createElement('textarea');
+              textarea.value = code;
+              textarea.style.position = 'fixed';
+              textarea.style.opacity = '0';
+              document.body.appendChild(textarea);
+              textarea.select();
+              try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
+              document.body.removeChild(textarea);
+            }
+          });
+        });
+      
+        function showCopySuccess(btn) {
+          const original = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.classList.add('btn-success');
+          btn.classList.remove('btn-outline-secondary');
+          setTimeout(() => {
+            btn.textContent = original;
+            btn.classList.remove('btn-success');
+            btn.classList.add('btn-outline-secondary');
+          }, 1500);
+        }
+      });
+    </script>
   </body>
 </html>
