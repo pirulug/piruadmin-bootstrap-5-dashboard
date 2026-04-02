@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./src/img/logo.png" alt="Logo">
+  <img src="./src/img/logo.png" alt="PiruAdmin Logo">
 </div>
 
-<h1 align="center">PiruAdmin - Bootstrap 5 Dashboard</h1>
+<h1 align="center">PiruAdmin — Bootstrap 5 Dashboard</h1>
 
 <div align="center">
 
@@ -15,43 +15,92 @@
 </div>
 
 <p align="center">
-  <img src="./src/img/background.png" alt="AdminPirulug">
+  <img src="./src/img/background.png" alt="PiruAdmin Preview">
 </p>
 
-<p align="center">A professional administration and dashboard template based on Bootstrap 5, equipped with a wide variety of user interface components, forms, tables, charts, pages, and icons. AdminPirulug stands out by not relying on jQuery or any third-party libraries used by AdminPiru.</p>
+<p align="center">A professional admin dashboard template built on Bootstrap 5. No jQuery, no unnecessary dependencies — just clean, modern, and maintainable code.</p>
 
 <p align="center">
-	<a href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard">Demo Page</a> | 
-	<a href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard">Documentation Page</a>
+  <a href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard">Live Demo</a> |
+  <a href="https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/blob/master/CHANGELOG.md">Changelog</a>
 </p>
+
+---
+
+## Features
+
+- Built with **Bootstrap 5** — no jQuery dependency
+- Custom **SCSS** architecture with a dynamic `$prefix` variable system
+- **Dark Mode** support via Bootstrap's `color-mode` API
+- Interactive **UI Documentation** with collapsible code examples (PrismJS + Copy to Clipboard)
+- **Authentication Pages** — Sign In, Sign Up, Forgot Password, Reset Password
+- **Dashboard** with charts and statistics
+- Plugin integrations: SweetAlert2, Toastify JS, Lite YouTube, Tagify, Datatables, Google Maps, ApexCharts
+- Fully **responsive** layout
+
+## Pages
+
+| Category | Pages |
+| :--- | :--- |
+| **Dashboard** | Main Dashboard |
+| **UI Components** | Buttons, Alerts, Badges, Cards, Avatars, Images, Tabs, General |
+| **Forms** | Basic Inputs |
+| **Tables** | Basic Tables |
+| **Plugins** | Charts, SweetAlert2, Toastify, Lite YouTube, Tagify, Datatables, Google Maps |
+| **Authentication** | Sign In, Sign Up, Forgot Password, Set New Password |
+| **Account** | Profile, Settings |
+| **Error Pages** | 404, 500 |
 
 ## Build Tools
 
-The theme includes a custom Webpack file that can be used to quickly recompile and minimize the theme assets while developing or for deployment. You'll need to install Node.js before using Webpack.
+This project uses **Webpack** with `pnpm`. You'll need [Node.js](https://nodejs.org/) installed before proceeding.
 
-Once Node.js is installed, run `npm install` to install the remaining dependencies for AdminKit. All dependencies will be downloaded to the `node_modules` directory.
-
+### Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
-Now you're ready to modify the source files and generate new files in the dist/ folder. AdminKit uses webpack-dev-server to automatically detect changes in files and start a local web server at http://localhost:8989.
+### Start development server
+
+Starts a local web server at `http://localhost:8989` with hot reload:
 
 ```bash
-npm start
+pnpm start
 ```
 
-Compile, optimize, minimize, and obfuscate all source files into the dist/ folder:
+### Production build
+
+Compiles, optimizes, and minifies all assets into the `dist/` folder:
 
 ```bash
-npm run build
+pnpm run build
+```
+
+## Project Structure
+
+```
+src/
+├── img/              # Images and assets
+├── js/               # JavaScript modules (sidebar, toggle-password, etc.)
+├── plugins/          # Third-party plugin styles
+├── scss/
+│   ├── base/         # Variables, typography, resets
+│   ├── components/   # Buttons, cards, badges, etc.
+│   ├── layout/       # Sidebar, navbar, footer, wrapper
+│   ├── mixins/       # SCSS mixins
+│   ├── pages/        # Page-specific styles (auth, dashboard, etc.)
+│   ├── plugins/      # Plugin-specific styles
+│   └── utilities/    # Helpers and utility classes
+└── view/
+    ├── layouts/      # Base layout templates (main, auth)
+    └── pages/        # All page templates (PUG)
 ```
 
 ## License
 
-PiruAdmin is distributed under the [Licencia MIT](./LICENSE).
+PiruAdmin is distributed under the [MIT License](./LICENSE).
 
 ## Author
 
-PiruAdmin was created by <a href="https://github.com/pirulug">Pirulug</a>.
+Created by [Pirulug](https://github.com/pirulug).
