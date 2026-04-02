@@ -20,6 +20,21 @@ block content
 
       .card.mb-3
         .card-header
+          h5.card-title.mb-0 Password Toggle
+        .card-body
+          p.text-secondary
+            | Use the 
+            code data-pr-toggle-password
+            |  attribute on a button within an 
+            code .input-group
+            |  to toggle the visibility of a password field.
+          .input-group
+            input.form-control(type='password' placeholder='Enter password')
+            button.btn.btn-outline-secondary(type='button' data-pr-toggle-password='')
+              i.fa-regular.fa-eye
+
+      .card.mb-3
+        .card-header
           h5.card-title.mb-0 Textarea
         .card-body
           p.text-secondary

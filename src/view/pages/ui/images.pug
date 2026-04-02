@@ -1,23 +1,155 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Images'
+  - pageName = 'Images'
   - pageUrl = 'ui/images'
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
 
 block content
 
-  .card 
-    .card-body 
-      div
-        .mb-3
-          img.img-fluid(src="https://dummyimage.com/5000x1000/000/fff.jpg")
-        .mb-3
-          img.img-thumbnail(src="https://dummyimage.com/200x200/000/fff.jpg")
-        .mb-3
-          img.rounded.float-start(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
-        .mb-3
-          img.rounded.float-end(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
-        .mb-3
-          img.rounded.mx-auto.d-block(src='https://dummyimage.com/200x200/000/fff.jpg' alt='...')
+  .row.g-4
+    // Responsive Images
+    .col-md-6
+      .card
+        .card-body
+          h5.card-title Responsive Images
+          p.text-muted Images in Bootstrap are made responsive with <code>.img-fluid</code>, which applies <code>max-width: 100%</code> and <code>height: auto</code>.
+          .text-center.py-4
+            img.img-fluid.rounded(src="https://dummyimage.com/1200x400/0d6efd/fff.png&text=Responsive+Image" alt="Responsive image")
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseResponsive' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseResponsive.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;img src="..." class="img-fluid" alt="Responsive image"&gt;
 
+    // Thumbnails
+    .col-md-6
+      .card
+        .card-body
+          h5.card-title Image Thumbnails
+          p.text-muted Use the <code>.img-thumbnail</code> class to give an image a rounded 1px border appearance with a small amount of padding.
+          .text-center.py-4
+            img.img-thumbnail(src="https://dummyimage.com/200x200/6c757d/fff.png&text=Thumbnail" alt="Thumbnail appearance")
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThumbnail' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseThumbnail.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;img src="..." class="img-thumbnail" alt="Thumbnail"&gt;
 
+    // Aligning & Corners
+    .col-md-6
+      .card
+        .card-body
+          h5.card-title Alignment & Corners
+          p.text-muted Align images with helper classes like <code>.float-start</code>, <code>.float-end</code>, or center them using <code>.mx-auto.d-block</code>.
+          .py-4
+            .mb-3.clearfix
+              img.rounded.float-start(src="https://dummyimage.com/100x100/17a2b8/fff.png&text=Start" alt="Aligned start")
+              img.rounded.float-end(src="https://dummyimage.com/100x100/ffc107/fff.png&text=End" alt="Aligned end")
+            .mt-3.text-center
+              img.rounded.mx-auto.d-block(src="https://dummyimage.com/100x100/198754/fff.png&text=Center" alt="Aligned center")
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseAlign' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseAlign.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Floated --&gt;
+                  &lt;img src="..." class="rounded float-start" alt="..."&gt;
+                  &lt;img src="..." class="rounded float-end" alt="..."&gt;
+                  
+                  &lt;!-- Centered --&gt;
+                  &lt;img src="..." class="rounded mx-auto d-block" alt="..."&gt;
+
+    // Figures
+    .col-md-6
+      .card
+        .card-body
+          h5.card-title Figures
+          p.text-muted Use the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements to present images with a description.
+          .py-4
+            figure.figure.m-0.w-100.text-center
+              img.figure-img.img-fluid.rounded(src="https://dummyimage.com/600x200/212529/fff.png&text=Figure" alt="Figure appearance")
+              figcaption.figure-caption.mt-2.text-center A descriptive caption for the image figure.
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFigure' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseFigure.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;figure class="figure"&gt;
+                    &lt;img src="..." class="figure-img img-fluid rounded" alt="..."&gt;
+                    &lt;figcaption class="figure-caption"&gt;A caption for the above image.&lt;/figcaption&gt;
+                  &lt;/figure&gt;
+
+block scripts
+  script(src=baseUrl + "js/prismjs.js")
+  script.
+    // Clipboard Copy Handler
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      btn.classList.add('btn-success');
+      btn.classList.remove('btn-outline-secondary');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('btn-success');
+        btn.classList.add('btn-outline-secondary');
+      }, 1500);
+    }

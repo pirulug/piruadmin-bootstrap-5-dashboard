@@ -1,181 +1,222 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Alerts'
+  - pageName = 'Alerts'
   - pageUrl = 'ui/alerts'
-  
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
 
 block content
-
-  .row
-    // =====================================================
-    // Basic alerts
-    // =====================================================
+  .row.g-4
+    // Standard Alerts
     .col-lg-6
-      .card.mb-3
+      .card.h-100
         .card-body
-          h2.card-title Basic alerts
-          p.text-secondary
-            | Basic alerts use the
-            code .alert
-            |  class with the following color variants:
-            code .alert-{primary|secondary|success|info|warning|danger|light|dark}
-            | .
+          h5.card-title Standard Alerts
+          p.text-muted Detailed feedback for various system states using <code>.alert-{color}</code>. All alerts feature a specialized left accent border.
+          .py-4
+            .alert.alert-primary(role='alert') A simple primary alert—check it out!
+            .alert.alert-success(role='alert') Success! Your changes have been saved.
+            .alert.alert-danger(role='alert') Error: Something went wrong with your request.
+            .alert.alert-warning(role='alert') Warning: Your subscription will expire soon.
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseStandard' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseStandard.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-primary" role="alert"&gt;
+                    A simple primary alert—check it out!
+                  &lt;/div&gt;
+                  &lt;div class="alert alert-success" role="alert"&gt;
+                    Success! Your changes have been saved.
+                  &lt;/div&gt;
 
-
-          .alert.alert-primary(role='alert') This is a primary alert — check it out!
-          .alert.alert-secondary(role='alert') This is a secondary alert — check it out!
-          .alert.alert-success(role='alert') This is a success alert — check it out!
-          .alert.alert-info(role='alert') This is an info alert — check it out!
-          .alert.alert-warning(role='alert') This is a warning alert — check it out!
-          .alert.alert-danger(role='alert') This is a danger alert — check it out!
-          .alert.alert-light(role='alert') This is a light alert — check it out!
-          .alert.alert-dark(role='alert') This is a dark alert — check it out!
-
-    // =====================================================
-    // Alerts with icon
-    // =====================================================
+    // Outline Alerts
     .col-lg-6
-      .card.mb-3
+      .card.h-100
         .card-body
-          h2.card-title Alerts with icon
-          p.text-secondary
-            | Icon alerts use
-            code .alert
-            |  combined with
-            code .alert-media
-            |  and a contextual color:
-            code .alert-{primary|secondary|success|info|warning|danger|light|dark}
-            | .
+          h5.card-title Outline Alerts
+          p.text-muted Use <code>.alert-outline-{color}</code> for subtle, minimal emphasis messages with transparent backgrounds.
+          .py-4
+            .alert.alert-outline-primary(role='alert') Minimal primary alert with outline style.
+            .alert.alert-outline-success(role='alert') Minimal success alert with outline style.
+            .alert.alert-outline-danger(role='alert') Minimal danger alert with outline style.
+            .alert.alert-outline-warning(role='alert') Minimal warning alert with outline style.
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOutline' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseOutline.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-outline-primary" role="alert"&gt;
+                    Outline primary alert
+                  &lt;/div&gt;
+                  &lt;div class="alert alert-outline-success" role="alert"&gt;
+                    Outline success alert
+                  &lt;/div&gt;
 
-
-          .alert.alert-primary.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle
-            .alert-body Primary alert with icon
-
-          .alert.alert-secondary.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle
-            .alert-body Secondary alert with icon
-
-          .alert.alert-success.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-check
-            .alert-body Success alert with icon
-
-          .alert.alert-info.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-info
-            .alert-body Info alert with icon
-
-          .alert.alert-warning.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-triangle-exclamation
-            .alert-body Warning alert with icon
-
-          .alert.alert-danger.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-xmark
-            .alert-body Danger alert with icon
-
-          .alert.alert-light.alert-media(role='alert')
-            .alert-icon
-              i.fa-regular.fa-circle
-            .alert-body Light alert with icon
-
-          .alert.alert-dark.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle
-            .alert-body Dark alert with icon
-
-    // =====================================================
-    // Outline alerts
-    // =====================================================
+    // Alerts with Icons (Media Style)
     .col-lg-6
-      .card.mb-3
+      .card.h-100
         .card-body
-          h2.card-title Outline alerts
-          p.text-secondary
-            | Outline alerts use
-            code .alert-outline-{primary|secondary|success|info|warning|danger|light|dark}
-            |  for subtle, low-emphasis messages.
+          h5.card-title Icon & Media Alerts
+          p.text-muted Enhanced layouts using <code>.alert-media</code> and <code>.alert-icon</code> for perfectly aligned icons and labels.
+          .py-4
+            .alert.alert-primary.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-info-circle
+              .alert-body This is a primary alert with a standard icon.
+            .alert.alert-success.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-check-circle
+              .alert-body Congratulations! The task was completed successfully.
+            .alert.alert-danger.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-exclamation-triangle
+              .alert-body Critical failure: Database connection lost.
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseMedia' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseMedia.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-primary alert-media" role="alert"&gt;
+                    &lt;div class="alert-icon"&gt;
+                      &lt;i class="bi bi-info-circle"&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class="alert-body"&gt;
+                      This is an icon alert.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
 
-          .alert.alert-outline-primary(role='alert') Outline primary alert
-          .alert.alert-outline-secondary(role='alert') Outline secondary alert
-          .alert.alert-outline-success(role='alert') Outline success alert
-          .alert.alert-outline-info(role='alert') Outline info alert
-          .alert.alert-outline-warning(role='alert') Outline warning alert
-          .alert.alert-outline-danger(role='alert') Outline danger alert
-          .alert.alert-outline-light(role='alert') Outline light alert
-          .alert.alert-outline-dark(role='alert') Outline dark alert
-
-    // =====================================================
-    // Dismissible alerts
-    // =====================================================
+    // Dismissible Alerts
     .col-lg-6
-      .card.mb-3
+      .card.h-100
         .card-body
-          h2.card-title Dismissible alerts
-          p.text-secondary
-            | Dismissible alerts use
-            code .alert-dismissible
-            |  together with
-            code .alert-{context}
-            |  and a close button.
+          h5.card-title Dismissible Alerts
+          p.text-muted Toggle the dismissal of an alert from the front-end by adding <code>.alert-dismissible</code> and a close button.
+          .py-4
+            .alert.alert-info.alert-dismissible.fade.show(role='alert')
+              strong Tip: 
+              | You can dismiss this alert by clicking the close button on the right.
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+            .alert.alert-warning.alert-media.alert-dismissible.fade.show(role='alert')
+              .alert-icon
+                i.bi.bi-shield-exclamation
+              .alert-body
+                strong Security Warning: 
+                | Your password is weak. Please update it.
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+            .alert.alert-outline-danger.alert-media.alert-dismissible.fade.show(role='alert')
+              .alert-icon
+                i.bi.bi-bug
+              .alert-body System error reported in module #42.
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseDismiss' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseDismiss.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+                    &lt;strong&gt;Warning!&lt;/strong&gt; This is a dismissible alert.
+                    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                  &lt;/div&gt;
 
-
-          .alert.alert-success.alert-media.alert-dismissible(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-check
-            .alert-body Operation successful!
-            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-
-          .alert.alert-warning.alert-media.alert-dismissible(role='alert')
-            .alert-icon
-              i.fa-solid.fa-triangle-exclamation
-            .alert-body Something went wrong
-            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-
-          .alert.alert-danger.alert-media.alert-dismissible(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-xmark
-            .alert-body Critical error detected
-            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-
-          .alert.alert-info.alert-media.alert-dismissible(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-info
-            .alert-body Here’s some information
-            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-
-    // =====================================================
-    // Alerts with heading & description
-    // =====================================================
-    .col-lg-6
-      .card.mb-3
+    // Advanced Rich Content
+    .col-12
+      .card
         .card-body
-          h2.card-title Alerts with description
-          p.text-secondary
-            | Alerts with extended content use
-            code .alert-media
-            |  and
-            code .alert-body
-            |  to support headings and descriptions.
+          h5.card-title Advanced Content
+          p.text-muted Use components like <code>.alert-heading</code>, <code>&lt;hr&gt;</code>, and <code>.alert-link</code> for detailed communication.
+          .py-4.row.g-3
+            .col-md-6
+              .alert.alert-success.alert-media(role='alert')
+                .alert-icon
+                  i.bi.bi-cloud-check.fs-2
+                .alert-body
+                  h4.alert-heading All systems online!
+                  p.mb-0 Our servers are running at 100% capacity with no reported incidents in the last 24 hours.
+                  hr
+                  p.mb-0 Ensure you check the 
+                    a.alert-link(href='#') performance report
+                    |  for detailed metrics.
+            .col-md-6
+              .alert.alert-outline-info.alert-media(role='alert')
+                .alert-icon
+                  i.bi.bi-lightbulb.fs-2
+                .alert-body
+                  h4.alert-heading Helpful Hint
+                  p.mb-0 You can now integrate your cloud storage directly into the dashboard.
+                  p.mt-2.mb-0
+                    a.btn.btn-sm.btn-info.text-white(href='#') Learn more
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseAdvanced' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseAdvanced.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-success alert-media" role="alert"&gt;
+                    &lt;div class="alert-icon"&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt;&lt;/div&gt;
+                    &lt;div class="alert-body"&gt;
+                      &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+                      &lt;p&gt;Additional paragraph for detailed info.&lt;/p&gt;
+                      &lt;hr&gt;
+                      &lt;a href="#" class="alert-link"&gt;Example Link&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
 
-          .alert.alert-success.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-check
-            .alert-body
-              h4.alert-heading Success!
-              p.text-secondary Your account has been saved successfully.
-              a.alert-link(href="#") View details
+block scripts
+  script(src=baseUrl + "js/prismjs.js")
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      // Clipboard Copy Handler
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.nextElementSibling?.innerText;
+          if (!code) return;
 
-          .alert.alert-danger.alert-media(role='alert')
-            .alert-icon
-              i.fa-solid.fa-circle-xmark
-            .alert-body
-              h4.alert-heading Error!
-              p.text-secondary Something went wrong during saving.
-              hr
-              a.alert-link(href="#") Try again
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
+            document.body.removeChild(textarea);
+          }
+        });
+      });
+
+      function showCopySuccess(btn) {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-outline-secondary');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-secondary');
+        }, 1500);
+      }
+    });

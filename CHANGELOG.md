@@ -50,3 +50,17 @@
 - **Improve:**
   - Modernized the UI and structure of plugin demo pages (Charts, SweetAlert 2, Datatables, Google Maps, Tagify).
   - Updated sidebar navigation menu with new plugin entries.
+
+## [v1.7.0] - 02/04/2026
+- **Add:**
+  - Added collapsible "View Code" sections with PrismJS syntax highlighting and "Copy to Clipboard" to the Buttons UI documentation page.
+  - Created `src/scss/pages/_auth.scss` — dedicated SCSS module for authentication pages.
+- **Improve:**
+  - Authentication pages (`sign-in`, `sign-up`, `recover-password`, `reset-password`):
+    - Refactored password visibility toggle to use the global `data-pr-toggle-password` attribute, removing all redundant inline scripts.
+    - Improved and professionalized all UI copy (headings, subheadings, labels, buttons, footer links).
+    - Reduced input size by removing oversized `form-control-lg` and `input-group-lg` classes.
+    - Improved responsiveness with adaptive column widths (`col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4`).
+    - Social login buttons changed from stacked layout to a two-column side-by-side grid.
+    - Applied consistent card and logo styling via `.auth-card` and `.auth-logo-box` classes.
+  - `_auth.scss` CSS custom property prefix made fully dynamic using `#{$prefix}` SCSS interpolation, synchronized with the global `$prefix` variable.

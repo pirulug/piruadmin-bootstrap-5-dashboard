@@ -1,133 +1,206 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Badges'
+  - pageName = 'Badges'
   - pageUrl = 'ui/badges'
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
 
 block content
 
-  .row.g-3
-    .col-5
+  .row.g-4
+    // Badges in Headings
+    .col-md-5
+      .card.h-100
+        .card-body
+          h5.card-title Badges in Headings
+          p.text-muted Badges scale to match the size of the immediate parent element by using relative font sizing.
+          .py-4
+            h1 Heading 1 
+              span.badge.bg-primary New
+            h3 Heading 3 
+              span.badge.bg-info Update
+            h5 Heading 5 
+              span.badge.bg-success Pro
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseHeadings' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseHeadings.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;h1&gt;Example Heading &lt;span class="badge bg-primary"&gt;New&lt;/span&gt;&lt;/h1&gt;
+                  &lt;h3&gt;Example Heading &lt;span class="badge bg-info"&gt;Update&lt;/span&gt;&lt;/h3&gt;
+
+    // Positioned Badges
+    .col-md-7
+      .card.h-100
+        .card-body
+          h5.card-title Positioned Badges
+          p.text-muted Use utilities to position a badge at the corner of a link or button, commonly used for notifications.
+          .py-4.d-flex.gap-4.justify-content-center.flex-wrap
+            button.btn.btn-primary.position-relative(type='button')
+              | Inbox
+              span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger 99+
+            button.btn.btn-secondary.position-relative(type='button')
+              | Profile
+              span.position-absolute.top-0.start-100.translate-middle.p-2.bg-success.border.border-light.rounded-circle
+            button.btn.btn-dark.position-relative(type='button')
+              i.bi.bi-bell.fs-5
+              span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-warning.text-dark 5
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapsePositioned' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapsePositioned.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Simple Counter --&gt;
+                  &lt;button class="btn btn-primary position-relative"&gt;
+                    Inbox
+                    &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;99+&lt;/span&gt;
+                  &lt;/button&gt;
+
+                  &lt;!-- Soft Notification Dot --&gt;
+                  &lt;button class="btn btn-secondary position-relative"&gt;
+                    Profile
+                    &lt;span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle"&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+
+    // Theme Colors
+    .col-12
       .card
-        .card-header
-          h2.card-titleBadges in headings
-          p.text-secondary.m-0
-            | Use
-            code .badge
-            | together with
-            code .text-bg-{color}
-            | to add badges to headings.
         .card-body
-          h1
-            | Example heading
-            span.badge.text-bg-secondary New
-          h2
-            | Example heading
-            span.badge.text-bg-secondary New
-          h3
-            | Example heading
-            span.badge.text-bg-secondary New
-          h4
-            | Example heading
-            span.badge.text-bg-secondary New
-          h5
-            | Example heading
-            span.badge.text-bg-secondary New
-          h6
-            | Example heading
-            span.badge.text-bg-secondary New
-    .col-7
-      .card.mb-3
-        .card-header
-          h2.card-title Basado en theme colors
-          p.text-secondary.m-0
-            | Usa las clases de Bootstrap como
-            code .badge-{color}
+          h5.card-title Professional Theme Styles
+          p.text-muted Explore our premium badge variations: Solid, Light (Soft), and Outline.
+          
+          .row.row-cols-1.row-cols-md-3.g-4.mt-2
+            // Solid Column
+            .col
+              .p-3.border.rounded.h-100
+                h6.fw-bold.mb-3 Solid Badges (Default)
+                .d-flex.flex-wrap.gap-2
+                  span.badge.badge-primary primary
+                  span.badge.badge-success success
+                  span.badge.badge-danger danger
+                  span.badge.badge-warning warning
+                  span.badge.badge-info info
+                  span.badge.badge-dark dark
+            
+            // Light Column
+            .col
+              .p-3.border.rounded.h-100
+                h6.fw-bold.mb-3 Light Badges (Subtle)
+                .d-flex.flex-wrap.gap-2
+                  span.badge.badge-light-primary primary
+                  span.badge.badge-light-success success
+                  span.badge.badge-light-danger danger
+                  span.badge.badge-light-warning warning
+                  span.badge.badge-light-info info
+                  span.badge.badge-light-dark dark
+
+            // Outline Column
+            .col
+              .p-3.border.rounded.h-100
+                h6.fw-bold.mb-3 Outline Badges (Minimal)
+                .d-flex.flex-wrap.gap-2
+                  span.badge.badge-outline-primary primary
+                  span.badge.badge-outline-success success
+                  span.badge.badge-outline-danger danger
+                  span.badge.badge-outline-warning warning
+                  span.badge.badge-outline-info info
+                  span.badge.badge-outline-dark dark
+
+          .text-center.mt-4
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThemes' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseThemes.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Solid Style --&gt;
+                  &lt;span class="badge badge-primary"&gt;Solid&lt;/span&gt;
+
+                  &lt;!-- Light Style (Custom) --&gt;
+                  &lt;span class="badge badge-light-success"&gt;Soft&lt;/span&gt;
+
+                  &lt;!-- Outline Style (Custom) --&gt;
+                  &lt;span class="badge badge-outline-info"&gt;Minimal&lt;/span&gt;
+
+    // Advanced Colors
+    .col-12
+      .card
         .card-body
-          div
-            span.m-1.badge.badge-blue Blue
-            span.m-1.badge.badge-azure Azure
-            span.m-1.badge.badge-indigo Indigo
-            span.m-1.badge.badge-purple Purple
-            span.m-1.badge.badge-pink Pink
-            span.m-1.badge.badge-red Red
-            span.m-1.badge.badge-orange Orange
-            span.m-1.badge.badge-yellow Yellow
-            span.m-1.badge.badge-lime Lime
-            span.m-1.badge.badge-green Green
-            span.m-1.badge.badge-teal Teal
-            span.m-1.badge.badge-cyan Cyan
+          h5.card-title Advanced Palette
+          p.text-muted Standard colors from our design system palette.
+          .py-4
+            .d-flex.flex-wrap.gap-2.justify-content-center
+              span.badge.badge-blue Blue
+              span.badge.badge-azure Azure
+              span.badge.badge-indigo Indigo
+              span.badge.badge-purple Purple
+              span.badge.badge-pink Pink
+              span.badge.badge-red Red
+              span.badge.badge-orange Orange
+              span.badge.badge-yellow Yellow
+              span.badge.badge-lime Lime
+              span.badge.badge-green Green
+              span.badge.badge-teal Teal
+              span.badge.badge-cyan Cyan
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapsePalette' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapsePalette.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;span class="badge badge-red"&gt;Red&lt;/span&gt;
+                  &lt;span class="badge badge-light-blue"&gt;Light Blue&lt;/span&gt;
+                  &lt;span class="badge badge-outline-purple"&gt;Outline Purple&lt;/span&gt;
 
-          div
-            span.m-1.badge.badge-light-blue Blue
-            span.m-1.badge.badge-light-azure Azure
-            span.m-1.badge.badge-light-indigo Indigo
-            span.m-1.badge.badge-light-purple Purple
-            span.m-1.badge.badge-light-pink Pink
-            span.m-1.badge.badge-light-red Red
-            span.m-1.badge.badge-light-orange Orange
-            span.m-1.badge.badge-light-yellow Yellow
-            span.m-1.badge.badge-light-lime Lime
-            span.m-1.badge.badge-light-green Green
-            span.m-1.badge.badge-light-teal Teal
-            span.m-1.badge.badge-light-cyan Cyan
+block scripts
+  script(src=baseUrl + "js/prismjs.js")
+  script.
+    // Clipboard Copy Handler
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.nextElementSibling?.innerText;
+          if (!code) return;
 
-          div
-            span.m-1.badge.badge-outline-blue Blue
-            span.m-1.badge.badge-outline-azure Azure
-            span.m-1.badge.badge-outline-indigo Indigo
-            span.m-1.badge.badge-outline-purple Purple
-            span.m-1.badge.badge-outline-pink Pink
-            span.m-1.badge.badge-outline-red Red
-            span.m-1.badge.badge-outline-orange Orange
-            span.m-1.badge.badge-outline-yellow Yellow
-            span.m-1.badge.badge-outline-lime Lime
-            span.m-1.badge.badge-outline-green Green
-            span.m-1.badge.badge-outline-teal Teal
-            span.m-1.badge.badge-outline-cyan Cyan
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
+            document.body.removeChild(textarea);
+          }
+        });
+      });
 
-      .card.mb-3
-        .card-header
-          h2.card-title Basado en theme colors
-          p.text-muted.m-0
-            | Usa las clases de Bootstrap como
-            code .badge-{color}
-            code .badge-light-{color}
-            code .badge-outline-{color}
-        .card-body
-          div
-            span.m-1.badge.badge-primary primary
-            span.m-1.badge.badge-secondary secondary
-            span.m-1.badge.badge-success success
-            span.m-1.badge.badge-danger danger
-            span.m-1.badge.badge-warning warning
-            span.m-1.badge.badge-info info
-            span.m-1.badge.badge-light light
-            span.m-1.badge.badge-dark dark
-          div
-            span.m-1.badge.badge-light-primary primary
-            span.m-1.badge.badge-light-secondary secondary
-            span.m-1.badge.badge-light-success success
-            span.m-1.badge.badge-light-danger danger
-            span.m-1.badge.badge-light-warning warning
-            span.m-1.badge.badge-light-info info
-            span.m-1.badge.badge-light-light light
-            span.m-1.badge.badge-light-dark dark
-          div
-            span.m-1.badge.badge-outline-primary primary
-            span.m-1.badge.badge-outline-secondary secondary
-            span.m-1.badge.badge-outline-success success
-            span.m-1.badge.badge-outline-danger danger
-            span.m-1.badge.badge-outline-warning warning
-            span.m-1.badge.badge-outline-info info
-            span.m-1.badge.badge-outline-light light
-            span.m-1.badge.badge-outline-dark dark
-  .card
-    .card-body
-      button.btn.btn-secondary.position-relative
-        | Inbox
-        span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
-          | 99+
-      button.btn.btn-secondary.position-relative
-        | Inbox
-        span.position-absolute.top-0.start-100.translate-middle.p-2.bg-danger.border.border-light.rounded-circle
+      function showCopySuccess(btn) {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-outline-secondary');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-secondary');
+        }, 1500);
+      }
+    });

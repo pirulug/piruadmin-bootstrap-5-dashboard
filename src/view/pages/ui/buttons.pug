@@ -3,6 +3,9 @@ extends ../../layouts/dashboard
 append config
   -pageName = 'Buttons'
   - pageUrl = 'ui/buttons'
+ 
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
 
 block content
 
@@ -88,6 +91,18 @@ block content
         .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
           a.btn.btn-light.disabled.w-100(href='#')
             | Light
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseStandard' aria-expanded='false')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseStandard.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+              &lt;button class="btn btn-primary active"&gt;Active&lt;/button&gt;
+              &lt;button class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;
 
   .card.mb-3
     .card-header
@@ -175,6 +190,17 @@ block content
         .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
           a.btn.btn-outline-light.disabled.w-100(href='#')
             | Light
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOutline' aria-expanded='false')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseOutline.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-outline-primary"&gt;Outline&lt;/button&gt;
+              &lt;button class="btn btn-outline-primary active"&gt;Active&lt;/button&gt;
 
   .card.mb-3
     .card-header
@@ -262,6 +288,16 @@ block content
         .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
           a.btn.btn-light-light.disabled.w-100(href='#')
             | Light
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseLight' aria-expanded='false')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseLight.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-light-primary"&gt;Light Soft&lt;/button&gt;
 
   .card.mb-3
     .card-header
@@ -297,6 +333,16 @@ block content
         .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
           a.btn.btn-light.rounded-0.w-100(href='#')
             | Light
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSquare')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseSquare.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-primary rounded-0"&gt;Square&lt;/button&gt;
 
   .card.mb-3
     .card-header
@@ -332,6 +378,16 @@ block content
         .col-6.col-sm-4.col-md-2.col-xl.bg-dark.py-3
           a.btn.btn-light.rounded-pill.w-100(href='#')
             | Light
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapsePill')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapsePill.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-primary rounded-pill"&gt;Pill&lt;/button&gt;
 
   .card.mb-3
     .card-header
@@ -442,6 +498,17 @@ block content
           a.btn.btn-bitbucket.w-100(href='#')
             i.fab.fa-bitbucket
             |  Bitbucket
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSocial')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseSocial.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-facebook"&gt;&lt;i class="fab fa-facebook"&gt;&lt;/i&gt; Facebook&lt;/button&gt;
+              &lt;button class="btn btn-github"&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt; GitHub&lt;/button&gt;
 
   .card.mb-3
     .card-body
@@ -483,6 +550,18 @@ block content
               i.fas.fa-exclamation
             button.btn.btn-info
               i.fas.fa-info
+      .text-center.mt-2
+        button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseIcons')
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseIcons.mt-3
+        .demo-code-preview(data-label='HTML EXAMPLE')
+          button.copy-btn(type='button') Copy
+          pre.language-html
+            code.language-html.
+              &lt;button class="btn btn-primary"&gt;
+                &lt;i class="fa fa-smile me-1"&gt;&lt;/i&gt; Primary
+              &lt;/button&gt;
 
   .row
     .col-12.col-lg-6
@@ -505,6 +584,17 @@ block content
             button.btn.btn-primary.btn-lg
               i.fas.fa-globe-americas
               |  Large
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSizes')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseSizes.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+                  &lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
       .card.mb-3
         .card-header
           h5.card-title Button Dropdown
@@ -620,6 +710,21 @@ block content
                 a.dropdown-item(href='#') Something else here
                 .dropdown-divider
                 a.dropdown-item(href='#') Separated link
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseDropdown')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseDropdown.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="btn-group"&gt;
+                    &lt;button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"&gt;Primary&lt;/button&gt;
+                    &lt;div class="dropdown-menu"&gt;
+                      &lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
     .col-12.col-lg-6
       .card.mb-3
         .card-header
@@ -672,4 +777,56 @@ block content
               button.btn.btn-danger(type='button') Button
               button.btn.btn-danger(type='button') Button
               button.btn.btn-danger(type='button') Button
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseGroups')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseGroups.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="btn-group" role="group"&gt;
+                    &lt;button class="btn btn-secondary"&gt;Left&lt;/button&gt;
+                    &lt;button class="btn btn-secondary"&gt;Middle&lt;/button&gt;
+                    &lt;button class="btn btn-secondary"&gt;Right&lt;/button&gt;
+                  &lt;/div&gt;
+
+block scripts
+  script(src=baseUrl + "js/prismjs.js")
+  script.
+    // Clipboard Copy Handler
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.nextElementSibling?.innerText;
+          if (!code) return;
+
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = code;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
+            document.body.removeChild(textarea);
+          }
+        });
+      });
+
+      function showCopySuccess(btn) {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-outline-secondary');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-secondary');
+        }, 1500);
+      }
+    });
 

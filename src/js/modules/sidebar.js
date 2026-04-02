@@ -8,9 +8,8 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
   };
 
   const initializeSimplebar = () => {
-    const simplebarInstance = new SimpleBar(
-      document.getElementsByClassName("js-simplebar")[0]
-    );
+    const simplebarElement = document.getElementsByClassName("js-simplebar")[0];
+    const simplebarInstance = new SimpleBar(simplebarElement);
 
     /* Recalculate simplebar on sidebar dropdown toggle */
     const sidebarDropdowns = document.querySelectorAll(
@@ -25,6 +24,28 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
         simplebarInstance.recalculate();
       });
     });
+
+    /* Scroll to active element if exists */
+    const activeItem = simplebarElement.querySelectorAll(".sidebar-item.active");
+    if (activeItem.length) {
+      const lastActiveItem = activeItem[activeItem.length - 1];
+      const scrollElement = simplebarInstance.getScrollElement();
+
+      // Use requestAnimationFrame to ensure the DOM is rendered and SimpleBar is ready
+      requestAnimationFrame(() => {
+        // Calculate the position of the active item relative to the scroll container
+        const targetTop =
+          lastActiveItem.offsetTop -
+          scrollElement.clientHeight / 2 +
+          lastActiveItem.clientHeight / 2;
+
+        // Perform smooth scroll only on the sidebar container
+        scrollElement.scrollTo({
+          top: targetTop,
+          behavior: "smooth",
+        });
+      });
+    }
   };
 
   const initializeSidebarCollapse = () => {

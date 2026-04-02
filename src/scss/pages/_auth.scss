@@ -1,0 +1,42 @@
+// Auth Page Styles
+// Clean, responsive authentication layout
+
+.auth-card {
+  background: var(--#{$prefix}body-bg) !important;
+
+  @include color-mode(dark) {
+    background: var(--#{$prefix}body-bg) !important;
+    border-color: var(--#{$prefix}border-color) !important;
+  }
+}
+
+.auth-logo-box {
+  background: linear-gradient(135deg, var(--#{$prefix}primary), var(--#{$prefix}info));
+  box-shadow: 0 2px 8px rgba(var(--#{$prefix}primary-rgb), 0.25);
+}
+
+.auth-footer-link {
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    text-decoration: underline !important;
+  }
+}
+
+// Password toggle button
+.input-group-text {
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--#{$prefix}secondary-bg);
+    color: var(--#{$prefix}primary);
+  }
+}
+
+// Social buttons
+.btn-social {
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--#{$prefix}secondary-bg) !important;
+  }
+}

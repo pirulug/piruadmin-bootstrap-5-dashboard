@@ -96,39 +96,39 @@ block content
         .card-header
           h5.card-title.mb-0.text-danger-emphasis
             i.fa-solid.fa-lock.me-2
-            | Contrase&ntilde;a y Seguridad
+            | Password & Security
         .card-body
           .alert.alert-info.mb-4.d-flex.align-items-center(role='alert')
             i.fa-solid.fa-circle-info.text-info.me-3.fs-4
             div
-              strong Consejo de seguridad:
-              .small.text-muted Usa una contrase&ntilde;a fuerte que no uses en otros sitios.
+              strong Security Tip:
+              .small.text-muted Use a strong password that you don't use on other sites.
           .mb-4
-            label.form-label.fw-semibold Contrase&ntilde;a Actual
+            label.form-label.fw-semibold Current Password
             .input-group
               span.input-group-text.bg-body-tertiary
                 i.fa-solid.fa-key.text-muted
               input.form-control.password-field(type='password' name='current_password' placeholder='••••••••••••')
-              button.btn.btn-outline-secondary.toggle-password(type='button')
+              button.btn.btn-outline-secondary.toggle-password(type='button' data-pr-toggle-password='')
                 i.fa-regular.fa-eye
           hr.text-secondary.opacity-25
           .row.g-3
             .col-md-6
-              label.form-label.fw-semibold Nueva Contrase&ntilde;a
+              label.form-label.fw-semibold New Password
               .input-group
-                input.form-control.password-field(type='password' name='password' placeholder='Nueva contraseña')
-                button.btn.btn-outline-secondary.toggle-password(type='button')
+                input.form-control.password-field(type='password' name='password' placeholder='New password')
+                button.btn.btn-outline-secondary.toggle-password(type='button' data-pr-toggle-password='')
                   i.fa-regular.fa-eye
             .col-md-6
-              label.form-label.fw-semibold Confirmar Contrase&ntilde;a
+              label.form-label.fw-semibold Confirm Password
               .input-group
-                input.form-control.password-field(type='password' name='confirm_password' placeholder='Repite la nueva contraseña')
-                button.btn.btn-outline-secondary.toggle-password(type='button')
+                input.form-control.password-field(type='password' name='confirm_password' placeholder='Repeat new password')
+                button.btn.btn-outline-secondary.toggle-password(type='button' data-pr-toggle-password='')
                   i.fa-regular.fa-eye
         .card-footer.text-end
           button.btn.btn-danger.px-4(name='change_password' type='submit')
             i.fa-solid.fa-check-double.me-1
-            |  Actualizar Contrase&ntilde;a
+            |  Update Password
 
     .col-12.col-md-6 
       .card.h-100.bg-primary.bg-opacity-10.mt-3
@@ -136,5 +136,5 @@ block content
           .p-3.rounded-circle.bg-primary.text-white.me-3
             i.fa-solid.fa-users.fa-lg
           div
-            h6.text-muted.text-uppercase.fw-bold.small.mb-1 Usuarios
+            h6.text-muted.text-uppercase.fw-bold.small.mb-1 Users
             h2.mb-0.fw-bold.text-primary 2

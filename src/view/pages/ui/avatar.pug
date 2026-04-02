@@ -1,91 +1,88 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Avatar Documentation'
+  - pageName = 'Avatars'
   - pageUrl = 'ui/avatar'
 
 block styles
-  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
-
-block scripts
-  script(src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js")
-  script.
-    document.addEventListener("DOMContentLoaded", function () {
-      const lightbox = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        loop: true,
-        autoplayVideos: true
-      });
-    });
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
 
 block content
+
   .row.g-4
-    // -------------------------------------------------------------------------
-    // SECCIÓN 1: INTRODUCCIÓN Y BÁSICOS
-    // -------------------------------------------------------------------------
-    .col-12.col-lg-6
+    // Basic Usage
+    .col-md-6
       .card.h-100
-        .card-header
-          h5.card-title Uso Básico
-          p.card-subtitle.text-muted El componente <code>.avatar</code> adapta automáticamente imágenes, texto o iconos.
         .card-body
-          .table-responsive
-            table.table.align-middle
-              thead
-                tr
-                  th Resultado
-                  th Uso
-                  th Clase
-              tbody
-                tr
-                  td: figure.avatar: img(src='https://dummyimage.com/100x100/333/fff.jpg' alt='Avatar')
-                  td Imagen
-                  td <code>img</code>
-                tr
-                  td: figure.avatar: span AB
-                  td Texto (Iniciales)
-                  td <code>span</code>
-                tr
-                  td: figure.avatar: i.bi.bi-person
-                  td Icono
-                  td <code>i.bi...</code>
+          h5.card-title Basic Usage
+          p.text-muted The <code>.avatar</code> component automatically adapts its content, whether it's an image, text, or icon.
+          .d-flex.justify-content-center.gap-4.py-4
+            figure.avatar.mb-0: img(src='https://dummyimage.com/100x100/333/fff.png' alt='Avatar')
+            figure.avatar.mb-0: span AB
+            figure.avatar.mb-0: i.bi.bi-person
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseBasic' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseBasic.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Image Avatar --&gt;
+                  &lt;figure class="avatar"&gt;
+                    &lt;img src="..." alt="..."&gt;
+                  &lt;/figure&gt;
 
-    // -------------------------------------------------------------------------
-    // SECCIÓN 2: FORMAS (SHAPES)
-    // -------------------------------------------------------------------------
-    .col-12.col-lg-6
+                  &lt;!-- Text Avatar --&gt;
+                  &lt;figure class="avatar"&gt;
+                    &lt;span&gt;AB&lt;/span&gt;
+                  &lt;/figure&gt;
+
+                  &lt;!-- Icon Avatar --&gt;
+                  &lt;figure class="avatar"&gt;
+                    &lt;i class="bi bi-person"&gt;&lt;/i&gt;
+                  &lt;/figure&gt;
+
+    // Shapes
+    .col-md-6
       .card.h-100
-        .card-header
-          h5.card-title Formas
-          p.card-subtitle.text-muted Modifica el borde con clases adicionales.
-        .card-body.d-flex.justify-content-around.align-items-center
-          .text-center
-            figure.avatar.mb-2
-              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Circle')
-            div: code .avatar
-            small.d-block.text-muted (Por defecto)
+        .card-body
+          h5.card-title Shapes
+          p.text-muted Modify the border radius with <code>.avatar-rounded</code> or <code>.avatar-square</code>.
+          .d-flex.justify-content-center.gap-4.py-4
+            figure.avatar.mb-0
+              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Circle')
+            figure.avatar.avatar-rounded.mb-0
+              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Rounded')
+            figure.avatar.avatar-square.mb-0
+              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Square')
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseShapes' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseShapes.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Circle (Default) --&gt;
+                  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
 
-          .text-center
-            figure.avatar.avatar-rounded.mb-2
-              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Rounded')
-            div: code .avatar-rounded
+                  &lt;!-- Rounded --&gt;
+                  &lt;figure class="avatar avatar-rounded"&gt;...&lt;/figure&gt;
 
-          .text-center
-            figure.avatar.avatar-square.mb-2
-              img(src='https://dummyimage.com/100x100/6610f2/fff' alt='Square')
-            div: code .avatar-square
+                  &lt;!-- Square --&gt;
+                  &lt;figure class="avatar avatar-square"&gt;...&lt;/figure&gt;
 
-    // -------------------------------------------------------------------------
-    // SECCIÓN 3: TAMAÑOS (SIZES)
-    // -------------------------------------------------------------------------
+    // Sizes
     .col-12
       .card
-        .card-header
-          h5.card-title Tamaños Disponibles
-          p.card-subtitle.text-muted Desde XS hasta XL.
         .card-body
-          .d-flex.flex-wrap.align-items-end.gap-4
+          h5.card-title Available Sizes
+          p.text-muted Control avatar dimensions from <code>XS</code> to <code>XL</code> to match your UI context.
+          .d-flex.flex-wrap.align-items-end.justify-content-center.gap-4.py-4
             .text-center
               figure.avatar.avatar-xl.mb-2: span XL
               div: code .avatar-xl
@@ -101,159 +98,174 @@ block content
             .text-center
               figure.avatar.avatar-xs.mb-2: span XS
               div: code .avatar-xs
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSizes' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseSizes.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;figure class="avatar avatar-xl"&gt;...&lt;/figure&gt;
+                  &lt;figure class="avatar avatar-lg"&gt;...&lt;/figure&gt;
+                  &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+                  &lt;figure class="avatar avatar-sm"&gt;...&lt;/figure&gt;
+                  &lt;figure class="avatar avatar-xs"&gt;...&lt;/figure&gt;
 
-    // -------------------------------------------------------------------------
-    // SECCIÓN 4: COLORES (BOOTSTRAP THEME)
-    // -------------------------------------------------------------------------
-    .col-12
-      .card
-        .card-header
-          h5.card-title Colores del Tema
-          p.card-subtitle.text-muted Usa las clases <code>.avatar-{color}</code>. El texto se ajusta automáticamente para tener contraste.
-        .card-body
-          .d-flex.flex-wrap.gap-3
-            each color in ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
-              .text-center
-                figure.avatar(class=`avatar-${color}`)
-                  span= color.charAt(0).toUpperCase() + color.charAt(1)
-                div.mt-1: code= `.${color}`
-
-    // -------------------------------------------------------------------------
-    // SECCIÓN 5: INDICADORES DE ESTADO (STATUS)
-    // -------------------------------------------------------------------------
-    .col-12.col-lg-6
+    // Status
+    .col-md-6
       .card.h-100
-        .card-header
-          h5.card-title Status
-          p.card-subtitle.text-muted Añade <code>.avatar-status</code> y un color de fondo. El borde blanco/negro es automático.
         .card-body
-          .d-flex.justify-content-around
-            // Ejemplo 1: Imagen + Online
-            div
-              figure.avatar.avatar-lg
-                img(src="https://dummyimage.com/100x100/0d6efd/fff")
-                span.avatar-status.bg-success
-              p.text-center.mt-2.small Online
+          h5.card-title Status Indicators
+          p.text-muted Add specific <code>.avatar-status</code> indicators for online, busy, or away states.
+          .d-flex.justify-content-center.gap-5.py-4
+            figure.avatar.avatar-lg
+              img(src="https://dummyimage.com/100x100/333/fff&text=U")
+              span.avatar-status.bg-success
+            figure.avatar.avatar-secondary
+              span AB
+              span.avatar-status.bg-danger
+            figure.avatar.avatar-sm.avatar-light
+              i.bi.bi-person
+              span.avatar-status.bg-warning
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseStatus' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseStatus.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;figure class="avatar"&gt;
+                    &lt;img src="..." alt="..."&gt;
+                    &lt;span class="avatar-status bg-success"&gt;&lt;/span&gt;
+                  &lt;/figure&gt;
 
-            // Ejemplo 2: Iniciales + Busy
-            div
-              figure.avatar.avatar-secondary
-                span MK
-                span.avatar-status.bg-danger
-              p.text-center.mt-2.small Ocupado
-
-            // Ejemplo 3: Icono + Away
-            div
-              figure.avatar.avatar-sm.avatar-light
-                i.bi.bi-person
-                span.avatar-status.bg-warning
-              p.text-center.mt-2.small Ausente
-
-    // -------------------------------------------------------------------------
-    // SECCIÓN 6: GRUPOS (AVATAR GROUP)
-    // -------------------------------------------------------------------------
-    .col-12.col-lg-6
+    // Avatar Groups
+    .col-md-6
       .card.h-100
-        .card-header
-          h5.card-title Avatar Group
-          p.card-subtitle.text-muted Agrupa avatares solapados usando <code>.avatar-group</code>.
-        .card-body.d-flex.flex-column.justify-content-center.gap-4
-          // Grupo 1: Grande
-          div
-            small.text-muted.d-block.mb-2 Grupo Grande
+        .card-body
+          h5.card-title Avatar Groups
+          p.text-muted Stack multiple avatars together using the <code>.avatar-group</code> container.
+          .d-flex.flex-column.justify-content-center.align-items-center.gap-4.py-4
             .avatar-group
-              figure.avatar.avatar-lg
-                img(src='https://dummyimage.com/100x100/444/fff&text=1')
-              figure.avatar.avatar-lg.avatar-primary
-                | A
-              figure.avatar.avatar-lg.avatar-success
-                i.bi.bi-check
-              figure.avatar.avatar-lg.avatar-secondary
-                | +3
+              figure.avatar.avatar-lg: img(src='https://dummyimage.com/100x100/0d6efd/fff&text=1')
+              figure.avatar.avatar-lg.avatar-primary: span A
+              figure.avatar.avatar-lg.avatar-success: i.bi.bi-check
+              figure.avatar.avatar-lg.avatar-secondary: span +3
+            .avatar-group
+              figure.avatar.avatar-sm: img(src='https://dummyimage.com/100x100/444/fff&text=A')
+              figure.avatar.avatar-sm: img(src='https://dummyimage.com/100x100/555/fff&text=B')
+              figure.avatar.avatar-sm.avatar-dark: span 9+
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseGroup' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseGroup.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="avatar-group"&gt;
+                    &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+                    &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+                    &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+                  &lt;/div&gt;
 
-          // Grupo 2: Pequeño
-          div
-            small.text-muted.d-block.mb-2 Grupo Pequeño
-            .avatar-group
-              figure.avatar.avatar-sm
-                img(src='https://dummyimage.com/100x100/444/fff&text=A')
-              figure.avatar.avatar-sm
-                img(src='https://dummyimage.com/100x100/555/fff&text=B')
-              figure.avatar.avatar-sm
-                img(src='https://dummyimage.com/100x100/666/fff&text=C')
-              figure.avatar.avatar-sm.avatar-dark
-                | 9+
-    
-    // -------------------------------------------------------------------
-    // DEMO DE ICONOS (FontAwesome, Bootstrap, Feather)
-    // -------------------------------------------------------------------
+    // Lightbox
     .col-12
       .card
-        .card-header
-          h5.card-title Soporte de Iconos
-          p.card-subtitle.text-muted Todos los iconos se centran automáticamente gracias a <code>line-height: 1</code> y <code>1em</code>.
         .card-body
-          .table-responsive
-            table.table.table-borderless.align-middle.text-center
-              thead
-                tr
-                  th Librería
-                  th XS
-                  th SM
-                  th Default
-                  th LG
-                  th XL
-              tbody
-                // FONT AWESOME
-                tr
-                  td.text-start.fw-bold Font Awesome
-                  td: figure.avatar.avatar-xs.avatar-primary: i.fa-solid.fa-user
-                  td: figure.avatar.avatar-sm.avatar-primary: i.fa-solid.fa-user
-                  td: figure.avatar.avatar-primary: i.fa-solid.fa-user
-                  td: figure.avatar.avatar-lg.avatar-primary: i.fa-solid.fa-user
-                  td: figure.avatar.avatar-xl.avatar-primary: i.fa-solid.fa-user
-                
-                // BOOTSTRAP ICONS
-                tr
-                  td.text-start.fw-bold Bootstrap Icons
-                  td: figure.avatar.avatar-xs.avatar-success: i.bi.bi-alarm
-                  td: figure.avatar.avatar-sm.avatar-success: i.bi.bi-alarm
-                  td: figure.avatar.avatar-success: i.bi.bi-alarm
-                  td: figure.avatar.avatar-lg.avatar-success: i.bi.bi-alarm
-                  td: figure.avatar.avatar-xl.avatar-success: i.bi.bi-alarm
-
-                // FEATHER ICONS
-                tr
-                  td.text-start.fw-bold Feather Icons
-                  td: figure.avatar.avatar-xs.avatar-info: i(data-feather="anchor")
-                  td: figure.avatar.avatar-sm.avatar-info: i(data-feather="anchor")
-                  td: figure.avatar.avatar-info: i(data-feather="anchor")
-                  td: figure.avatar.avatar-lg.avatar-info: i(data-feather="anchor")
-                  td: figure.avatar.avatar-xl.avatar-info: i(data-feather="anchor")
-
-    // -------------------------------------------------------------------------
-    // SECCIÓN 7: LIGHTBOX INTERACTIVO (REQ. ORIGINAL)
-    // -------------------------------------------------------------------------
-    .col-12
-      .card
-        .card-header
-          h5.card-title Lightbox Interactivo
-          p.card-subtitle.text-muted Integración con GLightbox para previsualizar imágenes o videos.
-        .card-body
-          .d-flex.flex-wrap.gap-3
-            // Lightbox Imagen 1
-            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/000/fff.jpg&text=Full+Image+1' data-gallery="avatars")
-              img(src='https://dummyimage.com/100x100/000/fff.jpg' alt='avatar')
-
-            // Lightbox Imagen 2
-            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/333/fff.jpg&text=Full+Image+2' data-gallery="avatars")
-              img(src='https://dummyimage.com/100x100/333/fff.jpg' alt='avatar')
-
-            // Lightbox Imagen 3 (Texto)
-            a.avatar.avatar-xl.avatar-primary.glightbox(href='https://dummyimage.com/800x600/0d6efd/fff.jpg&text=Text+Avatar' data-gallery="avatars")
-              | IMG
-
-            // Lightbox Video Youtube
+          h5.card-title Interactive Lightbox
+          p.text-muted Integrated with <code>GLightbox</code> to preview avatar images or videos in full size.
+          .d-flex.flex-wrap.justify-content-center.gap-3.py-4
+            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/000/fff.png' data-gallery="avatars")
+              img(src='https://dummyimage.com/100x100/000/fff.png' alt='avatar')
+            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/333/fff.png' data-gallery="avatars")
+              img(src='https://dummyimage.com/100x100/333/fff.png' alt='avatar')
+            a.avatar.avatar-xl.avatar-primary.glightbox(href='https://dummyimage.com/800x600/0d6efd/fff.png' data-gallery="avatars")
+              span IMG
             a.glightbox(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-              figure.avatar.avatar-xl.avatar-danger
+              figure.avatar.avatar-xl.avatar-danger.mb-0
                 i.bi.bi-play-fill.fs-2
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseLightbox' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseLightbox.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;!-- Lightbox Image --&gt;
+                  &lt;a class="avatar glightbox" href="large-image.jpg"&gt;
+                    &lt;img src="thumb.jpg" alt="..."&gt;
+                  &lt;/a&gt;
+
+                  &lt;!-- Lightbox Video --&gt;
+                  &lt;a class="glightbox" href="youtube-url"&gt;
+                    &lt;figure class="avatar"&gt;...&lt;/figure&gt;
+                  &lt;/a&gt;
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js")
+  script(src=baseUrl + "js/prismjs.js")
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true
+      });
+
+      // Clipboard Copy Handler
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const code = btn.nextElementSibling?.innerText;
+          if (!code) return;
+
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(code).then(() => {
+              showCopySuccess(btn);
+            }).catch(err => {
+              console.error('Clipboard API failed', err);
+              fallbackCopy(code, btn);
+            });
+          } else {
+            fallbackCopy(code, btn);
+          }
+        });
+      });
+
+      function fallbackCopy(text, btn) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+
+        try {
+          const successful = document.execCommand('copy');
+          if (successful) showCopySuccess(btn);
+        } catch (err) {
+          console.error('Fallback copy failed', err);
+        }
+        document.body.removeChild(textarea);
+      }
+
+      function showCopySuccess(btn) {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('btn-success');
+        btn.classList.remove('btn-outline-secondary');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-secondary');
+        }, 1500);
+      }
+    });

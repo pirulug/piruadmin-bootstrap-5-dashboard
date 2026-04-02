@@ -1,7 +1,7 @@
 {
   "homepage": "https://pirulug.github.io/piruadmin-bootstrap-5-dashboard",
   "name": "piruadmin-bootstrap-5-dashboard",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Admin dashboard bootstrap 5",
   "keywords": [
     "template",
@@ -18,7 +18,8 @@
     "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress",
     "watch": "webpack --config webpack.config.js --watch --progress",
     "start": "webpack serve --config webpack.config.js --progress",
-    "prepublishOnly": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js"
+    "prepublishOnly": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Pirulug",
   "license": "MIT",
@@ -42,6 +43,7 @@
     "css-minimizer-webpack-plugin": "8.0.0",
     "eslint": "10.1.0",
     "file-loader": "6.2.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.6",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "2.10.2",
