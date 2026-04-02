@@ -38,6 +38,9 @@ const jsonData = {
       "utf8"
     )
   ),
+  flags: JSON.parse(
+    Fs.readFileSync(Path.resolve(__dirname, "src/data/flag_icons.json"), "utf8")
+  ),
 };
 
 function getFiles(dir, allFiles) {
@@ -74,6 +77,7 @@ module.exports = {
     vectormaps: "./src/plugins/vectormaps/vectormaps.js",
     prismjs: "./src/plugins/prismjs/prismjs.js",
     datatables: "./src/plugins/datatables/datatables.js",
+    flagicons: "./src/plugins/flagicons/flagicons.js",
     custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",

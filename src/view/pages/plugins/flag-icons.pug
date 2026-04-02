@@ -1,0 +1,182 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'Flag Icons'
+  - pageUrl = 'plugins/flag-icons'
+
+block styles
+  link(rel="stylesheet", href=baseUrl + "css/flagicons.css")
+  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  style.
+    .flag-card {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .flag-card:hover {
+      background-color: transparent;
+      border: solid 1px var(--#{$prefix}border-color);
+      transform: translateY(-3px);
+    }
+    .flag-icon-demo {
+      font-size: 2.5rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .flag-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .flag-code {
+      font-family: var(--#{$prefix}font-monospace);
+      font-size: 0.75rem;
+      color: var(--#{$prefix}secondary-color);
+    }
+
+block content
+  .card.mb-3
+    .card-body
+      .row.align-items-center
+        .col-md-6
+          h4.fw-bold.mb-1 Flag Icons Library
+          p.text-muted.mb-0 A comprehensive collection of all country flags in SVG format.
+        .col-md-6.mt-3.mt-md-0
+          .input-group
+            span.input-group-text.bg-transparent
+              i.bi.bi-search
+            input#flagSearch.form-control(type='text' placeholder='Search flags by name or code...')
+
+  .row.g-3#flagGrid
+    each flag in flags
+      .col-6.col-sm-4.col-md-3.col-lg-2.flag-item(data-name=flag.name.toLowerCase(), data-code=flag.code)
+        .card.h-100.border-0.flag-card(data-bs-toggle='modal', data-bs-target='#flagModal', data-flag-code=flag.code, data-flag-name=flag.name)
+          .card-body.text-center.p-3
+            span(class=`fi fi-${flag.code} flag-icon-demo`)
+            span.flag-name= flag.name
+            span.flag-code= `.fi-${flag.code}`
+
+  // Flag Preview Modal
+  #flagModal.modal.fade(tabindex='-1' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+      .modal-content.border-0
+        .modal-header.border-0.pb-0
+          h5#modalFlagName.modal-title.fw-bold Flag Details
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        .modal-body.text-center.pt-4
+          #modalFlagPreview.fs-1.mb-3
+          p.text-muted.small.mb-4 Use the code below to integrate this flag into your project.
+          
+          .text-start
+            label.form-label.fw-semibold.small 4:3 Aspect Ratio
+            .demo-code-preview.mb-3(data-label='HTML')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code#code4x3.language-html
+          
+          .text-start
+            label.form-label.fw-semibold.small 1:1 Square Ratio
+            .demo-code-preview(data-label='HTML')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code#code1x1.language-html
+        .modal-footer.border-0.justify-content-center.pb-4
+          button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+
+block scripts
+  script(src=baseUrl + "js/flagicons.js")
+  script(src=baseUrl + "js/prismjs.js")
+
+  script.
+    // Search Functionality
+    const searchInput = document.getElementById('flagSearch');
+    const flagItems = document.querySelectorAll('.flag-item');
+
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      flagItems.forEach(item => {
+        const name = item.dataset.name;
+        const code = item.dataset.code;
+        if (name.includes(term) || code.includes(term)) {
+          item.classList.remove('d-none');
+        } else {
+          item.classList.add('d-none');
+        }
+      });
+    });
+
+    // Modal Interaction
+    const flagModal = document.getElementById('flagModal');
+    flagModal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const code = button.getAttribute('data-flag-code');
+      const name = button.getAttribute('data-flag-name');
+
+      const modalTitle = flagModal.querySelector('#modalFlagName');
+      const modalPreview = flagModal.querySelector('#modalFlagPreview');
+      const code4x3 = flagModal.querySelector('#code4x3');
+      const code1x1 = flagModal.querySelector('#code1x1');
+
+      modalTitle.textContent = name;
+      modalPreview.innerHTML = `<span class="fi fi-${code} shadow-sm" style="font-size: 5rem;"></span>`;
+      
+      const snippet4x3 = `<span class="fi fi-${code}"></span>`;
+      const snippet1x1 = `<span class="fi fi-${code} fis"></span>`;
+
+      code4x3.textContent = snippet4x3;
+      code1x1.textContent = snippet1x1;
+
+      // Re-highlight code
+      Prism.highlightElement(code4x3);
+      Prism.highlightElement(code1x1);
+    });
+
+    // Copy to Clipboard
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.nextElementSibling?.innerText;
+        if (!code) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showCopySuccess(btn);
+          }).catch(err => {
+            console.error('Clipboard API failed', err);
+            fallbackCopy(code, btn);
+          });
+        } else {
+          fallbackCopy(code, btn);
+        }
+      });
+    });
+
+    function fallbackCopy(text, btn) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          showCopySuccess(btn);
+        }
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+
+      document.body.removeChild(textarea);
+    }
+
+    function showCopySuccess(btn) {
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 1500);
+    }

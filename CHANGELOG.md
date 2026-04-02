@@ -63,4 +63,12 @@
     - Improved responsiveness with adaptive column widths (`col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4`).
     - Social login buttons changed from stacked layout to a two-column side-by-side grid.
     - Applied consistent card and logo styling via `.auth-card` and `.auth-logo-box` classes.
-  - `_auth.scss` CSS custom property prefix made fully dynamic using `#{$prefix}` SCSS interpolation, synchronized with the global `$prefix` variable.
+  - `_auth.scss` CSS custom property prefix made fully dynamic using `#{$prefix}` SCSS interpolation, synchronized with the global `$prefix` variable.
+
+## [v1.8.0] - 02/04/2026
+- **Add:**
+  - Integrated `flag-icons` plugin for easy use of international flags.
+  - Created a new demonstration page `plugins/flag-icons` with sizes and aspect ratio examples.
+  - Registered `flagicons` bundling in `webpack.config.js`.
+- **Improve:**
+  - Updated sidebar menu with new "Flag Icons" plugin entry.

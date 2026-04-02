@@ -237,6 +237,11 @@
         "title": "Lite YouTube",
         "path": "plugins/lite-youtube",
         "link": "plugins/lite-youtube"
+      },
+      {
+        "title": "Flag Icons",
+        "path": "plugins/flag-icons",
+        "link": "plugins/flag-icons"
       }
     ]
   }

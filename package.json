@@ -1,7 +1,7 @@
 {
   "homepage": "https://pirulug.github.io/piruadmin-bootstrap-5-dashboard",
   "name": "piruadmin-bootstrap-5-dashboard",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Admin dashboard bootstrap 5",
   "keywords": [
     "template",
@@ -73,6 +73,7 @@
     "datatables.net-dt": "^2.3.7",
     "datatables.net-responsive-dt": "^3.0.8",
     "feather-icons": "4.29.2",
+    "flag-icons": "^7.5.0",
     "flatpickr": "4.6.13",
     "jsvectormap": "1.7.0",
     "simplebar": "6.3.3",
