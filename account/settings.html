@@ -26,14 +26,14 @@
     <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <meta property="twitter:creator" content="@pirulug">
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
     <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../css/fontawesome.css">
-    <link rel="stylesheet" href="../css/bootstrapicons.css">
-    <link rel="stylesheet" href="../css/piruadmin.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/bootstrapicons.css">
+    <link rel="stylesheet" href="../assets/css/piruadmin.css">
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -62,7 +62,7 @@
 <div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
   <div class="position-relative" style="width: 4rem; height: 4rem;">
     <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
-    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="../img/logo.png" alt="Logo" width="30" height="30"></div>
+    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="../assets/img/logo.png" alt="Logo" width="30" height="30"></div>
   </div>
 </div>
     <div class="wrapper">
@@ -255,7 +255,16 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <h1 class="h3 d-inline align-middle">Profile Settings</h1>
+            <div class="d-flex justify-content-between align-items-center">
+              <h1 class="h3 d-inline align-middle">Profile Settings</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="../dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item text-capitalize">account</li>
+                  <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+                </ol>
+              </nav>
+            </div>
           </div>
           <!-- Navigation - estilo moderno con íconos-->
           <div class="tab tab-vertical">
@@ -540,7 +549,7 @@
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="../js/feathericons.js"></script>
-    <script src="../js/piruadmin.js"></script>
+    <script src="../assets/js/feathericons.js"></script>
+    <script src="../assets/js/piruadmin.js"></script>
   </body>
 </html>
