@@ -5,7 +5,7 @@ append config
   - pageUrl = 'ui/alerts'
 
 block styles
-  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "css/prismjs.css")
 
 block content
   .row.g-4
@@ -184,7 +184,7 @@ block content
                   &lt;/div&gt;
 
 block scripts
-  script(src=baseUrl + "js/prismjs.js")
+  script(src=assets + "js/prismjs.js")
   script.
     document.addEventListener("DOMContentLoaded", function () {
       // Clipboard Copy Handler

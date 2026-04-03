@@ -5,8 +5,8 @@ append config
   - pageUrl = 'plugins/sweetalert'
 
 block styles
-  link(rel="stylesheet", href=baseUrl + "css/sweetalert2.css")
-  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "css/sweetalert2.css")
+  link(rel="stylesheet", href=assets + "css/prismjs.css")
 
 block content
   .row.g-3
@@ -222,8 +222,8 @@ block content
                   });
 
 block scripts
-  script(src=baseUrl + "js/sweetalert2.js")
-  script(src=baseUrl + "js/prismjs.js")
+  script(src=assets + "js/sweetalert2.js")
+  script(src=assets + "js/prismjs.js")
 
   script.
     // Básicos

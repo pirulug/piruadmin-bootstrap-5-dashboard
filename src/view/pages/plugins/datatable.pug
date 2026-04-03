@@ -8,9 +8,9 @@ block styles
   // DataTables CSS
   link(
     rel="stylesheet"
-    href=baseUrl + "css/datatables.css"
+    href=assets + "css/datatables.css"
   )
-  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "css/prismjs.css")
 
 block content
   .card
@@ -62,8 +62,8 @@ block scripts
   )
 
   // DataTables core
-  script(src=baseUrl + "js/datatables.js")
-  script(src=baseUrl + "js/prismjs.js")
+  script(src=assets + "js/datatables.js")
+  script(src=assets + "js/prismjs.js")
 
   script.
     document.querySelectorAll('.copy-btn').forEach(btn => {

@@ -5,12 +5,12 @@ append config
   - pageUrl = 'forms/tagify'
 
 block styles 
-  link(href=baseUrl + 'css/tagify.css' rel='stylesheet' type='text/css')
-  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  link(href=assets + 'css/tagify.css' rel='stylesheet' type='text/css')
+  link(rel="stylesheet", href=assets + "css/prismjs.css")
 
 block scripts 
-  script(src=baseUrl + 'js/tagify.js')
-  script(src=baseUrl + "js/prismjs.js")
+  script(src=assets + 'js/tagify.js')
+  script(src=assets + "js/prismjs.js")
 
   script.
     document.querySelectorAll('.copy-btn').forEach(btn => {

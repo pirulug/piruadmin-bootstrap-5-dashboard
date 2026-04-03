@@ -41,15 +41,15 @@ html(lang="es")
     meta(property='twitter:creator' content='@pirulug')
 
     // Favicon
-    link(rel='apple-touch-icon' sizes='180x180' href=baseUrl + 'img/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href=baseUrl + 'img/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href=baseUrl + 'img/favicon/favicon-16x16.png')
-    link(rel='manifest' href=baseUrl + 'img/favicon/site.webmanifest')
+    link(rel='apple-touch-icon' sizes='180x180' href=assets + 'img/favicon/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href=assets + 'img/favicon/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href=assets + 'img/favicon/favicon-16x16.png')
+    link(rel='manifest' href=assets + 'img/favicon/site.webmanifest')
 
     // Css Bootstrap
-    link(rel="stylesheet" href=baseUrl + "css/fontawesome.css")
-    link(rel="stylesheet" href=baseUrl + "css/bootstrapicons.css")
-    link(rel="stylesheet" href=baseUrl + "css/piruadmin.css")
+    link(rel="stylesheet" href=assets + "css/fontawesome.css")
+    link(rel="stylesheet" href=assets + "css/bootstrapicons.css")
+    link(rel="stylesheet" href=assets + "css/piruadmin.css")
 
     script.
       (function () {
@@ -75,7 +75,29 @@ html(lang="es")
         // Content
         main.content
           .mb-3
-            h1.h3.d-inline.align-middle #{pageName}
+            .d-flex.justify-content-between.align-items-center
+              h1.h3.d-inline.align-middle #{pageName}
+              nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                  if breadcrumbs && breadcrumbs.length > 0
+                    each item, index in breadcrumbs
+                      if index === breadcrumbs.length - 1
+                        li.breadcrumb-item.active(aria-current='page')= item.label
+                      else
+                        li.breadcrumb-item
+                          a(href=baseUrl + item.url)= item.label
+                  else
+                    - var pathParts = pageUrl ? pageUrl.split('/') : []
+                    if pathParts.length <= 1 && (pathParts[0] === 'dashboard' || pathParts[0] === 'index' || !pageUrl)
+                      li.breadcrumb-item.active(aria-current='page') Dashboard
+                    else
+                      li.breadcrumb-item
+                        a(href=baseUrl + 'dashboard.html') Dashboard
+                      each part, index in pathParts
+                        if index === pathParts.length - 1
+                          li.breadcrumb-item.active(aria-current='page')= pageName
+                        else
+                          li.breadcrumb-item.text-capitalize= part
 
           block content
 
@@ -89,8 +111,8 @@ html(lang="es")
     //- include ../includes/dark-ligth
 
     // Js Bootstrap
-    script(src=baseUrl + 'js/feathericons.js')
-    script(src=baseUrl + 'js/piruadmin.js')
+    script(src=assets + 'js/feathericons.js')
+    script(src=assets + 'js/piruadmin.js')
 
 
     block scripts

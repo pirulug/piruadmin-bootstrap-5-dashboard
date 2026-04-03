@@ -86,8 +86,8 @@ module.exports = {
   output: {
     path: Path.join(opts.rootDir, "dist"),
     pathinfo: opts.devBuild,
-    filename: "js/[name].js",
-    chunkFilename: "js/[name].js",
+    filename: "assets/js/[name].js",
+    chunkFilename: "assets/js/[name].js",
   },
   performance: { hints: false },
   optimization: {
@@ -112,14 +112,14 @@ module.exports = {
     new CleanWebpackPlugin(),
     // Extract css files to seperate bundle
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
-      chunkFilename: "css/[name].css",
+      filename: "assets/css/[name].css",
+      chunkFilename: "assets/css/[name].css",
     }),
     // Copy fonts and images to dist
     new CopyWebpackPlugin({
       patterns: [
-        { from: "src/fonts", to: "fonts" },
-        { from: "src/img", to: "img" },
+        { from: "src/fonts", to: "assets/fonts" },
+        { from: "src/img", to: "assets/img" },
       ],
     }),
     // Cargar paginas de .pug
@@ -132,6 +132,7 @@ module.exports = {
         filename: `./${page.replace(/\.pug/, ".html")}`,
         templateParameters: {
           baseUrl: baseUrl,
+          assets: baseUrl + "assets/",
           ...jsonData,
         },
 
@@ -198,18 +199,18 @@ module.exports = {
       },
       // Load fonts
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[name][ext]",
+          filename: "assets/fonts/[name][ext]",
         },
       },
-      // Load images
+      // Load images (including svg)
       {
-        test: /\.(png|jpg|jpeg|gif|webp)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(png|jpg|jpeg|gif|webp|svg)(\?v=\d+\.\d+\.\d+)?$/,
         type: "asset/resource",
         generator: {
-          filename: "img/[name][ext]",
+          filename: "assets/img/[name][ext]",
         },
       },
       // Pug

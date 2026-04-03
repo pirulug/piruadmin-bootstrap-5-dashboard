@@ -5,7 +5,7 @@ append config
   - pageUrl = 'plugins/maps-google'
 
 block styles
-  link(rel="stylesheet", href=baseUrl + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "css/prismjs.css")
 
 block content
 
@@ -57,7 +57,7 @@ block content
 
 block scripts
   script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&callback=initMaps' async defer)
-  script(src=baseUrl + "js/prismjs.js")
+  script(src=assets + "js/prismjs.js")
 
   script.
     document.querySelectorAll('.copy-btn').forEach(btn => {

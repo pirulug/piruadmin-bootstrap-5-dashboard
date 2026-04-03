@@ -72,3 +72,11 @@
   - Registered `flagicons` bundling in `webpack.config.js`.
 - **Improve:**
   - Updated sidebar menu with new "Flag Icons" plugin entry.
+
+## [v1.9.0] - 03/04/2026
+- **Add:**
+  - Sistema de breadcrumbs dinámicos que genera automáticamente la ruta de navegación basada en la estructura de archivos.
+  - Soporte para personalización manual de breadcrumbs mediante la variable `breadcrumbs` en el bloque de configuración.
+- **Improve:**
+  - Lógica automatizada en `layouts/dashboard.pug` para gestionar carpetas anidadas (ej. `Dashboard / Ui / Alerts`).
+  - Simplificación de la configuración de páginas al eliminar definiciones manuales innecesarias donde la detección automática es suficiente.
