@@ -102,3 +102,20 @@
   - Updated `package.json` with latest dependencies and version bump.
   - Optimized `webpack.config.js` for handling multi-style icon assets and JSON data injection.
   - Improved Feather Icons initialization logic for dynamic rendering.
+
+## [v2.1.0] - 08/04/2026
+- **Architecture Modularization - Code Preview System:**
+  - Designed and implemented a centralized "Code Preview" modular architecture.
+  - Created `src/js/modules/code-preview.js` to handle all copy-to-clipboard operations globally via modern Clipboard API with fallback support.
+  - Created `src/scss/components/_code-preview.scss` to standardize the appearance and layout of code blocks across all documentation.
+  - Registered the new modules in `piruadmin.js` and `piruadmin.scss` infrastructure entry points.
+  - **Global Cleanup:** Removed over 600 lines of redundant, legacy inline JavaScript from 14 documentation pages:
+    - `timeline.pug`, `alerts.pug`, `buttons.pug`, `avatar.pug`, `charts.pug`, `tagify.pug`, `badges.pug`, `datatable.pug`, `lite-youtube.pug`, `flag-icons.pug`, `images.pug`, `maps-google.pug`, `sweetalert.pug`, and `toastify.pug`.
+- **Timeline UI & Experience Modernization:**
+  - **Refined Styles:** Completely overhauled the Timeline UI using professional, modular SCSS (`src/scss/pages/_timeline.scss`), removing all inline CSS.
+  - **New `.agent` Variant:** Added a specialized style for automated/system events using Bootstrap 5 semantic color variables, strictly avoiding `.shadow` and `.border-0` as requested.
+  - **Enhanced Marker System:**
+    - Increased marker size to **26px** for improved readability and icon centering.
+    - Added support for circular-clipped `<img>` markers for user avatars.
+    - Migrated all timeline iconography to the **PiruAwesome** (`pr-`) library.
+  - **Interactive Demos:** Added support for PrismJS code blocks and copy-to-clipboard functionality to timeline events.

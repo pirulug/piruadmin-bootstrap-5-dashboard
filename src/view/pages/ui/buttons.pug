@@ -794,39 +794,3 @@ block content
 
 block scripts
   script(src=assets + "plugins/prismjs.js")
-  script.
-    // Clipboard Copy Handler
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll('.copy-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const code = btn.nextElementSibling?.innerText;
-          if (!code) return;
-
-          if (navigator.clipboard) {
-            navigator.clipboard.writeText(code).then(() => showCopySuccess(btn));
-          } else {
-            const textarea = document.createElement('textarea');
-            textarea.value = code;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.select();
-            try { document.execCommand('copy'); showCopySuccess(btn); } catch(e) {}
-            document.body.removeChild(textarea);
-          }
-        });
-      });
-
-      function showCopySuccess(btn) {
-        const original = btn.textContent;
-        btn.textContent = 'Copied!';
-        btn.classList.add('btn-success');
-        btn.classList.remove('btn-outline-secondary');
-        setTimeout(() => {
-          btn.textContent = original;
-          btn.classList.remove('btn-success');
-          btn.classList.add('btn-outline-secondary');
-        }, 1500);
-      }
-    });
-

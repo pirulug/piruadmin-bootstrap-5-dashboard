@@ -222,8 +222,8 @@ block content
                   });
 
 block scripts
-  script(src=assets + "js/sweetalert2.js")
-  script(src=assets + "js/prismjs.js")
+  script(src=assets + "plugins/sweetalert2.js")
+  script(src=assets + "plugins/prismjs.js")
 
   script.
     // Básicos
@@ -292,55 +292,3 @@ block scripts
         }
       });
     });
-
-  script.
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const code = btn.nextElementSibling?.innerText;
-        if (!code) return;
-
-        // Prioridad a Clipboard API moderna
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(code).then(() => {
-            showCopySuccess(btn);
-          }).catch(err => {
-            console.error('Clipboard API failed', err);
-            fallbackCopy(code, btn);
-          });
-        } else {
-          fallbackCopy(code, btn);
-        }
-      });
-    });
-
-    function fallbackCopy(text, btn) {
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed'; // Evita scroll
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.focus();
-      textarea.select();
-
-      try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-          showCopySuccess(btn);
-        } else {
-          alert("No se pudo copiar el texto");
-        }
-      } catch (err) {
-        console.error('Fallback copy failed', err);
-        alert("Error al copiar");
-      }
-
-      document.body.removeChild(textarea);
-    }
-
-    function showCopySuccess(btn) {
-      const original = btn.textContent;
-      btn.textContent = 'Copied!';
-      setTimeout(() => {
-        btn.textContent = original;
-      }, 1500);
-    }

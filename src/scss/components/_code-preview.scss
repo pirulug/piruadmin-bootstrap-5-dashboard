@@ -1,0 +1,62 @@
+.demo-code-preview {
+  position: relative;
+  padding: 2.5rem 1rem 1rem 1rem;
+  border-radius: var(--#{$prefix}border-radius);
+  // background-color: var(--#{$prefix}tertiary-bg);
+  color: var(--#{$prefix}body-color);
+  font-family: var(--#{$prefix}font-monospace);
+  font-size: 0.875rem;
+  overflow-x: auto;
+  border: 1px solid var(--#{$prefix}border-color);
+  margin-top: 1rem;
+
+  &::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 10px;
+    left: 1rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--#{$prefix}secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  pre {
+    background: transparent;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background-color: var(--#{$prefix}body-bg);
+  border: 1px solid var(--#{$prefix}border-color);
+  color: var(--#{$prefix}secondary-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--#{$prefix}border-radius-sm);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+
+  &:hover {
+    background-color: var(--#{$prefix}secondary-bg);
+    border-color: var(--#{$prefix}secondary-color);
+    color: var(--#{$prefix}body-color);
+  }
+
+  &.copy-success {
+    background-color: var(--#{$prefix}success) !important;
+    border-color: var(--#{$prefix}success) !important;
+    color: $white !important;
+  }
+}

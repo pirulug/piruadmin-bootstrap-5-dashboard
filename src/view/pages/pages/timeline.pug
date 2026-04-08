@@ -5,124 +5,143 @@ append config
   - pageUrl = 'pages/timeline'
 
 block styles
-  style.
-    .timeline .timeline-item {
-      padding-bottom: 20px;
-      position: relative;
-      display: flex;
-    }
-
-    .timeline .timeline-item > div:last-child {
-      flex: 1;
-    }
-
-    .timeline .timeline-item::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 1px;
-      bottom: 0px;
-      top: 32px;
-      left: 15px;
-      background: #e1e1e1;
-    }
-
-    .timeline .timeline-item:last-child {
-      padding-bottom: 0;
-      bottom: 0;
-    }
-
-    .timeline .timeline-item:last-child::before {
-      display: none;
-    }
+  link(rel="stylesheet" href=assets + "plugins/piruawesome.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
 
 block scripts
-  script(src=assets + "plugins/liteyoutube.js")
+  script(src=assets + 'plugins/liteyoutube.js')
+  script(src=assets + "plugins/prismjs.js")
 
 block content
+  .row
+    .col-lg-8.column-centered
+      .card
+        .card-header
+          h3.card-title Actividad Reciente
+          h6.card-subtitle.text-muted Seguimiento detallado de eventos y notificaciones.
+        .card-body
+          .timeline
+            // Agent Entry
+            .timeline-item.agent
+              .timeline-marker
+                i.pr.pr-robot
+              .timeline-content
+                .timeline-header
+                  span.timeline-title Asistente Virtual
+                  span.timeline-time Ahora
+                p Se ha completado el análisis mensual de rendimiento. El sistema está funcionando a un nivel óptimo.
 
-  .card
-    .card-body
+            // Image Marker Entry
+            .timeline-item.timeline-primary
+              .timeline-marker
+                img(src='https://dummyimage.com/60x60/ddd/555&text=MA' alt='Martina')
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Martina Ash
+                    |  compartió un enlace
+                  span.timeline-time Mar 8:17pm
+                a.text-decoration-none.d-block(href='#')
+                  .border.rounded.d-flex.overflow-hidden
+                    img.w-25.d-none.d-sm-block(src='https://dummyimage.com/200x150/f8f9fa/555&text=Preview' alt='preview' style="object-fit: cover;")
+                    .p-3
+                      h5.mb-1 Connection title
+                      p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-      .row
-        .col-md-12
-          .card
-            .card-body
-              .timeline
+            // Shared Post
+            .timeline-item.timeline-success
+              .timeline-marker
+                i.pr.pr-pen-to-square
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Jonny Richie
+                    |  publicó un post
+                  span.timeline-time Mar 8:20pm
+                .p-3.bg-light.rounded.border
+                  p.mb-0
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid
+                    | aperiam commodi culpa debitis deserunt enim itaque laborum minima neque
+                    | nostrum pariatur perspiciatis.
 
-                // Shared Link
-                .timeline-item.d-flex
-                  figure.avatar.avatar-sm.me-3
-                    img(src='https://dummyimage.com/60x60/ddd/000&text=MA' alt='avatar')
-                  .flex-grow-1
-                    h6.d-flex.justify-content-between.mb-2
-                      span
-                        a.link-1(href='#') Martina Ash
-                        |  shared a link
-                      span.text-muted.small Tue 8:17pm
-                    a.text-decoration-none(href='#')
-                      .border.rounded.d-flex.overflow-hidden
-                        img.w-25(src='https://dummyimage.com/200x150/ccc/555&text=Preview' alt='preview')
-                        .p-3
-                          h5.mb-1 Connection title
-                          p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            // Agent System Notification
+            .timeline-item.agent
+              .timeline-marker
+                i.pr.pr-shield-halved
+              .timeline-content
+                .timeline-header
+                  span.timeline-title Seguridad del Sistema
+                  span.timeline-time 15 min antes
+                p.text-info
+                  i.pr.pr-circle-info.me-2
+                  | Se detectó un nuevo inicio de sesión desde una dirección IP no reconocida (192.168.1.1).
 
-                // Shared Post
-                .timeline-item.d-flex
-                  figure.avatar.avatar-success.avatar-sm.me-3
-                    span J
-                  .flex-grow-1
-                    h6.d-flex.justify-content-between.mb-2
-                      span
-                        a.link-1(href='#') Jonny Richie
-                        |  shared a post
-                      span.text-muted.small Tue 8:17pm
-                    .border.rounded.p-3
-                      p.mb-0
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid
-                        | aperiam commodi culpa debitis deserunt enim itaque laborum minima neque
-                        | nostrum pariatur perspiciatis.
+            // Attached File
+            .timeline-item.timeline-info
+              .timeline-marker
+                i.pr.pr-file-pdf
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Karen Smith
+                    |  adjuntó un archivo
+                  span.timeline-time 1 hora antes
+                .border.rounded.p-3.d-flex.align-items-center
+                  i.pr.pr-file-pdf.fa-2x.me-3.text-danger
+                  div
+                    div.fw-bold reporte_anual_2025.pdf
+                    span.small.text-muted 2.4 MB
 
-                // Attached File
-                .timeline-item.d-flex
-                  figure.avatar.avatar-info.avatar-sm.me-3
-                    span K
-                  .flex-grow-1
-                    h6.d-flex.justify-content-between.mb-2
-                      span
-                        a.link-1(href='#') Jonny Richie
-                        |  attached file
-                      span.text-muted.small Tue 8:17pm
-                    .border.rounded.p-3
-                      i.fa-solid.fa-file-pdf.me-2.text-danger
-                      | filename12334.pdf
+            // Shared Images
+            .timeline-item.timeline-warning
+              .timeline-marker
+                i.pr.pr-image
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Alex Johnson
+                    |  subió 3 imágenes
+                  span.timeline-time 2 horas antes
+                .row.g-2
+                  each i in [1,2,3]
+                    .col-4
+                      img.img-fluid.rounded.border(src=`https://dummyimage.com/300x200/f8f9fa/555&text=Photo+${i}` alt='image')
 
-                // Shared Images
-                .timeline-item.d-flex
-                  figure.avatar.avatar-warning.avatar-sm.me-3
-                    i.fa-solid.fa-image
-                  .flex-grow-1
-                    h6.d-flex.justify-content-between.mb-2
-                      span
-                        a.link-1(href='#') Jonny Richie
-                        |  shared files
-                      span.text-muted.small Tue 8:17pm
-                    .row.g-2
-                      each i in [1,2,3]
-                        .col-4
-                          img.img-fluid.rounded(src=`https://dummyimage.com/300x200/ccc/555&text=Photo+${i}` alt='image')
+            // Code Update (PrismJS Example)
+            .timeline-item.timeline-primary
+              .timeline-marker
+                i.pr.pr-code
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Dev Team
+                    |  actualizó la respuesta del API
+                  span.timeline-time 5 horas antes
+                p.mb-3 Se ha optimizado el objeto de respuesta para incluir metadatos de paginación.
+                .demo-code-preview(data-label='JS EXAMPLE')
+                  button.copy-btn(type='button') Copy
+                  pre.language-javascript
+                    code.language-javascript.
+                      {
+                        "status": "success",
+                        "data": [],
+                        "meta": {
+                          "total": 1250,
+                          "page": 1,
+                          "limit": 100
+                        }
+                      }
 
-                // Shared Video
-                .timeline-item.d-flex
-                  figure.avatar.avatar-danger.avatar-sm.me-3
-                    i.fa-brands.fa-youtube
-                  .flex-grow-1
-                    h6.d-flex.justify-content-between.mb-2
-                      span
-                        a.link-1(href='#') Jonny Richie
-                        |  shared video
-                      span.text-muted.small Tue 8:17pm
-                    p.mb-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, placeat.
-                    .ratio.ratio-16x9
-                      lite-youtube(videoid='ih2xubMaZWI')
-
+            // Shared Video
+            .timeline-item.timeline-danger
+              .timeline-marker
+                i.pr.pr-video-camera
+              .timeline-content
+                .timeline-header
+                  span.timeline-title
+                    a.text-primary.text-decoration-none(href='#') Team Media
+                    |  compartió un tutorial
+                  span.timeline-time Ayer
+                p.mb-3 Descubre las nuevas funcionalidades del panel en este breve tutorial en video.
+                .ratio.ratio-16x9.border.rounded.overflow-hidden
+                  lite-youtube(videoid='ih2xubMaZWI')
