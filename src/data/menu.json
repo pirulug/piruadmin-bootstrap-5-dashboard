@@ -199,6 +199,11 @@
         "title": "Bootstrap Icons",
         "path": "icons/bootstrap",
         "link": "icons/bootstrap"
+      },
+      {
+        "title": "PiruAwesome Icons",
+        "path": "icons/piruawesome",
+        "link": "icons/piruawesome"
       }
     ]
   },

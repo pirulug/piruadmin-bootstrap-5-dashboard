@@ -5,8 +5,8 @@ append config
   - pageUrl = 'plugins/toastify'
 
 block styles
-  link(rel="stylesheet", href=assets + "css/toastifyjs.css")
-  link(rel="stylesheet", href=assets + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/toastifyjs.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
 
 block content
   .row.g-3
@@ -125,8 +125,8 @@ block content
                   }).showToast();
 
 block scripts
-  script(src=assets + "js/toastifyjs.js")
-  script(src=assets + "js/prismjs.js")
+  script(src=assets + "plugins/toastifyjs.js")
+  script(src=assets + "plugins/prismjs.js")
 
   script.
     document.getElementById("toast-basic").addEventListener("click", () => {

@@ -5,7 +5,7 @@ append config
   - pageUrl = 'ui/images'
 
 block styles
-  link(rel="stylesheet", href=assets + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
 
 block content
 
@@ -101,7 +101,7 @@ block content
                   &lt;/figure&gt;
 
 block scripts
-  script(src=assets + "js/prismjs.js")
+  script(src=assets + "plugins/prismjs.js")
   script.
     // Clipboard Copy Handler
     document.querySelectorAll('.copy-btn').forEach(btn => {

@@ -5,7 +5,7 @@ append config
   - pageUrl = 'plugins/charts'
   
 block styles
-  link(rel="stylesheet", href=assets + "css/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
 
 block content
   .row
@@ -292,8 +292,8 @@ block content
                   });
 
 block scripts
-  script(src=assets + 'js/chartjs.js')
-  script(src=assets + "js/prismjs.js")
+  script(src=assets + 'plugins/chartjs.js')
+  script(src=assets + "plugins/prismjs.js")
 
   script.
     document.querySelectorAll('.copy-btn').forEach(btn => {

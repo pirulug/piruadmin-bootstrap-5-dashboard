@@ -80,3 +80,20 @@
 - **Improve:**
   - Lógica automatizada en `layouts/dashboard.pug` para gestionar carpetas anidadas (ej. `Dashboard / Ui / Alerts`).
   - Simplificación de la configuración de páginas al eliminar definiciones manuales innecesarias donde la detección automática es suficiente.
+
+## [v2.0.0] - 08/04/2026
+- **Major Icon Library Integration:**
+  - Integrated `pirulug-icons-awesome`, a custom multi-style icon library.
+  - Added support for Solid, Regular, Light, Thin, and Brands icon styles.
+- **New Icon Gallery:**
+  - Created `icons/piruawesome` demo page featuring over 1000+ icons.
+  - Implemented advanced search and style filtering.
+  - Optimized performance with dynamic Lazy Loading and Intersection Observer.
+  - Added "Click-to-Copy" functionality for easy class name extraction.
+- **UI & Experience Improvements:**
+  - Completed the rollout of collapsible "View Code" sections with PrismJS highlighting across all demo pages.
+  - Finalized the dynamic breadcrumb system for all sub-pages.
+  - Updated sidebar navigation with the new PiruAwesome gallery.
+- **Infrastructure:**
+  - Updated `package.json` with latest dependencies and version bump.
+  - Optimized `webpack.config.js` for handling multi-style icon assets and JSON data injection.

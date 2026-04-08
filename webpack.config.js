@@ -41,6 +41,12 @@ const jsonData = {
   flags: JSON.parse(
     Fs.readFileSync(Path.resolve(__dirname, "src/data/flag_icons.json"), "utf8")
   ),
+  piruiconsawesome: JSON.parse(
+    Fs.readFileSync(
+      Path.resolve(__dirname, "src/data/piruiconsawesome.json"),
+      "utf8"
+    )
+  ),
 };
 
 function getFiles(dir, allFiles) {
@@ -78,16 +84,24 @@ module.exports = {
     prismjs: "./src/plugins/prismjs/prismjs.js",
     datatables: "./src/plugins/datatables/datatables.js",
     flagicons: "./src/plugins/flagicons/flagicons.js",
+    piruawesome: "./src/plugins/piruawesome/piruawesome.js",
     custom: "./src/plugins/custom/custon.js",
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  // devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
-  devtool: false,
+  devtool: opts.devBuild ? "eval-cheap-module-source-map" : false,
   output: {
     path: Path.join(opts.rootDir, "dist"),
     pathinfo: opts.devBuild,
-    filename: "assets/js/[name].js",
-    chunkFilename: "assets/js/[name].js",
+    filename: (pathData) => {
+      return pathData.chunk.name === 'piruadmin'
+        ? 'assets/js/[name].js'
+        : 'assets/plugins/[name].js';
+    },
+    chunkFilename: (pathData) => {
+      return pathData.chunk.name === 'piruadmin'
+        ? 'assets/js/[name].js'
+        : 'assets/plugins/[name].js';
+    },
   },
   performance: { hints: false },
   optimization: {
@@ -109,11 +123,19 @@ module.exports = {
   },
   plugins: [
     // DELETE
-    new CleanWebpackPlugin(),
+    !opts.devBuild && new CleanWebpackPlugin(),
     // Extract css files to seperate bundle
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].css",
-      chunkFilename: "assets/css/[name].css",
+      filename: (pathData) => {
+        return pathData.chunk.name === "piruadmin"
+          ? "assets/css/[name].css"
+          : "assets/plugins/[name].css";
+      },
+      chunkFilename: (pathData) => {
+        return pathData.chunk.name === "piruadmin"
+          ? "assets/css/[name].css"
+          : "assets/plugins/[name].css";
+      },
     }),
     // Copy fonts and images to dist
     new CopyWebpackPlugin({
@@ -151,39 +173,44 @@ module.exports = {
     }),
 
     // Beautify
-    new PrettifyWebpackPlugin({
-      printWidth: 100,
-      tabWidth: 2,
-      useTabs: false,
-      singleQuote: true,
-      htmlWhitespaceSensitivity: "ignore",
-      endOfLine: "auto",
-      htmlWhitespaceSensitivity: "css",
-      jsxBracketSameLine: false,
-      htmlWhitespaceSensitivity: "ignore",
-      proseWrap: "always",
-    }),
+    !opts.devBuild &&
+      new PrettifyWebpackPlugin({
+        extensions: [".html"],
+        prettierOptions: {
+          printWidth: 100,
+          tabWidth: 2,
+          useTabs: false,
+          singleQuote: true,
+          htmlWhitespaceSensitivity: "ignore",
+          endOfLine: "auto",
+          proseWrap: "always",
+        },
+      }),
     // Eliminar archivos vacios
-    new DeleteEmptyFilesPlugin(__dirname, "dist"),
-  ],
+    !opts.devBuild && new DeleteEmptyFilesPlugin(__dirname, "dist"),
+  ].filter(Boolean),
   module: {
     rules: [
       // Babel-loader
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            cacheDirectory: true,
+        use: [
+          "thread-loader",
+          {
+            loader: "babel-loader",
+            options: {
+              cacheDirectory: true,
+            },
           },
-        },
+        ],
       },
       // Css-loader & sass-loader
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
+          "thread-loader",
           "css-loader",
           "postcss-loader",
           {

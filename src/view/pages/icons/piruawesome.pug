@@ -1,0 +1,232 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'PiruAwesome Icons'
+  - pageUrl = 'icons/piruawesome'
+
+block styles
+  link(rel="stylesheet" href=assets + "plugins/piruawesome.css")
+  style.
+    .icon-list-item {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid transparent;
+        border-radius: 0.5rem;
+        padding: 1.5rem 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--bs-card-bg);
+    }
+    .icon-list-item:hover {
+        background: var(--bs-primary);
+        color: #fff !important;
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    .icon-list-item:hover .icon-name {
+        color: #fff !important;
+    }
+    .icon-list-item:hover i {
+        transform: scale(1.2);
+    }
+    .icon-list-item i {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+        transition: transform 0.2s ease-in-out;
+    }
+    .icon-list-item .icon-name {
+        font-size: 0.75rem;
+        word-break: break-all;
+        text-align: center;
+        color: var(--bs-secondary-color);
+    }
+    #icon-search {
+        border-radius: 2rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .style-filter.active {
+        background-color: var(--bs-primary);
+        color: white;
+    }
+
+
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", () => {
+        // Data injected from PUG
+        const rawData = !{JSON.stringify(piruiconsawesome)};
+        
+        // DOM Elements
+        const searchInput = document.getElementById("icon-search");
+        const styleFilters = document.querySelectorAll(".style-filter");
+        const iconsContainer = document.getElementById("icons-container");
+        const emptyState = document.getElementById("icons-empty-state");
+        const loadMoreSentinel = document.getElementById("load-more-sentinel");
+
+        // State management
+        let currentStyle = "all";
+        let searchQuery = "";
+        let flatData = []; // Normalized list for filtering
+        let filteredData = [];
+        let currentIndex = 0;
+        const chunkSize = 100;
+
+        // Flatten data for easier processing
+        function flattenData() {
+            flatData = [];
+            for (const [style, icons] of Object.entries(rawData)) {
+                icons.forEach(name => {
+                    flatData.push({ name, style });
+                });
+            }
+        }
+
+        function filterData() {
+            filteredData = flatData.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery);
+                const matchesStyle = currentStyle === "all" || item.style === currentStyle;
+                return matchesSearch && matchesStyle;
+            });
+            
+            // Reset rendering
+            currentIndex = 0;
+            iconsContainer.innerHTML = "";
+            renderNextChunk();
+            
+            if (emptyState) {
+                emptyState.style.display = filteredData.length === 0 ? "block" : "none";
+            }
+        }
+
+        function createIconElement(item) {
+            const col = document.createElement("div");
+            col.className = "col-6 col-md-4 col-lg-2 icon-item-container";
+            col.dataset.name = item.name;
+            col.dataset.style = item.style;
+            
+            col.innerHTML = `
+                <div class="icon-list-item">
+                    <i class="align-middle me-2 pr pr-${item.style} pr-${item.name}"></i>
+                    <span class="icon-name">${item.name}</span>
+                </div>
+            `;
+            return col;
+        }
+
+        function renderNextChunk() {
+            if (currentIndex >= filteredData.length) return;
+            
+            const fragment = document.createDocumentFragment();
+            const nextBatch = filteredData.slice(currentIndex, currentIndex + chunkSize);
+            
+            nextBatch.forEach(item => {
+                fragment.appendChild(createIconElement(item));
+            });
+            
+            iconsContainer.appendChild(fragment);
+            currentIndex += chunkSize;
+        }
+
+        // Initialize Observer
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                renderNextChunk();
+            }
+        }, { rootMargin: "200px" });
+
+        if (loadMoreSentinel) {
+            observer.observe(loadMoreSentinel);
+        }
+
+        // Event Listeners
+        if (searchInput) {
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                filterData();
+            });
+        }
+
+        styleFilters.forEach(filter => {
+            filter.addEventListener("click", (e) => {
+                e.preventDefault();
+                styleFilters.forEach(f => f.classList.remove("active", "btn-primary"));
+                styleFilters.forEach(f => f.classList.add("btn-outline-primary"));
+                filter.classList.add("active", "btn-primary");
+                filter.classList.remove("btn-outline-primary");
+                
+                currentStyle = filter.dataset.filter;
+                filterData();
+            });
+        });
+
+        // Copy to clipboard (Event Delegation)
+        iconsContainer.addEventListener("click", (e) => {
+            const item = e.target.closest(".icon-list-item");
+            if (!item) return;
+
+            const iconElement = item.querySelector("i");
+            const iconClass = Array.from(iconElement.classList).filter(c => !["align-middle", "me-2"].includes(c)).join(" ");
+            
+            const tempInput = document.createElement("input");
+            tempInput.value = iconClass;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const nameElement = item.querySelector(".icon-name");
+            const originalText = nameElement.innerText;
+            
+            nameElement.innerText = "Copiado!";
+            setTimeout(() => {
+                nameElement.innerText = originalText;
+            }, 1000);
+        });
+
+        // Initialize
+        flattenData();
+        filterData();
+    });
+
+block content
+  .card.mb-4
+    .card-header
+      h3.card-title Pirulug Icons Awesome
+      h6.card-subtitle.text-muted A professional, multi-style icon library with over 1000+ icons optimized with Lazy Loading.
+    .card-body
+      .row.align-items-center
+        .col-md-6.mb-3.mb-md-0
+          .input-group
+            span.input-group-text.bg-transparent.border-end-0
+              i.fa.fa-search.text-muted
+            input#icon-search.form-control.border-start-0(type="text" placeholder="Buscar iconos (ej. user, home, arrow)...")
+        .col-md-6
+          .d-flex.flex-wrap.gap-2.justify-content-md-end
+            button.btn.btn-primary.style-filter.active(data-filter="all") Todos
+            if piruiconsawesome.solid
+              button.btn.btn-outline-primary.style-filter(data-filter="solid") Solid
+            if piruiconsawesome.regular
+              button.btn.btn-outline-primary.style-filter(data-filter="regular") Regular
+            if piruiconsawesome.light
+              button.btn.btn-outline-primary.style-filter(data-filter="light") Light
+            if piruiconsawesome.thin
+              button.btn.btn-outline-primary.style-filter(data-filter="thin") Thin
+            if piruiconsawesome.brands
+              button.btn.btn-outline-primary.style-filter(data-filter="brands") Brands
+
+  #icons-container.row.g-3
+    // Icons will be rendered dynamically here
+
+  #load-more-sentinel.text-center.py-4
+    .spinner-border.spinner-border-sm.text-primary(role="status")
+      span.visually-hidden Cargando...
+
+  #icons-empty-state.text-center.py-5(style="display: none;")
+    i.fa.fa-search.mb-3(style="font-size: 3rem; color: var(--bs-secondary-bg);")
+    h4 No se encontraron iconos
+    p.text-muted Intenta con otra palabra clave o estilo.
+
