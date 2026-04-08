@@ -1,25 +1,181 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Font Awesome Icons'
+  - pageName = 'Font Awesome Icons'
   - pageUrl = 'icons/awesome'
 
-block content	
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", () => {
+        const rawData = !{JSON.stringify(fontawesome)};
+        const searchInput = document.getElementById("icon-search");
+        const iconsContainer = document.getElementById("icons-container");
+        const emptyState = document.getElementById("icons-empty-state");
+        const loadMoreSentinel = document.getElementById("load-more-sentinel");
 
-  .card
+        let searchQuery = "";
+        let filteredData = [];
+        let currentIndex = 0;
+        const chunkSize = 100;
+
+        function filterData() {
+            filteredData = rawData.filter(item => {
+                return item.label.toLowerCase().includes(searchQuery) || 
+                       item.name.toLowerCase().includes(searchQuery);
+            });
+            
+            currentIndex = 0;
+            iconsContainer.innerHTML = "";
+            renderNextChunk();
+            
+            if (emptyState) {
+                emptyState.style.display = filteredData.length === 0 ? "block" : "none";
+            }
+        }
+
+        const iconModalElement = document.getElementById('iconModal');
+        const modal = new bootstrap.Modal(iconModalElement);
+        const modalIconPreview = document.getElementById('modalIconPreview');
+        const modalIconName = document.getElementById('modalIconName');
+        const htmlCodeInput = document.getElementById('htmlCodeInput');
+        const pugCodeInput = document.getElementById('pugCodeInput');
+
+        function createIconElement(item) {
+            const col = document.createElement("div");
+            col.className = "col-6 col-md-4 col-lg-2 icon-item-container";
+            
+            const iconClass = item.type === "brands" ? `fa-brands fa-${item.name}` : `fa fa-${item.name}`;
+            
+            col.innerHTML = `
+                <div class="card h-100 text-center  p-4 border-0" style="cursor: pointer;">
+                    <i class="${iconClass} mb-3" style="font-size: 1.75rem;"></i>
+                    <span class="small text-muted text-break">${item.label}</span>
+                </div>
+            `;
+            return col;
+        }
+
+        function renderNextChunk() {
+            if (currentIndex >= filteredData.length) {
+                if(loadMoreSentinel) loadMoreSentinel.style.display = "none";
+                return;
+            } else {
+                if(loadMoreSentinel) loadMoreSentinel.style.display = "block";
+            }
+            
+            const fragment = document.createDocumentFragment();
+            const nextBatch = filteredData.slice(currentIndex, currentIndex + chunkSize);
+            
+            nextBatch.forEach(item => {
+                fragment.appendChild(createIconElement(item));
+            });
+            
+            iconsContainer.appendChild(fragment);
+            currentIndex += chunkSize;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                renderNextChunk();
+            }
+        }, { rootMargin: "200px" });
+
+        if (loadMoreSentinel) {
+            observer.observe(loadMoreSentinel);
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                filterData();
+            });
+        }
+
+        iconsContainer.addEventListener("click", (e) => {
+            const item = e.target.closest(".card");
+            if (!item) return;
+
+            const iconElement = item.querySelector("i");
+            const iconName = item.querySelector("span").innerText;
+            const iconClass = Array.from(iconElement.classList).filter(c => !["align-middle", "me-2", "mb-3"].includes(c)).join(" ");
+            
+            modalIconName.innerText = iconName;
+            htmlCodeInput.value = `<i class="${iconClass}"></i>`;
+            pugCodeInput.value = `i(class="${iconClass}")`;
+            modalIconPreview.innerHTML = `<i class="${iconClass}" style="font-size: 3rem;"></i>`;
+            
+            modal.show();
+        });
+
+        // Modal Copy Buttons
+        document.querySelectorAll('.copy-modal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                input.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    btn.classList.replace('btn-outline-secondary', 'btn-success');
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.replace('btn-success', 'btn-outline-secondary');
+                    }, 1500);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+
+        filterData();
+    });
+
+block content
+  .card.mb-4
     .card-header
       h3.card-title Font Awesome Icons
-      h6.card-subtitle.text-muted The web&rsquo;s most popular icon set and toolkit
+      h6.card-subtitle.text-muted The web&rsquo;s most popular icon set and toolkit.
     .card-body
-      .row
-        -const icons = fontawesome
+      .row.align-items-center
+        .col-md-6
+          .input-group
+            span.input-group-text.bg-transparent.border-end-0
+              i.fa.fa-search.text-muted
+            input#icon-search.form-control.border-start-0(type="text" placeholder="Buscar iconos (ej. user, home, arrow)...")
 
-        each icon in icons
-          .col-12.col-md-6.col-lg-3.mb-2
-            if icon.type == "brands"
-              i(class=`align-middle me-2 fa-brands fa-${icon.name}`)
-              span.align-middle= icon.label
-            else
-              i(class=`align-middle me-2 fa fa-${icon.name}`)
-              span.align-middle= icon.label
-    
+  #icons-container.row.g-3
+    // Icons will be rendered dynamically here
+
+  #load-more-sentinel.text-center.py-4
+    .spinner-border.spinner-border-sm.text-primary(role="status")
+      span.visually-hidden Cargando...
+
+  #icons-empty-state.text-center.py-5(style="display: none;")
+    i.fa.fa-search.mb-3(style="font-size: 3rem; color: var(--pr-secondary-bg);")
+    h4 No se encontraron iconos
+    p.text-muted Intenta con otra palabra clave.
+
+  // Icon Modal
+  #iconModal.modal.fade(tabindex='-1' aria-labelledby='iconModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5#iconModalLabel.modal-title Detalles del Icono
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        .modal-body
+          .text-center.mb-4
+            #modalIconPreview.mb-2
+            h4#modalIconName.text-primary
+          
+          .mb-3
+            label.form-label Código HTML
+            .input-group
+              input#htmlCodeInput.form-control(type='text' readonly)
+              button.btn.btn-outline-secondary.copy-modal-btn(type='button' data-target='htmlCodeInput') Copiar
+          
+          .mb-0
+            label.form-label Código PUG
+            .input-group
+              input#pugCodeInput.form-control(type='text' readonly)
+              button.btn.btn-outline-secondary.copy-modal-btn(type='button' data-target='pugCodeInput') Copiar

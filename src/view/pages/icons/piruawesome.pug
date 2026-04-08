@@ -6,53 +6,6 @@ append config
 
 block styles
   link(rel="stylesheet" href=assets + "plugins/piruawesome.css")
-  style.
-    .icon-list-item {
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        border: 1px solid transparent;
-        border-radius: 0.5rem;
-        padding: 1.5rem 1rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: var(--bs-card-bg);
-    }
-    .icon-list-item:hover {
-        background: var(--bs-primary);
-        color: #fff !important;
-        transform: translateY(-5px);
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    }
-    .icon-list-item:hover .icon-name {
-        color: #fff !important;
-    }
-    .icon-list-item:hover i {
-        transform: scale(1.2);
-    }
-    .icon-list-item i {
-        font-size: 1.75rem;
-        margin-bottom: 0.75rem;
-        transition: transform 0.2s ease-in-out;
-    }
-    .icon-list-item .icon-name {
-        font-size: 0.75rem;
-        word-break: break-all;
-        text-align: center;
-        color: var(--bs-secondary-color);
-    }
-    #icon-search {
-        border-radius: 2rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-    .style-filter.active {
-        background-color: var(--bs-primary);
-        color: white;
-    }
-
 
 block scripts
   script.
@@ -102,6 +55,13 @@ block scripts
             }
         }
 
+        const iconModalElement = document.getElementById('iconModal');
+        const modal = new bootstrap.Modal(iconModalElement);
+        const modalIconPreview = document.getElementById('modalIconPreview');
+        const modalIconName = document.getElementById('modalIconName');
+        const htmlCodeInput = document.getElementById('htmlCodeInput');
+        const pugCodeInput = document.getElementById('pugCodeInput');
+
         function createIconElement(item) {
             const col = document.createElement("div");
             col.className = "col-6 col-md-4 col-lg-2 icon-item-container";
@@ -109,9 +69,9 @@ block scripts
             col.dataset.style = item.style;
             
             col.innerHTML = `
-                <div class="icon-list-item">
-                    <i class="align-middle me-2 pr pr-${item.style} pr-${item.name}"></i>
-                    <span class="icon-name">${item.name}</span>
+                <div class="card h-100 text-center  p-4 border-0" style="cursor: pointer;">
+                    <i class="pr pr-${item.style} pr-${item.name} mb-3" style="font-size: 1.75rem;"></i>
+                    <span class="small text-muted text-break">${item.name}</span>
                 </div>
             `;
             return col;
@@ -165,26 +125,40 @@ block scripts
 
         // Copy to clipboard (Event Delegation)
         iconsContainer.addEventListener("click", (e) => {
-            const item = e.target.closest(".icon-list-item");
+            const item = e.target.closest(".card");
             if (!item) return;
 
             const iconElement = item.querySelector("i");
-            const iconClass = Array.from(iconElement.classList).filter(c => !["align-middle", "me-2"].includes(c)).join(" ");
+            const iconName = item.querySelector("span").innerText;
+            const iconClass = Array.from(iconElement.classList).filter(c => !["align-middle", "me-2", "mb-3"].includes(c)).join(" ");
             
-            const tempInput = document.createElement("input");
-            tempInput.value = iconClass;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
+            modalIconName.innerText = iconName;
+            htmlCodeInput.value = `<i class="${iconClass}"></i>`;
+            pugCodeInput.value = `i(class="${iconClass}")`;
+            modalIconPreview.innerHTML = `<i class="${iconClass}" style="font-size: 3rem;"></i>`;
+            
+            modal.show();
+        });
 
-            const nameElement = item.querySelector(".icon-name");
-            const originalText = nameElement.innerText;
-            
-            nameElement.innerText = "Copiado!";
-            setTimeout(() => {
-                nameElement.innerText = originalText;
-            }, 1000);
+        // Modal Copy Buttons
+        document.querySelectorAll('.copy-modal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+                input.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    btn.classList.replace('btn-outline-secondary', 'btn-success');
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.replace('btn-success', 'btn-outline-secondary');
+                    }, 1500);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
         });
 
         // Initialize
@@ -194,9 +168,13 @@ block scripts
 
 block content
   .card.mb-4
-    .card-header
-      h3.card-title Pirulug Icons Awesome
-      h6.card-subtitle.text-muted A professional, multi-style icon library with over 1000+ icons optimized with Lazy Loading.
+    .card-header.d-flex.align-items-center.justify-content-between
+      div
+        h3.card-title Pirulug Icons Awesome
+        h6.card-subtitle.text-muted A professional, multi-style icon library with over 1000+ icons.
+      a.btn.btn-dark.btn-sm(href="https://github.com/pirulug/pirulug-icons-awesome" target="_blank")
+        i.fab.fa-github.me-2
+        | GitHub Repo
     .card-body
       .row.align-items-center
         .col-md-6.mb-3.mb-md-0
@@ -226,7 +204,31 @@ block content
       span.visually-hidden Cargando...
 
   #icons-empty-state.text-center.py-5(style="display: none;")
-    i.fa.fa-search.mb-3(style="font-size: 3rem; color: var(--bs-secondary-bg);")
+    i.fa.fa-search.mb-3(style="font-size: 3rem; color: var(--pr-secondary-bg);")
     h4 No se encontraron iconos
     p.text-muted Intenta con otra palabra clave o estilo.
+
+  // Icon Modal
+  #iconModal.modal.fade(tabindex='-1' aria-labelledby='iconModalLabel' aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        .modal-header
+          h5#iconModalLabel.modal-title Detalles del Icono
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+        .modal-body
+          .text-center.mb-4
+            #modalIconPreview.mb-2
+            h4#modalIconName.text-primary
+          
+          .mb-3
+            label.form-label Código HTML
+            .input-group
+              input#htmlCodeInput.form-control(type='text' readonly)
+              button.btn.btn-outline-secondary.copy-modal-btn(type='button' data-target='htmlCodeInput') Copiar
+          
+          .mb-0
+            label.form-label Código PUG
+            .input-group
+              input#pugCodeInput.form-control(type='text' readonly)
+              button.btn.btn-outline-secondary.copy-modal-btn(type='button' data-target='pugCodeInput') Copiar
 
