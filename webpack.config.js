@@ -196,7 +196,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: [
-          "thread-loader",
           {
             loader: "babel-loader",
             options: {
@@ -210,7 +209,6 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "thread-loader",
           "css-loader",
           "postcss-loader",
           {
