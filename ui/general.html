@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="author" content="Pirulug">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0d6efd">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d6efd" />
     <!-- Primary Meta Tags-->
     <title>General Ui - Free Bootstrap 5 Admin Template | PiruAdmin</title>
-    <meta name="title" content="General Ui - Free Bootstrap 5 Admin Template | PiruAdmin">
-    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
-    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
-    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html">
+    <meta name="title" content="General Ui - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html"
+    />
     <!-- Open Graph / Facebook-->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html">
-    <meta property="og:title" content="General Ui | PiruAdmin">
-    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
-    <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html"
+    />
+    <meta property="og:title" content="General Ui | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
     <!-- Twitter-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html">
-    <meta property="twitter:title" content="General Ui | PiruAdmin">
-    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
-    <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
-    <meta property="twitter:creator" content="@pirulug">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/general.html"
+    />
+    <meta property="twitter:title" content="General Ui | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
     <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/bootstrapicons.css">
-    <link rel="stylesheet" href="../assets/css/piruadmin.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -41,97 +82,253 @@
         const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
-      
     </script>
     <style>
-      aside{
+      aside {
         position: sticky;
-        top:1rem;
+        top: 1rem;
       }
-      
     </style>
   </head>
   <body>
-<!-- Loader-->
-<div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
-  <div class="position-relative" style="width: 4rem; height: 4rem;">
-    <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
-    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="../assets/img/logo.png" alt="Logo" width="30" height="30"></div>
-  </div>
-</div>
+    <!-- Loader-->
+    <div
+      class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      id="spinner"
+    >
+      <div class="position-relative" style="width: 4rem; height: 4rem">
+        <div
+          class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100"
+          role="status"
+          style="border-width: 3px; z-index: 1"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2">
+          <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" />
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
-        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="../index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="../index.html">
+            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
+          </a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item"><a class="sidebar-link" href="../dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="../dashboard.html">
+                <i class="align-middle" data-feather="sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
             <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/blank.html">Blank Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/timeline.html">Timeline</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/search.html">Search</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="auth" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-in.html">Sign In</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/profile.html">Profile</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/settings.html">Settings</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="user"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="errors" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/404.html">404</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/500.html">500</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/404.html">404</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/500.html">500</a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/badges.html">Badges</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/cards.html">Cards</a></li>
-                <li class="sidebar-item active"><a class="sidebar-link" href="../ui/general.html">General UI</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/images.html">Images</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/tabs.html">Tabs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/avatar.html">Avatar</a></li>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse show"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                </li>
+                <li class="sidebar-item active">
+                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse"><i class="align-middle" data-feather="grid"></i><span class="align-middle">Tables</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="tables" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/tagify.html">Tagify</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Icons</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="icons" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/feather.html">Feather</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/piruawesome.html">PiruAwesome Icons</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/charts.html">Charts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/datatable.html">Datatable</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/maps-google.html">Maps</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="zap"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/datatable.html">Datatable</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -139,113 +336,272 @@
       </nav>
       <div class="main">
         <!-- NavBar-->
-<nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
-  <div class="navbar-collapse collapse">
-    <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="fa fa-moon opacity-50 me-2"></i>Dark<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" aria-pressed="true"><i class="fa fa-circle-half-stroke opacity-50 me-2"></i>Auto<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="alertsDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="bell"></i><span class="indicator">4</span></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-          <div class="dropdown-menu-header">4 New Notifications</div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-danger" data-feather="alert-circle"></i></div>
-                <div class="col-10">
-                  <div>Update completed</div>
-                  <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                  <div class="text-muted small mt-1">30m ago</div>
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon">
+                    <i class="fa fa-sun"></i>
+                  </span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-sun opacity-50 me-2"></i>
+                      Light
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-moon opacity-50 me-2"></i>
+                      Dark
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+                      Auto
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="bell"></i>
+                    <span class="indicator">4</span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-danger" data-feather="alert-circle"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-success" data-feather="user-plus"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
-                <div class="col-10">
-                  <div>Lorem ipsum</div>
-                  <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="message-square"></i>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
-                <div class="col-10">
-                  <div>Login from 192.186.1.8</div>
-                  <div class="text-muted small mt-1">5h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle d-inline-block"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="avatar avatar-sm me-1">
+                    <img src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  </div>
+                  <span class="d-none d-sm-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="../account/profile.html">
+                    <i class="align-middle me-1" data-feather="user"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="pie-chart"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../account/settings.html">
+                    <i class="align-middle me-1" data-feather="settings"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="help-circle"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="log-out"></i>
+                    Log out
+                  </a>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-success" data-feather="user-plus"></i></div>
-                <div class="col-10">
-                  <div>New connection</div>
-                  <div class="text-muted small mt-1">Christina accepted your request.</div>
-                  <div class="text-muted small mt-1">14h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all notifications</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="messagesDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="message-square"></i></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-          <div class="dropdown-menu-header">
-            <div class="position-relative">4 New Messages</div>
+              </li>
+            </ul>
           </div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Vanessa Tucker"></div>
-                <div class="col-10 ps-2">
-                  <div>Vanessa Tucker</div>
-                  <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-                  <div class="text-muted small mt-1">15m ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="William Harris"></div>
-                <div class="col-10 ps-2">
-                  <div>William Harris</div>
-                  <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Christina Mason"></div>
-                <div class="col-10 ps-2">
-                  <div>Christina Mason</div>
-                  <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-                  <div class="text-muted small mt-1">4h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Sharon Lessman"></div>
-                <div class="col-10 ps-2">
-                  <div>Sharon Lessman</div>
-                  <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-                  <div class="text-muted small mt-1">5h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all messages</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle d-inline-block" href="#" data-bs-toggle="dropdown">
-          <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
-        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="../account/profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="../account/settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+        </nav>
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
@@ -262,19 +618,141 @@
           </div>
           <div class="row g-4">
             <div class="col-lg-3">
-              <aside class="sticky-top" style="top: 1.5rem; height: calc(100vh - 3rem);">
+              <aside class="sticky-top" style="top: 1.5rem; height: calc(100vh - 3rem)">
                 <div class="card h-100">
                   <div class="card-header bg-transparent py-3">
                     <h6 class="fw-bold mb-0">On this page</h6>
                   </div>
                   <div class="card-body p-0">
-                    <div class="list-group list-group-flush rounded-0" style="height: calc(100vh - 8rem); overflow-y: auto; overflow-x: hidden;">
+                    <div
+                      class="list-group list-group-flush rounded-0"
+                      style="height: calc(100vh - 8rem); overflow-y: auto; overflow-x: hidden"
+                    >
                       <!-- Foundational Section-->
-                      <div class="p-3 pb-2"><span class="text-uppercase fw-bold text-muted small">Foundation</span></div><a class="list-group-item list-group-item-action border-0 px-3" href="#typography"> <i class="bi bi-type me-2"></i>Typography</a><a class="list-group-item list-group-item-action border-0 px-3" href="../ui/images.html"> <i class="bi bi-image me-2"></i>Images</a><a class="list-group-item list-group-item-action border-0 px-3" href="../ui/avatar.html"> <i class="bi bi-person-circle me-2"></i>Avatars</a><a class="list-group-item list-group-item-action border-0 px-3" href="#tables"> <i class="bi bi-table me-2"></i>Tables</a><a class="list-group-item list-group-item-action border-0 px-3" href="#figures"> <i class="bi bi-image-fill me-2"></i>Figures</a>
+                      <div class="p-3 pb-2">
+                        <span class="text-uppercase fw-bold text-muted small">Foundation</span>
+                      </div>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#typography"
+                      >
+                        <i class="bi bi-type me-2"></i>
+                        Typography
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="../ui/images.html"
+                      >
+                        <i class="bi bi-image me-2"></i>
+                        Images
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="../ui/avatar.html"
+                      >
+                        <i class="bi bi-person-circle me-2"></i>
+                        Avatars
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#tables"
+                      >
+                        <i class="bi bi-table me-2"></i>
+                        Tables
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#figures"
+                      >
+                        <i class="bi bi-image-fill me-2"></i>
+                        Figures
+                      </a>
                       <!-- Forms Section-->
-                      <div class="p-3 pb-2 pt-4"><span class="text-uppercase fw-bold text-muted small">Form Elements</span></div><a class="list-group-item list-group-item-action border-0 px-3" href="#overview"> <i class="bi bi-input-cursor me-2"></i>Overview</a><a class="list-group-item list-group-item-action border-0 px-3" href="#sizing"> <i class="bi bi-aspect-ratio me-2"></i>Sizing & Feedback</a><a class="list-group-item list-group-item-action border-0 px-3" href="#floating-labels"> <i class="bi bi-chat-dots me-2"></i>Floating Labels</a>
+                      <div class="p-3 pb-2 pt-4">
+                        <span class="text-uppercase fw-bold text-muted small">Form Elements</span>
+                      </div>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#overview"
+                      >
+                        <i class="bi bi-input-cursor me-2"></i>
+                        Overview
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#sizing"
+                      >
+                        <i class="bi bi-aspect-ratio me-2"></i>
+                        Sizing & Feedback
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#floating-labels"
+                      >
+                        <i class="bi bi-chat-dots me-2"></i>
+                        Floating Labels
+                      </a>
                       <!-- Components Section-->
-                      <div class="p-3 pb-2 pt-4"><span class="text-uppercase fw-bold text-muted small">Components</span></div><a class="list-group-item list-group-item-action border-0 px-3" href="#accordion"> <i class="bi bi-view-stacked me-2"></i>Accordion</a><a class="list-group-item list-group-item-action border-0 px-3" href="#alerts"> <i class="bi bi-exclamation-octagon me-2"></i>Alerts</a><a class="list-group-item list-group-item-action border-0 px-3" href="#badge"> <i class="bi bi-award me-2"></i>Badge</a><a class="list-group-item list-group-item-action border-0 px-3" href="#buttons"> <i class="bi bi-mouse2 me-2"></i>Buttons</a><a class="list-group-item list-group-item-action border-0 px-3" href="#card"> <i class="bi bi-card-heading me-2"></i>Cards</a><a class="list-group-item list-group-item-action border-0 px-3" href="#navbar"> <i class="bi bi-list me-2"></i>Navigation</a><a class="list-group-item list-group-item-action border-0 px-3" href="#pagination"> <i class="bi bi-123 me-2"></i>Pagination</a><a class="list-group-item list-group-item-action border-0 px-3" href="#progress"> <i class="bi bi-bar-chart-steps me-2"></i>Progress & Loaders</a><a class="list-group-item list-group-item-action border-0 px-3 mb-3" href="#tooltips"> <i class="bi bi-info-circle me-2"></i>Tips & Popovers</a>
+                      <div class="p-3 pb-2 pt-4">
+                        <span class="text-uppercase fw-bold text-muted small">Components</span>
+                      </div>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#accordion"
+                      >
+                        <i class="bi bi-view-stacked me-2"></i>
+                        Accordion
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#alerts"
+                      >
+                        <i class="bi bi-exclamation-octagon me-2"></i>
+                        Alerts
+                      </a>
+                      <a class="list-group-item list-group-item-action border-0 px-3" href="#badge">
+                        <i class="bi bi-award me-2"></i>
+                        Badge
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#buttons"
+                      >
+                        <i class="bi bi-mouse2 me-2"></i>
+                        Buttons
+                      </a>
+                      <a class="list-group-item list-group-item-action border-0 px-3" href="#card">
+                        <i class="bi bi-card-heading me-2"></i>
+                        Cards
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#navbar"
+                      >
+                        <i class="bi bi-list me-2"></i>
+                        Navigation
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#pagination"
+                      >
+                        <i class="bi bi-123 me-2"></i>
+                        Pagination
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3"
+                        href="#progress"
+                      >
+                        <i class="bi bi-bar-chart-steps me-2"></i>
+                        Progress & Loaders
+                      </a>
+                      <a
+                        class="list-group-item list-group-item-action border-0 px-3 mb-3"
+                        href="#tooltips"
+                      >
+                        <i class="bi bi-info-circle me-2"></i>
+                        Tips & Popovers
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -285,7 +763,14 @@
                 <h2 class="fw-bold pb-2">Contents</h2>
                 <article class="my-3" id="typography">
                   <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                    <h3>Typography</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/content/typography/" target="_blank">Documentation</a>
+                    <h3>Typography</h3>
+                    <a
+                      class="d-flex align-items-center"
+                      href="https://getbootstrap.com/docs/5.3/content/typography/"
+                      target="_blank"
+                    >
+                      Documentation
+                    </a>
                   </div>
                   <div>
                     <div class="bd-example-snippet bd-code-snippet">
@@ -310,13 +795,17 @@
                     </div>
                     <div class="bd-example-snippet bd-code-snippet">
                       <div class="bd-example">
-                        <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+                        <p class="lead">
+                          This is a lead paragraph. It stands out from regular paragraphs.
+                        </p>
                       </div>
                     </div>
                     <div class="bd-example-snippet bd-code-snippet">
                       <div class="bd-example">
-                        <p>You can use the mark tag to
-                          <mark>highlight</mark>                  text.
+                        <p>
+                          You can use the mark tag to
+                          <mark>highlight</mark>
+                          text.
                         </p>
                         <p>
                           <del>This line of text is meant to be treated as deleted text.</del>
@@ -324,25 +813,32 @@
                         <p>
                           <s>This line of text is meant to be treated as no longer accurate.</s>
                         </p>
-                        <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                        <p>
+                          <ins>
+                            This line of text is meant to be treated as an addition to the document.
+                          </ins>
+                        </p>
                         <p>
                           <u>This line of text will render as underlined.</u>
                         </p>
-                        <p><small>This line of text is meant to be treated as fine print.</small></p>
+                        <p>
+                          <small>This line of text is meant to be treated as fine print.</small>
+                        </p>
                         <p><strong>This line rendered as bold text.</strong></p>
                         <p><em>This line rendered as italicized text.</em></p>
                       </div>
                     </div>
                     <div class="bd-example-snippet bd-code-snippet">
                       <div class="bd-example">
-                        <hr>
+                        <hr />
                       </div>
                     </div>
                     <div class="bd-example-snippet bd-code-snippet">
                       <div class="bd-example">
                         <blockquote class="blockquote">
                           <p>A well-known quote, contained in a blockquote element.</p>
-                          <footer class="blockquote-footer">Someone famous in
+                          <footer class="blockquote-footer">
+                            Someone famous in
                             <cite title="Source Title">Source Title</cite>
                           </footer>
                         </blockquote>
@@ -355,7 +851,8 @@
                           <li>It appears completely unstyled.</li>
                           <li>Structurally, it&apos;s still a list.</li>
                           <li>However, this style only applies to immediate child elements.</li>
-                          <li>Nested lists:
+                          <li>
+                            Nested lists:
                             <ul>
                               <li>are unaffected by this style</li>
                               <li>will still show a bullet</li>
@@ -378,20 +875,34 @@
                   </div>
                   <article class="my-3" id="images">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Images</h3><a class="d-flex align-items-center" href="../ui/images.html">View Detailed Documentation</a>
+                      <h3>Images</h3>
+                      <a class="d-flex align-items-center" href="../ui/images.html">
+                        View Detailed Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card mb-3">
-                        <div class="card-body p-4 text-center"><i class="bi bi-image-fill display-4 text-primary mb-3"></i>
+                        <div class="card-body p-4 text-center">
+                          <i class="bi bi-image-fill display-4 text-primary mb-3"></i>
                           <h5>Comprehensive Image Guide</h5>
-                          <p class="text-muted">We have moved the detailed documentation for responsive images, thumbnails, and alignment to a dedicated page for better clarity.</p><a class="btn btn-primary px-4" href="../ui/images.html">Go to Images Documentation<i class="bi bi-arrow-right ms-2"></i></a>
+                          <p class="text-muted">
+                            We have moved the detailed documentation for responsive images,
+                            thumbnails, and alignment to a dedicated page for better clarity.
+                          </p>
+                          <a class="btn btn-primary px-4" href="../ui/images.html">
+                            Go to Images Documentation
+                            <i class="bi bi-arrow-right ms-2"></i>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="tables">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Tables</h3><a class="d-flex align-items-center" href="../content/tables/">Documentation</a>
+                      <h3>Tables</h3>
+                      <a class="d-flex align-items-center" href="../content/tables/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -557,14 +1068,24 @@
                   </article>
                   <article class="my-3" id="figures">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Figures</h3><a class="d-flex align-items-center" href="../content/figures/">Documentation</a>
+                      <h3>Figures</h3>
+                      <a class="d-flex align-items-center" href="../content/figures/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
                           <figure class="figure m-0">
-                            <div class="rounded bg-dark bg-opacity-10 d-flex align-items-center justify-content-center" style="height: 300px; width: 400px;"><i class="bi bi-camera fs-1 text-muted"></i></div>
-                            <figcaption class="figure-caption mt-2">A caption for the above image representation.</figcaption>
+                            <div
+                              class="rounded bg-dark bg-opacity-10 d-flex align-items-center justify-content-center"
+                              style="height: 300px; width: 400px"
+                            >
+                              <i class="bi bi-camera fs-1 text-muted"></i>
+                            </div>
+                            <figcaption class="figure-caption mt-2">
+                              A caption for the above image representation.
+                            </figcaption>
                           </figure>
                         </div>
                       </div>
@@ -575,7 +1096,14 @@
                   <h2 class="fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Form Elements</h2>
                   <article class="my-3" id="overview">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Overview</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/forms/overview/" target="_blank">Documentation</a>
+                      <h3>Overview</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/forms/overview/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card mb-4">
@@ -584,12 +1112,20 @@
                             <div class="row g-3">
                               <div class="col-md-6">
                                 <label class="form-label">Email address</label>
-                                <input class="form-control" type="email" placeholder="name@example.com">
+                                <input
+                                  class="form-control"
+                                  type="email"
+                                  placeholder="name@example.com"
+                                />
                                 <div class="form-text">Standard email input field.</div>
                               </div>
                               <div class="col-md-6">
                                 <label class="form-label">Password</label>
-                                <input class="form-control" type="password" placeholder="••••••••">
+                                <input
+                                  class="form-control"
+                                  type="password"
+                                  placeholder="••••••••"
+                                />
                               </div>
                               <div class="col-12">
                                 <label class="form-label">Selection</label>
@@ -601,12 +1137,23 @@
                               </div>
                               <div class="col-12">
                                 <div class="form-check form-switch">
-                                  <input class="form-check-input" id="switchDemo" type="checkbox" role="switch" checked="">
-                                  <label class="form-check-label" for="switchDemo">Enable notifications</label>
+                                  <input
+                                    class="form-check-input"
+                                    id="switchDemo"
+                                    type="checkbox"
+                                    role="switch"
+                                    checked=""
+                                  />
+                                  <label class="form-check-label" for="switchDemo">
+                                    Enable notifications
+                                  </label>
                                 </div>
                               </div>
                               <div class="col-12">
-                                <button class="btn btn-primary px-4" type="submit"> <i class="bi bi-send me-2"></i>Submit Form</button>
+                                <button class="btn btn-primary px-4" type="submit">
+                                  <i class="bi bi-send me-2"></i>
+                                  Submit Form
+                                </button>
                               </div>
                             </div>
                           </form>
@@ -616,7 +1163,10 @@
                   </article>
                   <article class="my-3" id="disabled-forms">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Disabled forms</h3><a class="d-flex align-items-center" href="../forms/overview/#disabled-forms">Documentation</a>
+                      <h3>Disabled forms</h3>
+                      <a class="d-flex align-items-center" href="../forms/overview/#disabled-forms">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -624,43 +1174,96 @@
                           <form>
                             <fieldset disabled="" aria-label="Disabled fieldset example">
                               <div class="mb-3">
-                                <label class="form-label" for="disabledTextInput">Disabled input</label>
-                                <input class="form-control" id="disabledTextInput" type="text" placeholder="Disabled input">
+                                <label class="form-label" for="disabledTextInput">
+                                  Disabled input
+                                </label>
+                                <input
+                                  class="form-control"
+                                  id="disabledTextInput"
+                                  type="text"
+                                  placeholder="Disabled input"
+                                />
                               </div>
                               <div class="mb-3">
-                                <label class="form-label" for="disabledSelect">Disabled select menu</label>
+                                <label class="form-label" for="disabledSelect">
+                                  Disabled select menu
+                                </label>
                                 <select class="form-select" id="disabledSelect">
                                   <option>Disabled select</option>
                                 </select>
                               </div>
                               <div class="mb-3">
                                 <div class="form-check">
-                                  <input class="form-check-input" id="disabledFieldsetCheck" type="checkbox" disabled="">
-                                  <label class="form-check-label" for="disabledFieldsetCheck">Can&apos;t check this</label>
+                                  <input
+                                    class="form-check-input"
+                                    id="disabledFieldsetCheck"
+                                    type="checkbox"
+                                    disabled=""
+                                  />
+                                  <label class="form-check-label" for="disabledFieldsetCheck">
+                                    Can&apos;t check this
+                                  </label>
                                 </div>
                               </div>
                               <fieldset class="mb-3">
                                 <legend>Disabled radios buttons</legend>
                                 <div class="form-check">
-                                  <input class="form-check-input" id="disabledRadio1" type="radio" name="radios" disabled="">
-                                  <label class="form-check-label" for="disabledRadio1">Disabled radio</label>
+                                  <input
+                                    class="form-check-input"
+                                    id="disabledRadio1"
+                                    type="radio"
+                                    name="radios"
+                                    disabled=""
+                                  />
+                                  <label class="form-check-label" for="disabledRadio1">
+                                    Disabled radio
+                                  </label>
                                 </div>
                                 <div class="mb-3 form-check">
-                                  <input class="form-check-input" id="disabledRadio2" type="radio" name="radios" disabled="">
-                                  <label class="form-check-label" for="disabledRadio2">Another radio</label>
+                                  <input
+                                    class="form-check-input"
+                                    id="disabledRadio2"
+                                    type="radio"
+                                    name="radios"
+                                    disabled=""
+                                  />
+                                  <label class="form-check-label" for="disabledRadio2">
+                                    Another radio
+                                  </label>
                                 </div>
                               </fieldset>
                               <div class="mb-3">
                                 <label class="form-label" for="disabledCustomFile">Upload</label>
-                                <input class="form-control" id="disabledCustomFile" type="file" disabled="">
+                                <input
+                                  class="form-control"
+                                  id="disabledCustomFile"
+                                  type="file"
+                                  disabled=""
+                                />
                               </div>
                               <div class="mb-3 form-check form-switch">
-                                <input class="form-check-input" id="disabledSwitchCheckChecked" type="checkbox" role="switch" checked="" disabled="">
-                                <label class="form-check-label" for="disabledSwitchCheckChecked">Disabled checked switch checkbox input</label>
+                                <input
+                                  class="form-check-input"
+                                  id="disabledSwitchCheckChecked"
+                                  type="checkbox"
+                                  role="switch"
+                                  checked=""
+                                  disabled=""
+                                />
+                                <label class="form-check-label" for="disabledSwitchCheckChecked">
+                                  Disabled checked switch checkbox input
+                                </label>
                               </div>
                               <div class="mb-3">
                                 <label class="form-label" for="disabledRange">Disabled range</label>
-                                <input class="form-range" id="disabledRange" type="range" min="0" max="5" step="0.5">
+                                <input
+                                  class="form-range"
+                                  id="disabledRange"
+                                  type="range"
+                                  min="0"
+                                  max="5"
+                                  step="0.5"
+                                />
                               </div>
                               <button class="btn btn-primary" type="submit">Submit</button>
                             </fieldset>
@@ -671,40 +1274,87 @@
                   </article>
                   <article class="my-3" id="sizing">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Sizing & Feedback</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/forms/form-control/#sizing" target="_blank">Documentation</a>
+                      <h3>Sizing & Feedback</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/forms/form-control/#sizing"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="row g-3">
                         <div class="col-md-6">
-                          <input class="form-control form-control-lg" type="text" placeholder="Large Input (.form-control-lg)">
+                          <input
+                            class="form-control form-control-lg"
+                            type="text"
+                            placeholder="Large Input (.form-control-lg)"
+                          />
                         </div>
                         <div class="col-md-6">
-                          <input class="form-control form-control-sm" type="text" placeholder="Small Input (.form-control-sm)">
+                          <input
+                            class="form-control form-control-sm"
+                            type="text"
+                            placeholder="Small Input (.form-control-sm)"
+                          />
                         </div>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="input-group">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Input group</h3><a class="d-flex align-items-center" href="../forms/input-group/">Documentation</a>
+                      <h3>Input group</h3>
+                      <a class="d-flex align-items-center" href="../forms/input-group/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon1">@</span>
-                            <input class="form-control" type="text" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <input
+                              class="form-control"
+                              type="text"
+                              placeholder="Username"
+                              aria-label="Username"
+                              aria-describedby="basic-addon1"
+                            />
                           </div>
                           <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-text" id="basic-addon2">@example.com</span>
+                            <input
+                              class="form-control"
+                              type="text"
+                              placeholder="Recipient's username"
+                              aria-label="Recipient's username"
+                              aria-describedby="basic-addon2"
+                            />
+                            <span class="input-group-text" id="basic-addon2">@example.com</span>
                           </div>
                           <label class="form-label" for="basic-url">Your vanity URL</label>
-                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                            <input class="form-control" id="basic-url" type="text" aria-describedby="basic-addon3">
+                          <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">
+                              https://example.com/users/
+                            </span>
+                            <input
+                              class="form-control"
+                              id="basic-url"
+                              type="text"
+                              aria-describedby="basic-addon3"
+                            />
                           </div>
-                          <div class="input-group mb-3"><span class="input-group-text">$</span>
-                            <input class="form-control" type="text" aria-label="Amount (to the nearest dollar)"><span class="input-group-text">.00</span>
+                          <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input
+                              class="form-control"
+                              type="text"
+                              aria-label="Amount (to the nearest dollar)"
+                            />
+                            <span class="input-group-text">.00</span>
                           </div>
-                          <div class="input-group"><span class="input-group-text">With textarea</span>
+                          <div class="input-group">
+                            <span class="input-group-text">With textarea</span>
                             <textarea class="form-control" aria-label="With textarea"></textarea>
                           </div>
                         </div>
@@ -713,18 +1363,31 @@
                   </article>
                   <article class="my-3" id="floating-labels">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Floating labels</h3><a class="d-flex align-items-center" href="../forms/floating-labels/">Documentation</a>
+                      <h3>Floating labels</h3>
+                      <a class="d-flex align-items-center" href="../forms/floating-labels/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
                           <form>
                             <div class="form-floating mb-3">
-                              <input class="form-control" id="floatingInput" type="email" placeholder="name@example.com">
+                              <input
+                                class="form-control"
+                                id="floatingInput"
+                                type="email"
+                                placeholder="name@example.com"
+                              />
                               <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating">
-                              <input class="form-control" id="floatingPassword" type="password" placeholder="Password">
+                              <input
+                                class="form-control"
+                                id="floatingPassword"
+                                type="password"
+                                placeholder="Password"
+                              />
                               <label for="floatingPassword">Password</label>
                             </div>
                           </form>
@@ -734,7 +1397,10 @@
                   </article>
                   <article class="my-3" id="validation">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Validation</h3><a class="d-flex align-items-center" href="../forms/validation/">Documentation</a>
+                      <h3>Validation</h3>
+                      <a class="d-flex align-items-center" href="../forms/validation/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -742,29 +1408,59 @@
                           <form class="row g-3">
                             <div class="col-md-4">
                               <label class="form-label" for="validationServer01">First name</label>
-                              <input class="form-control is-valid" id="validationServer01" type="text" value="Mark" required="">
+                              <input
+                                class="form-control is-valid"
+                                id="validationServer01"
+                                type="text"
+                                value="Mark"
+                                required=""
+                              />
                               <div class="valid-feedback">Looks good!</div>
                             </div>
                             <div class="col-md-4">
                               <label class="form-label" for="validationServer02">Last name</label>
-                              <input class="form-control is-valid" id="validationServer02" type="text" value="Otto" required="">
+                              <input
+                                class="form-control is-valid"
+                                id="validationServer02"
+                                type="text"
+                                value="Otto"
+                                required=""
+                              />
                               <div class="valid-feedback">Looks good!</div>
                             </div>
                             <div class="col-md-4">
-                              <label class="form-label" for="validationServerUsername">Username</label>
-                              <div class="input-group has-validation"><span class="input-group-text" id="inputGroupPrepend3">@</span>
-                                <input class="form-control is-invalid" id="validationServerUsername" type="text" aria-describedby="inputGroupPrepend3" required="">
+                              <label class="form-label" for="validationServerUsername">
+                                Username
+                              </label>
+                              <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                <input
+                                  class="form-control is-invalid"
+                                  id="validationServerUsername"
+                                  type="text"
+                                  aria-describedby="inputGroupPrepend3"
+                                  required=""
+                                />
                                 <div class="invalid-feedback">Please choose a username.</div>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <label class="form-label" for="validationServer03">City</label>
-                              <input class="form-control is-invalid" id="validationServer03" type="text" required="">
+                              <input
+                                class="form-control is-invalid"
+                                id="validationServer03"
+                                type="text"
+                                required=""
+                              />
                               <div class="invalid-feedback">Please provide a valid city.</div>
                             </div>
                             <div class="col-md-3">
                               <label class="form-label" for="validationServer04">State</label>
-                              <select class="form-select is-invalid" id="validationServer04" required="">
+                              <select
+                                class="form-select is-invalid"
+                                id="validationServer04"
+                                required=""
+                              >
                                 <option selected="" disabled="" value="">Choose...</option>
                                 <option>...</option>
                               </select>
@@ -772,14 +1468,29 @@
                             </div>
                             <div class="col-md-3">
                               <label class="form-label" for="validationServer05">Zip</label>
-                              <input class="form-control is-invalid" id="validationServer05" type="text" required="">
+                              <input
+                                class="form-control is-invalid"
+                                id="validationServer05"
+                                type="text"
+                                required=""
+                              />
                               <div class="invalid-feedback">Please provide a valid zip.</div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input is-invalid" id="invalidCheck3" type="checkbox" value="" required="">
-                                <label class="form-check-label" for="invalidCheck3">Agree to terms and conditions</label>
-                                <div class="invalid-feedback">You must agree before submitting.</div>
+                                <input
+                                  class="form-check-input is-invalid"
+                                  id="invalidCheck3"
+                                  type="checkbox"
+                                  value=""
+                                  required=""
+                                />
+                                <label class="form-check-label" for="invalidCheck3">
+                                  Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                  You must agree before submitting.
+                                </div>
                               </div>
                             </div>
                             <div class="col-12">
@@ -795,24 +1506,70 @@
                   <h2 class="fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Components</h2>
                   <article class="my-3" id="accordion">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Accordion</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/accordion/" target="_blank">Documentation</a>
+                      <h3>Accordion</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/accordion/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="bi bi-info-circle me-2"></i>Getting Started</button>
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <i class="bi bi-info-circle me-2"></i>
+                              Getting Started
+                            </button>
                           </h2>
-                          <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body"><strong>Welcome to the interface guide.</strong> This accordion demonstrates how to present collapsible information in a clean, organized manner. It's perfect for FAQs or detailed documentation sections.</div>
+                          <div
+                            class="accordion-collapse collapse show"
+                            id="collapseOne"
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              <strong>Welcome to the interface guide.</strong>
+                              This accordion demonstrates how to present collapsible information in
+                              a clean, organized manner. It's perfect for FAQs or detailed
+                              documentation sections.
+                            </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="bi bi-command me-2"></i>Advanced Features</button>
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              <i class="bi bi-command me-2"></i>
+                              Advanced Features
+                            </button>
                           </h2>
-                          <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">Explore the full potential of our design system with these advanced components and layout utilities designed for high-performance applications.</div>
+                          <div
+                            class="accordion-collapse collapse"
+                            id="collapseTwo"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div class="accordion-body">
+                              Explore the full potential of our design system with these advanced
+                              components and layout utilities designed for high-performance
+                              applications.
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -820,23 +1577,57 @@
                   </article>
                   <article class="my-3" id="alerts">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Alerts</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/alerts/" target="_blank">Documentation</a>
+                      <h3>Alerts</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/alerts/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="row g-3">
                         <div class="col-md-6">
-                          <div class="alert alert-primary alert-dismissible fade show border-0" role="alert"><strong class="me-2"><i class="bi bi-info-circle-fill"></i></strong>New system update available!
-                            <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                          <div
+                            class="alert alert-primary alert-dismissible fade show border-0"
+                            role="alert"
+                          >
+                            <strong class="me-2"><i class="bi bi-info-circle-fill"></i></strong>
+                            New system update available!
+                            <button
+                              class="btn-close"
+                              type="button"
+                              data-bs-dismiss="alert"
+                              aria-label="Close"
+                            ></button>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="alert alert-success alert-dismissible fade show border-0" role="alert"><strong class="me-2"><i class="bi bi-check-circle-fill"></i></strong>Action completed successfully.
-                            <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                          <div
+                            class="alert alert-success alert-dismissible fade show border-0"
+                            role="alert"
+                          >
+                            <strong class="me-2"><i class="bi bi-check-circle-fill"></i></strong>
+                            Action completed successfully.
+                            <button
+                              class="btn-close"
+                              type="button"
+                              data-bs-dismiss="alert"
+                              aria-label="Close"
+                            ></button>
                           </div>
                         </div>
                         <div class="col-12">
-                          <div class="alert alert-warning d-flex align-items-center border-0" role="alert"><i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
-                            <div>Please ensure you have backed up your data before proceeding with the migration.</div>
+                          <div
+                            class="alert alert-warning d-flex align-items-center border-0"
+                            role="alert"
+                          >
+                            <i class="bi bi-exclamation-triangle-fill fs-4 me-3"></i>
+                            <div>
+                              Please ensure you have backed up your data before proceeding with the
+                              migration.
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -844,30 +1635,78 @@
                   </article>
                   <article class="my-3" id="badge">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Badge</h3><a class="d-flex align-items-center" href="../components/badge/">Documentation</a>
+                      <h3>Badge</h3>
+                      <a class="d-flex align-items-center" href="../components/badge/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <p class="h1">Example heading<span class="badge bg-primary">New</span></p>
-                          <p class="h2">Example heading<span class="badge bg-secondary">New</span></p>
-                          <p class="h3">Example heading<span class="badge bg-success">New</span></p>
-                          <p class="h4">Example heading<span class="badge bg-danger">New</span></p>
-                          <p class="h5">Example heading<span class="badge text-bg-warning">New</span></p>
-                          <p class="h6">Example heading<span class="badge text-bg-info">New</span></p>
-                          <p class="h6">Example heading<span class="badge text-bg-light">New</span></p>
-                          <p class="h6">Example heading<span class="badge bg-dark">New</span></p>
+                          <p class="h1">
+                            Example heading
+                            <span class="badge bg-primary">New</span>
+                          </p>
+                          <p class="h2">
+                            Example heading
+                            <span class="badge bg-secondary">New</span>
+                          </p>
+                          <p class="h3">
+                            Example heading
+                            <span class="badge bg-success">New</span>
+                          </p>
+                          <p class="h4">
+                            Example heading
+                            <span class="badge bg-danger">New</span>
+                          </p>
+                          <p class="h5">
+                            Example heading
+                            <span class="badge text-bg-warning">New</span>
+                          </p>
+                          <p class="h6">
+                            Example heading
+                            <span class="badge text-bg-info">New</span>
+                          </p>
+                          <p class="h6">
+                            Example heading
+                            <span class="badge text-bg-light">New</span>
+                          </p>
+                          <p class="h6">
+                            Example heading
+                            <span class="badge bg-dark">New</span>
+                          </p>
                         </div>
                       </div>
                       <div class="bd-example-snippet bd-code-snippet">
-                        <div class="bd-example"><span class="badge rounded-pill bg-primary">Primary</span><span class="badge rounded-pill bg-secondary">Secondary</span><span class="badge rounded-pill bg-success">Success</span><span class="badge rounded-pill bg-danger">Danger</span><span class="badge rounded-pill text-bg-warning">Warning</span><span class="badge rounded-pill text-bg-info">Info</span><span class="badge rounded-pill text-bg-light">Light</span><span class="badge rounded-pill bg-dark">Dark</span></div>
-                        <div class="bd-example"><span class="badge badge-light-primary">Primary</span><span class="badge badge-light-secondary">Secondary</span><span class="badge badge-light-success">Success</span><span class="badge badge-light-danger">Danger</span><span class="badge badge-light-warning">Warning</span><span class="badge badge-light-info">Info</span><span class="badge badge-light-light">Light</span><span class="badge badge-light-dark">Dark</span></div>
+                        <div class="bd-example">
+                          <span class="badge rounded-pill bg-primary">Primary</span>
+                          <span class="badge rounded-pill bg-secondary">Secondary</span>
+                          <span class="badge rounded-pill bg-success">Success</span>
+                          <span class="badge rounded-pill bg-danger">Danger</span>
+                          <span class="badge rounded-pill text-bg-warning">Warning</span>
+                          <span class="badge rounded-pill text-bg-info">Info</span>
+                          <span class="badge rounded-pill text-bg-light">Light</span>
+                          <span class="badge rounded-pill bg-dark">Dark</span>
+                        </div>
+                        <div class="bd-example">
+                          <span class="badge badge-light-primary">Primary</span>
+                          <span class="badge badge-light-secondary">Secondary</span>
+                          <span class="badge badge-light-success">Success</span>
+                          <span class="badge badge-light-danger">Danger</span>
+                          <span class="badge badge-light-warning">Warning</span>
+                          <span class="badge badge-light-info">Info</span>
+                          <span class="badge badge-light-light">Light</span>
+                          <span class="badge badge-light-dark">Dark</span>
+                        </div>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="breadcrumb">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Breadcrumb</h3><a class="d-flex align-items-center" href="../components/breadcrumb/">Documentation</a>
+                      <h3>Breadcrumb</h3>
+                      <a class="d-flex align-items-center" href="../components/breadcrumb/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -885,7 +1724,10 @@
                   </article>
                   <article class="my-3" id="buttons">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Buttons</h3><a class="d-flex align-items-center" href="../components/buttons/">Documentation</a>
+                      <h3>Buttons</h3>
+                      <a class="d-flex align-items-center" href="../components/buttons/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -924,12 +1766,19 @@
                   </article>
                   <article class="my-3" id="button-group">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Button group</h3><a class="d-flex align-items-center" href="../components/button-group/">Documentation</a>
+                      <h3>Button group</h3>
+                      <a class="d-flex align-items-center" href="../components/button-group/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                          <div
+                            class="btn-toolbar"
+                            role="toolbar"
+                            aria-label="Toolbar with button groups"
+                          >
                             <div class="btn-group me-2" role="group" aria-label="First group">
                               <button class="btn btn-secondary" type="button">1</button>
                               <button class="btn btn-secondary" type="button">2</button>
@@ -951,28 +1800,46 @@
                   </article>
                   <article class="my-3" id="card">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Cards</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank">Documentation</a>
+                      <h3>Cards</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/card/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="row g-4">
                         <div class="col-md-4">
                           <div class="card h-100">
-                            <div class="bg-primary bg-opacity-10 text-center py-5 rounded-top"><i class="bi bi-file-person display-4 text-primary"></i></div>
+                            <div class="bg-primary bg-opacity-10 text-center py-5 rounded-top">
+                              <i class="bi bi-file-person display-4 text-primary"></i>
+                            </div>
                             <div class="card-body">
                               <h5 class="card-title">Profile Card</h5>
-                              <p class="card-text">Elegant representation of user data with status indicators.</p><a class="btn btn-outline-primary w-100" href="#">View Profile</a>
+                              <p class="card-text">
+                                Elegant representation of user data with status indicators.
+                              </p>
+                              <a class="btn btn-outline-primary w-100" href="#">View Profile</a>
                             </div>
                           </div>
                         </div>
                         <div class="col-md-4">
                           <div class="card h-100">
-                            <div class="card-header bg-transparent border-0 pt-4"><span class="badge bg-success mb-2">Active Project</span>
+                            <div class="card-header bg-transparent border-0 pt-4">
+                              <span class="badge bg-success mb-2">Active Project</span>
                               <h5 class="card-title">Development</h5>
                             </div>
                             <div class="card-body">
-                              <p class="card-text">Track your progress and manage tasks efficiently with integrated tools.</p>
+                              <p class="card-text">
+                                Track your progress and manage tasks efficiently with integrated
+                                tools.
+                              </p>
                             </div>
-                            <div class="card-footer bg-transparent border-0 pb-4 d-flex justify-content-between align-items-center">
+                            <div
+                              class="card-footer bg-transparent border-0 pb-4 d-flex justify-content-between align-items-center"
+                            >
                               <div class="small text-muted">2 hours ago</div>
                               <button class="btn btn-link p-0">Details</button>
                             </div>
@@ -982,13 +1849,19 @@
                           <div class="card h-100">
                             <div class="card-body">
                               <div class="d-flex align-items-center mb-3">
-                                <div class="p-3 bg-info bg-opacity-10 rounded me-3"><i class="bi bi-cloud-check text-info fs-4"></i></div>
+                                <div class="p-3 bg-info bg-opacity-10 rounded me-3">
+                                  <i class="bi bi-cloud-check text-info fs-4"></i>
+                                </div>
                                 <h6 class="mb-0">Cloud Analytics</h6>
                               </div>
-                              <p class="card-text">Real-time data processing and visual insights for your business growth.</p>
-                              <hr class="opacity-25">
+                              <p class="card-text">
+                                Real-time data processing and visual insights for your business
+                                growth.
+                              </p>
+                              <hr class="opacity-25" />
                               <div class="d-flex align-items-center">
-                                <div class="avatar avatar-xs bg-danger rounded-pill me-2"></div><span class="small">John Doe</span>
+                                <div class="avatar avatar-xs bg-danger rounded-pill me-2"></div>
+                                <span class="small">John Doe</span>
                               </div>
                             </div>
                           </div>
@@ -998,47 +1871,104 @@
                   </article>
                   <article class="my-3" id="carousel">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Carousel</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/carousel/" target="_blank">Documentation</a>
+                      <h3>Carousel</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/carousel/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
-                      <div class="carousel slide rounded overflow-hidden" id="carouselExampleCaptions" data-bs-ride="carousel">
+                      <div
+                        class="carousel slide rounded overflow-hidden"
+                        id="carouselExampleCaptions"
+                        data-bs-ride="carousel"
+                      >
                         <div class="carousel-indicators">
-                          <button class="active" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button
+                            class="active"
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="0"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                          ></button>
+                          <button
+                            type="button"
+                            data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                          ></button>
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <div class="bg-primary bg-gradient d-flex align-items-center justify-content-center" style="height: 300px;">
-                              <div class="text-center text-white"><i class="bi bi-lightning-fill display-4 mb-3"></i>
+                            <div
+                              class="bg-primary bg-gradient d-flex align-items-center justify-content-center"
+                              style="height: 300px"
+                            >
+                              <div class="text-center text-white">
+                                <i class="bi bi-lightning-fill display-4 mb-3"></i>
                                 <h2>First Slide Highlight</h2>
                                 <p>Modern gradient backgrounds for a sleek look.</p>
                               </div>
                             </div>
                           </div>
                           <div class="carousel-item">
-                            <div class="bg-dark bg-gradient d-flex align-items-center justify-content-center" style="height: 300px;">
-                              <div class="text-center text-white"><i class="bi bi-speedometer2 display-4 mb-3"></i>
+                            <div
+                              class="bg-dark bg-gradient d-flex align-items-center justify-content-center"
+                              style="height: 300px"
+                            >
+                              <div class="text-center text-white">
+                                <i class="bi bi-speedometer2 display-4 mb-3"></i>
                                 <h2>Optimized Performance</h2>
                                 <p>Smooth transitions and responsive design.</p>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="prev"
+                        >
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#carouselExampleCaptions"
+                          data-bs-slide="next"
+                        >
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="dropdowns">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Dropdowns</h3><a class="d-flex align-items-center" href="../components/dropdowns/">Documentation</a>
+                      <h3>Dropdowns</h3>
+                      <a class="d-flex align-items-center" href="../components/dropdowns/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
+                          <div
+                            class="btn-group w-100 align-items-center justify-content-between flex-wrap"
+                          >
                             <div class="dropdown">
-                              <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+                              <button
+                                class="btn btn-secondary btn-sm dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropdown button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1047,13 +1977,20 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
                             </div>
                             <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropdown button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1062,13 +1999,20 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
                             </div>
                             <div class="dropdown">
-                              <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>
+                              <button
+                                class="btn btn-secondary btn-lg dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropdown button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1077,7 +2021,7 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
@@ -1089,7 +2033,14 @@
                         <div class="bd-example">
                           <div class="btn-group">
                             <button class="btn btn-primary" type="button">Primary</button>
-                            <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1099,7 +2050,14 @@
                           <!-- /btn-group-->
                           <div class="btn-group">
                             <button class="btn btn-secondary" type="button">Secondary</button>
-                            <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1109,7 +2067,14 @@
                           <!-- /btn-group-->
                           <div class="btn-group">
                             <button class="btn btn-success" type="button">Success</button>
-                            <button class="btn btn-success dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-success dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1119,7 +2084,14 @@
                           <!-- /btn-group-->
                           <div class="btn-group">
                             <button class="btn btn-info" type="button">Info</button>
-                            <button class="btn btn-info dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-info dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1129,7 +2101,14 @@
                           <!-- /btn-group-->
                           <div class="btn-group">
                             <button class="btn btn-warning" type="button">Warning</button>
-                            <button class="btn btn-warning dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-warning dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1139,7 +2118,14 @@
                           <!-- /btn-group-->
                           <div class="btn-group">
                             <button class="btn btn-danger" type="button">Danger</button>
-                            <button class="btn btn-danger dropdown-toggle dropdown-toggle-split" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                            <button
+                              class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -1151,9 +2137,18 @@
                       </div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
+                          <div
+                            class="btn-group w-100 align-items-center justify-content-between flex-wrap"
+                          >
                             <div class="dropend">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropend button</button>
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropend button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1162,13 +2157,20 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
                             </div>
                             <div class="dropup">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropup button</button>
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropup button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1177,13 +2179,20 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
                             </div>
                             <div class="dropstart">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropstart button</button>
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropstart button
+                              </button>
                               <ul class="dropdown-menu">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1192,7 +2201,7 @@
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
@@ -1204,7 +2213,14 @@
                         <div class="bd-example">
                           <div class="btn-group">
                             <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">End-aligned menu</button>
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                End-aligned menu
+                              </button>
                               <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
                                   <h6 class="dropdown-header">Dropdown header</h6>
@@ -1212,7 +2228,7 @@
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
-                                  <hr class="dropdown-divider">
+                                  <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                               </ul>
@@ -1224,13 +2240,18 @@
                   </article>
                   <article class="my-3" id="list-group">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>List group</h3><a class="d-flex align-items-center" href="../components/list-group/">Documentation</a>
+                      <h3>List group</h3>
+                      <a class="d-flex align-items-center" href="../components/list-group/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
                           <ul class="list-group">
-                            <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+                            <li class="list-group-item disabled" aria-disabled="true">
+                              A disabled item
+                            </li>
                             <li class="list-group-item">A second item</li>
                             <li class="list-group-item">A third item</li>
                             <li class="list-group-item">A fourth item</li>
@@ -1251,25 +2272,115 @@
                       </div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <div class="list-group"><a class="list-group-item list-group-item-action" href="#">A simple default list group item</a><a class="list-group-item list-group-item-action list-group-item-primary" href="#">A simple primary list group item</a><a class="list-group-item list-group-item-action list-group-item-secondary" href="#">A simple secondary list group item</a><a class="list-group-item list-group-item-action list-group-item-success" href="#">A simple success list group item</a><a class="list-group-item list-group-item-action list-group-item-danger" href="#">A simple danger list group item</a><a class="list-group-item list-group-item-action list-group-item-warning" href="#">A simple warning list group item</a><a class="list-group-item list-group-item-action list-group-item-info" href="#">A simple info list group item</a><a class="list-group-item list-group-item-action list-group-item-light" href="#">A simple light list group item</a><a class="list-group-item list-group-item-action list-group-item-dark" href="#">A simple dark list group item</a></div>
+                          <div class="list-group">
+                            <a class="list-group-item list-group-item-action" href="#">
+                              A simple default list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-primary"
+                              href="#"
+                            >
+                              A simple primary list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-secondary"
+                              href="#"
+                            >
+                              A simple secondary list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-success"
+                              href="#"
+                            >
+                              A simple success list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-danger"
+                              href="#"
+                            >
+                              A simple danger list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-warning"
+                              href="#"
+                            >
+                              A simple warning list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-info"
+                              href="#"
+                            >
+                              A simple info list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-light"
+                              href="#"
+                            >
+                              A simple light list group item
+                            </a>
+                            <a
+                              class="list-group-item list-group-item-action list-group-item-dark"
+                              href="#"
+                            >
+                              A simple dark list group item
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="modal">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Modal</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/modal/" target="_blank">Documentation</a>
+                      <h3>Modal</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/modal/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card">
-                        <div class="card-body p-4 text-center"><i class="bi bi-window-stack display-4 text-primary mb-3"></i>
+                        <div class="card-body p-4 text-center">
+                          <i class="bi bi-window-stack display-4 text-primary mb-3"></i>
                           <h5>Interactive Modals</h5>
-                          <p class="text-muted">Demonstrate alerts, forms, or confirmations within a focused overlay.</p>
+                          <p class="text-muted">
+                            Demonstrate alerts, forms, or confirmations within a focused overlay.
+                          </p>
                           <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
-                            <button class="btn btn-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalDefault">Basic Modal</button>
-                            <button class="btn btn-outline-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">Static Backdrop</button>
-                            <button class="btn btn-outline-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">Vertically Centered</button>
-                            <button class="btn btn-outline-primary px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Fullscreen</button>
+                            <button
+                              class="btn btn-primary px-4"
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModalDefault"
+                            >
+                              Basic Modal
+                            </button>
+                            <button
+                              class="btn btn-outline-primary px-4"
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdropLive"
+                            >
+                              Static Backdrop
+                            </button>
+                            <button
+                              class="btn btn-outline-primary px-4"
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModalCenteredScrollable"
+                            >
+                              Vertically Centered
+                            </button>
+                            <button
+                              class="btn btn-outline-primary px-4"
+                              type="button"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModalFullscreen"
+                            >
+                              Fullscreen
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1277,33 +2388,77 @@
                   </article>
                   <article class="my-3" id="navs">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Navs & Tabs</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank">Documentation</a>
+                      <h3>Navs & Tabs</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/navs-tabs/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card mb-4">
                         <div class="card-header bg-transparent">
                           <ul class="nav nav-pills card-header-pills" id="nav-tab" role="tablist">
                             <li class="nav-item">
-                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab">Dashboard</button>
+                              <button
+                                class="nav-link active"
+                                id="nav-home-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-home"
+                                type="button"
+                                role="tab"
+                              >
+                                Dashboard
+                              </button>
                             </li>
                             <li class="nav-item">
-                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab">Settings</button>
+                              <button
+                                class="nav-link"
+                                id="nav-profile-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-profile"
+                                type="button"
+                                role="tab"
+                              >
+                                Settings
+                              </button>
                             </li>
                             <li class="nav-item">
-                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab">Messages</button>
+                              <button
+                                class="nav-link"
+                                id="nav-contact-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-contact"
+                                type="button"
+                                role="tab"
+                              >
+                                Messages
+                              </button>
                             </li>
                           </ul>
                         </div>
                         <div class="card-body">
                           <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                              <p class="mb-0">The dashboard tab provides a high-level overview of system performance and recent activities. Interactive charts and quick stats are usually placed here.</p>
+                              <p class="mb-0">
+                                The dashboard tab provides a high-level overview of system
+                                performance and recent activities. Interactive charts and quick
+                                stats are usually placed here.
+                              </p>
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel">
-                              <p class="mb-0">Manage your application preferences, security settings, and user profile information in this dedicated tab.</p>
+                              <p class="mb-0">
+                                Manage your application preferences, security settings, and user
+                                profile information in this dedicated tab.
+                              </p>
                             </div>
                             <div class="tab-pane fade" id="nav-contact" role="tabpanel">
-                              <p class="mb-0">Access your communication history and system alerts. Stay connected with your team through integrated messaging.</p>
+                              <p class="mb-0">
+                                Access your communication history and system alerts. Stay connected
+                                with your team through integrated messaging.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -1312,29 +2467,56 @@
                   </article>
                   <article class="my-3" id="navbar">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Navbar</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/navbar/" target="_blank">Documentation</a>
+                      <h3>Navbar</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/navbar/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <nav class="navbar navbar-expand-lg bg-body rounded border mt-3 px-3">
-                        <div class="container-fluid"><a class="navbar-brand fw-bold text-primary" href="#">Brand</a>
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"><span class="navbar-toggler-icon"></span></button>
+                        <div class="container-fluid">
+                          <a class="navbar-brand fw-bold text-primary" href="#">Brand</a>
+                          <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent"
+                          >
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                               <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Solutions</a>
+                              <li class="nav-item dropdown">
+                                <a
+                                  class="nav-link dropdown-toggle"
+                                  href="#"
+                                  role="button"
+                                  data-bs-toggle="dropdown"
+                                >
+                                  Solutions
+                                </a>
                                 <ul class="dropdown-menu border-0">
                                   <li><a class="dropdown-item" href="#">Enterprise</a></li>
                                   <li><a class="dropdown-item" href="#">Startups</a></li>
                                   <li>
-                                    <hr class="dropdown-divider">
+                                    <hr class="dropdown-divider" />
                                   </li>
                                   <li><a class="dropdown-item" href="#">Case Studies</a></li>
                                 </ul>
                               </li>
                             </ul>
                             <form class="d-flex">
-                              <input class="form-control me-2" type="search" placeholder="Search catalogs...">
+                              <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search catalogs..."
+                              />
                               <button class="btn btn-primary" type="submit">Search</button>
                             </form>
                           </div>
@@ -1344,7 +2526,10 @@
                   </article>
                   <article class="my-3" id="pagination">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Pagination</h3><a class="d-flex align-items-center" href="../components/pagination/">Documentation</a>
+                      <h3>Pagination</h3>
+                      <a class="d-flex align-items-center" href="../components/pagination/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
@@ -1352,7 +2537,9 @@
                           <nav aria-label="Pagination example">
                             <ul class="pagination pagination-sm">
                               <li class="page-item"><a class="page-link" href="#">1</a></li>
-                              <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                              </li>
                               <li class="page-item"><a class="page-link" href="#">3</a></li>
                             </ul>
                           </nav>
@@ -1362,11 +2549,19 @@
                         <div class="bd-example">
                           <nav aria-label="Standard pagination example">
                             <ul class="pagination">
-                              <li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
                               <li class="page-item"><a class="page-link" href="#">1</a></li>
                               <li class="page-item"><a class="page-link" href="#">2</a></li>
                               <li class="page-item"><a class="page-link" href="#">3</a></li>
-                              <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
                             </ul>
                           </nav>
                         </div>
@@ -1377,7 +2572,9 @@
                             <ul class="pagination pagination-lg flex-wrap">
                               <li class="page-item disabled"><a class="page-link">Previous</a></li>
                               <li class="page-item"><a class="page-link" href="#">1</a></li>
-                              <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2</a>
+                              </li>
                               <li class="page-item"><a class="page-link" href="#">3</a></li>
                               <li class="page-item"><a class="page-link" href="#">Next</a></li>
                             </ul>
@@ -1388,41 +2585,101 @@
                   </article>
                   <article class="my-3" id="popovers">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Popovers</h3><a class="d-flex align-items-center" href="../components/popovers/">Documentation</a>
+                      <h3>Popovers</h3>
+                      <a class="d-flex align-items-center" href="../components/popovers/">
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <button class="btn btn-lg btn-danger" type="button" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+                          <button
+                            class="btn btn-lg btn-danger"
+                            type="button"
+                            data-bs-toggle="popover"
+                            title="Popover title"
+                            data-bs-content="And here's some amazing content. It's very engaging. Right?"
+                          >
+                            Click to toggle popover
+                          </button>
                         </div>
                       </div>
                       <div class="bd-example-snippet bd-code-snippet">
                         <div class="bd-example">
-                          <button class="btn btn-secondary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on top</button>
-                          <button class="btn btn-secondary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on end</button>
-                          <button class="btn btn-secondary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on bottom</button>
-                          <button class="btn btn-secondary" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on start</button>
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            data-bs-container="body"
+                            data-bs-toggle="popover"
+                            data-bs-placement="top"
+                            data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                          >
+                            Popover on top
+                          </button>
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            data-bs-container="body"
+                            data-bs-toggle="popover"
+                            data-bs-placement="right"
+                            data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                          >
+                            Popover on end
+                          </button>
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            data-bs-container="body"
+                            data-bs-toggle="popover"
+                            data-bs-placement="bottom"
+                            data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                          >
+                            Popover on bottom
+                          </button>
+                          <button
+                            class="btn btn-secondary"
+                            type="button"
+                            data-bs-container="body"
+                            data-bs-toggle="popover"
+                            data-bs-placement="left"
+                            data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                          >
+                            Popover on start
+                          </button>
                         </div>
                       </div>
                     </div>
                   </article>
                   <article class="my-3" id="progress">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Progress & Spinners</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/progress/" target="_blank">Documentation</a>
+                      <h3>Progress & Spinners</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/progress/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card mb-4">
                         <div class="card-body p-4">
                           <div class="mb-4">
-                            <label class="small fw-bold text-muted text-uppercase mb-2">System Load</label>
-                            <div class="progress" style="height: 10px;">
-                              <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 65%"></div>
+                            <label class="small fw-bold text-muted text-uppercase mb-2">
+                              System Load
+                            </label>
+                            <div class="progress" style="height: 10px">
+                              <div
+                                class="progress-bar bg-primary progress-bar-striped progress-bar-animated"
+                                style="width: 65%"
+                              ></div>
                             </div>
                           </div>
                           <div class="mb-0 d-flex gap-3 align-items-center">
                             <div class="spinner-border text-primary" role="status"></div>
                             <div class="spinner-grow text-success" role="status"></div>
-                            <div class="spinner-grow text-warning" role="status"></div><span class="text-muted">Processing data...</span>
+                            <div class="spinner-grow text-warning" role="status"></div>
+                            <span class="text-muted">Processing data...</span>
                           </div>
                         </div>
                       </div>
@@ -1430,16 +2687,40 @@
                   </article>
                   <article class="mt-3 mb-5 pb-5" id="tooltips">
                     <div class="bd-heading align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-                      <h3>Tips & Popovers</h3><a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/components/tooltips/" target="_blank">Documentation</a>
+                      <h3>Tips & Popovers</h3>
+                      <a
+                        class="d-flex align-items-center"
+                        href="https://getbootstrap.com/docs/5.3/components/tooltips/"
+                        target="_blank"
+                      >
+                        Documentation
+                      </a>
                     </div>
                     <div>
                       <div class="card">
-                        <div class="card-body p-4 text-center"><i class="bi bi-chat-left-dots display-4 text-primary mb-3"></i>
+                        <div class="card-body p-4 text-center">
+                          <i class="bi bi-chat-left-dots display-4 text-primary mb-3"></i>
                           <h5>Contextual Information</h5>
                           <p class="text-muted">Enhancing user experience with helpful hints.</p>
                           <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
-                            <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Helpful information on top">Tooltip Top</button>
-                            <button class="btn btn-secondary" type="button" data-bs-toggle="popover" title="Advanced Info" data-bs-content="Detailed explanation of this feature provided in a popover overlay.">Popover Example</button>
+                            <button
+                              class="btn btn-secondary"
+                              type="button"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Helpful information on top"
+                            >
+                              Tooltip Top
+                            </button>
+                            <button
+                              class="btn btn-secondary"
+                              type="button"
+                              data-bs-toggle="popover"
+                              title="Advanced Info"
+                              data-bs-content="Detailed explanation of this feature provided in a popover overlay."
+                            >
+                              Popover Example
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1449,66 +2730,173 @@
               </section>
             </div>
           </div>
-          <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="exampleModalDefault"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button
+                    class="btn-close"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">...</div>
                 <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                    Close
+                  </button>
                   <button class="btn btn-primary" type="button">Save changes</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="staticBackdropLive"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLiveLabel"
+            aria-hidden="true"
+          >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Modal title</h1>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button
+                    class="btn-close"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
-                  <p>I will not close if you click outside me. Don&apos;t even try to press escape key.</p>
+                  <p>
+                    I will not close if you click outside me. Don&apos;t even try to press escape
+                    key.
+                  </p>
                 </div>
                 <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                    Close
+                  </button>
                   <button class="btn btn-primary" type="button">Understood</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="exampleModalCenteredScrollable"
+            tabindex="-1"
+            aria-labelledby="exampleModalCenteredScrollableTitle"
+            aria-hidden="true"
+          >
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Modal title</h1>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">
+                    Modal title
+                  </h1>
+                  <button
+                    class="btn-close"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">
-                  <p>This is some placeholder content to show the scrolling behavior for modals. We use repeated line breaks to demonstrate how content can exceed minimum inner height, thereby showing inner scrolling. When content becomes longer than the predefined max-height of modal, content will be cropped and scrollable within the modal.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <p>
+                    This is some placeholder content to show the scrolling behavior for modals. We
+                    use repeated line breaks to demonstrate how content can exceed minimum inner
+                    height, thereby showing inner scrolling. When content becomes longer than the
+                    predefined max-height of modal, content will be cropped and scrollable within
+                    the modal.
+                  </p>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
                   <p>This content should appear at the bottom after you scroll.</p>
                 </div>
                 <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                    Close
+                  </button>
                   <button class="btn btn-primary" type="button">Save changes</button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="exampleModalFullscreen"
+            tabindex="-1"
+            aria-labelledby="exampleModalFullscreenLabel"
+            aria-hidden="true"
+          >
             <div class="modal-dialog modal-fullscreen">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Full screen modal</h1>
-                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">
+                    Full screen modal
+                  </h1>
+                  <button
+                    class="btn-close"
+                    type="button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
                 <div class="modal-body">...</div>
                 <div class="modal-footer">
-                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                  <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">
+                    Close
+                  </button>
                 </div>
               </div>
             </div>
@@ -1519,21 +2907,32 @@
           <div class="container-fluid">
             <div class="row text-muted">
               <div class="col-6 text-start">
-                <p class="mb-0"><a class="text-muted" href="../index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
+                <p class="mb-0">
+                  <a class="text-muted" href="../index.html">
+                    &copy;&nbsp;
+                    <strong>PiruAdmin&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
               </div>
               <div class="col-6 text-end">
                 <p class="mb-0">
-                   Designed By&nbsp;<a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a></p>
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
               </div>
             </div>
           </div>
         </footer>
       </div>
-      <!-- Back to top--><a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+      <!-- Back to top-->
+      <a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#">
+        <i class="fa fa-arrow-up"></i>
+      </a>
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="../assets/js/feathericons.js"></script>
+    <script src="../assets/plugins/feathericons.js"></script>
     <script src="../assets/js/piruadmin.js"></script>
   </body>
 </html>

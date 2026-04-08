@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="author" content="Pirulug">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0d6efd">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d6efd" />
     <!-- Primary Meta Tags-->
     <title>SweetAlert 2 - Free Bootstrap 5 Admin Template | PiruAdmin</title>
-    <meta name="title" content="SweetAlert 2 - Free Bootstrap 5 Admin Template | PiruAdmin">
-    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
-    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
-    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html">
+    <meta name="title" content="SweetAlert 2 - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html"
+    />
     <!-- Open Graph / Facebook-->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html">
-    <meta property="og:title" content="SweetAlert 2 | PiruAdmin">
-    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
-    <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html"
+    />
+    <meta property="og:title" content="SweetAlert 2 | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
     <!-- Twitter-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html">
-    <meta property="twitter:title" content="SweetAlert 2 | PiruAdmin">
-    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
-    <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
-    <meta property="twitter:creator" content="@pirulug">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/plugins/sweetalert.html"
+    />
+    <meta property="twitter:title" content="SweetAlert 2 | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
     <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/bootstrapicons.css">
-    <link rel="stylesheet" href="../assets/css/piruadmin.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -41,92 +82,253 @@
         const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
-      
     </script>
-    <link rel="stylesheet" href="../assets/css/sweetalert2.css">
-    <link rel="stylesheet" href="../assets/css/prismjs.css">
+    <link rel="stylesheet" href="../assets/plugins/sweetalert2.css" />
+    <link rel="stylesheet" href="../assets/plugins/prismjs.css" />
   </head>
   <body>
-<!-- Loader-->
-<div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
-  <div class="position-relative" style="width: 4rem; height: 4rem;">
-    <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
-    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="../assets/img/logo.png" alt="Logo" width="30" height="30"></div>
-  </div>
-</div>
+    <!-- Loader-->
+    <div
+      class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      id="spinner"
+    >
+      <div class="position-relative" style="width: 4rem; height: 4rem">
+        <div
+          class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100"
+          role="status"
+          style="border-width: 3px; z-index: 1"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2">
+          <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" />
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
-        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="../index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="../index.html">
+            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
+          </a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item"><a class="sidebar-link" href="../dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="../dashboard.html">
+                <i class="align-middle" data-feather="sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
             <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/blank.html">Blank Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/timeline.html">Timeline</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/search.html">Search</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="auth" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-in.html">Sign In</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/profile.html">Profile</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/settings.html">Settings</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="user"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="errors" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/404.html">404</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/500.html">500</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/404.html">404</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/500.html">500</a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/badges.html">Badges</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/cards.html">Cards</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/general.html">General UI</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/images.html">Images</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/tabs.html">Tabs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/avatar.html">Avatar</a></li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#ui-elements"
+                data-bs-toggle="collapse"
+              >
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse"><i class="align-middle" data-feather="grid"></i><span class="align-middle">Tables</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="tables" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/tagify.html">Tagify</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Icons</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="icons" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/feather.html">Feather</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/piruawesome.html">PiruAwesome Icons</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="plugins" data-bs-parent="#sidebar">
-                <li class="sidebar-item active"><a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/charts.html">Charts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/datatable.html">Datatable</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/maps-google.html">Maps</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a></li>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="zap"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse show"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item active">
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/datatable.html">Datatable</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -134,113 +336,272 @@
       </nav>
       <div class="main">
         <!-- NavBar-->
-<nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
-  <div class="navbar-collapse collapse">
-    <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="fa fa-moon opacity-50 me-2"></i>Dark<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" aria-pressed="true"><i class="fa fa-circle-half-stroke opacity-50 me-2"></i>Auto<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="alertsDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="bell"></i><span class="indicator">4</span></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-          <div class="dropdown-menu-header">4 New Notifications</div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-danger" data-feather="alert-circle"></i></div>
-                <div class="col-10">
-                  <div>Update completed</div>
-                  <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                  <div class="text-muted small mt-1">30m ago</div>
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon">
+                    <i class="fa fa-sun"></i>
+                  </span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-sun opacity-50 me-2"></i>
+                      Light
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-moon opacity-50 me-2"></i>
+                      Dark
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+                      Auto
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="bell"></i>
+                    <span class="indicator">4</span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-danger" data-feather="alert-circle"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-success" data-feather="user-plus"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
-                <div class="col-10">
-                  <div>Lorem ipsum</div>
-                  <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="message-square"></i>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
-                <div class="col-10">
-                  <div>Login from 192.186.1.8</div>
-                  <div class="text-muted small mt-1">5h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle d-inline-block"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="avatar avatar-sm me-1">
+                    <img src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  </div>
+                  <span class="d-none d-sm-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="../account/profile.html">
+                    <i class="align-middle me-1" data-feather="user"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="pie-chart"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../account/settings.html">
+                    <i class="align-middle me-1" data-feather="settings"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="help-circle"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="log-out"></i>
+                    Log out
+                  </a>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-success" data-feather="user-plus"></i></div>
-                <div class="col-10">
-                  <div>New connection</div>
-                  <div class="text-muted small mt-1">Christina accepted your request.</div>
-                  <div class="text-muted small mt-1">14h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all notifications</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="messagesDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="message-square"></i></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-          <div class="dropdown-menu-header">
-            <div class="position-relative">4 New Messages</div>
+              </li>
+            </ul>
           </div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Vanessa Tucker"></div>
-                <div class="col-10 ps-2">
-                  <div>Vanessa Tucker</div>
-                  <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-                  <div class="text-muted small mt-1">15m ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="William Harris"></div>
-                <div class="col-10 ps-2">
-                  <div>William Harris</div>
-                  <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Christina Mason"></div>
-                <div class="col-10 ps-2">
-                  <div>Christina Mason</div>
-                  <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-                  <div class="text-muted small mt-1">4h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Sharon Lessman"></div>
-                <div class="col-10 ps-2">
-                  <div>Sharon Lessman</div>
-                  <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-                  <div class="text-muted small mt-1">5h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all messages</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle d-inline-block" href="#" data-bs-toggle="dropdown">
-          <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
-        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="../account/profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="../account/settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+        </nav>
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
@@ -263,10 +624,23 @@
                   <h5 class="card-title">Basic Message</h5>
                   <p class="text-muted">A simple modal with a text message and an 'OK' button.</p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-primary" id="sweet-basic" type="button"><i class="bi bi-lightning-charge me-1"></i>Basic</button>
+                    <button class="btn btn-primary" id="sweet-basic" type="button">
+                      <i class="bi bi-lightning-charge me-1"></i>
+                      Basic
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetBasic" aria-expanded="false" aria-controls="collapseSweetBasic"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetBasic"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetBasic"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetBasic">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
@@ -283,17 +657,34 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Success Message</h5>
-                  <p class="text-muted">A modal with a success icon and a custom message to confirm an action.</p>
+                  <p class="text-muted">
+                    A modal with a success icon and a custom message to confirm an action.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-success" id="sweet-success" type="button"><i class="bi bi-check-circle me-1"></i>Success</button>
+                    <button class="btn btn-success" id="sweet-success" type="button">
+                      <i class="bi bi-check-circle me-1"></i>
+                      Success
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetSuccess" aria-expanded="false" aria-controls="collapseSweetSuccess"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetSuccess"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetSuccess"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetSuccess">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-js"><code class="language-js">Swal.fire("Good job!", "You clicked the button!", "success");
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">Swal.fire("Good job!", "You clicked the button!", "success");
 </code></pre>
                     </div>
                   </div>
@@ -305,17 +696,34 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Warning Message</h5>
-                  <p class="text-muted">An alert with a warning icon, useful for cautioning users before they proceed.</p>
+                  <p class="text-muted">
+                    An alert with a warning icon, useful for cautioning users before they proceed.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-warning" id="sweet-warning" type="button"><i class="bi bi-exclamation-triangle me-1"></i>Warning</button>
+                    <button class="btn btn-warning" id="sweet-warning" type="button">
+                      <i class="bi bi-exclamation-triangle me-1"></i>
+                      Warning
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetWarning" aria-expanded="false" aria-controls="collapseSweetWarning"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetWarning"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetWarning"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetWarning">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-js"><code class="language-js">Swal.fire("Careful!", "This is a warning!", "warning");
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">Swal.fire("Careful!", "This is a warning!", "warning");
 </code></pre>
                     </div>
                   </div>
@@ -327,17 +735,34 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Error Message</h5>
-                  <p class="text-muted">A modal with an error icon to notify users that something went wrong.</p>
+                  <p class="text-muted">
+                    A modal with an error icon to notify users that something went wrong.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-danger" id="sweet-error" type="button"><i class="bi bi-x-circle me-1"></i>Error</button>
+                    <button class="btn btn-danger" id="sweet-error" type="button">
+                      <i class="bi bi-x-circle me-1"></i>
+                      Error
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetError" aria-expanded="false" aria-controls="collapseSweetError"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetError"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetError"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetError">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-js"><code class="language-js">Swal.fire("Oops...", "Something went wrong!", "error");
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">Swal.fire("Oops...", "Something went wrong!", "error");
 </code></pre>
                     </div>
                   </div>
@@ -349,17 +774,34 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Info Message</h5>
-                  <p class="text-muted">A clean modal for providing neutral information or context to the user.</p>
+                  <p class="text-muted">
+                    A clean modal for providing neutral information or context to the user.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-info" id="sweet-info" type="button"><i class="bi bi-info-circle me-1"></i>Info</button>
+                    <button class="btn btn-info" id="sweet-info" type="button">
+                      <i class="bi bi-info-circle me-1"></i>
+                      Info
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetInfo" aria-expanded="false" aria-controls="collapseSweetInfo"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetInfo"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetInfo"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetInfo">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-js"><code class="language-js">Swal.fire("FYI", "Some info for you.", "info");
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">Swal.fire("FYI", "Some info for you.", "info");
 </code></pre>
                     </div>
                   </div>
@@ -371,17 +813,34 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Question Message</h5>
-                  <p class="text-muted">An alert with a question mark icon, typically used for simple confirmations.</p>
+                  <p class="text-muted">
+                    An alert with a question mark icon, typically used for simple confirmations.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-secondary" id="sweet-question" type="button"><i class="bi bi-question-circle me-1"></i>Question</button>
+                    <button class="btn btn-secondary" id="sweet-question" type="button">
+                      <i class="bi bi-question-circle me-1"></i>
+                      Question
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetQuestion" aria-expanded="false" aria-controls="collapseSweetQuestion"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetQuestion"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetQuestion"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetQuestion">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-js"><code class="language-js">Swal.fire("Are you sure?", "", "question");
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">Swal.fire("Are you sure?", "", "question");
 </code></pre>
                     </div>
                   </div>
@@ -393,12 +852,28 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Confirmation Dialog</h5>
-                  <p class="text-muted">A more complex dialog with confirm and cancel buttons, handling user interaction results.</p>
+                  <p class="text-muted">
+                    A more complex dialog with confirm and cancel buttons, handling user interaction
+                    results.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-primary" id="sweet-multiple" type="button"><i class="bi bi-arrow-repeat me-1"></i>Success or Cancel</button>
+                    <button class="btn btn-primary" id="sweet-multiple" type="button">
+                      <i class="bi bi-arrow-repeat me-1"></i>
+                      Success or Cancel
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetMultiple" aria-expanded="false" aria-controls="collapseSweetMultiple"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetMultiple"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetMultiple"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetMultiple">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
@@ -420,12 +895,27 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Input Prompt</h5>
-                  <p class="text-muted">A modal that requests text input from the user with built-in validation.</p>
+                  <p class="text-muted">
+                    A modal that requests text input from the user with built-in validation.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-primary" id="sweet-prompt" type="button"><i class="bi bi-pencil-square me-1"></i>Prompt</button>
+                    <button class="btn btn-primary" id="sweet-prompt" type="button">
+                      <i class="bi bi-pencil-square me-1"></i>
+                      Prompt
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetPrompt" aria-expanded="false" aria-controls="collapseSweetPrompt"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetPrompt"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetPrompt"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetPrompt">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
@@ -449,12 +939,28 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Ajax / Loading</h5>
-                  <p class="text-muted">Demonstrates an asynchronous operation with a loading spinner and a success callback.</p>
+                  <p class="text-muted">
+                    Demonstrates an asynchronous operation with a loading spinner and a success
+                    callback.
+                  </p>
                   <div class="pt-4 pb-4 text-center">
-                    <button class="btn btn-primary" id="sweet-ajax" type="button"><i class="bi bi-cloud-download me-1"></i>Ajax</button>
+                    <button class="btn btn-primary" id="sweet-ajax" type="button">
+                      <i class="bi bi-cloud-download me-1"></i>
+                      Ajax
+                    </button>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSweetAjax" aria-expanded="false" aria-controls="collapseSweetAjax"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSweetAjax"
+                      aria-expanded="false"
+                      aria-controls="collapseSweetAjax"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSweetAjax">
                     <div class="demo-code-preview" data-label="CODE EXAMPLE">
@@ -483,144 +989,102 @@
           <div class="container-fluid">
             <div class="row text-muted">
               <div class="col-6 text-start">
-                <p class="mb-0"><a class="text-muted" href="../index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
+                <p class="mb-0">
+                  <a class="text-muted" href="../index.html">
+                    &copy;&nbsp;
+                    <strong>PiruAdmin&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
               </div>
               <div class="col-6 text-end">
                 <p class="mb-0">
-                   Designed By&nbsp;<a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a></p>
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
               </div>
             </div>
           </div>
         </footer>
       </div>
-      <!-- Back to top--><a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+      <!-- Back to top-->
+      <a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#">
+        <i class="fa fa-arrow-up"></i>
+      </a>
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="../assets/js/feathericons.js"></script>
+    <script src="../assets/plugins/feathericons.js"></script>
     <script src="../assets/js/piruadmin.js"></script>
-    <script src="../assets/js/sweetalert2.js"></script>
-    <script src="../assets/js/prismjs.js"></script>
+    <script src="../assets/plugins/sweetalert2.js"></script>
+    <script src="../assets/plugins/prismjs.js"></script>
     <script>
       // Básicos
-      document.getElementById("sweet-basic").addEventListener("click", () => {
-        Swal.fire("Hello World!");
+      document.getElementById('sweet-basic').addEventListener('click', () => {
+        Swal.fire('Hello World!');
       });
-      document.getElementById("sweet-success").addEventListener("click", () => {
-        Swal.fire("Good job!", "You clicked the button!", "success");
+      document.getElementById('sweet-success').addEventListener('click', () => {
+        Swal.fire('Good job!', 'You clicked the button!', 'success');
       });
-      document.getElementById("sweet-warning").addEventListener("click", () => {
-        Swal.fire("Careful!", "This is a warning!", "warning");
+      document.getElementById('sweet-warning').addEventListener('click', () => {
+        Swal.fire('Careful!', 'This is a warning!', 'warning');
       });
-      document.getElementById("sweet-error").addEventListener("click", () => {
-        Swal.fire("Oops...", "Something went wrong!", "error");
+      document.getElementById('sweet-error').addEventListener('click', () => {
+        Swal.fire('Oops...', 'Something went wrong!', 'error');
       });
-      document.getElementById("sweet-info").addEventListener("click", () => {
-        Swal.fire("FYI", "Some info for you.", "info");
+      document.getElementById('sweet-info').addEventListener('click', () => {
+        Swal.fire('FYI', 'Some info for you.', 'info');
       });
-      document.getElementById("sweet-question").addEventListener("click", () => {
-        Swal.fire("Are you sure?", "", "question");
+      document.getElementById('sweet-question').addEventListener('click', () => {
+        Swal.fire('Are you sure?', '', 'question');
       });
-      
+
       // Con confirmación
-      document.getElementById("sweet-multiple").addEventListener("click", () => {
+      document.getElementById('sweet-multiple').addEventListener('click', () => {
         Swal.fire({
-          title: "Are you sure?",
+          title: 'Are you sure?',
           showCancelButton: true,
-          confirmButtonText: "Yes",
-          cancelButtonText: "No",
-          icon: "warning"
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'No',
+          icon: 'warning',
         }).then((result) => {
           if (result.isConfirmed) {
-            Swal.fire("Done!", "Your action was confirmed.", "success");
+            Swal.fire('Done!', 'Your action was confirmed.', 'success');
           }
         });
       });
-      
+
       // Prompt
-      document.getElementById("sweet-prompt").addEventListener("click", () => {
+      document.getElementById('sweet-prompt').addEventListener('click', () => {
         Swal.fire({
-          title: "Enter your name",
-          input: "text",
-          inputLabel: "Your name",
+          title: 'Enter your name',
+          input: 'text',
+          inputLabel: 'Your name',
           showCancelButton: true,
           inputValidator: (value) => {
-            if (!value) return "You need to write something!";
-          }
-        }).then(result => {
+            if (!value) return 'You need to write something!';
+          },
+        }).then((result) => {
           if (result.value) {
             Swal.fire(`Hello, ${result.value}`);
           }
         });
       });
-      
+
       // Ajax
-      document.getElementById("sweet-ajax").addEventListener("click", () => {
+      document.getElementById('sweet-ajax').addEventListener('click', () => {
         Swal.fire({
-          title: "Loading...",
-          html: "Please wait...",
+          title: 'Loading...',
+          html: 'Please wait...',
           allowOutsideClick: false,
           didOpen: () => {
             Swal.showLoading();
             setTimeout(() => {
-              Swal.fire("Done!", "Ajax request finished", "success");
+              Swal.fire('Done!', 'Ajax request finished', 'success');
             }, 2000);
-          }
+          },
         });
       });
-      
-    </script>
-    <script>
-      document.querySelectorAll('.copy-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const code = btn.nextElementSibling?.innerText;
-          if (!code) return;
-      
-          // Prioridad a Clipboard API moderna
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(code).then(() => {
-              showCopySuccess(btn);
-            }).catch(err => {
-              console.error('Clipboard API failed', err);
-              fallbackCopy(code, btn);
-            });
-          } else {
-            fallbackCopy(code, btn);
-          }
-        });
-      });
-      
-      function fallbackCopy(text, btn) {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.style.position = 'fixed'; // Evita scroll
-        textarea.style.opacity = '0';
-        document.body.appendChild(textarea);
-        textarea.focus();
-        textarea.select();
-      
-        try {
-          const successful = document.execCommand('copy');
-          if (successful) {
-            showCopySuccess(btn);
-          } else {
-            alert("No se pudo copiar el texto");
-          }
-        } catch (err) {
-          console.error('Fallback copy failed', err);
-          alert("Error al copiar");
-        }
-      
-        document.body.removeChild(textarea);
-      }
-      
-      function showCopySuccess(btn) {
-        const original = btn.textContent;
-        btn.textContent = 'Copied!';
-        setTimeout(() => {
-          btn.textContent = original;
-        }, 1500);
-      }
     </script>
   </body>
 </html>

@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="author" content="Pirulug">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0d6efd">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d6efd" />
     <!-- Primary Meta Tags-->
     <title>Avatars - Free Bootstrap 5 Admin Template | PiruAdmin</title>
-    <meta name="title" content="Avatars - Free Bootstrap 5 Admin Template | PiruAdmin">
-    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
-    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
-    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
+    <meta name="title" content="Avatars - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html"
+    />
     <!-- Open Graph / Facebook-->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
-    <meta property="og:title" content="Avatars | PiruAdmin">
-    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
-    <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html"
+    />
+    <meta property="og:title" content="Avatars | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
     <!-- Twitter-->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html">
-    <meta property="twitter:title" content="Avatars | PiruAdmin">
-    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
-    <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
-    <meta property="twitter:creator" content="@pirulug">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/ui/avatar.html"
+    />
+    <meta property="twitter:title" content="Avatars | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
     <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../assets/css/bootstrapicons.css">
-    <link rel="stylesheet" href="../assets/css/piruadmin.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -41,92 +82,252 @@
         const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
-      
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <link rel="stylesheet" href="../assets/css/prismjs.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link rel="stylesheet" href="../assets/plugins/prismjs.css" />
   </head>
   <body>
-<!-- Loader-->
-<div class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
-  <div class="position-relative" style="width: 4rem; height: 4rem;">
-    <div class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100" role="status" style="border-width: 3px; z-index: 1;"><span class="visually-hidden">Loading...</span></div>
-    <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2;"><img src="../assets/img/logo.png" alt="Logo" width="30" height="30"></div>
-  </div>
-</div>
+    <!-- Loader-->
+    <div
+      class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      id="spinner"
+    >
+      <div class="position-relative" style="width: 4rem; height: 4rem">
+        <div
+          class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100"
+          role="status"
+          style="border-width: 3px; z-index: 1"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2">
+          <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" />
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
-        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="../index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a>
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="../index.html">
+            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
+          </a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item"><a class="sidebar-link" href="../dashboard.html"><i class="align-middle" data-feather="sliders"></i><span class="align-middle">Dashboard</span></a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="../dashboard.html">
+                <i class="align-middle" data-feather="sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
             <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Pages</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/blank.html">Blank Page</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/timeline.html">Timeline</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../pages/search.html">Search</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"><i class="align-middle" data-feather="users"></i><span class="align-middle">Auth</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="auth" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-in.html">Sign In</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="users"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse"><i class="align-middle" data-feather="user"></i><span class="align-middle">Account</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/profile.html">Profile</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../account/settings.html">Settings</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="user"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Errors</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="errors" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/404.html">404</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../error/500.html">500</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/404.html">404</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/500.html">500</a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse"><i class="align-middle" data-feather="box"></i><span class="align-middle">UI Elements</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse show" id="ui-elements" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/alerts.html">Alerts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/badges.html">Badges</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/buttons.html">Buttons</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/cards.html">Cards</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/general.html">General UI</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/images.html">Images</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../ui/tabs.html">Tabs</a></li>
-                <li class="sidebar-item active"><a class="sidebar-link" href="../ui/avatar.html">Avatar</a></li>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" data-bs-target="#ui-elements" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse show"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                </li>
+                <li class="sidebar-item active">
+                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse"><i class="align-middle" data-feather="grid"></i><span class="align-middle">Tables</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="tables" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse"><i class="align-middle" data-feather="file"></i><span class="align-middle">Forms</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../forms/tagify.html">Tagify</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse"><i class="align-middle" data-feather="coffee"></i><span class="align-middle">Icons</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="icons" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/feather.html">Feather</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="coffee"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/piruawesome.html">PiruAwesome Icons</a>
+                </li>
               </ul>
             </li>
-            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse"><i class="align-middle" data-feather="zap"></i><span class="align-middle">Plugins</span></a>
-              <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/charts.html">Charts</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/datatable.html">Datatable</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/maps-google.html">Maps</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a></li>
-                <li class="sidebar-item"><a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a></li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse">
+                <i class="align-middle" data-feather="zap"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/datatable.html">Datatable</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -134,113 +335,272 @@
       </nav>
       <div class="main">
         <!-- NavBar-->
-<nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
-  <div class="navbar-collapse collapse">
-    <ul class="navbar-nav navbar-align">
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"><i class="fa fa-sun"></i></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><i class="fa fa-sun opacity-50 me-2"></i>Light<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" aria-pressed="false"><i class="fa fa-moon opacity-50 me-2"></i>Dark<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-          <li>
-            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" aria-pressed="true"><i class="fa fa-circle-half-stroke opacity-50 me-2"></i>Auto<i class="pr-check fa fa-check ms-auto d-none"></i></button>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="alertsDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="bell"></i><span class="indicator">4</span></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
-          <div class="dropdown-menu-header">4 New Notifications</div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-danger" data-feather="alert-circle"></i></div>
-                <div class="col-10">
-                  <div>Update completed</div>
-                  <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                  <div class="text-muted small mt-1">30m ago</div>
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon">
+                    <i class="fa fa-sun"></i>
+                  </span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-sun opacity-50 me-2"></i>
+                      Light
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <i class="fa fa-moon opacity-50 me-2"></i>
+                      Dark
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+                      Auto
+                      <i class="pr-check fa fa-check ms-auto d-none"></i>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="bell"></i>
+                    <span class="indicator">4</span>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-danger" data-feather="alert-circle"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="text-success" data-feather="user-plus"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
-                <div class="col-10">
-                  <div>Lorem ipsum</div>
-                  <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <i class="align-middle" data-feather="message-square"></i>
+                  </div>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
-                <div class="col-10">
-                  <div>Login from 192.186.1.8</div>
-                  <div class="text-muted small mt-1">5h ago</div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle d-inline-block"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="avatar avatar-sm me-1">
+                    <img src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  </div>
+                  <span class="d-none d-sm-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="../account/profile.html">
+                    <i class="align-middle me-1" data-feather="user"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="pie-chart"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../account/settings.html">
+                    <i class="align-middle me-1" data-feather="settings"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="help-circle"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="align-middle me-1" data-feather="log-out"></i>
+                    Log out
+                  </a>
                 </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><i class="text-success" data-feather="user-plus"></i></div>
-                <div class="col-10">
-                  <div>New connection</div>
-                  <div class="text-muted small mt-1">Christina accepted your request.</div>
-                  <div class="text-muted small mt-1">14h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all notifications</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle" id="messagesDropdown" href="#" data-bs-toggle="dropdown">
-          <div class="position-relative"><i class="align-middle" data-feather="message-square"></i></div></a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
-          <div class="dropdown-menu-header">
-            <div class="position-relative">4 New Messages</div>
+              </li>
+            </ul>
           </div>
-          <div class="list-group"><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Vanessa Tucker"></div>
-                <div class="col-10 ps-2">
-                  <div>Vanessa Tucker</div>
-                  <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
-                  <div class="text-muted small mt-1">15m ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="William Harris"></div>
-                <div class="col-10 ps-2">
-                  <div>William Harris</div>
-                  <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
-                  <div class="text-muted small mt-1">2h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Christina Mason"></div>
-                <div class="col-10 ps-2">
-                  <div>Christina Mason</div>
-                  <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
-                  <div class="text-muted small mt-1">4h ago</div>
-                </div>
-              </div></a><a class="list-group-item" href="#">
-              <div class="row g-0 align-items-center">
-                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Sharon Lessman"></div>
-                <div class="col-10 ps-2">
-                  <div>Sharon Lessman</div>
-                  <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
-                  <div class="text-muted small mt-1">5h ago</div>
-                </div>
-              </div></a></div>
-          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all messages</a></div>
-        </div>
-      </li>
-      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle d-inline-block" href="#" data-bs-toggle="dropdown">
-          <div class="avatar avatar-sm me-1"><img src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""></div><span class="d-none d-sm-inline-block">Pirulug</span></a>
-        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="../account/profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="../account/settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="log-out"></i>Log out</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</nav>
+        </nav>
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
@@ -261,19 +621,37 @@
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Basic Usage</h5>
-                  <p class="text-muted">The <code>.avatar</code> component automatically adapts its content, whether it's an image, text, or icon.</p>
+                  <p class="text-muted">
+                    The
+                    <code>.avatar</code>
+                    component automatically adapts its content, whether it's an image, text, or
+                    icon.
+                  </p>
                   <div class="d-flex justify-content-center gap-4 py-4">
-                    <figure class="avatar mb-0"><img src="https://dummyimage.com/100x100/333/fff.png" alt="Avatar"></figure>
+                    <figure class="avatar mb-0">
+                      <img src="https://dummyimage.com/100x100/333/fff.png" alt="Avatar" />
+                    </figure>
                     <figure class="avatar mb-0"><span>AB</span></figure>
                     <figure class="avatar mb-0"><i class="bi bi-person"></i></figure>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasic" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseBasic"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseBasic">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;!-- Image Avatar --&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;!-- Image Avatar --&gt;
 &lt;figure class="avatar"&gt;
   &lt;img src="..." alt="..."&gt;
 &lt;/figure&gt;
@@ -298,19 +676,42 @@
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Shapes</h5>
-                  <p class="text-muted">Modify the border radius with <code>.avatar-rounded</code> or <code>.avatar-square</code>.</p>
+                  <p class="text-muted">
+                    Modify the border radius with
+                    <code>.avatar-rounded</code>
+                    or
+                    <code>.avatar-square</code>
+                    .
+                  </p>
                   <div class="d-flex justify-content-center gap-4 py-4">
-                    <figure class="avatar mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Circle"></figure>
-                    <figure class="avatar avatar-rounded mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Rounded"></figure>
-                    <figure class="avatar avatar-square mb-0"><img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Square"></figure>
+                    <figure class="avatar mb-0">
+                      <img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Circle" />
+                    </figure>
+                    <figure class="avatar avatar-rounded mb-0">
+                      <img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Rounded" />
+                    </figure>
+                    <figure class="avatar avatar-square mb-0">
+                      <img src="https://dummyimage.com/100x100/0d6efd/fff" alt="Square" />
+                    </figure>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShapes" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseShapes"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseShapes">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;!-- Circle (Default) --&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;!-- Circle (Default) --&gt;
 &lt;figure class="avatar"&gt;...&lt;/figure&gt;
 
 &lt;!-- Rounded --&gt;
@@ -329,7 +730,13 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Available Sizes</h5>
-                  <p class="text-muted">Control avatar dimensions from <code>XS</code> to <code>XL</code> to match your UI context.</p>
+                  <p class="text-muted">
+                    Control avatar dimensions from
+                    <code>XS</code>
+                    to
+                    <code>XL</code>
+                    to match your UI context.
+                  </p>
                   <div class="d-flex flex-wrap align-items-end justify-content-center gap-4 py-4">
                     <div class="text-center">
                       <figure class="avatar avatar-xl mb-2"><span>XL</span></figure>
@@ -353,12 +760,23 @@
                     </div>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSizes" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSizes"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseSizes">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;figure class="avatar avatar-xl"&gt;...&lt;/figure&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;figure class="avatar avatar-xl"&gt;...&lt;/figure&gt;
 &lt;figure class="avatar avatar-lg"&gt;...&lt;/figure&gt;
 &lt;figure class="avatar"&gt;...&lt;/figure&gt;
 &lt;figure class="avatar avatar-sm"&gt;...&lt;/figure&gt;
@@ -374,19 +792,43 @@
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Status Indicators</h5>
-                  <p class="text-muted">Add specific <code>.avatar-status</code> indicators for online, busy, or away states.</p>
+                  <p class="text-muted">
+                    Add specific
+                    <code>.avatar-status</code>
+                    indicators for online, busy, or away states.
+                  </p>
                   <div class="d-flex justify-content-center gap-5 py-4">
-                    <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/333/fff&amp;text=U"><span class="avatar-status bg-success"></span></figure>
-                    <figure class="avatar avatar-secondary"><span>AB</span><span class="avatar-status bg-danger"></span></figure>
-                    <figure class="avatar avatar-sm avatar-light"><i class="bi bi-person"></i><span class="avatar-status bg-warning"></span></figure>
+                    <figure class="avatar avatar-lg">
+                      <img src="https://dummyimage.com/100x100/333/fff&amp;text=U" />
+                      <span class="avatar-status bg-success"></span>
+                    </figure>
+                    <figure class="avatar avatar-secondary">
+                      <span>AB</span>
+                      <span class="avatar-status bg-danger"></span>
+                    </figure>
+                    <figure class="avatar avatar-sm avatar-light">
+                      <i class="bi bi-person"></i>
+                      <span class="avatar-status bg-warning"></span>
+                    </figure>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStatus" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseStatus"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseStatus">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;figure class="avatar"&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;figure class="avatar"&gt;
   &lt;img src="..." alt="..."&gt;
   &lt;span class="avatar-status bg-success"&gt;&lt;/span&gt;
 &lt;/figure&gt;
@@ -401,27 +843,52 @@
               <div class="card h-100">
                 <div class="card-body">
                   <h5 class="card-title">Avatar Groups</h5>
-                  <p class="text-muted">Stack multiple avatars together using the <code>.avatar-group</code> container.</p>
-                  <div class="d-flex flex-column justify-content-center align-items-center gap-4 py-4">
+                  <p class="text-muted">
+                    Stack multiple avatars together using the
+                    <code>.avatar-group</code>
+                    container.
+                  </p>
+                  <div
+                    class="d-flex flex-column justify-content-center align-items-center gap-4 py-4"
+                  >
                     <div class="avatar-group">
-                      <figure class="avatar avatar-lg"><img src="https://dummyimage.com/100x100/0d6efd/fff&amp;text=1"></figure>
+                      <figure class="avatar avatar-lg">
+                        <img src="https://dummyimage.com/100x100/0d6efd/fff&amp;text=1" />
+                      </figure>
                       <figure class="avatar avatar-lg avatar-primary"><span>A</span></figure>
-                      <figure class="avatar avatar-lg avatar-success"><i class="bi bi-check"></i></figure>
+                      <figure class="avatar avatar-lg avatar-success">
+                        <i class="bi bi-check"></i>
+                      </figure>
                       <figure class="avatar avatar-lg avatar-secondary"><span>+3</span></figure>
                     </div>
                     <div class="avatar-group">
-                      <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/444/fff&amp;text=A"></figure>
-                      <figure class="avatar avatar-sm"><img src="https://dummyimage.com/100x100/555/fff&amp;text=B"></figure>
+                      <figure class="avatar avatar-sm">
+                        <img src="https://dummyimage.com/100x100/444/fff&amp;text=A" />
+                      </figure>
+                      <figure class="avatar avatar-sm">
+                        <img src="https://dummyimage.com/100x100/555/fff&amp;text=B" />
+                      </figure>
                       <figure class="avatar avatar-sm avatar-dark"><span>9+</span></figure>
                     </div>
                   </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGroup" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseGroup"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseGroup">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;div class="avatar-group"&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;div class="avatar-group"&gt;
   &lt;figure class="avatar"&gt;...&lt;/figure&gt;
   &lt;figure class="avatar"&gt;...&lt;/figure&gt;
   &lt;figure class="avatar"&gt;...&lt;/figure&gt;
@@ -437,16 +904,57 @@
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Interactive Lightbox</h5>
-                  <p class="text-muted">Integrated with <code>GLightbox</code> to preview avatar images or videos in full size.</p>
-                  <div class="d-flex flex-wrap justify-content-center gap-3 py-4"><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/000/fff.png" data-gallery="avatars"><img src="https://dummyimage.com/100x100/000/fff.png" alt="avatar"></a><a class="avatar avatar-xl glightbox" href="https://dummyimage.com/800x600/333/fff.png" data-gallery="avatars"><img src="https://dummyimage.com/100x100/333/fff.png" alt="avatar"></a><a class="avatar avatar-xl avatar-primary glightbox" href="https://dummyimage.com/800x600/0d6efd/fff.png" data-gallery="avatars"><span>IMG</span></a><a class="glightbox" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                      <figure class="avatar avatar-xl avatar-danger mb-0"><i class="bi bi-play-fill fs-2"></i></figure></a></div>
+                  <p class="text-muted">
+                    Integrated with
+                    <code>GLightbox</code>
+                    to preview avatar images or videos in full size.
+                  </p>
+                  <div class="d-flex flex-wrap justify-content-center gap-3 py-4">
+                    <a
+                      class="avatar avatar-xl glightbox"
+                      href="https://dummyimage.com/800x600/000/fff.png"
+                      data-gallery="avatars"
+                    >
+                      <img src="https://dummyimage.com/100x100/000/fff.png" alt="avatar" />
+                    </a>
+                    <a
+                      class="avatar avatar-xl glightbox"
+                      href="https://dummyimage.com/800x600/333/fff.png"
+                      data-gallery="avatars"
+                    >
+                      <img src="https://dummyimage.com/100x100/333/fff.png" alt="avatar" />
+                    </a>
+                    <a
+                      class="avatar avatar-xl avatar-primary glightbox"
+                      href="https://dummyimage.com/800x600/0d6efd/fff.png"
+                      data-gallery="avatars"
+                    >
+                      <span>IMG</span>
+                    </a>
+                    <a class="glightbox" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                      <figure class="avatar avatar-xl avatar-danger mb-0">
+                        <i class="bi bi-play-fill fs-2"></i>
+                      </figure>
+                    </a>
+                  </div>
                   <div class="text-center mt-2">
-                    <button class="btn btn-sm btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLightbox" aria-expanded="false"><i class="bi bi-code-slash me-1"></i>View Code</button>
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseLightbox"
+                      aria-expanded="false"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
                   </div>
                   <div class="collapse mt-3" id="collapseLightbox">
                     <div class="demo-code-preview" data-label="HTML EXAMPLE">
                       <button class="copy-btn" type="button">Copy</button>
-                      <pre class="language-html"><code class="language-html">&lt;!-- Lightbox Image --&gt;
+                      <pre
+                        class="language-html"
+                      ><code class="language-html">&lt;!-- Lightbox Image --&gt;
 &lt;a class="avatar glightbox" href="large-image.jpg"&gt;
   &lt;img src="thumb.jpg" alt="..."&gt;
 &lt;/a&gt;
@@ -468,80 +976,42 @@
           <div class="container-fluid">
             <div class="row text-muted">
               <div class="col-6 text-start">
-                <p class="mb-0"><a class="text-muted" href="../index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
+                <p class="mb-0">
+                  <a class="text-muted" href="../index.html">
+                    &copy;&nbsp;
+                    <strong>PiruAdmin&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
               </div>
               <div class="col-6 text-end">
                 <p class="mb-0">
-                   Designed By&nbsp;<a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a></p>
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
               </div>
             </div>
           </div>
         </footer>
       </div>
-      <!-- Back to top--><a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+      <!-- Back to top-->
+      <a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#">
+        <i class="fa fa-arrow-up"></i>
+      </a>
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="../assets/js/feathericons.js"></script>
+    <script src="../assets/plugins/feathericons.js"></script>
     <script src="../assets/js/piruadmin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script src="../assets/js/prismjs.js"></script>
+    <script src="../assets/plugins/prismjs.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener('DOMContentLoaded', function () {
         const lightbox = GLightbox({
           selector: '.glightbox',
           touchNavigation: true,
-          loop: true
+          loop: true,
         });
-      
-        // Clipboard Copy Handler
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-          btn.addEventListener('click', () => {
-            const code = btn.nextElementSibling?.innerText;
-            if (!code) return;
-      
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(code).then(() => {
-                showCopySuccess(btn);
-              }).catch(err => {
-                console.error('Clipboard API failed', err);
-                fallbackCopy(code, btn);
-              });
-            } else {
-              fallbackCopy(code, btn);
-            }
-          });
-        });
-      
-        function fallbackCopy(text, btn) {
-          const textarea = document.createElement('textarea');
-          textarea.value = text;
-          textarea.style.position = 'fixed';
-          textarea.style.opacity = '0';
-          document.body.appendChild(textarea);
-          textarea.focus();
-          textarea.select();
-      
-          try {
-            const successful = document.execCommand('copy');
-            if (successful) showCopySuccess(btn);
-          } catch (err) {
-            console.error('Fallback copy failed', err);
-          }
-          document.body.removeChild(textarea);
-        }
-      
-        function showCopySuccess(btn) {
-          const original = btn.textContent;
-          btn.textContent = 'Copied!';
-          btn.classList.add('btn-success');
-          btn.classList.remove('btn-outline-secondary');
-          setTimeout(() => {
-            btn.textContent = original;
-            btn.classList.remove('btn-success');
-            btn.classList.add('btn-outline-secondary');
-          }, 1500);
-        }
       });
     </script>
   </body>
