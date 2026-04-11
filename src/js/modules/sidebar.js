@@ -52,12 +52,29 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
     const sidebarElement = document.getElementsByClassName("js-sidebar")[0];
     const sidebarToggleElement =
       document.getElementsByClassName("js-sidebar-toggle")[0];
+    const backdropElement = document.getElementsByClassName("sidebar-backdrop")[0];
 
-    sidebarToggleElement.addEventListener("click", () => {
+    const toggleSidebar = () => {
       sidebarElement.classList.toggle("collapsed");
 
       sidebarElement.addEventListener("transitionend", () => {
         window.dispatchEvent(new Event("resize"));
+      }, { once: true });
+    };
+
+    sidebarToggleElement.addEventListener("click", toggleSidebar);
+
+    if (backdropElement) {
+      backdropElement.addEventListener("click", toggleSidebar);
+    }
+
+    // Close sidebar when clicking a link on mobile
+    const sidebarLinks = sidebarElement.querySelectorAll(".sidebar-link");
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992 && !link.hasAttribute("data-bs-toggle")) {
+          toggleSidebar();
+        }
       });
     });
   };

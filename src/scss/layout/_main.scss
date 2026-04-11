@@ -3,11 +3,10 @@
   flex-direction: column;
   width: 100%;
   min-width: 0;
-  min-height: 100%;
+  min-height: 100vh;
   flex: 1;
   transition: $sidebar-transition;
   background: $body-bg;
-  // overflow: hidden;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

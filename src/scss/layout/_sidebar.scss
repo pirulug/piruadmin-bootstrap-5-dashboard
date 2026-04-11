@@ -185,11 +185,14 @@ a.sidebar-link {
 
   // Workaround for IE bug, more info:
   // https://stackoverflow.com/a/25850649
-  @media (min-width: 1px) and (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
-    // Sidebar default state (on mobile)
+  @media (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1050; // Higher than navtop and content
     margin-left: -$sidebar-width;
 
-    // Sidebar collapsed state (on mobile)
     &.collapsed {
       margin-left: 0;
     }

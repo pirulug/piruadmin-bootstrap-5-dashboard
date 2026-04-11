@@ -100,12 +100,10 @@
   }
 
   @include media-breakpoint-down(sm) {
-    .navtop {
-      padding: 0.75rem;
-    }
+    padding: 0.5rem 0.75rem;
 
     .nav-icon {
-      padding: 0.1rem 0.75rem;
+      padding: 0.1rem 0.5rem;
     }
 
     .dropdown,
