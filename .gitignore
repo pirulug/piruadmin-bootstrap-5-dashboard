@@ -1,12 +1,34 @@
-.vscode
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-.idea
+# OS Files
+.DS_Store
+Thumbs.db
 
-node_modules
+# Dependencies
+node_modules/
+.pnpm-debug.log*
 
-package-lock.json
-pnpm-lock.yaml
+# Build
+dist/
+.tmp/
 
-dist
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
--
+# Other
+.env
+.env.local
+.env.*.local
+.cache/
+.eslintcache
+.stylelintcache

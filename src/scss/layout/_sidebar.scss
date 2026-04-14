@@ -170,6 +170,30 @@ a.sidebar-link {
   padding-left: 1rem;
 }
 
+// Sidebar close button (on mobile)
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  z-index: 10;
+  color: $sidebar-brand-color;
+  transition: $transition-appearance-fast;
+
+  &:hover {
+    color: $primary;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
+    display: block;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 // Toggle states
 .sidebar-toggle {
   cursor: pointer;

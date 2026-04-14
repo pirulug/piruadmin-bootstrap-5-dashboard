@@ -53,8 +53,10 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
     const sidebarToggleElement =
       document.getElementsByClassName("js-sidebar-toggle")[0];
     const backdropElement = document.getElementsByClassName("sidebar-backdrop")[0];
+    const closeElement = document.getElementsByClassName("js-sidebar-close")[0];
 
-    const toggleSidebar = () => {
+    const toggleSidebar = (e) => {
+      if (e) e.preventDefault();
       sidebarElement.classList.toggle("collapsed");
 
       sidebarElement.addEventListener("transitionend", () => {
@@ -66,6 +68,10 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
 
     if (backdropElement) {
       backdropElement.addEventListener("click", toggleSidebar);
+    }
+
+    if (closeElement) {
+      closeElement.addEventListener("click", toggleSidebar);
     }
 
     // Close sidebar when clicking a link on mobile

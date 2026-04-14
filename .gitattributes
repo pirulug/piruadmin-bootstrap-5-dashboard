@@ -1,2 +1,28 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Define text files
+*.js text
+*.json text
+*.scss text
+*.css text
+*.html text
+*.pug text
+*.md text
+*.svg text
+
+# Define binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.eot binary
+
+# Lock files
+pnpm-lock.yaml text eol=lf
+package-lock.json text eol=lf

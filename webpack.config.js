@@ -110,12 +110,20 @@ module.exports = {
         parallel: true,
         terserOptions: {
           ecma: 6,
+          format: {
+            comments: false,
+          },
         },
         extractComments: false,
       }),
       new CssMinimizerPlugin({
         minimizerOptions: {
-          preset: ["default", { discardComments: { removeAll: true } }],
+          preset: [
+            "default",
+            {
+              discardComments: { removeAll: true },
+            },
+          ],
         },
       }),
     ],

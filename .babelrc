@@ -4,11 +4,20 @@
       "@babel/preset-env",
       {
         "modules": false,
+        "bugfixes": true,
         "targets": {
-          "esmodules": true // Para apuntar a ES modules que son parte de ES2020
+          "browsers": [
+            "last 2 versions",
+            "> 0.5%",
+            "not dead",
+            "not ie 11"
+          ]
         },
         "useBuiltIns": "entry",
-        "corejs": 3 // Puedes ajustar esto según la versión que estés usando
+        "corejs": {
+          "version": 3,
+          "proposals": true
+        }
       }
     ]
   ]

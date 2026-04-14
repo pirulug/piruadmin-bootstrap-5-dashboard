@@ -6,6 +6,9 @@ nav#sidebar.sidebar.js-sidebar
   .sidebar-content.js-simplebar
     a.sidebar-brand(href=baseUrl + 'index.html')
       span.sidebar-brand-text.align-middle #{siteName}
+    
+    a.sidebar-close.js-sidebar-close(href='#')
+      i(data-feather='x')
 
     ul.sidebar-nav
       each item in menuItems

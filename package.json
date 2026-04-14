@@ -52,6 +52,7 @@
     "pirulug-pug-loader": "^0.0.13",
     "postcss": "^8.5.8",
     "postcss-loader": "8.2.1",
+    "postcss-preset-env": "^11.2.0",
     "pug": "^3.0.4",
     "sass": "^1.99.0",
     "sass-loader": "16.0.7",
