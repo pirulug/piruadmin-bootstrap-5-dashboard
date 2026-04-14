@@ -80,6 +80,7 @@
     "jsvectormap": "1.7.0",
     "pirulug-icons-awesome": "^0.1.0",
     "simplebar": "6.3.3",
+    "simplemde": "^1.11.2",
     "sweetalert2": "^11.26.24",
     "toastify-js": "^1.12.0"
   }

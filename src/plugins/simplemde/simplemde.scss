@@ -1,0 +1,76 @@
+@import "simplemde/dist/simplemde.min.css";
+
+// VARIABLES
+@import "bootstrap/scss/_functions";
+@import "../../scss/base/variables";
+@import "../../scss/base/variables-dark";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_variables-dark";
+@import "bootstrap/scss/_mixins";
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
+  opacity: 1;
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+
+  a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    float: none !important;
+    width: 32px;
+    height: 32px;
+    margin: 2px;
+    border-radius: $border-radius-sm;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease;
+
+    &::before {
+      margin: 0 !important;
+    }
+  }
+
+  i.separator {
+    display: inline-block !important;
+    float: none !important;
+    margin: 0 8px !important;
+    border-right: 0 !important;
+    border-left: 1px solid $gray-300;
+    height: 20px;
+    vertical-align: middle;
+  }
+}
+
+// Custom styles for Dark Mode if needed
+[data-bs-theme="dark"] {
+  .editor-toolbar,
+  .editor-statusbar,
+  .CodeMirror {
+    background-color: $body-bg-dark;
+    color: $body-color-dark;
+    border-color: $gray-800;
+  }
+  .editor-toolbar a {
+    color: $body-color-dark !important;
+    &:hover, &.active {
+      background-color: $body-bg-alt-dark;
+      border-color: $gray-800;
+    }
+  }
+  .editor-toolbar.disabled-for-preview a:not(.no-disable) {
+    color: $gray-500 !important;
+  }
+  .CodeMirror-cursor {
+    border-left-color: $white;
+  }
+  .editor-toolbar i.separator {
+    border-left-color: $gray-800;
+  }
+}

@@ -1,0 +1,59 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'SimpleMDE'
+  - pageUrl = 'plugins/simplemde'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/simplemde.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+
+block content
+  .row
+    .col-12
+      .card
+        .card-body
+          h5.card-title SimpleMDE Markdown Editor
+          p.text-muted SimpleMDE is a drop-in JavaScript textarea replacement for writing beautiful and understandable Markdown.
+          
+          .my-4
+            textarea#simplemde-editor.
+              # Hello SimpleMDE!
+              
+              This is a beautiful Markdown editor.
+              
+              - List item 1
+              - List item 2
+              
+              **Bold text** and *italic text*.
+          
+          .text-center.mt-4
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseSimpleMDE' aria-expanded='false' aria-controls='collapseSimpleMDE')
+              i.bi.bi-code-slash.me-1
+              | View Implementation
+          
+          .collapse#collapseSimpleMDE.mt-3
+            .demo-code-preview(data-label='HTML & JS')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;textarea id="simplemde-editor"&gt;&lt;/textarea&gt;
+
+                  &lt;script&gt;
+                    var simplemde = new SimpleMDE({ element: document.getElementById("simplemde-editor") });
+                  &lt;/script&gt;
+
+block scripts
+  script(src=assets + "plugins/simplemde.js")
+  script(src=assets + "plugins/prismjs.js")
+
+  script.
+    var simplemde = new SimpleMDE({ 
+      element: document.getElementById("simplemde-editor"),
+      spellChecker: false,
+      autosave: {
+        enabled: true,
+        uniqueId: "MyUniqueID",
+        delay: 1000,
+      },
+    });

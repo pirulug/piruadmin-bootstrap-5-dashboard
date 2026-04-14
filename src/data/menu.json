@@ -247,6 +247,11 @@
         "title": "Flag Icons",
         "path": "plugins/flag-icons",
         "link": "plugins/flag-icons"
+      },
+      {
+        "title": "SimpleMDE",
+        "path": "plugins/simplemde",
+        "link": "plugins/simplemde"
       }
     ]
   }

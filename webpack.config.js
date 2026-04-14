@@ -71,21 +71,70 @@ const PAGES = getFiles(PAGES_DIR);
 module.exports = {
   entry: {
     piruadmin: "./src/js/piruadmin.js",
-    bootstrapicons: "./src/plugins/bootstrapicons/bootstrapicons.js",
-    feathericons: "./src/plugins/feathericons/feathericons.js",
-    fontawesome: "./src/plugins/fontawesome/fontawesome.js",
-    toastifyjs: "./src/plugins/toastifyjs/toastifyjs.js",
-    liteyoutube: "./src/plugins/liteyoutube/liteyoutube.js",
-    tagify: "./src/plugins/tagify/tagify.js",
-    chartjs: "./src/plugins/chartjs/chartjs.js",
-    flatpickr: "./src/plugins/flatpickr/flatpickr.js",
-    sweetalert2: "./src/plugins/sweetalert2/sweetalert2.js",
-    vectormaps: "./src/plugins/vectormaps/vectormaps.js",
-    prismjs: "./src/plugins/prismjs/prismjs.js",
-    datatables: "./src/plugins/datatables/datatables.js",
-    flagicons: "./src/plugins/flagicons/flagicons.js",
-    piruawesome: "./src/plugins/piruawesome/piruawesome.js",
-    custom: "./src/plugins/custom/custon.js",
+    bootstrapicons: {
+      import: "./src/plugins/bootstrapicons/bootstrapicons.js",
+      dependOn: "piruadmin",
+    },
+    feathericons: {
+      import: "./src/plugins/feathericons/feathericons.js",
+      dependOn: "piruadmin",
+    },
+    fontawesome: {
+      import: "./src/plugins/fontawesome/fontawesome.js",
+      dependOn: "piruadmin",
+    },
+    toastifyjs: {
+      import: "./src/plugins/toastifyjs/toastifyjs.js",
+      dependOn: "piruadmin",
+    },
+    liteyoutube: {
+      import: "./src/plugins/liteyoutube/liteyoutube.js",
+      dependOn: "piruadmin",
+    },
+    tagify: {
+      import: "./src/plugins/tagify/tagify.js",
+      dependOn: "piruadmin",
+    },
+    chartjs: {
+      import: "./src/plugins/chartjs/chartjs.js",
+      dependOn: "piruadmin",
+    },
+    flatpickr: {
+      import: "./src/plugins/flatpickr/flatpickr.js",
+      dependOn: "piruadmin",
+    },
+    sweetalert2: {
+      import: "./src/plugins/sweetalert2/sweetalert2.js",
+      dependOn: "piruadmin",
+    },
+    vectormaps: {
+      import: "./src/plugins/vectormaps/vectormaps.js",
+      dependOn: "piruadmin",
+    },
+    prismjs: {
+      import: "./src/plugins/prismjs/prismjs.js",
+      dependOn: "piruadmin",
+    },
+    datatables: {
+      import: "./src/plugins/datatables/datatables.js",
+      dependOn: "piruadmin",
+    },
+    flagicons: {
+      import: "./src/plugins/flagicons/flagicons.js",
+      dependOn: "piruadmin",
+    },
+    piruawesome: {
+      import: "./src/plugins/piruawesome/piruawesome.js",
+      dependOn: "piruadmin",
+    },
+    simplemde: {
+      import: "./src/plugins/simplemde/simplemde.js",
+      dependOn: "piruadmin",
+    },
+    custom: {
+      import: "./src/plugins/custom/custon.js",
+      dependOn: "piruadmin",
+    },
   },
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   devtool: opts.devBuild ? "eval-cheap-module-source-map" : false,
@@ -93,14 +142,14 @@ module.exports = {
     path: Path.join(opts.rootDir, "dist"),
     pathinfo: opts.devBuild,
     filename: (pathData) => {
-      return pathData.chunk.name === 'piruadmin'
-        ? 'assets/js/[name].js'
-        : 'assets/plugins/[name].js';
+      return pathData.chunk.name === "piruadmin"
+        ? "assets/js/[name].js"
+        : "assets/plugins/[name].js";
     },
     chunkFilename: (pathData) => {
-      return pathData.chunk.name === 'piruadmin'
-        ? 'assets/js/[name].js'
-        : 'assets/plugins/[name].js';
+      return pathData.chunk.name === "piruadmin"
+        ? "assets/js/[name].js"
+        : "assets/plugins/[name].js";
     },
   },
   performance: { hints: false },

@@ -32,3 +32,5 @@ pnpm-debug.log*
 .cache/
 .eslintcache
 .stylelintcache
+
+pnpm-lock.yaml
