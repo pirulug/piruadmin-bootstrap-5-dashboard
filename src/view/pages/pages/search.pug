@@ -5,108 +5,117 @@ append config
   - pageUrl = 'pages/search'
 
 block content
-  //- HERO SECTION: Search
-  //- Usamos 'bg-body-tertiary' para un fondo gris suave en light y oscuro suave en dark
-  .p-5.mb-4.bg-body.rounded-3
+  //- HERO SECTION: Modern & Clean
+  .py-5.mb-5.bg-body.rounded
+    .container
+      .row.justify-content-center
+        .col-lg-7.text-center
+          h1.display-5.fw-bold.mb-3 Find what you need
+          p.lead.text-body-secondary.mb-4 Search through articles, photos, and our community members.
+          
+          form.mb-4
+            .input-group.input-group-lg.hero-search
+              span.input-group-text.bg-transparent.border-end-0.ps-4
+                i.fa-solid.fa-magnifying-glass.text-body-tertiary
+              input.form-control.border-start-0.ps-0(
+                type='text'
+                placeholder='Keywords, topics, names...'
+                aria-label='Search'
+                autofocus
+              )
+
+          //- Trending Tags
+          .d-flex.justify-content-center.gap-2.flex-wrap
+            span.small.align-self-center Trending:
+            each tag in ['mobile', 'software', 'design', 'iphone', 'react']
+              a.badge.rounded.text-bg-primary.text-white.text-decoration-none.px-3.py-2(href='#')= tag
+
+  .container
     .row.justify-content-center
-      .col-lg-8.text-center
-        h1.display-6.fw-bold.mb-3 What do you want to find?
+      .col-lg-10
         
-        form
-          //- Input group flat: Sin shadow, solo bordes
-          .input-group.input-group-lg.mb-3
-            input.form-control.border-primary(
-              type='text'
-              placeholder='Search...'
-              autofocus
-            )
-            button.btn.btn-primary(type='button')
-              i.fa-solid.fa-magnifying-glass
+        //- NAVIGATION & STATUS
+        .d-flex.flex-column.flex-md-row.justify-content-between.align-items-md-end.mb-4.pb-2.border-bottom
+          .mb-3.mb-md-0
+            h4.mb-1 Search Results
+            p.text-body-secondary.mb-0 12 results found for 
+              span.fw-bold.text-primary "Modern Design"
 
-        //- Tags con badges estilo outline/flat
-        .d-flex.justify-content-center.gap-2.mt-3.flex-wrap
-          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') mobile
-          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') software
-          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') desktop
-          a.badge.rounded-pill.bg-transparent.border.border-secondary.text-body-secondary.text-decoration-none(href='#') iphone
+          ul#searchTabs.nav.nav-underline(role='tablist')
+            li.nav-item
+              a.nav-link.active(data-bs-toggle='tab' href='#clasic' role='tab') All Results
+            li.nav-item
+              a.nav-link(data-bs-toggle='tab' href='#articles' role='tab') Articles
+            li.nav-item
+              a.nav-link(data-bs-toggle='tab' href='#photos' role='tab') Photos
+            li.nav-item
+              a.nav-link(data-bs-toggle='tab' href='#users' role='tab') Members
 
-  //- MAIN CONTENT
-  .row.justify-content-center
-    .col-lg-10
-      
-      //- HEADER RESULTS & TABS
-      .d-flex.flex-column.flex-md-row.justify-content-between.align-items-center.mb-4.border-bottom.pb-3
-        h5.mb-3.mb-md-0.text-body-secondary
-          i.fa-solid.fa-magnifying-glass.me-2
-          | 12 results found for: 
-          span.text-primary “Lorem Ipsum”
+        //- CONTENT
+        #searchTabsContent.tab-content.pt-2
 
-        //- Nav Pills Flat
-        ul#myTab.nav.nav-pills(role='tablist')
-          li.nav-item
-            a.nav-link.active.rounded-pill(data-bs-toggle='tab' href='#clasic' role='tab') Classic
-          li.nav-item
-            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#articles' role='tab') Articles
-          li.nav-item
-            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#photos' role='tab') Photos
-          li.nav-item
-            a.nav-link.rounded-pill(data-bs-toggle='tab' href='#users' role='tab') Users
+          //- 1. CLASSIC RESULTS
+          #clasic.tab-pane.fade.show.active(role='tabpanel')
+            .list-group.list-group-flush
+              each val, i in [1,2,3,4,5]
+                .list-group-item.px-0.py-4.bg-transparent
+                  .d-flex.justify-content-between.align-items-start
+                    .me-3
+                      h5.mb-1
+                        a.text-decoration-none.link-primary.fw-semibold(href='#') Understanding Modern UI Patterns in 2026 #{i}
+                      p.text-body-secondary.mb-2 Exploring the shift from complex shadows to clean, border-based organic layouts...
+                      .d-flex.align-items-center.gap-3.small.text-body-tertiary
+                        span
+                          i.fa-regular.fa-calendar.me-1
+                          | April 14, 2026
+                        span
+                          i.fa-regular.fa-user.me-1
+                          | Author Name
+                        span.badge.text-bg-primary-subtle.text-primary News
+                    i.fa-solid.fa-chevron-right.text-body-tertiary.mt-2
 
-      //- TABS CONTENT
-      #myTabContent.tab-content
+          //- 2. ARTICLES GRID
+          #articles.tab-pane.fade(role='tabpanel')
+            .row.g-4
+              each val, i in [1,2,3,4,5,6]
+                .col-lg-4.col-md-6
+                  .card.h-100.border.bg-body-tertiary
+                    .ratio.ratio-16x9
+                      img.card-img-top.object-fit-cover(src=`https://picsum.photos/seed/${i+10}/600/400` alt='Article Image')
+                    .card-body
+                      span.badge.text-bg-info-subtle.text-info.mb-2 Tech
+                      h5.card-title.line-clamp-2 Exploring the new CSS features
+                      p.card-text.text-body-secondary.small A deep dive into the latest web technologies that are changing the industry.
+                    .card-footer.bg-transparent.border-top-0.pt-0
+                      a.btn.btn-sm.btn-outline-primary.w-100.rounded-pill(href='#') Read Article
 
-        //- 1. CLASSIC LIST
-        #clasic.tab-pane.fade.show.active(role='tabpanel')
-          ul.list-unstyled
-            each val, i in [1,2,3,4,5]
-              li.mb-4.pb-4.border-bottom.border-dashed
-                h5.mb-1
-                  a.text-decoration-none.text-primary(href='#') Lorem ipsum dolor sit amet #{i}
-                p.text-body-secondary.mb-2 Velit laborum sint labore consectetur dolor minim...
-                .d-flex.align-items-center.gap-2.small
-                  span.badge.bg-secondary-subtle.text-body-secondary Trends
-                  span.text-body-tertiary Dec 27 2018
+          //- 3. PHOTOS GRID
+          #photos.tab-pane.fade(role='tabpanel')
+            .row.g-3
+              each val, i in [1,2,3,4,5,6,7,8,9,10,11,12]
+                .col-6.col-md-4.col-lg-3
+                  .ratio.ratio-1x1
+                    a.d-block.border.rounded.overflow-hidden(href='#')
+                      img.img-fluid.object-fit-cover(src=`https://picsum.photos/seed/${i+50}/400/400` alt='Gallery Image')
 
-        //- 2. ARTICLES GRID
-        #articles.tab-pane.fade(role='tabpanel')
-          .row.g-4
-            each val, i in [1,2,3,4,5,6]
-              .col-lg-4.col-md-6
-                //- Card Flat: Solo borde, sin shadow
-                .card.h-100.border.bg-transparent
-                  img.card-img-top(src=`https://dummyimage.com/600x400/ddd/555&text=Image+${i}` alt='image')
-                  .card-body
-                    h5.card-title Some quick example text
-                    p.card-text.text-body-secondary Some quick example text to build on the card title.
-                    a.btn.btn-outline-primary.btn-sm.w-100(href='#') Read More
+          //- 4. MEMBERS LIST
+          #users.tab-pane.fade(role='tabpanel')
+            .row.g-3
+              each name, i in ['Alex Rivera','Jordan Smith','Taylor Wong','Sam Wilson','Casey Jones','Morgan Lee']
+                .col-md-6
+                  .p-3.border.rounded.bg-body-tertiary
+                    .d-flex.align-items-center
+                      img.rounded-circle.me-3.border(src=`https://i.pravatar.cc/150?u=${i}` width='54' height='54' alt='avatar')
+                      .flex-grow-1
+                        h6.mb-0= name
+                        p.small.text-body-secondary.mb-0 Senior Developer
+                      button.btn.btn-sm.btn-light.border.rounded-pill Follow
 
-        //- 3. PHOTOS GRID
-        #photos.tab-pane.fade(role='tabpanel')
-          .row.g-3
-            each val, i in [1,2,3,4,5,6,7,8]
-              .col-6.col-md-4.col-xl-3
-                a.d-block.border.rounded(href='#')
-                  img.img-fluid.rounded(src=`https://dummyimage.com/600x400/ddd/555&text=Photo+${i}` alt='image')
-
-        //- 4. USERS LIST
-        #users.tab-pane.fade(role='tabpanel')
-          .row.g-3
-            each name, i in ['Ferrel Skipsea','Lorry Lewsey','Winny Lippiatt','Salim Walklate','Sena Erangey','Decca Thorrington']
-              .col-md-6
-                .card.card-body.border.bg-transparent
-                  .d-flex.align-items-center
-                    img.rounded-circle.me-3(src=`https://dummyimage.com/60x60/ccc/000&text=U${i+1}` alt='avatar')
-                    .flex-grow-1
-                      h6.mb-0= name
-                      small.text-body-secondary User Role
-                    button.btn.btn-outline-secondary.btn-sm Follow
-
-      //- PAGINATION
-      nav.mt-5
-        ul.pagination.justify-content-center.mb-0
-          li.page-item.disabled
-            a.page-link(href='#') Previous
-          li.page-item.active: a.page-link(href='#') 1
-          li.page-item: a.page-link(href='#') 2
-          li.page-item: a.page-link(href='#') 3
-          li.page-item: a.page-link(href='#') Next
+        //- PAGINATION
+        nav.mt-5.pt-4.border-top
+          ul.pagination.pagination-sm.justify-content-center.mb-0
+            li.page-item.disabled: a.page-link.rounded-start-pill.px-3(href='#') Previous
+            li.page-item.active: a.page-link(href='#') 1
+            li.page-item: a.page-link(href='#') 2
+            li.page-item: a.page-link(href='#') 3
+            li.page-item: a.page-link.rounded-end-pill.px-3(href='#') Next
