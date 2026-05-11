@@ -7,29 +7,29 @@ nav.navtop
       li.nav-item.dropdown
         a#bd-theme.nav-link.dropdown-toggle(type='button' aria-expanded='false' data-bs-toggle='dropdown' aria-label='Toggle theme (auto)')
           span#bd-theme-icon.theme-icon-active
-            i.fa.fa-sun
+            i.pi.pi-sun
           span#bd-theme-text.visually-hidden Toggle theme
         ul.dropdown-menu.dropdown-menu-end(aria-labelledby='bd-theme-text')
           li
             button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='light' aria-pressed='false')
-              i.fa.fa-sun.opacity-50.me-2
+              i.pi.pi-sun.opacity-50.me-2
               | Light
-              i.pr-check.fa.fa-check.ms-auto.d-none
+              i.pr-check.pi-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='dark' aria-pressed='false')
-              i.fa.fa-moon.opacity-50.me-2
+              i.pi.pi-moon.opacity-50.me-2
               | Dark
-              i.pr-check.fa.fa-check.ms-auto.d-none
+              i.pr-check.pi-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='auto' aria-pressed='true')
-              i.fa.fa-circle-half-stroke.opacity-50.me-2
+              i.pi.pi-circle-half.opacity-50.me-2
               | Auto
               i.pr-check.fa.fa-check.ms-auto.d-none
 
       li.nav-item.dropdown
         a#alertsDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
           .position-relative
-            i.align-middle(data-feather='bell')
+            i.pi.pi-bell.align-middle
             span.indicator 4
         .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='alertsDropdown')
           .dropdown-menu-header
@@ -38,7 +38,7 @@ nav.navtop
             a.list-group-item(href='#')
               .row.g-0.align-items-center
                 .col-2
-                  i.text-danger(data-feather='alert-circle')
+                  i.pi.pi-exclamation-circle.text-danger
                 .col-10
                   div Update completed
                   .text-muted.small.mt-1 Restart server 12 to complete the update.
@@ -46,7 +46,7 @@ nav.navtop
             a.list-group-item(href='#')
               .row.g-0.align-items-center
                 .col-2
-                  i.text-warning(data-feather='bell')
+                  i.pi.pi-bell.text-warning
                 .col-10
                   div Lorem ipsum
                   .text-muted.small.mt-1 Aliquam ex eros, imperdiet vulputate hendrerit et.
@@ -54,14 +54,14 @@ nav.navtop
             a.list-group-item(href='#')
               .row.g-0.align-items-center
                 .col-2
-                  i.text-primary(data-feather='home')
+                  i.pi.pi-house.text-primary
                 .col-10
                   div Login from 192.186.1.8
                   .text-muted.small.mt-1 5h ago
             a.list-group-item(href='#')
               .row.g-0.align-items-center
                 .col-2
-                  i.text-success(data-feather='user-plus')
+                  i.pi.pi-person-plus.text-success
                 .col-10
                   div New connection
                   .text-muted.small.mt-1 Christina accepted your request.
@@ -72,7 +72,7 @@ nav.navtop
       li.nav-item.dropdown
         a#messagesDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
           .position-relative
-            i.align-middle(data-feather='message-square')
+            i.pi.pi-chat-square-text.align-middle
         .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='messagesDropdown')
           .dropdown-menu-header
             .position-relative
@@ -119,21 +119,21 @@ nav.navtop
           span.d-none.d-sm-inline-block Pirulug
         .dropdown-menu.dropdown-menu-end
           a.dropdown-item(href=baseUrl + 'account/profile.html')
-            i.align-middle.me-1(data-feather='user')
+            i.pi.pi-person.align-middle.me-1
             |  Profile
 
           a.dropdown-item(href='#')
-            i.align-middle.me-1(data-feather='pie-chart')
+            i.pi.pi-pie-chart.align-middle.me-1
             |  Analytics
           .dropdown-divider
           a.dropdown-item(href=baseUrl + 'account/settings.html')
-            i.align-middle.me-1(data-feather='settings')
+            i.pi.pi-gear.align-middle.me-1
             |  Settings &amp; Privacy
 
           a.dropdown-item(href='#')
-            i.align-middle.me-1(data-feather='help-circle')
+            i.pi.pi-question-circle.align-middle.me-1
             |  Help Center
           .dropdown-divider
           a.dropdown-item(href='#')
-            i.align-middle.me-1(data-feather='log-out')
+            i.pi.pi-box-arrow-right.align-middle.me-1
             | Log out

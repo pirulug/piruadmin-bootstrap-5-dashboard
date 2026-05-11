@@ -36,7 +36,20 @@
 - **Authentication Pages** — Sign In, Sign Up, Forgot Password, Reset Password
 - **Dashboard** with charts and statistics
 - Plugin integrations: SweetAlert2, Toastify JS, Lite YouTube, Tagify, Datatables, Google Maps, ApexCharts
+- **PiruIcons** integration — 2000+ custom icons
 - Fully **responsive** layout
+
+## Icons (PiruIcons)
+
+The project uses **PiruIcons** as its primary icon library.
+
+### How to Use
+Use the `pi` base class along with the specific icon name:
+```html
+<i class="pi pi-0-square-fill"></i>
+```
+
+You can find the full list of available icons in `src/data/piruicons.json`.
 
 ## Pages
 

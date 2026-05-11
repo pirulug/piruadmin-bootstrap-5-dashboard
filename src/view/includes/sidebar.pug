@@ -8,7 +8,7 @@ nav#sidebar.sidebar.js-sidebar
       span.sidebar-brand-text.align-middle #{siteName}
     
     a.sidebar-close.js-sidebar-close(href='#')
-      i(data-feather='x')
+      i.pi.pi-x-lg
 
     ul.sidebar-nav
       each item in menuItems
@@ -19,7 +19,7 @@ nav#sidebar.sidebar.js-sidebar
 
           li.sidebar-item(class=(isActive ? 'active' : ''))
             a.sidebar-link(class=(isActive ? '' : 'collapsed') data-bs-target=`#${item.path}` data-bs-toggle="collapse")
-              i.align-middle(data-feather=item.icon)
+              i.align-middle(class="pi pi-" + item.icon)
               span.align-middle= item.title
             ul.sidebar-dropdown.list-unstyled.collapse(id=item.path, data-bs-parent="#sidebar", class=(isActive ? 'show' : ''))
               each subItem in item.items
@@ -33,6 +33,6 @@ nav#sidebar.sidebar.js-sidebar
         else
           li.sidebar-item(class=(pageUrl === item.path ? 'active' : ''))
             a.sidebar-link(href=baseUrl + `${item.link}.html`)
-              i.align-middle(data-feather=item.icon)
+              i.align-middle(class="pi pi-" + item.icon)
               span.align-middle= item.title
 

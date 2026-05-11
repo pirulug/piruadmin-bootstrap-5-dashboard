@@ -12,7 +12,7 @@
   {
     "title": "Pages",
     "path": "pages",
-    "icon": "file",
+    "icon": "file-earmark-fill",
     "collapsed": true,
     "items": [
       {
@@ -35,7 +35,7 @@
   {
     "title": "Auth",
     "path": "auth",
-    "icon": "users",
+    "icon": "people",
     "collapsed": true,
     "items": [
       {
@@ -63,7 +63,7 @@
   {
     "title": "Account",
     "path": "account",
-    "icon": "user",
+    "icon": "person",
     "collapsed": true,
     "items": [
       {
@@ -81,7 +81,7 @@
   {
     "title": "Errors",
     "path": "errors",
-    "icon": "coffee",
+    "icon": "bug",
     "collapsed": true,
     "items": [
       {
@@ -182,7 +182,7 @@
   {
     "title": "Icons",
     "path": "icons",
-    "icon": "coffee",
+    "icon": "cup-hot",
     "collapsed": true,
     "items": [
       {
@@ -201,16 +201,16 @@
         "link": "icons/bootstrap"
       },
       {
-        "title": "PiruAwesome Icons",
-        "path": "icons/piruawesome",
-        "link": "icons/piruawesome"
+        "title": "PiruIcons",
+        "path": "icons/piruicons",
+        "link": "icons/piruicons"
       }
     ]
   },
   {
     "title": "Plugins",
     "path": "plugins",
-    "icon": "zap",
+    "icon": "lightning",
     "collapsed": true,
     "items": [
       {

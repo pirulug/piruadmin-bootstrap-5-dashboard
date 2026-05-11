@@ -16,15 +16,15 @@ block content
             .row.align-items-center
               .col-auto
                 .stat(class=`stat-${color}`)
-                  i(data-feather=icon)
+                  i(class=`pi pi-${icon}`)
               .col.text-end
                 h6.card-title.text-body-secondary.mb-1= title
                 h2.h3.fw-bold.mb-0= value
 
     +statCard('Sales', '2.382', 'truck', 'primary')
-    +statCard('Visitors', '14.212', 'users', 'success')
-    +statCard('Earnings', '$21.300', 'dollar-sign', 'info')
-    +statCard('Orders', '64', 'shopping-cart', 'danger')
+    +statCard('Visitors', '14.212', 'people', 'success')
+    +statCard('Earnings', '$21.300', 'currency-dollar', 'info')
+    +statCard('Orders', '64', 'cart', 'danger')
 
   //- Gráficos
   .row.g-4.mb-4
@@ -113,27 +113,27 @@ block content
             tbody
               tr
                 td 
-                  i.me-2(data-feather="chrome") 
+                  i.pi.pi-chrome.me-2 
                   | Chrome
                 td.text-end.fw-bold 45%
               tr
                 td 
-                  i.me-2(data-feather="compass") 
+                  i.pi.pi-compass.me-2 
                   | Safari
                 td.text-end.fw-bold 22%
               tr
                 td 
-                  i.me-2(data-feather="globe") 
+                  i.pi.pi-globe.me-2 
                   | Edge
                 td.text-end.fw-bold 15%
               tr
                 td 
-                  i.me-2(data-feather="gitlab") 
+                  i.pi.pi-gitlab.me-2 
                   | Firefox
                 td.text-end.fw-bold 10%
               tr
                 td 
-                  i.me-2(data-feather="help-circle") 
+                  i.pi.pi-question-circle.me-2 
                   | Other
                 td.text-end.fw-bold 8%
 

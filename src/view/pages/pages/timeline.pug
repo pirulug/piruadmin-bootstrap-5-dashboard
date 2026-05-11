@@ -5,7 +5,7 @@ append config
   - pageUrl = 'pages/timeline'
 
 block styles
-  link(rel="stylesheet" href=assets + "plugins/piruawesome.css")
+  link(rel="stylesheet" href=assets + "plugins/piruicons.css")
   link(rel="stylesheet", href=assets + "plugins/prismjs.css")
 
 block scripts
@@ -23,7 +23,7 @@ block content
             // Agent Entry
             .timeline-item.agent
               .timeline-marker
-                i.pr.pr-robot
+                i.pi.pi-cpu
               .timeline-content
                 .timeline-header
                   span.timeline-title Asistente Virtual
@@ -50,7 +50,7 @@ block content
             // Shared Post
             .timeline-item.timeline-success
               .timeline-marker
-                i.pr.pr-pen-to-square
+                i.pi.pi-pencil-square
               .timeline-content
                 .timeline-header
                   span.timeline-title
@@ -66,19 +66,19 @@ block content
             // Agent System Notification
             .timeline-item.agent
               .timeline-marker
-                i.pr.pr-shield-halved
+                i.pi.pi-shield-check
               .timeline-content
                 .timeline-header
                   span.timeline-title Seguridad del Sistema
                   span.timeline-time 15 min antes
                 p.text-info
-                  i.pr.pr-circle-info.me-2
+                  i.pi.pi-info-circle.me-2
                   | Se detectó un nuevo inicio de sesión desde una dirección IP no reconocida (192.168.1.1).
 
             // Attached File
             .timeline-item.timeline-info
               .timeline-marker
-                i.pr.pr-file-pdf
+                i.pi.pi-file-earmark-pdf
               .timeline-content
                 .timeline-header
                   span.timeline-title
@@ -86,7 +86,7 @@ block content
                     |  adjuntó un archivo
                   span.timeline-time 1 hora antes
                 .border.rounded.p-3.d-flex.align-items-center
-                  i.pr.pr-file-pdf.fa-2x.me-3.text-danger
+                  i.pi.pi-file-earmark-pdf.fa-2x.me-3.text-danger
                   div
                     div.fw-bold reporte_anual_2025.pdf
                     span.small.text-muted 2.4 MB
@@ -94,7 +94,7 @@ block content
             // Shared Images
             .timeline-item.timeline-warning
               .timeline-marker
-                i.pr.pr-image
+                i.pi.pi-image
               .timeline-content
                 .timeline-header
                   span.timeline-title
@@ -109,7 +109,7 @@ block content
             // Code Update (PrismJS Example)
             .timeline-item.timeline-primary
               .timeline-marker
-                i.pr.pr-code
+                i.pi.pi-code-slash
               .timeline-content
                 .timeline-header
                   span.timeline-title
@@ -134,7 +134,7 @@ block content
             // Shared Video
             .timeline-item.timeline-danger
               .timeline-marker
-                i.pr.pr-video-camera
+                i.pi.pi-camera-video
               .timeline-content
                 .timeline-header
                   span.timeline-title
