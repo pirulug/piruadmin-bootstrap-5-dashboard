@@ -1,8 +1,8 @@
 extends ../layouts/dashboard
 
 append config
-  -pageName = 'Dashboard'
-  - pageUrl = 'dashboard'
+  - pageName = "Dashboard"
+  - pageUrl = "dashboard"
 
 block content
 
@@ -21,10 +21,10 @@ block content
                 h6.card-title.text-body-secondary.mb-1= title
                 h2.h3.fw-bold.mb-0= value
 
-    +statCard('Sales', '2.382', 'truck', 'primary')
-    +statCard('Visitors', '14.212', 'people', 'success')
-    +statCard('Earnings', '$21.300', 'currency-dollar', 'info')
-    +statCard('Orders', '64', 'cart', 'danger')
+    +statCard("Sales", "2.382", "truck", "primary")
+    +statCard("Visitors", "14.212", "people", "success")
+    +statCard("Earnings", "$21.300", "currency-dollar", "info")
+    +statCard("Orders", "64", "cart", "danger")
 
   //- Gráficos
   .row.g-4.mb-4
@@ -80,28 +80,28 @@ block content
               span.fw-bold Sales Goal
               span.text-primary 75%
             .progress(style="height: 6px;")
-              .progress-bar.bg-primary(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+              .progress-bar.bg-primary(role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100")
 
           .mb-4
             .d-flex.justify-content-between.mb-1
               span.fw-bold Visitors
               span.text-success 50%
             .progress(style="height: 6px;")
-              .progress-bar.bg-success(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+              .progress-bar.bg-success(role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
 
           .mb-4
             .d-flex.justify-content-between.mb-1
               span.fw-bold Profit Margin
               span.text-warning 25%
             .progress(style="height: 6px;")
-              .progress-bar.bg-warning(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+              .progress-bar.bg-warning(role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
           
           .mb-0
             .d-flex.justify-content-between.mb-1
               span.fw-bold Churn Rate
               span.text-danger 10%
             .progress(style="height: 6px;")
-              .progress-bar.bg-danger(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+              .progress-bar.bg-danger(role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100")
 
     //- Widget C: Navegadores (Lista simple)
     .col-12.col-lg-4.d-flex
@@ -170,7 +170,7 @@ block content
               td.d-none.d-md-table-cell William Harris
 
 block scripts 
-  script(src=assets + 'plugins/chartjs.js')
+  script(src=assets + "plugins/chartjs.js")
   
   //- Script optimizado para Dark Mode
   script.
@@ -182,20 +182,20 @@ block scripts
 
       // Configuración común para rejillas (Grid)
       const gridConfig = {
-        color: 'rgba(120, 130, 140, 0.1)', // Color sutil para las líneas
-        borderColor: 'transparent' // Sin bordes duros en el chart
+        color: "rgba(120, 130, 140, 0.1)", // Color sutil para las líneas
+        borderColor: "transparent" // Sin bordes duros en el chart
       };
 
-      const ctxLine = document.getElementById('chartjs-dashboard-line').getContext('2d');
+      const ctxLine = document.getElementById("chartjs-dashboard-line").getContext("2d");
       new Chart(ctxLine, {
-        type: 'line',
+        type: "line",
         data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"],
           datasets: [{
-            label: 'Sales ($)',
+            label: "Sales ($)",
             fill: true,
             backgroundColor: "rgba(255, 0, 85, 0.1)", // Primary con transparencia
-            borderColor: "#ff0055", // Bootstrap Primary color manual o getVar('--bs-primary')
+            borderColor: "#ff0055", // Bootstrap Primary color manual o getVar("--bs-primary")
             data: [2115, 1562, 1584, 1892, 1587, 1923, 2566, 2448, 2805, 3438, 2917, 3327],
             tension: 0.4, // Curvas suaves (Modern UI)
             pointRadius: 0, // Sin puntos para un look más limpio
@@ -206,12 +206,12 @@ block scripts
           maintainAspectRatio: false,
           plugins: {
             legend: { display: false },
-            tooltip: { intersect: false, mode: 'index' }
+            tooltip: { intersect: false, mode: "index" }
           },
           scales: {
             x: { grid: { display: false } }, // Ocultar grid vertical para limpieza
             y: { 
-              grid: { color: getVar('--bs-border-color-translucent') }, // Grid adaptable al tema
+              grid: { color: getVar("--bs-border-color-translucent") }, // Grid adaptable al tema
               beginAtZero: true 
             }
           }

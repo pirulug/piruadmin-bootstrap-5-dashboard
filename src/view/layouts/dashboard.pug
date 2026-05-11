@@ -5,46 +5,46 @@ block config
 doctype html
 html(lang="es")
   head
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
-    meta(name='author' content='Pirulug')
+    meta(name="author" content="Pirulug")
 
-    meta(name='robots' content='index, follow')
+    meta(name="robots" content="index, follow")
 
-    meta(name='theme-color' content='#0d6efd')
+    meta(name="theme-color" content="#0d6efd")
 
     // Primary Meta Tags
     title #{pageName} - Free Bootstrap 5 Admin Template | #{siteName}
-    meta(name='title' content=`${pageName} - Free Bootstrap 5 Admin Template | ${siteName}`)
+    meta(name="title" content=`${pageName} - Free Bootstrap 5 Admin Template | ${siteName}`)
 
-    meta(name='description' content=`${siteName} is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.`)
+    meta(name="description" content=`${siteName} is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.`)
 
-    meta(name='keywords' content='bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss')
+    meta(name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss")
 
-    link(rel='canonical' href=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
+    link(rel="canonical" href=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
 
     // Open Graph / Facebook
-    meta(property='og:type' content='website')
-    meta(property='og:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
-    meta(property='og:title' content=`${pageName} | ${siteName}`)
-    meta(property='og:description' content='Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.')
-    meta(property='og:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+    meta(property="og:type" content="website")
+    meta(property="og:url" content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
+    meta(property="og:title" content=`${pageName} | ${siteName}`)
+    meta(property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.")
+    meta(property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png")
 
     // Twitter
-    meta(property='twitter:card' content='summary_large_image')
-    meta(property='twitter:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
-    meta(property='twitter:title' content=`${pageName} | ${siteName}`)
-    meta(property='twitter:description' content='Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.')
-    meta(property='twitter:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+    meta(property="twitter:card" content="summary_large_image")
+    meta(property="twitter:url" content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
+    meta(property="twitter:title" content=`${pageName} | ${siteName}`)
+    meta(property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.")
+    meta(property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png")
 
-    meta(property='twitter:creator' content='@pirulug')
+    meta(property="twitter:creator" content="@pirulug")
 
     // Favicon
-    link(rel='apple-touch-icon' sizes='180x180' href=assets + 'img/favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href=assets + 'img/favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href=assets + 'img/favicon/favicon-16x16.png')
-    link(rel='manifest' href=assets + 'img/favicon/site.webmanifest')
+    link(rel="apple-touch-icon" sizes="180x180" href=assets + "img/favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href=assets + "img/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href=assets + "img/favicon/favicon-16x16.png")
+    link(rel="manifest" href=assets + "img/favicon/site.webmanifest")
 
     // Css Bootstrap
     //- link(rel="stylesheet" href=assets + "plugins/fontawesome.css")
@@ -54,10 +54,10 @@ html(lang="es")
 
     script.
       (function () {
-        const storedTheme = localStorage.getItem('theme');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-bs-theme', theme);
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme || (prefersDarkScheme ? "dark" : "light");
+        document.documentElement.setAttribute("data-bs-theme", theme);
       })();
 
     block styles
@@ -79,25 +79,25 @@ html(lang="es")
           .mb-3
             .d-flex.flex-column.flex-sm-row.justify-content-between.align-items-start.align-items-sm-center
               h1.h3.mb-2.mb-sm-0 #{pageName}
-              nav(aria-label='breadcrumb')
+              nav(aria-label="breadcrumb")
                 ol.breadcrumb.mb-0
                   if breadcrumbs && breadcrumbs.length > 0
                     each item, index in breadcrumbs
                       if index === breadcrumbs.length - 1
-                        li.breadcrumb-item.active(aria-current='page')= item.label
+                        li.breadcrumb-item.active(aria-current="page")= item.label
                       else
                         li.breadcrumb-item
                           a(href=baseUrl + item.url)= item.label
                   else
-                    - var pathParts = pageUrl ? pageUrl.split('/') : []
-                    if pathParts.length <= 1 && (pathParts[0] === 'dashboard' || pathParts[0] === 'index' || !pageUrl)
-                      li.breadcrumb-item.active(aria-current='page') Dashboard
+                    - var pathParts = pageUrl ? pageUrl.split("/") : []
+                    if pathParts.length <= 1 && (pathParts[0] === "dashboard" || pathParts[0] === "index" || !pageUrl)
+                      li.breadcrumb-item.active(aria-current="page") Dashboard
                     else
                       li.breadcrumb-item
-                        a(href=baseUrl + 'dashboard.html') Dashboard
+                        a(href=baseUrl + "dashboard.html") Dashboard
                       each part, index in pathParts
                         if index === pathParts.length - 1
-                          li.breadcrumb-item.active(aria-current='page')= pageName
+                          li.breadcrumb-item.active(aria-current="page")= pageName
                         else
                           li.breadcrumb-item.text-capitalize= part
 
@@ -107,14 +107,14 @@ html(lang="es")
         include ../includes/footer
 
       // Back to top
-      a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top(href='#')
+      a.btn.btn-lg.btn-primary.btn-lg-square.back-to-top(href="#")
         i.pi.pi-arrow-up
     // Dark & Ligth
     //- include ../includes/dark-ligth
 
     // Js Bootstrap
-    //- script(src=assets + 'plugins/feathericons.js')
-    script(src=assets + 'js/piruadmin.js')
+    //- script(src=assets + "plugins/feathericons.js")
+    script(src=assets + "js/piruadmin.js")
 
 
     block scripts

@@ -5,37 +5,37 @@ nav.navtop
   .navbar-collapse.collapse
     ul.navbar-nav.navbar-align
       li.nav-item.dropdown
-        a#bd-theme.nav-link.dropdown-toggle(type='button' aria-expanded='false' data-bs-toggle='dropdown' aria-label='Toggle theme (auto)')
+        a#bd-theme.nav-link.dropdown-toggle(type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)")
           span#bd-theme-icon.theme-icon-active
             i.pi.pi-sun
           span#bd-theme-text.visually-hidden Toggle theme
-        ul.dropdown-menu.dropdown-menu-end(aria-labelledby='bd-theme-text')
+        ul.dropdown-menu.dropdown-menu-end(aria-labelledby="bd-theme-text")
           li
-            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='light' aria-pressed='false')
+            button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="light" aria-pressed="false")
               i.pi.pi-sun.opacity-50.me-2
               | Light
-              i.pr-check.pi-check.ms-auto.d-none
+              i.pr-check.pi.pi-check.ms-auto.d-none
           li
-            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='dark' aria-pressed='false')
+            button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="dark" aria-pressed="false")
               i.pi.pi-moon.opacity-50.me-2
               | Dark
-              i.pr-check.pi-check.ms-auto.d-none
+              i.pr-check.pi.pi-check.ms-auto.d-none
           li
-            button.dropdown-item.d-flex.align-items-center(type='button' data-bs-theme-value='auto' aria-pressed='true')
+            button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="auto" aria-pressed="true")
               i.pi.pi-circle-half.opacity-50.me-2
               | Auto
-              i.pr-check.fa.fa-check.ms-auto.d-none
+              i.pr-check.pi.pi-check.ms-auto.d-none
 
       li.nav-item.dropdown
-        a#alertsDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+        a#alertsDropdown.nav-icon.dropdown-toggle(href="#" data-bs-toggle="dropdown")
           .position-relative
             i.pi.pi-bell.align-middle
             span.indicator 4
-        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='alertsDropdown')
+        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby="alertsDropdown")
           .dropdown-menu-header
             | 4 New Notifications
           .list-group
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
                   i.pi.pi-exclamation-circle.text-danger
@@ -43,7 +43,7 @@ nav.navtop
                   div Update completed
                   .text-muted.small.mt-1 Restart server 12 to complete the update.
                   .text-muted.small.mt-1 30m ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
                   i.pi.pi-bell.text-warning
@@ -51,14 +51,14 @@ nav.navtop
                   div Lorem ipsum
                   .text-muted.small.mt-1 Aliquam ex eros, imperdiet vulputate hendrerit et.
                   .text-muted.small.mt-1 2h ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
                   i.pi.pi-house.text-primary
                 .col-10
                   div Login from 192.186.1.8
                   .text-muted.small.mt-1 5h ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
                   i.pi.pi-person-plus.text-success
@@ -67,73 +67,73 @@ nav.navtop
                   .text-muted.small.mt-1 Christina accepted your request.
                   .text-muted.small.mt-1 14h ago
           .dropdown-menu-footer
-            a.text-muted(href='#') Show all notifications
+            a.text-muted(href="#") Show all notifications
 
       li.nav-item.dropdown
-        a#messagesDropdown.nav-icon.dropdown-toggle(href='#' data-bs-toggle='dropdown')
+        a#messagesDropdown.nav-icon.dropdown-toggle(href="#" data-bs-toggle="dropdown")
           .position-relative
             i.pi.pi-chat-square-text.align-middle
-        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby='messagesDropdown')
+        .dropdown-menu.dropdown-menu-lg.dropdown-menu-end.py-0(aria-labelledby="messagesDropdown")
           .dropdown-menu-header
             .position-relative
               | 4 New Messages
           .list-group
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
-                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Vanessa Tucker')
+                  img.avatar.img-fluid.rounded-circle(src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Vanessa Tucker")
                 .col-10.ps-2
                   div Vanessa Tucker
                   .text-muted.small.mt-1 Nam pretium turpis et arcu. Duis arcu tortor.
                   .text-muted.small.mt-1 15m ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
-                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='William Harris')
+                  img.avatar.img-fluid.rounded-circle(src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="William Harris")
                 .col-10.ps-2
                   div William Harris
                   .text-muted.small.mt-1 Curabitur ligula sapien euismod vitae.
                   .text-muted.small.mt-1 2h ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
-                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Christina Mason')
+                  img.avatar.img-fluid.rounded-circle(src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Christina Mason")
                 .col-10.ps-2
                   div Christina Mason
                   .text-muted.small.mt-1 Pellentesque auctor neque nec urna.
                   .text-muted.small.mt-1 4h ago
-            a.list-group-item(href='#')
+            a.list-group-item(href="#")
               .row.g-0.align-items-center
                 .col-2
-                  img.avatar.img-fluid.rounded-circle(src='https://dummyimage.com/50x50/d63384/fff.jpg' alt='Sharon Lessman')
+                  img.avatar.img-fluid.rounded-circle(src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Sharon Lessman")
                 .col-10.ps-2
                   div Sharon Lessman
                   .text-muted.small.mt-1 Aenean tellus metus, bibendum sed, posuere ac, mattis non.
                   .text-muted.small.mt-1 5h ago
           .dropdown-menu-footer
-            a.text-muted(href='#') Show all messages
+            a.text-muted(href="#") Show all messages
       li.nav-item.dropdown
-        a.nav-link.dropdown-toggle.d-inline-block(href='#' data-bs-toggle='dropdown')
+        a.nav-link.dropdown-toggle.d-inline-block(href="#" data-bs-toggle="dropdown")
           .avatar.avatar-sm.me-1
-            img(src="https://dummyimage.com/50x50/ececec/000.jpg", alt="")
+            img(src="https://dummyimage.com/50x50/ececec/000.jpg" alt="")
           span.d-none.d-sm-inline-block Pirulug
         .dropdown-menu.dropdown-menu-end
-          a.dropdown-item(href=baseUrl + 'account/profile.html')
+          a.dropdown-item(href=baseUrl + "account/profile.html")
             i.pi.pi-person.align-middle.me-1
             |  Profile
 
-          a.dropdown-item(href='#')
+          a.dropdown-item(href="#")
             i.pi.pi-pie-chart.align-middle.me-1
             |  Analytics
           .dropdown-divider
-          a.dropdown-item(href=baseUrl + 'account/settings.html')
+          a.dropdown-item(href=baseUrl + "account/settings.html")
             i.pi.pi-gear.align-middle.me-1
             |  Settings &amp; Privacy
 
-          a.dropdown-item(href='#')
+          a.dropdown-item(href="#")
             i.pi.pi-question-circle.align-middle.me-1
             |  Help Center
           .dropdown-divider
-          a.dropdown-item(href='#')
+          a.dropdown-item(href="#")
             i.pi.pi-box-arrow-right.align-middle.me-1
             | Log out

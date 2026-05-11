@@ -22,8 +22,14 @@ block scripts
         const chunkSize = 100;
 
         function filterData() {
-            filteredData = rawData.filter(name => {
-                return name.toLowerCase().includes(searchQuery);
+            filteredData = rawData.filter(item => {
+                const searchStr = searchQuery.toLowerCase();
+                const nameMatch = item.name.toLowerCase().includes(searchStr);
+                const titleMatch = item.title && item.title.toLowerCase().includes(searchStr);
+                const categoryMatch = item.categories && item.categories.some(cat => cat.toLowerCase().includes(searchStr));
+                const tagMatch = item.tags && item.tags.some(tag => tag.toLowerCase().includes(searchStr));
+                
+                return nameMatch || titleMatch || categoryMatch || tagMatch;
             });
             
             currentIndex = 0;
@@ -42,14 +48,14 @@ block scripts
         const htmlCodeInput = document.getElementById("htmlCodeInput");
         const pugCodeInput = document.getElementById("pugCodeInput");
 
-        function createIconElement(name) {
+        function createIconElement(item) {
             const col = document.createElement("div");
             col.className = "col-6 col-md-4 col-lg-2 icon-item-container";
             
             col.innerHTML = `
                 <div class="card h-100 text-center p-4 border-0" style="cursor: pointer;">
-                    <i class="pi pi-${name} mb-3" style="font-size: 1.75rem;"></i>
-                    <span class="small text-muted text-break">${name}</span>
+                    <i class="pi pi-${item.name} mb-3" style="font-size: 1.75rem;"></i>
+                    <span class="small text-muted text-break">${item.name}</span>
                 </div>
             `;
             return col;
@@ -66,8 +72,8 @@ block scripts
             const fragment = document.createDocumentFragment();
             const nextBatch = filteredData.slice(currentIndex, currentIndex + chunkSize);
             
-            nextBatch.forEach(name => {
-                fragment.appendChild(createIconElement(name));
+            nextBatch.forEach(item => {
+                fragment.appendChild(createIconElement(item));
             });
             
             iconsContainer.appendChild(fragment);
