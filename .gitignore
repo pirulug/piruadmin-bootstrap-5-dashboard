@@ -34,3 +34,4 @@ pnpm-debug.log*
 .stylelintcache
 
 pnpm-lock.yaml
+scratch
