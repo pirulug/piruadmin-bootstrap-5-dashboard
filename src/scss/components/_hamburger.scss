@@ -5,7 +5,7 @@
   border-radius: 1px;
   height: 3px;
   width: $hamburger-width-middle;
-  background: $gray-700;
+  background: var(--#{$prefix}body-color);
   display: block;
   content: '';
   transition: $transition-appearance-fast;
