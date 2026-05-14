@@ -51,25 +51,26 @@ block content
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseCodeBasic' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
-          .collapse#collapseCodeBasic.mt-3
-            .demo-code-preview(data-label='HTML EXAMPLE')
-              button.copy-btn(type='button') Copy
-              pre.language-html
-                code.language-html.
-                  &lt;div class="accordion" id="accordionExample"&gt;
-                    &lt;div class="accordion-item"&gt;
-                      &lt;h2 class="accordion-header" id="headingOne"&gt;
-                        &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-                          Accordion Item #1
-                        &lt;/button&gt;
-                      &lt;/h2&gt;
-                      &lt;div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"&gt;
-                        &lt;div class="accordion-body"&gt;
-                          ...
+          .collapse#collapseCodeBasic
+            .pt-3
+              .demo-code-preview(data-label='HTML EXAMPLE')
+                button.copy-btn(type='button') Copy
+                pre.language-html
+                  code.language-html.
+                    &lt;div class="accordion" id="accordionExample"&gt;
+                      &lt;div class="accordion-item"&gt;
+                        &lt;h2 class="accordion-header" id="headingOne"&gt;
+                          &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
+                            Accordion Item #1
+                          &lt;/button&gt;
+                        &lt;/h2&gt;
+                        &lt;div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"&gt;
+                          &lt;div class="accordion-body"&gt;
+                            &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default...
+                          &lt;/div&gt;
                         &lt;/div&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
-                  &lt;/div&gt;
 
     .col-12.col-lg-6
       .card.mb-3
