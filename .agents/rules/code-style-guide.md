@@ -13,3 +13,8 @@ Example:
 
 ### Rules
 - **Global Availability**: The library is loaded globally in `dashboard.pug`.
+
+## Design Constraints
+- **No Shadows**: Do not use `box-shadow` or any type of shadows in the UI. Use borders or background contrasts to separate elements instead.
+- **Card Styles**: Do not use utility classes like `.shadow`, `.rounded`, or `.border` on `.card` elements. Cards should rely on their base styles for borders and radius.
+- **Theme Support**: Every component must support both Light and Dark modes using Bootstrap 5 theme variables and CSS variables (e.g., `var(--#{$prefix}card-bg)`, `var(--#{$prefix}tertiary-bg)`). Do not use static utility classes like `.bg-light` or `.bg-dark`; use theme-aware alternatives like `.bg-body-secondary` or `.bg-body-tertiary`.
