@@ -1,0 +1,106 @@
+// Search Page Styles
+// -----------------------------
+
+.search-header {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--#{$prefix}border-color);
+  margin-bottom: 3rem;
+}
+
+.search-input-group {
+  background: var(--#{$prefix}tertiary-bg);
+  border: 1px solid var(--#{$prefix}border-color);
+  border-radius: $border-radius-pill;
+  padding: 0.25rem;
+  transition: all 0.2s ease;
+
+  &:focus-within {
+    border-color: var(--#{$prefix}primary);
+    background: var(--#{$prefix}body-bg);
+  }
+
+  .input-group-text {
+    background: transparent;
+    border: none;
+    padding-left: 1.25rem;
+    color: var(--#{$prefix}primary);
+  }
+
+  .form-control {
+    background: transparent;
+    border: none;
+    box-shadow: none !important;
+    padding: 0.75rem 0.5rem;
+    font-size: 1.1rem;
+
+    &::placeholder {
+      color: var(--#{$prefix}secondary-color);
+    }
+  }
+
+  .btn {
+    border-radius: $border-radius-pill;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.search-nav {
+  .nav-link {
+    font-weight: 500;
+    color: var(--#{$prefix}secondary-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: $border-radius-pill;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--#{$prefix}primary);
+      background: var(--#{$prefix}tertiary-bg);
+    }
+
+    &.active {
+      background: var(--#{$prefix}primary-subtle);
+      color: var(--#{$prefix}primary);
+    }
+  }
+}
+
+.search-result-card {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--#{$prefix}border-color);
+  transition: background 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: var(--#{$prefix}tertiary-bg);
+  }
+
+  .result-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--#{$prefix}primary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.member-item {
+  background: var(--#{$prefix}body-bg);
+  border: 1px solid var(--#{$prefix}border-color);
+  padding: 1rem;
+  border-radius: var(--#{$prefix}border-radius);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--#{$prefix}primary);
+    transform: translateY(-2px);
+  }
+}

@@ -1,0 +1,110 @@
+// Profile Page Styles
+// -----------------------------
+
+.profile-header-card {
+  border-radius: var(--#{$prefix}border-radius);
+}
+
+.profile-cover {
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--#{$prefix}border-radius) var(--#{$prefix}border-radius) 0 0;
+  background: linear-gradient(135deg, $indigo 0%, $purple 100%);
+}
+
+.profile-avatar-container {
+  margin-top: -90px;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 6px solid var(--#{$prefix}card-bg);
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-status-online {
+  width: 22px;
+  height: 22px;
+  background: $green;
+  border: 4px solid var(--#{$prefix}card-bg);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.stat-card {
+  background: var(--#{$prefix}tertiary-bg);
+  border-radius: var(--#{$prefix}border-radius);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--#{$prefix}border-color);
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.stat-card:hover {
+  background: var(--#{$prefix}card-bg);
+  border-color: var(--#{$prefix}primary);
+  transform: translateY(-5px);
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  background: rgba(var(--#{$prefix}primary-rgb), 0.08);
+  color: var(--#{$prefix}primary);
+  border: 1px solid rgba(var(--#{$prefix}primary-rgb), 0.15);
+  transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+  background: var(--#{$prefix}primary);
+  color: $white;
+  transform: translateY(-2px);
+}
+
+.activity-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--#{$prefix}primary);
+  position: relative;
+  z-index: 1;
+}
+
+.activity-line {
+  position: absolute;
+  left: 21px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--#{$prefix}border-color);
+  z-index: 0;
+}
+
+@include media-breakpoint-down(md) {
+  .profile-cover {
+    height: 200px;
+  }
+  .profile-avatar {
+    width: 130px;
+    height: 130px;
+  }
+  .profile-avatar-container {
+    margin-top: -65px;
+  }
+}

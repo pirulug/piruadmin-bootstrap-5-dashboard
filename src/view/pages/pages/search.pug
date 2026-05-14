@@ -1,122 +1,103 @@
 extends ../../layouts/dashboard
 
 append config
-  - pageName = 'Search'
-  - pageUrl = 'pages/search'
+  - pageName = "Search"
+  - pageUrl = "pages/search"
 
 block content
-  //- HERO SECTION: Modern & Clean
-  .py-5.mb-5.bg-body.rounded
-    .container
+  .card.mb-4
+    .card-body.p-4.p-md-5
       .row.justify-content-center
-        .col-lg-7.text-center
-          h1.display-5.fw-bold.mb-3 Find what you need
-          p.lead.text-body-secondary.mb-4 Search through articles, photos, and our community members.
-          
+        .col-lg-8.text-center
+          h1.fw-bold.mb-4 Global Search
           form.mb-4
-            .input-group.input-group-lg.hero-search
-              span.input-group-text.bg-transparent.border-end-0.ps-4
-                i.bi.bi-search.text-body-tertiary
-              input.form-control.border-start-0.ps-0(
-                type='text'
-                placeholder='Keywords, topics, names...'
-                aria-label='Search'
-                autofocus
+            .input-group.search-input-group
+              span.input-group-text
+                i.bi.bi-search
+              input.form-control(
+                type="text"
+                placeholder="Search for articles, users, or photos..."
+                value="Modern Design"
+                aria-label="Search"
               )
-
-          //- Trending Tags
+              button.btn.btn-primary(type="submit") Search
+          
           .d-flex.justify-content-center.gap-2.flex-wrap
-            span.small.align-self-center Trending:
-            each tag in ['mobile', 'software', 'design', 'iphone', 'react']
-              a.badge.rounded.text-bg-primary.text-white.text-decoration-none.px-3.py-2(href='#')= tag
+            span.small.text-muted.me-2 Trending:
+            each tag in ["bootstrap", "scss", "design", "admin", "dashboard"]
+              a.badge.rounded-pill.bg-body-secondary.text-body.text-decoration-none.px-3.py-2(href="#")= tag
 
-  .container
-    .row.justify-content-center
-      .col-lg-10
-        
-        //- NAVIGATION & STATUS
-        .d-flex.flex-column.flex-md-row.justify-content-between.align-items-md-end.mb-4.pb-2.border-bottom
-          .mb-3.mb-md-0
-            h4.mb-1 Search Results
-            p.text-body-secondary.mb-0 12 results found for 
-              span.fw-bold.text-primary "Modern Design"
+  .row.justify-content-center
+    .col-lg-10
+      //- Filter Tabs
+      ul#searchTabs.nav.search-nav.mb-4.pb-2(role="tablist")
+        li.nav-item
+          a.nav-link.active(data-bs-toggle="tab" href="#all" role="tab") All Results
+        li.nav-item
+          a.nav-link(data-bs-toggle="tab" href="#articles" role="tab") Articles
+        li.nav-item
+          a.nav-link(data-bs-toggle="tab" href="#photos" role="tab") Photos
+        li.nav-item
+          a.nav-link(data-bs-toggle="tab" href="#members" role="tab") Members
 
-          ul#searchTabs.nav.nav-underline(role='tablist')
-            li.nav-item
-              a.nav-link.active(data-bs-toggle='tab' href='#clasic' role='tab') All Results
-            li.nav-item
-              a.nav-link(data-bs-toggle='tab' href='#articles' role='tab') Articles
-            li.nav-item
-              a.nav-link(data-bs-toggle='tab' href='#photos' role='tab') Photos
-            li.nav-item
-              a.nav-link(data-bs-toggle='tab' href='#users' role='tab') Members
-
-        //- CONTENT
-        #searchTabsContent.tab-content.pt-2
-
-          //- 1. CLASSIC RESULTS
-          #clasic.tab-pane.fade.show.active(role='tabpanel')
-            .list-group.list-group-flush
+      #searchTabsContent.tab-content
+        //- All Results
+        #all.tab-pane.fade.show.active(role="tabpanel")
+          .card
+            .card-body.p-0
               each val, i in [1,2,3,4,5]
-                .list-group-item.px-0.py-4.bg-transparent
+                .search-result-card
                   .d-flex.justify-content-between.align-items-start
-                    .me-3
-                      h5.mb-1
-                        a.text-decoration-none.link-primary.fw-semibold(href='#') Understanding Modern UI Patterns in 2026 #{i}
+                    .flex-grow-1
+                      a.result-link(href="#") Understanding Modern UI Patterns in 2026 #{i}
                       p.text-body-secondary.mb-2 Exploring the shift from complex shadows to clean, border-based organic layouts...
-                      .d-flex.align-items-center.gap-3.small.text-body-tertiary
-                        span
-                          i.bi.bi-calendar.me-1
-                          | April 14, 2026
-                        span
-                          i.bi.bi-person.me-1
-                          | Author Name
-                        span.badge.text-bg-primary-subtle.text-primary News
-                    i.bi.bi-chevron-right.text-body-tertiary.mt-2
+                      .d-flex.gap-3.small.text-muted
+                        span: i.bi.bi-calendar3.me-1
+                        | April 14, 2026
+                        span: i.bi.bi-tag.me-1
+                        | Development
+                    .ms-3
+                      span.badge.bg-primary-subtle.text-primary News
 
-          //- 2. ARTICLES GRID
-          #articles.tab-pane.fade(role='tabpanel')
-            .row.g-4
-              each val, i in [1,2,3,4,5,6]
-                .col-lg-4.col-md-6
-                  .card.h-100.border.bg-body-tertiary
-                    .ratio.ratio-16x9
-                      img.card-img-top.object-fit-cover(src=`https://picsum.photos/seed/${i+10}/600/400` alt='Article Image')
-                    .card-body
-                      span.badge.text-bg-info-subtle.text-info.mb-2 Tech
-                      h5.card-title.line-clamp-2 Exploring the new CSS features
-                      p.card-text.text-body-secondary.small A deep dive into the latest web technologies that are changing the industry.
-                    .card-footer.bg-transparent.border-top-0.pt-0
-                      a.btn.btn-sm.btn-outline-primary.w-100.rounded-pill(href='#') Read Article
+        //- Articles
+        #articles.tab-pane.fade(role="tabpanel")
+          .row.g-4
+            each val, i in [1,2,3,4,5,6]
+              .col-md-6.col-lg-4
+                .card.h-100
+                  img.card-img-top(src=`https://picsum.photos/seed/${i+10}/600/400` alt="Article")
+                  .card-body
+                    h5.card-title.fw-bold Modern CSS Techniques
+                    p.card-text.small.text-body-secondary Learn how to use the latest features of CSS to build faster and more beautiful sites.
+                  .card-footer.bg-transparent.border-0.pt-0
+                    a.btn.btn-sm.btn-link.ps-0.text-decoration-none(href="#") Read more →
 
-          //- 3. PHOTOS GRID
-          #photos.tab-pane.fade(role='tabpanel')
-            .row.g-3
-              each val, i in [1,2,3,4,5,6,7,8,9,10,11,12]
-                .col-6.col-md-4.col-lg-3
-                  .ratio.ratio-1x1
-                    a.d-block.border.rounded.overflow-hidden(href='#')
-                      img.img-fluid.object-fit-cover(src=`https://picsum.photos/seed/${i+50}/400/400` alt='Gallery Image')
+        //- Photos
+        #photos.tab-pane.fade(role="tabpanel")
+          .row.g-2
+            each val, i in [1,2,3,4,5,6,7,8,9,10,11,12]
+              .col-6.col-sm-4.col-md-3
+                .ratio.ratio-1x1
+                  img.img-fluid.rounded.border(src=`https://picsum.photos/seed/${i+50}/400/400` alt="Gallery")
 
-          //- 4. MEMBERS LIST
-          #users.tab-pane.fade(role='tabpanel')
-            .row.g-3
-              each name, i in ['Alex Rivera','Jordan Smith','Taylor Wong','Sam Wilson','Casey Jones','Morgan Lee']
-                .col-md-6
-                  .p-3.border.rounded.bg-body-tertiary
-                    .d-flex.align-items-center
-                      img.rounded-circle.me-3.border(src=`https://i.pravatar.cc/150?u=${i}` width='54' height='54' alt='avatar')
-                      .flex-grow-1
-                        h6.mb-0= name
-                        p.small.text-body-secondary.mb-0 Senior Developer
-                      button.btn.btn-sm.btn-light.border.rounded-pill Follow
+        //- Members
+        #members.tab-pane.fade(role="tabpanel")
+          .row.g-3
+            each name, i in ["Alex Rivera","Jordan Smith","Taylor Wong","Sam Wilson","Casey Jones","Morgan Lee"]
+              .col-md-6
+                .member-item
+                  .d-flex.align-items-center
+                    img.rounded-circle.me-3(src=`https://i.pravatar.cc/150?u=${i}` width="48" height="48")
+                    .flex-grow-1
+                      h6.mb-0.fw-bold= name
+                      p.small.text-muted.mb-0 Developer
+                    button.btn.btn-sm.btn-outline-primary.rounded-pill Follow
 
-        //- PAGINATION
-        nav.mt-5.pt-4.border-top
-          ul.pagination.pagination-sm.justify-content-center.mb-0
-            li.page-item.disabled: a.page-link.rounded-start-pill.px-3(href='#') Previous
-            li.page-item.active: a.page-link(href='#') 1
-            li.page-item: a.page-link(href='#') 2
-            li.page-item: a.page-link(href='#') 3
-            li.page-item: a.page-link.rounded-end-pill.px-3(href='#') Next
-
+      //- Pagination
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled: a.page-link(href="#") Previous
+          li.page-item.active: a.page-link(href="#") 1
+          li.page-item: a.page-link(href="#") 2
+          li.page-item: a.page-link(href="#") 3
+          li.page-item: a.page-link(href="#") Next
