@@ -1,0 +1,190 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "WYSIWYG Editor"
+  - pageUrl = "forms/editor"
+
+block styles
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Wysi@latest/dist/wysi.min.css" crossorigin="anonymous")
+  style.
+    /* Styling only the editor container and toolbar, preserving internal HTML styles */
+    .wysi {
+      border: 1px solid #dee2e6 !important;
+      border-radius: 0.375rem !important;
+      background-color: #ffffff !important;
+      box-shadow: none !important;
+    }
+    .wysi-toolbar {
+      background-color: #f8f9fa !important;
+      border-bottom: 1px solid #dee2e6 !important;
+    }
+    .wysi-toolbar-group {
+      border-right: 1px solid #dee2e6 !important;
+    }
+    .wysi-btn {
+      color: #212529 !important;
+    }
+    .wysi-btn:hover {
+      background-color: #e9ecef !important;
+    }
+    .wysi-content {
+      padding: 1.5rem !important;
+      min-height: 350px;
+    }
+
+    /* Dark Mode overrides */
+    [data-bs-theme="dark"] .wysi {
+      border-color: #333333 !important;
+      background-color: #1a1a1a !important;
+    }
+    [data-bs-theme="dark"] .wysi-toolbar {
+      background-color: #2a2a2a !important;
+      border-color: #333333 !important;
+    }
+    [data-bs-theme="dark"] .wysi-toolbar-group {
+      border-color: #333333 !important;
+    }
+    [data-bs-theme="dark"] .wysi-btn {
+      color: #e0e0e0 !important;
+    }
+    [data-bs-theme="dark"] .wysi-btn:hover {
+      background-color: #333333 !important;
+    }
+
+block content
+
+  .card.mb-3
+    .card-header.d-flex.justify-content-between.align-items-center
+      div
+        h5.card-title.mb-0 Wysi Editor
+        p.text-body-secondary.small.mb-0 Modern and lightweight rich text editor for your applications.
+      a.btn.btn-sm.btn-outline-secondary.rounded-pill(href="https://github.com/mdbassit/Wysi" target="_blank")
+        i.bi.bi-github.me-1
+        | GitHub Repo
+    .card-body
+      .mb-4
+        label.form-label.fw-bold Compose your message
+        textarea#my-editor.
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+
+  .bg-body.p-3.rounded.d-flex.justify-content-end.gap-2.sticky-bottom
+    button.btn.btn-outline-secondary.text-uppercase.fw-bold(type="button") 
+      i.bi.bi-arrow-left.me-2
+      | Cancel
+    button#save-content.btn.btn-primary.text-uppercase.fw-bold(type="button") 
+      i.bi.bi-save.me-2
+      | Publish
+
+block scripts
+  script(src="https://cdn.jsdelivr.net/gh/mdbassit/Wysi@latest/dist/wysi.min.js" crossorigin="anonymous")
+  script.
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof Wysi === 'undefined') {
+        console.error("Wysi editor could not be loaded.");
+        return;
+      }
+
+      const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+
+      const editor = Wysi({
+        el: '#my-editor',
+        darkMode: isDark,
+        height: 400,
+        autoGrow: true,
+        tools: [
+          'format', '|', 
+          'bold', 'italic', 'underline', 'strike', '|', 
+          { label: 'Alignment', items: ['alignLeft', 'alignCenter', 'alignRight', 'alignJustify'] }, '|', 
+          'ul', 'ol', '|', 
+          'link', 'image', 'hr', 'quote', '|', 
+          'removeFormat'
+        ]
+      });
+
+      document.getElementById("save-content").addEventListener("click", function() {
+        const content = document.querySelector('#my-editor').value;
+        console.log("Captured Content:", content);
+        
+        if (typeof Swal !== 'undefined') {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Content saved successfully.',
+            icon: 'success',
+            confirmButtonColor: '#ff0055'
+          });
+        } else {
+          alert("Content saved successfully! Check the console.");
+        }
+      });
+    });

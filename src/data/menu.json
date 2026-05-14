@@ -190,6 +190,13 @@
         "title": "Tagify",
         "path": "forms/tagify",
         "link": "forms/tagify"
+      },
+      {
+        "title": "Wysi Editor",
+        "path": "forms/editor",
+        "link": "forms/editor",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },
