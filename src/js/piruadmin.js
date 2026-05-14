@@ -11,4 +11,6 @@ import "./modules/toggle-password";
 
 import "./modules/back-to-top";
 import "./modules/loader";
+import "./modules/fullscreen";
+
 import "./modules/code-preview";
