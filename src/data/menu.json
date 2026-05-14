@@ -114,6 +114,13 @@
         "badgeColor": "primary"
       },
       {
+        "title": "Scrollspy",
+        "path": "ui/scrollspy",
+        "link": "ui/scrollspy",
+        "badge": "New",
+        "badgeColor": "success"
+      },
+      {
         "title": "Alerts",
         "path": "ui/alerts",
         "link": "ui/alerts"

@@ -1,0 +1,150 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'Scrollspy'
+  - pageUrl = 'ui/scrollspy'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+  style.
+    .scrollspy-example {
+      position: relative;
+      height: 200px;
+      margin-top: .5rem;
+      overflow: auto;
+    }
+    .scrollspy-example-2 {
+      position: relative;
+      height: 350px;
+      overflow: auto;
+    }
+
+block content
+
+  .row.g-4
+    // Basic Scrollspy
+    .col-md-12
+      .card
+        .card-body
+          h5.card-title Basic Scrollspy
+          p.text-muted Scroll the area below the navbar and watch the active class change.
+          
+          nav#navbar-example2.navbar.bg-body-tertiary.px-3.mb-3.rounded
+            a.navbar-brand(href='#') Navbar
+            ul.nav.nav-pills
+              li.nav-item
+                a.nav-link(href='#scrollspyHeading1') First
+              li.nav-item
+                a.nav-link(href='#scrollspyHeading2') Second
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
+                ul.dropdown-menu
+                  li
+                    a.dropdown-menu-item(href='#scrollspyHeading3') Third
+                  li
+                    a.dropdown-menu-item(href='#scrollspyHeading4') Fourth
+                  li
+                    hr.dropdown-divider
+                  li
+                    a.dropdown-menu-item(href='#scrollspyHeading5') Fifth
+          
+          .scrollspy-example.bg-body-tertiary.p-3.rounded(data-bs-spy='scroll' data-bs-target='#navbar-example2' data-bs-root-margin='0px 0px -40%' data-bs-smooth-scroll='true' tabindex='0')
+            h4#scrollspyHeading1 First heading
+            p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+            h4#scrollspyHeading2 Second heading
+            p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+            h4#scrollspyHeading3 Third heading
+            p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+            h4#scrollspyHeading4 Fourth heading
+            p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+            h4#scrollspyHeading5 Fifth heading
+            p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+
+          .text-center.mt-4
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseScrollspyBasic' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseScrollspyBasic
+            .pt-3
+              .demo-code-preview(data-label='HTML EXAMPLE')
+                button.copy-btn(type='button') Copy
+                pre.language-html
+                  code.language-html.
+                    &lt;nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3"&gt;
+                      &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+                      &lt;ul class="nav nav-pills"&gt;
+                        &lt;li class="nav-item"&gt;
+                          &lt;a class="nav-link" href="#scrollspyHeading1"&gt;First&lt;/a&gt;
+                        &lt;/li&gt;
+                        ...
+                      &lt;/ul&gt;
+                    &lt;/nav&gt;
+                    &lt;div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"&gt;
+                      &lt;h4 id="scrollspyHeading1"&gt;First heading&lt;/h4&gt;
+                      &lt;p&gt;...&lt;/p&gt;
+                    &lt;/div&gt;
+
+    // Nested Nav
+    .col-md-12
+      .card
+        .card-body
+          h5.card-title Nested Nav
+          p.text-muted Scrollspy also works with nested <code>.nav</code>.
+          
+          .row
+            .col-4
+              nav#navbar-example3.h-100.flex-column.align-items-stretch.pe-4.border-end
+                nav.nav.nav-pills.flex-column
+                  a.nav-link(href='#item-1') Item 1
+                  nav.nav.nav-pills.flex-column
+                    a.nav-link.ms-3.my-1(href='#item-1-1') Item 1-1
+                    a.nav-link.ms-3.my-1(href='#item-1-2') Item 1-2
+                  a.nav-link(href='#item-2') Item 2
+                  a.nav-link(href='#item-3') Item 3
+                  nav.nav.nav-pills.flex-column
+                    a.nav-link.ms-3.my-1(href='#item-3-1') Item 3-1
+                    a.nav-link.ms-3.my-1(href='#item-3-2') Item 3-2
+            .col-8
+              .scrollspy-example-2(data-bs-spy='scroll' data-bs-target='#navbar-example3' data-bs-smooth-scroll='true' tabindex='0')
+                h4#item-1 Item 1
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h5#item-1-1 Item 1-1
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h5#item-1-2 Item 1-2
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h4#item-2 Item 2
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h4#item-3 Item 3
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h5#item-3-1 Item 3-1
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+                h5#item-3-2 Item 3-2
+                p This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more text here to fill the space and make it scrollable.
+
+          .text-center.mt-4
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseScrollspyNested' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseScrollspyNested
+            .pt-3
+              .demo-code-preview(data-label='HTML EXAMPLE')
+                button.copy-btn(type='button') Copy
+                pre.language-html
+                  code.language-html.
+                    &lt;div class="row"&gt;
+                      &lt;div class="col-4"&gt;
+                        &lt;nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end"&gt;
+                          &lt;nav class="nav nav-pills flex-column"&gt;
+                            &lt;a class="nav-link" href="#item-1"&gt;Item 1&lt;/a&gt;
+                            &lt;nav class="nav nav-pills flex-column"&gt;
+                              &lt;a class="nav-link ms-3 my-1" href="#item-1-1"&gt;Item 1-1&lt;/a&gt;
+                            &lt;/nav&gt;
+                          &lt;/nav&gt;
+                        &lt;/nav&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col-8"&gt;
+                        &lt;div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0"&gt;
+                          ...
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
