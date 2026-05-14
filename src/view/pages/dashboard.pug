@@ -6,9 +6,9 @@ append config
 
 block content
 
-  //- Fila de Estadísticas
+  //- Fila de EstadÃ­sticas
   .row.g-4.mb-4
-    //- Mixin para no repetir código (DRY)
+    //- Mixin para no repetir cÃ³digo (DRY)
     mixin statCard(title, value, icon, color)
       .col-sm-6.col-xl-3
         .card.h-100
@@ -16,7 +16,7 @@ block content
             .row.align-items-center
               .col-auto
                 .stat(class=`stat-${color}`)
-                  i(class=`pi pi-${icon}`)
+                  i(class=`bi bi-${icon}`)
               .col.text-end
                 h6.card-title.text-body-secondary.mb-1= title
                 h2.h3.fw-bold.mb-0= value
@@ -26,7 +26,7 @@ block content
     +statCard("Earnings", "$21.300", "currency-dollar", "info")
     +statCard("Orders", "64", "cart", "danger")
 
-  //- Gráficos
+  //- GrÃ¡ficos
   .row.g-4.mb-4
     .col-12.col-lg-7.d-flex
       .card.flex-fill.w-100
@@ -113,27 +113,27 @@ block content
             tbody
               tr
                 td 
-                  i.pi.pi-chrome.me-2 
+                  i.bi.bi-browser-chrome.me-2 
                   | Chrome
                 td.text-end.fw-bold 45%
               tr
                 td 
-                  i.pi.pi-compass.me-2 
+                  i.bi.bi-compass.me-2 
                   | Safari
                 td.text-end.fw-bold 22%
               tr
                 td 
-                  i.pi.pi-globe.me-2 
+                  i.bi.bi-globe.me-2 
                   | Edge
                 td.text-end.fw-bold 15%
               tr
                 td 
-                  i.pi.pi-gitlab.me-2 
+                  i.bi.bi-browser-firefox.me-2 
                   | Firefox
                 td.text-end.fw-bold 10%
               tr
                 td 
-                  i.pi.pi-question-circle.me-2 
+                  i.bi.bi-question-circle.me-2 
                   | Other
                 td.text-end.fw-bold 8%
 
@@ -176,13 +176,13 @@ block scripts
   script.
     document.addEventListener("DOMContentLoaded", function() {
       
-      // Función helper para obtener variables CSS de Bootstrap
-      // Esto permite que los gráficos cambien de color si cambias el tema en CSS
+      // FunciÃ³n helper para obtener variables CSS de Bootstrap
+      // Esto permite que los grÃ¡ficos cambien de color si cambias el tema en CSS
       const getVar = (variable) => getComputedStyle(document.body).getPropertyValue(variable).trim();
 
-      // Configuración común para rejillas (Grid)
+      // ConfiguraciÃ³n comÃºn para rejillas (Grid)
       const gridConfig = {
-        color: "rgba(120, 130, 140, 0.1)", // Color sutil para las líneas
+        color: "rgba(120, 130, 140, 0.1)", // Color sutil para las lÃ­neas
         borderColor: "transparent" // Sin bordes duros en el chart
       };
 
@@ -198,7 +198,7 @@ block scripts
             borderColor: "#ff0055", // Bootstrap Primary color manual o getVar("--bs-primary")
             data: [2115, 1562, 1584, 1892, 1587, 1923, 2566, 2448, 2805, 3438, 2917, 3327],
             tension: 0.4, // Curvas suaves (Modern UI)
-            pointRadius: 0, // Sin puntos para un look más limpio
+            pointRadius: 0, // Sin puntos para un look mÃ¡s limpio
             pointHoverRadius: 4
           }]
         },
@@ -236,8 +236,9 @@ block scripts
           plugins: { legend: { display: false } },
           scales: {
             x: { grid: { display: false } },
-            y: { grid: { display: false }, display: false } // Ocultar eje Y para diseño minimalista
+            y: { grid: { display: false }, display: false } // Ocultar eje Y para diseÃ±o minimalista
           }
         }
       });
     });
+

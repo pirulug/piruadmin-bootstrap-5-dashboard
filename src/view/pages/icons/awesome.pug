@@ -4,6 +4,9 @@ append config
   - pageName = 'Font Awesome Icons'
   - pageUrl = 'icons/awesome'
 
+block styles
+  link(rel="stylesheet", href=href=assets + "plugins/fontawesome.css")
+
 block scripts
   script.
     document.addEventListener("DOMContentLoaded", () => {

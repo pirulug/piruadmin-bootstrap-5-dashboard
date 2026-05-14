@@ -199,11 +199,6 @@
         "title": "Bootstrap Icons",
         "path": "icons/bootstrap",
         "link": "icons/bootstrap"
-      },
-      {
-        "title": "PiruIcons",
-        "path": "icons/piruicons",
-        "link": "icons/piruicons"
       }
     ]
   },
