@@ -7,13 +7,14 @@
   min-height: 65px;
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
 
   @include media-breakpoint-down(md) {
-    width: 100vw;
+    padding: 0 0.5rem;
   }
 
   .sidebar-toggle {
-    margin-right: $spacer;
+    margin-right: 0.25rem;
     color: $gray-600;
     font-size: 1.5rem;
     display: flex;
@@ -23,6 +24,7 @@
     cursor: pointer;
     width: 42px;
     height: 42px;
+    flex-shrink: 0;
 
     &:hover {
       color: $primary;
@@ -30,18 +32,15 @@
   }
 
   .navbar-nav {
-    direction: ltr;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
+    flex-shrink: 0;
   }
 
   .navbar-align {
     margin-left: auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
   }
 
   .input-group-navbar {
@@ -54,6 +53,22 @@
     align-items: center;
     height: 38px;
     width: 280px;
+    margin-left: 0.5rem;
+    flex-shrink: 1;
+    min-width: 140px; // Ensure it doesn't collapse too much
+    flex-wrap: nowrap !important; // Prevent button jump
+
+    @include media-breakpoint-down(lg) {
+      width: 220px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 180px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
 
     &:focus-within {
       background: var(--#{$prefix}body-bg);
@@ -65,20 +80,22 @@
       background: transparent;
       border: 0;
       box-shadow: none;
-      padding: 0 1.25rem;
+      padding: 0 1rem;
       font-size: 0.875rem;
       height: 100%;
       color: inherit;
+      min-width: 0; // Allow input to shrink
     }
 
     .btn {
       background: transparent;
       border: 0;
-      padding: 0 1rem;
+      padding: 0 0.75rem;
       color: $gray-600;
       height: 100%;
       display: flex;
       align-items: center;
+      flex-shrink: 0; // Prevent button from shrinking
 
       &:hover {
         color: $primary;
@@ -95,9 +112,15 @@
     transition: $transition-base;
     position: relative;
     text-decoration: none;
-    margin: 0 2px;
-    min-width: 42px;
-    height: 42px;
+    margin: 0 1px;
+    min-width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(md) {
+      margin: 0;
+      min-width: 36px;
+    }
 
     &:hover,
     &.active,
@@ -106,42 +129,40 @@
     }
 
     i, svg {
-      font-size: 1.25rem;
-      width: 1.25rem;
-      height: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 1.15rem;
+      width: 1.15rem;
+      height: 1.15rem;
     }
 
-    .theme-icon-active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    // Hide arrows for specific icons as requested
-    &.dropdown-toggle-no-caret:after {
-      display: none !important;
-    }
-
-    &.dropdown-toggle:not(.dropdown-toggle-no-caret):after {
-      margin-left: 0.35rem;
+    &.dropdown-toggle:after {
+      margin-left: 0.2rem;
+      
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 
   .nav-item-user {
+    flex-shrink: 0;
+    
     .nav-link {
       display: flex;
       align-items: center;
-      padding: 0 0.75rem;
+      padding: 0 0.5rem;
       height: 42px;
-      transition: $transition-base;
       color: $gray-600;
-      text-decoration: none;
+
+      @include media-breakpoint-down(md) {
+        padding: 0 0.25rem;
+      }
 
       &:after {
-        margin-left: 0.5rem;
+        margin-left: 0.3rem;
+        
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
 
       &:hover,
@@ -151,10 +172,13 @@
 
       .avatar {
         margin-right: 0.5rem;
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
-        object-fit: cover;
+        
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -165,19 +189,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 0.675rem;
-    font-weight: bold;
+    top: 4px;
+    right: 4px;
+    font-size: 0.6rem;
     color: $white;
     border: 2px solid var(--#{$prefix}body-bg);
-    z-index: 1;
     animation: indicator-pulse 2s infinite;
   }
-
   @include media-breakpoint-down(lg) {
     .nav-item {
       position: static !important;
@@ -192,25 +213,10 @@
       transform: none !important;
     }
   }
-
-  @include media-breakpoint-down(sm) {
-    padding: 0.5rem 0.75rem;
-    min-height: 60px;
-
-    .input-group-navbar {
-      width: 180px;
-    }
-  }
 }
 
 @keyframes indicator-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba($primary, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 6px rgba($primary, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba($primary, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba($primary, 0.7); }
+  70% { box-shadow: 0 0 0 5px rgba($primary, 0); }
+  100% { box-shadow: 0 0 0 0 rgba($primary, 0); }
 }
