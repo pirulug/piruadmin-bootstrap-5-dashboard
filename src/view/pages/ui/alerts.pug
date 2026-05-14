@@ -9,94 +9,64 @@ block styles
 
 block content
   .row.g-4
-    // Standard Alerts
+    // Basic Alerts
     .col-lg-6
       .card.h-100
         .card-body
-          h5.card-title Standard Alerts
-          p.text-muted Detailed feedback for various system states using <code>.alert-{color}</code>. All alerts feature a specialized left accent border.
-          .py-4
+          h5.card-title Basic Alerts
+          p.text-muted Standard Bootstrap feedback messages using <code>.alert-{color}</code>.
+          .py-3
             .alert.alert-primary(role='alert') A simple primary alert—check it out!
-            .alert.alert-success(role='alert') Success! Your changes have been saved.
-            .alert.alert-danger(role='alert') Error: Something went wrong with your request.
-            .alert.alert-warning(role='alert') Warning: Your subscription will expire soon.
-          .text-center.mt-2
-            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseStandard' aria-expanded='false')
+            .alert.alert-secondary(role='alert') A simple secondary alert—check it out!
+            .alert.alert-success(role='alert') A simple success alert—check it out!
+            .alert.alert-danger(role='alert') A simple danger alert—check it out!
+          .text-center
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseBasic' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
-          .collapse#collapseStandard.mt-3
+          .collapse#collapseBasic.mt-3
             .demo-code-preview(data-label='HTML EXAMPLE')
               button.copy-btn(type='button') Copy
               pre.language-html
                 code.language-html.
                   &lt;div class="alert alert-primary" role="alert"&gt;
-                    A simple primary alert—check it out!
-                  &lt;/div&gt;
-                  &lt;div class="alert alert-success" role="alert"&gt;
-                    Success! Your changes have been saved.
+                    Basic alert message
                   &lt;/div&gt;
 
-    // Outline Alerts
+    // Alerts with Action
     .col-lg-6
       .card.h-100
         .card-body
-          h5.card-title Outline Alerts
-          p.text-muted Use <code>.alert-outline-{color}</code> for subtle, minimal emphasis messages with transparent backgrounds.
-          .py-4
-            .alert.alert-outline-primary(role='alert') Minimal primary alert with outline style.
-            .alert.alert-outline-success(role='alert') Minimal success alert with outline style.
-            .alert.alert-outline-danger(role='alert') Minimal danger alert with outline style.
-            .alert.alert-outline-warning(role='alert') Minimal warning alert with outline style.
-          .text-center.mt-2
-            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOutline' aria-expanded='false')
-              i.bi.bi-code-slash.me-1
-              | View Code
-          .collapse#collapseOutline.mt-3
-            .demo-code-preview(data-label='HTML EXAMPLE')
-              button.copy-btn(type='button') Copy
-              pre.language-html
-                code.language-html.
-                  &lt;div class="alert alert-outline-primary" role="alert"&gt;
-                    Outline primary alert
-                  &lt;/div&gt;
-                  &lt;div class="alert alert-outline-success" role="alert"&gt;
-                    Outline success alert
-                  &lt;/div&gt;
-
-    // Alerts with Icons (Media Style)
-    .col-lg-6
-      .card.h-100
-        .card-body
-          h5.card-title Icon & Media Alerts
-          p.text-muted Enhanced layouts using <code>.alert-media</code> and <code>.alert-icon</code> for perfectly aligned icons and labels.
-          .py-4
-            .alert.alert-primary.alert-media(role='alert')
+          h5.card-title Alerts with Action
+          p.text-muted Include buttons or links for immediate user interaction.
+          .py-3
+            .alert.alert-info.alert-media.align-items-center(role='alert')
               .alert-icon
                 i.bi.bi-info-circle
-              .alert-body This is a primary alert with a standard icon.
-            .alert.alert-success.alert-media(role='alert')
-              .alert-icon
-                i.bi.bi-check-circle
-              .alert-body Congratulations! The task was completed successfully.
-            .alert.alert-danger.alert-media(role='alert')
+              .alert-body
+                .d-flex.justify-content-between.align-items-center
+                  span Your profile is 80% complete.
+                  a.btn.btn-sm.btn-info.text-white.ms-2(href='#') Complete now
+            .alert.alert-warning.alert-media.align-items-center(role='alert')
               .alert-icon
                 i.bi.bi-exclamation-triangle
-              .alert-body Critical failure: Database connection lost.
-          .text-center.mt-2
-            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseMedia' aria-expanded='false')
+              .alert-body
+                .d-flex.justify-content-between.align-items-center
+                  span Subscription ending soon.
+                  button.btn.btn-sm.btn-warning(type='button') Renew
+          .text-center
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseAction' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
-          .collapse#collapseMedia.mt-3
+          .collapse#collapseAction.mt-3
             .demo-code-preview(data-label='HTML EXAMPLE')
               button.copy-btn(type='button') Copy
               pre.language-html
                 code.language-html.
-                  &lt;div class="alert alert-primary alert-media" role="alert"&gt;
-                    &lt;div class="alert-icon"&gt;
-                      &lt;i class="bi bi-info-circle"&gt;&lt;/i&gt;
-                    &lt;/div&gt;
-                    &lt;div class="alert-body"&gt;
-                      This is an icon alert.
+                  &lt;div class="alert alert-info alert-media align-items-center" role="alert"&gt;
+                    &lt;div class="alert-body d-flex justify-content-between"&gt;
+                      &lt;span&gt;Message&lt;/span&gt;
+                      &lt;button class="btn btn-sm btn-info"&gt;Action&lt;/button&gt;
                     &lt;/div&gt;
                   &lt;/div&gt;
 
@@ -105,25 +75,20 @@ block content
       .card.h-100
         .card-body
           h5.card-title Dismissible Alerts
-          p.text-muted Toggle the dismissal of an alert from the front-end by adding <code>.alert-dismissible</code> and a close button.
-          .py-4
-            .alert.alert-info.alert-dismissible.fade.show(role='alert')
-              strong Tip: 
-              | You can dismiss this alert by clicking the close button on the right.
+          p.text-muted Enable users to dismiss alerts with <code>.alert-dismissible</code>.
+          .py-3
+            .alert.alert-success.alert-dismissible.fade.show(role='alert')
+              strong Success! 
+              | This message can be dismissed.
               button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-            .alert.alert-warning.alert-media.alert-dismissible.fade.show(role='alert')
+            .alert.alert-danger.alert-media.alert-dismissible.fade.show(role='alert')
               .alert-icon
-                i.bi.bi-shield-exclamation
+                i.bi.bi-x-circle
               .alert-body
-                strong Security Warning: 
-                | Your password is weak. Please update it.
+                strong Error! 
+                | Please check your input fields.
               button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-            .alert.alert-outline-danger.alert-media.alert-dismissible.fade.show(role='alert')
-              .alert-icon
-                i.bi.bi-bug
-              .alert-body System error reported in module #42.
-              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
-          .text-center.mt-2
+          .text-center
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseDismiss' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
@@ -132,55 +97,108 @@ block content
               button.copy-btn(type='button') Copy
               pre.language-html
                 code.language-html.
-                  &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
-                    &lt;strong&gt;Warning!&lt;/strong&gt; This is a dismissible alert.
-                    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+                  &lt;div class="alert alert-success alert-dismissible fade show" role="alert"&gt;
+                    Message
+                    &lt;button class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
                   &lt;/div&gt;
 
-    // Advanced Rich Content
-    .col-12
-      .card
+    // Alert with Description
+    .col-lg-6
+      .card.h-100
         .card-body
-          h5.card-title Advanced Content
-          p.text-muted Use components like <code>.alert-heading</code>, <code>&lt;hr&gt;</code>, and <code>.alert-link</code> for detailed communication.
-          .py-4.row.g-3
-            .col-md-6
-              .alert.alert-success.alert-media(role='alert')
-                .alert-icon
-                  i.bi.bi-cloud-check.fs-2
-                .alert-body
-                  h4.alert-heading All systems online!
-                  p.mb-0 Our servers are running at 100% capacity with no reported incidents in the last 24 hours.
-                  hr
-                  p.mb-0 Ensure you check the 
-                    a.alert-link(href='#') performance report
-                    |  for detailed metrics.
-            .col-md-6
-              .alert.alert-outline-info.alert-media(role='alert')
-                .alert-icon
-                  i.bi.bi-lightbulb.fs-2
-                .alert-body
-                  h4.alert-heading Helpful Hint
-                  p.mb-0 You can now integrate your cloud storage directly into the dashboard.
-                  p.mt-2.mb-0
-                    a.btn.btn-sm.btn-info.text-white(href='#') Learn more
-          .text-center.mt-2
-            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseAdvanced' aria-expanded='false')
+          h5.card-title Alert with Description
+          p.text-muted Use headings and paragraphs for more detailed messages.
+          .py-3
+            .alert.alert-primary.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-star-fill.fs-4
+              .alert-body
+                h4.alert-heading Exclusive Offer!
+                p.mb-0 Get 20% off on your next purchase. Use the code 
+                  strong WELCOME20
+                  |  at checkout.
+            .alert.alert-secondary.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-gear-fill.fs-4
+              .alert-body
+                h4.alert-heading System Maintenance
+                p.mb-0 Scheduled maintenance will occur on Saturday from 2:00 AM to 4:00 AM UTC.
+          .text-center
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseDescription' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
-          .collapse#collapseAdvanced.mt-3
+          .collapse#collapseDescription.mt-3
             .demo-code-preview(data-label='HTML EXAMPLE')
               button.copy-btn(type='button') Copy
               pre.language-html
                 code.language-html.
-                  &lt;div class="alert alert-success alert-media" role="alert"&gt;
-                    &lt;div class="alert-icon"&gt;&lt;i class="bi bi-check"&gt;&lt;/i&gt;&lt;/div&gt;
-                    &lt;div class="alert-body"&gt;
-                      &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
-                      &lt;p&gt;Additional paragraph for detailed info.&lt;/p&gt;
-                      &lt;hr&gt;
-                      &lt;a href="#" class="alert-link"&gt;Example Link&lt;/a&gt;
-                    &lt;/div&gt;
+                  &lt;div class="alert alert-primary" role="alert"&gt;
+                    &lt;h4 class="alert-heading"&gt;Title&lt;/h4&gt;
+                    &lt;p&gt;Description text goes here.&lt;/p&gt;
+                  &lt;/div&gt;
+
+    // Important Alerts
+    .col-lg-6
+      .card.h-100
+        .card-body
+          h5.card-title Important Alerts
+          p.text-muted Use <code>.alert-important</code> for high-visibility solid background alerts.
+          .py-3
+            .alert.alert-important.alert-primary.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-lightning-fill
+              .alert-body This is an important primary announcement!
+            .alert.alert-important.alert-success.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-check-circle-fill
+              .alert-body System updated successfully to version 2.4.0.
+            .alert.alert-important.alert-danger.alert-media(role='alert')
+              .alert-icon
+                i.bi.bi-shield-fill-x
+              .alert-body Security breach detected in unauthorized zone.
+          .text-center
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseImportant' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseImportant.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-important alert-primary" role="alert"&gt;
+                    Important announcement
+                  &lt;/div&gt;
+
+    // Minor Alerts
+    .col-lg-6
+      .card.h-100
+        .card-body
+          h5.card-title Minor Alerts
+          p.text-muted Compact messages using <code>.alert-minor</code> for less intrusive feedback.
+          .py-3
+            .alert.alert-minor.alert-secondary.alert-media.align-items-center(role='alert')
+              .alert-icon
+                i.bi.bi-info-circle
+              .alert-body Your session will expire in 5 minutes.
+            .alert.alert-minor.alert-outline-info.alert-media.align-items-center(role='alert')
+              .alert-icon
+                i.bi.bi-lightbulb
+              .alert-body New feature: Auto-save is now enabled.
+            .alert.alert-minor.alert-success.alert-media.align-items-center(role='alert')
+              .alert-icon
+                i.bi.bi-check2
+              .alert-body Changes synced.
+          .text-center
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseMinor' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseMinor.mt-3
+            .demo-code-preview(data-label='HTML EXAMPLE')
+              button.copy-btn(type='button') Copy
+              pre.language-html
+                code.language-html.
+                  &lt;div class="alert alert-minor alert-secondary" role="alert"&gt;
+                    Minor feedback message
                   &lt;/div&gt;
 
 block scripts

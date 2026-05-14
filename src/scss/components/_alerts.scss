@@ -77,3 +77,37 @@
     }
   }
 }
+
+// Important Alerts (Solid Background)
+.alert-important {
+  @each $state in map-keys($theme-colors) {
+    &.alert-#{$state} {
+      background-color: var(--#{$prefix}#{$state});
+      border-color: var(--#{$prefix}#{$state});
+      color: #fff;
+      border-left: 0;
+
+      .alert-icon,
+      .alert-link,
+      .btn-close {
+        color: #fff;
+      }
+
+      .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+      }
+    }
+  }
+}
+
+// Minor Alerts (Subtle and compact)
+.alert-minor {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  --#{$prefix}alert-border-left-width: 0.15rem;
+
+  .alert-icon {
+    font-size: 1rem;
+    margin-top: 0.05rem;
+  }
+}
