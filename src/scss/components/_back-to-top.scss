@@ -1,0 +1,67 @@
+// Back to Top Component
+// -----------------------------
+.back-to-top {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1050; // Higher than standard Bootstrap fixed elements
+  width: 50px;
+  height: 50px;
+  background: $white;
+  color: $primary;
+  border-radius: 50%;
+  box-shadow: $box-shadow;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    background: $primary;
+    color: $white;
+  }
+
+  i {
+    font-size: 1.5rem;
+    z-index: 2;
+  }
+
+  .back-to-top-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    z-index: 1;
+
+    circle {
+      fill: none;
+      stroke-width: 3;
+    }
+
+    .back-to-top-circle {
+      stroke: rgba($primary, 0.1);
+    }
+
+    .back-to-top-progress-bar {
+      stroke: $primary;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 0.1s linear;
+    }
+  }
+
+  [data-bs-theme="dark"] & {
+    background: $dark;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
