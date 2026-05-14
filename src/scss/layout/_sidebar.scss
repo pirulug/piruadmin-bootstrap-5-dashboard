@@ -174,23 +174,42 @@ a.sidebar-link {
 .sidebar-close {
   display: none;
   position: absolute;
-  top: 1.3rem;
-  right: 1rem;
+  top: 0.75rem;
+  right: 0.75rem;
   z-index: 10;
-  color: $sidebar-brand-color;
-  transition: $transition-appearance-fast;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  background: rgba($primary, 0.1);
+  color: $primary;
+  border-radius: 50%;
+  transition: $transition-base;
+  text-decoration: none;
 
   &:hover {
-    color: $primary;
+    background: $primary;
+    color: $white;
+    transform: scale(1.1);
   }
 
   @media (max-width: #{map-get($grid-breakpoints, 'lg') - .02px}) {
-    display: block;
+    display: flex;
   }
 
-  svg {
-    width: 24px;
-    height: 24px;
+  i {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  [data-bs-theme="dark"] & {
+    background: rgba($primary, 0.2);
+    color: $primary-300;
+
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
   }
 }
 

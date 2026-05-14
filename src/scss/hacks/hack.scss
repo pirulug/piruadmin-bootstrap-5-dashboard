@@ -77,27 +77,8 @@
   }
 }
 
-// Spinner Hack
-// Loader Spinner
-// -----------------------------
-#spinner {
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+// Back to top
 
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 45px;
-  bottom: 45px;
-  z-index: 99;
-}
 
 
