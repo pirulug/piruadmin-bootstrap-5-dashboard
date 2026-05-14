@@ -7,24 +7,23 @@ nav.navtop
       li.nav-item.dropdown
         a#bd-theme.nav-link.dropdown-toggle(type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)")
           span#bd-theme-icon.theme-icon-active
-            i.bi.bi-sun-fill
           span#bd-theme-text.visually-hidden Toggle theme
         ul.dropdown-menu.dropdown-menu-end(aria-labelledby="bd-theme-text")
           li
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="light" aria-pressed="false")
-              i.bi.bi-sun-fill.opacity-50.me-2
+              span.theme-icon-active.opacity-50.me-2(data-icon="sun")
               | Light
-              i.pr-check.bi.bi-check2.ms-auto.d-none
+              span.pr-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="dark" aria-pressed="false")
-              i.bi.bi-moon-fill.opacity-50.me-2
+              span.theme-icon-active.opacity-50.me-2(data-icon="moon")
               | Dark
-              i.pr-check.bi.bi-check2.ms-auto.d-none
+              span.pr-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="auto" aria-pressed="true")
-              i.bi.bi-circle-half.opacity-50.me-2
+              span.theme-icon-active.opacity-50.me-2(data-icon="auto")
               | Auto
-              i.pr-check.bi.bi-check2.ms-auto.d-none
+              span.pr-check.ms-auto.d-none
 
       li.nav-item.dropdown
         a#alertsDropdown.nav-icon.dropdown-toggle(href="#" data-bs-toggle="dropdown")
