@@ -21,10 +21,15 @@ nav#sidebar.sidebar.js-sidebar
             a.sidebar-link(class=(isActive ? "" : "collapsed") data-bs-target=`#${item.path}` data-bs-toggle="collapse")
               i.align-middle(class="bi bi-" + item.icon)
               span.align-middle= item.title
+              if item.badge 
+                span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
             ul.sidebar-dropdown.list-unstyled.collapse(id=item.path, data-bs-parent="#sidebar", class=(isActive ? "show" : ""))
               each subItem in item.items
                 li.sidebar-item(class=(pageUrl === subItem.path ? "active" : ""))
-                  a.sidebar-link(href=baseUrl + `${subItem.link}.html`)= subItem.title
+                  a.sidebar-link(href=baseUrl + `${subItem.link}.html`)
+                    = subItem.title
+                    if subItem.badge 
+                      span.sidebar-badge.badge.rounded-pill(class="bg-" + (subItem.badgeColor || "primary"))= subItem.badge
 
 
         else if item.header
@@ -35,4 +40,6 @@ nav#sidebar.sidebar.js-sidebar
             a.sidebar-link(href=baseUrl + `${item.link}.html`)
               i.align-middle(class="bi bi-" + item.icon)
               span.align-middle= item.title
+              if item.badge 
+                span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
 

@@ -107,6 +107,13 @@
     "collapsed": true,
     "items": [
       {
+        "title": "Accordion",
+        "path": "ui/accordion",
+        "link": "ui/accordion",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
         "title": "Alerts",
         "path": "ui/alerts",
         "link": "ui/alerts"
