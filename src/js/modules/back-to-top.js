@@ -31,14 +31,29 @@ document.addEventListener("DOMContentLoaded", function () {
       if (footer) {
         const footerRect = footer.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        const defaultBottom = 30;
+        const isMobile = window.innerWidth < 768;
+        const defaultBottom = 70;
+        const finalBottom = 40;
         
         if (footerRect.top < windowHeight) {
-          // Footer is visible, push button up
+          // At the end / Footer visible
+          const buttonHeight = backToTopButton.offsetHeight;
           const footerVisibleHeight = windowHeight - footerRect.top;
-          backToTopButton.style.bottom = `${footerVisibleHeight + defaultBottom}px`;
+          const horizontalCenter = footerRect.left + (footerRect.width / 2);
+          
+          // Position it so only the top half is sticking out from the footer
+          const halfMoonBottom = footerVisibleHeight - (buttonHeight / 2);
+          
+          backToTopButton.style.bottom = `${halfMoonBottom}px`;
+          backToTopButton.style.left = `${horizontalCenter}px`;
+          backToTopButton.style.right = "auto";
+          backToTopButton.style.transform = "translateX(-50%)";
         } else {
+          // Normal scrolling
           backToTopButton.style.bottom = `${defaultBottom}px`;
+          backToTopButton.style.left = "auto";
+          backToTopButton.style.right = "30px";
+          backToTopButton.style.transform = "none";
         }
       }
     };
