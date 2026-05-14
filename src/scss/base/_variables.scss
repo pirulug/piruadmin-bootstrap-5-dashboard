@@ -601,8 +601,8 @@ $icon-size: 1.25rem !default;
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Nunito", sans-serif !default;
-$font-family-monospace: "Fira Code", monospace !default;
+$font-family-sans-serif: "Roboto", sans-serif !default;
+$font-family-monospace: "Google Sans Code", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
@@ -649,7 +649,7 @@ $font-sizes: (
 
 // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer * 0.5 !default;
-$headings-font-family: null !default;
+$headings-font-family: "Inter", sans-serif !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
