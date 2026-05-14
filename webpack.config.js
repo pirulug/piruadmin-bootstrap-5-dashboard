@@ -41,9 +41,6 @@ const jsonData = {
   flags: JSON.parse(
     Fs.readFileSync(Path.resolve(__dirname, "src/data/flag_icons.json"), "utf8")
   ),
-  piruicons: JSON.parse(
-    Fs.readFileSync(Path.resolve(__dirname, "src/data/piruicons.json"), "utf8")
-  ),
 };
 
 function getFiles(dir, allFiles) {
@@ -122,10 +119,6 @@ module.exports = {
     },
     simplemde: {
       import: "./src/plugins/simplemde/simplemde.js",
-      dependOn: "piruadmin",
-    },
-    piruicons: {
-      import: "./src/plugins/piruicons/piruicons.js",
       dependOn: "piruadmin",
     },
     custom: {
