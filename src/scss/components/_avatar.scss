@@ -142,12 +142,51 @@
 }
 
 // ------------------------------
+// Avatar Badge (Brand icons)
+// ------------------------------
+.avatar-badge {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-sm;
+  background-color: $dark;
+  color: $white;
+  border: 2px solid var(--#{$prefix}avatar-ring-color);
+  font-size: 0.6em;
+  z-index: 5;
+
+  i,
+  svg {
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+
+  &.rounded-circle {
+    border-radius: 50%;
+  }
+}
+
+// ------------------------------
 // Colors
 // ------------------------------
 @each $color, $value in $theme-colors {
   .avatar-#{$color} {
     --#{$prefix}avatar-bg: #{$value};
     --#{$prefix}avatar-color: #{color-contrast($value)};
+  }
+}
+
+// Brand Colors
+@each $brand, $value in $social-colors {
+  .avatar-#{$brand} {
+    --#{$prefix}avatar-bg: #{$value};
+    --#{$prefix}avatar-color: #fff;
   }
 }
 

@@ -25,25 +25,65 @@ block content
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseBasic' aria-expanded='false')
               i.bi.bi-code-slash.me-1
               | View Code
-          .collapse#collapseBasic.mt-3
-            .demo-code-preview(data-label='HTML EXAMPLE')
-              button.copy-btn(type='button') Copy
-              pre.language-html
-                code.language-html.
-                  &lt;!-- Image Avatar --&gt;
-                  &lt;figure class="avatar"&gt;
-                    &lt;img src="..." alt="..."&gt;
-                  &lt;/figure&gt;
+          .collapse#collapseBasic
+            .pt-3
+              .demo-code-preview(data-label='HTML EXAMPLE')
+                button.copy-btn(type='button') Copy
+                pre.language-html
+                  code.language-html.
+                    &lt;!-- Image Avatar --&gt;
+                    &lt;figure class="avatar"&gt;
+                      &lt;img src="..." alt="..."&gt;
+                    &lt;/figure&gt;
 
-                  &lt;!-- Text Avatar --&gt;
-                  &lt;figure class="avatar"&gt;
-                    &lt;span&gt;AB&lt;/span&gt;
-                  &lt;/figure&gt;
+                    &lt;!-- Text Avatar --&gt;
+                    &lt;figure class="avatar"&gt;
+                      &lt;span&gt;AB&lt;/span&gt;
+                    &lt;/figure&gt;
 
-                  &lt;!-- Icon Avatar --&gt;
-                  &lt;figure class="avatar"&gt;
-                    &lt;i class="bi bi-person"&gt;&lt;/i&gt;
-                  &lt;/figure&gt;
+    // Brand Avatars
+    .col-md-6
+      .card.h-100
+        .card-body
+          h5.card-title Brand Avatars
+          p.text-muted Avatars with brand indicators as badges.
+          .d-flex.justify-content-center.flex-wrap.gap-4.py-4
+            figure.avatar.avatar-xl.mb-0
+              img(src='https://i.pravatar.cc/150?u=1' alt='User')
+              span.avatar-badge.avatar-netflix: i.bi.bi-play-fill
+            figure.avatar.avatar-xl.mb-0
+              img(src='https://i.pravatar.cc/150?u=2' alt='User')
+              span.avatar-badge.avatar-amazon: i.bi.bi-amazon
+            figure.avatar.avatar-xl.mb-0
+              img(src='https://i.pravatar.cc/150?u=3' alt='User')
+              span.avatar-badge.avatar-facebook: i.bi.bi-messenger
+            figure.avatar.avatar-xl.mb-0
+              img(src='https://i.pravatar.cc/150?u=4' alt='User')
+              span.avatar-badge.avatar-github: i.bi.bi-github
+            figure.avatar.avatar-xl.mb-0
+              img(src='https://i.pravatar.cc/150?u=5' alt='User')
+              span.avatar-badge.avatar-twitch: i.bi.bi-twitch
+          .text-center.mt-2
+            button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseBrands' aria-expanded='false')
+              i.bi.bi-code-slash.me-1
+              | View Code
+          .collapse#collapseBrands
+            .pt-3
+              .demo-code-preview(data-label='HTML EXAMPLE')
+                button.copy-btn(type='button') Copy
+                pre.language-html
+                  code.language-html.
+                    &lt;figure class="avatar avatar-xl"&gt;
+                      &lt;img src="..." alt="..."&gt;
+                      &lt;span class="avatar-badge avatar-netflix"&gt;
+                        &lt;i class="bi bi-play-fill"&gt;&lt;/i&gt;
+                      &lt;/span&gt;
+                    &lt;/figure&gt;
+
+                    &lt;!-- Icon Avatar --&gt;
+                    &lt;figure class="avatar"&gt;
+                      &lt;i class="bi bi-person"&gt;&lt;/i&gt;
+                    &lt;/figure&gt;
 
     // Shapes
     .col-md-6
