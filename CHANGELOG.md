@@ -119,3 +119,40 @@
     - Added support for circular-clipped `<img>` markers for user avatars.
     - Migrated all timeline iconography to the **PiruAwesome** (`pr-`) library.
   - **Interactive Demos:** Added support for PrismJS code blocks and copy-to-clipboard functionality to timeline events.
+
+## [v2.2.0] - 18/05/2026
+
+### Added
+- Typography and color pages
+- Full authentication system pages
+- Two-step verification (2FA) page
+- Error pages (e.g., 404)
+- User authentication flows and account settings view
+- WYSIWYG editor demo page
+- Flatpickr form component integration
+- SweetAlert2 custom theme styles
+- New dashboard layout
+- Responsive sidebar with toggle support
+- Dark mode support for SimpleMDE editor
+
+### Improved
+- Navigation menu structure and configuration
+- Menu entries for new modules (forms, auth, components)
+- Form inputs with password visibility toggle
+- Sidebar UX and responsiveness
+
+### Fixed
+- Back-to-top button dynamic centering and half-moon visual effect
+
+### Refactored
+- Removed aggressive list resets to preserve editor formatting
+
+### Removed
+- Deprecated authentication utility module
+- Unused font files (licenses and redundant CSS)
+
+### Maintenance
+- Suppressed Sass deprecation warnings in Webpack
+
+### Misc
+- General project update
