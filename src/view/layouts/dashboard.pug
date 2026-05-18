@@ -12,7 +12,8 @@ html(lang="es")
 
     meta(name="robots" content="index, follow")
 
-    meta(name="theme-color" content="#0d6efd")
+    // Theme Color
+    meta(name="theme-color" content="#ff0055")
 
     // Primary Meta Tags
     title #{pageName} - Free Bootstrap 5 Admin Template | #{siteName}
@@ -46,13 +47,13 @@ html(lang="es")
     link(rel="icon" type="image/png" sizes="16x16" href=assets + "img/favicon/favicon-16x16.png")
     link(rel="manifest" href=assets + "img/favicon/site.webmanifest")
 
-    // Css Bootstrap
-    //- link(rel="stylesheet" href=assets + "plugins/fontawesome.css")
+    // Icons
     link(rel="stylesheet" href=assets + "plugins/bootstrapicons.css")
-    link(rel="stylesheet" href=assets + "plugins/piruicons.css")
 
+    // Css
     link(rel="stylesheet" href=assets + "css/piruadmin.css")
 
+    // Theme
     script.
       (function () {
         const storedTheme = localStorage.getItem("theme");
@@ -113,7 +114,6 @@ html(lang="es")
     //- include ../includes/dark-ligth
 
     // Js Bootstrap
-    //- script(src=assets + "plugins/feathericons.js")
     script(src=assets + "js/piruadmin.js")
 
 

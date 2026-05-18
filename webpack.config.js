@@ -310,6 +310,8 @@ module.exports = {
   },
   ignoreWarnings: [
     (warning) =>
+      /is deprecated/.test(warning.message) ||
+      /deprecated/.test(warning.message) ||
       /Global built-in functions are deprecated/.test(warning.message) ||
       /Sass @import rules are deprecated/.test(warning.message) ||
       /deprecation warnings omitted/.test(warning.message),

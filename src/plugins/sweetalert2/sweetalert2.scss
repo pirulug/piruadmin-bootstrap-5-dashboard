@@ -1,12 +1,31 @@
-@import "sweetalert2/src/sweetalert2";
+// 1. Functions
+@import "../../../node_modules/bootstrap/scss/_functions";
 
-// VARIABLES
-@import "bootstrap/scss/_functions";
-@import "bootstrap/scss/_variables";
-@import "bootstrap/scss/_variables-dark";
-@import "bootstrap/scss/_mixins";
+// 2. Base variables (custom theme overrides)
 @import "../../scss/base/variables";
 @import "../../scss/base/variables-dark";
+
+// 3. Bootstrap core variables, maps, mixins, utilities
+@import "../../../node_modules/bootstrap/scss/_variables";
+@import "../../../node_modules/bootstrap/scss/_variables-dark";
+@import "../../../node_modules/bootstrap/scss/_maps";
+@import "../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../node_modules/bootstrap/scss/_utilities";
+
+// Override SweetAlert2 variables with our Bootstrap/Base variables
+$swal2-confirm-button-background-color: $primary;
+$swal2-cancel-button-background-color: $secondary;
+$swal2-deny-button-background-color: $danger;
+
+$swal2-success: $success;
+$swal2-success-border: rgba($swal2-success, 0.3);
+$swal2-error: $danger;
+$swal2-warning: $warning;
+$swal2-info: $info;
+$swal2-question: $secondary;
+
+// 4. Import SweetAlert2 SASS
+@import "../../../node_modules/sweetalert2/src/sweetalert2";
 
 .swal2-modal {
   background: $body-bg;
@@ -18,6 +37,115 @@
     .swal2-modal {
       background: $body-bg-dark;
       color: $body-color-dark;
+    }
+  }
+}
+
+// Custom SweetAlert2 Buttons with Bootstrap theme colors
+.swal2-styled {
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  padding: $btn-padding-y $btn-padding-x !important;
+  font-size: $btn-font-size !important;
+  border-radius: $btn-border-radius !important;
+  transition: $btn-transition;
+  box-shadow: none !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &.swal2-confirm {
+    background-color: $primary !important;
+    border: 1px solid $primary !important;
+    color: $white !important;
+
+    &:hover {
+      background-color: shade-color($primary, 10%) !important;
+      border-color: shade-color($primary, 12.5%) !important;
+    }
+  }
+
+  &.swal2-cancel {
+    background-color: $secondary !important;
+    border: 1px solid $secondary !important;
+    color: $white !important;
+
+    &:hover {
+      background-color: shade-color($secondary, 10%) !important;
+      border-color: shade-color($secondary, 12.5%) !important;
+    }
+  }
+
+  &.swal2-deny {
+    background-color: $danger !important;
+    border: 1px solid $danger !important;
+    color: $white !important;
+
+    &:hover {
+      background-color: shade-color($danger, 10%) !important;
+      border-color: shade-color($danger, 12.5%) !important;
+    }
+  }
+}
+
+// Custom SweetAlert2 Icons with Bootstrap theme colors
+.swal2-icon {
+  &.swal2-success {
+    border-color: $success !important;
+    color: $success !important;
+
+    .swal2-success-ring {
+      border-color: rgba($success, 0.3) !important;
+    }
+
+    [class^="swal2-success-line"] {
+      background-color: $success !important;
+    }
+
+    .swal2-icon-content {
+      color: $success !important;
+    }
+  }
+
+  &.swal2-error {
+    border-color: $danger !important;
+    color: $danger !important;
+
+    [class^="swal2-x-mark-line"] {
+      background-color: $danger !important;
+    }
+
+    .swal2-icon-content {
+      color: $danger !important;
+    }
+  }
+
+  &.swal2-warning {
+    border-color: $warning !important;
+    color: $warning !important;
+
+    .swal2-icon-content {
+      color: $warning !important;
+    }
+  }
+
+  &.swal2-info {
+    border-color: $info !important;
+    color: $info !important;
+
+    .swal2-icon-content {
+      color: $info !important;
+    }
+  }
+
+  &.swal2-question {
+    border-color: $secondary !important;
+    color: $secondary !important;
+
+    .swal2-icon-content {
+      color: $secondary !important;
     }
   }
 }
