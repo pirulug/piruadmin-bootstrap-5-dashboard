@@ -1,113 +1,314 @@
-// Flatpickr
-@import "flatpickr/dist/flatpickr";
+// Functions
+@import "../../../node_modules/bootstrap/scss/_functions";
 
-// VARIABLES
-// @import "~bootstrap/scss/_variables";
-// @import "~bootstrap/scss/_variables-dark";
+// Base variables (custom theme overrides)
 @import "../../scss/base/variables";
 @import "../../scss/base/variables-dark";
 
-$flatpickr-tile-height: 45px;
+// Bootstrap core variables, maps, mixins, utilities
+@import "../../../node_modules/bootstrap/scss/_variables";
+@import "../../../node_modules/bootstrap/scss/_variables-dark";
+@import "../../../node_modules/bootstrap/scss/_maps";
+@import "../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../node_modules/bootstrap/scss/_utilities";
 
-.flatpickr-calendar.inline {
-  background: transparent;
-  box-shadow: none;
-  width: 100%;
+// Flatpickr
+@import "../../../node_modules/flatpickr/dist/flatpickr";
 
-  .flatpickr-days {
-    width: 100%;
-  }
 
-  .dayContainer {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-  }
+// Custom Flatpickr styling overrides for premium flat look, dark mode and $primary integration
+.flatpickr-calendar {
+  background: $body-bg;
+  border: 1px solid $input-border-color;
+  box-shadow: none !important; // No Shadows rule
+  color: $body-color;
 
-  .flatpickr-day {
-    border-radius: $border-radius;
-    max-width: inherit;
-    height: $flatpickr-tile-height;
-    line-height: $flatpickr-tile-height;
-
-    &.today {
-      border: 0;
-
-      &:before {
-        content: "";
-        display: inline-block;
-        border-color: rgba(0, 0, 0, 0.2) transparent $primary;
-        border-style: solid;
-        border-width: 0 0 7px 7px;
-        position: absolute;
-        bottom: 4px;
-        right: 4px;
-      }
-
-      &.selected:before {
-        border-color: rgba(0, 0, 0, 0.2) transparent $white;
-      }
-
-      &:hover {
-        background: #e6e6e6;
-        color: $black;
-      }
-    }
-
-    &.selected {
-      &,
-      &:hover,
-      &:focus {
-        border-radius: $border-radius;
-        background: $primary;
-        color: $white;
-      }
-    }
-  }
-
-  .flatpickr-weekdays {
-    height: $flatpickr-tile-height;
-  }
-  .flatpickr-weekday {
-    height: $flatpickr-tile-height;
-    line-height: $flatpickr-tile-height;
+  &.arrowTop:before,
+  &.arrowTop:after,
+  &.arrowBottom:before,
+  &.arrowBottom:after {
+    border-top-color: $input-border-color;
+    border-bottom-color: $input-border-color;
   }
 
   .flatpickr-months {
     .flatpickr-month {
-      height: $flatpickr-tile-height;
+      color: $body-color;
+      fill: $body-color;
     }
 
     .flatpickr-prev-month,
     .flatpickr-next-month {
-      height: $flatpickr-tile-height;
+      color: $body-color;
+      fill: $body-color;
+
+      &:hover {
+        background: $body-bg-alt;
+        color: $body-color;
+        svg {
+          fill: $body-color;
+        }
+      }
     }
   }
 
   .flatpickr-current-month {
-    padding-top: 0;
-    line-height: $flatpickr-tile-height;
-    height: $flatpickr-tile-height;
+    color: $body-color;
 
     .flatpickr-monthDropdown-months {
-      appearance: none;
+      color: $body-color;
+      background: $body-bg;
+
+      &:hover {
+        background: $body-bg-alt;
+      }
     }
 
-    .flatpickr-monthDropdown-months,
     input.cur-year {
-      font-weight: $font-weight-normal;
-      font-size: $h4-font-size;
+      color: $body-color;
     }
   }
 
-  .flatpickr-prev-month,
-  .flatpickr-next-month {
-    width: 45px;
-    border-radius: $border-radius;
+  span.flatpickr-weekday {
+    color: $gray-600;
+  }
 
-    &:hover {
-      background: #e6e6e6;
-      color: $black;
+  .numInputWrapper {
+    span {
+      border-color: transparent;
+      border-left: 1px solid $input-border-color;
+
+      &:hover {
+        background: $body-bg-alt;
+      }
+
+      &.arrowUp:after {
+        border-bottom-color: $body-color !important;
+      }
+
+      &.arrowDown:after {
+        border-top-color: $body-color !important;
+      }
+    }
+  }
+
+  .flatpickr-day {
+    color: $body-color;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      background: $body-bg-alt;
+      color: $body-color;
+    }
+
+    &.today {
+      border-color: $primary;
+
+      &:hover,
+      &:focus {
+        border-color: $primary;
+        background: $body-bg-alt;
+        color: $body-color;
+      }
+    }
+
+    &.selected,
+    &.startRange,
+    &.endRange,
+    &.selected.prevMonthDay,
+    &.selected.nextMonthDay,
+    &.startRange.prevMonthDay,
+    &.startRange.nextMonthDay,
+    &.endRange.prevMonthDay,
+    &.endRange.nextMonthDay {
+      background: $primary !important;
+      border-color: $primary !important;
+      color: $white !important;
+
+      &:hover,
+      &:focus {
+        background: $primary !important;
+        border-color: $primary !important;
+        color: $white !important;
+      }
+    }
+
+    &.inRange,
+    &.prevMonthDay.inRange,
+    &.nextMonthDay.inRange,
+    &.today.inRange,
+    &.prevMonthDay.today.inRange,
+    &.nextMonthDay.today.inRange {
+      background: rgba($primary, 0.1) !important;
+      border-color: transparent !important;
+      color: $primary !important;
+    }
+
+    &.prevMonthDay,
+    &.nextMonthDay {
+      color: $gray-400;
+    }
+
+    &.flatpickr-disabled,
+    &.flatpickr-disabled:hover {
+      color: rgba($body-color, 0.3);
+    }
+  }
+
+  .flatpickr-time {
+    border-top: 1px solid $input-border-color;
+
+    input {
+      color: $body-color;
+
+      &:hover,
+      &:focus {
+        background: $body-bg-alt;
+      }
+    }
+
+    .flatpickr-am-pm {
+      color: $body-color;
+
+      &:hover,
+      &:focus {
+        background: $body-bg-alt;
+      }
     }
   }
 }
+
+// Dark Mode Support
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .flatpickr-calendar {
+      background: $body-bg-dark;
+      border-color: $gray-800;
+      color: $white;
+
+      &.arrowTop:before,
+      &.arrowTop:after,
+      &.arrowBottom:before,
+      &.arrowBottom:after {
+        border-top-color: $gray-800;
+        border-bottom-color: $gray-800;
+      }
+
+      .flatpickr-months {
+        .flatpickr-month {
+          color: $white;
+          fill: $white;
+        }
+
+        .flatpickr-prev-month,
+        .flatpickr-next-month {
+          color: $white;
+          fill: $white;
+
+          &:hover {
+            background: $body-bg-alt-dark;
+            color: $white;
+            svg {
+              fill: $white;
+            }
+          }
+        }
+      }
+
+      .flatpickr-current-month {
+        color: $white;
+
+        .flatpickr-monthDropdown-months {
+          color: $white;
+          background: $body-bg-dark;
+
+          &:hover {
+            background: $body-bg-alt-dark;
+          }
+        }
+
+        input.cur-year {
+          color: $white;
+        }
+      }
+
+      span.flatpickr-weekday {
+        color: $gray-400;
+      }
+
+      .numInputWrapper {
+        span {
+          border-color: transparent;
+          border-left: 1px solid $gray-800;
+
+          &:hover {
+            background: $body-bg-alt-dark;
+          }
+
+          &.arrowUp:after {
+            border-bottom-color: $white !important;
+          }
+
+          &.arrowDown:after {
+            border-top-color: $white !important;
+          }
+        }
+      }
+
+      .flatpickr-day {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          background: $body-bg-alt-dark;
+          color: $white;
+        }
+
+        &.today {
+          border-color: $primary;
+
+          &:hover,
+          &:focus {
+            border-color: $primary;
+            background: $body-bg-alt-dark;
+            color: $white;
+          }
+        }
+
+        &.prevMonthDay,
+        &.nextMonthDay {
+          color: $gray-700;
+        }
+
+        &.flatpickr-disabled,
+        &.flatpickr-disabled:hover {
+          color: rgba($white, 0.3);
+        }
+      }
+
+      .flatpickr-time {
+        border-top-color: $gray-800;
+
+        input {
+          color: $white;
+
+          &:hover,
+          &:focus {
+            background: $body-bg-alt-dark;
+          }
+        }
+
+        .flatpickr-am-pm {
+          color: $white;
+
+          &:hover,
+          &:focus {
+            background: $body-bg-alt-dark;
+          }
+        }
+      }
+    }
+  }
+}
+

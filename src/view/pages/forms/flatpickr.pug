@@ -1,0 +1,182 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Flatpickr"
+  - pageUrl = "forms/flatpickr"
+
+block styles 
+  link(href=assets + "plugins/flatpickr.css" rel="stylesheet" type="text/css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+
+block scripts 
+  script(src=assets + "plugins/flatpickr.js")
+  script(src=assets + "plugins/prismjs.js")
+
+  script.
+    // Basic date picker
+    flatpickr("input[name=basic]");
+
+    // DateTime picker
+    flatpickr("input[name=datetime]", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i"
+    });
+
+    // Human-friendly date picker
+    flatpickr("input[name=human]", {
+      altInput: true,
+      altFormat: "F j, Y",
+      dateFormat: "Y-m-d"
+    });
+
+    // Date range picker
+    flatpickr("input[name=range]", {
+      mode: "range"
+    });
+
+    // Inline calendar
+    flatpickr("#inline-calendar", {
+      inline: true
+    });
+
+block content
+
+  // =====================================================
+  // Basic Flatpickr
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Basic
+    .card-body
+      p.text-secondary
+        | Basic date picker using 
+        code flatpickr(input)
+        |  with default settings.
+      input.form-control(
+        name="basic"
+        placeholder="Select Date"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlatpickrBasic" aria-expanded="false" aria-controls="collapseFlatpickrBasic")
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseFlatpickrBasic.mt-3
+        .demo-code-preview(data-label="CODE EXAMPLE")
+          button.copy-btn(type="button") Copy
+          pre.language-js
+            code.language-js.
+              flatpickr("input[name=basic]");
+
+  // =====================================================
+  // DateTime Picker
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Date & Time
+    .card-body
+      p.text-secondary
+        | Date and Time picker with 
+        code enableTime: true
+        | .
+      input.form-control(
+        name="datetime"
+        placeholder="Select Date & Time"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlatpickrDateTime" aria-expanded="false" aria-controls="collapseFlatpickrDateTime")
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseFlatpickrDateTime.mt-3
+        .demo-code-preview(data-label="CODE EXAMPLE")
+          button.copy-btn(type="button") Copy
+          pre.language-js
+            code.language-js.
+              flatpickr("input[name=datetime]", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i"
+              });
+
+  // =====================================================
+  // Human-friendly Date Format
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Human-friendly Format
+    .card-body
+      p.text-secondary
+        | Displays a user-friendly date format while submitting a standard database format.
+      input.form-control(
+        name="human"
+        placeholder="Select Date"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlatpickrHuman" aria-expanded="false" aria-controls="collapseFlatpickrHuman")
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseFlatpickrHuman.mt-3
+        .demo-code-preview(data-label="CODE EXAMPLE")
+          button.copy-btn(type="button") Copy
+          pre.language-js
+            code.language-js.
+              flatpickr("input[name=human]", {
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d"
+              });
+
+  // =====================================================
+  // Date Range Picker
+  // =====================================================
+  .card.mb-3
+    .card-header
+      h3.header-title Range Selector
+    .card-body
+      p.text-secondary
+        | Select a range of dates using 
+        code mode: "range"
+        | .
+      input.form-control(
+        name="range"
+        placeholder="Select Date Range"
+      )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlatpickrRange" aria-expanded="false" aria-controls="collapseFlatpickrRange")
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseFlatpickrRange.mt-3
+        .demo-code-preview(data-label="CODE EXAMPLE")
+          button.copy-btn(type="button") Copy
+          pre.language-js
+            code.language-js.
+              flatpickr("input[name=range]", {
+                mode: "range"
+              });
+
+  // =====================================================
+  // Inline Calendar
+  // =====================================================
+  .card
+    .card-header
+      h3.header-title Inline Calendar
+    .card-body
+      p.text-secondary
+        | Render the calendar directly on the page instead of an input popover using 
+        code inline: true
+        | .
+      .flatpickr-calendar-wrapper
+        input#inline-calendar.form-control(
+          type="text"
+          placeholder="Inline Calendar"
+        )
+      .text-center.mt-3
+        button.btn.btn-sm.btn-outline-secondary(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlatpickrInline" aria-expanded="false" aria-controls="collapseFlatpickrInline")
+          i.bi.bi-code-slash.me-1
+          | View Code
+      .collapse#collapseFlatpickrInline.mt-3
+        .demo-code-preview(data-label="CODE EXAMPLE")
+          button.copy-btn(type="button") Copy
+          pre.language-js
+            code.language-js.
+              flatpickr("#inline-calendar", {
+                inline: true
+              });

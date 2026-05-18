@@ -190,6 +190,13 @@
         "title": "Tagify",
         "path": "forms/tagify",
         "link": "forms/tagify"
+      },
+      {
+        "title": "Flatpickr",
+        "path": "forms/flatpickr",
+        "link": "forms/flatpickr",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },

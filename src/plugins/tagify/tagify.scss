@@ -1,114 +1,88 @@
-// @import "~@yaireo/tagify/src/tagify.scss";
-@import "../../../node_modules/@yaireo/tagify/dist/tagify.css";
+// Functions
+@import "../../../node_modules/bootstrap/scss/_functions";
 
-// VARIABLES
-@import "bootstrap/scss/_functions";
+// Base variables (custom theme overrides)
 @import "../../scss/base/variables";
 @import "../../scss/base/variables-dark";
-@import "bootstrap/scss/_variables";
-@import "bootstrap/scss/_variables-dark";
-@import "bootstrap/scss/_mixins";
 
+// Bootstrap core variables, maps, mixins, utilities
+@import "../../../node_modules/bootstrap/scss/_variables";
+@import "../../../node_modules/bootstrap/scss/_variables-dark";
+@import "../../../node_modules/bootstrap/scss/_maps";
+@import "../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../node_modules/bootstrap/scss/_utilities";
+
+// Import original Tagify styles
+@import "../../../node_modules/@yaireo/tagify/dist/tagify.css";
+
+// Premium Custom Tagify Integration with Light & Dark Modes + $primary
 .tagify {
-  padding: $input-padding-y $input-padding-x;
-  font-family: $input-font-family;
-  @include font-size($input-font-size);
-  font-weight: $input-font-weight;
-  line-height: $input-line-height;
-  color: $input-color;
+  // Base properties
+  --tags-border-color: #{$input-border-color};
+  --tags-hover-border-color: #{$primary};
+  --tags-focus-border-color: #{$primary};
+
+  --tag-bg: #{$body-bg-alt};
+  --tag-hover: #{shade-color($body-bg-alt, 5%)};
+  --tag-text-color: #{$body-color};
+  --tag-text-color--active: #{$white};
+
+  --tag-remove-btn-color: #{$body-color};
+  --tag-remove-btn-bg--hover: #{$danger};
+
+  --placeholder-color: #{$gray-500};
+  --placeholder-color-focus: #{$gray-600};
+
   background-color: $input-bg;
-  border: $input-border-width solid $input-border-color;
-  @include border-radius($input-border-radius, 0);
-  @include box-shadow($input-box-shadow);
-  @include transition($input-transition);
+  transition: border-color 0.15s ease-in-out;
+  box-shadow: none !important; // No Shadows rule
 
   &.tagify--focus {
-    color: $input-focus-color;
-    background-color: $input-focus-bg;
-    border-color: $input-focus-border-color;
-    outline: 0;
-    @if $enable-shadows {
-      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
-    } @else {
-      box-shadow: $input-focus-box-shadow;
+    border-color: $primary;
+    box-shadow: none !important; // No Shadows rule
+  }
+
+  .tagify__tag__removeBtn {
+    transition: background-color 0.15s, color 0.15s;
+
+    &:hover {
+      background: $danger !important;
+      color: $white !important;
     }
   }
 }
 
-.tagify__tag {
-  > div {
-    background: $body-bg-alt;
-    color: $body-color;
-    border-radius: $border-radius;
-
-    &::before {
-      box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset;
-      background: $body-bg-alt;
-    }
-  }
-
-  &.tagify--notAllowed:not(.tagify__tag--editable) div::before {
-    box-shadow: none !important;
-  }
-
-  &:focus div::before,
-  &:hover:not([readonly]) div::before {
-    box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset;
-  }
-}
-
-.tagify__tag__removeBtn {
-  color: $body-color;
-  background: transparent;
-  font-size: 1rem;
-  padding: 0.6rem;
-
-  &:hover {
-    background: $danger;
-    color: $white;
-  }
-}
-
-.tagify__tag__removeBtn:hover + div::before {
-  box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt inset !important;
-}
-
-.tagify__tag__avatar-wrap img {
-  width: 16px;
-  height: 16px;
-  margin-right: 9px;
-  border-radius: 6px;
-}
-
-.tagify__tag:hover .tagify__tag__avatar-wrap {
-  transform: scale(1.6) translateX(-10%);
-}
-
-.tagify__input::before {
-  color: $gray-500;
-  margin-top: 3px;
-  @include transition(opacity 0.25s ease);
-}
-
-.tagify__input:focus::before {
-  color: $gray-400;
-}
-
+// Dropdown/Autocomplete Panel
 .tagify__dropdown__wrapper {
   background: $body-bg;
-  border-color: $border-color;
-  box-shadow: $box-shadow;
+  border-color: $input-border-color;
+  box-shadow: none !important; // No Shadows rule
 }
 
-.tagify__dropdown__item--active {
-  background: $primary;
-  color: $white;
+.tagify__dropdown__item {
+  transition: background-color 0.15s, color 0.15s;
+
+  &:hover,
+  &.tagify__dropdown__item--active {
+    background: $primary !important;
+    color: $white !important;
+  }
 }
 
+// Dark Mode Support
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .tagify {
-      color: $body-color-dark;
+      --tags-border-color: #{$gray-800};
+      --tags-hover-border-color: #{$primary};
+      --tags-focus-border-color: #{$primary};
+
+      --tag-bg: #{$body-bg-alt-dark};
+      --tag-hover: #{lighten($body-bg-alt-dark, 5%)};
+      --tag-text-color: #{$white};
+
+      --tag-remove-btn-color: #{$gray-400};
+
       background-color: $body-bg-dark;
       border-color: $gray-800;
 
@@ -117,63 +91,22 @@
       }
     }
 
-    .tagify__tag {
-      > div {
-        background: $body-bg-alt-dark;
-        color: $body-color-dark;
-
-        &::before {
-          box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
-            inset;
-          background: $body-bg-alt-dark;
-        }
-      }
-
-      &:focus div::before,
-      &:hover:not([readonly]) div::before {
-        box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
-          inset;
-      }
-    }
-
-    .tagify__tag__removeBtn {
-      color: $body-color-dark;
-
-      &:hover {
-        background: $danger;
-        color: $white;
-      }
-    }
-
-    .tagify__tag__removeBtn:hover + div::before {
-      box-shadow: 0 0 0 var(--tag-inset-shadow-size, 1.1em) $body-bg-alt-dark
-        inset !important;
-    }
-
-    .tagify__input::before {
-      color: $gray-500;
-      opacity: 0.7;
-    }
-
-    .tagify__input:focus::before {
-      color: $gray-400;
-      opacity: 1;
-    }
-
     .tagify__dropdown__wrapper {
       background: $body-bg-dark;
       border-color: $gray-800;
-      color: $body-color-dark;
-    }
-
-    .tagify__dropdown__item:hover {
-      background: $body-bg-alt-dark;
-      color: $body-color-dark;
-    }
-
-    .tagify__dropdown__item--active {
-      background: $primary;
       color: $white;
+    }
+
+    .tagify__dropdown__item {
+      &:hover {
+        background: #{$body-bg-alt-dark} !important;
+        color: #{$white} !important;
+      }
+
+      &.tagify__dropdown__item--active {
+        background: $primary !important;
+        color: $white !important;
+      }
     }
   }
 }
