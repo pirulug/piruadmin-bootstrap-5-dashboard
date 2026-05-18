@@ -190,11 +190,24 @@
         "title": "Tagify",
         "path": "forms/tagify",
         "link": "forms/tagify"
+      }
+    ]
+  },
+  {
+    "title": "Editors",
+    "path": "editors",
+    "icon": "pencil-square",
+    "collapsed": true,
+    "items": [
+      {
+        "title": "SimpleMDE",
+        "path": "editors/simplemde",
+        "link": "editors/simplemde"
       },
       {
         "title": "Wysi Editor",
-        "path": "forms/editor",
-        "link": "forms/editor",
+        "path": "editors/editor",
+        "link": "editors/editor",
         "badge": "New",
         "badgeColor": "primary"
       }
@@ -220,6 +233,11 @@
         "title": "Bootstrap Icons",
         "path": "icons/bootstrap",
         "link": "icons/bootstrap"
+      },
+      {
+        "title": "Flag Icons",
+        "path": "icons/flag-icons",
+        "link": "icons/flag-icons"
       }
     ]
   },
@@ -245,11 +263,6 @@
         "link": "plugins/charts"
       },
       {
-        "title": "Datatable",
-        "path": "plugins/datatable",
-        "link": "plugins/datatable"
-      },
-      {
         "title": "Maps",
         "path": "plugins/maps-google",
         "link": "plugins/maps-google"
@@ -258,16 +271,6 @@
         "title": "Lite YouTube",
         "path": "plugins/lite-youtube",
         "link": "plugins/lite-youtube"
-      },
-      {
-        "title": "Flag Icons",
-        "path": "plugins/flag-icons",
-        "link": "plugins/flag-icons"
-      },
-      {
-        "title": "SimpleMDE",
-        "path": "plugins/simplemde",
-        "link": "plugins/simplemde"
       }
     ]
   }

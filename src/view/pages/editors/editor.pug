@@ -1,0 +1,74 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Wysi Editor"
+  - pageUrl = "editors/editor"
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/wysi.css")
+
+block content
+  .card.mb-3
+    .card-header.d-flex.justify-content-between.align-items-center
+      div
+        h5.card-title.mb-0 Wysi Editor
+        p.text-body-secondary.small.mb-0 Modern and lightweight rich text editor for your applications.
+      a.btn.btn-sm.btn-outline-secondary.rounded-pill(href="https://github.com/mdbassit/Wysi", target="_blank")
+        i.bi.bi-github.me-1
+        | GitHub Repo
+    .card-body
+      .mb-4
+        label.form-label.fw-bold Compose your message
+        textarea#my-editor.
+          <h2>Welcome to PiruAdmin</h2>
+          <p>You can now use <strong>Wysi</strong> to create rich content easily.</p>
+          <p>Features integrated in this demo:</p>
+          <ul>
+            <li>Dynamic theme support (Dark/Light)</li>
+            <li>Custom toolbar configuration</li>
+            <li>Responsive design</li>
+          </ul>
+      
+  .bg-body.p-3.rounded.d-flex.justify-content-end.gap-2.sticky-bottom
+    button.btn.btn-outline-secondary.text-uppercase.fw-bold(type="button") 
+      i.bi.bi-arrow-left.me-2
+      | Cancel
+    button#save-content.btn.btn-primary.text-uppercase.fw-bold(type="button") 
+      i.bi.bi-save.me-2
+      | Publish
+
+block scripts
+  script(src=assets + "plugins/wysi.js")
+  script.
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof Wysi === "undefined") return;
+
+      const isDark = document.documentElement.getAttribute("data-bs-theme") === "dark";
+
+      Wysi({
+        el: "#my-editor",
+        darkMode: isDark,
+        height: 400,
+        autoGrow: true,
+        tools: [
+          "format", "|", 
+          "bold", "italic", "underline", "strike", "|", 
+          { label: "Alignment", items: ["alignLeft", "alignCenter", "alignRight", "alignJustify"] }, "|", 
+          "ul", "ol", "|", 
+          "link", "image", "hr", "quote", "|", 
+          "removeFormat"
+        ]
+      });
+
+      document.getElementById("save-content").addEventListener("click", function() {
+        const content = document.querySelector("#my-editor").value;
+        if (typeof Swal !== "undefined") {
+          Swal.fire({
+            title: "Success!",
+            text: "Content saved successfully.",
+            icon: "success",
+            confirmButtonColor: "#ff0055"
+          });
+        }
+      });
+    });

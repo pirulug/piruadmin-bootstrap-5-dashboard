@@ -109,10 +109,6 @@ module.exports = {
       import: "./src/plugins/prismjs/prismjs.js",
       dependOn: "piruadmin",
     },
-    datatables: {
-      import: "./src/plugins/datatables/datatables.js",
-      dependOn: "piruadmin",
-    },
     flagicons: {
       import: "./src/plugins/flagicons/flagicons.js",
       dependOn: "piruadmin",
@@ -123,6 +119,10 @@ module.exports = {
     },
     custom: {
       import: "./src/plugins/custom/custon.js",
+      dependOn: "piruadmin",
+    },
+    wysi: {
+      import: ["./src/plugins/wysi/wysi.js", "./src/plugins/wysi/wysi.css"],
       dependOn: "piruadmin",
     },
   },
