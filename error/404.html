@@ -71,8 +71,7 @@
       href="../assets/img/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
-    <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
     <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <script>
       (function () {
@@ -89,7 +88,7 @@
         <div class="row justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-6 text-center">
             <div class="mb-4">
-              <i class="fa fa-exclamation-triangle fa-5x text-warning mb-3" aria-hidden="true"></i>
+              <i class="bi bi-emoji-frown display-1 text-primary mb-3" aria-hidden="true"></i>
             </div>
             <h1 class="display-1 fw-bold text-primary">404</h1>
             <h2 class="h1 mb-3">Page not found.</h2>
@@ -99,11 +98,11 @@
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <a class="btn btn-primary btn-lg px-4 gap-3" href="../dashboard.html">
-                <i class="fa fa-home me-2"></i>
+                <i class="bi bi-house me-2"></i>
                 Return to website
               </a>
               <a class="btn btn-outline-secondary btn-lg px-4" href="javascript:history.back()">
-                <i class="fa fa-arrow-left me-2"></i>
+                <i class="bi bi-arrow-left me-2"></i>
                 Go Back
               </a>
             </div>
@@ -121,10 +120,10 @@
         data-bs-toggle="dropdown"
         aria-label="Toggle theme (auto)"
       >
-        <span class="theme-icon-active mr-1" id="bd-theme-icon"><i class="fa fa-sun"></i></span>
+        <span class="theme-icon-active me-2" id="bd-theme-icon"></span>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
         <li>
           <button
             class="dropdown-item d-flex align-items-center"
@@ -132,9 +131,9 @@
             data-bs-theme-value="light"
             aria-pressed="false"
           >
-            <i class="fa fa-sun opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
             Light
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -144,9 +143,9 @@
             data-bs-theme-value="dark"
             aria-pressed="false"
           >
-            <i class="fa fa-moon opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
             Dark
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -156,9 +155,9 @@
             data-bs-theme-value="auto"
             aria-pressed="true"
           >
-            <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
             Auto
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
       </ul>

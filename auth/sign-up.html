@@ -71,8 +71,7 @@
       href="../assets/img/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
-    <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
     <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <script>
       (function () {
@@ -94,7 +93,7 @@
                   class="auth-logo-box d-inline-flex align-items-center justify-content-center text-white rounded-3 mb-3"
                   style="width: 44px; height: 44px"
                 >
-                  <i class="fa-solid fa-layer-group"></i>
+                  <i class="bi bi-layers"></i>
                 </div>
                 <h5 class="fw-bold mb-1">Create Account</h5>
                 <p class="text-body-secondary small">
@@ -130,22 +129,14 @@
                       <label class="form-label fw-semibold small" for="inputPassword">
                         Password
                       </label>
-                      <div class="input-group">
-                        <input
-                          class="form-control border-end-0"
-                          id="inputPassword"
-                          type="password"
-                          name="password"
-                          placeholder="Create a password"
-                        />
-                        <button
-                          class="input-group-text bg-transparent border-start-0"
-                          type="button"
-                          data-pr-toggle-password="inputPassword"
-                        >
-                          <i class="fa-regular fa-eye text-body-secondary"></i>
-                        </button>
-                      </div>
+                      <input
+                        class="form-control"
+                        id="inputPassword"
+                        type="password"
+                        name="password"
+                        placeholder="Create a password"
+                        data-pr-toggle-password=""
+                      />
                     </div>
                     <div class="mb-3">
                       <div class="form-check">
@@ -176,13 +167,13 @@
                     <div class="row g-2">
                       <div class="col-6">
                         <button class="btn btn-outline-secondary btn-social w-100" type="button">
-                          <i class="fab fa-google me-2"></i>
+                          <i class="bi bi-google me-2"></i>
                           Google
                         </button>
                       </div>
                       <div class="col-6">
                         <button class="btn btn-outline-secondary btn-social w-100" type="button">
-                          <i class="fab fa-github me-2"></i>
+                          <i class="bi bi-github me-2"></i>
                           GitHub
                         </button>
                       </div>
@@ -216,10 +207,10 @@
         data-bs-toggle="dropdown"
         aria-label="Toggle theme (auto)"
       >
-        <span class="theme-icon-active mr-1" id="bd-theme-icon"><i class="fa fa-sun"></i></span>
+        <span class="theme-icon-active me-2" id="bd-theme-icon"></span>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
         <li>
           <button
             class="dropdown-item d-flex align-items-center"
@@ -227,9 +218,9 @@
             data-bs-theme-value="light"
             aria-pressed="false"
           >
-            <i class="fa fa-sun opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
             Light
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -239,9 +230,9 @@
             data-bs-theme-value="dark"
             aria-pressed="false"
           >
-            <i class="fa fa-moon opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
             Dark
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -251,9 +242,9 @@
             data-bs-theme-value="auto"
             aria-pressed="true"
           >
-            <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
             Auto
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
       </ul>

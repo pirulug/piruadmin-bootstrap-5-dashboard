@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
     <meta name="author" content="Pirulug" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0d6efd" />
+    <!-- Theme Color-->
+    <meta name="theme-color" content="#ff0055" />
     <!-- Primary Meta Tags-->
     <title>Google Maps - Free Bootstrap 5 Admin Template | PiruAdmin</title>
     <meta name="title" content="Google Maps - Free Bootstrap 5 Admin Template | PiruAdmin" />
@@ -71,10 +72,11 @@
       href="../assets/img/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
-    <!-- Css Bootstrap-->
-    <link rel="stylesheet" href="../assets/plugins/fontawesome.css" />
+    <!-- Icons-->
     <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <!-- Css-->
     <link rel="stylesheet" href="../assets/css/piruadmin.css" />
+    <!-- Theme-->
     <script>
       (function () {
         const storedTheme = localStorage.getItem('theme');
@@ -87,20 +89,11 @@
   </head>
   <body>
     <!-- Loader-->
-    <div
-      class="show bg-body position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-      id="spinner"
-    >
-      <div class="position-relative" style="width: 4rem; height: 4rem">
-        <div
-          class="spinner-border text-primary position-absolute top-0 start-0 w-100 h-100"
-          role="status"
-          style="border-width: 3px; z-index: 1"
-        >
-          <span class="visually-hidden">Loading...</span>
-        </div>
-        <div class="position-absolute top-50 start-50 translate-middle" style="z-index: 2">
-          <img src="../assets/img/logo.png" alt="Logo" width="30" height="30" />
+    <div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
+      <div class="loader-container">
+        <div class="loader-circle"></div>
+        <div class="loader-logo">
+          <img src="../assets/img/logo.png" alt="Logo" width="40" height="40" />
         </div>
       </div>
     </div>
@@ -110,17 +103,18 @@
           <a class="sidebar-brand" href="../index.html">
             <span class="sidebar-brand-text align-middle">PiruAdmin</span>
           </a>
+          <a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
           <ul class="sidebar-nav">
             <li class="sidebar-item">
               <a class="sidebar-link" href="../dashboard.html">
-                <i class="align-middle" data-feather="sliders"></i>
+                <i class="align-middle bi bi-sliders"></i>
                 <span class="align-middle">Dashboard</span>
               </a>
             </li>
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="file"></i>
+                <i class="align-middle bi bi-file-earmark-fill"></i>
                 <span class="align-middle">Pages</span>
               </a>
               <ul
@@ -137,11 +131,23 @@
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../pages/search.html">Search</a>
                 </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/colors.html">
+                    Colors
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/typography.html">
+                    Typography
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="users"></i>
+                <i class="align-middle bi bi-people"></i>
                 <span class="align-middle">Auth</span>
               </a>
               <ul
@@ -161,11 +167,35 @@
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
                 </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/auth-lock.html">
+                    Lock Screen
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification.html">
+                    2-Step Verification
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-code.html">
+                    2-Step Code
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
+                    2-Step Backup Codes
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="user"></i>
+                <i class="align-middle bi bi-person"></i>
                 <span class="align-middle">Account</span>
               </a>
               <ul
@@ -183,7 +213,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="coffee"></i>
+                <i class="align-middle bi bi-bug"></i>
                 <span class="align-middle">Errors</span>
               </a>
               <ul
@@ -197,6 +227,12 @@
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../error/500.html">500</a>
                 </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/maintenance.html">
+                    Maintenance
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-header">Tools &amp; Components</li>
@@ -206,7 +242,7 @@
                 data-bs-target="#ui-elements"
                 data-bs-toggle="collapse"
               >
-                <i class="align-middle" data-feather="box"></i>
+                <i class="align-middle bi bi-box"></i>
                 <span class="align-middle">UI Elements</span>
               </a>
               <ul
@@ -214,6 +250,18 @@
                 id="ui-elements"
                 data-bs-parent="#sidebar"
               >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/accordion.html">
+                    Accordion
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/scrollspy.html">
+                    Scrollspy
+                    <span class="sidebar-badge badge rounded-pill bg-success">New</span>
+                  </a>
+                </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
                 </li>
@@ -242,7 +290,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="grid"></i>
+                <i class="align-middle bi bi-grid"></i>
                 <span class="align-middle">Tables</span>
               </a>
               <ul
@@ -257,7 +305,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="file"></i>
+                <i class="align-middle bi bi-file"></i>
                 <span class="align-middle">Forms</span>
               </a>
               <ul
@@ -271,11 +319,38 @@
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
                 </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/flatpickr.html">
+                    Flatpickr
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#editors" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-pencil-square"></i>
+                <span class="align-middle">Editors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="editors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/simplemde.html">SimpleMDE</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/editor.html">
+                    Wysi Editor
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="coffee"></i>
+                <i class="align-middle bi bi-cup-hot"></i>
                 <span class="align-middle">Icons</span>
               </a>
               <ul
@@ -293,13 +368,13 @@
                   <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/piruawesome.html">PiruAwesome Icons</a>
+                  <a class="sidebar-link" href="../icons/flag-icons.html">Flag Icons</a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item active">
               <a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse">
-                <i class="align-middle" data-feather="zap"></i>
+                <i class="align-middle bi bi-lightning"></i>
                 <span class="align-middle">Plugins</span>
               </a>
               <ul
@@ -316,43 +391,47 @@
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
                 </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/datatable.html">Datatable</a>
-                </li>
                 <li class="sidebar-item active">
                   <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
                 </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/flag-icons.html">Flag Icons</a>
-                </li>
               </ul>
             </li>
           </ul>
         </div>
       </nav>
+      <div class="sidebar-backdrop"></div>
       <div class="main">
         <!-- NavBar-->
         <nav class="navtop">
           <a class="sidebar-toggle js-sidebar-toggle">
             <i class="hamburger align-self-center"></i>
           </a>
+          <form class="d-none d-sm-inline-block ms-3">
+            <div class="input-group input-group-navbar">
+              <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
+              <button class="btn" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
           <div class="navbar-collapse collapse">
             <ul class="navbar-nav navbar-align">
+              <li class="nav-item">
+                <a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen">
+                  <i class="bi bi-fullscreen"></i>
+                </a>
+              </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-icon dropdown-toggle"
                   id="bd-theme"
                   type="button"
                   aria-expanded="false"
                   data-bs-toggle="dropdown"
                   aria-label="Toggle theme (auto)"
                 >
-                  <span class="theme-icon-active" id="bd-theme-icon">
-                    <i class="fa fa-sun"></i>
-                  </span>
+                  <span class="theme-icon-active" id="bd-theme-icon"></span>
                   <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
@@ -363,9 +442,8 @@
                       data-bs-theme-value="light"
                       aria-pressed="false"
                     >
-                      <i class="fa fa-sun opacity-50 me-2"></i>
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
                       Light
-                      <i class="pr-check fa fa-check ms-auto d-none"></i>
                     </button>
                   </li>
                   <li>
@@ -375,9 +453,8 @@
                       data-bs-theme-value="dark"
                       aria-pressed="false"
                     >
-                      <i class="fa fa-moon opacity-50 me-2"></i>
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
                       Dark
-                      <i class="pr-check fa fa-check ms-auto d-none"></i>
                     </button>
                   </li>
                   <li>
@@ -387,24 +464,21 @@
                       data-bs-theme-value="auto"
                       aria-pressed="true"
                     >
-                      <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
                       Auto
-                      <i class="pr-check fa fa-check ms-auto d-none"></i>
                     </button>
                   </li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-icon dropdown-toggle"
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
                   id="alertsDropdown"
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  <div class="position-relative">
-                    <i class="align-middle" data-feather="bell"></i>
-                    <span class="indicator">4</span>
-                  </div>
+                  <i class="bi bi-bell"></i>
+                  <span class="indicator">4</span>
                 </a>
                 <div
                   class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
@@ -415,7 +489,7 @@
                     <a class="list-group-item" href="#">
                       <div class="row g-0 align-items-center">
                         <div class="col-2">
-                          <i class="text-danger" data-feather="alert-circle"></i>
+                          <i class="bi bi-exclamation-circle text-danger"></i>
                         </div>
                         <div class="col-10">
                           <div>Update completed</div>
@@ -428,7 +502,7 @@
                     </a>
                     <a class="list-group-item" href="#">
                       <div class="row g-0 align-items-center">
-                        <div class="col-2"><i class="text-warning" data-feather="bell"></i></div>
+                        <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
                         <div class="col-10">
                           <div>Lorem ipsum</div>
                           <div class="text-muted small mt-1">
@@ -440,7 +514,7 @@
                     </a>
                     <a class="list-group-item" href="#">
                       <div class="row g-0 align-items-center">
-                        <div class="col-2"><i class="text-primary" data-feather="home"></i></div>
+                        <div class="col-2"><i class="bi bi-house text-primary"></i></div>
                         <div class="col-10">
                           <div>Login from 192.186.1.8</div>
                           <div class="text-muted small mt-1">5h ago</div>
@@ -449,9 +523,7 @@
                     </a>
                     <a class="list-group-item" href="#">
                       <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <i class="text-success" data-feather="user-plus"></i>
-                        </div>
+                        <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
                         <div class="col-10">
                           <div>New connection</div>
                           <div class="text-muted small mt-1">Christina accepted your request.</div>
@@ -467,14 +539,12 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-icon dropdown-toggle"
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
                   id="messagesDropdown"
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  <div class="position-relative">
-                    <i class="align-middle" data-feather="message-square"></i>
-                  </div>
+                  <i class="bi bi-chat-left-text"></i>
                 </a>
                 <div
                   class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
@@ -562,38 +632,32 @@
                   </div>
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle d-inline-block"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                >
-                  <div class="avatar avatar-sm me-1">
-                    <img src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
-                  </div>
-                  <span class="d-none d-sm-inline-block">Pirulug</span>
+              <li class="nav-item nav-item-user dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                  <img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  <span class="d-none d-md-inline-block">Pirulug</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
                   <a class="dropdown-item" href="../account/profile.html">
-                    <i class="align-middle me-1" data-feather="user"></i>
+                    <i class="bi bi-person me-1"></i>
                     Profile
                   </a>
                   <a class="dropdown-item" href="#">
-                    <i class="align-middle me-1" data-feather="pie-chart"></i>
+                    <i class="bi bi-pie-chart me-1"></i>
                     Analytics
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="../account/settings.html">
-                    <i class="align-middle me-1" data-feather="settings"></i>
+                    <i class="bi bi-gear me-1"></i>
                     Settings &amp; Privacy
                   </a>
                   <a class="dropdown-item" href="#">
-                    <i class="align-middle me-1" data-feather="help-circle"></i>
+                    <i class="bi bi-question-circle me-1"></i>
                     Help Center
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">
-                    <i class="align-middle me-1" data-feather="log-out"></i>
+                    <i class="bi bi-box-arrow-right me-1"></i>
                     Log out
                   </a>
                 </div>
@@ -604,10 +668,12 @@
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <div class="d-flex justify-content-between align-items-center">
-              <h1 class="h3 d-inline align-middle">Google Maps</h1>
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center"
+            >
+              <h1 class="h3 mb-2 mb-sm-0">Google Maps</h1>
               <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb mb-0">
                   <li class="breadcrumb-item"><a href="../dashboard.html">Dashboard</a></li>
                   <li class="breadcrumb-item text-capitalize">plugins</li>
                   <li class="breadcrumb-item active" aria-current="page">Google Maps</li>
@@ -715,13 +781,17 @@ new google.maps.Map(document.getElementById("hybrid_map"), hybridMap);
         </footer>
       </div>
       <!-- Back to top-->
-      <a class="btn btn-lg btn-primary btn-lg-square back-to-top" href="#">
-        <i class="fa fa-arrow-up"></i>
+      <!-- Back to top-->
+      <a class="back-to-top" href="#">
+        <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
+          <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
+          <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
+        </svg>
+        <i class="bi bi-arrow-up-short"></i>
       </a>
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
-    <script src="../assets/plugins/feathericons.js"></script>
     <script src="../assets/js/piruadmin.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOF8EaSNZNu2J_0WIYGv_7Jbd7kuKcosQ&amp;callback=initMaps"

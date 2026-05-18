@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d6efd" />
+    <!-- Primary Meta Tags-->
+    <title>Lock Screen - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="Lock Screen - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-lock.html"
+    />
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-lock.html"
+    />
+    <meta property="og:title" content="Lock Screen | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages-lock.html"
+    />
+    <meta property="twitter:title" content="Lock Screen | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="w-100">
+      <div class="d-flex min-vh-100 align-items-center justify-content-center py-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-9 col-md-7 col-lg-5 col-xl-4">
+              <div class="text-center mb-4">
+                <div class="mb-3 position-relative d-inline-block">
+                  <img
+                    class="rounded-circle border border-2 border-primary p-1"
+                    src="https://dummyimage.com/90x90/222/fff.jpg"
+                    alt="User Avatar"
+                    style="width: 90px; height: 90px; object-fit: cover"
+                  />
+                </div>
+                <h5 class="fw-bold mb-1">Pirulug</h5>
+                <p class="text-body-secondary small">Enter your password to unlock the screen.</p>
+              </div>
+              <div class="card auth-card border-0 rounded-3">
+                <div class="card-body p-4">
+                  <form action="../dashboard.html">
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold small" for="inputPassword">
+                        Password
+                      </label>
+                      <input
+                        class="form-control"
+                        id="inputPassword"
+                        type="password"
+                        placeholder="Enter your password to unlock"
+                        data-pr-toggle-password=""
+                        required
+                      />
+                    </div>
+                    <div class="d-grid mb-2">
+                      <button class="btn btn-primary" type="submit">Unlock Session</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="text-center mt-3">
+                <p class="text-body-secondary small mb-0">
+                  Not you?
+                  <a
+                    class="fw-semibold text-decoration-none auth-footer-link"
+                    href="../auth/sign-in.html"
+                  >
+                    Sign In
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Dark & Ligth-->
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle z-3">
+      <button
+        class="btn btn-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <span class="theme-icon-active me-2" id="bd-theme-icon"></span>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+        <li>
+          <button
+            class="dropdown-item d-flex align-items-center"
+            type="button"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
+            Light
+            <span class="pr-check ms-auto d-none"></span>
+          </button>
+        </li>
+        <li>
+          <button
+            class="dropdown-item d-flex align-items-center"
+            type="button"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
+            Dark
+            <span class="pr-check ms-auto d-none"></span>
+          </button>
+        </li>
+        <li>
+          <button
+            class="dropdown-item d-flex align-items-center"
+            type="button"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
+            Auto
+            <span class="pr-check ms-auto d-none"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <!-- Js Bootstrap-->
+    <script src="../assets/js/piruadmin.js"></script>
+  </body>
+</html>

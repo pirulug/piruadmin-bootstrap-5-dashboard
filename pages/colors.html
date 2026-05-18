@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <!-- Theme Color-->
+    <meta name="theme-color" content="#ff0055" />
+    <!-- Primary Meta Tags-->
+    <title>Colors - Free Bootstrap 5 Admin Template |</title>
+    <meta name="title" content="Colors - Free Bootstrap 5 Admin Template | undefined" />
+    <meta
+      name="description"
+      content="undefined is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/colors.html"
+    />
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/colors.html"
+    />
+    <meta property="og:title" content="Colors | undefined" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/colors.html"
+    />
+    <meta property="twitter:title" content="Colors | undefined" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+    <!-- Icons-->
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <!-- Css-->
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
+    <!-- Theme-->
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Loader-->
+    <div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
+      <div class="loader-container">
+        <div class="loader-circle"></div>
+        <div class="loader-logo">
+          <img src="../assets/img/logo.png" alt="Logo" width="40" height="40" />
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <nav class="sidebar js-sidebar" id="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="../index.html">
+            <span class="sidebar-brand-text align-middle"></span>
+          </a>
+          <a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="../dashboard.html">
+                <i class="align-middle bi bi-sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-header">Pages</li>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" data-bs-target="#pages" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-file-earmark-fill"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse show"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                </li>
+                <li class="sidebar-item active">
+                  <a class="sidebar-link" href="../pages/colors.html">
+                    Colors
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/typography.html">
+                    Typography
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-people"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/auth-lock.html">
+                    Lock Screen
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification.html">
+                    2-Step Verification
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-code.html">
+                    2-Step Code
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
+                    2-Step Backup Codes
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-person"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-bug"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/404.html">404</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/500.html">500</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/maintenance.html">
+                    Maintenance
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-header">Tools &amp; Components</li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#ui-elements"
+                data-bs-toggle="collapse"
+              >
+                <i class="align-middle bi bi-box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/accordion.html">
+                    Accordion
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/scrollspy.html">
+                    Scrollspy
+                    <span class="sidebar-badge badge rounded-pill bg-success">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/flatpickr.html">
+                    Flatpickr
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#editors" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-pencil-square"></i>
+                <span class="align-middle">Editors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="editors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/simplemde.html">SimpleMDE</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/editor.html">
+                    Wysi Editor
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-cup-hot"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/flag-icons.html">Flag Icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse">
+                <i class="align-middle bi bi-lightning"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebar-backdrop"></div>
+      <div class="main">
+        <!-- NavBar-->
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <form class="d-none d-sm-inline-block ms-3">
+            <div class="input-group input-group-navbar">
+              <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
+              <button class="btn" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item">
+                <a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen">
+                  <i class="bi bi-fullscreen"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon"></span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
+                      Light
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
+                      Dark
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
+                      Auto
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-bell"></i>
+                  <span class="indicator">4</span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="bi bi-exclamation-circle text-danger"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-house text-primary"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-chat-left-text"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item nav-item-user dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                  <img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  <span class="d-none d-md-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="../account/profile.html">
+                    <i class="bi bi-person me-1"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-pie-chart me-1"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../account/settings.html">
+                    <i class="bi bi-gear me-1"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-question-circle me-1"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-box-arrow-right me-1"></i>
+                    Log out
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Content-->
+        <main class="content">
+          <div class="mb-3">
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center"
+            >
+              <h1 class="h3 mb-2 mb-sm-0">Colors</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="../dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item text-capitalize">pages</li>
+                  <li class="breadcrumb-item active" aria-current="page">Colors</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Color System</h1>
+            <span class="badge bg-primary ms-2 align-middle">Theme Palette</span>
+          </div>
+          <p class="text-body-secondary">
+            Discover the visual identity of PiruAdmin. This color system is built with Bootstrap 5
+            theme variables and utility classes, supporting light and dark modes natively.
+          </p>
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Theme Colors</h5>
+                  <p class="card-subtitle text-body-secondary small mb-0">
+                    Brand colors representing actions, status, and feedback.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-primary text-white d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Primary</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-white">.bg-primary</code>
+                          <span>$primary</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-secondary text-white d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Secondary</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-white">.bg-secondary</code>
+                          <span>$secondary</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-success text-white d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Success</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-white">.bg-success</code>
+                          <span>$success</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-info text-white d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Info</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-white">.bg-info</code>
+                          <span>$info</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-warning text-dark d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Warning</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-dark">.bg-warning</code>
+                          <span>$warning</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-danger text-white d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Danger</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-white">.bg-danger</code>
+                          <span>$danger</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Theme Color Tints (Subtle Tones)</h5>
+                  <p class="card-subtitle text-body-secondary small mb-0">
+                    Transparent primary brand-aware tints for high-end active statuses and
+                    backgrounds.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border d-flex flex-column justify-content-between"
+                        style="
+                          height: 100px;
+                          background: rgba(var(--pr-primary-rgb), 0.05);
+                          color: var(--pr-primary);
+                        "
+                      >
+                        <span class="fw-bold small">Primary Hover (5%)</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="small">rgba($primary, 0.05)</code>
+                          <span>Submenu Hover</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border d-flex flex-column justify-content-between"
+                        style="
+                          height: 100px;
+                          background: rgba(var(--pr-primary-rgb), 0.1);
+                          color: var(--pr-primary);
+                        "
+                      >
+                        <span class="fw-bold small">Primary Active (10%)</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="small">rgba($primary, 0.1)</code>
+                          <span>Submenu Active</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border d-flex flex-column justify-content-between"
+                        style="
+                          height: 100px;
+                          background: rgba(var(--pr-primary-rgb), 0.25);
+                          color: var(--pr-primary);
+                        "
+                      >
+                        <span class="fw-bold small">Primary Border (25%)</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="small">rgba($primary, 0.25)</code>
+                          <span>Sidebar Guide Line</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div
+                        class="p-3 rounded border bg-body-secondary text-body d-flex flex-column justify-content-between"
+                        style="height: 100px"
+                      >
+                        <span class="fw-bold small">Body Secondary</span>
+                        <div class="d-flex justify-content-between align-items-end small">
+                          <code class="text-body">.bg-body-secondary</code>
+                          <span>Theme Backgrounds</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Grayscale & Body Colors</h5>
+                  <p class="card-subtitle text-body-secondary small mb-0">
+                    Neutral colors that dynamically change to guarantee contrast under Dark Mode.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-4 col-md-3">
+                      <div
+                        class="p-3 rounded border bg-body text-body d-flex flex-column justify-content-between"
+                        style="height: 90px"
+                      >
+                        <span class="fw-semibold small">Body Background</span>
+                        <code class="small">.bg-body</code>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3">
+                      <div
+                        class="p-3 rounded border bg-body-tertiary text-body d-flex flex-column justify-content-between"
+                        style="height: 90px"
+                      >
+                        <span class="fw-semibold small">Body Tertiary</span>
+                        <code class="small">.bg-body-tertiary</code>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3">
+                      <div
+                        class="p-3 rounded border text-body d-flex flex-column justify-content-between"
+                        style="height: 90px; background: var(--pr-card-bg)"
+                      >
+                        <span class="fw-semibold small">Card Background</span>
+                        <code class="small">var(--pr-card-bg)</code>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3">
+                      <div
+                        class="p-3 rounded border bg-dark text-white d-flex flex-column justify-content-between"
+                        style="height: 90px"
+                      >
+                        <span class="fw-semibold small">Solid Dark</span>
+                        <code class="small">.bg-dark</code>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Social & Brand Colors Showcase</h5>
+                  <p class="card-subtitle text-body-secondary small mb-0">
+                    Unified brand colors for social sign-in buttons, sharing actions, and custom
+                    avatar profiles.
+                  </p>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <!-- Brand: Facebook-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-facebook">
+                              <i class="bi bi-facebook"></i>
+                            </div>
+                            <span class="fw-bold small">Facebook</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#1877f2</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-facebook w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-facebook w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: Google-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-google">
+                              <i class="bi bi-google"></i>
+                            </div>
+                            <span class="fw-bold small">Google</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#ea4335</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-google w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-google w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: X / Twitter-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-x-twitter">
+                              <i class="bi bi-twitter-x"></i>
+                            </div>
+                            <span class="fw-bold small">X / Twitter</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#000000</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-x-twitter w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-x-twitter w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: GitHub-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-github">
+                              <i class="bi bi-github"></i>
+                            </div>
+                            <span class="fw-bold small">GitHub</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#181717</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-github w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-github w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: LinkedIn-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-linkedin">
+                              <i class="bi bi-linkedin"></i>
+                            </div>
+                            <span class="fw-bold small">LinkedIn</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#0077b5</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-linkedin w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-linkedin w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: YouTube-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-youtube">
+                              <i class="bi bi-youtube"></i>
+                            </div>
+                            <span class="fw-bold small">YouTube</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#ff0000</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-youtube w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-youtube w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: Instagram-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-instagram">
+                              <i class="bi bi-instagram"></i>
+                            </div>
+                            <span class="fw-bold small">Instagram</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#e1306c</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-instagram w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-instagram w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: WhatsApp-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-whatsapp">
+                              <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <span class="fw-bold small">WhatsApp</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#25d366</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-whatsapp w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-whatsapp w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: Spotify-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-spotify">
+                              <i class="bi bi-spotify"></i>
+                            </div>
+                            <span class="fw-bold small">Spotify</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#1db954</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-spotify w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-spotify w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: PayPal-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-paypal">
+                              <i class="bi bi-paypal"></i>
+                            </div>
+                            <span class="fw-bold small">PayPal</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#003087</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-paypal w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-paypal w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: Apple-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-apple">
+                              <i class="bi bi-apple"></i>
+                            </div>
+                            <span class="fw-bold small">Apple</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#a2aaad</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-apple w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-apple w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Brand: Amazon-->
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                      <div class="p-3 rounded border d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                          <div class="d-flex align-items-center gap-2">
+                            <div class="avatar avatar-sm avatar-amazon">
+                              <i class="bi bi-cart-fill"></i>
+                            </div>
+                            <span class="fw-bold small">Amazon</span>
+                          </div>
+                          <span class="text-body-secondary small font-monospace">#ff9900</span>
+                        </div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-amazon w-50">Solid</button>
+                          <button class="btn btn-sm btn-outline-amazon w-50">Outline</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-6 text-start">
+                <p class="mb-0">
+                  <a class="text-muted" href="../index.html">
+                    &copy;&nbsp;
+                    <strong>&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
+              </div>
+              <div class="col-6 text-end">
+                <p class="mb-0">
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- Back to top-->
+      <!-- Back to top-->
+      <a class="back-to-top" href="#">
+        <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
+          <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
+          <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
+        </svg>
+        <i class="bi bi-arrow-up-short"></i>
+      </a>
+    </div>
+    <!-- Dark & Ligth-->
+    <!-- Js Bootstrap-->
+    <script src="../assets/js/piruadmin.js"></script>
+  </body>
+</html>

@@ -58,7 +58,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link rel="stylesheet" href="./assets/plugins/fontawesome.css" />
+    <link rel="stylesheet" href="./assets/plugins/bootstrapicons.css" />
     <link href="./assets/css/piruadmin.css" rel="stylesheet" />
     <link rel="preload" href="./assets/css/piruadmin.css" as="style" />
     <script type="application/ld+json">
@@ -131,14 +131,14 @@
                   class="btn btn-primary btn-lg px-4 gap-2 d-flex align-items-center justify-content-center"
                   href="./dashboard.html"
                 >
-                  <i data-feather="layout"></i>
+                  <i class="bi bi-speedometer2 me-2"></i>
                   View Demo
                 </a>
                 <a
                   class="btn btn-outline-secondary btn-lg px-4 gap-2 d-flex align-items-center justify-content-center"
                   href="https://github.com/pirulug/piruadmin-bootstrap-5-dashboard"
                 >
-                  <i data-feather="github"></i>
+                  <i class="bi bi-github me-2"></i>
                   GitHub
                 </a>
               </div>
@@ -157,7 +157,7 @@
                 <div
                   class="d-none d-md-block w-50 bg-body border rounded-1 text-center text-body-secondary small py-1"
                 >
-                  <i class="me-1" data-feather="lock" style="width: 12px; height: 12px"></i>
+                  <i class="bi bi-lock-fill me-1" style="font-size: 0.75rem"></i>
                   https://pirulug.com/dashboard
                 </div>
                 <div class="d-flex gap-2 ms-auto" style="width: 40px"></div>
@@ -178,7 +178,7 @@
         target="_blank"
         aria-label="View on GitHub"
       >
-        <i data-feather="github"></i>
+        <i class="bi bi-github"></i>
       </a>
     </div>
     <section class="py-5">
@@ -190,7 +190,7 @@
                 class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-3"
                 style="width: 45px; height: 45px"
               >
-                <i class="text-primary" data-feather="zap"></i>
+                <i class="bi bi-lightning-fill text-primary"></i>
               </div>
               <h3 class="h5 fw-bold mb-0 ms-3">Lightning Fast</h3>
             </div>
@@ -205,7 +205,7 @@
                 class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-3"
                 style="width: 45px; height: 45px"
               >
-                <i class="text-primary" data-feather="moon"></i>
+                <i class="bi bi-moon-fill text-primary"></i>
               </div>
               <h3 class="h5 fw-bold mb-0 ms-3">Dark Mode</h3>
             </div>
@@ -220,7 +220,7 @@
                 class="d-flex align-items-center justify-content-center bg-primary bg-opacity-10 rounded-3"
                 style="width: 45px; height: 45px"
               >
-                <i class="text-primary" data-feather="layout"></i>
+                <i class="bi bi-window-stack text-primary"></i>
               </div>
               <h3 class="h5 fw-bold mb-0 ms-3">Flat Design</h3>
             </div>
@@ -254,10 +254,10 @@
         data-bs-toggle="dropdown"
         aria-label="Toggle theme (auto)"
       >
-        <span class="theme-icon-active mr-1" id="bd-theme-icon"><i class="fa fa-sun"></i></span>
+        <span class="theme-icon-active me-2" id="bd-theme-icon"></span>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
         <li>
           <button
             class="dropdown-item d-flex align-items-center"
@@ -265,9 +265,9 @@
             data-bs-theme-value="light"
             aria-pressed="false"
           >
-            <i class="fa fa-sun opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
             Light
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -277,9 +277,9 @@
             data-bs-theme-value="dark"
             aria-pressed="false"
           >
-            <i class="fa fa-moon opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
             Dark
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
         <li>
@@ -289,15 +289,14 @@
             data-bs-theme-value="auto"
             aria-pressed="true"
           >
-            <i class="fa fa-circle-half-stroke opacity-50 me-2"></i>
+            <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
             Auto
-            <i class="pr-check fa fa-check ms-auto d-none"></i>
+            <span class="pr-check ms-auto d-none"></span>
           </button>
         </li>
       </ul>
     </div>
     <!-- Core theme JS-->
-    <script src="./assets/plugins/feathericons.js"></script>
     <script src="./assets/js/piruadmin.js"></script>
   </body>
 </html>
