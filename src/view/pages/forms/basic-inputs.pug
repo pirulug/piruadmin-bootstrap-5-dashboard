@@ -25,13 +25,20 @@ block content
           p.text-secondary
             | Use the 
             code data-pr-toggle-password
-            |  attribute on a button within an 
-            code .input-group
-            |  to toggle the visibility of a password field.
-          .input-group
-            input.form-control(type='password' placeholder='Enter password')
-            button.btn.btn-outline-secondary(type='button' data-pr-toggle-password='')
-              i.bi.bi-eye
+            |  attribute on a password input to dynamically generate a unified input group with a toggle control. Supports both 
+            code icon
+            |  (default) and 
+            code text
+            |  modes.
+          div
+            label.form-label Icon Mode
+            input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password)
+          .mt-3
+            label.form-label Icon Mode
+            input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password="icon")
+          .mt-3
+            label.form-label Text Mode
+            input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password="text")
 
       .card.mb-3
         .card-header
