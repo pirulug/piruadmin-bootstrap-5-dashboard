@@ -1,0 +1,20 @@
+extends ../../layouts/auth
+
+append config
+  - pageName = "Maintenance"
+  - pageUrl = "pages-maintenance"
+
+block content
+  .container.d-flex.flex-column.justify-content-center.min-vh-100
+    .row.justify-content-center
+      .col-md-10.col-lg-8.col-xl-6.text-center
+        .mb-4
+          i.bi.bi-tools.display-1.text-primary.mb-3(aria-hidden="true")
+        h1.display-4.fw-bold.text-primary Under Maintenance
+        h2.h3.mb-3 We will be back soon!
+        p.lead.text-body-secondary.mb-5
+          | Our website is currently undergoing scheduled maintenance. We should be back shortly. Thank you for your patience!
+        .d-grid.gap-2.d-sm-flex.justify-content-sm-center
+          a.btn.btn-primary.btn-lg.px-4(href="javascript:window.location.reload()")
+            i.bi.bi-arrow-clockwise.me-2
+            | Refresh Page

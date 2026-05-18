@@ -93,6 +93,13 @@
         "title": "500",
         "path": "error/500",
         "link": "error/500"
+      },
+      {
+        "title": "Maintenance",
+        "path": "error/maintenance",
+        "link": "error/maintenance",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },
