@@ -1,0 +1,67 @@
+extends ../../layouts/auth
+
+append config
+  - pageName = "Two-Step Verification"
+  - pageUrl = "pages-2fa-setup"
+
+block content
+  .d-flex.min-vh-100.align-items-center.justify-content-center.py-4
+    .container
+      .row.justify-content-center
+        .col-12.col-sm-10.col-md-8.col-lg-6.col-xl-5
+
+          .text-center.mb-4
+            .auth-logo-box.d-inline-flex.align-items-center.justify-content-center.text-white.rounded-3.mb-3(style="width: 44px; height: 44px;")
+              i.bi.bi-shield-check
+            h5.fw-bold.mb-1 Two-Step Verification
+            p.text-body-secondary.small Secure your account using Google Authenticator
+
+          .card.auth-card.border-0.rounded-3
+            .card-body.p-4.text-center
+              
+              .mb-4
+                p.fw-semibold.small.text-start 1. Scan this QR code with Google Authenticator
+                .p-3.bg-body-secondary.rounded-3.d-inline-block.mb-3
+                  // Crisp Vector QR Code SVG Mockup
+                  svg(width="150" height="150" viewBox="0 0 100 100" fill="currentColor" class="text-body")
+                    path(d="M0 0h35v35H0V0zm5 5v25h25V5H5zm50 0h35v35H55V0zm5 5v25h25V5H60zM0 55h35v35H0V55zm5 5v25h25V60H5zm45-5h10v10H50V55zm15 0h10v10H65V55zm10 0h10v10H75V55zm-25 15h10v10H50V70zm25 0h10v10H75V70zm-15 15h10v10H60V85zm15 0h10v10H75V85zm-25 0h10v10H50V85zM12 12h11v11H12V12zm55 0h11v11H67V12zM12 67h11v11H12V67z")
+                
+                p.text-body-secondary.small.mb-0
+                  | Can't scan the QR code? Use the setup key: 
+                  code.fw-bold.bg-body-tertiary.px-2.py-1.rounded.text-primary.small JBSWY3DPEHPK3PXP
+
+              hr.border-secondary-subtle.my-4
+
+              .text-start
+                p.fw-semibold.small.mb-3 2. Enter the 6-digit confirmation code below
+                form(action=baseUrl + "dashboard.html")
+                  .d-flex.gap-2.mb-4.justify-content-center
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+                    input.form-control.text-center.fw-bold.fs-4.p-2.verification-code-input(type="text" maxlength="1" style="width: 50px; height: 50px;" required)
+
+                  .d-grid
+                    button.btn.btn-primary(type="submit") Verify & Activate
+
+          .text-center.mt-3
+            a.small.text-decoration-none.auth-footer-link(href=baseUrl + "auth/sign-in.html") Back to Sign In
+
+  script.
+    document.addEventListener("DOMContentLoaded", () => {
+      const inputs = document.querySelectorAll(".verification-code-input");
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+          if (e.target.value.length === 1 && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && e.target.value.length === 0 && index > 0) {
+            inputs[index - 1].focus();
+          }
+        });
+      });
+    });

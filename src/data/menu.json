@@ -29,6 +29,20 @@
         "title": "Search",
         "path": "pages/search",
         "link": "pages/search"
+      },
+      {
+        "title": "Colors",
+        "path": "pages/colors",
+        "link": "pages/colors",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "Typography",
+        "path": "pages/typography",
+        "link": "pages/typography",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },
@@ -57,6 +71,34 @@
         "title": "Recover Password",
         "path": "auth/recover-password",
         "link": "auth/recover-password"
+      },
+      {
+        "title": "Lock Screen",
+        "path": "auth/auth-lock",
+        "link": "auth/auth-lock",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "2-Step Verification",
+        "path": "auth/2-step-verification",
+        "link": "auth/2-step-verification",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "2-Step Code",
+        "path": "auth/2-step-verification-code",
+        "link": "auth/2-step-verification-code",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "2-Step Backup Codes",
+        "path": "auth/2-step-verification-backup-codes",
+        "link": "auth/2-step-verification-backup-codes",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },

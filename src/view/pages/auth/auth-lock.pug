@@ -1,0 +1,42 @@
+extends ../../layouts/auth
+
+append config
+  - pageName = "Lock Screen"
+  - pageUrl = "pages-lock"
+
+block content
+  .d-flex.min-vh-100.align-items-center.justify-content-center.py-4
+    .container
+      .row.justify-content-center
+        .col-12.col-sm-9.col-md-7.col-lg-5.col-xl-4
+
+          .text-center.mb-4
+            .mb-3.position-relative.d-inline-block
+              img.rounded-circle.border.border-2.border-primary.p-1(
+                src="https://dummyimage.com/90x90/222/fff.jpg" 
+                alt="User Avatar"
+                style="width: 90px; height: 90px; object-fit: cover;"
+              )
+            h5.fw-bold.mb-1 Pirulug
+            p.text-body-secondary.small Enter your password to unlock the screen.
+
+          .card.auth-card.border-0.rounded-3
+            .card-body.p-4
+              
+              form(action=baseUrl + "dashboard.html")
+                .mb-3
+                  label.form-label.fw-semibold.small(for="inputPassword") Password
+                  input#inputPassword.form-control(
+                    type="password" 
+                    placeholder="Enter your password to unlock"
+                    data-pr-toggle-password=""
+                    required
+                  )
+
+                .d-grid.mb-2
+                  button.btn.btn-primary(type="submit") Unlock Session
+
+          .text-center.mt-3
+            p.text-body-secondary.small.mb-0
+              | Not you? 
+              a.fw-semibold.text-decoration-none.auth-footer-link(href=baseUrl + "auth/sign-in.html") Sign In

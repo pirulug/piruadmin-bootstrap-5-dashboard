@@ -1,0 +1,93 @@
+extends ../../layouts/dashboard
+
+block config
+  - pageName = "Typography"
+  - pageUrl = "pages/typography"
+
+block content
+  .mb-3
+    h1.h3.d-inline.align-middle Typography
+    span.badge.bg-primary.ms-2.align-middle Text Styles
+
+  p.text-body-secondary
+    | Discover the premium typography scales and font styling guidelines used throughout the PiruAdmin dashboard.
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-4
+        .card-header
+          h5.card-title.mb-0 Standard Headings
+          p.card-subtitle.text-body-secondary.small.mb-0 Standard HTML headings styled with perfect visual proportions.
+        .card-body
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Heading 1 (2.03rem)
+            h1.mb-0.fw-bold Heading 1
+          hr.my-3
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Heading 2 (1.62rem)
+            h2.mb-0.fw-bold Heading 2
+          hr.my-3
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Heading 3 (1.35rem)
+            h3.mb-0.fw-bold Heading 3
+          hr.my-3
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Heading 4 (1.13rem)
+            h4.mb-0.fw-semibold Heading 4
+          hr.my-3
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Heading 5 (1.01rem)
+            h5.mb-0.fw-semibold Heading 5
+          hr.my-3
+          .mb-0
+            span.small.text-body-secondary.d-block.mb-1 Heading 6 (0.875rem)
+            h6.mb-0.fw-semibold Heading 6
+
+    .col-12.col-lg-6
+      .card.mb-4
+        .card-header
+          h5.card-title.mb-0 Display Headings & Lead
+          p.card-subtitle.text-body-secondary.small.mb-0 Large display headings when extra visual emphasis is required.
+        .card-body
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Display 1
+            h1.display-1.mb-0.fw-bold D1
+          hr.my-3
+          .mb-3
+            span.small.text-body-secondary.d-block.mb-1 Display 4
+            h1.display-4.mb-0.fw-bold D4
+          hr.my-3
+          .mb-0
+            span.small.text-body-secondary.d-block.mb-1 Lead Paragraph
+            p.lead.mb-0
+              | This is a lead paragraph. It stands out with a slightly larger font size and lighter weight for key intro texts.
+
+  .row
+    .col-12
+      .card
+        .card-header
+          h5.card-title.mb-0 Inline Text Elements & Utilities
+          p.card-subtitle.text-body-secondary.small.mb-0 Helper classes for styling and aligning inline paragraph text.
+        .card-body
+          .row.g-4
+            .col-12.col-md-6
+              h6.fw-bold.mb-3 Styled Paragraphs & Mutes
+              p.mb-2 You can use the mark tag to <mark>highlight</mark> text.
+              p.text-decoration-underline.mb-2 This line of text will render as underlined.
+              p.mb-2 <small>This line of text is meant to be treated as fine print.</small>
+              p.fw-bold.mb-2 This line rendered as bold text.
+              p.fst-italic.mb-2 This line rendered as italicized text.
+              p.text-body-secondary.mb-0 This is a secondary muted paragraph text.
+
+            .col-12.col-md-6
+              h6.fw-bold.mb-3 Blockquotes & Lists
+              blockquote.blockquote.border-start.ps-3.py-1.mb-4
+                p.mb-1 "Simplicity is the ultimate sophistication."
+                footer.blockquote-footer.small.mt-0
+                  | Leonardo da Vinci in 
+                  cite(title="Source Title") Art & Design
+              
+              ul.list-inline.mb-0
+                li.list-inline-item.badge.bg-primary Inline Item 1
+                li.list-inline-item.badge.bg-secondary Inline Item 2
+                li.list-inline-item.badge.bg-success Inline Item 3

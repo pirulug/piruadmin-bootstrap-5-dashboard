@@ -1,0 +1,64 @@
+extends ../../layouts/auth
+
+append config
+  - pageName = "Backup Codes"
+  - pageUrl = "pages-2fa-backup-codes"
+
+block content
+  .d-flex.min-vh-100.align-items-center.justify-content-center.py-4
+    .container
+      .row.justify-content-center
+        .col-12.col-sm-10.col-md-8.col-lg-6.col-xl-5
+
+          .text-center.mb-4
+            .auth-logo-box.d-inline-flex.align-items-center.justify-content-center.text-white.rounded-3.mb-3(style="width: 44px; height: 44px;")
+              i.bi.bi-file-earmark-lock
+            h5.fw-bold.mb-1 Setup Complete!
+            p.text-body-secondary.small Save your backup codes in a secure place
+
+          .card.auth-card.border-0.rounded-3
+            .card-body.p-4
+              p.text-body-secondary.small.mb-4
+                | Backup codes let you access your account if you lose your phone or can't receive verification codes. Each code can be used only once.
+
+              .bg-body-secondary.p-3.rounded-3.mb-4
+                .row.g-3.text-center.fw-semibold.font-monospace.small
+                  .col-6 4820-1934
+                  .col-6 7205-8391
+                  .col-6 1957-3024
+                  .col-6 8492-7501
+                  .col-6 3048-9127
+                  .col-6 6183-4720
+                  .col-6 9275-8043
+                  .col-6 5013-6824
+                  .col-6 8391-7205
+                  .col-6 2468-1357
+
+              .row.g-2.mb-4
+                .col-6
+                  button.btn.btn-outline-secondary.w-100(type="button" onclick="downloadBackupCodes()")
+                    i.bi.bi-download.me-2
+                    | Download as Text
+                .col-6
+                  button.btn.btn-outline-secondary.w-100(type="button" onclick="window.print()")
+                    i.bi.bi-printer.me-2
+                    | Print Codes
+
+              .d-grid
+                a.btn.btn-primary(href=baseUrl + "dashboard.html") Continue to Dashboard
+
+  script.
+    function downloadBackupCodes() {
+      const codes = [
+        "4820-1934", "7205-8391", "1957-3024", "8492-7501", "3048-9127",
+        "6183-4720", "9275-8043", "5013-6824", "8391-7205", "2468-1357"
+      ];
+      const header = "PIRUADMIN - TWO-STEP VERIFICATION BACKUP CODES\n";
+      const subHeader = "Save these codes securely. Each code can only be used once.\n\n";
+      const text = header + subHeader + codes.join("\n");
+      const blob = new Blob([text], { type: "text/plain" });
+      const anchor = document.createElement("a");
+      anchor.download = "piruadmin-backup-codes.txt";
+      anchor.href = window.URL.createObjectURL(blob);
+      anchor.click();
+    }

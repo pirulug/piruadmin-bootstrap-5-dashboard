@@ -1,0 +1,280 @@
+extends ../../layouts/dashboard
+
+block config
+  - pageName = "Colors"
+  - pageUrl = "pages/colors"
+
+block content
+  .mb-3
+    h1.h3.d-inline.align-middle Color System
+    span.badge.bg-primary.ms-2.align-middle Theme Palette
+
+  p.text-body-secondary
+    | Discover the visual identity of PiruAdmin. This color system is built with Bootstrap 5 theme variables and utility classes, supporting light and dark modes natively.
+
+  .row
+    .col-12.col-lg-6
+      .card.mb-4
+        .card-header
+          h5.card-title.mb-0 Theme Colors
+          p.card-subtitle.text-body-secondary.small.mb-0 Brand colors representing actions, status, and feedback.
+        .card-body
+          .row.g-3
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-primary.text-white.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Primary
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-white .bg-primary
+                  span $primary
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-secondary.text-white.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Secondary
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-white .bg-secondary
+                  span $secondary
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-success.text-white.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Success
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-white .bg-success
+                  span $success
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-info.text-white.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Info
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-white .bg-info
+                  span $info
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-warning.text-dark.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Warning
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-dark .bg-warning
+                  span $warning
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-danger.text-white.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Danger
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-white .bg-danger
+                  span $danger
+
+    .col-12.col-lg-6
+      .card.mb-4
+        .card-header
+          h5.card-title.mb-0 Theme Color Tints (Subtle Tones)
+          p.card-subtitle.text-body-secondary.small.mb-0 Transparent primary brand-aware tints for high-end active statuses and backgrounds.
+        .card-body
+          .row.g-3
+            .col-12.col-sm-6
+              .p-3.rounded.border.d-flex.flex-column.justify-content-between(style="height: 100px; background: rgba(var(--pr-primary-rgb), 0.05); color: var(--pr-primary);")
+                span.fw-bold.small Primary Hover (5%)
+                .d-flex.justify-content-between.align-items-end.small
+                  code.small rgba($primary, 0.05)
+                  span Submenu Hover
+            .col-12.col-sm-6
+              .p-3.rounded.border.d-flex.flex-column.justify-content-between(style="height: 100px; background: rgba(var(--pr-primary-rgb), 0.1); color: var(--pr-primary);")
+                span.fw-bold.small Primary Active (10%)
+                .d-flex.justify-content-between.align-items-end.small
+                  code.small rgba($primary, 0.1)
+                  span Submenu Active
+            .col-12.col-sm-6
+              .p-3.rounded.border.d-flex.flex-column.justify-content-between(style="height: 100px; background: rgba(var(--pr-primary-rgb), 0.25); color: var(--pr-primary);")
+                span.fw-bold.small Primary Border (25%)
+                .d-flex.justify-content-between.align-items-end.small
+                  code.small rgba($primary, 0.25)
+                  span Sidebar Guide Line
+            .col-12.col-sm-6
+              .p-3.rounded.border.bg-body-secondary.text-body.d-flex.flex-column.justify-content-between(style="height: 100px;")
+                span.fw-bold.small Body Secondary
+                .d-flex.justify-content-between.align-items-end.small
+                  code.text-body .bg-body-secondary
+                  span Theme Backgrounds
+
+  .row
+    .col-12
+      .card
+        .card-header
+          h5.card-title.mb-0 Grayscale & Body Colors
+          p.card-subtitle.text-body-secondary.small.mb-0 Neutral colors that dynamically change to guarantee contrast under Dark Mode.
+        .card-body
+          .row.g-3
+            .col-12.col-sm-4.col-md-3
+              .p-3.rounded.border.bg-body.text-body.d-flex.flex-column.justify-content-between(style="height: 90px;")
+                span.fw-semibold.small Body Background
+                code.small .bg-body
+            .col-12.col-sm-4.col-md-3
+              .p-3.rounded.border.bg-body-tertiary.text-body.d-flex.flex-column.justify-content-between(style="height: 90px;")
+                span.fw-semibold.small Body Tertiary
+                code.small .bg-body-tertiary
+            .col-12.col-sm-4.col-md-3
+              .p-3.rounded.border.text-body.d-flex.flex-column.justify-content-between(style="height: 90px; background: var(--pr-card-bg);")
+                span.fw-semibold.small Card Background
+                code.small var(--pr-card-bg)
+            .col-12.col-sm-4.col-md-3
+              .p-3.rounded.border.bg-dark.text-white.d-flex.flex-column.justify-content-between(style="height: 90px;")
+                span.fw-semibold.small Solid Dark
+                code.small .bg-dark
+
+  .row.mt-4
+    .col-12
+      .card
+        .card-header
+          h5.card-title.mb-0 Social & Brand Colors Showcase
+          p.card-subtitle.text-body-secondary.small.mb-0 Unified brand colors for social sign-in buttons, sharing actions, and custom avatar profiles.
+        .card-body
+          .row.g-3
+            // Brand: Facebook
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-facebook
+                      i.bi.bi-facebook
+                    span.fw-bold.small Facebook
+                  span.text-body-secondary.small.font-monospace #1877f2
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-facebook.w-50 Solid
+                  button.btn.btn-sm.btn-outline-facebook.w-50 Outline
+
+            // Brand: Google
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-google
+                      i.bi.bi-google
+                    span.fw-bold.small Google
+                  span.text-body-secondary.small.font-monospace #ea4335
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-google.w-50 Solid
+                  button.btn.btn-sm.btn-outline-google.w-50 Outline
+
+            // Brand: X / Twitter
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-x-twitter
+                      i.bi.bi-twitter-x
+                    span.fw-bold.small X / Twitter
+                  span.text-body-secondary.small.font-monospace #000000
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-x-twitter.w-50 Solid
+                  button.btn.btn-sm.btn-outline-x-twitter.w-50 Outline
+
+            // Brand: GitHub
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-github
+                      i.bi.bi-github
+                    span.fw-bold.small GitHub
+                  span.text-body-secondary.small.font-monospace #181717
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-github.w-50 Solid
+                  button.btn.btn-sm.btn-outline-github.w-50 Outline
+
+            // Brand: LinkedIn
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-linkedin
+                      i.bi.bi-linkedin
+                    span.fw-bold.small LinkedIn
+                  span.text-body-secondary.small.font-monospace #0077b5
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-linkedin.w-50 Solid
+                  button.btn.btn-sm.btn-outline-linkedin.w-50 Outline
+
+            // Brand: YouTube
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-youtube
+                      i.bi.bi-youtube
+                    span.fw-bold.small YouTube
+                  span.text-body-secondary.small.font-monospace #ff0000
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-youtube.w-50 Solid
+                  button.btn.btn-sm.btn-outline-youtube.w-50 Outline
+
+            // Brand: Instagram
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-instagram
+                      i.bi.bi-instagram
+                    span.fw-bold.small Instagram
+                  span.text-body-secondary.small.font-monospace #e1306c
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-instagram.w-50 Solid
+                  button.btn.btn-sm.btn-outline-instagram.w-50 Outline
+
+            // Brand: WhatsApp
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-whatsapp
+                      i.bi.bi-whatsapp
+                    span.fw-bold.small WhatsApp
+                  span.text-body-secondary.small.font-monospace #25d366
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-whatsapp.w-50 Solid
+                  button.btn.btn-sm.btn-outline-whatsapp.w-50 Outline
+
+            // Brand: Spotify
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-spotify
+                      i.bi.bi-spotify
+                    span.fw-bold.small Spotify
+                  span.text-body-secondary.small.font-monospace #1db954
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-spotify.w-50 Solid
+                  button.btn.btn-sm.btn-outline-spotify.w-50 Outline
+
+            // Brand: PayPal
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-paypal
+                      i.bi.bi-paypal
+                    span.fw-bold.small PayPal
+                  span.text-body-secondary.small.font-monospace #003087
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-paypal.w-50 Solid
+                  button.btn.btn-sm.btn-outline-paypal.w-50 Outline
+
+            // Brand: Apple
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-apple
+                      i.bi.bi-apple
+                    span.fw-bold.small Apple
+                  span.text-body-secondary.small.font-monospace #a2aaad
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-apple.w-50 Solid
+                  button.btn.btn-sm.btn-outline-apple.w-50 Outline
+
+            // Brand: Amazon
+            .col-12.col-sm-6.col-md-4.col-xl-3
+              .p-3.rounded.border.d-flex.flex-column.gap-2
+                .d-flex.align-items-center.justify-content-between.mb-1
+                  .d-flex.align-items-center.gap-2
+                    .avatar.avatar-sm.avatar-amazon
+                      i.bi.bi-cart-fill
+                    span.fw-bold.small Amazon
+                  span.text-body-secondary.small.font-monospace #ff9900
+                .d-flex.gap-2
+                  button.btn.btn-sm.btn-amazon.w-50 Solid
+                  button.btn.btn-sm.btn-outline-amazon.w-50 Outline
+
