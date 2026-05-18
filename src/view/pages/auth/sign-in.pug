@@ -33,17 +33,12 @@ block content
                     label.form-label.fw-semibold.small(for='inputPassword') Password
                     a.small.text-decoration-none.auth-footer-link(href=baseUrl + 'auth/reset-password.html') Forgot password?
                   
-                  .input-group
-                    input#inputPassword.form-control.border-end-0(
-                      type='password' 
-                      name='password' 
-                      placeholder='Enter your password'
-                    )
-                    button.input-group-text.bg-transparent.border-start-0(
-                      type="button"
-                      data-pr-toggle-password="inputPassword"
-                    )
-                      i.bi.bi-eye.text-body-secondary
+                  input#inputPassword.form-control(
+                    type="password" 
+                    name="password" 
+                    placeholder="Enter your password"
+                    data-pr-toggle-password=""
+                  )
 
                 .mb-3
                   .form-check
