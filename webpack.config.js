@@ -65,6 +65,7 @@ const PAGES = getFiles(PAGES_DIR);
 module.exports = {
   entry: {
     piruadmin: "./src/js/piruadmin.js",
+    "piruadmin-fonts": "./src/scss/piruadmin-fonts.scss",
     bootstrapicons: {
       import: "./src/plugins/bootstrapicons/bootstrapicons.js",
       dependOn: "piruadmin",
@@ -132,12 +133,12 @@ module.exports = {
     path: Path.join(opts.rootDir, "dist"),
     pathinfo: opts.devBuild,
     filename: (pathData) => {
-      return pathData.chunk.name === "piruadmin"
+      return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
         ? "assets/js/[name].js"
         : "assets/plugins/[name].js";
     },
     chunkFilename: (pathData) => {
-      return pathData.chunk.name === "piruadmin"
+      return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
         ? "assets/js/[name].js"
         : "assets/plugins/[name].js";
     },
@@ -174,12 +175,12 @@ module.exports = {
     // Extract css files to seperate bundle
     new MiniCssExtractPlugin({
       filename: (pathData) => {
-        return pathData.chunk.name === "piruadmin"
+        return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
           ? "assets/css/[name].css"
           : "assets/plugins/[name].css";
       },
       chunkFilename: (pathData) => {
-        return pathData.chunk.name === "piruadmin"
+        return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
           ? "assets/css/[name].css"
           : "assets/plugins/[name].css";
       },

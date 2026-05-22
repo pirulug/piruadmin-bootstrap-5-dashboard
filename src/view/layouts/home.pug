@@ -50,9 +50,11 @@ html(lang='en')
     //- link(rel="stylesheet" href=assets + "plugins/fontawesome.css")
     link(rel="stylesheet" href=assets + "plugins/bootstrapicons.css")
     //- link(rel="stylesheet" href=assets + "plugins/piruicons.css")
-    link(href=assets + 'css/piruadmin.css' rel='stylesheet')
+    link(rel="stylesheet" href=assets + "css/piruadmin-fonts.css")
+    link(rel="stylesheet" href=assets + "css/piruadmin.css")
 
-    link(rel='preload' href=assets + 'css/piruadmin.css' as='style')
+    link(rel="preload" href=assets + "css/piruadmin-fonts.css" as="style")
+    link(rel="preload" href=assets + "css/piruadmin.css" as="style")
 
     //- 5. SCHEMA.ORG (JSON-LD): Esto ayuda a Google a entender que es un "Software"
     script(type='application/ld+json').
