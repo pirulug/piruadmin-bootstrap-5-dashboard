@@ -6,7 +6,7 @@ append config
 
 block styles
   link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css")
-  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs/prismjs.css")
 
 block content
 
@@ -251,7 +251,7 @@ block content
 
 block scripts
   script(src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js")
-  script(src=assets + "plugins/prismjs.js")
+  script(src=assets + "plugins/prismjs/prismjs.js")
   script.
     document.addEventListener("DOMContentLoaded", function () {
       const lightbox = GLightbox({

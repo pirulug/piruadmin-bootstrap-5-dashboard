@@ -5,7 +5,7 @@ append config
   - pageUrl = 'plugins/lite-youtube'
 
 block styles
-  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs/prismjs.css")
 
 block content
   .row.g-3
@@ -30,5 +30,5 @@ block content
                   &lt;lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"&gt;&lt;/lite-youtube&gt;
 
 block scripts
-  script(src=assets + 'plugins/liteyoutube.js')
-  script(src=assets + "plugins/prismjs.js")
+  script(src=assets + "plugins/liteyoutube/liteyoutube.js")
+  script(src=assets + "plugins/prismjs/prismjs.js")

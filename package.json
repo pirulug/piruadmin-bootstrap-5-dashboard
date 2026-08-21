@@ -16,8 +16,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress",
     "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress",
+    "dev:plugins": "cross-env NODE_ENV=development PLUGINS=true webpack --config webpack.config.js --progress --env plugins",
     "watch": "webpack --config webpack.config.js --watch --progress",
     "start": "webpack serve --config webpack.config.js --progress",
+    "start:plugins": "cross-env PLUGINS=true webpack serve --config webpack.config.js --progress --env plugins",
     "prepublishOnly": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
     "deploy": "gh-pages -d dist"
   },

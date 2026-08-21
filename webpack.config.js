@@ -7,41 +7,15 @@ const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
-
-const opts = {
-  rootDir: process.cwd(),
-  devBuild: process.env.NODE_ENV !== "production",
-};
+const PluginsManager = require("./scripts/plugins-manager");
+const JsonManager = require("./scripts/json-manager");
 
 // PUG
 const PAGES_DIR = `${Path.resolve(__dirname, "src")}/view/pages`;
 
-// Read JSON data to pass to PUG templates (avoids relative path issues with require)
-const jsonData = {
-  menu: JSON.parse(
-    Fs.readFileSync(Path.resolve(__dirname, "src/data/menu.json"), "utf8")
-  ),
-  feather: JSON.parse(
-    Fs.readFileSync(
-      Path.resolve(__dirname, "src/data/feather_icons.json"),
-      "utf8"
-    )
-  ),
-  bootstrap: JSON.parse(
-    Fs.readFileSync(Path.resolve(__dirname, "src/data/boostrapicons.json"), "utf8")
-  ),
-  fontawesome: JSON.parse(
-    Fs.readFileSync(
-      Path.resolve(__dirname, "src/data/fontawesome_icons.json"),
-      "utf8"
-    )
-  ),
-  flags: JSON.parse(
-    Fs.readFileSync(Path.resolve(__dirname, "src/data/flag_icons.json"), "utf8")
-  ),
-};
+// Cargar datos JSON para las plantillas PUG
+const jsonData = JsonManager.loadData();
 
 function getFiles(dir, allFiles) {
   const files = Fs.readdirSync(dir);
@@ -60,293 +34,238 @@ function getFiles(dir, allFiles) {
 
 const PAGES = getFiles(PAGES_DIR);
 
+module.exports = (env = {}, argv = {}) => {
+  const isProduction =
+    process.env.NODE_ENV === "production" || argv.mode === "production";
+  const devBuild = !isProduction;
 
-
-module.exports = {
-  entry: {
-    piruadmin: "./src/js/piruadmin.js",
-    "piruadmin-fonts": "./src/scss/piruadmin-fonts.scss",
-    bootstrapicons: {
-      import: "./src/plugins/bootstrapicons/bootstrapicons.js",
-      dependOn: "piruadmin",
+  const appConfig = {
+    name: "app",
+    entry: {
+      piruadmin: "./src/js/piruadmin.js",
+      "piruadmin-fonts": "./src/scss/piruadmin-fonts.scss",
     },
-    feathericons: {
-      import: "./src/plugins/feathericons/feathericons.js",
-      dependOn: "piruadmin",
-    },
-    fontawesome: {
-      import: "./src/plugins/fontawesome/fontawesome.js",
-      dependOn: "piruadmin",
-    },
-    toastifyjs: {
-      import: "./src/plugins/toastifyjs/toastifyjs.js",
-      dependOn: "piruadmin",
-    },
-    liteyoutube: {
-      import: "./src/plugins/liteyoutube/liteyoutube.js",
-      dependOn: "piruadmin",
-    },
-    tagify: {
-      import: "./src/plugins/tagify/tagify.js",
-      dependOn: "piruadmin",
-    },
-    chartjs: {
-      import: "./src/plugins/chartjs/chartjs.js",
-      dependOn: "piruadmin",
-    },
-    flatpickr: {
-      import: "./src/plugins/flatpickr/flatpickr.js",
-      dependOn: "piruadmin",
-    },
-    sweetalert2: {
-      import: "./src/plugins/sweetalert2/sweetalert2.js",
-      dependOn: "piruadmin",
-    },
-    vectormaps: {
-      import: "./src/plugins/vectormaps/vectormaps.js",
-      dependOn: "piruadmin",
-    },
-    prismjs: {
-      import: "./src/plugins/prismjs/prismjs.js",
-      dependOn: "piruadmin",
-    },
-    flagicons: {
-      import: "./src/plugins/flagicons/flagicons.js",
-      dependOn: "piruadmin",
-    },
-    simplemde: {
-      import: "./src/plugins/simplemde/simplemde.js",
-      dependOn: "piruadmin",
-    },
-    custom: {
-      import: "./src/plugins/custom/custon.js",
-      dependOn: "piruadmin",
-    },
-    wysi: {
-      import: ["./src/plugins/wysi/wysi.js", "./src/plugins/wysi/wysi.css"],
-      dependOn: "piruadmin",
-    },
-  },
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
-  devtool: opts.devBuild ? "eval-cheap-module-source-map" : false,
-  output: {
-    path: Path.join(opts.rootDir, "dist"),
-    pathinfo: opts.devBuild,
-    filename: (pathData) => {
-      return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
-        ? "assets/js/[name].js"
-        : "assets/plugins/[name].js";
-    },
-    chunkFilename: (pathData) => {
-      return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
-        ? "assets/js/[name].js"
-        : "assets/plugins/[name].js";
-    },
-  },
-  performance: { hints: false },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        parallel: true,
-        terserOptions: {
-          ecma: 6,
-          format: {
-            comments: false,
+    mode: isProduction ? "production" : "development",
+    devtool: devBuild ? "eval-cheap-module-source-map" : false,
+    output: {
+      path: Path.join(process.cwd(), "dist"),
+      pathinfo: devBuild,
+      filename: "assets/js/[name].js",
+      chunkFilename: "assets/js/[name].js",
+      clean: devBuild
+        ? false
+        : {
+            keep: (asset) =>
+              asset.includes("assets/plugins") ||
+              asset.includes("assets\\plugins") ||
+              asset.startsWith("assets/plugins") ||
+              asset.startsWith("assets\\plugins"),
           },
-        },
-        extractComments: false,
+    },
+    performance: { hints: false },
+    optimization: {
+      minimizer: [
+        new TerserPlugin({
+          parallel: true,
+          terserOptions: {
+            ecma: 6,
+            format: {
+              comments: false,
+            },
+          },
+          extractComments: false,
+        }),
+        new CssMinimizerPlugin({
+          minimizerOptions: {
+            preset: [
+              "default",
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          },
+        }),
+      ],
+      runtimeChunk: false,
+    },
+    plugins: [
+      new JsonManager(),
+      // Extract css files to seperate bundle
+      new MiniCssExtractPlugin({
+        filename: "assets/css/[name].css",
+        chunkFilename: "assets/css/[name].css",
       }),
-      new CssMinimizerPlugin({
-        minimizerOptions: {
-          preset: [
-            "default",
+      // Copy fonts and images to dist
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: "src/fonts", to: "assets/fonts" },
+          { from: "src/img", to: "assets/img" },
+        ],
+      }),
+      // Cargar paginas de .pug
+      ...PAGES.map((page) => {
+        const parts = page.split("/");
+        const baseUrl = parts.length > 1 ? "../".repeat(parts.length - 1) : "./";
+
+        return new HtmlWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `./${page.replace(/\.pug/, ".html")}`,
+          templateParameters: {
+            baseUrl: baseUrl,
+            assets: baseUrl + "assets/",
+            ...jsonData,
+          },
+
+          minify: {
+            collapseWhitespace: false,
+            keepClosingSlash: false,
+            removeComments: false,
+            removeRedundantAttributes: false,
+            removeScriptTypeAttributes: false,
+            removeStyleLinkTypeAttributes: false,
+            useShortDoctype: false,
+            preventAttributesEscaping: false,
+          },
+          inject: false,
+        });
+      }),
+
+      // Beautify
+      !devBuild &&
+        new PrettifyWebpackPlugin({
+          extensions: [".html"],
+          prettierOptions: {
+            printWidth: 100,
+            tabWidth: 2,
+            useTabs: false,
+            singleQuote: true,
+            htmlWhitespaceSensitivity: "ignore",
+            endOfLine: "auto",
+            proseWrap: "always",
+          },
+        }),
+      // Eliminar archivos vacios
+      !devBuild && new DeleteEmptyFilesPlugin(__dirname, "dist"),
+    ].filter(Boolean),
+    module: {
+      rules: [
+        // Babel-loader
+        {
+          test: /\.js$/,
+          exclude: /(node_modules)/,
+          use: [
             {
-              discardComments: { removeAll: true },
+              loader: "babel-loader",
+              options: {
+                cacheDirectory: true,
+              },
             },
           ],
         },
-      }),
-    ],
-    runtimeChunk: false,
-  },
-  plugins: [
-    // DELETE
-    !opts.devBuild && new CleanWebpackPlugin(),
-    // Extract css files to seperate bundle
-    new MiniCssExtractPlugin({
-      filename: (pathData) => {
-        return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
-          ? "assets/css/[name].css"
-          : "assets/plugins/[name].css";
-      },
-      chunkFilename: (pathData) => {
-        return ["piruadmin", "piruadmin-fonts"].includes(pathData.chunk.name)
-          ? "assets/css/[name].css"
-          : "assets/plugins/[name].css";
-      },
-    }),
-    // Copy fonts and images to dist
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "src/fonts", to: "assets/fonts" },
-        { from: "src/img", to: "assets/img" },
-      ],
-    }),
-    // Cargar paginas de .pug
-    ...PAGES.map((page) => {
-      const parts = page.split("/");
-      const baseUrl = parts.length > 1 ? "../".repeat(parts.length - 1) : "./";
-
-      return new HtmlWebpackPlugin({
-        template: `${PAGES_DIR}/${page}`,
-        filename: `./${page.replace(/\.pug/, ".html")}`,
-        templateParameters: {
-          baseUrl: baseUrl,
-          assets: baseUrl + "assets/",
-          ...jsonData,
-        },
-
-        minify: {
-          collapseWhitespace: false,
-          keepClosingSlash: false,
-          removeComments: false,
-          removeRedundantAttributes: false,
-          removeScriptTypeAttributes: false,
-          removeStyleLinkTypeAttributes: false,
-          useShortDoctype: false,
-          preventAttributesEscaping: false,
-        },
-        inject: false,
-      });
-    }),
-
-    // Beautify
-    !opts.devBuild &&
-      new PrettifyWebpackPlugin({
-        extensions: [".html"],
-        prettierOptions: {
-          printWidth: 100,
-          tabWidth: 2,
-          useTabs: false,
-          singleQuote: true,
-          htmlWhitespaceSensitivity: "ignore",
-          endOfLine: "auto",
-          proseWrap: "always",
-        },
-      }),
-    // Eliminar archivos vacios
-    !opts.devBuild && new DeleteEmptyFilesPlugin(__dirname, "dist"),
-  ].filter(Boolean),
-  module: {
-    rules: [
-      // Babel-loader
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              cacheDirectory: true,
-            },
-          },
-        ],
-      },
-      // Css-loader & sass-loader
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              sassOptions: {
-                quietDeps: true,
-                loadPaths: [Path.resolve(__dirname, "node_modules")],
+        // Css-loader & sass-loader
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "postcss-loader",
+            {
+              loader: "sass-loader",
+              options: {
+                sassOptions: {
+                  quietDeps: true,
+                  loadPaths: [Path.resolve(__dirname, "node_modules")],
+                },
               },
             },
+          ],
+        },
+        // Load fonts
+        {
+          test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+          type: "asset/resource",
+          generator: {
+            filename: "assets/fonts/[name][ext]",
           },
-        ],
-      },
-      // Load fonts
-      {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/fonts/[name][ext]",
         },
-      },
-      // Load images (including svg)
-      {
-        test: /\.(png|jpg|jpeg|gif|webp|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/img/[name][ext]",
+        // Load images (including svg)
+        {
+          test: /\.(png|jpg|jpeg|gif|webp|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          type: "asset/resource",
+          generator: {
+            filename: "assets/img/[name][ext]",
+          },
         },
-      },
-      // Pug
-      {
-        test: /\.pug$/,
-        use: [
-          {
-            loader: "pirulug-pug-loader",
-            options: {
-              pretty: true,
+        // Pug
+        {
+          test: /\.pug$/,
+          use: [
+            {
+              loader: "pirulug-pug-loader",
+              options: {
+                pretty: true,
+              },
             },
-          },
-        ],
-      },
-      {
-        test: /\.json$/,
-        type: "javascript/auto",
-        use: [
-          {
-            loader: "json-loader",
-          },
-        ],
-      },
-    ],
-  },
-  ignoreWarnings: [
-    (warning) =>
-      /is deprecated/.test(warning.message) ||
-      /deprecated/.test(warning.message) ||
-      /Global built-in functions are deprecated/.test(warning.message) ||
-      /Sass @import rules are deprecated/.test(warning.message) ||
-      /deprecation warnings omitted/.test(warning.message),
-  ],
-  resolve: {
-    extensions: [".js", ".scss"],
-    modules: ["node_modules"],
-    alias: {
-      request$: "xhr",
+          ],
+        },
+        {
+          test: /\.json$/,
+          type: "javascript/auto",
+          use: [
+            {
+              loader: "json-loader",
+            },
+          ],
+        },
+      ],
     },
-  },
-  cache: {
-    type: "filesystem",
-  },
-  devServer: {
-    static: {
-      directory: Path.join(__dirname, "dist"),
-    },
-    watchFiles: [
-      "src/data/**/*.json",
-      "src/js/**/*.js",
-      "src/scss/**/*.scss",
-      "src/view/**/*.pug",
+    ignoreWarnings: [
+      (warning) =>
+        /is deprecated/.test(warning.message) ||
+        /deprecated/.test(warning.message) ||
+        /Global built-in functions are deprecated/.test(warning.message) ||
+        /Sass @import rules are deprecated/.test(warning.message) ||
+        /deprecation warnings omitted/.test(warning.message),
     ],
-    compress: true,
-    port: 8989,
-    open: true,
-    liveReload: true,
-  },
-  stats: {
-    assets: true,
-    builtAt: true,
-    colors: true,
-    modules: false,
-    children: false,
-  },
+    resolve: {
+      extensions: [".js", ".scss"],
+      modules: ["node_modules"],
+      alias: {
+        request$: "xhr",
+      },
+    },
+    cache: {
+      type: "filesystem",
+    },
+    devServer: {
+      static: {
+        directory: Path.join(__dirname, "dist"),
+      },
+      watchFiles: [
+        "src/data/**/*.json",
+        "src/js/**/*.js",
+        "src/scss/**/*.scss",
+        "src/view/**/*.pug",
+      ],
+      compress: true,
+      port: 8989,
+      open: true,
+      liveReload: true,
+    },
+    stats: {
+      assets: true,
+      builtAt: true,
+      colors: true,
+      modules: false,
+      children: false,
+    },
+  };
+
+  const shouldBuildPlugins = PluginsManager.shouldBuildPlugins(env, argv);
+
+  if (shouldBuildPlugins) {
+    return [appConfig, ...PluginsManager.createConfigs(env, argv)];
+  }
+
+  return appConfig;
 };

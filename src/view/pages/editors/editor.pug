@@ -5,7 +5,7 @@ append config
   - pageUrl = "editors/editor"
 
 block styles
-  link(rel="stylesheet", href=assets + "plugins/wysi.css")
+  link(rel="stylesheet", href=assets + "plugins/wysi/wysi.css")
 
 block content
   .card.mb-3
@@ -38,7 +38,7 @@ block content
       | Publish
 
 block scripts
-  script(src=assets + "plugins/wysi.js")
+  script(src=assets + "plugins/wysi/wysi.js")
   script.
     document.addEventListener("DOMContentLoaded", function() {
       if (typeof Wysi === "undefined") return;

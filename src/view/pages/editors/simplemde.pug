@@ -5,8 +5,8 @@ append config
   - pageUrl = "editors/simplemde"
 
 block styles
-  link(rel="stylesheet", href=assets + "plugins/simplemde.css")
-  link(rel="stylesheet", href=assets + "plugins/prismjs.css")
+  link(rel="stylesheet", href=assets + "plugins/simplemde/simplemde.css")
+  link(rel="stylesheet", href=assets + "plugins/prismjs/prismjs.css")
 
 block content
   .row
@@ -44,8 +44,8 @@ block content
                   &lt;/script&gt;
 
 block scripts
-  script(src=assets + "plugins/simplemde.js")
-  script(src=assets + "plugins/prismjs.js")
+  script(src=assets + "plugins/simplemde/simplemde.js")
+  script(src=assets + "plugins/prismjs/prismjs.js")
 
   script.
     var simplemde = new SimpleMDE({ 
