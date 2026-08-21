@@ -36,3 +36,4 @@ pnpm-debug.log*
 pnpm-lock.yaml
 scratch
 pnpm-workspace.yaml
+package-lock.json
