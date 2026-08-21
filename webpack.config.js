@@ -208,15 +208,6 @@ module.exports = (env = {}, argv = {}) => {
             },
           ],
         },
-        {
-          test: /\.json$/,
-          type: "javascript/auto",
-          use: [
-            {
-              loader: "json-loader",
-            },
-          ],
-        },
       ],
     },
     ignoreWarnings: [
