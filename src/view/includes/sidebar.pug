@@ -2,6 +2,62 @@ block config
 
 - var menuItems = menu
 
+-
+  function checkActive(item, currentUrl) {
+    if (!item) return false;
+    if (item.path && item.path !== "#" && item.path === currentUrl) return true;
+    if (item.link && item.link !== "#" && item.link === currentUrl) return true;
+    if (item.items && Array.isArray(item.items)) {
+      return item.items.some(function(child) {
+        return checkActive(child, currentUrl);
+      });
+    }
+    return false;
+  }
+
+mixin renderMenu(items, parentId, level)
+  each item in items
+    if item.header
+      li.sidebar-header= item.title
+
+    else if item.items && item.items.length
+      - var itemId = item.path ? item.path.replace(/\//g, "-") : ("menu-" + Math.random().toString(36).substr(2, 7))
+      - var isChildActive = checkActive(item, pageUrl)
+
+      li.sidebar-item(class=(isChildActive ? "active" : ""))
+        a.sidebar-link(
+          class=(isChildActive ? "" : "collapsed")
+          data-bs-target=`#${itemId}`
+          data-bs-toggle="collapse"
+          aria-expanded=(isChildActive ? "true" : "false")
+        )
+          if level === 1 && item.icon
+            i.align-middle(class="bi bi-" + item.icon)
+
+          span.align-middle= item.title
+          if item.badge
+            span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
+
+        ul.sidebar-dropdown.list-unstyled.collapse(
+          id=itemId
+          data-bs-parent=parentId
+          class=(isChildActive ? "show" : "")
+        )
+          +renderMenu(item.items, `#${itemId}`, level + 1)
+
+    else
+      - var isItemActive = (pageUrl === item.path || pageUrl === item.link)
+      - var itemLink = item.link ? (item.link === "#" ? "#" : (baseUrl + item.link + ".html")) : "#"
+
+      li.sidebar-item(class=(isItemActive ? "active" : ""))
+        a.sidebar-link(href=itemLink)
+          if level === 1 && item.icon
+            i.align-middle(class="bi bi-" + item.icon)
+
+          span.align-middle= item.title
+          if item.badge
+            span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
+
 nav#sidebar.sidebar.js-sidebar
   .sidebar-content.js-simplebar
     a.sidebar-brand(href=baseUrl + "index.html")
@@ -11,35 +67,4 @@ nav#sidebar.sidebar.js-sidebar
       i.bi.bi-x-lg
 
     ul.sidebar-nav
-      each item in menuItems
-        if item.collapsed 
-
-          - var itemPaths = item.items.map(i => i.path)
-          - var isActive = itemPaths.includes(pageUrl)
-
-          li.sidebar-item(class=(isActive ? "active" : ""))
-            a.sidebar-link(class=(isActive ? "" : "collapsed") data-bs-target=`#${item.path}` data-bs-toggle="collapse")
-              i.align-middle(class="bi bi-" + item.icon)
-              span.align-middle= item.title
-              if item.badge 
-                span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
-            ul.sidebar-dropdown.list-unstyled.collapse(id=item.path, data-bs-parent="#sidebar", class=(isActive ? "show" : ""))
-              each subItem in item.items
-                li.sidebar-item(class=(pageUrl === subItem.path ? "active" : ""))
-                  a.sidebar-link(href=baseUrl + `${subItem.link}.html`)
-                    = subItem.title
-                    if subItem.badge 
-                      span.sidebar-badge.badge.rounded-pill(class="bg-" + (subItem.badgeColor || "primary"))= subItem.badge
-
-
-        else if item.header
-          li.sidebar-header= item.title
-
-        else
-          li.sidebar-item(class=(pageUrl === item.path ? "active" : ""))
-            a.sidebar-link(href=baseUrl + `${item.link}.html`)
-              i.align-middle(class="bi bi-" + item.icon)
-              span.align-middle= item.title
-              if item.badge 
-                span.sidebar-badge.badge.rounded-pill(class="bg-" + (item.badgeColor || "primary"))= item.badge
-
+      +renderMenu(menuItems, "#sidebar", 1)

@@ -329,5 +329,61 @@
         "link": "plugins/lite-youtube"
       }
     ]
+  },
+  {
+    "title": "MULTI LEVEL EXAMPLE",
+    "header": true
+  },
+  {
+    "title": "Level 1",
+    "path": "#",
+    "icon": "circle-fill",
+    "link": "#"
+  },
+  {
+    "title": "Level 1",
+    "path": "multilevel",
+    "icon": "circle-fill",
+    "collapsed": true,
+    "items": [
+      {
+        "title": "Level 2",
+        "path": "#",
+        "link": "#"
+      },
+      {
+        "title": "Level 2",
+        "path": "multilevel-sub",
+        "collapsed": true,
+        "items": [
+          {
+            "title": "Level 3",
+            "path": "#",
+            "link": "#"
+          },
+          {
+            "title": "Level 3",
+            "path": "#",
+            "link": "#"
+          },
+          {
+            "title": "Level 3",
+            "path": "#",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "title": "Level 2",
+        "path": "#",
+        "link": "#"
+      }
+    ]
+  },
+  {
+    "title": "Level 1",
+    "path": "#",
+    "icon": "circle-fill",
+    "link": "#"
   }
 ]

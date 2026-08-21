@@ -86,11 +86,19 @@ a.sidebar-link {
 // Children
 .sidebar-dropdown {
   list-style: none;
-  padding-left: 1rem;
-  margin-left: 2.125rem;
+  padding-left: 0.75rem;
+  margin-left: 1.75rem;
   border-left: 1px solid rgba($primary, 0.25);
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
+
+  .sidebar-dropdown {
+    margin-left: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid rgba($primary, 0.2);
+    margin-top: 0.15rem;
+    margin-bottom: 0.25rem;
+  }
 }
 
 .sidebar-dropdown .sidebar-link {
@@ -104,7 +112,17 @@ a.sidebar-link {
   background: transparent;
   display: flex;
   align-items: center;
+  position: relative;
   transition: all 0.2s ease-in-out;
+
+  i,
+  svg {
+    font-size: 0.75rem;
+    margin-right: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:before {
     display: none !important;
@@ -155,6 +173,19 @@ a.sidebar-link {
 .sidebar [data-bs-toggle="collapse"]:not(.collapsed):after {
   transform: rotate(-135deg);
   top: 1.4rem;
+}
+
+.sidebar .sidebar-dropdown [data-bs-toggle="collapse"]:after {
+  top: 50%;
+  margin-top: -3px;
+  right: 0.75rem;
+}
+
+.sidebar .sidebar-dropdown [aria-expanded="true"]:after,
+.sidebar .sidebar-dropdown [data-bs-toggle="collapse"]:not(.collapsed):after {
+  transform: rotate(-135deg);
+  top: 50%;
+  margin-top: -1px;
 }
 
 // Sidebar brand
