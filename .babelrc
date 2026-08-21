@@ -4,7 +4,6 @@
       "@babel/preset-env",
       {
         "modules": false,
-        "bugfixes": true,
         "targets": {
           "browsers": [
             "last 2 versions",
@@ -12,11 +11,6 @@
             "not dead",
             "not ie 11"
           ]
-        },
-        "useBuiltIns": "entry",
-        "corejs": {
-          "version": 3,
-          "proposals": true
         }
       }
     ]
