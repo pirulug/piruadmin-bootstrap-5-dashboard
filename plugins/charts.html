@@ -73,8 +73,9 @@
     />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
     <!-- Icons-->
-    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons/bootstrapicons.css" />
     <!-- Css-->
+    <link rel="stylesheet" href="../assets/css/piruadmin-fonts.css" />
     <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <!-- Theme-->
     <script>
@@ -85,7 +86,7 @@
         document.documentElement.setAttribute('data-bs-theme', theme);
       })();
     </script>
-    <link rel="stylesheet" href="../assets/plugins/prismjs.css" />
+    <link rel="stylesheet" href="../assets/plugins/prismjs/prismjs.css" />
   </head>
   <body>
     <!-- Loader-->
@@ -113,7 +114,12 @@
             </li>
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#pages"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-file-earmark-fill"></i>
                 <span class="align-middle">Pages</span>
               </a>
@@ -123,30 +129,160 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                  <a class="sidebar-link" href="../pages/blank.html">
+                    <span class="align-middle">Blank Page</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                  <a class="sidebar-link" href="../pages/timeline.html">
+                    <span class="align-middle">Timeline</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                  <a class="sidebar-link" href="../pages/search.html">
+                    <span class="align-middle">Search</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../pages/colors.html">
-                    Colors
+                    <span class="align-middle">Colors</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../pages/typography.html">
-                    Typography
+                    <span class="align-middle">Typography</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-users"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Users</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-users"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-add.html">
+                        <span class="align-middle">Add User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-list.html">
+                        <span class="align-middle">List User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-view.html">
+                        <span class="align-middle">View User</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-projects"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Projects</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-projects"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-list.html">
+                        <span class="align-middle">Project List</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-details.html">
+                        <span class="align-middle">Project Details</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-create.html">
+                        <span class="align-middle">Create Project</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-mail"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Mail</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-mail"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-inbox.html">
+                        <span class="align-middle">Inbox</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-compose.html">
+                        <span class="align-middle">Compose</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-read.html">
+                        <span class="align-middle">Read Email</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-file-manager"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">File Manager</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-file-manager"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-manager.html">
+                        <span class="align-middle">All Files</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-media.html">
+                        <span class="align-middle">Media Files</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#auth"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-people"></i>
                 <span class="align-middle">Auth</span>
               </a>
@@ -156,45 +292,58 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                  <a class="sidebar-link" href="../auth/sign-in.html">
+                    <span class="align-middle">Sign In</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                  <a class="sidebar-link" href="../auth/sign-up.html">
+                    <span class="align-middle">Sign Up</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                  <a class="sidebar-link" href="../auth/reset-password.html">
+                    <span class="align-middle">Reset Password</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                  <a class="sidebar-link" href="../auth/recover-password.html">
+                    <span class="align-middle">Recover Password</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/auth-lock.html">
-                    Lock Screen
+                    <span class="align-middle">Lock Screen</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification.html">
-                    2-Step Verification
+                    <span class="align-middle">2-Step Verification</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification-code.html">
-                    2-Step Code
+                    <span class="align-middle">2-Step Code</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
-                    2-Step Backup Codes
+                    <span class="align-middle">2-Step Backup Codes</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#account"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-person"></i>
                 <span class="align-middle">Account</span>
               </a>
@@ -204,15 +353,24 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                  <a class="sidebar-link" href="../account/profile.html">
+                    <span class="align-middle">Profile</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                  <a class="sidebar-link" href="../account/settings.html">
+                    <span class="align-middle">Settings</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#errors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-bug"></i>
                 <span class="align-middle">Errors</span>
               </a>
@@ -222,14 +380,18 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/404.html">404</a>
+                  <a class="sidebar-link" href="../error/404.html">
+                    <span class="align-middle">404</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/500.html">500</a>
+                  <a class="sidebar-link" href="../error/500.html">
+                    <span class="align-middle">500</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../error/maintenance.html">
-                    Maintenance
+                    <span class="align-middle">Maintenance</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
@@ -241,6 +403,7 @@
                 class="sidebar-link collapsed"
                 data-bs-target="#ui-elements"
                 data-bs-toggle="collapse"
+                aria-expanded="false"
               >
                 <i class="align-middle bi bi-box"></i>
                 <span class="align-middle">UI Elements</span>
@@ -252,44 +415,65 @@
               >
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../ui/accordion.html">
-                    Accordion
+                    <span class="align-middle">Accordion</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../ui/scrollspy.html">
-                    Scrollspy
+                    <span class="align-middle">Scrollspy</span>
                     <span class="sidebar-badge badge rounded-pill bg-success">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                  <a class="sidebar-link" href="../ui/alerts.html">
+                    <span class="align-middle">Alerts</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                  <a class="sidebar-link" href="../ui/badges.html">
+                    <span class="align-middle">Badges</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                  <a class="sidebar-link" href="../ui/buttons.html">
+                    <span class="align-middle">Buttons</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                  <a class="sidebar-link" href="../ui/cards.html">
+                    <span class="align-middle">Cards</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                  <a class="sidebar-link" href="../ui/general.html">
+                    <span class="align-middle">General UI</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                  <a class="sidebar-link" href="../ui/images.html">
+                    <span class="align-middle">Images</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                  <a class="sidebar-link" href="../ui/tabs.html">
+                    <span class="align-middle">Tabs</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                  <a class="sidebar-link" href="../ui/avatar.html">
+                    <span class="align-middle">Avatar</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#tables"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-grid"></i>
                 <span class="align-middle">Tables</span>
               </a>
@@ -299,12 +483,19 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                  <a class="sidebar-link" href="../tables/bootstrap.html">
+                    <span class="align-middle">Table Bootstrap</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#forms"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-file"></i>
                 <span class="align-middle">Forms</span>
               </a>
@@ -314,21 +505,30 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">
+                    <span class="align-middle">Basic Inputs</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                  <a class="sidebar-link" href="../forms/tagify.html">
+                    <span class="align-middle">Tagify</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../forms/flatpickr.html">
-                    Flatpickr
+                    <span class="align-middle">Flatpickr</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#editors" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#editors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-pencil-square"></i>
                 <span class="align-middle">Editors</span>
               </a>
@@ -338,18 +538,25 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../editors/simplemde.html">SimpleMDE</a>
+                  <a class="sidebar-link" href="../editors/simplemde.html">
+                    <span class="align-middle">SimpleMDE</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../editors/editor.html">
-                    Wysi Editor
+                    <span class="align-middle">Wysi Editor</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#icons"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-cup-hot"></i>
                 <span class="align-middle">Icons</span>
               </a>
@@ -359,21 +566,34 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                  <a class="sidebar-link" href="../icons/feather.html">
+                    <span class="align-middle">Feather</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                  <a class="sidebar-link" href="../icons/awesome.html">
+                    <span class="align-middle">Font Awesome</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                  <a class="sidebar-link" href="../icons/bootstrap.html">
+                    <span class="align-middle">Bootstrap Icons</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/flag-icons.html">Flag Icons</a>
+                  <a class="sidebar-link" href="../icons/flag-icons.html">
+                    <span class="align-middle">Flag Icons</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item active">
-              <a class="sidebar-link" data-bs-target="#plugins" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link"
+                data-bs-target="#plugins"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+              >
                 <i class="align-middle bi bi-lightning"></i>
                 <span class="align-middle">Plugins</span>
               </a>
@@ -383,21 +603,92 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">
+                    <span class="align-middle">SweetAlert 2</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                  <a class="sidebar-link" href="../plugins/toastify.html">
+                    <span class="align-middle">Toastify JS</span>
+                  </a>
                 </li>
                 <li class="sidebar-item active">
-                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                  <a class="sidebar-link" href="../plugins/charts.html">
+                    <span class="align-middle">Charts</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                  <a class="sidebar-link" href="../plugins/maps-google.html">
+                    <span class="align-middle">Maps</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">
+                    <span class="align-middle">Lite YouTube</span>
+                  </a>
                 </li>
               </ul>
+            </li>
+            <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#multilevel"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="multilevel"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#multilevel-sub"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Level 2</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="multilevel-sub"
+                    data-bs-parent="#multilevel"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -887,9 +1178,6 @@
                 </div>
               </div>
             </div>
-            <!-- =====================================================-->
-            <!-- NEW DEMONSTRATIONS-->
-            <!-- =====================================================-->
             <!-- Area Chart-->
             <div class="col-12 col-lg-6">
               <div class="card mb-3">
@@ -997,9 +1285,244 @@
                 </div>
               </div>
             </div>
+            <!-- Grouped Bar Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Grouped Bar Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    Compare multiple datasets side-by-side per period.
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-grouped-bar"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartGroupedBar"
+                      aria-expanded="false"
+                      aria-controls="collapseChartGroupedBar"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartGroupedBar">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-grouped-bar"), {
+  type: "bar",
+  data: {
+    labels: ["Q1","Q2","Q3","Q4"],
+    datasets: [
+      {
+        label: "2025",
+        data: [42,55,68,80],
+        backgroundColor: "#6c757d"
+      },
+      {
+        label: "2026",
+        data: [58,74,89,105],
+        backgroundColor: "#ff0055"
+      }
+    ]
+  },
+  options: { maintainAspectRatio: false }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Stacked Bar Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Stacked Bar Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    Enable
+                    <code>stacked: true</code>
+                    on x and y scales.
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-stacked-bar"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartStackedBar"
+                      aria-expanded="false"
+                      aria-controls="collapseChartStackedBar"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartStackedBar">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-stacked-bar"), {
+  type: "bar",
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun"],
+    datasets: [
+      { label: "Organic", data: [20,30,40,35,45,50], backgroundColor: "#17a2b8" },
+      { label: "Referral", data: [15,20,25,22,28,32], backgroundColor: "#ffc107" },
+      { label: "Paid", data: [25,35,45,40,50,60], backgroundColor: "#ff0055" }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true }
+    }
+  }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Multi-Axis Line Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Multi-Axis Line Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    Independent Y-axes with
+                    <code>yAxisID: "y"</code>
+                    and
+                    <code>yAxisID: "y1"</code>
+                    .
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-multi-axis"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartMultiAxis"
+                      aria-expanded="false"
+                      aria-controls="collapseChartMultiAxis"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartMultiAxis">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-multi-axis"), {
+  type: "line",
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun"],
+    datasets: [
+      {
+        label: "Revenue ($k)",
+        data: [35,48,52,64,78,92],
+        borderColor: "#ff0055",
+        yAxisID: "y"
+      },
+      {
+        label: "Orders",
+        data: [120,180,210,290,340,410],
+        borderColor: "#17a2b8",
+        yAxisID: "y1"
+      }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    scales: {
+      y: { type: "linear", position: "left" },
+      y1: { type: "linear", position: "right", grid: { drawOnChartArea: false } }
+    }
+  }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Stepped Line Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Stepped Line Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    Step progression line with
+                    <code>stepped: true</code>
+                    .
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-stepped"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartStepped"
+                      aria-expanded="false"
+                      aria-controls="collapseChartStepped"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartStepped">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-stepped"), {
+  type: "line",
+  data: {
+    labels: ["Day 1","Day 2","Day 3","Day 4","Day 5","Day 6"],
+    datasets: [{
+      label: "Active Server Instances",
+      data: [4,4,8,8,12,16],
+      borderColor: "#20c997",
+      backgroundColor: "rgba(32,201,151,0.15)",
+      stepped: true,
+      fill: true
+    }]
+  },
+  options: { maintainAspectRatio: false }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- Radar Chart-->
             <div class="col-12 col-lg-6">
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header">
                   <h5 class="card-title">Radar Chart</h5>
                   <h6 class="card-subtitle text-muted">
@@ -1051,7 +1574,7 @@
             </div>
             <!-- Polar Area Chart-->
             <div class="col-12 col-lg-6">
-              <div class="card">
+              <div class="card mb-3">
                 <div class="card-header">
                   <h5 class="card-title">Polar Area Chart</h5>
                   <h6 class="card-subtitle text-muted">
@@ -1089,6 +1612,114 @@
     datasets: [{
       data: [11,16,7,14],
       backgroundColor: ["#ff0055","#17a2b8","#ffc107","#28a745"]
+    }]
+  },
+  options: { maintainAspectRatio: false }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Bubble Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Bubble Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    3-dimensional data points with
+                    <code>x, y, r</code>
+                    radius coordinates.
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-bubble"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartBubble"
+                      aria-expanded="false"
+                      aria-controls="collapseChartBubble"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartBubble">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-bubble"), {
+  type: "bubble",
+  data: {
+    datasets: [
+      {
+        label: "Product A",
+        data: [{x: 20, y: 30, r: 15}, {x: 40, y: 10, r: 10}, {x: 25, y: 40, r: 25}, {x: 35, y: 25, r: 18}],
+        backgroundColor: "rgba(255,0,85,0.6)"
+      },
+      {
+        label: "Product B",
+        data: [{x: 10, y: 40, r: 10}, {x: 30, y: 20, r: 20}, {x: 45, y: 35, r: 14}, {x: 15, y: 15, r: 12}],
+        backgroundColor: "rgba(23,162,184,0.6)"
+      }
+    ]
+  },
+  options: { maintainAspectRatio: false }
+});
+</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Scatter Chart-->
+            <div class="col-12 col-lg-6">
+              <div class="card mb-3">
+                <div class="card-header">
+                  <h5 class="card-title">Scatter Chart</h5>
+                  <h6 class="card-subtitle text-muted">
+                    Scatter plot plotting X and Y coordinate pairs.
+                  </h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart">
+                    <canvas id="chartjs-scatter"></canvas>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseChartScatter"
+                      aria-expanded="false"
+                      aria-controls="collapseChartScatter"
+                    >
+                      <i class="bi bi-code-slash me-1"></i>
+                      View Code
+                    </button>
+                  </div>
+                  <div class="collapse mt-3" id="collapseChartScatter">
+                    <div class="demo-code-preview" data-label="CODE EXAMPLE">
+                      <button class="copy-btn" type="button">Copy</button>
+                      <pre
+                        class="language-js"
+                      ><code class="language-js">new Chart(document.getElementById("chartjs-scatter"), {
+  type: "scatter",
+  data: {
+    datasets: [{
+      label: "Observations",
+      data: [
+        {x: -10, y: 0}, {x: 0, y: 10}, {x: 10, y: 5},
+        {x: 0.5, y: 5.5}, {x: 15, y: 25}, {x: 20, y: 18}
+      ],
+      backgroundColor: "#ff0055"
     }]
   },
   options: { maintainAspectRatio: false }
@@ -1137,8 +1768,8 @@
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
     <script src="../assets/js/piruadmin.js"></script>
-    <script src="../assets/plugins/chartjs.js"></script>
-    <script src="../assets/plugins/prismjs.js"></script>
+    <script src="../assets/plugins/chartjs/chartjs.js"></script>
+    <script src="../assets/plugins/prismjs/prismjs.js"></script>
     <script>
       // Line chart
       new Chart(document.getElementById('chartjs-line'), {
@@ -1255,6 +1886,95 @@
         },
       });
 
+      // Grouped bar chart
+      new Chart(document.getElementById('chartjs-grouped-bar'), {
+        type: 'bar',
+        data: {
+          labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+          datasets: [
+            {
+              label: '2025',
+              data: [42, 55, 68, 80],
+              backgroundColor: '#6c757d',
+            },
+            {
+              label: '2026',
+              data: [58, 74, 89, 105],
+              backgroundColor: '#ff0055',
+            },
+          ],
+        },
+        options: { maintainAspectRatio: false },
+      });
+
+      // Stacked bar chart
+      new Chart(document.getElementById('chartjs-stacked-bar'), {
+        type: 'bar',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [
+            { label: 'Organic', data: [20, 30, 40, 35, 45, 50], backgroundColor: '#17a2b8' },
+            { label: 'Referral', data: [15, 20, 25, 22, 28, 32], backgroundColor: '#ffc107' },
+            { label: 'Paid', data: [25, 35, 45, 40, 50, 60], backgroundColor: '#ff0055' },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true },
+            y: { stacked: true },
+          },
+        },
+      });
+
+      // Multi-axis line chart
+      new Chart(document.getElementById('chartjs-multi-axis'), {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [
+            {
+              label: 'Revenue ($k)',
+              data: [35, 48, 52, 64, 78, 92],
+              borderColor: '#ff0055',
+              yAxisID: 'y',
+            },
+            {
+              label: 'Orders',
+              data: [120, 180, 210, 290, 340, 410],
+              borderColor: '#17a2b8',
+              yAxisID: 'y1',
+            },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          scales: {
+            y: { type: 'linear', position: 'left' },
+            y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false } },
+          },
+        },
+      });
+
+      // Stepped line chart
+      new Chart(document.getElementById('chartjs-stepped'), {
+        type: 'line',
+        data: {
+          labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6'],
+          datasets: [
+            {
+              label: 'Active Server Instances',
+              data: [4, 4, 8, 8, 12, 16],
+              borderColor: '#20c997',
+              backgroundColor: 'rgba(32,201,151,0.15)',
+              stepped: true,
+              fill: true,
+            },
+          ],
+        },
+        options: { maintainAspectRatio: false },
+      });
+
       // Radar chart
       new Chart(document.getElementById('chartjs-radar'), {
         type: 'radar',
@@ -1281,6 +2001,58 @@
             {
               data: [11, 16, 7, 14],
               backgroundColor: ['#ff0055', '#17a2b8', '#ffc107', '#28a745'],
+            },
+          ],
+        },
+        options: { maintainAspectRatio: false },
+      });
+
+      // Bubble chart
+      new Chart(document.getElementById('chartjs-bubble'), {
+        type: 'bubble',
+        data: {
+          datasets: [
+            {
+              label: 'Product A',
+              data: [
+                { x: 20, y: 30, r: 15 },
+                { x: 40, y: 10, r: 10 },
+                { x: 25, y: 40, r: 25 },
+                { x: 35, y: 25, r: 18 },
+              ],
+              backgroundColor: 'rgba(255,0,85,0.6)',
+            },
+            {
+              label: 'Product B',
+              data: [
+                { x: 10, y: 40, r: 10 },
+                { x: 30, y: 20, r: 20 },
+                { x: 45, y: 35, r: 14 },
+                { x: 15, y: 15, r: 12 },
+              ],
+              backgroundColor: 'rgba(23,162,184,0.6)',
+            },
+          ],
+        },
+        options: { maintainAspectRatio: false },
+      });
+
+      // Scatter chart
+      new Chart(document.getElementById('chartjs-scatter'), {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'Observations',
+              data: [
+                { x: -10, y: 0 },
+                { x: 0, y: 10 },
+                { x: 10, y: 5 },
+                { x: 0.5, y: 5.5 },
+                { x: 15, y: 25 },
+                { x: 20, y: 18 },
+              ],
+              backgroundColor: '#ff0055',
             },
           ],
         },

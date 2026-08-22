@@ -73,8 +73,9 @@
     />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
     <!-- Icons-->
-    <link rel="stylesheet" href="../assets/plugins/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons/bootstrapicons.css" />
     <!-- Css-->
+    <link rel="stylesheet" href="../assets/css/piruadmin-fonts.css" />
     <link rel="stylesheet" href="../assets/css/piruadmin.css" />
     <!-- Theme-->
     <script>
@@ -112,7 +113,12 @@
             </li>
             <li class="sidebar-header">Pages</li>
             <li class="sidebar-item active">
-              <a class="sidebar-link" data-bs-target="#pages" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link"
+                data-bs-target="#pages"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+              >
                 <i class="align-middle bi bi-file-earmark-fill"></i>
                 <span class="align-middle">Pages</span>
               </a>
@@ -122,30 +128,160 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/blank.html">Blank Page</a>
+                  <a class="sidebar-link" href="../pages/blank.html">
+                    <span class="align-middle">Blank Page</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/timeline.html">Timeline</a>
+                  <a class="sidebar-link" href="../pages/timeline.html">
+                    <span class="align-middle">Timeline</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/search.html">Search</a>
+                  <a class="sidebar-link" href="../pages/search.html">
+                    <span class="align-middle">Search</span>
+                  </a>
                 </li>
                 <li class="sidebar-item active">
                   <a class="sidebar-link" href="../pages/colors.html">
-                    Colors
+                    <span class="align-middle">Colors</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../pages/typography.html">
-                    Typography
+                    <span class="align-middle">Typography</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-users"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Users</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-users"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-add.html">
+                        <span class="align-middle">Add User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-list.html">
+                        <span class="align-middle">List User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-view.html">
+                        <span class="align-middle">View User</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-projects"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Projects</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-projects"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-list.html">
+                        <span class="align-middle">Project List</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-details.html">
+                        <span class="align-middle">Project Details</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-create.html">
+                        <span class="align-middle">Create Project</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-mail"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Mail</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-mail"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-inbox.html">
+                        <span class="align-middle">Inbox</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-compose.html">
+                        <span class="align-middle">Compose</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-read.html">
+                        <span class="align-middle">Read Email</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-file-manager"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">File Manager</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-file-manager"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-manager.html">
+                        <span class="align-middle">All Files</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-media.html">
+                        <span class="align-middle">Media Files</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#auth"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-people"></i>
                 <span class="align-middle">Auth</span>
               </a>
@@ -155,45 +291,58 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-in.html">Sign In</a>
+                  <a class="sidebar-link" href="../auth/sign-in.html">
+                    <span class="align-middle">Sign In</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-up.html">Sign Up</a>
+                  <a class="sidebar-link" href="../auth/sign-up.html">
+                    <span class="align-middle">Sign Up</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/reset-password.html">Reset Password</a>
+                  <a class="sidebar-link" href="../auth/reset-password.html">
+                    <span class="align-middle">Reset Password</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/recover-password.html">Recover Password</a>
+                  <a class="sidebar-link" href="../auth/recover-password.html">
+                    <span class="align-middle">Recover Password</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/auth-lock.html">
-                    Lock Screen
+                    <span class="align-middle">Lock Screen</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification.html">
-                    2-Step Verification
+                    <span class="align-middle">2-Step Verification</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification-code.html">
-                    2-Step Code
+                    <span class="align-middle">2-Step Code</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
-                    2-Step Backup Codes
+                    <span class="align-middle">2-Step Backup Codes</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#account"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-person"></i>
                 <span class="align-middle">Account</span>
               </a>
@@ -203,15 +352,24 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/profile.html">Profile</a>
+                  <a class="sidebar-link" href="../account/profile.html">
+                    <span class="align-middle">Profile</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/settings.html">Settings</a>
+                  <a class="sidebar-link" href="../account/settings.html">
+                    <span class="align-middle">Settings</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#errors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-bug"></i>
                 <span class="align-middle">Errors</span>
               </a>
@@ -221,14 +379,18 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/404.html">404</a>
+                  <a class="sidebar-link" href="../error/404.html">
+                    <span class="align-middle">404</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/500.html">500</a>
+                  <a class="sidebar-link" href="../error/500.html">
+                    <span class="align-middle">500</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../error/maintenance.html">
-                    Maintenance
+                    <span class="align-middle">Maintenance</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
@@ -240,6 +402,7 @@
                 class="sidebar-link collapsed"
                 data-bs-target="#ui-elements"
                 data-bs-toggle="collapse"
+                aria-expanded="false"
               >
                 <i class="align-middle bi bi-box"></i>
                 <span class="align-middle">UI Elements</span>
@@ -251,44 +414,65 @@
               >
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../ui/accordion.html">
-                    Accordion
+                    <span class="align-middle">Accordion</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../ui/scrollspy.html">
-                    Scrollspy
+                    <span class="align-middle">Scrollspy</span>
                     <span class="sidebar-badge badge rounded-pill bg-success">New</span>
                   </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/alerts.html">Alerts</a>
+                  <a class="sidebar-link" href="../ui/alerts.html">
+                    <span class="align-middle">Alerts</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/badges.html">Badges</a>
+                  <a class="sidebar-link" href="../ui/badges.html">
+                    <span class="align-middle">Badges</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/buttons.html">Buttons</a>
+                  <a class="sidebar-link" href="../ui/buttons.html">
+                    <span class="align-middle">Buttons</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/cards.html">Cards</a>
+                  <a class="sidebar-link" href="../ui/cards.html">
+                    <span class="align-middle">Cards</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/general.html">General UI</a>
+                  <a class="sidebar-link" href="../ui/general.html">
+                    <span class="align-middle">General UI</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/images.html">Images</a>
+                  <a class="sidebar-link" href="../ui/images.html">
+                    <span class="align-middle">Images</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/tabs.html">Tabs</a>
+                  <a class="sidebar-link" href="../ui/tabs.html">
+                    <span class="align-middle">Tabs</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/avatar.html">Avatar</a>
+                  <a class="sidebar-link" href="../ui/avatar.html">
+                    <span class="align-middle">Avatar</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#tables"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-grid"></i>
                 <span class="align-middle">Tables</span>
               </a>
@@ -298,12 +482,19 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../tables/bootstrap.html">Table Bootstrap</a>
+                  <a class="sidebar-link" href="../tables/bootstrap.html">
+                    <span class="align-middle">Table Bootstrap</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#forms"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-file"></i>
                 <span class="align-middle">Forms</span>
               </a>
@@ -313,21 +504,30 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/basic-inputs.html">Basic Inputs</a>
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">
+                    <span class="align-middle">Basic Inputs</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/tagify.html">Tagify</a>
+                  <a class="sidebar-link" href="../forms/tagify.html">
+                    <span class="align-middle">Tagify</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../forms/flatpickr.html">
-                    Flatpickr
+                    <span class="align-middle">Flatpickr</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#editors" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#editors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-pencil-square"></i>
                 <span class="align-middle">Editors</span>
               </a>
@@ -337,18 +537,25 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../editors/simplemde.html">SimpleMDE</a>
+                  <a class="sidebar-link" href="../editors/simplemde.html">
+                    <span class="align-middle">SimpleMDE</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
                   <a class="sidebar-link" href="../editors/editor.html">
-                    Wysi Editor
+                    <span class="align-middle">Wysi Editor</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#icons" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#icons"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-cup-hot"></i>
                 <span class="align-middle">Icons</span>
               </a>
@@ -358,21 +565,34 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/feather.html">Feather</a>
+                  <a class="sidebar-link" href="../icons/feather.html">
+                    <span class="align-middle">Feather</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/awesome.html">Font Awesome</a>
+                  <a class="sidebar-link" href="../icons/awesome.html">
+                    <span class="align-middle">Font Awesome</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/bootstrap.html">Bootstrap Icons</a>
+                  <a class="sidebar-link" href="../icons/bootstrap.html">
+                    <span class="align-middle">Bootstrap Icons</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/flag-icons.html">Flag Icons</a>
+                  <a class="sidebar-link" href="../icons/flag-icons.html">
+                    <span class="align-middle">Flag Icons</span>
+                  </a>
                 </li>
               </ul>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#plugins"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
                 <i class="align-middle bi bi-lightning"></i>
                 <span class="align-middle">Plugins</span>
               </a>
@@ -382,21 +602,92 @@
                 data-bs-parent="#sidebar"
               >
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/sweetalert.html">SweetAlert 2</a>
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">
+                    <span class="align-middle">SweetAlert 2</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/toastify.html">Toastify JS</a>
+                  <a class="sidebar-link" href="../plugins/toastify.html">
+                    <span class="align-middle">Toastify JS</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/charts.html">Charts</a>
+                  <a class="sidebar-link" href="../plugins/charts.html">
+                    <span class="align-middle">Charts</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/maps-google.html">Maps</a>
+                  <a class="sidebar-link" href="../plugins/maps-google.html">
+                    <span class="align-middle">Maps</span>
+                  </a>
                 </li>
                 <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/lite-youtube.html">Lite YouTube</a>
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">
+                    <span class="align-middle">Lite YouTube</span>
+                  </a>
                 </li>
               </ul>
+            </li>
+            <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#multilevel"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="multilevel"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#multilevel-sub"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Level 2</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="multilevel-sub"
+                    data-bs-parent="#multilevel"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
             </li>
           </ul>
         </div>

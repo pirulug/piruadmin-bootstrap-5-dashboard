@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <!-- Theme Color-->
+    <meta name="theme-color" content="#ff0055" />
+    <!-- Primary Meta Tags-->
+    <title>Read Email - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="Read Email - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/mail-read.html"
+    />
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/mail-read.html"
+    />
+    <meta property="og:title" content="Read Email | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/pages/mail-read.html"
+    />
+    <meta property="twitter:title" content="Read Email | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
+    <!-- Favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+    <!-- Icons-->
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons/bootstrapicons.css" />
+    <!-- Css-->
+    <link rel="stylesheet" href="../assets/css/piruadmin-fonts.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
+    <!-- Theme-->
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Loader-->
+    <div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
+      <div class="loader-container">
+        <div class="loader-circle"></div>
+        <div class="loader-logo">
+          <img src="../assets/img/logo.png" alt="Logo" width="40" height="40" />
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <nav class="sidebar js-sidebar" id="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="../index.html">
+            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
+          </a>
+          <a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="../dashboard.html">
+                <i class="align-middle bi bi-sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-header">Pages</li>
+            <li class="sidebar-item active">
+              <a
+                class="sidebar-link"
+                data-bs-target="#pages"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+              >
+                <i class="align-middle bi bi-file-earmark-fill"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse show"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/blank.html">
+                    <span class="align-middle">Blank Page</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/timeline.html">
+                    <span class="align-middle">Timeline</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/search.html">
+                    <span class="align-middle">Search</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/colors.html">
+                    <span class="align-middle">Colors</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../pages/typography.html">
+                    <span class="align-middle">Typography</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-users"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Users</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-users"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-add.html">
+                        <span class="align-middle">Add User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-list.html">
+                        <span class="align-middle">List User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/user-view.html">
+                        <span class="align-middle">View User</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-projects"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Projects</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-projects"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-list.html">
+                        <span class="align-middle">Project List</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-details.html">
+                        <span class="align-middle">Project Details</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/project-create.html">
+                        <span class="align-middle">Create Project</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item active">
+                  <a
+                    class="sidebar-link"
+                    data-bs-target="#pages-mail"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                  >
+                    <span class="align-middle">Mail</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse show"
+                    id="pages-mail"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-inbox.html">
+                        <span class="align-middle">Inbox</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/mail-compose.html">
+                        <span class="align-middle">Compose</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item active">
+                      <a class="sidebar-link" href="../pages/mail-read.html">
+                        <span class="align-middle">Read Email</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-file-manager"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">File Manager</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-file-manager"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-manager.html">
+                        <span class="align-middle">All Files</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="../pages/file-media.html">
+                        <span class="align-middle">Media Files</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#auth"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-people"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-in.html">
+                    <span class="align-middle">Sign In</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/sign-up.html">
+                    <span class="align-middle">Sign Up</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/reset-password.html">
+                    <span class="align-middle">Reset Password</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/recover-password.html">
+                    <span class="align-middle">Recover Password</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/auth-lock.html">
+                    <span class="align-middle">Lock Screen</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification.html">
+                    <span class="align-middle">2-Step Verification</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-code.html">
+                    <span class="align-middle">2-Step Code</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
+                    <span class="align-middle">2-Step Backup Codes</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#account"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-person"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/profile.html">
+                    <span class="align-middle">Profile</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../account/settings.html">
+                    <span class="align-middle">Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#errors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-bug"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/404.html">
+                    <span class="align-middle">404</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/500.html">
+                    <span class="align-middle">500</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../error/maintenance.html">
+                    <span class="align-middle">Maintenance</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-header">Tools &amp; Components</li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#ui-elements"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/accordion.html">
+                    <span class="align-middle">Accordion</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/scrollspy.html">
+                    <span class="align-middle">Scrollspy</span>
+                    <span class="sidebar-badge badge rounded-pill bg-success">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/alerts.html">
+                    <span class="align-middle">Alerts</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/badges.html">
+                    <span class="align-middle">Badges</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/buttons.html">
+                    <span class="align-middle">Buttons</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/cards.html">
+                    <span class="align-middle">Cards</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/general.html">
+                    <span class="align-middle">General UI</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/images.html">
+                    <span class="align-middle">Images</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/tabs.html">
+                    <span class="align-middle">Tabs</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../ui/avatar.html">
+                    <span class="align-middle">Avatar</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#tables"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../tables/bootstrap.html">
+                    <span class="align-middle">Table Bootstrap</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#forms"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/basic-inputs.html">
+                    <span class="align-middle">Basic Inputs</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/tagify.html">
+                    <span class="align-middle">Tagify</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../forms/flatpickr.html">
+                    <span class="align-middle">Flatpickr</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#editors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-pencil-square"></i>
+                <span class="align-middle">Editors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="editors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/simplemde.html">
+                    <span class="align-middle">SimpleMDE</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../editors/editor.html">
+                    <span class="align-middle">Wysi Editor</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#icons"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-cup-hot"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/feather.html">
+                    <span class="align-middle">Feather</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/awesome.html">
+                    <span class="align-middle">Font Awesome</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/bootstrap.html">
+                    <span class="align-middle">Bootstrap Icons</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../icons/flag-icons.html">
+                    <span class="align-middle">Flag Icons</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#plugins"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-lightning"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/sweetalert.html">
+                    <span class="align-middle">SweetAlert 2</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/toastify.html">
+                    <span class="align-middle">Toastify JS</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/charts.html">
+                    <span class="align-middle">Charts</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/maps-google.html">
+                    <span class="align-middle">Maps</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="../plugins/lite-youtube.html">
+                    <span class="align-middle">Lite YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#multilevel"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="multilevel"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#multilevel-sub"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Level 2</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="multilevel-sub"
+                    data-bs-parent="#multilevel"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebar-backdrop"></div>
+      <div class="main">
+        <!-- NavBar-->
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <form class="d-none d-sm-inline-block ms-3">
+            <div class="input-group input-group-navbar">
+              <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
+              <button class="btn" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item">
+                <a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen">
+                  <i class="bi bi-fullscreen"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon"></span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
+                      Light
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
+                      Dark
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
+                      Auto
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-bell"></i>
+                  <span class="indicator">4</span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="bi bi-exclamation-circle text-danger"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-house text-primary"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-chat-left-text"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item nav-item-user dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                  <img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  <span class="d-none d-md-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="../account/profile.html">
+                    <i class="bi bi-person me-1"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-pie-chart me-1"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../account/settings.html">
+                    <i class="bi bi-gear me-1"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-question-circle me-1"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-box-arrow-right me-1"></i>
+                    Log out
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Content-->
+        <main class="content">
+          <div class="mb-3">
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center"
+            >
+              <h1 class="h3 mb-2 mb-sm-0">Read Email</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="../dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item text-capitalize">pages</li>
+                  <li class="breadcrumb-item active" aria-current="page">Read Email</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!-- Action bar-->
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    href="../pages/mail-inbox.html"
+                    title="Back"
+                  >
+                    <i class="bi bi-arrow-left me-1"></i>
+                    Inbox
+                  </a>
+                  <button class="btn btn-outline-secondary btn-sm" type="button" title="Archive">
+                    <i class="bi bi-archive me-1"></i>
+                    Archive
+                  </button>
+                  <button class="btn btn-outline-danger btn-sm" type="button" title="Delete">
+                    <i class="bi bi-trash me-1"></i>
+                    Delete
+                  </button>
+                </div>
+                <div class="d-flex gap-1">
+                  <button class="btn btn-outline-secondary btn-sm" type="button" title="Print">
+                    <i class="bi bi-printer"></i>
+                  </button>
+                  <button class="btn btn-outline-secondary btn-sm" type="button" title="Star">
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Email Card View-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2"
+              >
+                <div>
+                  <h4 class="fw-bold mb-1">Project Status Update - Q3 Milestones</h4>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-primary-subtle text-primary">Work</span>
+                    <span class="badge bg-info-subtle text-info">High Priority</span>
+                  </div>
+                </div>
+                <div class="small text-body-secondary">Aug 21, 2026 at 10:42 AM</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- Sender Details-->
+              <div
+                class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom"
+              >
+                <div class="d-flex align-items-center">
+                  <div
+                    class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3"
+                    style="width: 44px; height: 44px; font-weight: 700"
+                  >
+                    SC
+                  </div>
+                  <div>
+                    <div class="fw-bold text-body">Sarah Connor</div>
+                    <div class="small text-body-secondary">
+                      From: sarah.connor@cyberdyne.io | To: me (admin@piruadmin.com)
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Email Body-->
+              <div class="mail-content py-2">
+                <p>Hi Team,</p>
+                <p>
+                  I wanted to follow up on our milestone schedule for Q3. We have finalized the
+                  sprint planning for the frontend architecture and theme system.
+                </p>
+                <p>Key highlights for this cycle:</p>
+                <ul>
+                  <li>
+                    Completed recursive multi-level sidebar integration with active state
+                    management.
+                  </li>
+                  <li>
+                    Delivered independent listing view container standards (Filters, Table, and
+                    Sticky Pagination).
+                  </li>
+                  <li>
+                    Standardized action button behaviors with Bootstrap icons and uppercase
+                    typography.
+                  </li>
+                </ul>
+                <p>
+                  Please review the attached PDF report and let me know if you have any questions
+                  before our sync tomorrow morning.
+                </p>
+                <p>
+                  Best regards,
+                  <br />
+                  <strong>Sarah Connor</strong>
+                  <br />
+                  <span class="text-body-secondary">Engineering Lead | Cyberdyne Systems</span>
+                </p>
+              </div>
+              <!-- Attachments-->
+              <hr class="my-3" />
+              <div class="attachments-section">
+                <h6 class="fw-bold mb-2">
+                  <i class="bi bi-paperclip me-1"></i>
+                  2 Attachments (5.8 MB)
+                </h6>
+                <div class="row g-2">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                      class="p-2 border rounded bg-body-secondary d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-filetype-pdf text-danger fs-3 me-2"></i>
+                        <div>
+                          <div class="small fw-bold">Q3_Status_Report.pdf</div>
+                          <div class="text-muted" style="font-size: 0.75rem">3.4 MB</div>
+                        </div>
+                      </div>
+                      <button class="btn btn-sm btn-link text-body" type="button" title="Download">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                      class="p-2 border rounded bg-body-secondary d-flex align-items-center justify-content-between"
+                    >
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-file-earmark-spreadsheet text-success fs-3 me-2"></i>
+                        <div>
+                          <div class="small fw-bold">Milestone_Roadmap.xlsx</div>
+                          <div class="text-muted" style="font-size: 0.75rem">2.4 MB</div>
+                        </div>
+                      </div>
+                      <button class="btn btn-sm btn-link text-body" type="button" title="Download">
+                        <i class="bi bi-download"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Quick Reply Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h5 class="card-title mb-0">Quick Reply</h5>
+            </div>
+            <div class="card-body">
+              <textarea
+                class="form-control mb-3"
+                rows="3"
+                placeholder="Write your reply here..."
+              ></textarea>
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-outline-secondary btn-sm" type="button">
+                  <i class="bi bi-paperclip me-1"></i>
+                  Attach
+                </button>
+                <button class="btn btn-primary btn-sm" type="button">
+                  <i class="bi bi-send me-1"></i>
+                  Send Reply
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-6 text-start">
+                <p class="mb-0">
+                  <a class="text-muted" href="../index.html">
+                    &copy;&nbsp;
+                    <strong>PiruAdmin&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
+              </div>
+              <div class="col-6 text-end">
+                <p class="mb-0">
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- Back to top-->
+      <!-- Back to top-->
+      <a class="back-to-top" href="#">
+        <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
+          <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
+          <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
+        </svg>
+        <i class="bi bi-arrow-up-short"></i>
+      </a>
+    </div>
+    <!-- Dark & Ligth-->
+    <!-- Js Bootstrap-->
+    <script src="../assets/js/piruadmin.js"></script>
+  </body>
+</html>
