@@ -1,0 +1,110 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Read Email"
+  - pageUrl = "pages/mail-read"
+
+block styles
+
+block scripts
+
+block content
+  // Action bar
+  .card.mb-3
+    .card-body
+      .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+        .d-flex.align-items-center.gap-2
+          a.btn.btn-outline-secondary.btn-sm(href=baseUrl + "pages/mail-inbox.html" title="Back")
+            i.bi.bi-arrow-left.me-1
+            | Inbox
+          button.btn.btn-outline-secondary.btn-sm(type="button" title="Archive")
+            i.bi.bi-archive.me-1
+            | Archive
+          button.btn.btn-outline-danger.btn-sm(type="button" title="Delete")
+            i.bi.bi-trash.me-1
+            | Delete
+        .d-flex.gap-1
+          button.btn.btn-outline-secondary.btn-sm(type="button" title="Print")
+            i.bi.bi-printer
+          button.btn.btn-outline-secondary.btn-sm(type="button" title="Star")
+            i.bi.bi-star-fill.text-warning
+
+  // Email Card View
+  .card.mb-3
+    .card-header
+      .d-flex.flex-column.flex-md-row.justify-content-between.align-items-start.align-items-md-center.gap-2
+        <div>
+          h4.fw-bold.mb-1 Project Status Update - Q3 Milestones
+          .d-flex.align-items-center.gap-2
+            span.badge.bg-primary-subtle.text-primary Work
+            span.badge.bg-info-subtle.text-info High Priority
+        </div>
+        .small.text-body-secondary Aug 21, 2026 at 10:42 AM
+
+    .card-body
+      // Sender Details
+      .d-flex.align-items-center.justify-content-between.mb-3.pb-3.border-bottom
+        .d-flex.align-items-center
+          .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.me-3(style="width: 44px; height: 44px; font-weight: 700")
+            | SC
+          <div>
+            .fw-bold.text-body Sarah Connor
+            .small.text-body-secondary From: sarah.connor@cyberdyne.io | To: me (admin@piruadmin.com)
+          </div>
+        .dropdown
+          button.btn.btn-sm.btn-outline-secondary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+            i.bi.bi-three-dots-vertical
+
+      // Email Body
+      .mail-content.py-2
+        p Hi Team,
+        p I wanted to follow up on our milestone schedule for Q3. We have finalized the sprint planning for the frontend architecture and theme system.
+        p Key highlights for this cycle:
+        ul
+          li Completed recursive multi-level sidebar integration with active state management.
+          li Delivered independent listing view container standards (Filters, Table, and Sticky Pagination).
+          li Standardized action button behaviors with Bootstrap icons and uppercase typography.
+        p Please review the attached PDF report and let me know if you have any questions before our sync tomorrow morning.
+        p Best regards,<br><strong>Sarah Connor</strong><br><span class="text-body-secondary">Engineering Lead | Cyberdyne Systems</span>
+
+      // Attachments
+      hr.my-3
+      .attachments-section
+        h6.fw-bold.mb-2
+          i.bi.bi-paperclip.me-1
+          | 2 Attachments (5.8 MB)
+        .row.g-2
+          .col-12.col-md-6.col-lg-4
+            .p-2.border.rounded.bg-body-secondary.d-flex.align-items-center.justify-content-between
+              .d-flex.align-items-center
+                i.bi.bi-filetype-pdf.text-danger.fs-3.me-2
+                <div>
+                  .small.fw-bold Q3_Status_Report.pdf
+                  .text-muted(style="font-size: 0.75rem") 3.4 MB
+                </div>
+              button.btn.btn-sm.btn-link.text-body(type="button" title="Download")
+                i.bi.bi-download
+          .col-12.col-md-6.col-lg-4
+            .p-2.border.rounded.bg-body-secondary.d-flex.align-items-center.justify-content-between
+              .d-flex.align-items-center
+                i.bi.bi-file-earmark-spreadsheet.text-success.fs-3.me-2
+                <div>
+                  .small.fw-bold Milestone_Roadmap.xlsx
+                  .text-muted(style="font-size: 0.75rem") 2.4 MB
+                </div>
+              button.btn.btn-sm.btn-link.text-body(type="button" title="Download")
+                i.bi.bi-download
+
+  // Quick Reply Card
+  .card.mb-3
+    .card-header
+      h5.card-title.mb-0 Quick Reply
+    .card-body
+      textarea.form-control.mb-3(rows="3" placeholder="Write your reply here...")
+      .d-flex.justify-content-end.gap-2
+        button.btn.btn-outline-secondary.btn-sm(type="button")
+          i.bi.bi-paperclip.me-1
+          | Attach
+        button.btn.btn-primary.btn-sm(type="button")
+          i.bi.bi-send.me-1
+          | Send Reply

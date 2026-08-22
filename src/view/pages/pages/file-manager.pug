@@ -1,0 +1,233 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "File Manager"
+  - pageUrl = "pages/file-manager"
+
+block styles
+
+block scripts
+
+block content
+  // Top Filters & Actions
+  .bg-body.p-3.rounded.mb-3.text-end
+    a.btn.btn-primary.text-uppercase.fw-bold(href="#")
+      i.bi.bi-cloud-upload.me-1
+      span Upload Files
+    hr.my-2
+
+    form(method="GET" autocomplete="off")
+      .d-flex.flex-wrap.justify-content-end.align-items-center.gap-2
+        select.form-select.w-auto(name="storage" aria-label="Storage Location")
+          option(value="all" selected) All Drives
+          option(value="cloud") Cloud Storage
+          option(value="local") Local Drive
+          option(value="shared") Shared with Me
+
+        select.form-select.w-auto(name="type" aria-label="File Type")
+          option(value="" selected) All Types
+          option(value="documents") Documents
+          option(value="images") Images
+          option(value="media") Video &amp; Audio
+          option(value="archives") Archives &amp; ZIP
+
+        .input-group.w-auto.flex-grow-1(style="max-width: 450px;")
+          input.form-control(type="text" name="search" placeholder="Search by file name or extension..." value="")
+          button.btn.btn-primary.px-3.text-uppercase.small.fw-bold.text-nowrap(type="submit")
+            i.bi.bi-search.me-1
+            | Filter
+
+  // Storage Overview Cards
+  .row.g-3.mb-3
+    .col-12.col-sm-6.col-xl-3
+      .card
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-2
+            .p-2.rounded.bg-primary-subtle.text-primary
+              i.bi.bi-file-earmark-text.fs-4
+            span.small.fw-bold.text-primary 64% Used
+          h6.text-body-secondary.mb-1 Documents
+          .fw-bold.fs-5 14.8 GB
+          .progress.mt-2(style="height: 4px")
+            .progress-bar.bg-primary(role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100")
+    .col-12.col-sm-6.col-xl-3
+      .card
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-2
+            .p-2.rounded.bg-success-subtle.text-success
+              i.bi.bi-image.fs-4
+            span.small.fw-bold.text-success 45% Used
+          h6.text-body-secondary.mb-1 Images
+          .fw-bold.fs-5 28.4 GB
+          .progress.mt-2(style="height: 4px")
+            .progress-bar.bg-success(role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100")
+    .col-12.col-sm-6.col-xl-3
+      .card
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-2
+            .p-2.rounded.bg-warning-subtle.text-warning
+              i.bi.bi-camera-video.fs-4
+            span.small.fw-bold.text-warning 82% Used
+          h6.text-body-secondary.mb-1 Media
+          .fw-bold.fs-5 42.1 GB
+          .progress.mt-2(style="height: 4px")
+            .progress-bar.bg-warning(role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100")
+    .col-12.col-sm-6.col-xl-3
+      .card
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-2
+            .p-2.rounded.bg-info-subtle.text-info
+              i.bi.bi-file-earmark-zip.fs-4
+            span.small.fw-bold.text-info 20% Used
+          h6.text-body-secondary.mb-1 Archives
+          .fw-bold.fs-5 8.6 GB
+          .progress.mt-2(style="height: 4px")
+            .progress-bar.bg-info(role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100")
+
+  // Files Data Table
+  .bg-body.p-3.rounded.mb-3
+    .table-responsive
+      table.table.table-hover.align-middle.table-sm.m-0
+        thead
+          tr
+            th.ps-2.text-uppercase.fw-bold.text-nowrap File Name
+            th.text-uppercase.fw-bold.text-nowrap Type
+            th.text-uppercase.fw-bold.text-nowrap Size
+            th.text-uppercase.fw-bold.text-nowrap Shared With
+            th.text-uppercase.fw-bold.text-nowrap Last Modified
+            th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Actions
+        tbody
+          tr
+            td.ps-2
+              .d-flex.align-items-center
+                i.bi.bi-filetype-pdf.text-danger.fs-4.me-2
+                <div>
+                  .fw-bold.text-body Annual_Financial_Report_2026.pdf
+                  .small.text-body-secondary PDF Document
+                </div>
+            td
+              span.badge.bg-danger-subtle.text-danger PDF
+            td 4.8 MB
+            td
+              .d-flex.align-items-center
+                .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.7rem") JD
+                .rounded-circle.bg-success.text-white.d-flex.align-items-center.justify-content-center.ms-n1(style="width: 24px; height: 24px; font-size: 0.7rem") AS
+            td Aug 21, 2026
+            td.text-end.pe-3.text-nowrap
+              .d-flex.justify-content-end.gap-1
+                a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#" title="View")
+                  i.bi.bi-eye.me-1
+                  | View
+                a.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(href="#" title="Download")
+                  i.bi.bi-download.me-1
+                  | Download
+                button.btn.btn-sm.btn-outline-danger.text-uppercase.fw-bold.text-nowrap(type="button" title="Delete")
+                  i.bi.bi-trash.me-1
+                  | Delete
+          tr
+            td.ps-2
+              .d-flex.align-items-center
+                i.bi.bi-file-earmark-zip.text-warning.fs-4.me-2
+                <div>
+                  .fw-bold.text-body Branding_Vector_Assets_Bundle.zip
+                  .small.text-body-secondary Compressed Archive
+                </div>
+            td
+              span.badge.bg-warning-subtle.text-warning ZIP
+            td 34.2 MB
+            td
+              .d-flex.align-items-center
+                .rounded-circle.bg-warning.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.7rem") MG
+            td Aug 19, 2026
+            td.text-end.pe-3.text-nowrap
+              .d-flex.justify-content-end.gap-1
+                a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#" title="View")
+                  i.bi.bi-eye.me-1
+                  | View
+                a.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(href="#" title="Download")
+                  i.bi.bi-download.me-1
+                  | Download
+                button.btn.btn-sm.btn-outline-danger.text-uppercase.fw-bold.text-nowrap(type="button" title="Delete")
+                  i.bi.bi-trash.me-1
+                  | Delete
+          tr
+            td.ps-2
+              .d-flex.align-items-center
+                i.bi.bi-file-earmark-spreadsheet.text-success.fs-4.me-2
+                <div>
+                  .fw-bold.text-body Q3_Sales_Forecast_Model.xlsx
+                  .small.text-body-secondary Spreadsheet
+                </div>
+            td
+              span.badge.bg-success-subtle.text-success Excel
+            td 2.1 MB
+            td Only Me
+            td Aug 15, 2026
+            td.text-end.pe-3.text-nowrap
+              .d-flex.justify-content-end.gap-1
+                a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#" title="View")
+                  i.bi.bi-eye.me-1
+                  | View
+                a.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(href="#" title="Download")
+                  i.bi.bi-download.me-1
+                  | Download
+                button.btn.btn-sm.btn-outline-danger.text-uppercase.fw-bold.text-nowrap(type="button" title="Delete")
+                  i.bi.bi-trash.me-1
+                  | Delete
+          tr
+            td.ps-2
+              .d-flex.align-items-center
+                i.bi.bi-filetype-mp4.text-primary.fs-4.me-2
+                <div>
+                  .fw-bold.text-body Product_Walkthrough_Demo.mp4
+                  .small.text-body-secondary Video File
+                </div>
+            td
+              span.badge.bg-primary-subtle.text-primary Video
+            td 118.5 MB
+            td
+              .d-flex.align-items-center
+                .rounded-circle.bg-danger.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.7rem") RK
+                .rounded-circle.bg-info.text-white.d-flex.align-items-center.justify-content-center.ms-n1(style="width: 24px; height: 24px; font-size: 0.7rem") EW
+            td Aug 10, 2026
+            td.text-end.pe-3.text-nowrap
+              .d-flex.justify-content-end.gap-1
+                a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#" title="View")
+                  i.bi.bi-eye.me-1
+                  | View
+                a.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(href="#" title="Download")
+                  i.bi.bi-download.me-1
+                  | Download
+                button.btn.btn-sm.btn-outline-danger.text-uppercase.fw-bold.text-nowrap(type="button" title="Delete")
+                  i.bi.bi-trash.me-1
+                  | Delete
+
+  // Pagination
+  .bg-body.p-3.rounded.d-flex.flex-column.flex-md-row.align-items-center.justify-content-between.gap-2.sticky-bottom
+    .legend
+      span.fw-bold Showing 1 - 4 of 156 files
+    .paginator
+      nav(aria-label="Files pagination")
+        ul.pagination.justify-content-end.mb-0
+          li.page-item.disabled
+            a.page-link.text-uppercase.small.fw-bold(href="#" aria-label="First")
+              i.bi.bi-chevron-double-left.small
+          li.page-item.disabled
+            a.page-link(href="#" aria-label="Previous")
+              i.bi.bi-chevron-left.small
+          li.page-item.active
+            a.page-link(href="#") 1
+          li.page-item
+            a.page-link(href="#") 2
+          li.page-item
+            a.page-link(href="#") 3
+          li.page-item.disabled
+            span.page-link ...
+          li.page-item
+            a.page-link(href="#") 39
+          li.page-item
+            a.page-link(href="#" aria-label="Next")
+              i.bi.bi-chevron-right.small
+          li.page-item
+            a.page-link.text-uppercase.small.fw-bold(href="#" aria-label="Last")
+              i.bi.bi-chevron-double-right.small

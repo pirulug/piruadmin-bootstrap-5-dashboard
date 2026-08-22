@@ -1,0 +1,117 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Add User"
+  - pageUrl = "pages/user-add"
+
+block styles
+
+block scripts
+
+block content
+  form
+    .row
+      .col-12.col-xl-8
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 User Details
+          .card-body
+            .row.g-3
+              .col-md-6
+                label.form-label(for="firstName") First Name
+                input#firstName.form-control(type="text" placeholder="John" required)
+              .col-md-6
+                label.form-label(for="lastName") Last Name
+                input#lastName.form-control(type="text" placeholder="Doe" required)
+              .col-md-6
+                label.form-label(for="email") Email Address
+                input#email.form-control(type="email" placeholder="john.doe@example.com" required)
+              .col-md-6
+                label.form-label(for="phone") Phone Number
+                input#phone.form-control(type="tel" placeholder="+1 (555) 000-0000")
+              .col-md-6
+                label.form-label(for="role") User Role
+                select#role.form-select(required)
+                  option(value="" selected disabled) Select role...
+                  option(value="admin") Administrator
+                  option(value="editor") Editor
+                  option(value="manager") Manager
+                  option(value="user") Standard User
+              .col-md-6
+                label.form-label(for="department") Department
+                select#department.form-select
+                  option(value="" selected disabled) Select department...
+                  option(value="engineering") Engineering
+                  option(value="design") Design
+                  option(value="marketing") Marketing
+                  option(value="support") Support
+              .col-md-6
+                label.form-label(for="password") Password
+                input#password.form-control(type="password" placeholder="Enter password" required)
+              .col-md-6
+                label.form-label(for="confirmPassword") Confirm Password
+                input#confirmPassword.form-control(type="password" placeholder="Re-enter password" required)
+              .col-12
+                label.form-label(for="bio") Biography / Notes
+                textarea#bio.form-control(rows="3" placeholder="Brief user description...")
+            
+            hr.my-4
+
+            h6.fw-bold.mb-3 Permissions &amp; Access
+            .row.g-2
+              .col-md-6
+                .form-check
+                  input#permDashboard.form-check-input(type="checkbox" checked)
+                  label.form-check-label(for="permDashboard") View Analytics &amp; Dashboard
+              .col-md-6
+                .form-check
+                  input#permUsers.form-check-input(type="checkbox" checked)
+                  label.form-check-label(for="permUsers") Manage Users &amp; Roles
+              .col-md-6
+                .form-check
+                  input#permReports.form-check-input(type="checkbox")
+                  label.form-check-label(for="permReports") Export Data &amp; Reports
+              .col-md-6
+                .form-check
+                  input#permSettings.form-check-input(type="checkbox")
+                  label.form-check-label(for="permSettings") System Settings &amp; Configuration
+
+      .col-12.col-xl-4
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Profile Picture
+          .card-body.text-center
+            .mb-3
+              .d-inline-block.p-1.border.rounded-circle.bg-body-secondary
+                i.bi.bi-person-circle(style="font-size: 5rem; line-height: 1")
+            p.small.text-body-secondary Allowed JPG, GIF or PNG. Max size of 2MB.
+            .d-grid.gap-2
+              button.btn.btn-outline-primary.btn-sm(type="button")
+                i.bi.bi-upload.me-1
+                | Upload Photo
+              button.btn.btn-outline-danger.btn-sm(type="button")
+                i.bi.bi-trash.me-1
+                | Remove
+
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Account Status
+          .card-body
+            .mb-3
+              label.form-label Status
+              select.form-select
+                option(value="active" selected) Active
+                option(value="pending") Pending Verification
+                option(value="inactive") Inactive / Suspended
+            .form-check.form-switch
+              input#sendInvite.form-check-input(type="checkbox" checked)
+              label.form-check-label(for="sendInvite") Send welcome email with login credentials
+
+    // Sticky action buttons at bottom of form
+    .bg-body.p-3.rounded.d-flex.justify-content-end.gap-2.sticky-bottom.mt-3
+      a.btn.btn-outline-secondary.px-4.text-uppercase.small.fw-bold(href=baseUrl + "pages/user-list.html")
+        i.bi.bi-x-lg.me-2
+        span Cancel
+      button.btn.btn-primary.px-5.text-uppercase.small.fw-bold(type="submit")
+        i.bi.bi-floppy.me-2
+        span Save User

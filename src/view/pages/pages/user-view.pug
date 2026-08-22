@@ -1,0 +1,121 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "View User"
+  - pageUrl = "pages/user-view"
+
+block styles
+
+block scripts
+
+block content
+  .row
+    // Profile Sidebar Card
+    .col-12.col-xl-4
+      .card.mb-3
+        .card-body.text-center
+          .mb-3
+            .d-inline-flex.align-items-center.justify-content-center.rounded-circle.bg-primary.text-white.fs-1.fw-bold(style="width: 100px; height: 100px")
+              | JD
+          h4.fw-bold.mb-1 Jane Doe
+          p.text-body-secondary.mb-2 Senior Software Engineer
+          span.badge.bg-success.mb-3 Active Account
+
+          .d-flex.justify-content-center.gap-2.mb-3
+            button.btn.btn-outline-primary.btn-sm(type="button")
+              i.bi.bi-envelope.me-1
+              | Email
+            button.btn.btn-outline-secondary.btn-sm(type="button")
+              i.bi.bi-chat-dots.me-1
+              | Message
+            button.btn.btn-outline-danger.btn-sm(type="button")
+              i.bi.bi-slash-circle.me-1
+              | Suspend
+
+          hr.my-3
+
+          .text-start
+            .small.text-uppercase.fw-bold.text-body-secondary.mb-2 Contact Information
+            .d-flex.align-items-center.mb-2
+              i.bi.bi-envelope.text-primary.me-2
+              span.small jane.doe@example.com
+            .d-flex.align-items-center.mb-2
+              i.bi.bi-telephone.text-primary.me-2
+              span.small +1 (555) 234-5678
+            .d-flex.align-items-center.mb-2
+              i.bi.bi-geo-alt.text-primary.me-2
+              span.small San Francisco, CA
+            .d-flex.align-items-center
+              i.bi.bi-calendar3.text-primary.me-2
+              span.small Joined January 12, 2026
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Assigned Roles &amp; Teams
+        .card-body
+          .mb-3
+            .small.fw-bold.text-body-secondary.mb-1 Primary Role
+            span.badge.bg-primary-subtle.text-primary Administrator
+          .mb-3
+            .small.fw-bold.text-body-secondary.mb-1 Department
+            span.badge.bg-info-subtle.text-info Engineering
+          div
+            .small.fw-bold.text-body-secondary.mb-1 Teams
+            .d-flex.flex-wrap.gap-1
+              span.badge.bg-body-secondary.text-body Frontend Architecture
+              span.badge.bg-body-secondary.text-body DevOps
+              span.badge.bg-body-secondary.text-body Core UI
+
+    // User Details & Activity
+    .col-12.col-xl-8
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Account Overview
+        .card-body
+          .row.g-3
+            .col-sm-6
+              .small.text-body-secondary First Name
+              .fw-semibold Jane
+            .col-sm-6
+              .small.text-body-secondary Last Name
+              .fw-semibold Doe
+            .col-sm-6
+              .small.text-body-secondary Username
+              .fw-semibold @janedoe
+            .col-sm-6
+              .small.text-body-secondary Two-Factor Auth
+              span.badge.bg-success Enabled
+            .col-sm-6
+              .small.text-body-secondary Last Login
+              .fw-semibold Today at 09:42 AM (192.168.1.45)
+            .col-sm-6
+              .small.text-body-secondary Security Level
+              span.badge.bg-primary Level 3 (High)
+
+      // Recent Activity
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Recent Activity
+        .card-body
+          .timeline-simple
+            .d-flex.mb-3
+              .p-2.rounded-circle.bg-primary-subtle.text-primary.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-shield-check
+              div
+                .fw-semibold Password updated
+                .small.text-body-secondary Security credentials were changed successfully.
+                .small.text-muted 2 hours ago
+            .d-flex.mb-3
+              .p-2.rounded-circle.bg-success-subtle.text-success.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-box-arrow-in-right
+              div
+                .fw-semibold Successful login from Chrome / macOS
+                .small.text-body-secondary IP: 192.168.1.45
+                .small.text-muted Yesterday at 04:15 PM
+            .d-flex
+              .p-2.rounded-circle.bg-info-subtle.text-info.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-person-gear
+              div
+                .fw-semibold Role updated to Administrator
+                .small.text-body-secondary Role permissions granted by System Admin.
+                .small.text-muted 3 days ago

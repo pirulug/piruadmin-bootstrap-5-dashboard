@@ -1,0 +1,115 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Create Project"
+  - pageUrl = "pages/project-create"
+
+block styles
+
+block scripts
+
+block content
+  form
+    .row
+      .col-12.col-xl-8
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Project Information
+          .card-body
+            .row.g-3
+              .col-12
+                label.form-label(for="projectName") Project Name
+                input#projectName.form-control(type="text" placeholder="e.g. Enterprise CRM Redesign" required)
+              .col-md-6
+                label.form-label(for="clientName") Client / Company
+                input#clientName.form-control(type="text" placeholder="e.g. Acme Corporation" required)
+              .col-md-6
+                label.form-label(for="projectCategory") Category
+                select#projectCategory.form-select(required)
+                  option(value="" selected disabled) Select category...
+                  option(value="web") Web Application
+                  option(value="mobile") Mobile App
+                  option(value="design") UI/UX &amp; Branding
+                  option(value="cloud") Cloud Infrastructure
+              .col-md-6
+                label.form-label(for="startDate") Start Date
+                input#startDate.form-control(type="date" required)
+              .col-md-6
+                label.form-label(for="dueDate") Due Date
+                input#dueDate.form-control(type="date" required)
+              .col-md-6
+                label.form-label(for="budget") Estimated Budget ($)
+                input#budget.form-control(type="number" placeholder="25000" min="0")
+              .col-md-6
+                label.form-label(for="priority") Priority Level
+                select#priority.form-select
+                  option(value="low") Low
+                  option(value="medium" selected) Medium
+                  option(value="high") High
+                  option(value="critical") Critical
+              .col-12
+                label.form-label(for="projectDesc") Project Description &amp; Scope
+                textarea#projectDesc.form-control(rows="4" placeholder="Detailed description of objectives, deliverables and scope...")
+
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Initial Milestones
+          .card-body
+            .row.g-3
+              .col-md-6
+                label.form-label Milestone 1 Name
+                input.form-control(type="text" placeholder="Discovery &amp; Research" value="Discovery &amp; Architecture")
+              .col-md-6
+                label.form-label Milestone 1 Target Date
+                input.form-control(type="date")
+              .col-md-6
+                label.form-label Milestone 2 Name
+                input.form-control(type="text" placeholder="UI/UX Prototyping" value="Core Implementation")
+              .col-md-6
+                label.form-label Milestone 2 Target Date
+                input.form-control(type="date")
+
+      .col-12.col-xl-4
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Project Status
+          .card-body
+            .mb-3
+              label.form-label Status
+              select.form-select
+                option(value="in-progress" selected) In Progress
+                option(value="planning") Planning Phase
+                option(value="on-hold") On Hold
+                option(value="completed") Completed
+            .form-check.form-switch
+              input#notifyTeam.form-check-input(type="checkbox" checked)
+              label.form-check-label(for="notifyTeam") Send email notification to team members
+
+        .card.mb-3
+          .card-header
+            h5.card-title.mb-0 Team Assignment
+          .card-body
+            .form-check.mb-2
+              input#memberJD.form-check-input(type="checkbox" checked)
+              label.form-check-label(for="memberJD") Jane Doe (Lead Architect)
+            .form-check.mb-2
+              input#memberAS.form-check-input(type="checkbox" checked)
+              label.form-check-label(for="memberAS") Alex Smith (Senior Frontend)
+            .form-check.mb-2
+              input#memberMG.form-check-input(type="checkbox" checked)
+              label.form-check-label(for="memberMG") Maria Garcia (UI/UX Designer)
+            .form-check.mb-2
+              input#memberRK.form-check-input(type="checkbox")
+              label.form-check-label(for="memberRK") Robert Kim (QA Engineer)
+            .form-check
+              input#memberEW.form-check-input(type="checkbox")
+              label.form-check-label(for="memberEW") Emma Watson (DevOps)
+
+    // Sticky action buttons at bottom of form
+    .bg-body.p-3.rounded.d-flex.justify-content-end.gap-2.sticky-bottom.mt-3
+      a.btn.btn-outline-secondary.px-4.text-uppercase.small.fw-bold(href=baseUrl + "pages/project-list.html")
+        i.bi.bi-x-lg.me-2
+        span Cancel
+      button.btn.btn-primary.px-5.text-uppercase.small.fw-bold(type="submit")
+        i.bi.bi-floppy.me-2
+        span Save Project

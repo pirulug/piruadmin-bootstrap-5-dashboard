@@ -1,0 +1,167 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Project Details"
+  - pageUrl = "pages/project-details"
+
+block styles
+
+block scripts
+
+block content
+  // Project Header Summary
+  .card.mb-3
+    .card-body
+      .d-flex.flex-column.flex-md-row.justify-content-between.align-items-start.align-items-md-center.gap-3
+        .d-flex.align-items-center.gap-3
+          .p-3.rounded.bg-primary-subtle.text-primary.d-flex.align-items-center.justify-content-center(style="width: 56px; height: 56px")
+            i.bi.bi-kanban.fs-3
+          <div>
+            .d-flex.align-items-center.gap-2.mb-1
+              h4.fw-bold.mb-0 PiruAdmin Dashboard v2
+              span.badge.bg-primary-subtle.text-primary In Progress
+            p.text-body-secondary.mb-0 Client: Acme Corporation | Started on Aug 01, 2026
+          </div>
+        .d-flex.gap-2
+          a.btn.btn-outline-primary.text-uppercase.small.fw-bold(href=baseUrl + "pages/project-create.html")
+            i.bi.bi-pencil.me-1
+            | Edit Project
+          a.btn.btn-outline-secondary.text-uppercase.small.fw-bold(href=baseUrl + "pages/project-list.html")
+            i.bi.bi-arrow-left.me-1
+            | Back to List
+
+  .row
+    // Main Content Column
+    .col-12.col-xl-8
+      // Overview & Scope
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Project Overview &amp; Description
+        .card-body
+          p.text-body-secondary Next-generation responsive administrative dashboard design system with multi-theme support, scalable modular architecture, and high-performance UI components.
+          .row.g-3.my-2
+            .col-6.col-md-3
+              .p-2.rounded.bg-body-secondary.text-center
+                .small.text-body-secondary Budget
+                .fw-bold.fs-5 $24,500
+            .col-6.col-md-3
+              .p-2.rounded.bg-body-secondary.text-center
+                .small.text-body-secondary Spent
+                .fw-bold.fs-5 $18,375
+            .col-6.col-md-3
+              .p-2.rounded.bg-body-secondary.text-center
+                .small.text-body-secondary Deadline
+                .fw-bold.fs-5 Oct 15, 2026
+            .col-6.col-md-3
+              .p-2.rounded.bg-body-secondary.text-center
+                .small.text-body-secondary Total Tasks
+                .fw-bold.fs-5 48 / 64
+
+          hr.my-3
+
+          h6.fw-bold.mb-2 Overall Progress (75%)
+          .progress(style="height: 10px")
+            .progress-bar.bg-primary(role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100")
+
+      // Project Milestones
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Project Milestones
+        .card-body
+          .timeline-simple
+            .d-flex.mb-3
+              .p-2.rounded-circle.bg-success-subtle.text-success.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-check-lg
+              div
+                .fw-semibold Phase 1: Wireframing &amp; Architecture
+                .small.text-body-secondary System requirements and layout components approved.
+                .small.text-success Completed on Aug 15, 2026
+            .d-flex.mb-3
+              .p-2.rounded-circle.bg-success-subtle.text-success.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-check-lg
+              div
+                .fw-semibold Phase 2: Core Components &amp; SCSS System
+                .small.text-body-secondary Color schemes, themes and responsive layout implementation.
+                .small.text-success Completed on Sep 05, 2026
+            .d-flex.mb-3
+              .p-2.rounded-circle.bg-primary-subtle.text-primary.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-gear-wide-connected
+              div
+                .fw-semibold Phase 3: Module Demos &amp; Testing
+                .small.text-body-secondary Multi-level menus, user management and listing templates.
+                .small.text-primary Currently Active
+            .d-flex
+              .p-2.rounded-circle.bg-body-secondary.text-body-secondary.me-3.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px")
+                i.bi.bi-flag
+              div
+                .fw-semibold Phase 4: Final QA &amp; Production Release
+                .small.text-body-secondary Security validation, documentation and deployment.
+                .small.text-muted Target: Oct 15, 2026
+
+    // Sidebar Details Column
+    .col-12.col-xl-4
+      // Project Team
+      .card.mb-3
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Project Team
+          span.badge.bg-body-secondary.text-body 4 Members
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-3
+            .d-flex.align-items-center
+              .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 34px; height: 34px; font-weight: 600; font-size: 0.8rem") JD
+              <div>
+                .fw-bold.text-body Jane Doe
+                .small.text-body-secondary Lead Architect
+              </div>
+            span.badge.bg-primary-subtle.text-primary Lead
+          .d-flex.align-items-center.justify-content-between.mb-3
+            .d-flex.align-items-center
+              .rounded-circle.bg-success.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 34px; height: 34px; font-weight: 600; font-size: 0.8rem") AS
+              <div>
+                .fw-bold.text-body Alex Smith
+                .small.text-body-secondary Senior Frontend Dev
+              </div>
+            span.badge.bg-info-subtle.text-info Dev
+          .d-flex.align-items-center.justify-content-between.mb-3
+            .d-flex.align-items-center
+              .rounded-circle.bg-warning.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 34px; height: 34px; font-weight: 600; font-size: 0.8rem") MG
+              <div>
+                .fw-bold.text-body Maria Garcia
+                .small.text-body-secondary UI/UX Designer
+              </div>
+            span.badge.bg-warning-subtle.text-warning Design
+          .d-flex.align-items-center.justify-content-between
+            .d-flex.align-items-center
+              .rounded-circle.bg-danger.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 34px; height: 34px; font-weight: 600; font-size: 0.8rem") RK
+              <div>
+                .fw-bold.text-body Robert Kim
+                .small.text-body-secondary QA Engineer
+              </div>
+            span.badge.bg-secondary-subtle.text-secondary QA
+
+      // Attached Files
+      .card.mb-3
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Attached Files
+          button.btn.btn-sm.btn-outline-primary(type="button")
+            i.bi.bi-plus-lg.me-1
+            | Add File
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-2.p-2.rounded.bg-body-secondary
+            .d-flex.align-items-center
+              i.bi.bi-filetype-pdf.text-danger.fs-4.me-2
+              <div>
+                .small.fw-bold Technical_Specifications.pdf
+                .text-muted(style="font-size: 0.75rem") 4.2 MB
+              </div>
+            button.btn.btn-sm.btn-link.text-body(type="button" title="Download")
+              i.bi.bi-download
+          .d-flex.align-items-center.justify-content-between.p-2.rounded.bg-body-secondary
+            .d-flex.align-items-center
+              i.bi.bi-file-earmark-zip.text-warning.fs-4.me-2
+              <div>
+                .small.fw-bold UI_Mockups_Assets.zip
+                .text-muted(style="font-size: 0.75rem") 18.7 MB
+              </div>
+            button.btn.btn-sm.btn-link.text-body(type="button" title="Download")
+              i.bi.bi-download

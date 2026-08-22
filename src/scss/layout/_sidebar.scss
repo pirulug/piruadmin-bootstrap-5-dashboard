@@ -71,8 +71,8 @@ a.sidebar-link {
   }
 }
 
-.sidebar-item.active>.sidebar-link,
-.sidebar-item.active .sidebar-link:hover {
+.sidebar-nav > .sidebar-item.active > .sidebar-link,
+.sidebar-nav > .sidebar-item.active > .sidebar-link:hover {
   color: $sidebar-link-active-color;
   background: $sidebar-link-active-bg;
   border-radius: var(--#{$prefix}border-radius);
@@ -83,7 +83,7 @@ a.sidebar-link {
   }
 }
 
-// Children
+// Children & Submenus (Level 2, Level 3, etc.)
 .sidebar-dropdown {
   list-style: none;
   padding-left: 0.75rem;
@@ -99,56 +99,63 @@ a.sidebar-link {
     margin-top: 0.15rem;
     margin-bottom: 0.25rem;
   }
-}
 
-.sidebar-dropdown .sidebar-link {
-  padding: 0.4rem 0.75rem;
-  font-weight: 500;
-  font-size: 0.875rem;
-  border-left: 0;
-  margin-bottom: 0.15rem;
-  border-radius: 0.375rem;
-  color: var(--#{$prefix}secondary-color);
-  background: transparent;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-
-  i,
-  svg {
-    font-size: 0.75rem;
-    margin-right: 0.65rem;
-    display: inline-flex;
+  .sidebar-link {
+    padding: 0.4rem 0.75rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-left: 0;
+    margin-bottom: 0.15rem;
+    border-radius: 0.375rem;
+    color: var(--#{$prefix}secondary-color);
+    background: transparent;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    i,
+    svg {
+      font-size: 0.75rem;
+      margin-right: 0.65rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:before {
+      display: none !important;
+    }
+
+    &:hover {
+      font-weight: 500;
+      border-left: 0;
+      color: $primary;
+      background: rgba($primary, 0.05);
+    }
+
+    &[aria-expanded="true"] {
+      color: $primary;
+      font-weight: 600;
+      background: rgba($primary, 0.06);
+    }
   }
 
-  &:before {
-    display: none !important;
+  .sidebar-item.active > .sidebar-link {
+    font-weight: 600;
+    border-left: 0;
+    color: $primary;
+    background: rgba($primary, 0.12);
   }
-}
 
-.sidebar-dropdown .sidebar-badge {
-  position: relative;
-  top: auto;
-  right: auto;
-  margin-left: auto;
-  z-index: 1;
-}
-
-.sidebar-dropdown .sidebar-item .sidebar-link:hover {
-  font-weight: 500;
-  border-left: 0;
-  color: $primary;
-  background: rgba($primary, 0.05);
-}
-
-.sidebar-dropdown .sidebar-item.active .sidebar-link {
-  font-weight: 600;
-  border-left: 0;
-  color: $primary;
-  background: rgba($primary, 0.1);
+  .sidebar-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto;
+    z-index: 1;
+  }
 }
 
 // Chevron
@@ -342,6 +349,26 @@ a.sidebar-link {
       svg {
         color: $primary;
       }
+    }
+
+    .sidebar-dropdown .sidebar-link {
+      background: transparent;
+      color: var(--#{$prefix}secondary-color);
+
+      &:hover {
+        background: rgba($primary, 0.08);
+        color: $primary;
+      }
+
+      &[aria-expanded="true"] {
+        background: rgba($primary, 0.08);
+        color: $primary;
+      }
+    }
+
+    .sidebar-dropdown .sidebar-item.active > .sidebar-link {
+      background: rgba($primary, 0.15);
+      color: $primary;
     }
 
     .sidebar-brand {

@@ -1,0 +1,73 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Compose Email"
+  - pageUrl = "pages/mail-compose"
+
+block styles
+
+block scripts
+
+block content
+  form
+    .card.mb-3
+      .card-header.d-flex.justify-content-between.align-items-center
+        h5.card-title.mb-0 New Message
+        a.btn.btn-sm.btn-outline-secondary(href=baseUrl + "pages/mail-inbox.html")
+          i.bi.bi-arrow-left.me-1
+          | Back to Inbox
+      .card-body
+        .row.g-3
+          .col-12
+            label.form-label(for="mailTo") To:
+            input#mailTo.form-control(type="email" placeholder="recipient@example.com" required)
+          .col-md-6
+            label.form-label(for="mailCc") Cc:
+            input#mailCc.form-control(type="email" placeholder="cc@example.com")
+          .col-md-6
+            label.form-label(for="mailBcc") Bcc:
+            input#mailBcc.form-control(type="email" placeholder="bcc@example.com")
+          .col-12
+            label.form-label(for="mailSubject") Subject:
+            input#mailSubject.form-control(type="text" placeholder="Enter email subject..." required)
+
+          // Editor Toolbar Simulation
+          .col-12
+            .p-2.border.rounded.bg-body-secondary.d-flex.flex-wrap.gap-1
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Bold")
+                i.bi.bi-type-bold
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Italic")
+                i.bi.bi-type-italic
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Underline")
+                i.bi.bi-type-underline
+              .vr.mx-1
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Align Left")
+                i.bi.bi-text-left
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Align Center")
+                i.bi.bi-text-center
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Align Right")
+                i.bi.bi-text-right
+              .vr.mx-1
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Insert Link")
+                i.bi.bi-link-45deg
+              button.btn.btn-sm.btn-outline-secondary(type="button" title="Attach File")
+                i.bi.bi-paperclip
+
+            textarea#mailBody.form-control.rounded-top-0(rows="10" placeholder="Type your message here..." style="margin-top: -1px;")
+
+          .col-12
+            .p-3.border.border-dashed.rounded.text-center.bg-body-secondary
+              i.bi.bi-cloud-arrow-up.fs-3.text-primary
+              p.small.text-body-secondary.mb-1 Drag &amp; drop attachments here, or browse files
+              button.btn.btn-sm.btn-outline-primary(type="button")
+                i.bi.bi-folder2-open.me-1
+                | Choose Files
+
+    // Sticky action buttons at bottom of form
+    .bg-body.p-3.rounded.d-flex.justify-content-end.gap-2.sticky-bottom.mt-3
+      a.btn.btn-outline-secondary.px-4.text-uppercase.small.fw-bold(href=baseUrl + "pages/mail-inbox.html")
+        i.bi.bi-trash.me-2
+        span Discard
+      button.btn.btn-primary.px-5.text-uppercase.small.fw-bold(type="submit")
+        i.bi.bi-send.me-2
+        span Send Message

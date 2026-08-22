@@ -1,0 +1,136 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Media Files"
+  - pageUrl = "pages/file-media"
+
+block styles
+
+block scripts
+
+block content
+  // Top Filters & Actions
+  .bg-body.p-3.rounded.mb-3.text-end
+    a.btn.btn-primary.text-uppercase.fw-bold(href="#")
+      i.bi.bi-cloud-upload.me-1
+      span Upload Media
+    hr.my-2
+
+    form(method="GET" autocomplete="off")
+      .d-flex.flex-wrap.justify-content-end.align-items-center.gap-2
+        select.form-select.w-auto(name="mediaType" aria-label="Media Type")
+          option(value="all" selected) All Media
+          option(value="images") Images (JPG, PNG, SVG)
+          option(value="video") Videos (MP4, WEBM)
+          option(value="audio") Audio (MP3, WAV)
+
+        select.form-select.w-auto(name="sortBy" aria-label="Sort By")
+          option(value="newest" selected) Newest First
+          option(value="oldest") Oldest First
+          option(value="size") Largest Size
+
+        .input-group.w-auto.flex-grow-1(style="max-width: 450px;")
+          input.form-control(type="text" name="search" placeholder="Search media by title or tag..." value="")
+          button.btn.btn-primary.px-3.text-uppercase.small.fw-bold.text-nowrap(type="submit")
+            i.bi.bi-search.me-1
+            | Filter
+
+  // Media Grid
+  .row.g-3.mb-3
+    .col-12.col-sm-6.col-md-4.col-xl-3
+      .card.h-100
+        .p-4.bg-body-secondary.text-center.rounded-top.d-flex.align-items-center.justify-content-center(style="height: 140px")
+          i.bi.bi-image.text-primary.fs-1
+        .card-body
+          .d-flex.justify-content-between.align-items-start.mb-1
+            h6.fw-bold.text-body.mb-0 Hero_Banner_Dashboard.png
+            span.badge.bg-primary-subtle.text-primary PNG
+          .small.text-body-secondary.mb-3 1920x1080 | 1.8 MB
+          .d-flex.justify-content-between.align-items-center
+            span.small.text-muted Aug 20, 2026
+            .d-flex.gap-1
+              button.btn.btn-sm.btn-outline-primary(type="button" title="Download")
+                i.bi.bi-download
+              button.btn.btn-sm.btn-outline-danger(type="button" title="Delete")
+                i.bi.bi-trash
+
+    .col-12.col-sm-6.col-md-4.col-xl-3
+      .card.h-100
+        .p-4.bg-body-secondary.text-center.rounded-top.d-flex.align-items-center.justify-content-center(style="height: 140px")
+          i.bi.bi-camera-video.text-danger.fs-1
+        .card-body
+          .d-flex.justify-content-between.align-items-start.mb-1
+            h6.fw-bold.text-body.mb-0 Promo_Video_Trailer.mp4
+            span.badge.bg-danger-subtle.text-danger MP4
+          .small.text-body-secondary.mb-3 02:45 min | 45.2 MB
+          .d-flex.justify-content-between.align-items-center
+            span.small.text-muted Aug 18, 2026
+            .d-flex.gap-1
+              button.btn.btn-sm.btn-outline-primary(type="button" title="Download")
+                i.bi.bi-download
+              button.btn.btn-sm.btn-outline-danger(type="button" title="Delete")
+                i.bi.bi-trash
+
+    .col-12.col-sm-6.col-md-4.col-xl-3
+      .card.h-100
+        .p-4.bg-body-secondary.text-center.rounded-top.d-flex.align-items-center.justify-content-center(style="height: 140px")
+          i.bi.bi-music-note-beamed.text-success.fs-1
+        .card-body
+          .d-flex.justify-content-between.align-items-start.mb-1
+            h6.fw-bold.text-body.mb-0 App_Notification_Sound.mp3
+            span.badge.bg-success-subtle.text-success MP3
+          .small.text-body-secondary.mb-3 00:04 sec | 120 KB
+          .d-flex.justify-content-between.align-items-center
+            span.small.text-muted Aug 16, 2026
+            .d-flex.gap-1
+              button.btn.btn-sm.btn-outline-primary(type="button" title="Download")
+                i.bi.bi-download
+              button.btn.btn-sm.btn-outline-danger(type="button" title="Delete")
+                i.bi.bi-trash
+
+    .col-12.col-sm-6.col-md-4.col-xl-3
+      .card.h-100
+        .p-4.bg-body-secondary.text-center.rounded-top.d-flex.align-items-center.justify-content-center(style="height: 140px")
+          i.bi.bi-filetype-svg.text-warning.fs-1
+        .card-body
+          .d-flex.justify-content-between.align-items-start.mb-1
+            h6.fw-bold.text-body.mb-0 Brand_Logo_Monochrome.svg
+            span.badge.bg-warning-subtle.text-warning SVG
+          .small.text-body-secondary.mb-3 Vector | 48 KB
+          .d-flex.justify-content-between.align-items-center
+            span.small.text-muted Aug 12, 2026
+            .d-flex.gap-1
+              button.btn.btn-sm.btn-outline-primary(type="button" title="Download")
+                i.bi.bi-download
+              button.btn.btn-sm.btn-outline-danger(type="button" title="Delete")
+                i.bi.bi-trash
+
+  // Pagination
+  .bg-body.p-3.rounded.d-flex.flex-column.flex-md-row.align-items-center.justify-content-between.gap-2.sticky-bottom
+    .legend
+      span.fw-bold Showing 1 - 4 of 64 media items
+    .paginator
+      nav(aria-label="Media pagination")
+        ul.pagination.justify-content-end.mb-0
+          li.page-item.disabled
+            a.page-link.text-uppercase.small.fw-bold(href="#" aria-label="First")
+              i.bi.bi-chevron-double-left.small
+          li.page-item.disabled
+            a.page-link(href="#" aria-label="Previous")
+              i.bi.bi-chevron-left.small
+          li.page-item.active
+            a.page-link(href="#") 1
+          li.page-item
+            a.page-link(href="#") 2
+          li.page-item
+            a.page-link(href="#") 3
+          li.page-item.disabled
+            span.page-link ...
+          li.page-item
+            a.page-link(href="#") 16
+          li.page-item
+            a.page-link(href="#" aria-label="Next")
+              i.bi.bi-chevron-right.small
+          li.page-item
+            a.page-link.text-uppercase.small.fw-bold(href="#" aria-label="Last")
+              i.bi.bi-chevron-double-right.small

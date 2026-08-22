@@ -43,6 +43,89 @@
         "link": "pages/typography",
         "badge": "New",
         "badgeColor": "primary"
+      },
+      {
+        "title": "Users",
+        "path": "pages-users",
+        "collapsed": true,
+        "items": [
+          {
+            "title": "Add User",
+            "path": "pages/user-add",
+            "link": "pages/user-add"
+          },
+          {
+            "title": "List User",
+            "path": "pages/user-list",
+            "link": "pages/user-list"
+          },
+          {
+            "title": "View User",
+            "path": "pages/user-view",
+            "link": "pages/user-view"
+          }
+        ]
+      },
+      {
+        "title": "Projects",
+        "path": "pages-projects",
+        "collapsed": true,
+        "items": [
+          {
+            "title": "Project List",
+            "path": "pages/project-list",
+            "link": "pages/project-list"
+          },
+          {
+            "title": "Project Details",
+            "path": "pages/project-details",
+            "link": "pages/project-details"
+          },
+          {
+            "title": "Create Project",
+            "path": "pages/project-create",
+            "link": "pages/project-create"
+          }
+        ]
+      },
+      {
+        "title": "Mail",
+        "path": "pages-mail",
+        "collapsed": true,
+        "items": [
+          {
+            "title": "Inbox",
+            "path": "pages/mail-inbox",
+            "link": "pages/mail-inbox"
+          },
+          {
+            "title": "Compose",
+            "path": "pages/mail-compose",
+            "link": "pages/mail-compose"
+          },
+          {
+            "title": "Read Email",
+            "path": "pages/mail-read",
+            "link": "pages/mail-read"
+          }
+        ]
+      },
+      {
+        "title": "File Manager",
+        "path": "pages-file-manager",
+        "collapsed": true,
+        "items": [
+          {
+            "title": "All Files",
+            "path": "pages/file-manager",
+            "link": "pages/file-manager"
+          },
+          {
+            "title": "Media Files",
+            "path": "pages/file-media",
+            "link": "pages/file-media"
+          }
+        ]
       }
     ]
   },
