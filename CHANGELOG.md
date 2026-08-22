@@ -156,3 +156,38 @@
 
 ### Misc
 - General project update
+
+## [v2.3.0] - 21/08/2026
+
+### Added
+- **Multi-Level Sidebar Navigation**:
+  - Recursive arbitrary-depth navigation support in `sidebar.pug` with dynamic active state and accordion auto-expansion.
+  - Configured Level 1 icon display while keeping Level 2 and Level 3 submenus clean and properly indented.
+- **User Management Module**:
+  - `user-add.pug`: Add User form with permissions toggles and sticky action buttons.
+  - `user-list.pug`: Standardized user directory table with independent filter and pagination containers.
+  - `user-view.pug`: User profile overview with account details and activity timeline.
+- **Project Management Module**:
+  - `project-list.pug`: Project directory table with progress indicators, team avatars, and action buttons.
+  - `project-details.pug`: Project details view with budget tracking, milestone roadmap, team members, and attachments.
+  - `project-create.pug`: Project creation form with milestone setup and team assignment.
+- **Mail Application Module**:
+  - `mail-inbox.pug`: Interactive email inbox with folder and label filters, starred items, and sticky pagination.
+  - `mail-compose.pug`: Email composer with rich formatting toolbar simulation and drag-and-drop attachments.
+  - `mail-read.pug`: Full message reading view with attachment previews and quick reply box.
+- **File Manager Module**:
+  - `file-manager.pug`: File directory with categorized storage overview cards and file management table.
+  - `file-media.pug`: Responsive multimedia grid gallery with type filters and quick actions.
+- **Charts Demos Expansion**:
+  - Added 6 new interactive Chart.js demos to `plugins/charts.pug`: Grouped Bar Chart, Stacked Bar Chart, Multi-Axis Line Chart, Stepped Line Chart, Bubble Chart, and Scatter Chart.
+  - Integrated collapsible PrismJS code preview and copy-to-clipboard functionality across all chart demos.
+- **Bootstrap Tables Demos Expansion**:
+  - Added comprehensive table variants to `tables/bootstrap.pug`: Striped Columns, Borderless, Table Group Dividers, Contextual Classes, Active Rows, Vertical Alignment with avatars & progress bars, and Accessible Captions.
+- **Standardized UI Guidelines & Architecture Rules**:
+  - Created `.agents/rules` for spacing (`piru-general.md`), action buttons (`piru-btn-action.md`), table listing views (`piru-table-list.md`), sticky pagination (`piru-pagination.md`), and top filter bars (`piru-filter.md`).
+
+### Improved
+- Standardized vertical margins across all pages to strictly enforce `mb-3` and `g-3`.
+- Standardized table action buttons with `btn-sm`, uppercase bold text, and Bootstrap icons on the left.
+- Standardized form action bars with `sticky-bottom` and `sticky-top` containers.
+- Enhanced sidebar SCSS specificity to fix active state cascading and dark mode background color glitches.
