@@ -191,3 +191,21 @@
 - Standardized table action buttons with `btn-sm`, uppercase bold text, and Bootstrap icons on the left.
 - Standardized form action bars with `sticky-bottom` and `sticky-top` containers.
 - Enhanced sidebar SCSS specificity to fix active state cascading and dark mode background color glitches.
+
+## [v2.3.1] - 20/09/2026
+
+### Added
+- **Asset Banner Header**:
+  - Integrated `Webpack.BannerPlugin` with dynamic package metadata (`package.json`: version, author, license, repo, homepage).
+  - Preserved banner headers after minification (`TerserPlugin` and `CssMinimizerPlugin`) across compiled CSS and JS assets (`dist/assets/css/piruadmin.css`, `dist/assets/css/piruadmin-fonts.css`, `dist/assets/js/piruadmin.js`).
+
+### Improved
+- **Font Directory Organization**:
+  - Updated font asset loader generator in `webpack.config.js` to preserve subdirectories (`assets/fonts/inter/`, `assets/fonts/roboto/`, `assets/fonts/google-sans-code/`) instead of outputting loose files in the fonts root.
+  - Standardized font directory casing (`src/fonts/Roboto` to `src/fonts/roboto`) to match SCSS imports.
+- **Documentation**:
+  - Updated `README.md` and `README.es.md` with a complete reference table and usage guide for all npm/pnpm scripts (`start`, `start:plugins`, `dev`, `dev:plugins`, `watch`, `build`, `deploy`, `prepublishOnly`).
+  - Cleaned up horizontal rule separators across markdown documentation.
+
+### Dependencies
+- Updated devDependencies (`webpack`, `webpack-cli`, `sass`, `sass-loader`, `postcss`, `postcss-preset-env`, `@babel/core`, `@babel/preset-env`, `css-loader`).
