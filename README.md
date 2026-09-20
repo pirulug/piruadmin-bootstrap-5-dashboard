@@ -29,8 +29,6 @@
   <a href="https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/blob/master/CHANGELOG.md">Changelog</a>
 </p>
 
----
-
 ## Features
 
 - **Bootstrap 5 Architecture**: Built with modern Bootstrap 5 and Vanilla JavaScript (no jQuery).
@@ -42,8 +40,6 @@
 - **Popular Plugins**: Pre-configured integrations for Chart.js, SweetAlert2, Toastify, Flatpickr, Tagify, Lite YouTube, and more.
 - **Authentication & Security**: Sign In, Sign Up, Password Recovery, 2-Step Verification, Lock Screen, and Backup Codes.
 - **Responsive Layout**: Fluid sidebar navigation with mobile overlay and collapsible submenus.
-
----
 
 ## Icon Libraries
 
@@ -69,8 +65,6 @@ The template supports multiple popular icon libraries out of the box:
 <span class="fi fi-us"></span>
 ```
 
----
-
 ## Pages and Views
 
 | Category | Available Pages |
@@ -85,8 +79,6 @@ The template supports multiple popular icon libraries out of the box:
 | **Authentication** | Sign In, Sign Up, Recover Password, Reset Password, 2-Step Verification, 2-Step Verification Code, Backup Codes, Lock Screen |
 | **Account** | User Profile, Account Settings |
 | **Error / System** | 404 Not Found, 500 Server Error, Maintenance Mode |
-
----
 
 ## Getting Started
 
@@ -109,12 +101,43 @@ cd piruadmin-bootstrap-5-dashboard
 pnpm install
 ```
 
+### Available Scripts
+
+| Command | Description |
+| :--- | :--- |
+| `pnpm start` | Runs the local development server with live reload at `http://localhost:8989`. |
+| `pnpm run start:plugins` | Runs the local development server with plugins enabled (`PLUGINS=true`). |
+| `pnpm run dev` | Compiles assets in development mode without starting a local server. |
+| `pnpm run dev:plugins` | Compiles assets in development mode with plugins enabled (`PLUGINS=true`). |
+| `pnpm run watch` | Watches for source file changes and recompiles automatically. |
+| `pnpm run build` | Compiles, bundles, and minifies all production assets into the `dist/` directory. |
+| `pnpm run deploy` | Deploys the compiled `dist/` directory directly to GitHub Pages. |
+
 ### Development Server
 
-Run the development server with live reload at `http://localhost:8989`:
+Run the local development server with live reload at `http://localhost:8989`:
 
 ```bash
+# Standard development server
 pnpm start
+
+# Development server with plugins enabled
+pnpm run start:plugins
+```
+
+### Development Build and Watch
+
+Compile assets in development mode or watch for file changes without starting the server:
+
+```bash
+# Development build
+pnpm run dev
+
+# Development build with plugins enabled
+pnpm run dev:plugins
+
+# Watch files and recompile on change
+pnpm run watch
 ```
 
 ### Production Build
@@ -132,8 +155,6 @@ Deploy the compiled `dist/` folder directly to GitHub Pages:
 ```bash
 pnpm run deploy
 ```
-
----
 
 ## Project Structure
 
@@ -163,13 +184,9 @@ piruadmin-bootstrap-5-dashboard/
 └── package.json          # Project metadata and dependencies
 ```
 
----
-
 ## License
 
 Distributed under the [MIT License](./LICENSE).
-
----
 
 ## Author
 

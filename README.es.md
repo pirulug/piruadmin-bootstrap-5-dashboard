@@ -29,8 +29,6 @@
   <a href="https://github.com/pirulug/piruadmin-bootstrap-5-dashboard/blob/master/CHANGELOG.md">Historial de Cambios</a>
 </p>
 
----
-
 ## Características Principales
 
 - **Arquitectura Bootstrap 5**: Desarrollado con Bootstrap 5 y JavaScript Vanilla (sin dependencia de jQuery).
@@ -42,8 +40,6 @@
 - **Integración de Plugins**: Soporte preconfigurado para Chart.js, SweetAlert2, Toastify, Flatpickr, Tagify, Lite YouTube y más.
 - **Autenticación y Seguridad**: Inicio de sesión, registro, recuperación de contraseña, verificación en 2 pasos, pantalla de bloqueo y códigos de respaldo.
 - **Diseño Adaptable (Responsive)**: Barra lateral fluida con superposición en dispositivos móviles y submenús colapsables.
-
----
 
 ## Bibliotecas de Iconos
 
@@ -69,8 +65,6 @@ La plantilla incluye soporte integrado para diversas librerías de iconos:
 <span class="fi fi-us"></span>
 ```
 
----
-
 ## Páginas y Vistas
 
 | Categoría | Páginas Disponibles |
@@ -85,8 +79,6 @@ La plantilla incluye soporte integrado para diversas librerías de iconos:
 | **Autenticación** | Iniciar Sesión, Registrarse, Recuperar Contraseña, Restablecer Contraseña, Verificación en 2 Pasos, Código de Verificación, Códigos de Respaldo, Bloqueo de Pantalla |
 | **Cuenta de Usuario** | Perfil de Usuario, Configuración de Cuenta |
 | **Páginas de Error y Sistema** | Error 404 No Encontrado, Error 500 de Servidor, Modo de Mantenimiento |
-
----
 
 ## Guía de Inicio
 
@@ -109,12 +101,43 @@ cd piruadmin-bootstrap-5-dashboard
 pnpm install
 ```
 
+### Comandos Disponibles
+
+| Comando | Descripción |
+| :--- | :--- |
+| `pnpm start` | Inicia el servidor de desarrollo local con recarga en vivo en `http://localhost:8989`. |
+| `pnpm run start:plugins` | Inicia el servidor de desarrollo local con soporte de plugins (`PLUGINS=true`). |
+| `pnpm run dev` | Compila los recursos en modo desarrollo sin levantar el servidor local. |
+| `pnpm run dev:plugins` | Compila los recursos en modo desarrollo con soporte de plugins (`PLUGINS=true`). |
+| `pnpm run watch` | Observa cambios en los archivos fuente y recompila automáticamente. |
+| `pnpm run build` | Compila, empaqueta y optimiza todos los recursos de producción en el directorio `dist/`. |
+| `pnpm run deploy` | Despliega la carpeta compilada `dist/` directamente a GitHub Pages. |
+
 ### Servidor de Desarrollo
 
 Inicia el servidor local de desarrollo con recarga en vivo en `http://localhost:8989`:
 
 ```bash
+# Servidor de desarrollo estándar
 pnpm start
+
+# Servidor de desarrollo con plugins habilitados
+pnpm run start:plugins
+```
+
+### Compilación de Desarrollo y Observador (Watch)
+
+Compila recursos en modo desarrollo o monitorea cambios en tiempo real sin levantar el servidor:
+
+```bash
+# Compilación en modo desarrollo
+pnpm run dev
+
+# Compilación en modo desarrollo con plugins habilitados
+pnpm run dev:plugins
+
+# Monitoreo de archivos y recompilación automática ante cambios
+pnpm run watch
 ```
 
 ### Compilación para Producción
@@ -132,8 +155,6 @@ Despliega directamente el contenido generado en `dist/` a GitHub Pages:
 ```bash
 pnpm run deploy
 ```
-
----
 
 ## Estructura del Proyecto
 
@@ -163,13 +184,9 @@ piruadmin-bootstrap-5-dashboard/
 └── package.json          # Metadatos del proyecto y dependencias
 ```
 
----
-
 ## Licencia
 
 Distribuido bajo la [Licencia MIT](./LICENSE).
-
----
 
 ## Autor
 
