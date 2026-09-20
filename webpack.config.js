@@ -10,6 +10,19 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 const PluginsManager = require("./scripts/plugins-manager");
 const JsonManager = require("./scripts/json-manager");
+const pkg = require("./package.json");
+
+const repoUrl = (
+  typeof pkg.repository === "string" ? pkg.repository : pkg.repository?.url || ""
+)
+  .replace(/^git\+/, "")
+  .replace(/\.git$/, "");
+
+const banner = [
+  `PiruAdmin — Bootstrap 5 Dashboard v${pkg.version} (${pkg.homepage})`,
+  `Copyright 2024-${new Date().getFullYear()} ${pkg.author}`,
+  `Licensed under ${pkg.license} (${repoUrl ? `${repoUrl}/blob/master/LICENSE` : pkg.license})`,
+].join("\n");
 
 // PUG
 const PAGES_DIR = `${Path.resolve(__dirname, "src")}/view/pages`;
@@ -146,6 +159,13 @@ module.exports = (env = {}, argv = {}) => {
         }),
       // Eliminar archivos vacios
       !devBuild && new DeleteEmptyFilesPlugin(__dirname, "dist"),
+      new Webpack.BannerPlugin({
+        banner: banner,
+        raw: false,
+        entryOnly: false,
+        test: /\.(css|js)$/i,
+        stage: Webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
+      }),
     ].filter(Boolean),
     module: {
       rules: [
@@ -185,7 +205,21 @@ module.exports = (env = {}, argv = {}) => {
           test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
           type: "asset/resource",
           generator: {
-            filename: "assets/fonts/[name][ext]",
+            filename: (pathData) => {
+              const resource = (
+                pathData?.module?.resource ||
+                pathData?.filename ||
+                ""
+              ).replace(/\\/g, "/");
+
+              const fontsMatch = resource.match(/src\/fonts\/([^/]+)\//i);
+              if (fontsMatch) {
+                const folder = fontsMatch[1].toLowerCase();
+                return `assets/fonts/${folder}/[name][ext]`;
+              }
+
+              return "assets/fonts/[name][ext]";
+            },
           },
         },
         // Load images (including svg)
