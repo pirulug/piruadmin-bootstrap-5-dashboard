@@ -16,7 +16,7 @@ nav.navtop
           i.bi.bi-fullscreen
 
       li.nav-item.dropdown
-        a#bd-theme.nav-icon.dropdown-toggle(type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)")
+        a#bd-theme.nav-icon.dropdown-toggle.dropdown-toggle-no-caret(type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)")
           span#bd-theme-icon.theme-icon-active
           span#bd-theme-text.visually-hidden Toggle theme
         ul.dropdown-menu.dropdown-menu-end(aria-labelledby="bd-theme-text")
@@ -24,14 +24,17 @@ nav.navtop
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="light" aria-pressed="false")
               span.theme-icon-active.opacity-50.me-2(data-icon="sun")
               | Light
+              span.pr-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="dark" aria-pressed="false")
               span.theme-icon-active.opacity-50.me-2(data-icon="moon")
               | Dark
+              span.pr-check.ms-auto.d-none
           li
             button.dropdown-item.d-flex.align-items-center(type="button" data-bs-theme-value="auto" aria-pressed="true")
               span.theme-icon-active.opacity-50.me-2(data-icon="auto")
               | Auto
+              span.pr-check.ms-auto.d-none
 
       li.nav-item.dropdown
         a#alertsDropdown.nav-icon.dropdown-toggle.dropdown-toggle-no-caret(href="#" data-bs-toggle="dropdown")
@@ -117,8 +120,9 @@ nav.navtop
                   .text-muted.small.mt-1 5h ago
           .dropdown-menu-footer
             a.text-muted(href="#") Show all messages
+      
       li.nav-item.nav-item-user.dropdown
-        a.nav-link.dropdown-toggle(href="#" data-bs-toggle="dropdown")
+        a#user-profile.nav-link.dropdown-toggle(href="#" data-bs-toggle="dropdown")
           img.avatar(src="https://dummyimage.com/50x50/ececec/000.jpg" alt="")
           span.d-none.d-md-inline-block Pirulug
         .dropdown-menu.dropdown-menu-end
