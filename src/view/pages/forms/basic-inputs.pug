@@ -1,8 +1,8 @@
 extends ../../layouts/dashboard
 
 append config
-  -pageName = 'Basic Form'
-  - pageUrl = 'forms/basic-inputs'
+  - pageName = "Basic Inputs"
+  - pageUrl = "forms/basic-inputs"
 
 block content
 
@@ -10,13 +10,28 @@ block content
     .col-12.col-lg-6
       .card.mb-3
         .card-header
-          h5.card-title.mb-0 Input
+          h5.card-title.mb-0 Input Types
         .card-body
           p.text-secondary
-            | Text inputs use the
-            code .form-control
-            |  class for standard text fields.
-          input.form-control(type='text' placeholder='Input')
+            | HTML5 provides standard input types with specialized keyboards, validation, and browser controls.
+          .mb-3
+            label.form-label Text Input
+            input.form-control(type="text" placeholder="Standard text input")
+          .mb-3
+            label.form-label Email Address
+            input.form-control(type="email" placeholder="name@example.com")
+          .mb-3
+            label.form-label Number
+            input.form-control(type="number" min="0" max="100" step="5" placeholder="Number (0 - 100)")
+          .mb-3
+            label.form-label Telephone
+            input.form-control(type="tel" placeholder="+1 (555) 000-0000")
+          .mb-3
+            label.form-label URL
+            input.form-control(type="url" placeholder="https://example.com")
+          .mb-3
+            label.form-label Search
+            input.form-control(type="search" placeholder="Search keywords...")
 
       .card.mb-3
         .card-header
@@ -30,13 +45,13 @@ block content
             |  (default) and 
             code text
             |  modes.
-          div
-            label.form-label Icon Mode
+          .mb-3
+            label.form-label Default (Icon Mode)
             input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password)
-          .mt-3
-            label.form-label Icon Mode
+          .mb-3
+            label.form-label Icon Mode Explicit
             input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password="icon")
-          .mt-3
+          div
             label.form-label Text Mode
             input.form-control(type="password" placeholder="Enter password" data-pr-toggle-password="text")
 
@@ -45,142 +60,329 @@ block content
           h5.card-title.mb-0 Textarea
         .card-body
           p.text-secondary
-            | Textareas use
+            | Textareas use 
             code .form-control
-            |  with the
+            |  with the 
             code textarea
-            |  element for multi-line input.
-          textarea.form-control(rows='2' placeholder='Textarea')
+            |  element for multi-line user input.
+          .mb-3
+            label.form-label Default Textarea
+            textarea.form-control(rows="3" placeholder="Write your message here...")
+          div
+            label.form-label Textarea with Helper Text
+            textarea.form-control(rows="2" placeholder="Brief bio or notes")
+            .form-text Maximum 250 characters.
 
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Select Menus
+        .card-body
+          p.text-secondary
+            | Select elements use 
+            code .form-select
+            |  for custom styled dropdowns, and support sizing and multi-selection.
+          .mb-3
+            label.form-label Default Select
+            select.form-select
+              option(selected) Open this select menu
+              option(value="1") Option One
+              option(value="2") Option Two
+              option(value="3") Option Three
+          .mb-3
+            label.form-label Large Select
+            select.form-select.form-select-lg
+              option(selected) Large select menu
+              option(value="1") Option One
+              option(value="2") Option Two
+          .mb-3
+            label.form-label Small Select
+            select.form-select.form-select-sm
+              option(selected) Small select menu
+              option(value="1") Option One
+              option(value="2") Option Two
+          div
+            label.form-label Multiple Select
+            select.form-select(multiple size="3")
+              option(value="1" selected) Option One
+              option(value="2") Option Two
+              option(value="3") Option Three
+              option(value="4") Option Four
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Datalist (Autocomplete)
+        .card-body
+          p.text-secondary
+            | Datalists provide native autocomplete options when typing into an input field using the 
+            code datalist
+            |  element.
+          label.form-label(for="datalistExample") Choose City
+          input.form-control#datalistExample(list="datalistOptions" placeholder="Type to search a city...")
+          datalist#datalistOptions
+            option(value="San Francisco")
+            option(value="New York")
+            option(value="Seattle")
+            option(value="Los Angeles")
+            option(value="Chicago")
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 File Inputs
+        .card-body
+          p.text-secondary
+            | File inputs use 
+            code .form-control
+            |  with 
+            code type="file"
+            | . They support multiple selections and sizing variations.
+          .mb-3
+            label.form-label Default File Input
+            input.form-control(type="file")
+          .mb-3
+            label.form-label Multiple Files Input
+            input.form-control(type="file" multiple)
+          .mb-3
+            label.form-label Small File Input
+            input.form-control.form-control-sm(type="file")
+          div
+            label.form-label Large File Input
+            input.form-control.form-control-lg(type="file")
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Floating Labels
+        .card-body
+          p.text-secondary
+            | Wrap a 
+            code .form-control
+            |  and a 
+            code label
+            |  inside a 
+            code .form-floating
+            |  container to create floating labels.
+          .form-floating.mb-3
+            input.form-control#floatingInput(type="email" placeholder="name@example.com")
+            label(for="floatingInput") Email address
+          .form-floating.mb-3
+            input.form-control#floatingPassword(type="password" placeholder="Password")
+            label(for="floatingPassword") Password
+          .form-floating.mb-3
+            select.form-select#floatingSelect(aria-label="Floating label select example")
+              option(selected) Choose an option
+              option(value="1") Administrator
+              option(value="2") Manager
+              option(value="3") Contributor
+            label(for="floatingSelect") Works with selects
+          .form-floating
+            textarea.form-control#floatingTextarea(placeholder="Leave a comment here" style="height: 100px")
+            label(for="floatingTextarea") Comments
+
+    .col-12.col-lg-6
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Checkboxes
         .card-body
           p.text-secondary
-            | Checkboxes use
+            | Checkboxes use 
             code .form-check
-            | ,
+            | , 
             code .form-check-input
-            |  and
+            |  and 
             code .form-check-label
-            |  classes. Inline variants use
+            | . Inline variants use 
             code .form-check-inline
             | .
+          .mb-3
+            .form-check
+              input.form-check-input#checkDefault(type="checkbox" value="")
+              label.form-check-label(for="checkDefault") Default checkbox
+            .form-check
+              input.form-check-input#checkChecked(type="checkbox" value="" checked)
+              label.form-check-label(for="checkChecked") Checked checkbox
+            .form-check
+              input.form-check-input#checkDisabled(type="checkbox" value="" disabled)
+              label.form-check-label(for="checkDisabled") Disabled checkbox
+            .form-check
+              input.form-check-input#checkCheckedDisabled(type="checkbox" value="" checked disabled)
+              label.form-check-label(for="checkCheckedDisabled") Disabled checked checkbox
           div
-            label.form-check
-              input.form-check-input(type='checkbox' value='')
-              span.form-check-label
-                | Option one is this and that—be sure to include why it's great
-            label.form-check
-              input.form-check-input(type='checkbox' value='' disabled='')
-              span.form-check-label
-                | Option two is disabled
-          div
-            label.form-check.form-check-inline
-              input.form-check-input(type='checkbox' value='option1')
-              span.form-check-label
-                | 1
-            label.form-check.form-check-inline
-              input.form-check-input(type='checkbox' value='option2')
-              span.form-check-label
-                | 2
-            label.form-check.form-check-inline
-              input.form-check-input(type='checkbox' value='option3' disabled='')
-              span.form-check-label
-                | 3
+            label.form-label.d-block Inline Checkboxes
+            .form-check.form-check-inline
+              input.form-check-input#inlineCheckbox1(type="checkbox" value="option1" checked)
+              label.form-check-label(for="inlineCheckbox1") 1
+            .form-check.form-check-inline
+              input.form-check-input#inlineCheckbox2(type="checkbox" value="option2")
+              label.form-check-label(for="inlineCheckbox2") 2
+            .form-check.form-check-inline
+              input.form-check-input#inlineCheckbox3(type="checkbox" value="option3" disabled)
+              label.form-check-label(for="inlineCheckbox3") 3 (disabled)
 
-      .card.mb-3
-        .card-header
-          h5.card-title.mb-0 Read only
-        .card-body
-          p.text-secondary
-            | Read-only inputs use
-            code .form-control
-            |  with the
-            code readonly
-            |  attribute.
-          input.form-control(type='text' placeholder='Readonly input' readonly='')
-
-    .col-12.col-lg-6
       .card.mb-3
         .card-header
           h5.card-title.mb-0 Radios
         .card-body
           p.text-secondary
-            | Radio buttons use
+            | Radio buttons use 
             code .form-check
-            | ,
-            code .form-check-input
-            |  and
-            code .form-check-label
-            | . Inline radios use
+            |  with 
+            code type="radio"
+            | . Use 
             code .form-check-inline
-            | .
+            |  for horizontal layout.
+          .mb-3
+            .form-check
+              input.form-check-input#radioDefault(type="radio" name="radioGroupDemo" value="option1" checked)
+              label.form-check-label(for="radioDefault") Selected radio option
+            .form-check
+              input.form-check-input#radioOther(type="radio" name="radioGroupDemo" value="option2")
+              label.form-check-label(for="radioOther") Default radio option
+            .form-check
+              input.form-check-input#radioDisabled(type="radio" name="radioGroupDemo" value="option3" disabled)
+              label.form-check-label(for="radioDisabled") Disabled radio option
           div
-            label.form-check
-              input.form-check-input(type='radio' value='option1' name='radios-example' checked='')
-              span.form-check-label
-                | Option one is this and that—be sure to include why it's great
-            label.form-check
-              input.form-check-input(type='radio' value='option2' name='radios-example')
-              span.form-check-label
-                | Option two can be something else and selecting it will deselect option one
-            label.form-check
-              input.form-check-input(type='radio' value='option3' name='radios-example' disabled='')
-              span.form-check-label
-                | Option three is disabled
-          div
-            label.form-check.form-check-inline
-              input.form-check-input(type='radio' name='inline-radios-example' value='option1')
-              span.form-check-label
-                | 1
-            label.form-check.form-check-inline
-              input.form-check-input(type='radio' name='inline-radios-example' value='option2')
-              span.form-check-label
-                | 2
-            label.form-check.form-check-inline
-              input.form-check-input(type='radio' name='inline-radios-example' value='option3' disabled='')
-              span.form-check-label
-                | 3
+            label.form-label.d-block Inline Radios
+            .form-check.form-check-inline
+              input.form-check-input#inlineRadio1(type="radio" name="inlineRadioGroupDemo" value="option1" checked)
+              label.form-check-label(for="inlineRadio1") Option 1
+            .form-check.form-check-inline
+              input.form-check-input#inlineRadio2(type="radio" name="inlineRadioGroupDemo" value="option2")
+              label.form-check-label(for="inlineRadio2") Option 2
+            .form-check.form-check-inline
+              input.form-check-input#inlineRadio3(type="radio" name="inlineRadioGroupDemo" value="option3" disabled)
+              label.form-check-label(for="inlineRadio3") Option 3 (disabled)
 
       .card.mb-3
         .card-header
-          h5.card-title.mb-0 Selects
+          h5.card-title.mb-0 Switches
         .card-body
           p.text-secondary
-            | Select elements use
-            code .form-select
-            |  for single selects and
-            code .form-control
-            |  for multi-select lists.
-          select.form-select.mb-3
-            option(selected='') Open this select menu
-            option One
-            option Two
-            option Three
-          select.form-control(multiple='')
-            option One
-            option Two
-            option Three
-            option Four
+            | Switches have the markup of a custom checkbox but use the 
+            code .form-switch
+            |  class for toggle switch behavior.
+          .mb-3
+            .form-check.form-switch
+              input.form-check-input#switchDefault(type="checkbox" role="switch")
+              label.form-check-label(for="switchDefault") Default switch checkbox input
+            .form-check.form-switch
+              input.form-check-input#switchChecked(type="checkbox" role="switch" checked)
+              label.form-check-label(for="switchChecked") Checked switch checkbox input
+            .form-check.form-switch
+              input.form-check-input#switchDisabled(type="checkbox" role="switch" disabled)
+              label.form-check-label(for="switchDisabled") Disabled switch checkbox input
+            .form-check.form-switch
+              input.form-check-input#switchCheckedDisabled(type="checkbox" role="switch" checked disabled)
+              label.form-check-label(for="switchCheckedDisabled") Disabled checked switch checkbox input
+          div
+            .form-check.form-switch.form-check-reverse
+              input.form-check-input#switchReverse(type="checkbox" role="switch")
+              label.form-check-label(for="switchReverse") Reverse switch toggle
 
-      .card
+      .card.mb-3
         .card-header
-          h5.card-title.mb-0 Disabled
+          h5.card-title.mb-0 Range (Sliders)
         .card-body
           p.text-secondary
-            | Disabled form controls use standard form classes with the
-            code disabled
-            |  attribute.
+            | Create custom horizontal range inputs using the 
+            code .form-range
+            |  class.
           .mb-3
-            label.form-label Disabled input
-            input.form-control(type='text' placeholder='Disabled input' disabled='')
+            label.form-label(for="rangeDefault") Default Range (0 - 100)
+            input.form-range#rangeDefault(type="range")
           .mb-3
-            label.form-label Disabled select menu
-            select.form-control(disabled='')
-              option Disabled select
-          label.form-check
-            input.form-check-input(type='checkbox' value='' disabled='')
-            span.form-check-label
-              | Can't check this
+            label.form-label(for="rangeSteps") Min, Max, and Steps (Min: 0, Max: 50, Step: 10)
+            input.form-range#rangeSteps(type="range" min="0" max="50" step="10" value="20")
+          div
+            label.form-label(for="rangeDisabled") Disabled Range
+            input.form-range#rangeDisabled(type="range" disabled)
 
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Input Sizing
+        .card-body
+          p.text-secondary
+            | Set heights using classes like 
+            code .form-control-lg
+            |  and 
+            code .form-control-sm
+            | .
+          .mb-3
+            label.form-label Large Input
+            input.form-control.form-control-lg(type="text" placeholder=".form-control-lg")
+          .mb-3
+            label.form-label Default Input
+            input.form-control(type="text" placeholder="Default input (.form-control)")
+          div
+            label.form-label Small Input
+            input.form-control.form-control-sm(type="text" placeholder=".form-control-sm")
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 HTML5 Date and Time
+        .card-body
+          p.text-secondary
+            | Native HTML5 picker controls provide browser-supported pickers for dates, times, and calendar weeks.
+          .mb-3
+            label.form-label Date
+            input.form-control(type="date")
+          .mb-3
+            label.form-label Time
+            input.form-control(type="time")
+          .mb-3
+            label.form-label Date and Time Local
+            input.form-control(type="datetime-local")
+          .mb-3
+            label.form-label Month
+            input.form-control(type="month")
+          div
+            label.form-label Week
+            input.form-control(type="week")
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Color Picker
+        .card-body
+          p.text-secondary
+            | Color inputs use the 
+            code .form-control-color
+            |  class with 
+            code type="color"
+            |  for native swatch pickers.
+          .d-flex.align-items-center.gap-3
+            input.form-control.form-control-color#colorInput(type="color" value="#ff0055" title="Choose your color")
+            label.form-label.mb-0(for="colorInput") Select accent color (Current: #ff0055)
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Readonly and Plaintext
+        .card-body
+          p.text-secondary
+            | Use the 
+            code readonly
+            |  attribute to prevent modification. Use 
+            code .form-control-plaintext
+            |  to remove standard form styling and keep normal margin and padding.
+          .mb-3
+            label.form-label Readonly Input
+            input.form-control(type="text" value="Readonly value here..." readonly)
+          div
+            label.form-label Plaintext Input
+            input.form-control-plaintext(type="text" readonly value="email@example.com")
+
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0 Disabled Form Controls
+        .card-body
+          p.text-secondary
+            | Add the 
+            code disabled
+            |  boolean attribute on an input to prevent user interactions and render lighter styling.
+          .mb-3
+            label.form-label Disabled Input
+            input.form-control(type="text" placeholder="Disabled input" disabled)
+          .mb-3
+            label.form-label Disabled Select
+            select.form-select(disabled)
+              option Disabled select menu
+          .form-check
+            input.form-check-input#disabledCheck(type="checkbox" value="" disabled)
+            label.form-check-label(for="disabledCheck") Disabled checkbox

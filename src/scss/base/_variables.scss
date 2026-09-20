@@ -22,7 +22,7 @@ $grays: (
   "700": $gray-700,
   "800": $gray-800,
   "900": $gray-900,
-) !default;
+  ) !default;
 
 $blue: #066fd1 !default;
 $azure: #4299e1 !default;
@@ -54,7 +54,7 @@ $colors: (
   "white": $white,
   "gray": $gray-600,
   "gray-dark": $gray-800,
-) !default;
+  ) !default;
 
 // Definición de variables de colores base
 $facebook: #1877f2 !default;
@@ -112,7 +112,7 @@ $social-colors: (
   "vimeo": $vimeo,
   "flickr": $flickr,
   "bitbucket": $bitbucket,
-) !default;
+  ) !default;
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
@@ -233,7 +233,7 @@ $blues: (
   "blue-700": $blue-700,
   "blue-800": $blue-800,
   "blue-900": $blue-900,
-) !default;
+  ) !default;
 
 $indigos: (
   "indigo-100": $indigo-100,
@@ -245,7 +245,7 @@ $indigos: (
   "indigo-700": $indigo-700,
   "indigo-800": $indigo-800,
   "indigo-900": $indigo-900,
-) !default;
+  ) !default;
 
 $purples: (
   "purple-100": $purple-100,
@@ -257,7 +257,7 @@ $purples: (
   "purple-700": $purple-700,
   "purple-800": $purple-800,
   "purple-900": $purple-900,
-) !default;
+  ) !default;
 
 $pinks: (
   "pink-100": $pink-100,
@@ -269,7 +269,7 @@ $pinks: (
   "pink-700": $pink-700,
   "pink-800": $pink-800,
   "pink-900": $pink-900,
-) !default;
+  ) !default;
 
 $reds: (
   "red-100": $red-100,
@@ -281,7 +281,7 @@ $reds: (
   "red-700": $red-700,
   "red-800": $red-800,
   "red-900": $red-900,
-) !default;
+  ) !default;
 
 $oranges: (
   "orange-100": $orange-100,
@@ -293,7 +293,7 @@ $oranges: (
   "orange-700": $orange-700,
   "orange-800": $orange-800,
   "orange-900": $orange-900,
-) !default;
+  ) !default;
 
 $yellows: (
   "yellow-100": $yellow-100,
@@ -305,7 +305,7 @@ $yellows: (
   "yellow-700": $yellow-700,
   "yellow-800": $yellow-800,
   "yellow-900": $yellow-900,
-) !default;
+  ) !default;
 
 $greens: (
   "green-100": $green-100,
@@ -317,7 +317,7 @@ $greens: (
   "green-700": $green-700,
   "green-800": $green-800,
   "green-900": $green-900,
-) !default;
+  ) !default;
 
 $teals: (
   "teal-100": $teal-100,
@@ -329,7 +329,7 @@ $teals: (
   "teal-700": $teal-700,
   "teal-800": $teal-800,
   "teal-900": $teal-900,
-) !default;
+  ) !default;
 
 $cyans: (
   "cyan-100": $cyan-100,
@@ -341,7 +341,7 @@ $cyans: (
   "cyan-700": $cyan-700,
   "cyan-800": $cyan-800,
   "cyan-900": $cyan-900,
-) !default;
+  ) !default;
 // fusv-enable
 
 $primary: $pink !default;
@@ -363,7 +363,7 @@ $theme-colors: (
   "danger": $danger,
   "light": $light,
   "dark": $dark,
-) !default;
+  ) !default;
 // scss-docs-end theme-colors-map
 
 $primary-100: tint-color($primary, 80%) !default;
@@ -386,7 +386,7 @@ $primarys: (
   "primary-700": $primary-700,
   "primary-800": $primary-800,
   "primary-900": $primary-900,
-) !default;
+  ) !default;
 
 $primary-text: $primary-600 !default;
 $secondary-text: $gray-600 !default;
@@ -421,8 +421,7 @@ $escaped-characters: (
   (">", "%3e"),
   ("#", "%23"),
   ("(", "%28"),
-  (")", "%29")
-) !default;
+  (")", "%29")) !default;
 
 // Options
 //
@@ -458,11 +457,9 @@ $prefix: $variable-prefix !default;
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
-$gradient: linear-gradient(
-  180deg,
-  rgba($white, 0.15),
-  rgba($white, 0)
-) !default;
+$gradient: linear-gradient(180deg,
+    rgba($white, 0.15),
+    rgba($white, 0)) !default;
 // scss-docs-end variable-gradient
 
 // Spacing
@@ -480,7 +477,7 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-) !default;
+  ) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -492,7 +489,7 @@ $position-values: (
   0: 0,
   50: 50%,
   100: 100%,
-) !default;
+  ) !default;
 // scss-docs-end position-map
 
 // Body
@@ -542,7 +539,7 @@ $border-widths: (
   3: 3px,
   4: 4px,
   5: 5px,
-) !default;
+  ) !default;
 $border-style: solid !default;
 $border-color: $gray-300 !default;
 $border-color-translucent: rgba($black, 0.175) !default;
@@ -587,7 +584,7 @@ $aspect-ratios: (
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
-) !default;
+  ) !default;
 // scss-docs-end aspect-ratios
 // stylelint-enable function-disallowed-list
 
@@ -601,8 +598,10 @@ $icon-size: 1.25rem !default;
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Roboto", sans-serif !default;
-$font-family-monospace: "Google Sans Code", monospace !default;
+$font-family-sans-serif: "Roboto",
+  sans-serif !default;
+$font-family-monospace: "Google Sans Code",
+  monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$prefix}font-monospace) !default;
@@ -644,12 +643,13 @@ $font-sizes: (
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
-) !default;
+  ) !default;
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer * 0.5 !default;
-$headings-font-family: "Inter", sans-serif !default;
+$headings-font-family: "Inter",
+  sans-serif !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -664,7 +664,7 @@ $display-font-sizes: (
   4: 3.5rem,
   5: 3rem,
   6: 2.5rem,
-) !default;
+  ) !default;
 
 $display-font-family: null !default;
 $display-font-style: null !default;
@@ -754,7 +754,8 @@ $badge-font-weight: $font-weight-semibold;
 $badge-color: $white;
 $badge-padding-y: 0.35em;
 $badge-padding-x: 0.65em;
-$badge-border-radius: var(--#{$prefix}border-radius);
+$badge-border-radius: var(--#{$prefix}border-radius
+);
 
 // Modals
 $modal-content-border-color: transparent;
@@ -817,8 +818,7 @@ $tab-hover-color: $primary !default;
 
 // Sidebar general
 $sidebar-width: 260px !default;
-$sidebar-transition:
-  margin-left 0.35s ease-in-out,
+$sidebar-transition: margin-left 0.35s ease-in-out,
   left 0.35s ease-in-out,
   margin-right 0.35s ease-in-out,
   right 0.35s ease-in-out !default;
@@ -871,14 +871,11 @@ $sidebar-link-icon-hover-color: $primary !default;
 $sidebar-link-icon-active-color: $primary !default;
 
 // Transitions
-$transition-appearance:
-  background 0.4s ease-in-out,
+$transition-appearance: background 0.4s ease-in-out,
   color 0.4s ease-in-out !default;
-$transition-appearance-slow:
-  background 0.6s ease-in-out,
+$transition-appearance-slow: background 0.6s ease-in-out,
   color 0.6s ease-in-out !default;
-$transition-appearance-fast:
-  background 0.1s ease-in-out,
+$transition-appearance-fast: background 0.1s ease-in-out,
   color 0.1s ease-in-out !default;
 
 // Main
