@@ -1,966 +1,314 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-    <meta name="author" content="Pirulug" />
-    <meta name="robots" content="index, follow" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="author" content="Pirulug">
+    <meta name="robots" content="index, follow">
     <!-- Theme Color-->
-    <meta name="theme-color" content="#ff0055" />
+    <meta name="theme-color" content="#ff0055">
     <!-- Primary Meta Tags-->
     <title>Feather Icons - Free Bootstrap 5 Admin Template | PiruAdmin</title>
-    <meta name="title" content="Feather Icons - Free Bootstrap 5 Admin Template | PiruAdmin" />
-    <meta
-      name="description"
-      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
-    />
-    <meta
-      name="keywords"
-      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
-    />
-    <link
-      rel="canonical"
-      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html"
-    />
+    <meta name="title" content="Feather Icons - Free Bootstrap 5 Admin Template | PiruAdmin">
+    <meta name="description" content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS.">
+    <meta name="keywords" content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss">
+    <link rel="canonical" href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html">
     <!-- Open Graph / Facebook-->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html"
-    />
-    <meta property="og:title" content="Feather Icons | PiruAdmin" />
-    <meta
-      property="og:description"
-      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
-    />
-    <meta
-      property="og:image"
-      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
-    />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html">
+    <meta property="og:title" content="Feather Icons | PiruAdmin">
+    <meta property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.">
+    <meta property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
     <!-- Twitter-->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html"
-    />
-    <meta property="twitter:title" content="Feather Icons | PiruAdmin" />
-    <meta
-      property="twitter:description"
-      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
-    />
-    <meta
-      property="twitter:image"
-      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png"
-    />
-    <meta property="twitter:creator" content="@pirulug" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/icons/feather.html">
+    <meta property="twitter:title" content="Feather Icons | PiruAdmin">
+    <meta property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.">
+    <meta property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png">
+    <meta property="twitter:creator" content="@pirulug">
     <!-- Favicon-->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/img/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../assets/img/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest">
     <!-- Icons-->
-    <link rel="stylesheet" href="../assets/plugins/bootstrapicons/bootstrapicons.css" />
+    <link rel="stylesheet" href="../assets/plugins/bootstrapicons/bootstrapicons.css">
     <!-- Css-->
-    <link rel="stylesheet" href="../assets/css/piruadmin-fonts.css" />
-    <link rel="stylesheet" href="../assets/css/piruadmin.css" />
+    <link rel="stylesheet" href="../assets/css/piruadmin-fonts.css">
+    <link rel="stylesheet" href="../assets/css/piruadmin.css">
     <!-- Theme-->
     <script>
       (function () {
-        const storedTheme = localStorage.getItem('theme');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = storedTheme || (prefersDarkScheme ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-bs-theme', theme);
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = storedTheme || (prefersDarkScheme ? "dark" : "light");
+        document.documentElement.setAttribute("data-bs-theme", theme);
       })();
+      
     </script>
   </head>
   <body>
-    <!-- Loader-->
-    <div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
-      <div class="loader-container">
-        <div class="loader-circle"></div>
-        <div class="loader-logo">
-          <img src="../assets/img/logo.png" alt="Logo" width="40" height="40" />
-        </div>
-      </div>
-    </div>
+<!-- Loader-->
+<div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
+  <div class="loader-container">
+    <div class="loader-circle"></div>
+    <div class="loader-logo"><img src="../assets/img/logo.png" alt="Logo" width="40" height="40"></div>
+  </div>
+</div>
     <div class="wrapper">
       <nav class="sidebar js-sidebar" id="sidebar">
-        <div class="sidebar-content js-simplebar">
-          <a class="sidebar-brand" href="../index.html">
-            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
-          </a>
-          <a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
+        <div class="sidebar-content js-simplebar"><a class="sidebar-brand" href="../index.html"><span class="sidebar-brand-text align-middle">PiruAdmin</span></a><a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
           <ul class="sidebar-nav">
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="../dashboard.html">
-                <i class="align-middle bi bi-sliders"></i>
-                <span class="align-middle">Dashboard</span>
-              </a>
-            </li>
-            <li class="sidebar-header">Pages</li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#pages"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-file-earmark-fill"></i>
-                <span class="align-middle">Pages</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="pages"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/blank.html">
-                    <span class="align-middle">Blank Page</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/timeline.html">
-                    <span class="align-middle">Timeline</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/search.html">
-                    <span class="align-middle">Search</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/colors.html">
-                    <span class="align-middle">Colors</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../pages/typography.html">
-                    <span class="align-middle">Typography</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link collapsed"
-                    data-bs-target="#pages-users"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    <span class="align-middle">Users</span>
-                  </a>
-                  <ul
-                    class="sidebar-dropdown list-unstyled collapse"
-                    id="pages-users"
-                    data-bs-parent="#pages"
-                  >
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/user-add.html">
-                        <span class="align-middle">Add User</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/user-list.html">
-                        <span class="align-middle">List User</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/user-view.html">
-                        <span class="align-middle">View User</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link collapsed"
-                    data-bs-target="#pages-projects"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    <span class="align-middle">Projects</span>
-                  </a>
-                  <ul
-                    class="sidebar-dropdown list-unstyled collapse"
-                    id="pages-projects"
-                    data-bs-parent="#pages"
-                  >
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/project-list.html">
-                        <span class="align-middle">Project List</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/project-details.html">
-                        <span class="align-middle">Project Details</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/project-create.html">
-                        <span class="align-middle">Create Project</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link collapsed"
-                    data-bs-target="#pages-mail"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    <span class="align-middle">Mail</span>
-                  </a>
-                  <ul
-                    class="sidebar-dropdown list-unstyled collapse"
-                    id="pages-mail"
-                    data-bs-parent="#pages"
-                  >
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/mail-inbox.html">
-                        <span class="align-middle">Inbox</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/mail-compose.html">
-                        <span class="align-middle">Compose</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/mail-read.html">
-                        <span class="align-middle">Read Email</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link collapsed"
-                    data-bs-target="#pages-file-manager"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    <span class="align-middle">File Manager</span>
-                  </a>
-                  <ul
-                    class="sidebar-dropdown list-unstyled collapse"
-                    id="pages-file-manager"
-                    data-bs-parent="#pages"
-                  >
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/file-manager.html">
-                        <span class="align-middle">All Files</span>
-                      </a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="../pages/file-media.html">
-                        <span class="align-middle">Media Files</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#auth"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-people"></i>
-                <span class="align-middle">Auth</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="auth"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-in.html">
-                    <span class="align-middle">Sign In</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/sign-up.html">
-                    <span class="align-middle">Sign Up</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/reset-password.html">
-                    <span class="align-middle">Reset Password</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/recover-password.html">
-                    <span class="align-middle">Recover Password</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/auth-lock.html">
-                    <span class="align-middle">Lock Screen</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/2-step-verification.html">
-                    <span class="align-middle">2-Step Verification</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/2-step-verification-code.html">
-                    <span class="align-middle">2-Step Code</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html">
-                    <span class="align-middle">2-Step Backup Codes</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#account"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-person"></i>
-                <span class="align-middle">Account</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="account"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/profile.html">
-                    <span class="align-middle">Profile</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../account/settings.html">
-                    <span class="align-middle">Settings</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#errors"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-bug"></i>
-                <span class="align-middle">Errors</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="errors"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/404.html">
-                    <span class="align-middle">404</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/500.html">
-                    <span class="align-middle">500</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../error/maintenance.html">
-                    <span class="align-middle">Maintenance</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-header">Tools &amp; Components</li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#ui-elements"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-box"></i>
-                <span class="align-middle">UI Elements</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="ui-elements"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/accordion.html">
-                    <span class="align-middle">Accordion</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/scrollspy.html">
-                    <span class="align-middle">Scrollspy</span>
-                    <span class="sidebar-badge badge rounded-pill bg-success">New</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/alerts.html">
-                    <span class="align-middle">Alerts</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/badges.html">
-                    <span class="align-middle">Badges</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/buttons.html">
-                    <span class="align-middle">Buttons</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/cards.html">
-                    <span class="align-middle">Cards</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/general.html">
-                    <span class="align-middle">General UI</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/images.html">
-                    <span class="align-middle">Images</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/tabs.html">
-                    <span class="align-middle">Tabs</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../ui/avatar.html">
-                    <span class="align-middle">Avatar</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#tables"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-grid"></i>
-                <span class="align-middle">Tables</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="tables"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../tables/bootstrap.html">
-                    <span class="align-middle">Table Bootstrap</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#forms"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-file"></i>
-                <span class="align-middle">Forms</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="forms"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/basic-inputs.html">
-                    <span class="align-middle">Basic Inputs</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/tagify.html">
-                    <span class="align-middle">Tagify</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../forms/flatpickr.html">
-                    <span class="align-middle">Flatpickr</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#editors"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-pencil-square"></i>
-                <span class="align-middle">Editors</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="editors"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../editors/simplemde.html">
-                    <span class="align-middle">SimpleMDE</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../editors/editor.html">
-                    <span class="align-middle">Wysi Editor</span>
-                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item active">
-              <a
-                class="sidebar-link"
-                data-bs-target="#icons"
-                data-bs-toggle="collapse"
-                aria-expanded="true"
-              >
-                <i class="align-middle bi bi-cup-hot"></i>
-                <span class="align-middle">Icons</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse show"
-                id="icons"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item active">
-                  <a class="sidebar-link" href="../icons/feather.html">
-                    <span class="align-middle">Feather</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/awesome.html">
-                    <span class="align-middle">Font Awesome</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/bootstrap.html">
-                    <span class="align-middle">Bootstrap Icons</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../icons/flag-icons.html">
-                    <span class="align-middle">Flag Icons</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#plugins"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-lightning"></i>
-                <span class="align-middle">Plugins</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="plugins"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/sweetalert.html">
-                    <span class="align-middle">SweetAlert 2</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/toastify.html">
-                    <span class="align-middle">Toastify JS</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/charts.html">
-                    <span class="align-middle">Charts</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/maps-google.html">
-                    <span class="align-middle">Maps</span>
-                  </a>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="../plugins/lite-youtube.html">
-                    <span class="align-middle">Lite YouTube</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
-                <i class="align-middle bi bi-circle-fill"></i>
-                <span class="align-middle">Level 1</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a
-                class="sidebar-link collapsed"
-                data-bs-target="#multilevel"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-              >
-                <i class="align-middle bi bi-circle-fill"></i>
-                <span class="align-middle">Level 1</span>
-              </a>
-              <ul
-                class="sidebar-dropdown list-unstyled collapse"
-                id="multilevel"
-                data-bs-parent="#sidebar"
-              >
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
-                </li>
-                <li class="sidebar-item">
-                  <a
-                    class="sidebar-link collapsed"
-                    data-bs-target="#multilevel-sub"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                  >
-                    <span class="align-middle">Level 2</span>
-                  </a>
-                  <ul
-                    class="sidebar-dropdown list-unstyled collapse"
-                    id="multilevel-sub"
-                    data-bs-parent="#multilevel"
-                  >
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
-                    </li>
-                    <li class="sidebar-item">
-                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="sidebar-item">
-                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
-                </li>
-              </ul>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="#">
-                <i class="align-middle bi bi-circle-fill"></i>
-                <span class="align-middle">Level 1</span>
-              </a>
-            </li>
+                  <li class="sidebar-item"><a class="sidebar-link" href="../dashboard.html"><i class="align-middle bi bi-sliders"></i><span class="align-middle">Dashboard</span></a></li>
+                  <li class="sidebar-header">Pages</li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-file-earmark-fill"></i><span class="align-middle">Pages</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="pages" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../pages/blank.html"><span class="align-middle">Blank Page</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../pages/timeline.html"><span class="align-middle">Timeline</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../pages/search.html"><span class="align-middle">Search</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../pages/colors.html"><span class="align-middle">Colors</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../pages/typography.html"><span class="align-middle">Typography</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages-users" data-bs-toggle="collapse" aria-expanded="false"><span class="align-middle">Users</span></a>
+                              <ul class="sidebar-dropdown list-unstyled collapse" id="pages-users" data-bs-parent="#pages">
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/user-add.html"><span class="align-middle">Add User</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/user-list.html"><span class="align-middle">List User</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/user-view.html"><span class="align-middle">View User</span></a></li>
+                              </ul>
+                            </li>
+                            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages-projects" data-bs-toggle="collapse" aria-expanded="false"><span class="align-middle">Projects</span></a>
+                              <ul class="sidebar-dropdown list-unstyled collapse" id="pages-projects" data-bs-parent="#pages">
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/project-list.html"><span class="align-middle">Project List</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/project-details.html"><span class="align-middle">Project Details</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/project-create.html"><span class="align-middle">Create Project</span></a></li>
+                              </ul>
+                            </li>
+                            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages-mail" data-bs-toggle="collapse" aria-expanded="false"><span class="align-middle">Mail</span></a>
+                              <ul class="sidebar-dropdown list-unstyled collapse" id="pages-mail" data-bs-parent="#pages">
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/mail-inbox.html"><span class="align-middle">Inbox</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/mail-compose.html"><span class="align-middle">Compose</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/mail-read.html"><span class="align-middle">Read Email</span></a></li>
+                              </ul>
+                            </li>
+                            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#pages-file-manager" data-bs-toggle="collapse" aria-expanded="false"><span class="align-middle">File Manager</span></a>
+                              <ul class="sidebar-dropdown list-unstyled collapse" id="pages-file-manager" data-bs-parent="#pages">
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/file-manager.html"><span class="align-middle">All Files</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="../pages/file-media.html"><span class="align-middle">Media Files</span></a></li>
+                              </ul>
+                            </li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-people"></i><span class="align-middle">Auth</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="auth" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-in.html"><span class="align-middle">Sign In</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/sign-up.html"><span class="align-middle">Sign Up</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/reset-password.html"><span class="align-middle">Reset Password</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/recover-password.html"><span class="align-middle">Recover Password</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/auth-lock.html"><span class="align-middle">Lock Screen</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/2-step-verification.html"><span class="align-middle">2-Step Verification</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/2-step-verification-code.html"><span class="align-middle">2-Step Code</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../auth/2-step-verification-backup-codes.html"><span class="align-middle">2-Step Backup Codes</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#account" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-person"></i><span class="align-middle">Account</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="account" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../account/profile.html"><span class="align-middle">Profile</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../account/settings.html"><span class="align-middle">Settings</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#errors" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-bug"></i><span class="align-middle">Errors</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="errors" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../error/404.html"><span class="align-middle">404</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../error/500.html"><span class="align-middle">500</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../error/maintenance.html"><span class="align-middle">Maintenance</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-header">Tools &amp; Components</li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#ui-elements" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-box"></i><span class="align-middle">UI Elements</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="ui-elements" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/accordion.html"><span class="align-middle">Accordion</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/scrollspy.html"><span class="align-middle">Scrollspy</span><span class="sidebar-badge badge rounded-pill bg-success">New</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/alerts.html"><span class="align-middle">Alerts</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/badges.html"><span class="align-middle">Badges</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/buttons.html"><span class="align-middle">Buttons</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/cards.html"><span class="align-middle">Cards</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/general.html"><span class="align-middle">General UI</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/images.html"><span class="align-middle">Images</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/tabs.html"><span class="align-middle">Tabs</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../ui/avatar.html"><span class="align-middle">Avatar</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#tables" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-grid"></i><span class="align-middle">Tables</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="tables" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../tables/bootstrap.html"><span class="align-middle">Table Bootstrap</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#forms" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-file"></i><span class="align-middle">Forms</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="forms" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../forms/basic-inputs.html"><span class="align-middle">Basic Inputs</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../forms/tagify.html"><span class="align-middle">Tagify</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../forms/flatpickr.html"><span class="align-middle">Flatpickr</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#editors" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-pencil-square"></i><span class="align-middle">Editors</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="editors" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../editors/simplemde.html"><span class="align-middle">SimpleMDE</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../editors/editor.html"><span class="align-middle">Wysi Editor</span><span class="sidebar-badge badge rounded-pill bg-primary">New</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item active"><a class="sidebar-link" data-bs-target="#icons" data-bs-toggle="collapse" aria-expanded="true"><i class="align-middle bi bi-cup-hot"></i><span class="align-middle">Icons</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse show" id="icons" data-bs-parent="#sidebar">
+                            <li class="sidebar-item active"><a class="sidebar-link" href="../icons/feather.html"><span class="align-middle">Feather</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../icons/awesome.html"><span class="align-middle">Font Awesome</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../icons/bootstrap.html"><span class="align-middle">Bootstrap Icons</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../icons/flag-icons.html"><span class="align-middle">Flag Icons</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#plugins" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-lightning"></i><span class="align-middle">Plugins</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="plugins" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="../plugins/sweetalert.html"><span class="align-middle">SweetAlert 2</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../plugins/toastify.html"><span class="align-middle">Toastify JS</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../plugins/charts.html"><span class="align-middle">Charts</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../plugins/maps-google.html"><span class="align-middle">Maps</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="../plugins/lite-youtube.html"><span class="align-middle">Lite YouTube</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
+                  <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="align-middle bi bi-circle-fill"></i><span class="align-middle">Level 1</span></a></li>
+                  <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#multilevel" data-bs-toggle="collapse" aria-expanded="false"><i class="align-middle bi bi-circle-fill"></i><span class="align-middle">Level 1</span></a>
+                    <ul class="sidebar-dropdown list-unstyled collapse" id="multilevel" data-bs-parent="#sidebar">
+                            <li class="sidebar-item"><a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link collapsed" data-bs-target="#multilevel-sub" data-bs-toggle="collapse" aria-expanded="false"><span class="align-middle">Level 2</span></a>
+                              <ul class="sidebar-dropdown list-unstyled collapse" id="multilevel-sub" data-bs-parent="#multilevel">
+                                      <li class="sidebar-item"><a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a></li>
+                                      <li class="sidebar-item"><a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a></li>
+                              </ul>
+                            </li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-item"><a class="sidebar-link" href="#"><i class="align-middle bi bi-circle-fill"></i><span class="align-middle">Level 1</span></a></li>
           </ul>
         </div>
       </nav>
       <div class="sidebar-backdrop"></div>
       <div class="main">
         <!-- NavBar-->
-        <nav class="navtop">
-          <a class="sidebar-toggle js-sidebar-toggle">
-            <i class="hamburger align-self-center"></i>
-          </a>
-          <form class="d-none d-sm-inline-block ms-3">
-            <div class="input-group input-group-navbar">
-              <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
-              <button class="btn" type="button"><i class="bi bi-search"></i></button>
-            </div>
-          </form>
-          <div class="navbar-collapse collapse">
-            <ul class="navbar-nav navbar-align">
-              <li class="nav-item">
-                <a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen">
-                  <i class="bi bi-fullscreen"></i>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-icon dropdown-toggle"
-                  id="bd-theme"
-                  type="button"
-                  aria-expanded="false"
-                  data-bs-toggle="dropdown"
-                  aria-label="Toggle theme (auto)"
-                >
-                  <span class="theme-icon-active" id="bd-theme-icon"></span>
-                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                  <li>
-                    <button
-                      class="dropdown-item d-flex align-items-center"
-                      type="button"
-                      data-bs-theme-value="light"
-                      aria-pressed="false"
-                    >
-                      <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
-                      Light
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      class="dropdown-item d-flex align-items-center"
-                      type="button"
-                      data-bs-theme-value="dark"
-                      aria-pressed="false"
-                    >
-                      <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
-                      Dark
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      class="dropdown-item d-flex align-items-center"
-                      type="button"
-                      data-bs-theme-value="auto"
-                      aria-pressed="true"
-                    >
-                      <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
-                      Auto
-                    </button>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
-                  id="alertsDropdown"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="bi bi-bell"></i>
-                  <span class="indicator">4</span>
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
-                  aria-labelledby="alertsDropdown"
-                >
-                  <div class="dropdown-menu-header">4 New Notifications</div>
-                  <div class="list-group">
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <i class="bi bi-exclamation-circle text-danger"></i>
-                        </div>
-                        <div class="col-10">
-                          <div>Update completed</div>
-                          <div class="text-muted small mt-1">
-                            Restart server 12 to complete the update.
-                          </div>
-                          <div class="text-muted small mt-1">30m ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
-                        <div class="col-10">
-                          <div>Lorem ipsum</div>
-                          <div class="text-muted small mt-1">
-                            Aliquam ex eros, imperdiet vulputate hendrerit et.
-                          </div>
-                          <div class="text-muted small mt-1">2h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2"><i class="bi bi-house text-primary"></i></div>
-                        <div class="col-10">
-                          <div>Login from 192.186.1.8</div>
-                          <div class="text-muted small mt-1">5h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
-                        <div class="col-10">
-                          <div>New connection</div>
-                          <div class="text-muted small mt-1">Christina accepted your request.</div>
-                          <div class="text-muted small mt-1">14h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="dropdown-menu-footer">
-                    <a class="text-muted" href="#">Show all notifications</a>
-                  </div>
+<nav class="navtop"><a class="sidebar-toggle js-sidebar-toggle"><i class="hamburger align-self-center"></i></a>
+  <form class="d-none d-sm-inline-block ms-3">
+    <div class="input-group input-group-navbar">
+      <input class="form-control" type="text" placeholder="Search..." aria-label="Search">
+      <button class="btn" type="button"><i class="bi bi-search"></i></button>
+    </div>
+  </form>
+  <div class="navbar-collapse collapse">
+    <ul class="navbar-nav navbar-align">
+      <li class="nav-item"><a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen"><i class="bi bi-fullscreen"></i></a></li>
+      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle dropdown-toggle-no-caret" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)"><span class="theme-icon-active" id="bd-theme-icon"></span><span class="visually-hidden" id="bd-theme-text">Toggle theme</span></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+          <li>
+            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" aria-pressed="false"><span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>Light<span class="pr-check ms-auto d-none"></span></button>
+          </li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" aria-pressed="false"><span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>Dark<span class="pr-check ms-auto d-none"></span></button>
+          </li>
+          <li>
+            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" aria-pressed="true"><span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>Auto<span class="pr-check ms-auto d-none"></span></button>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle dropdown-toggle-no-caret" id="alertsDropdown" href="#" data-bs-toggle="dropdown"><i class="bi bi-bell"></i><span class="indicator">4</span></a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+          <div class="dropdown-menu-header">4 New Notifications</div>
+          <div class="list-group"><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><i class="bi bi-exclamation-circle text-danger"></i></div>
+                <div class="col-10">
+                  <div>Update completed</div>
+                  <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                  <div class="text-muted small mt-1">30m ago</div>
                 </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
-                  id="messagesDropdown"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="bi bi-chat-left-text"></i>
-                </a>
-                <div
-                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
-                  aria-labelledby="messagesDropdown"
-                >
-                  <div class="dropdown-menu-header">
-                    <div class="position-relative">4 New Messages</div>
-                  </div>
-                  <div class="list-group">
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <img
-                            class="avatar img-fluid rounded-circle"
-                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
-                            alt="Vanessa Tucker"
-                          />
-                        </div>
-                        <div class="col-10 ps-2">
-                          <div>Vanessa Tucker</div>
-                          <div class="text-muted small mt-1">
-                            Nam pretium turpis et arcu. Duis arcu tortor.
-                          </div>
-                          <div class="text-muted small mt-1">15m ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <img
-                            class="avatar img-fluid rounded-circle"
-                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
-                            alt="William Harris"
-                          />
-                        </div>
-                        <div class="col-10 ps-2">
-                          <div>William Harris</div>
-                          <div class="text-muted small mt-1">
-                            Curabitur ligula sapien euismod vitae.
-                          </div>
-                          <div class="text-muted small mt-1">2h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <img
-                            class="avatar img-fluid rounded-circle"
-                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
-                            alt="Christina Mason"
-                          />
-                        </div>
-                        <div class="col-10 ps-2">
-                          <div>Christina Mason</div>
-                          <div class="text-muted small mt-1">
-                            Pellentesque auctor neque nec urna.
-                          </div>
-                          <div class="text-muted small mt-1">4h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="list-group-item" href="#">
-                      <div class="row g-0 align-items-center">
-                        <div class="col-2">
-                          <img
-                            class="avatar img-fluid rounded-circle"
-                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
-                            alt="Sharon Lessman"
-                          />
-                        </div>
-                        <div class="col-10 ps-2">
-                          <div>Sharon Lessman</div>
-                          <div class="text-muted small mt-1">
-                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
-                          </div>
-                          <div class="text-muted small mt-1">5h ago</div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="dropdown-menu-footer">
-                    <a class="text-muted" href="#">Show all messages</a>
-                  </div>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
+                <div class="col-10">
+                  <div>Lorem ipsum</div>
+                  <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                  <div class="text-muted small mt-1">2h ago</div>
                 </div>
-              </li>
-              <li class="nav-item nav-item-user dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                  <img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
-                  <span class="d-none d-md-inline-block">Pirulug</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end">
-                  <a class="dropdown-item" href="../account/profile.html">
-                    <i class="bi bi-person me-1"></i>
-                    Profile
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="bi bi-pie-chart me-1"></i>
-                    Analytics
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../account/settings.html">
-                    <i class="bi bi-gear me-1"></i>
-                    Settings &amp; Privacy
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    <i class="bi bi-question-circle me-1"></i>
-                    Help Center
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
-                    <i class="bi bi-box-arrow-right me-1"></i>
-                    Log out
-                  </a>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><i class="bi bi-house text-primary"></i></div>
+                <div class="col-10">
+                  <div>Login from 192.186.1.8</div>
+                  <div class="text-muted small mt-1">5h ago</div>
                 </div>
-              </li>
-            </ul>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
+                <div class="col-10">
+                  <div>New connection</div>
+                  <div class="text-muted small mt-1">Christina accepted your request.</div>
+                  <div class="text-muted small mt-1">14h ago</div>
+                </div>
+              </div></a></div>
+          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all notifications</a></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown"><a class="nav-icon dropdown-toggle dropdown-toggle-no-caret" id="messagesDropdown" href="#" data-bs-toggle="dropdown"><i class="bi bi-chat-left-text"></i></a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+          <div class="dropdown-menu-header">
+            <div class="position-relative">4 New Messages</div>
           </div>
-        </nav>
+          <div class="list-group"><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Vanessa Tucker"></div>
+                <div class="col-10 ps-2">
+                  <div>Vanessa Tucker</div>
+                  <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+                  <div class="text-muted small mt-1">15m ago</div>
+                </div>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="William Harris"></div>
+                <div class="col-10 ps-2">
+                  <div>William Harris</div>
+                  <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
+                  <div class="text-muted small mt-1">2h ago</div>
+                </div>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Christina Mason"></div>
+                <div class="col-10 ps-2">
+                  <div>Christina Mason</div>
+                  <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
+                  <div class="text-muted small mt-1">4h ago</div>
+                </div>
+              </div></a><a class="list-group-item" href="#">
+              <div class="row g-0 align-items-center">
+                <div class="col-2"><img class="avatar img-fluid rounded-circle" src="https://dummyimage.com/50x50/d63384/fff.jpg" alt="Sharon Lessman"></div>
+                <div class="col-10 ps-2">
+                  <div>Sharon Lessman</div>
+                  <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
+                  <div class="text-muted small mt-1">5h ago</div>
+                </div>
+              </div></a></div>
+          <div class="dropdown-menu-footer"><a class="text-muted" href="#">Show all messages</a></div>
+        </div>
+      </li>
+      <li class="nav-item nav-item-user dropdown"><a class="nav-link dropdown-toggle" id="user-profile" href="#" data-bs-toggle="dropdown"><img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt=""><span class="d-none d-md-inline-block">Pirulug</span></a>
+        <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="../account/profile.html"><i class="bi bi-person me-1"></i> Profile</a><a class="dropdown-item" href="#"><i class="bi bi-pie-chart me-1"></i> Analytics</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="../account/settings.html"><i class="bi bi-gear me-1"></i> Settings &amp; Privacy</a><a class="dropdown-item" href="#"><i class="bi bi-question-circle me-1"></i> Help Center</a>
+          <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-1"></i>Log out</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
         <!-- Content-->
         <main class="content">
           <div class="mb-3">
-            <div
-              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center"
-            >
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
               <h1 class="h3 mb-2 mb-sm-0">Feather Icons</h1>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
@@ -974,26 +322,13 @@
           <div class="card mb-4">
             <div class="card-header">
               <h3 class="card-title">Feather Icons</h3>
-              <h6 class="card-subtitle text-muted">
-                Simply beautiful open source icons&nbsp;
-                <a href="https://feathericons.com/" target="_blank" rel="noopener noreferrer">
-                  Feather Icons
-                </a>
-              </h6>
+              <h6 class="card-subtitle text-muted">Simply beautiful open source icons&nbsp;<a href="https://feathericons.com/" target="_blank" rel="noopener noreferrer">Feather Icons</a></h6>
             </div>
             <div class="card-body">
               <div class="row align-items-center">
                 <div class="col-md-6">
-                  <div class="input-group">
-                    <span class="input-group-text bg-transparent border-end-0">
-                      <i class="bi bi-search text-muted"></i>
-                    </span>
-                    <input
-                      class="form-control border-start-0"
-                      id="icon-search"
-                      type="text"
-                      placeholder="Buscar iconos (ej. user, home, arrow)..."
-                    />
+                  <div class="input-group"><span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                    <input class="form-control border-start-0" id="icon-search" type="text" placeholder="Buscar iconos (ej. user, home, arrow)...">
                   </div>
                 </div>
               </div>
@@ -1003,33 +338,19 @@
             <!-- Icons will be rendered dynamically here-->
           </div>
           <div class="text-center py-4" id="load-more-sentinel">
-            <div class="spinner-border spinner-border-sm text-primary" role="status">
-              <span class="visually-hidden">Cargando...</span>
-            </div>
+            <div class="spinner-border spinner-border-sm text-primary" role="status"><span class="visually-hidden">Cargando...</span></div>
           </div>
-          <div class="text-center py-5" id="icons-empty-state" style="display: none">
-            <i class="bi bi-search mb-3" style="font-size: 3rem; color: var(--pr-secondary-bg)"></i>
+          <div class="text-center py-5" id="icons-empty-state" style="display: none;"><i class="bi bi-search mb-3" style="font-size: 3rem; color: var(--pr-secondary-bg);"></i>
             <h4>No se encontraron iconos</h4>
             <p class="text-muted">Intenta con otra palabra clave.</p>
           </div>
           <!-- Icon Modal-->
-          <div
-            class="modal fade"
-            id="iconModal"
-            tabindex="-1"
-            aria-labelledby="iconModalLabel"
-            aria-hidden="true"
-          >
+          <div class="modal fade" id="iconModal" tabindex="-1" aria-labelledby="iconModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="iconModalLabel">Detalles del Icono</h5>
-                  <button
-                    class="btn-close"
-                    type="button"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                   <div class="text-center mb-4">
@@ -1039,37 +360,15 @@
                   <div class="mb-3">
                     <label class="form-label">Código HTML</label>
                     <div class="input-group">
-                      <input
-                        class="form-control"
-                        id="htmlCodeInput"
-                        type="text"
-                        readonly="readonly"
-                      />
-                      <button
-                        class="btn btn-outline-secondary copy-modal-btn"
-                        type="button"
-                        data-target="htmlCodeInput"
-                      >
-                        Copiar
-                      </button>
+                      <input class="form-control" id="htmlCodeInput" type="text" readonly="readonly">
+                      <button class="btn btn-outline-secondary copy-modal-btn" type="button" data-target="htmlCodeInput">Copiar</button>
                     </div>
                   </div>
                   <div class="mb-0">
                     <label class="form-label">Código PUG</label>
                     <div class="input-group">
-                      <input
-                        class="form-control"
-                        id="pugCodeInput"
-                        type="text"
-                        readonly="readonly"
-                      />
-                      <button
-                        class="btn btn-outline-secondary copy-modal-btn"
-                        type="button"
-                        data-target="pugCodeInput"
-                      >
-                        Copiar
-                      </button>
+                      <input class="form-control" id="pugCodeInput" type="text" readonly="readonly">
+                      <button class="btn btn-outline-secondary copy-modal-btn" type="button" data-target="pugCodeInput">Copiar</button>
                     </div>
                   </div>
                 </div>
@@ -1082,369 +381,68 @@
           <div class="container-fluid">
             <div class="row text-muted">
               <div class="col-6 text-start">
-                <p class="mb-0">
-                  <a class="text-muted" href="../index.html">
-                    &copy;&nbsp;
-                    <strong>PiruAdmin&nbsp;</strong>
-                  </a>
-                  All Right Reserved.
-                </p>
+                <p class="mb-0"><a class="text-muted" href="../index.html"> &copy;&nbsp;<strong>PiruAdmin&nbsp;</strong></a>All Right Reserved.</p>
               </div>
               <div class="col-6 text-end">
                 <p class="mb-0">
-                  Designed By&nbsp;
-                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
-                </p>
+                   Designed By&nbsp;<a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a></p>
               </div>
             </div>
           </div>
         </footer>
       </div>
       <!-- Back to top-->
-      <!-- Back to top-->
-      <a class="back-to-top" href="#">
-        <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
-          <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
-          <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
-        </svg>
-        <i class="bi bi-arrow-up-short"></i>
-      </a>
+<!-- Back to top--><a class="back-to-top" href="#">
+  <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
+    <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
+    <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
+  </svg><i class="bi bi-arrow-up-short"></i></a>
     </div>
     <!-- Dark & Ligth-->
     <!-- Js Bootstrap-->
     <script src="../assets/js/piruadmin.js"></script>
     <script src="../assets/plugins/feathericons/feathericons.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const rawData = [
-          { name: 'activity', label: 'activity' },
-          { name: 'airplay', label: 'airplay' },
-          { name: 'alert-circle', label: 'alert-circle' },
-          { name: 'alert-octagon', label: 'alert-octagon' },
-          { name: 'alert-triangle', label: 'alert-triangle' },
-          { name: 'align-center', label: 'align-center' },
-          { name: 'align-justify', label: 'align-justify' },
-          { name: 'align-left', label: 'align-left' },
-          { name: 'align-right', label: 'align-right' },
-          { name: 'anchor', label: 'anchor' },
-          { name: 'aperture', label: 'aperture' },
-          { name: 'archive', label: 'archive' },
-          { name: 'arrow-down-circle', label: 'arrow-down-circle' },
-          { name: 'arrow-down-left', label: 'arrow-down-left' },
-          { name: 'arrow-down-right', label: 'arrow-down-right' },
-          { name: 'arrow-down', label: 'arrow-down' },
-          { name: 'arrow-left-circle', label: 'arrow-left-circle' },
-          { name: 'arrow-left', label: 'arrow-left' },
-          { name: 'arrow-right-circle', label: 'arrow-right-circle' },
-          { name: 'arrow-right', label: 'arrow-right' },
-          { name: 'arrow-up-circle', label: 'arrow-up-circle' },
-          { name: 'arrow-up-left', label: 'arrow-up-left' },
-          { name: 'arrow-up-right', label: 'arrow-up-right' },
-          { name: 'arrow-up', label: 'arrow-up' },
-          { name: 'at-sign', label: 'at-sign' },
-          { name: 'award', label: 'award' },
-          { name: 'bar-chart-2', label: 'bar-chart-2' },
-          { name: 'bar-chart', label: 'bar-chart' },
-          { name: 'battery-charging', label: 'battery-charging' },
-          { name: 'battery', label: 'battery' },
-          { name: 'bell-off', label: 'bell-off' },
-          { name: 'bell', label: 'bell' },
-          { name: 'bluetooth', label: 'bluetooth' },
-          { name: 'bold', label: 'bold' },
-          { name: 'book-open', label: 'book-open' },
-          { name: 'book', label: 'book' },
-          { name: 'bookmark', label: 'bookmark' },
-          { name: 'box', label: 'box' },
-          { name: 'briefcase', label: 'briefcase' },
-          { name: 'calendar', label: 'calendar' },
-          { name: 'camera-off', label: 'camera-off' },
-          { name: 'camera', label: 'camera' },
-          { name: 'cast', label: 'cast' },
-          { name: 'check-circle', label: 'check-circle' },
-          { name: 'check-square', label: 'check-square' },
-          { name: 'check', label: 'check' },
-          { name: 'chevron-down', label: 'chevron-down' },
-          { name: 'chevron-left', label: 'chevron-left' },
-          { name: 'chevron-right', label: 'chevron-right' },
-          { name: 'chevron-up', label: 'chevron-up' },
-          { name: 'chevrons-down', label: 'chevrons-down' },
-          { name: 'chevrons-left', label: 'chevrons-left' },
-          { name: 'chevrons-right', label: 'chevrons-right' },
-          { name: 'chevrons-up', label: 'chevrons-up' },
-          { name: 'chrome', label: 'chrome' },
-          { name: 'circle', label: 'circle' },
-          { name: 'clipboard', label: 'clipboard' },
-          { name: 'clock', label: 'clock' },
-          { name: 'cloud-drizzle', label: 'cloud-drizzle' },
-          { name: 'cloud-lightning', label: 'cloud-lightning' },
-          { name: 'cloud-off', label: 'cloud-off' },
-          { name: 'cloud-rain', label: 'cloud-rain' },
-          { name: 'cloud-snow', label: 'cloud-snow' },
-          { name: 'cloud', label: 'cloud' },
-          { name: 'code', label: 'code' },
-          { name: 'codepen', label: 'codepen' },
-          { name: 'codesandbox', label: 'codesandbox' },
-          { name: 'coffee', label: 'coffee' },
-          { name: 'columns', label: 'columns' },
-          { name: 'command', label: 'command' },
-          { name: 'compass', label: 'compass' },
-          { name: 'copy', label: 'copy' },
-          { name: 'corner-down-left', label: 'corner-down-left' },
-          { name: 'corner-down-right', label: 'corner-down-right' },
-          { name: 'corner-left-down', label: 'corner-left-down' },
-          { name: 'corner-left-up', label: 'corner-left-up' },
-          { name: 'corner-right-down', label: 'corner-right-down' },
-          { name: 'corner-right-up', label: 'corner-right-up' },
-          { name: 'corner-up-left', label: 'corner-up-left' },
-          { name: 'corner-up-right', label: 'corner-up-right' },
-          { name: 'cpu', label: 'cpu' },
-          { name: 'credit-card', label: 'credit-card' },
-          { name: 'crop', label: 'crop' },
-          { name: 'crosshair', label: 'crosshair' },
-          { name: 'database', label: 'database' },
-          { name: 'delete', label: 'delete' },
-          { name: 'disc', label: 'disc' },
-          { name: 'divide-circle', label: 'divide-circle' },
-          { name: 'divide-square', label: 'divide-square' },
-          { name: 'divide', label: 'divide' },
-          { name: 'dollar-sign', label: 'dollar-sign' },
-          { name: 'download-cloud', label: 'download-cloud' },
-          { name: 'download', label: 'download' },
-          { name: 'dribbble', label: 'dribbble' },
-          { name: 'droplet', label: 'droplet' },
-          { name: 'edit-2', label: 'edit-2' },
-          { name: 'edit-3', label: 'edit-3' },
-          { name: 'edit', label: 'edit' },
-          { name: 'external-link', label: 'external-link' },
-          { name: 'eye-off', label: 'eye-off' },
-          { name: 'eye', label: 'eye' },
-          { name: 'facebook', label: 'facebook' },
-          { name: 'fast-forward', label: 'fast-forward' },
-          { name: 'feather', label: 'feather' },
-          { name: 'figma', label: 'figma' },
-          { name: 'file-minus', label: 'file-minus' },
-          { name: 'file-plus', label: 'file-plus' },
-          { name: 'file-text', label: 'file-text' },
-          { name: 'file', label: 'file' },
-          { name: 'film', label: 'film' },
-          { name: 'filter', label: 'filter' },
-          { name: 'flag', label: 'flag' },
-          { name: 'folder-minus', label: 'folder-minus' },
-          { name: 'folder-plus', label: 'folder-plus' },
-          { name: 'folder', label: 'folder' },
-          { name: 'framer', label: 'framer' },
-          { name: 'frown', label: 'frown' },
-          { name: 'gift', label: 'gift' },
-          { name: 'git-branch', label: 'git-branch' },
-          { name: 'git-commit', label: 'git-commit' },
-          { name: 'git-merge', label: 'git-merge' },
-          { name: 'git-pull-request', label: 'git-pull-request' },
-          { name: 'github', label: 'github' },
-          { name: 'gitlab', label: 'gitlab' },
-          { name: 'globe', label: 'globe' },
-          { name: 'grid', label: 'grid' },
-          { name: 'hard-drive', label: 'hard-drive' },
-          { name: 'hash', label: 'hash' },
-          { name: 'headphones', label: 'headphones' },
-          { name: 'heart', label: 'heart' },
-          { name: 'help-circle', label: 'help-circle' },
-          { name: 'hexagon', label: 'hexagon' },
-          { name: 'home', label: 'home' },
-          { name: 'image', label: 'image' },
-          { name: 'inbox', label: 'inbox' },
-          { name: 'info', label: 'info' },
-          { name: 'instagram', label: 'instagram' },
-          { name: 'italic', label: 'italic' },
-          { name: 'key', label: 'key' },
-          { name: 'layers', label: 'layers' },
-          { name: 'layout', label: 'layout' },
-          { name: 'life-buoy', label: 'life-buoy' },
-          { name: 'link-2', label: 'link-2' },
-          { name: 'link', label: 'link' },
-          { name: 'linkedin', label: 'linkedin' },
-          { name: 'list', label: 'list' },
-          { name: 'loader', label: 'loader' },
-          { name: 'lock', label: 'lock' },
-          { name: 'log-in', label: 'log-in' },
-          { name: 'log-out', label: 'log-out' },
-          { name: 'mail', label: 'mail' },
-          { name: 'map-pin', label: 'map-pin' },
-          { name: 'map', label: 'map' },
-          { name: 'maximize-2', label: 'maximize-2' },
-          { name: 'maximize', label: 'maximize' },
-          { name: 'meh', label: 'meh' },
-          { name: 'menu', label: 'menu' },
-          { name: 'message-circle', label: 'message-circle' },
-          { name: 'message-square', label: 'message-square' },
-          { name: 'mic-off', label: 'mic-off' },
-          { name: 'mic', label: 'mic' },
-          { name: 'minimize-2', label: 'minimize-2' },
-          { name: 'minimize', label: 'minimize' },
-          { name: 'minus-circle', label: 'minus-circle' },
-          { name: 'minus-square', label: 'minus-square' },
-          { name: 'minus', label: 'minus' },
-          { name: 'monitor', label: 'monitor' },
-          { name: 'moon', label: 'moon' },
-          { name: 'more-horizontal', label: 'more-horizontal' },
-          { name: 'more-vertical', label: 'more-vertical' },
-          { name: 'mouse-pointer', label: 'mouse-pointer' },
-          { name: 'move', label: 'move' },
-          { name: 'music', label: 'music' },
-          { name: 'navigation-2', label: 'navigation-2' },
-          { name: 'navigation', label: 'navigation' },
-          { name: 'octagon', label: 'octagon' },
-          { name: 'package', label: 'package' },
-          { name: 'paperclip', label: 'paperclip' },
-          { name: 'pause-circle', label: 'pause-circle' },
-          { name: 'pause', label: 'pause' },
-          { name: 'pen-tool', label: 'pen-tool' },
-          { name: 'percent', label: 'percent' },
-          { name: 'phone-call', label: 'phone-call' },
-          { name: 'phone-forwarded', label: 'phone-forwarded' },
-          { name: 'phone-incoming', label: 'phone-incoming' },
-          { name: 'phone-missed', label: 'phone-missed' },
-          { name: 'phone-off', label: 'phone-off' },
-          { name: 'phone-outgoing', label: 'phone-outgoing' },
-          { name: 'phone', label: 'phone' },
-          { name: 'pie-chart', label: 'pie-chart' },
-          { name: 'play-circle', label: 'play-circle' },
-          { name: 'play', label: 'play' },
-          { name: 'plus-circle', label: 'plus-circle' },
-          { name: 'plus-square', label: 'plus-square' },
-          { name: 'plus', label: 'plus' },
-          { name: 'pocket', label: 'pocket' },
-          { name: 'power', label: 'power' },
-          { name: 'printer', label: 'printer' },
-          { name: 'radio', label: 'radio' },
-          { name: 'refresh-ccw', label: 'refresh-ccw' },
-          { name: 'refresh-cw', label: 'refresh-cw' },
-          { name: 'repeat', label: 'repeat' },
-          { name: 'rewind', label: 'rewind' },
-          { name: 'rotate-ccw', label: 'rotate-ccw' },
-          { name: 'rotate-cw', label: 'rotate-cw' },
-          { name: 'rss', label: 'rss' },
-          { name: 'save', label: 'save' },
-          { name: 'scissors', label: 'scissors' },
-          { name: 'search', label: 'search' },
-          { name: 'send', label: 'send' },
-          { name: 'server', label: 'server' },
-          { name: 'settings', label: 'settings' },
-          { name: 'share-2', label: 'share-2' },
-          { name: 'share', label: 'share' },
-          { name: 'shield-off', label: 'shield-off' },
-          { name: 'shield', label: 'shield' },
-          { name: 'shopping-bag', label: 'shopping-bag' },
-          { name: 'shopping-cart', label: 'shopping-cart' },
-          { name: 'shuffle', label: 'shuffle' },
-          { name: 'sidebar', label: 'sidebar' },
-          { name: 'skip-back', label: 'skip-back' },
-          { name: 'skip-forward', label: 'skip-forward' },
-          { name: 'slack', label: 'slack' },
-          { name: 'slash', label: 'slash' },
-          { name: 'sliders', label: 'sliders' },
-          { name: 'smartphone', label: 'smartphone' },
-          { name: 'smile', label: 'smile' },
-          { name: 'speaker', label: 'speaker' },
-          { name: 'square', label: 'square' },
-          { name: 'star', label: 'star' },
-          { name: 'stop-circle', label: 'stop-circle' },
-          { name: 'sun', label: 'sun' },
-          { name: 'sunrise', label: 'sunrise' },
-          { name: 'sunset', label: 'sunset' },
-          { name: 'table', label: 'table' },
-          { name: 'tablet', label: 'tablet' },
-          { name: 'tag', label: 'tag' },
-          { name: 'target', label: 'target' },
-          { name: 'terminal', label: 'terminal' },
-          { name: 'thermometer', label: 'thermometer' },
-          { name: 'thumbs-down', label: 'thumbs-down' },
-          { name: 'thumbs-up', label: 'thumbs-up' },
-          { name: 'toggle-left', label: 'toggle-left' },
-          { name: 'toggle-right', label: 'toggle-right' },
-          { name: 'tool', label: 'tool' },
-          { name: 'trash-2', label: 'trash-2' },
-          { name: 'trash', label: 'trash' },
-          { name: 'trello', label: 'trello' },
-          { name: 'trending-down', label: 'trending-down' },
-          { name: 'trending-up', label: 'trending-up' },
-          { name: 'triangle', label: 'triangle' },
-          { name: 'truck', label: 'truck' },
-          { name: 'tv', label: 'tv' },
-          { name: 'twitch', label: 'twitch' },
-          { name: 'twitter', label: 'twitter' },
-          { name: 'type', label: 'type' },
-          { name: 'umbrella', label: 'umbrella' },
-          { name: 'underline', label: 'underline' },
-          { name: 'unlock', label: 'unlock' },
-          { name: 'upload-cloud', label: 'upload-cloud' },
-          { name: 'upload', label: 'upload' },
-          { name: 'user-check', label: 'user-check' },
-          { name: 'user-minus', label: 'user-minus' },
-          { name: 'user-plus', label: 'user-plus' },
-          { name: 'user-x', label: 'user-x' },
-          { name: 'user', label: 'user' },
-          { name: 'users', label: 'users' },
-          { name: 'video-off', label: 'video-off' },
-          { name: 'video', label: 'video' },
-          { name: 'voicemail', label: 'voicemail' },
-          { name: 'volume-1', label: 'volume-1' },
-          { name: 'volume-2', label: 'volume-2' },
-          { name: 'volume-x', label: 'volume-x' },
-          { name: 'volume', label: 'volume' },
-          { name: 'watch', label: 'watch' },
-          { name: 'wifi-off', label: 'wifi-off' },
-          { name: 'wifi', label: 'wifi' },
-          { name: 'wind', label: 'wind' },
-          { name: 'x-circle', label: 'x-circle' },
-          { name: 'x-octagon', label: 'x-octagon' },
-          { name: 'x-square', label: 'x-square' },
-          { name: 'x', label: 'x' },
-          { name: 'youtube', label: 'youtube' },
-          { name: 'zap-off', label: 'zap-off' },
-          { name: 'zap', label: 'zap' },
-          { name: 'zoom-in', label: 'zoom-in' },
-          { name: 'zoom-out', label: 'zoom-out' },
-        ];
-        const searchInput = document.getElementById('icon-search');
-        const iconsContainer = document.getElementById('icons-container');
-        const emptyState = document.getElementById('icons-empty-state');
-        const loadMoreSentinel = document.getElementById('load-more-sentinel');
-
-        // Modal elements
-        const iconModalElement = document.getElementById('iconModal');
-        const modal = new bootstrap.Modal(iconModalElement);
-        const modalIconPreview = document.getElementById('modalIconPreview');
-        const modalIconName = document.getElementById('modalIconName');
-        const htmlCodeInput = document.getElementById('htmlCodeInput');
-        const pugCodeInput = document.getElementById('pugCodeInput');
-
-        let searchQuery = '';
-        let filteredData = [];
-        let currentIndex = 0;
-        const chunkSize = 100;
-
-        function filterData() {
-          filteredData = rawData.filter((item) => {
-            return (
-              (item.label && item.label.toLowerCase().includes(searchQuery)) ||
-              item.name.toLowerCase().includes(searchQuery)
-            );
-          });
-
-          currentIndex = 0;
-          iconsContainer.innerHTML = '';
-          renderNextChunk();
-
-          if (emptyState) {
-            emptyState.style.display = filteredData.length === 0 ? 'block' : 'none';
+      document.addEventListener("DOMContentLoaded", () => {
+          const rawData = [{"name":"activity","label":"activity"},{"name":"airplay","label":"airplay"},{"name":"alert-circle","label":"alert-circle"},{"name":"alert-octagon","label":"alert-octagon"},{"name":"alert-triangle","label":"alert-triangle"},{"name":"align-center","label":"align-center"},{"name":"align-justify","label":"align-justify"},{"name":"align-left","label":"align-left"},{"name":"align-right","label":"align-right"},{"name":"anchor","label":"anchor"},{"name":"aperture","label":"aperture"},{"name":"archive","label":"archive"},{"name":"arrow-down-circle","label":"arrow-down-circle"},{"name":"arrow-down-left","label":"arrow-down-left"},{"name":"arrow-down-right","label":"arrow-down-right"},{"name":"arrow-down","label":"arrow-down"},{"name":"arrow-left-circle","label":"arrow-left-circle"},{"name":"arrow-left","label":"arrow-left"},{"name":"arrow-right-circle","label":"arrow-right-circle"},{"name":"arrow-right","label":"arrow-right"},{"name":"arrow-up-circle","label":"arrow-up-circle"},{"name":"arrow-up-left","label":"arrow-up-left"},{"name":"arrow-up-right","label":"arrow-up-right"},{"name":"arrow-up","label":"arrow-up"},{"name":"at-sign","label":"at-sign"},{"name":"award","label":"award"},{"name":"bar-chart-2","label":"bar-chart-2"},{"name":"bar-chart","label":"bar-chart"},{"name":"battery-charging","label":"battery-charging"},{"name":"battery","label":"battery"},{"name":"bell-off","label":"bell-off"},{"name":"bell","label":"bell"},{"name":"bluetooth","label":"bluetooth"},{"name":"bold","label":"bold"},{"name":"book-open","label":"book-open"},{"name":"book","label":"book"},{"name":"bookmark","label":"bookmark"},{"name":"box","label":"box"},{"name":"briefcase","label":"briefcase"},{"name":"calendar","label":"calendar"},{"name":"camera-off","label":"camera-off"},{"name":"camera","label":"camera"},{"name":"cast","label":"cast"},{"name":"check-circle","label":"check-circle"},{"name":"check-square","label":"check-square"},{"name":"check","label":"check"},{"name":"chevron-down","label":"chevron-down"},{"name":"chevron-left","label":"chevron-left"},{"name":"chevron-right","label":"chevron-right"},{"name":"chevron-up","label":"chevron-up"},{"name":"chevrons-down","label":"chevrons-down"},{"name":"chevrons-left","label":"chevrons-left"},{"name":"chevrons-right","label":"chevrons-right"},{"name":"chevrons-up","label":"chevrons-up"},{"name":"chrome","label":"chrome"},{"name":"circle","label":"circle"},{"name":"clipboard","label":"clipboard"},{"name":"clock","label":"clock"},{"name":"cloud-drizzle","label":"cloud-drizzle"},{"name":"cloud-lightning","label":"cloud-lightning"},{"name":"cloud-off","label":"cloud-off"},{"name":"cloud-rain","label":"cloud-rain"},{"name":"cloud-snow","label":"cloud-snow"},{"name":"cloud","label":"cloud"},{"name":"code","label":"code"},{"name":"codepen","label":"codepen"},{"name":"codesandbox","label":"codesandbox"},{"name":"coffee","label":"coffee"},{"name":"columns","label":"columns"},{"name":"command","label":"command"},{"name":"compass","label":"compass"},{"name":"copy","label":"copy"},{"name":"corner-down-left","label":"corner-down-left"},{"name":"corner-down-right","label":"corner-down-right"},{"name":"corner-left-down","label":"corner-left-down"},{"name":"corner-left-up","label":"corner-left-up"},{"name":"corner-right-down","label":"corner-right-down"},{"name":"corner-right-up","label":"corner-right-up"},{"name":"corner-up-left","label":"corner-up-left"},{"name":"corner-up-right","label":"corner-up-right"},{"name":"cpu","label":"cpu"},{"name":"credit-card","label":"credit-card"},{"name":"crop","label":"crop"},{"name":"crosshair","label":"crosshair"},{"name":"database","label":"database"},{"name":"delete","label":"delete"},{"name":"disc","label":"disc"},{"name":"divide-circle","label":"divide-circle"},{"name":"divide-square","label":"divide-square"},{"name":"divide","label":"divide"},{"name":"dollar-sign","label":"dollar-sign"},{"name":"download-cloud","label":"download-cloud"},{"name":"download","label":"download"},{"name":"dribbble","label":"dribbble"},{"name":"droplet","label":"droplet"},{"name":"edit-2","label":"edit-2"},{"name":"edit-3","label":"edit-3"},{"name":"edit","label":"edit"},{"name":"external-link","label":"external-link"},{"name":"eye-off","label":"eye-off"},{"name":"eye","label":"eye"},{"name":"facebook","label":"facebook"},{"name":"fast-forward","label":"fast-forward"},{"name":"feather","label":"feather"},{"name":"figma","label":"figma"},{"name":"file-minus","label":"file-minus"},{"name":"file-plus","label":"file-plus"},{"name":"file-text","label":"file-text"},{"name":"file","label":"file"},{"name":"film","label":"film"},{"name":"filter","label":"filter"},{"name":"flag","label":"flag"},{"name":"folder-minus","label":"folder-minus"},{"name":"folder-plus","label":"folder-plus"},{"name":"folder","label":"folder"},{"name":"framer","label":"framer"},{"name":"frown","label":"frown"},{"name":"gift","label":"gift"},{"name":"git-branch","label":"git-branch"},{"name":"git-commit","label":"git-commit"},{"name":"git-merge","label":"git-merge"},{"name":"git-pull-request","label":"git-pull-request"},{"name":"github","label":"github"},{"name":"gitlab","label":"gitlab"},{"name":"globe","label":"globe"},{"name":"grid","label":"grid"},{"name":"hard-drive","label":"hard-drive"},{"name":"hash","label":"hash"},{"name":"headphones","label":"headphones"},{"name":"heart","label":"heart"},{"name":"help-circle","label":"help-circle"},{"name":"hexagon","label":"hexagon"},{"name":"home","label":"home"},{"name":"image","label":"image"},{"name":"inbox","label":"inbox"},{"name":"info","label":"info"},{"name":"instagram","label":"instagram"},{"name":"italic","label":"italic"},{"name":"key","label":"key"},{"name":"layers","label":"layers"},{"name":"layout","label":"layout"},{"name":"life-buoy","label":"life-buoy"},{"name":"link-2","label":"link-2"},{"name":"link","label":"link"},{"name":"linkedin","label":"linkedin"},{"name":"list","label":"list"},{"name":"loader","label":"loader"},{"name":"lock","label":"lock"},{"name":"log-in","label":"log-in"},{"name":"log-out","label":"log-out"},{"name":"mail","label":"mail"},{"name":"map-pin","label":"map-pin"},{"name":"map","label":"map"},{"name":"maximize-2","label":"maximize-2"},{"name":"maximize","label":"maximize"},{"name":"meh","label":"meh"},{"name":"menu","label":"menu"},{"name":"message-circle","label":"message-circle"},{"name":"message-square","label":"message-square"},{"name":"mic-off","label":"mic-off"},{"name":"mic","label":"mic"},{"name":"minimize-2","label":"minimize-2"},{"name":"minimize","label":"minimize"},{"name":"minus-circle","label":"minus-circle"},{"name":"minus-square","label":"minus-square"},{"name":"minus","label":"minus"},{"name":"monitor","label":"monitor"},{"name":"moon","label":"moon"},{"name":"more-horizontal","label":"more-horizontal"},{"name":"more-vertical","label":"more-vertical"},{"name":"mouse-pointer","label":"mouse-pointer"},{"name":"move","label":"move"},{"name":"music","label":"music"},{"name":"navigation-2","label":"navigation-2"},{"name":"navigation","label":"navigation"},{"name":"octagon","label":"octagon"},{"name":"package","label":"package"},{"name":"paperclip","label":"paperclip"},{"name":"pause-circle","label":"pause-circle"},{"name":"pause","label":"pause"},{"name":"pen-tool","label":"pen-tool"},{"name":"percent","label":"percent"},{"name":"phone-call","label":"phone-call"},{"name":"phone-forwarded","label":"phone-forwarded"},{"name":"phone-incoming","label":"phone-incoming"},{"name":"phone-missed","label":"phone-missed"},{"name":"phone-off","label":"phone-off"},{"name":"phone-outgoing","label":"phone-outgoing"},{"name":"phone","label":"phone"},{"name":"pie-chart","label":"pie-chart"},{"name":"play-circle","label":"play-circle"},{"name":"play","label":"play"},{"name":"plus-circle","label":"plus-circle"},{"name":"plus-square","label":"plus-square"},{"name":"plus","label":"plus"},{"name":"pocket","label":"pocket"},{"name":"power","label":"power"},{"name":"printer","label":"printer"},{"name":"radio","label":"radio"},{"name":"refresh-ccw","label":"refresh-ccw"},{"name":"refresh-cw","label":"refresh-cw"},{"name":"repeat","label":"repeat"},{"name":"rewind","label":"rewind"},{"name":"rotate-ccw","label":"rotate-ccw"},{"name":"rotate-cw","label":"rotate-cw"},{"name":"rss","label":"rss"},{"name":"save","label":"save"},{"name":"scissors","label":"scissors"},{"name":"search","label":"search"},{"name":"send","label":"send"},{"name":"server","label":"server"},{"name":"settings","label":"settings"},{"name":"share-2","label":"share-2"},{"name":"share","label":"share"},{"name":"shield-off","label":"shield-off"},{"name":"shield","label":"shield"},{"name":"shopping-bag","label":"shopping-bag"},{"name":"shopping-cart","label":"shopping-cart"},{"name":"shuffle","label":"shuffle"},{"name":"sidebar","label":"sidebar"},{"name":"skip-back","label":"skip-back"},{"name":"skip-forward","label":"skip-forward"},{"name":"slack","label":"slack"},{"name":"slash","label":"slash"},{"name":"sliders","label":"sliders"},{"name":"smartphone","label":"smartphone"},{"name":"smile","label":"smile"},{"name":"speaker","label":"speaker"},{"name":"square","label":"square"},{"name":"star","label":"star"},{"name":"stop-circle","label":"stop-circle"},{"name":"sun","label":"sun"},{"name":"sunrise","label":"sunrise"},{"name":"sunset","label":"sunset"},{"name":"table","label":"table"},{"name":"tablet","label":"tablet"},{"name":"tag","label":"tag"},{"name":"target","label":"target"},{"name":"terminal","label":"terminal"},{"name":"thermometer","label":"thermometer"},{"name":"thumbs-down","label":"thumbs-down"},{"name":"thumbs-up","label":"thumbs-up"},{"name":"toggle-left","label":"toggle-left"},{"name":"toggle-right","label":"toggle-right"},{"name":"tool","label":"tool"},{"name":"trash-2","label":"trash-2"},{"name":"trash","label":"trash"},{"name":"trello","label":"trello"},{"name":"trending-down","label":"trending-down"},{"name":"trending-up","label":"trending-up"},{"name":"triangle","label":"triangle"},{"name":"truck","label":"truck"},{"name":"tv","label":"tv"},{"name":"twitch","label":"twitch"},{"name":"twitter","label":"twitter"},{"name":"type","label":"type"},{"name":"umbrella","label":"umbrella"},{"name":"underline","label":"underline"},{"name":"unlock","label":"unlock"},{"name":"upload-cloud","label":"upload-cloud"},{"name":"upload","label":"upload"},{"name":"user-check","label":"user-check"},{"name":"user-minus","label":"user-minus"},{"name":"user-plus","label":"user-plus"},{"name":"user-x","label":"user-x"},{"name":"user","label":"user"},{"name":"users","label":"users"},{"name":"video-off","label":"video-off"},{"name":"video","label":"video"},{"name":"voicemail","label":"voicemail"},{"name":"volume-1","label":"volume-1"},{"name":"volume-2","label":"volume-2"},{"name":"volume-x","label":"volume-x"},{"name":"volume","label":"volume"},{"name":"watch","label":"watch"},{"name":"wifi-off","label":"wifi-off"},{"name":"wifi","label":"wifi"},{"name":"wind","label":"wind"},{"name":"x-circle","label":"x-circle"},{"name":"x-octagon","label":"x-octagon"},{"name":"x-square","label":"x-square"},{"name":"x","label":"x"},{"name":"youtube","label":"youtube"},{"name":"zap-off","label":"zap-off"},{"name":"zap","label":"zap"},{"name":"zoom-in","label":"zoom-in"},{"name":"zoom-out","label":"zoom-out"}];
+          const searchInput = document.getElementById("icon-search");
+          const iconsContainer = document.getElementById("icons-container");
+          const emptyState = document.getElementById("icons-empty-state");
+          const loadMoreSentinel = document.getElementById("load-more-sentinel");
+          
+          // Modal elements
+          const iconModalElement = document.getElementById('iconModal');
+          const modal = new bootstrap.Modal(iconModalElement);
+          const modalIconPreview = document.getElementById('modalIconPreview');
+          const modalIconName = document.getElementById('modalIconName');
+          const htmlCodeInput = document.getElementById('htmlCodeInput');
+          const pugCodeInput = document.getElementById('pugCodeInput');
+      
+          let searchQuery = "";
+          let filteredData = [];
+          let currentIndex = 0;
+          const chunkSize = 100;
+      
+          function filterData() {
+              filteredData = rawData.filter(item => {
+                  return (item.label && item.label.toLowerCase().includes(searchQuery)) || 
+                         item.name.toLowerCase().includes(searchQuery);
+              });
+              
+              currentIndex = 0;
+              iconsContainer.innerHTML = "";
+              renderNextChunk();
+              
+              if (emptyState) {
+                  emptyState.style.display = filteredData.length === 0 ? "block" : "none";
+              }
           }
-        }
-
-        function createIconElement(item) {
-          const col = document.createElement('div');
-          col.className = 'col-6 col-md-4 col-lg-2 icon-item-container';
-
-          col.innerHTML = `
+      
+          function createIconElement(item) {
+              const col = document.createElement("div");
+              col.className = "col-6 col-md-4 col-lg-2 icon-item-container";
+              
+              col.innerHTML = `
                   <div class="card h-100 text-center  p-4 border-0" style="cursor: pointer;">
                       <div class="mb-3 d-flex align-items-center justify-content-center" style="height: 32px;">
                           <i data-feather="${item.name}" width="24" height="24"></i>
@@ -1452,101 +450,95 @@
                       <span class="small text-muted text-break">${item.label || item.name}</span>
                   </div>
               `;
-          return col;
-        }
-
-        function renderNextChunk() {
-          if (currentIndex >= filteredData.length) {
-            if (loadMoreSentinel) loadMoreSentinel.style.display = 'none';
-            return;
-          } else {
-            if (loadMoreSentinel) loadMoreSentinel.style.display = 'block';
+              return col;
           }
-
-          const fragment = document.createDocumentFragment();
-          const nextBatch = filteredData.slice(currentIndex, currentIndex + chunkSize);
-
-          nextBatch.forEach((item) => {
-            fragment.appendChild(createIconElement(item));
-          });
-
-          iconsContainer.appendChild(fragment);
-          currentIndex += chunkSize;
-
-          // Critical: Call feather.replace() on newly added elements
-          if (window.feather) {
-            window.feather.replace();
+      
+          function renderNextChunk() {
+              if (currentIndex >= filteredData.length) {
+                  if(loadMoreSentinel) loadMoreSentinel.style.display = "none";
+                  return;
+              } else {
+                  if(loadMoreSentinel) loadMoreSentinel.style.display = "block";
+              }
+              
+              const fragment = document.createDocumentFragment();
+              const nextBatch = filteredData.slice(currentIndex, currentIndex + chunkSize);
+              
+              nextBatch.forEach(item => {
+                  fragment.appendChild(createIconElement(item));
+              });
+              
+              iconsContainer.appendChild(fragment);
+              currentIndex += chunkSize;
+              
+              // Critical: Call feather.replace() on newly added elements
+              if (window.feather) {
+                  window.feather.replace();
+              }
           }
-        }
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            if (entries[0].isIntersecting) {
-              renderNextChunk();
-            }
-          },
-          { rootMargin: '200px' },
-        );
-
-        if (loadMoreSentinel) {
-          observer.observe(loadMoreSentinel);
-        }
-
-        if (searchInput) {
-          searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value.toLowerCase().trim();
-            filterData();
-          });
-        }
-
-        iconsContainer.addEventListener('click', (e) => {
-          const item = e.target.closest('.card');
-          if (!item) return;
-
-          const iconElement = item.querySelector('i, svg');
-          let iconName =
-            iconElement.dataset.feather ||
-            Array.from(iconElement.classList)
-              .find((c) => c.startsWith('feather-'))
-              ?.replace('feather-', '');
-
-          if (!iconName) return;
-
-          modalIconName.innerText = iconName;
-          htmlCodeInput.value = `<i data-feather="${iconName}"></i>`;
-          pugCodeInput.value = `i(data-feather="${iconName}")`;
-          modalIconPreview.innerHTML = `<i data-feather="${iconName}" width="48" height="48"></i>`;
-
-          modal.show();
-          // Re-render the icon inside the modal
-          if (window.feather) {
-            window.feather.replace();
+      
+          const observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                  renderNextChunk();
+              }
+          }, { rootMargin: "200px" });
+      
+          if (loadMoreSentinel) {
+              observer.observe(loadMoreSentinel);
           }
-        });
-
-        // Modal Copy Buttons
-        document.querySelectorAll('.copy-modal-btn').forEach((btn) => {
-          btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-target');
-            const input = document.getElementById(targetId);
-            input.select();
-            try {
-              document.execCommand('copy');
-              const originalText = btn.innerText;
-              btn.innerText = 'Copied!';
-              btn.classList.replace('btn-outline-secondary', 'btn-success');
-              setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.replace('btn-success', 'btn-outline-secondary');
-              }, 1500);
-            } catch (err) {
-              console.error('Failed to copy', err);
-            }
+      
+          if (searchInput) {
+              searchInput.addEventListener("input", (e) => {
+                  searchQuery = e.target.value.toLowerCase().trim();
+                  filterData();
+              });
+          }
+      
+          iconsContainer.addEventListener("click", (e) => {
+              const item = e.target.closest(".card");
+              if (!item) return;
+      
+              const iconElement = item.querySelector("i, svg");
+              let iconName = iconElement.dataset.feather || Array.from(iconElement.classList).find(c => c.startsWith('feather-'))?.replace('feather-', '');
+              
+              if (!iconName) return;
+      
+              modalIconName.innerText = iconName;
+              htmlCodeInput.value = `<i data-feather="${iconName}"></i>`;
+              pugCodeInput.value = `i(data-feather="${iconName}")`;
+              modalIconPreview.innerHTML = `<i data-feather="${iconName}" width="48" height="48"></i>`;
+              
+              modal.show();
+              // Re-render the icon inside the modal
+              if (window.feather) {
+                  window.feather.replace();
+              }
           });
-        });
-
-        filterData();
+      
+          // Modal Copy Buttons
+          document.querySelectorAll('.copy-modal-btn').forEach(btn => {
+              btn.addEventListener('click', () => {
+                  const targetId = btn.getAttribute('data-target');
+                  const input = document.getElementById(targetId);
+                  input.select();
+                  try {
+                      document.execCommand('copy');
+                      const originalText = btn.innerText;
+                      btn.innerText = 'Copied!';
+                      btn.classList.replace('btn-outline-secondary', 'btn-success');
+                      setTimeout(() => {
+                          btn.innerText = originalText;
+                          btn.classList.replace('btn-success', 'btn-outline-secondary');
+                      }, 1500);
+                  } catch (err) {
+                      console.error('Failed to copy', err);
+                  }
+              });
+          });
+      
+          filterData();
       });
+      
     </script>
   </body>
 </html>
