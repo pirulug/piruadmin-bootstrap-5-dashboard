@@ -266,11 +266,15 @@ module.exports = (env = {}, argv = {}) => {
       static: {
         directory: Path.join(__dirname, "dist"),
       },
+      devMiddleware: {
+        writeToDisk: true,
+      },
       watchFiles: [
         "src/data/**/*.json",
         "src/js/**/*.js",
         "src/scss/**/*.scss",
         "src/view/**/*.pug",
+        "src/plugins/**/*",
       ],
       compress: true,
       port: 8989,
