@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="author" content="Pirulug" />
+    <meta name="robots" content="index, follow" />
+    <!-- Theme Color-->
+    <meta name="theme-color" content="#e83283" />
+    <!-- Primary Meta Tags-->
+    <title>CRM Dashboard - Free Bootstrap 5 Admin Template | PiruAdmin</title>
+    <meta name="title" content="CRM Dashboard - Free Bootstrap 5 Admin Template | PiruAdmin" />
+    <meta
+      name="description"
+      content="PiruAdmin is a modern, open-source Bootstrap 5 Admin Dashboard. Features flat UI, dark mode, 800+ components, and vanilla JS. Perfect for your next SaaS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, admin dashboard, admin template, flat ui, dark mode, vanilla js, open source, dashboard template, scss"
+    />
+    <link
+      rel="canonical"
+      href="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard-crm.html"
+    />
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard-crm.html"
+    />
+    <meta property="og:title" content="CRM Dashboard | PiruAdmin" />
+    <meta
+      property="og:description"
+      content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support."
+    />
+    <meta
+      property="og:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png"
+    />
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/dashboard-crm.html"
+    />
+    <meta property="twitter:title" content="CRM Dashboard | PiruAdmin" />
+    <meta
+      property="twitter:description"
+      content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production."
+    />
+    <meta
+      property="twitter:image"
+      content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png"
+    />
+    <meta property="twitter:creator" content="@pirulug" />
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
+    <!-- Icons-->
+    <link rel="stylesheet" href="./assets/plugins/bootstrapicons/bootstrapicons.css" />
+    <!-- Css-->
+    <link rel="stylesheet" href="./assets/css/piruadmin-fonts.css" />
+    <link rel="stylesheet" href="./assets/css/piruadmin.css" />
+    <!-- Theme-->
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme =
+          !storedTheme || storedTheme === 'auto'
+            ? prefersDarkScheme
+              ? 'dark'
+              : 'light'
+            : storedTheme;
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Loader-->
+    <div class="show position-fixed translate-middle w-100 vh-100 top-50 start-50" id="spinner">
+      <div class="loader-container">
+        <div class="loader-circle"></div>
+        <div class="loader-logo">
+          <img src="./assets/img/logo.png" alt="Logo" width="40" height="40" />
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <nav class="sidebar js-sidebar" id="sidebar">
+        <div class="sidebar-content js-simplebar">
+          <a class="sidebar-brand" href="./index.html">
+            <span class="sidebar-brand-text align-middle">PiruAdmin</span>
+          </a>
+          <a class="sidebar-close js-sidebar-close" href="#"><i class="bi bi-x-lg"></i></a>
+          <ul class="sidebar-nav">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard.html">
+                <i class="align-middle bi bi-sliders"></i>
+                <span class="align-middle">Dashboard</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard-ecomerse.html">
+                <i class="align-middle bi bi-cart3"></i>
+                <span class="align-middle">E-Commerce</span>
+                <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+              </a>
+            </li>
+            <li class="sidebar-item active">
+              <a class="sidebar-link" href="./dashboard-crm.html">
+                <i class="align-middle bi bi-person-workspace"></i>
+                <span class="align-middle">CRM</span>
+                <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard-crypto.html">
+                <i class="align-middle bi bi-currency-bitcoin"></i>
+                <span class="align-middle">Crypto</span>
+                <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard-ia.html">
+                <i class="align-middle bi bi-cpu"></i>
+                <span class="align-middle">AI Analytics</span>
+                <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+              </a>
+            </li>
+            <li class="sidebar-header">Pages</li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#pages"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-file-earmark-fill"></i>
+                <span class="align-middle">Pages</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="pages"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/blank.html">
+                    <span class="align-middle">Blank Page</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/timeline.html">
+                    <span class="align-middle">Timeline</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/search.html">
+                    <span class="align-middle">Search</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/prompts.html">
+                    <span class="align-middle">Prompt Library</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/chat-ai.html">
+                    <span class="align-middle">AI Chat</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/chat.html">
+                    <span class="align-middle">Chat</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/pricing.html">
+                    <span class="align-middle">Pricing</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/colors.html">
+                    <span class="align-middle">Colors</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./pages/typography.html">
+                    <span class="align-middle">Typography</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-users"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Users</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-users"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/user-add.html">
+                        <span class="align-middle">Add User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/user-list.html">
+                        <span class="align-middle">List User</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/user-view.html">
+                        <span class="align-middle">View User</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-projects"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Projects</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-projects"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/project-list.html">
+                        <span class="align-middle">Project List</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/project-details.html">
+                        <span class="align-middle">Project Details</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/project-create.html">
+                        <span class="align-middle">Create Project</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-mail"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Mail</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-mail"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/mail-inbox.html">
+                        <span class="align-middle">Inbox</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/mail-compose.html">
+                        <span class="align-middle">Compose</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/mail-read.html">
+                        <span class="align-middle">Read Email</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#pages-file-manager"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">File Manager</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="pages-file-manager"
+                    data-bs-parent="#pages"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/file-manager.html">
+                        <span class="align-middle">All Files</span>
+                      </a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="./pages/file-media.html">
+                        <span class="align-middle">Media Files</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#auth"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-people"></i>
+                <span class="align-middle">Auth</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="auth"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/sign-in.html">
+                    <span class="align-middle">Sign In</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/sign-up.html">
+                    <span class="align-middle">Sign Up</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/reset-password.html">
+                    <span class="align-middle">Reset Password</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/recover-password.html">
+                    <span class="align-middle">Recover Password</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/auth-lock.html">
+                    <span class="align-middle">Lock Screen</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/2-step-verification.html">
+                    <span class="align-middle">2-Step Verification</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/2-step-verification-code.html">
+                    <span class="align-middle">2-Step Code</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./auth/2-step-verification-backup-codes.html">
+                    <span class="align-middle">2-Step Backup Codes</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#account"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-person"></i>
+                <span class="align-middle">Account</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="account"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./account/profile.html">
+                    <span class="align-middle">Profile</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./account/settings.html">
+                    <span class="align-middle">Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#errors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-bug"></i>
+                <span class="align-middle">Errors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="errors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./error/404.html">
+                    <span class="align-middle">404</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./error/500.html">
+                    <span class="align-middle">500</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./error/maintenance.html">
+                    <span class="align-middle">Maintenance</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-header">Tools &amp; Components</li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#ui-elements"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-box"></i>
+                <span class="align-middle">UI Elements</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="ui-elements"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/accordion.html">
+                    <span class="align-middle">Accordion</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/scrollspy.html">
+                    <span class="align-middle">Scrollspy</span>
+                    <span class="sidebar-badge badge rounded-pill bg-success">New</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/alerts.html">
+                    <span class="align-middle">Alerts</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/badges.html">
+                    <span class="align-middle">Badges</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/buttons.html">
+                    <span class="align-middle">Buttons</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/cards.html">
+                    <span class="align-middle">Cards</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/general.html">
+                    <span class="align-middle">General UI</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/images.html">
+                    <span class="align-middle">Images</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/tabs.html">
+                    <span class="align-middle">Tabs</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./ui/avatar.html">
+                    <span class="align-middle">Avatar</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#tables"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-grid"></i>
+                <span class="align-middle">Tables</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="tables"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./tables/bootstrap.html">
+                    <span class="align-middle">Table Bootstrap</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#forms"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-file"></i>
+                <span class="align-middle">Forms</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="forms"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./forms/basic-inputs.html">
+                    <span class="align-middle">Basic Inputs</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./forms/tagify.html">
+                    <span class="align-middle">Tagify</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./forms/flatpickr.html">
+                    <span class="align-middle">Flatpickr</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#editors"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-pencil-square"></i>
+                <span class="align-middle">Editors</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="editors"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./editors/simplemde.html">
+                    <span class="align-middle">SimpleMDE</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./editors/editor.html">
+                    <span class="align-middle">Wysi Editor</span>
+                    <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#icons"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-cup-hot"></i>
+                <span class="align-middle">Icons</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="icons"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./icons/feather.html">
+                    <span class="align-middle">Feather</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./icons/awesome.html">
+                    <span class="align-middle">Font Awesome</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./icons/bootstrap.html">
+                    <span class="align-middle">Bootstrap Icons</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./icons/flag-icons.html">
+                    <span class="align-middle">Flag Icons</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#plugins"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-lightning"></i>
+                <span class="align-middle">Plugins</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="plugins"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./plugins/sweetalert.html">
+                    <span class="align-middle">SweetAlert 2</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./plugins/toastify.html">
+                    <span class="align-middle">Toastify JS</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./plugins/charts.html">
+                    <span class="align-middle">Charts</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./plugins/maps-google.html">
+                    <span class="align-middle">Maps</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="./plugins/lite-youtube.html">
+                    <span class="align-middle">Lite YouTube</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-header">MULTI LEVEL EXAMPLE</li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a
+                class="sidebar-link collapsed"
+                data-bs-target="#multilevel"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+              >
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+              <ul
+                class="sidebar-dropdown list-unstyled collapse"
+                id="multilevel"
+                data-bs-parent="#sidebar"
+              >
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+                <li class="sidebar-item">
+                  <a
+                    class="sidebar-link collapsed"
+                    data-bs-target="#multilevel-sub"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                  >
+                    <span class="align-middle">Level 2</span>
+                  </a>
+                  <ul
+                    class="sidebar-dropdown list-unstyled collapse"
+                    id="multilevel-sub"
+                    data-bs-parent="#multilevel"
+                  >
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" href="#"><span class="align-middle">Level 3</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#"><span class="align-middle">Level 2</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">
+                <i class="align-middle bi bi-circle-fill"></i>
+                <span class="align-middle">Level 1</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebar-backdrop"></div>
+      <div class="main">
+        <!-- NavBar-->
+        <nav class="navtop">
+          <a class="sidebar-toggle js-sidebar-toggle">
+            <i class="hamburger align-self-center"></i>
+          </a>
+          <form class="d-none d-sm-inline-block ms-3">
+            <div class="input-group input-group-navbar">
+              <input class="form-control" type="text" placeholder="Search..." aria-label="Search" />
+              <button class="btn" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav navbar-align">
+              <li class="nav-item">
+                <a class="nav-icon" id="fullscreen-btn" href="#" title="Full Screen">
+                  <i class="bi bi-fullscreen"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-label="Toggle theme (auto)"
+                >
+                  <span class="theme-icon-active" id="bd-theme-icon"></span>
+                  <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="sun"></span>
+                      Light
+                      <span class="pr-check ms-auto d-none"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="moon"></span>
+                      Dark
+                      <span class="pr-check ms-auto d-none"></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item d-flex align-items-center"
+                      type="button"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <span class="theme-icon-active opacity-50 me-2" data-icon="auto"></span>
+                      Auto
+                      <span class="pr-check ms-auto d-none"></span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="alertsDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-bell"></i>
+                  <span class="indicator">4</span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <div class="dropdown-menu-header">4 New Notifications</div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <i class="bi bi-exclamation-circle text-danger"></i>
+                        </div>
+                        <div class="col-10">
+                          <div>Update completed</div>
+                          <div class="text-muted small mt-1">
+                            Restart server 12 to complete the update.
+                          </div>
+                          <div class="text-muted small mt-1">30m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-bell text-warning"></i></div>
+                        <div class="col-10">
+                          <div>Lorem ipsum</div>
+                          <div class="text-muted small mt-1">
+                            Aliquam ex eros, imperdiet vulputate hendrerit et.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-house text-primary"></i></div>
+                        <div class="col-10">
+                          <div>Login from 192.186.1.8</div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2"><i class="bi bi-person-plus text-success"></i></div>
+                        <div class="col-10">
+                          <div>New connection</div>
+                          <div class="text-muted small mt-1">Christina accepted your request.</div>
+                          <div class="text-muted small mt-1">14h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all notifications</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-icon dropdown-toggle dropdown-toggle-no-caret"
+                  id="messagesDropdown"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-chat-left-text"></i>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0"
+                  aria-labelledby="messagesDropdown"
+                >
+                  <div class="dropdown-menu-header">
+                    <div class="position-relative">4 New Messages</div>
+                  </div>
+                  <div class="list-group">
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Vanessa Tucker"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Vanessa Tucker</div>
+                          <div class="text-muted small mt-1">
+                            Nam pretium turpis et arcu. Duis arcu tortor.
+                          </div>
+                          <div class="text-muted small mt-1">15m ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="William Harris"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>William Harris</div>
+                          <div class="text-muted small mt-1">
+                            Curabitur ligula sapien euismod vitae.
+                          </div>
+                          <div class="text-muted small mt-1">2h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Christina Mason"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Christina Mason</div>
+                          <div class="text-muted small mt-1">
+                            Pellentesque auctor neque nec urna.
+                          </div>
+                          <div class="text-muted small mt-1">4h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="#">
+                      <div class="row g-0 align-items-center">
+                        <div class="col-2">
+                          <img
+                            class="avatar img-fluid rounded-circle"
+                            src="https://dummyimage.com/50x50/d63384/fff.jpg"
+                            alt="Sharon Lessman"
+                          />
+                        </div>
+                        <div class="col-10 ps-2">
+                          <div>Sharon Lessman</div>
+                          <div class="text-muted small mt-1">
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non.
+                          </div>
+                          <div class="text-muted small mt-1">5h ago</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a class="text-muted" href="#">Show all messages</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item nav-item-user dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="user-profile"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  <img class="avatar" src="https://dummyimage.com/50x50/ececec/000.jpg" alt="" />
+                  <span class="d-none d-md-inline-block">Pirulug</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  <a class="dropdown-item" href="./account/profile.html">
+                    <i class="bi bi-person me-1"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-pie-chart me-1"></i>
+                    Analytics
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./account/settings.html">
+                    <i class="bi bi-gear me-1"></i>
+                    Settings &amp; Privacy
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-question-circle me-1"></i>
+                    Help Center
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="bi bi-box-arrow-right me-1"></i>
+                    Log out
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Content-->
+        <main class="content">
+          <div class="mb-3">
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center"
+            >
+              <h1 class="h3 mb-2 mb-sm-0">CRM Dashboard</h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="./dashboard.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">CRM Dashboard</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div class="d-flex align-items-center gap-2">
+              <div class="btn-group btn-group-sm" role="group" aria-label="CRM period filter">
+                <button class="btn btn-outline-secondary" type="button" data-crm-period="30d">
+                  30 days
+                </button>
+                <button class="btn btn-outline-secondary" type="button" data-crm-period="90d">
+                  90 days
+                </button>
+                <button
+                  class="btn btn-outline-secondary active"
+                  type="button"
+                  data-crm-period="ytd"
+                >
+                  Year to date
+                </button>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <button
+                class="btn btn-sm btn-outline-secondary text-uppercase fw-bold text-nowrap"
+                type="button"
+              >
+                <i class="bi bi-download me-1"></i>
+                Export
+              </button>
+              <a
+                class="btn btn-sm btn-primary text-uppercase fw-bold text-nowrap"
+                href="./pages/project-create.html"
+              >
+                <i class="bi bi-plus-lg me-1"></i>
+                New Deal
+              </a>
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                      <span class="text-body-secondary small text-uppercase fw-bold">
+                        Total Customers
+                      </span>
+                      <h2 class="h3 fw-bold mt-1 mb-0">2,817</h2>
+                    </div>
+                    <div class="stat stat-primary"><i class="bi bi-people fs-5"></i></div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-success-subtle text-success">
+                      <i class="me-1 bi bi-arrow-up-short"></i>
+                      21.5%
+                    </span>
+                    <span class="small text-body-secondary">vs last year to date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                      <span class="text-body-secondary small text-uppercase fw-bold">
+                        Active Deals
+                      </span>
+                      <h2 class="h3 fw-bold mt-1 mb-0">114</h2>
+                    </div>
+                    <div class="stat stat-info"><i class="bi bi-briefcase fs-5"></i></div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-success-subtle text-success">
+                      <i class="me-1 bi bi-arrow-up-short"></i>
+                      22.6%
+                    </span>
+                    <span class="small text-body-secondary">vs last year to date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                      <span class="text-body-secondary small text-uppercase fw-bold">Revenue</span>
+                      <h2 class="h3 fw-bold mt-1 mb-0">$8.3M</h2>
+                    </div>
+                    <div class="stat stat-success"><i class="bi bi-currency-dollar fs-5"></i></div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-success-subtle text-success">
+                      <i class="me-1 bi bi-arrow-up-short"></i>
+                      30.2%
+                    </span>
+                    <span class="small text-body-secondary">vs last year to date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                      <span class="text-body-secondary small text-uppercase fw-bold">Win Rate</span>
+                      <h2 class="h3 fw-bold mt-1 mb-0">21.9%</h2>
+                    </div>
+                    <div class="stat stat-warning"><i class="bi bi-trophy fs-5"></i></div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-danger-subtle text-danger">
+                      <i class="me-1 bi bi-arrow-down-short"></i>
+                      1.2 pts
+                    </span>
+                    <span class="small text-body-secondary">vs last year to date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-xl-8 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="card-title mb-0">Revenue vs Target</h5>
+                    <small class="text-body-secondary">Cumulative performance (USD)</small>
+                  </div>
+                  <span class="badge bg-success-subtle text-success">On Track</span>
+                </div>
+                <div class="card-body">
+                  <div style="position: relative; height: 290px">
+                    <canvas id="chartjs-crm-revenue"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Leads by Source</h5>
+                  <span class="text-body-secondary small">Total channels</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div style="position: relative; height: 220px">
+                    <canvas id="chartjs-crm-leads"></canvas>
+                    <div
+                      class="position-absolute top-50 start-50 translate-middle text-center pe-none"
+                    >
+                      <div class="small text-body-secondary">Leads</div>
+                      <div class="h4 fw-bold mb-0">3,386</div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-wrap justify-content-center gap-3 mt-3 small">
+                    <span>
+                      <i class="bi bi-circle-fill text-primary me-1"></i>
+                      Website
+                    </span>
+                    <span>
+                      <i class="bi bi-circle-fill text-success me-1"></i>
+                      Referral
+                    </span>
+                    <span>
+                      <i class="bi bi-circle-fill text-warning me-1"></i>
+                      LinkedIn
+                    </span>
+                    <span>
+                      <i class="bi bi-circle-fill text-danger me-1"></i>
+                      Email
+                    </span>
+                    <span>
+                      <i class="bi bi-circle-fill text-info me-1"></i>
+                      Events
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-12 col-xl-6 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Sales Pipeline</h5>
+                  <span class="text-body-secondary small">Funnel value by stage</span>
+                </div>
+                <div class="card-body">
+                  <div style="position: relative; height: 290px">
+                    <canvas id="chartjs-crm-pipeline"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Top Sales Reps</h5>
+                  <span class="text-body-secondary small">Quota attainment</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between gap-3">
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="rounded-circle text-white d-flex align-items-center justify-content-center bg-primary"
+                          style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600"
+                        >
+                          VT
+                        </div>
+                        <div>
+                          <div class="fw-bold text-body">Vanessa Tucker</div>
+                          <div class="small text-body-secondary">145 deals won</div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-body">$2.0M</div>
+                        <div class="small text-body-secondary">115% of $1.74M quota</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="100"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="rounded-circle text-white d-flex align-items-center justify-content-center bg-info"
+                          style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600"
+                        >
+                          SL
+                        </div>
+                        <div>
+                          <div class="fw-bold text-body">Sharon Lessman</div>
+                          <div class="small text-body-secondary">95 deals won</div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-body">$1.9M</div>
+                        <div class="small text-body-secondary">105% of $1.80M quota</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 100%"
+                        aria-valuenow="100"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="rounded-circle text-white d-flex align-items-center justify-content-center bg-success"
+                          style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600"
+                        >
+                          WH
+                        </div>
+                        <div>
+                          <div class="fw-bold text-body">William Harris</div>
+                          <div class="small text-body-secondary">90 deals won</div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-body">$1.7M</div>
+                        <div class="small text-body-secondary">90% of $1.9M quota</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-primary"
+                        role="progressbar"
+                        style="width: 90%"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="rounded-circle text-white d-flex align-items-center justify-content-center bg-warning"
+                          style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600"
+                        >
+                          CM
+                        </div>
+                        <div>
+                          <div class="fw-bold text-body">Christina Mason</div>
+                          <div class="small text-body-secondary">55 deals won</div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-body">$900.2K</div>
+                        <div class="small text-body-secondary">69% of $1.3M quota</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 69%"
+                        aria-valuenow="69"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                      <div class="d-flex align-items-center gap-2">
+                        <div
+                          class="rounded-circle text-white d-flex align-items-center justify-content-center bg-danger"
+                          style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600"
+                        >
+                          CH
+                        </div>
+                        <div>
+                          <div class="fw-bold text-body">Charles Hall</div>
+                          <div class="small text-body-secondary">55 deals won</div>
+                        </div>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-body">$753.5K</div>
+                        <div class="small text-body-secondary">65% of $1.2M quota</div>
+                      </div>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 65%"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-12 col-xl-8 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Recent Deals</h5>
+                  <a
+                    class="btn btn-sm btn-outline-secondary text-uppercase fw-bold text-nowrap"
+                    href="./pages/project-list.html"
+                  >
+                    <i class="bi bi-kanban me-1"></i>
+                    View Pipeline
+                  </a>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-hover align-middle table-sm m-0">
+                      <thead>
+                        <tr>
+                          <th class="ps-3 text-uppercase fw-bold text-nowrap">Company</th>
+                          <th class="text-uppercase fw-bold text-nowrap">Contact</th>
+                          <th class="text-uppercase fw-bold text-nowrap">Stage</th>
+                          <th class="text-uppercase fw-bold text-nowrap">Value</th>
+                          <th class="text-uppercase fw-bold text-nowrap">Owner</th>
+                          <th class="text-end pe-3 text-uppercase fw-bold text-nowrap">
+                            Close Date
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="ps-3">
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 30px;
+                                  height: 30px;
+                                  font-size: 0.72rem;
+                                  font-weight: 700;
+                                "
+                              >
+                                KA
+                              </div>
+                              <span class="fw-bold text-body">Kestrel Analytics</span>
+                            </div>
+                          </td>
+                          <td>Olivia Bennett</td>
+                          <td><span class="badge bg-primary-subtle text-primary">Lead</span></td>
+                          <td class="fw-bold">$19,500</td>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  font-size: 0.65rem;
+                                  font-weight: 600;
+                                "
+                              >
+                                CH
+                              </div>
+                              <span>Charles Hall</span>
+                            </div>
+                          </td>
+                          <td class="text-end pe-3 text-body-secondary small">Nov 16</td>
+                        </tr>
+                        <tr>
+                          <td class="ps-3">
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-info-subtle text-info d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 30px;
+                                  height: 30px;
+                                  font-size: 0.72rem;
+                                  font-weight: 700;
+                                "
+                              >
+                                LH
+                              </div>
+                              <span class="fw-bold text-body">Lumen Health</span>
+                            </div>
+                          </td>
+                          <td>Marcus Reyes</td>
+                          <td>
+                            <span class="badge bg-warning-subtle text-warning">Negotiation</span>
+                          </td>
+                          <td class="fw-bold">$19,300</td>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  font-size: 0.65rem;
+                                  font-weight: 600;
+                                "
+                              >
+                                SL
+                              </div>
+                              <span>Sharon Lessman</span>
+                            </div>
+                          </td>
+                          <td class="text-end pe-3 text-body-secondary small">Nov 22</td>
+                        </tr>
+                        <tr>
+                          <td class="ps-3">
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-success-subtle text-success d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 30px;
+                                  height: 30px;
+                                  font-size: 0.72rem;
+                                  font-weight: 700;
+                                "
+                              >
+                                OP
+                              </div>
+                              <span class="fw-bold text-body">Oakridge Partners</span>
+                            </div>
+                          </td>
+                          <td>Hannah Kim</td>
+                          <td><span class="badge bg-info-subtle text-info">Proposal</span></td>
+                          <td class="fw-bold">$42,000</td>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  font-size: 0.65rem;
+                                  font-weight: 600;
+                                "
+                              >
+                                VT
+                              </div>
+                              <span>Vanessa Tucker</span>
+                            </div>
+                          </td>
+                          <td class="text-end pe-3 text-body-secondary small">Nov 28</td>
+                        </tr>
+                        <tr>
+                          <td class="ps-3">
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-warning-subtle text-warning d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 30px;
+                                  height: 30px;
+                                  font-size: 0.72rem;
+                                  font-weight: 700;
+                                "
+                              >
+                                HP
+                              </div>
+                              <span class="fw-bold text-body">Harbor &amp; Pine</span>
+                            </div>
+                          </td>
+                          <td>Daniel Brooks</td>
+                          <td><span class="badge bg-success-subtle text-success">Won</span></td>
+                          <td class="fw-bold">$68,400</td>
+                          <td>
+                            <div class="d-flex align-items-center gap-2">
+                              <div
+                                class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  font-size: 0.65rem;
+                                  font-weight: 600;
+                                "
+                              >
+                                WH
+                              </div>
+                              <span>William Harris</span>
+                            </div>
+                          </td>
+                          <td class="text-end pe-3 text-body-secondary small">Nov 30</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-4 d-flex">
+              <div class="card flex-fill w-100">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Upcoming Tasks</h5>
+                  <span class="badge bg-primary-subtle text-primary" id="crmTasksOpenBadge">
+                    3 open
+                  </span>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0 d-flex align-items-start gap-2">
+                      <input
+                        class="form-check-input mt-1 crm-task-check"
+                        id="task1"
+                        type="checkbox"
+                      />
+                      <label class="form-check-label flex-grow-1" for="task1">
+                        <div class="fw-semibold">Discovery call with Kestrel Analytics</div>
+                        <div class="small text-danger">
+                          <i class="bi bi-telephone me-1"></i>
+                          Call &bull; Overdue, due yesterday
+                        </div>
+                      </label>
+                    </li>
+                    <li class="list-group-item px-0 d-flex align-items-start gap-2">
+                      <input
+                        class="form-check-input mt-1 crm-task-check"
+                        id="task2"
+                        type="checkbox"
+                      />
+                      <label class="form-check-label flex-grow-1" for="task2">
+                        <div class="fw-semibold">Send the proposal to Lumen Health</div>
+                        <div class="small text-warning">
+                          <i class="bi bi-envelope me-1"></i>
+                          Email &bull; Due today
+                        </div>
+                      </label>
+                    </li>
+                    <li class="list-group-item px-0 d-flex align-items-start gap-2">
+                      <input
+                        class="form-check-input mt-1 crm-task-check"
+                        id="task3"
+                        type="checkbox"
+                        checked="checked"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 text-decoration-line-through text-body-secondary"
+                        for="task3"
+                      >
+                        <div class="fw-semibold">Update the contacts at Harbor &amp; Pine</div>
+                        <div class="small">
+                          <i class="bi bi-journal-text me-1"></i>
+                          Note &bull; Completed
+                        </div>
+                      </label>
+                    </li>
+                    <li class="list-group-item px-0 pb-0 d-flex align-items-start gap-2">
+                      <input
+                        class="form-check-input mt-1 crm-task-check"
+                        id="task4"
+                        type="checkbox"
+                      />
+                      <label class="form-check-label flex-grow-1" for="task4">
+                        <div class="fw-semibold">Contract review with Oakridge Partners</div>
+                        <div class="small text-body-secondary">
+                          <i class="bi bi-calendar-event me-1"></i>
+                          Meeting &bull; Tomorrow at 10:00 AM
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row text-muted">
+              <div class="col-6 text-start">
+                <p class="mb-0">
+                  <a class="text-muted" href="./index.html">
+                    &copy;&nbsp;
+                    <strong>PiruAdmin&nbsp;</strong>
+                  </a>
+                  All Right Reserved.
+                </p>
+              </div>
+              <div class="col-6 text-end">
+                <p class="mb-0">
+                  Designed By&nbsp;
+                  <a class="text-muted" href="http://github.com/pirulug" target="_blank">Pirulug</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- Back to top-->
+      <!-- Back to top-->
+      <a class="back-to-top" href="#">
+        <svg class="back-to-top-progress" width="50" height="50" viewBox="0 0 50 50">
+          <circle class="back-to-top-circle" cx="25" cy="25" r="22"></circle>
+          <circle class="back-to-top-progress-bar" cx="25" cy="25" r="22"></circle>
+        </svg>
+        <i class="bi bi-arrow-up-short"></i>
+      </a>
+    </div>
+    <!-- Dark & Ligth-->
+    <!-- Js Bootstrap-->
+    <script src="./assets/js/piruadmin.js"></script>
+    <script src="./assets/plugins/chartjs/chartjs.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const getVar = (name) =>
+          getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+        const primary = window.theme?.primary || '#e83283';
+        const secondary = window.theme?.secondary || '#686dc3';
+        const success = window.theme?.success || '#28a745';
+        const info = window.theme?.info || '#17a2b8';
+        const warning = window.theme?.warning || '#ffc107';
+        const danger = window.theme?.danger || '#dc3545';
+        const gridColor = getVar('--bs-border-color-translucent') || 'rgba(120, 130, 140, 0.15)';
+        const textColor = getVar('--bs-secondary-color') || '#6c757d';
+
+        // 1. Revenue vs Target Line Chart
+        const revenueDatasets = {
+          '30d': {
+            labels: ['Wk 1', 'Wk 2', 'Wk 3', 'Wk 4'],
+            revenue: [0.45, 0.98, 1.54, 2.15],
+            target: [0.5, 1.0, 1.5, 2.0],
+          },
+          '90d': {
+            labels: ['Sep', 'Oct', 'Nov'],
+            revenue: [1.85, 3.92, 6.18],
+            target: [2.0, 4.0, 6.0],
+          },
+          ytd: {
+            labels: [
+              'Jan',
+              'Feb',
+              'Mar',
+              'Apr',
+              'May',
+              'Jun',
+              'Jul',
+              'Aug',
+              'Sep',
+              'Oct',
+              'Nov',
+              'Dec',
+            ],
+            revenue: [0.65, 1.35, 2.05, 2.65, 3.45, 4.35, 5.15, 6.05, 6.85, 7.65, 8.3, null],
+            target: [0.8, 1.6, 2.4, 3.2, 4.0, 4.8, 5.6, 6.4, 7.2, 8.0, 8.8, 9.6],
+          },
+        };
+
+        const revenueChart = new Chart(
+          document.getElementById('chartjs-crm-revenue').getContext('2d'),
+          {
+            type: 'line',
+            data: {
+              labels: revenueDatasets.ytd.labels,
+              datasets: [
+                {
+                  label: 'Revenue ($M)',
+                  fill: true,
+                  backgroundColor: 'rgba(232, 50, 131, 0.12)',
+                  borderColor: primary,
+                  borderWidth: 2,
+                  tension: 0.3,
+                  pointRadius: 2,
+                  pointHoverRadius: 5,
+                  data: revenueDatasets.ytd.revenue,
+                },
+                {
+                  label: 'Target ($M)',
+                  fill: false,
+                  borderColor: secondary,
+                  borderWidth: 2,
+                  borderDash: [5, 5],
+                  tension: 0.3,
+                  pointRadius: 0,
+                  pointHoverRadius: 4,
+                  data: revenueDatasets.ytd.target,
+                },
+              ],
+            },
+            options: {
+              maintainAspectRatio: false,
+              interaction: { intersect: false, mode: 'index' },
+              plugins: {
+                legend: {
+                  display: true,
+                  position: 'top',
+                  align: 'start',
+                  labels: { color: textColor, boxWidth: 12, usePointStyle: true },
+                },
+              },
+              scales: {
+                x: { grid: { display: false }, ticks: { color: textColor } },
+                y: {
+                  beginAtZero: true,
+                  grid: { color: gridColor },
+                  ticks: {
+                    color: textColor,
+                    callback: (val) => '$' + val + 'M',
+                  },
+                },
+              },
+            },
+          },
+        );
+
+        document.querySelectorAll('[data-crm-period]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            document
+              .querySelectorAll('[data-crm-period]')
+              .forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            const period = btn.getAttribute('data-crm-period');
+            const ds = revenueDatasets[period];
+            revenueChart.data.labels = ds.labels;
+            revenueChart.data.datasets[0].data = ds.revenue;
+            revenueChart.data.datasets[1].data = ds.target;
+            revenueChart.update();
+          });
+        });
+
+        // 2. Leads by Source Doughnut
+        new Chart(document.getElementById('chartjs-crm-leads'), {
+          type: 'doughnut',
+          data: {
+            labels: ['Website', 'Referral', 'LinkedIn', 'Email', 'Events'],
+            datasets: [
+              {
+                data: [1240, 845, 590, 412, 299],
+                backgroundColor: [primary, success, warning, danger, info],
+                borderWidth: 0,
+              },
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            cutout: '72%',
+            plugins: { legend: { display: false } },
+          },
+        });
+
+        // 3. Sales Pipeline Horizontal Bar
+        new Chart(document.getElementById('chartjs-crm-pipeline'), {
+          type: 'bar',
+          data: {
+            labels: [
+              'Lead ($61.6M • 3,386)',
+              'Qualified ($36.0M • 1,855)',
+              'Proposal ($22.4M • 1,001)',
+              'Negotiation ($14.3M • 764)',
+              'Won ($7.5M • 395)',
+            ],
+            datasets: [
+              {
+                label: 'Pipeline ($M)',
+                data: [61.6, 36.0, 22.4, 14.3, 7.5],
+                backgroundColor: [primary, secondary, info, warning, success],
+                borderRadius: 4,
+                barPercentage: 0.55,
+              },
+            ],
+          },
+          options: {
+            indexAxis: 'y',
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: {
+                beginAtZero: true,
+                grid: { color: gridColor },
+                ticks: {
+                  color: textColor,
+                  callback: (val) => '$' + val + 'M',
+                },
+              },
+              y: {
+                grid: { display: false },
+                ticks: { color: textColor },
+              },
+            },
+          },
+        });
+
+        // 4. Interactive Upcoming Tasks Counter
+        const taskChecks = document.querySelectorAll('.crm-task-check');
+        const openBadge = document.getElementById('crmTasksOpenBadge');
+
+        const updateTaskCount = () => {
+          const openCount = Array.from(taskChecks).filter((cb) => !cb.checked).length;
+          if (openBadge) {
+            openBadge.textContent = `${openCount} open`;
+          }
+        };
+
+        taskChecks.forEach((cb) => {
+          cb.addEventListener('change', () => {
+            const label = cb.nextElementSibling;
+            if (label) {
+              label.classList.toggle('text-decoration-line-through', cb.checked);
+              label.classList.toggle('text-body-secondary', cb.checked);
+            }
+            updateTaskCount();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
