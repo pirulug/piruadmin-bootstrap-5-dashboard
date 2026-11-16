@@ -1,0 +1,425 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Prompt Library"
+  - pageUrl = "pages/prompts"
+
+block content
+  //- Top Filters & Actions
+  .bg-body.p-3.rounded.mb-3
+    .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+      .d-flex.align-items-center.gap-2
+        span.fw-bold.text-uppercase.small.text-body-secondary
+          i.bi.bi-stars.text-primary.me-1
+          | Curated AI Prompts
+        span#promptCountBadge.badge.bg-primary-subtle.text-primary 6 prompts
+      button.btn.btn-primary.text-uppercase.fw-bold.text-nowrap(type="button" data-bs-toggle="modal" data-bs-target="#newPromptModal")
+        i.bi.bi-plus-lg.me-1
+        | New Prompt
+
+    hr.my-2
+
+    .d-flex.flex-wrap.justify-content-end.align-items-center.gap-2
+      select#promptCategoryFilter.form-select.w-auto(aria-label="Filter by category")
+        option(value="" selected) All categories
+        option(value="Coding") Coding
+        option(value="Marketing") Marketing
+        option(value="Data") Data &amp; SQL
+        option(value="Writing") Writing
+        option(value="Product") Product
+        option(value="Design") Design
+
+      select#promptModelFilter.form-select.w-auto(aria-label="Filter by model")
+        option(value="" selected) All models
+        option(value="Claude Opus") Claude Opus
+        option(value="GPT-5.2") GPT-5.2
+        option(value="Gemini 3.0") Gemini 3.0
+
+      .input-group.w-auto.flex-grow-1(style="max-width: 450px;")
+        input#promptSearchInput.form-control(type="text" placeholder="Search by title, tag, or prompt text...")
+        button#promptClearBtn.btn.btn-outline-secondary.px-3.text-uppercase.small.fw-bold.text-nowrap(type="button")
+          i.bi.bi-x-lg.me-1
+          | Clear
+
+  //- Prompt Cards Grid
+  #promptGrid.row.g-3.mb-3
+    mixin promptCard(id, title, category, catColor, model, desc, template, tags, uses, isFav)
+      .col-12.col-md-6.col-xl-4.prompt-item(
+        data-category=category
+        data-model=model
+        data-title=title.toLowerCase()
+        data-tags=tags.join(" ").toLowerCase()
+        data-template=template
+      )
+        .card.h-100
+          .card-header.d-flex.justify-content-between.align-items-center.gap-2
+            .d-flex.align-items-center.gap-1.flex-wrap
+              span.badge(class=`bg-${catColor}-subtle text-${catColor}`)= category
+              span.badge.bg-body-secondary.text-body-secondary= model
+            button.btn.btn-sm.btn-link.p-0.text-warning.prompt-fav-btn(type="button" title="Toggle favorite" aria-label="Toggle favorite")
+              i.fs-5(class=isFav ? "bi bi-star-fill" : "bi bi-star")
+          .card-body.d-flex.flex-column
+            h5.card-title.fw-bold.mb-1= title
+            p.small.text-body-secondary.mb-2= desc
+            .bg-body-secondary.p-2.rounded.small.font-monospace.text-body.mb-3.flex-grow-1(style="white-space: pre-line; max-height: 110px; overflow: hidden;")= template
+            .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+              .d-flex.flex-wrap.gap-1
+                each tag in tags
+                  span.badge.bg-body-tertiary.text-body-secondary ##{tag}
+              span.small.text-body-secondary
+                i.bi.bi-clipboard-check.me-1
+                | #{uses}
+          .card-footer.d-flex.justify-content-end.gap-1
+            button.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap.prompt-preview-btn(
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#promptDetailModal"
+              data-title=title
+              data-category=category
+              data-model=model
+              data-template=template
+            )
+              i.bi.bi-eye.me-1
+              | Use
+            button.btn.btn-sm.btn-primary.text-uppercase.fw-bold.text-nowrap.prompt-copy-btn(type="button" data-template=template)
+              i.bi.bi-clipboard.me-1
+              | Copy
+
+    +promptCard(
+      "p1",
+      "Senior Code Reviewer",
+      "Coding",
+      "primary",
+      "Claude Opus",
+      "Reviews pull requests for security vulnerabilities, edge cases, and maintainability.",
+      "Act as a senior {{language}} engineer. Review the following code for bugs, security risks, and performance bottlenecks:\n\n{{code_snippet}}",
+      ["code-review", "security", "refactor"],
+      "412",
+      true
+    )
+
+    +promptCard(
+      "p2",
+      "SQL Query Optimizer",
+      "Data",
+      "info",
+      "GPT-5.2",
+      "Rewrites slow SQL queries and suggests composite indexes based on table schema.",
+      "Analyze this {{dialect}} query and table schema. Identify full table scans, suggest indexes, and rewrite for optimal execution:\n\n{{sql_query}}",
+      ["sql", "performance", "indexes"],
+      "289",
+      true
+    )
+
+    +promptCard(
+      "p3",
+      "SaaS Landing Copywriter",
+      "Marketing",
+      "success",
+      "Claude Opus",
+      "Generates high-converting hero headlines, subheadlines, and CTA variants.",
+      "Write 5 hero headline and subheadline pairs for {{product_name}}, targeting {{target_audience}}. Focus on measurable value and clear CTAs.",
+      ["copywriting", "saas", "conversion"],
+      "354",
+      false
+    )
+
+    +promptCard(
+      "p4",
+      "PRD & Feature Spec",
+      "Product",
+      "warning",
+      "Gemini 3.0",
+      "Structures a product requirements document with user stories and acceptance criteria.",
+      "Create a concise PRD for {{feature_name}}. Include problem statement, user stories, edge cases, and measurable success metrics for {{quarter}}.",
+      ["prd", "roadmap", "agile"],
+      "198",
+      false
+    )
+
+    +promptCard(
+      "p5",
+      "UX Microcopy Polisher",
+      "Design",
+      "danger",
+      "GPT-5.2",
+      "Turns technical error messages into clear, empathetic, actionable UI copy.",
+      "Rewrite this technical error for end users in {{tone}} tone, keeping it under 20 words with a clear next action:\n\n{{error_text}}",
+      ["ux-writing", "microcopy", "ui"],
+      "142",
+      true
+    )
+
+    +promptCard(
+      "p6",
+      "Release Notes Generator",
+      "Writing",
+      "secondary",
+      "Gemini 3.0",
+      "Transforms raw git commit logs into clean customer-facing changelog entries.",
+      "Summarize these commits into categorized release notes (New, Improved, Fixed) for {{version}}:\n\n{{commit_log}}",
+      ["changelog", "docs", "release"],
+      "231",
+      false
+    )
+
+  //- Empty State (shown when filters match 0 items)
+  #promptEmptyState.bg-body.p-3.rounded.text-center.d-none
+    i.bi.bi-search.fs-2.text-body-secondary.d-block.mb-2
+    h6.fw-bold.mb-1 No prompts found
+    p.small.text-body-secondary.mb-0 Try adjusting your search query or clearing active filters.
+
+  //- Prompt Detail & Variable Playground Modal
+  #promptDetailModal.modal.fade(tabindex="-1" aria-labelledby="promptDetailModalLabel" aria-hidden="true")
+    .modal-dialog.modal-lg.modal-dialog-centered
+      .modal-content
+        .modal-header
+          <div>
+            h5#promptDetailModalLabel.modal-title.fw-bold Prompt Playground
+            .d-flex.gap-1.mt-1
+              span#modalCategoryBadge.badge.bg-primary-subtle.text-primary Category
+              span#modalModelBadge.badge.bg-body-secondary.text-body-secondary Model
+          button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+        .modal-body
+          #modalVariablesContainer.row.g-3.mb-3
+          label.form-label.small.text-uppercase.fw-bold(for="modalRenderedPrompt") Rendered Prompt
+          textarea#modalRenderedPrompt.form-control.font-monospace.small(rows="6" readonly)
+        .modal-footer
+          button.btn.btn-outline-secondary.text-uppercase.small.fw-bold(type="button" data-bs-dismiss="modal")
+            i.bi.bi-x-lg.me-1
+            | Close
+          button#modalCopyBtn.btn.btn-primary.text-uppercase.small.fw-bold(type="button")
+            i.bi.bi-clipboard.me-1
+            | Copy Rendered Prompt
+
+  //- New Prompt Modal
+  #newPromptModal.modal.fade(tabindex="-1" aria-labelledby="newPromptModalLabel" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered
+      .modal-content
+        form#newPromptForm
+          .modal-header
+            h5#newPromptModalLabel.modal-title.fw-bold
+              i.bi.bi-plus-circle.me-2.text-primary
+              | Create New Prompt
+            button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+          .modal-body
+            .mb-3
+              label.form-label.small.fw-bold(for="newPromptTitle") Title
+              input#newPromptTitle.form-control(type="text" placeholder="e.g. Unit Test Generator" required)
+            .row.g-3.mb-3
+              .col-6
+                label.form-label.small.fw-bold(for="newPromptCategory") Category
+                select#newPromptCategory.form-select
+                  option(value="Coding") Coding
+                  option(value="Marketing") Marketing
+                  option(value="Data") Data
+                  option(value="Writing") Writing
+                  option(value="Product") Product
+                  option(value="Design") Design
+              .col-6
+                label.form-label.small.fw-bold(for="newPromptModel") Recommended Model
+                select#newPromptModel.form-select
+                  option(value="Claude Opus") Claude Opus
+                  option(value="GPT-5.2") GPT-5.2
+                  option(value="Gemini 3.0") Gemini 3.0
+            .mb-3
+              label.form-label.small.fw-bold(for="newPromptDesc") Description
+              input#newPromptDesc.form-control(type="text" placeholder="Short summary of what this prompt does" required)
+            .mb-0
+              label.form-label.small.fw-bold(for="newPromptTemplate") Prompt Template (use {{variable}} placeholders)
+              textarea#newPromptTemplate.form-control.font-monospace.small(rows="4" placeholder="Write unit tests for {{function_name}} using {{framework}}..." required)
+          .modal-footer
+            button.btn.btn-outline-secondary.text-uppercase.small.fw-bold(type="button" data-bs-dismiss="modal")
+              i.bi.bi-x-lg.me-1
+              | Cancel
+            button.btn.btn-primary.text-uppercase.small.fw-bold(type="submit")
+              i.bi.bi-floppy.me-1
+              | Save Prompt
+
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const categoryFilter = document.getElementById("promptCategoryFilter");
+      const modelFilter = document.getElementById("promptModelFilter");
+      const searchInput = document.getElementById("promptSearchInput");
+      const clearBtn = document.getElementById("promptClearBtn");
+      const countBadge = document.getElementById("promptCountBadge");
+      const emptyState = document.getElementById("promptEmptyState");
+      const grid = document.getElementById("promptGrid");
+
+      const filterPrompts = () => {
+        const cat = categoryFilter.value;
+        const model = modelFilter.value;
+        const query = searchInput.value.trim().toLowerCase();
+        const items = grid.querySelectorAll(".prompt-item");
+        let visible = 0;
+
+        items.forEach((item) => {
+          const matchCat = !cat || item.dataset.category === cat;
+          const matchModel = !model || item.dataset.model === model;
+          const haystack = `${item.dataset.title} ${item.dataset.tags} ${(item.dataset.template || "").toLowerCase()}`;
+          const matchQuery = !query || haystack.includes(query);
+
+          const show = matchCat && matchModel && matchQuery;
+          item.classList.toggle("d-none", !show);
+          if (show) visible++;
+        });
+
+        countBadge.textContent = `${visible} prompt${visible === 1 ? "" : "s"}`;
+        emptyState.classList.toggle("d-none", visible > 0);
+      };
+
+      categoryFilter.addEventListener("change", filterPrompts);
+      modelFilter.addEventListener("change", filterPrompts);
+      searchInput.addEventListener("input", filterPrompts);
+      clearBtn.addEventListener("click", () => {
+        categoryFilter.value = "";
+        modelFilter.value = "";
+        searchInput.value = "";
+        filterPrompts();
+      });
+
+      // Copy helper
+      const copyWithFeedback = (btn, text) => {
+        navigator.clipboard?.writeText(text).then(() => {
+          const originalHtml = btn.innerHTML;
+          btn.innerHTML = '<i class="bi bi-check2 me-1"></i>Copied!';
+          btn.classList.replace("btn-primary", "btn-success");
+          setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            btn.classList.replace("btn-success", "btn-primary");
+          }, 1500);
+        });
+      };
+
+      grid.addEventListener("click", (e) => {
+        const copyBtn = e.target.closest(".prompt-copy-btn");
+        if (copyBtn) {
+          copyWithFeedback(copyBtn, copyBtn.dataset.template || "");
+          return;
+        }
+
+        const favBtn = e.target.closest(".prompt-fav-btn");
+        if (favBtn) {
+          const icon = favBtn.querySelector("i");
+          icon.classList.toggle("bi-star");
+          icon.classList.toggle("bi-star-fill");
+        }
+      });
+
+      // Detail & Variable Playground Modal
+      const detailModal = document.getElementById("promptDetailModal");
+      const varsContainer = document.getElementById("modalVariablesContainer");
+      const renderedOutput = document.getElementById("modalRenderedPrompt");
+      let activeTemplate = "";
+
+      const renderPrompt = () => {
+        let output = activeTemplate;
+        varsContainer.querySelectorAll("input[data-var]").forEach((inp) => {
+          const val = inp.value.trim();
+          const key = inp.dataset.var;
+          output = output.replaceAll(`{{${key}}}`, val || `{{${key}}}`);
+        });
+        renderedOutput.value = output;
+      };
+
+      detailModal.addEventListener("show.bs.modal", (event) => {
+        const trigger = event.relatedTarget;
+        if (!trigger) return;
+
+        document.getElementById("promptDetailModalLabel").textContent = trigger.dataset.title;
+        document.getElementById("modalCategoryBadge").textContent = trigger.dataset.category;
+        document.getElementById("modalModelBadge").textContent = trigger.dataset.model;
+        activeTemplate = trigger.dataset.template || "";
+
+        const matches = [...new Set([...activeTemplate.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]))];
+        varsContainer.innerHTML = "";
+
+        if (matches.length) {
+          matches.forEach((varName) => {
+            const col = document.createElement("div");
+            col.className = "col-12 col-md-6";
+            col.innerHTML = `
+              <label class="form-label small fw-bold">${varName}</label>
+              <input type="text" class="form-control form-control-sm" data-var="${varName}" placeholder="Enter ${varName}...">
+            `;
+            col.querySelector("input").addEventListener("input", renderPrompt);
+            varsContainer.appendChild(col);
+          });
+        } else {
+          varsContainer.innerHTML = '<div class="col-12 small text-body-secondary">No variables detected in this prompt.</div>';
+        }
+
+        renderPrompt();
+      });
+
+      document.getElementById("modalCopyBtn").addEventListener("click", function () {
+        copyWithFeedback(this, renderedOutput.value);
+      });
+
+      // Add New Prompt dynamically
+      document.getElementById("newPromptForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const title = document.getElementById("newPromptTitle").value.trim();
+        const category = document.getElementById("newPromptCategory").value;
+        const model = document.getElementById("newPromptModel").value;
+        const desc = document.getElementById("newPromptDesc").value.trim();
+        const template = document.getElementById("newPromptTemplate").value.trim();
+
+        const col = document.createElement("div");
+        col.className = "col-12 col-md-6 col-xl-4 prompt-item";
+        col.dataset.category = category;
+        col.dataset.model = model;
+        col.dataset.title = title.toLowerCase();
+        col.dataset.tags = category.toLowerCase();
+        col.dataset.template = template;
+
+        col.innerHTML = `
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center gap-2">
+              <div class="d-flex align-items-center gap-1 flex-wrap">
+                <span class="badge bg-primary-subtle text-primary">${category}</span>
+                <span class="badge bg-body-secondary text-body-secondary">${model}</span>
+              </div>
+              <button class="btn btn-sm btn-link p-0 text-warning prompt-fav-btn" type="button" title="Toggle favorite">
+                <i class="fs-5 bi bi-star"></i>
+              </button>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-1"></h5>
+              <p class="small text-body-secondary mb-2"></p>
+              <div class="bg-body-secondary p-2 rounded small font-monospace text-body mb-3 flex-grow-1" style="white-space: pre-line; max-height: 110px; overflow: hidden;"></div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="badge bg-body-tertiary text-body-secondary">#custom</span>
+                <span class="small text-body-secondary"><i class="bi bi-clipboard-check me-1"></i>0</span>
+              </div>
+            </div>
+            <div class="card-footer d-flex justify-content-end gap-1">
+              <button class="btn btn-sm btn-outline-info text-uppercase fw-bold text-nowrap prompt-preview-btn" type="button" data-bs-toggle="modal" data-bs-target="#promptDetailModal">
+                <i class="bi bi-eye me-1"></i>Use
+              </button>
+              <button class="btn btn-sm btn-primary text-uppercase fw-bold text-nowrap prompt-copy-btn" type="button">
+                <i class="bi bi-clipboard me-1"></i>Copy
+              </button>
+            </div>
+          </div>
+        `;
+
+        col.querySelector("h5").textContent = title;
+        col.querySelector("p").textContent = desc;
+        col.querySelector(".font-monospace").textContent = template;
+        const previewBtn = col.querySelector(".prompt-preview-btn");
+        previewBtn.dataset.title = title;
+        previewBtn.dataset.category = category;
+        previewBtn.dataset.model = model;
+        previewBtn.dataset.template = template;
+        col.querySelector(".prompt-copy-btn").dataset.template = template;
+
+        grid.prepend(col);
+        this.reset();
+        filterPrompts();
+
+        const modalEl = document.getElementById("newPromptModal");
+        bootstrap.Modal.getInstance(modalEl)?.hide();
+      });
+    });

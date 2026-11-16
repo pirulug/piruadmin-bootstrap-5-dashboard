@@ -1,0 +1,287 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "AI Chat"
+  - pageUrl = "pages/chat-ai"
+
+block content
+  .row.g-3
+    //- Left Sidebar: Conversations & Parameters
+    .col-12.col-lg-4.col-xl-3.d-flex
+      .card.flex-fill.w-100
+        .card-header
+          button#newChatBtn.btn.btn-primary.w-100.text-uppercase.fw-bold(type="button")
+            i.bi.bi-plus-lg.me-1
+            | New Chat
+        .card-body.d-flex.flex-column.justify-content-between.p-3
+          div
+            .input-group.input-group-sm.mb-3
+              span.input-group-text
+                i.bi.bi-search
+              input#chatSearchInput.form-control(type="text" placeholder="Search conversations...")
+
+            .small.text-uppercase.fw-bold.text-body-secondary.mb-2 Today
+            .list-group.list-group-flush.mb-3
+              a.list-group-item.list-group-item-action.rounded.border-0.active.chat-history-item(href="#" data-chat-title="Refactor Auth Middleware")
+                .d-flex.align-items-center.gap-2
+                  i.bi.bi-chat-left-text
+                  span.text-truncate Refactor Auth Middleware
+              a.list-group-item.list-group-item-action.rounded.border-0.chat-history-item(href="#" data-chat-title="Optimize PostgreSQL Joins")
+                .d-flex.align-items-center.gap-2
+                  i.bi.bi-chat-left-text
+                  span.text-truncate Optimize PostgreSQL Joins
+              a.list-group-item.list-group-item-action.rounded.border-0.chat-history-item(href="#" data-chat-title="SaaS Pricing Copy Ideas")
+                .d-flex.align-items-center.gap-2
+                  i.bi.bi-chat-left-text
+                  span.text-truncate SaaS Pricing Copy Ideas
+
+            .small.text-uppercase.fw-bold.text-body-secondary.mb-2 Yesterday
+            .list-group.list-group-flush.mb-3
+              a.list-group-item.list-group-item-action.rounded.border-0.chat-history-item(href="#" data-chat-title="Docker Compose Setup")
+                .d-flex.align-items-center.gap-2
+                  i.bi.bi-chat-left-text
+                  span.text-truncate Docker Compose Setup
+              a.list-group-item.list-group-item-action.rounded.border-0.chat-history-item(href="#" data-chat-title="Release Notes v2.3")
+                .d-flex.align-items-center.gap-2
+                  i.bi.bi-chat-left-text
+                  span.text-truncate Release Notes v2.3
+
+          //- Model Parameters
+          .border-top.pt-3
+            .d-flex.justify-content-between.align-items-center.mb-1
+              label.form-label.small.fw-bold.mb-0(for="tempRange") Temperature
+              span#tempValue.badge.bg-primary-subtle.text-primary 0.7
+            input#tempRange.form-range.mb-2(type="range" min="0" max="1" step="0.1" value="0.7")
+
+            label.form-label.small.fw-bold.mb-1(for="maxTokensSelect") Max Tokens
+            select#maxTokensSelect.form-select.form-select-sm
+              option(value="1024") 1,024 tokens
+              option(value="2048" selected) 2,048 tokens
+              option(value="4096") 4,096 tokens
+              option(value="8192") 8,192 tokens
+
+    //- Right Panel: Chat Workspace
+    .col-12.col-lg-8.col-xl-9.d-flex
+      .card.flex-fill.w-100
+        //- Chat Header
+        .card-header.d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+          .d-flex.align-items-center.gap-2
+            .rounded-circle.bg-primary-subtle.text-primary.d-flex.align-items-center.justify-content-center(style="width: 34px; height: 34px;")
+              i.bi.bi-stars
+            div
+              h5#activeChatTitle.card-title.mb-0 Refactor Auth Middleware
+              .d-flex.align-items-center.gap-2
+                select#chatModelSelect.form-select.form-select-sm.w-auto.border-0.bg-body-secondary.py-0(aria-label="Select AI model")
+                  option(value="Claude Opus 4.6" selected) Claude Opus 4.6
+                  option(value="GPT-5.2") GPT-5.2
+                  option(value="Gemini 3.0 Flash") Gemini 3.0 Flash
+                span#chatTokenBadge.badge.bg-body-secondary.text-body-secondary 1,420 tokens
+
+          .d-flex.align-items-center.gap-1
+            button#clearChatBtn.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(type="button")
+              i.bi.bi-trash.me-1
+              | Clear
+
+        //- Messages Area
+        #chatMessages.card-body(style="height: 480px; overflow-y: auto;")
+          //- User Message
+          .d-flex.justify-content-end.align-items-start.gap-2.mb-3
+            .bg-primary.text-white.p-3.rounded(style="max-width: 78%;")
+              p.mb-0 How can I simplify JWT verification in my Express middleware without duplicating error handling?
+            .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.flex-shrink-0(style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600;") JD
+
+          //- Assistant Message
+          .d-flex.justify-content-start.align-items-start.gap-2.mb-3
+            .rounded-circle.bg-body-secondary.text-primary.d-flex.align-items-center.justify-content-center.flex-shrink-0(style="width: 34px; height: 34px;")
+              i.bi.bi-cpu
+            .bg-body-secondary.p-3.rounded(style="max-width: 82%;")
+              p.mb-2 You can centralize token extraction and error mapping into a single async middleware wrapper:
+              pre.bg-body.p-2.rounded.small.font-monospace.mb-2
+                code.
+                  export const requireAuth = (req, res, next) =&gt; {
+                    const token = req.headers.authorization?.split(" ")[1];
+                    if (!token) return res.status(401).json({ error: "Missing token" });
+
+                    try {
+                      req.user = jwt.verify(token, process.env.JWT_SECRET);
+                      return next();
+                    } catch {
+                      return res.status(401).json({ error: "Invalid or expired token" });
+                    }
+                  };
+              .d-flex.align-items-center.gap-2
+                button.btn.btn-sm.btn-outline-secondary.chat-copy-code-btn(type="button")
+                  i.bi.bi-clipboard.me-1
+                  | Copy
+                button.btn.btn-sm.btn-link.text-body-secondary.p-0.ms-2(type="button" title="Helpful")
+                  i.bi.bi-hand-thumbs-up
+                button.btn.btn-sm.btn-link.text-body-secondary.p-0(type="button" title="Not helpful")
+                  i.bi.bi-hand-thumbs-down
+
+        //- Composer Footer
+        .card-footer
+          //- Quick Prompt Chips
+          .d-flex.flex-wrap.gap-1.mb-2
+            button.btn.btn-sm.btn-outline-secondary.chat-chip-btn(type="button" data-prompt="Add role-based access control (RBAC) to this middleware.")
+              i.bi.bi-shield-lock.me-1
+              | Add RBAC
+            button.btn.btn-sm.btn-outline-secondary.chat-chip-btn(type="button" data-prompt="Write Jest unit tests for requireAuth covering missing and expired tokens.")
+              i.bi.bi-check2-square.me-1
+              | Write unit tests
+            button.btn.btn-sm.btn-outline-secondary.chat-chip-btn(type="button" data-prompt="Convert this middleware to TypeScript with strict types.")
+              i.bi.bi-code-slash.me-1
+              | Convert to TS
+
+          form#chatForm
+            .input-group
+              button.btn.btn-outline-secondary(type="button" title="Attach file")
+                i.bi.bi-paperclip
+              textarea#chatInput.form-control(rows="1" placeholder="Ask anything... (Enter to send, Shift+Enter for new line)" style="resize: none;")
+              button.btn.btn-primary.px-3.text-uppercase.fw-bold.text-nowrap(type="submit")
+                i.bi.bi-send.me-1
+                | Send
+
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const chatMessages = document.getElementById("chatMessages");
+      const chatForm = document.getElementById("chatForm");
+      const chatInput = document.getElementById("chatInput");
+      const chatModelSelect = document.getElementById("chatModelSelect");
+      const chatTokenBadge = document.getElementById("chatTokenBadge");
+      const activeChatTitle = document.getElementById("activeChatTitle");
+      const tempRange = document.getElementById("tempRange");
+      const tempValue = document.getElementById("tempValue");
+      const searchInput = document.getElementById("chatSearchInput");
+
+      let totalTokens = 1420;
+
+      const scrollToBottom = () => {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      };
+
+      const appendUserMessage = (text) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "d-flex justify-content-end align-items-start gap-2 mb-3";
+        wrapper.innerHTML = `
+          <div class="bg-primary text-white p-3 rounded" style="max-width: 78%;">
+            <p class="mb-0"></p>
+          </div>
+          <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600;">JD</div>
+        `;
+        wrapper.querySelector("p").textContent = text;
+        chatMessages.appendChild(wrapper);
+        scrollToBottom();
+      };
+
+      const appendAssistantReply = (promptText) => {
+        const model = chatModelSelect.value;
+        const thinking = document.createElement("div");
+        thinking.className = "d-flex justify-content-start align-items-start gap-2 mb-3";
+        thinking.innerHTML = `
+          <div class="rounded-circle bg-body-secondary text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px;">
+            <i class="bi bi-cpu"></i>
+          </div>
+          <div class="bg-body-secondary p-3 rounded text-body-secondary small">
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+            ${model} is thinking...
+          </div>
+        `;
+        chatMessages.appendChild(thinking);
+        scrollToBottom();
+
+        setTimeout(() => {
+          thinking.remove();
+          const reply = document.createElement("div");
+          reply.className = "d-flex justify-content-start align-items-start gap-2 mb-3";
+          reply.innerHTML = `
+            <div class="rounded-circle bg-body-secondary text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 34px; height: 34px;">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <div class="bg-body-secondary p-3 rounded" style="max-width: 82%;">
+              <p class="mb-2"></p>
+              <div class="small text-body-secondary">Model: <strong>${model}</strong> &bull; Temp: ${tempRange.value}</div>
+            </div>
+          `;
+          reply.querySelector("p").textContent = `Here is a concise response for: "${promptText}". You can refine the prompt or adjust Temperature (${tempRange.value}) in the left panel for more deterministic or creative output.`;
+          chatMessages.appendChild(reply);
+
+          totalTokens += Math.max(45, promptText.length * 2 + 80);
+          chatTokenBadge.textContent = `${totalTokens.toLocaleString()} tokens`;
+          scrollToBottom();
+        }, 650);
+      };
+
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (!text) return;
+        appendUserMessage(text);
+        chatInput.value = "";
+        appendAssistantReply(text);
+      });
+
+      chatInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          chatForm.dispatchEvent(new Event("submit"));
+        }
+      });
+
+      document.querySelectorAll(".chat-chip-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          chatInput.value = btn.dataset.prompt || "";
+          chatInput.focus();
+        });
+      });
+
+      document.getElementById("clearChatBtn").addEventListener("click", () => {
+        chatMessages.innerHTML = `
+          <div class="text-center text-body-secondary py-5">
+            <i class="bi bi-stars fs-2 text-primary d-block mb-2"></i>
+            <h6 class="fw-bold mb-1">Start a new conversation</h6>
+            <p class="small mb-0">Select a quick prompt below or type your question.</p>
+          </div>
+        `;
+        totalTokens = 0;
+        chatTokenBadge.textContent = "0 tokens";
+      });
+
+      document.getElementById("newChatBtn").addEventListener("click", () => {
+        activeChatTitle.textContent = "New Conversation";
+        document.getElementById("clearChatBtn").click();
+      });
+
+      document.querySelectorAll(".chat-history-item").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelectorAll(".chat-history-item").forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+          activeChatTitle.textContent = item.dataset.chatTitle || "Conversation";
+        });
+      });
+
+      tempRange.addEventListener("input", () => {
+        tempValue.textContent = tempRange.value;
+      });
+
+      searchInput.addEventListener("input", () => {
+        const q = searchInput.value.trim().toLowerCase();
+        document.querySelectorAll(".chat-history-item").forEach((item) => {
+          const match = (item.dataset.chatTitle || "").toLowerCase().includes(q);
+          item.classList.toggle("d-none", !match);
+        });
+      });
+
+      chatMessages.addEventListener("click", (e) => {
+        const copyBtn = e.target.closest(".chat-copy-code-btn");
+        if (!copyBtn) return;
+        const code = copyBtn.closest(".bg-body-secondary")?.querySelector("code")?.textContent || "";
+        navigator.clipboard?.writeText(code).then(() => {
+          copyBtn.innerHTML = '<i class="bi bi-check2 me-1"></i>Copied!';
+          setTimeout(() => {
+            copyBtn.innerHTML = '<i class="bi bi-clipboard me-1"></i>Copy';
+          }, 1500);
+        });
+      });
+    });

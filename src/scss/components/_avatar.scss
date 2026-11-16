@@ -43,8 +43,8 @@
 
   border-radius: var(--#{$prefix}avatar-border-radius);
 
-  // Sombra interna sutil
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  // Borde interno sutil
+  border: 1px solid rgba(0, 0, 0, 0.05);
 
   user-select: none;
   transition: all 0.2s ease-in-out;
@@ -214,7 +214,7 @@
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .avatar {
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
 
       &:not([class*="avatar-"]) {
         --#{$prefix}avatar-bg: var(--#{$prefix}tertiary-bg);

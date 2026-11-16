@@ -1,0 +1,414 @@
+extends ../layouts/dashboard
+
+append config
+  - pageName = "AI Analytics Dashboard"
+  - pageUrl = "dashboard-ia"
+
+block content
+  //- Top Action Bar
+  .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2.mb-3
+    .d-flex.align-items-center.gap-2
+      .btn-group.btn-group-sm(role="group" aria-label="AI analytics period")
+        button.btn.btn-outline-secondary.active(type="button" data-ai-period="7d") 7 days
+        button.btn.btn-outline-secondary(type="button" data-ai-period="30d") 30 days
+        button.btn.btn-outline-secondary(type="button" data-ai-period="90d") 90 days
+      span.badge.bg-success-subtle.text-success
+        i.bi.bi-cpu.me-1
+        | 3 Models Active
+    .d-flex.align-items-center.gap-2
+      button.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-download.me-1
+        | Export Logs
+      button.btn.btn-sm.btn-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-key.me-1
+        | API Keys
+
+  //- 5 KPI Stat Cards
+  .row.g-3.mb-3
+    mixin aiStatCard(title, value, trend, trendPositiveGood, trendUp, icon, color, subtitle)
+      .col-12.col-sm-6.col-lg-4.col-xl
+        .card.h-100
+          .card-body
+            .d-flex.justify-content-between.align-items-start.mb-2
+              div
+                span.text-body-secondary.small.text-uppercase.fw-bold= title
+                h2.h3.fw-bold.mt-1.mb-0= value
+              .stat(class=`stat-${color}`)
+                i(class=`bi bi-${icon} fs-5`)
+            .d-flex.align-items-center.gap-2
+              - var isGood = trendPositiveGood ? trendUp : !trendUp
+              span.badge(class=isGood ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger")
+                i.me-1(class=trendUp ? "bi bi-arrow-up-short" : "bi bi-arrow-down-short")
+                = trend
+              span.small.text-body-secondary= subtitle
+
+    +aiStatCard("Tokens", "51.1M", "10.5%", true, true, "hash", "primary", "vs previous 7 days")
+    +aiStatCard("Cost", "$362", "6.5%", false, true, "currency-dollar", "warning", "vs previous 7 days")
+    +aiStatCard("Requests", "49.3K", "10.9%", true, true, "arrow-left-right", "info", "vs previous 7 days")
+    +aiStatCard("Avg. Latency", "1,014 ms", "0.8%", false, false, "stopwatch", "success", "vs previous 7 days")
+    +aiStatCard("Error Rate", "1.04%", "18.7%", false, true, "exclamation-triangle", "danger", "vs previous 7 days")
+
+  //- Tokens by Model & Requests by Model
+  .row.g-3.mb-3
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          div
+            h5.card-title.mb-0 Tokens by Model
+            small.text-body-secondary Daily token consumption (millions)
+          span.text-body-secondary.small Stacked usage
+        .card-body
+          div(style="position: relative; height: 290px;")
+            canvas#chartjs-ai-tokens
+
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Requests by Model
+          span.text-body-secondary.small Share
+        .card-body.d-flex.flex-column.justify-content-between
+          div(style="position: relative; height: 220px;")
+            canvas#chartjs-ai-requests
+            .position-absolute.top-50.start-50.translate-middle.text-center.pe-none
+              .small.text-body-secondary Requests
+              .h4.fw-bold.mb-0 49.3K
+          .d-flex.flex-wrap.justify-content-center.gap-3.mt-3.small
+            span
+              i.bi.bi-circle-fill.text-primary.me-1
+              | Claude Opus
+            span
+              i.bi.bi-circle-fill.text-success.me-1
+              | GPT-5.2
+            span
+              i.bi.bi-circle-fill.text-warning.me-1
+              | Gemini Flash
+
+  //- Cost by Model & Latency (p50 / p95)
+  .row.g-3.mb-3
+    .col-12.col-xl-6.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Cost by Model
+          span.text-body-secondary.small Total spend ($362)
+        .card-body
+          div(style="position: relative; height: 260px;")
+            canvas#chartjs-ai-cost
+
+    .col-12.col-xl-6.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Latency (p50 vs p95)
+          span.text-body-secondary.small Response time (ms)
+        .card-body
+          div(style="position: relative; height: 260px;")
+            canvas#chartjs-ai-latency
+
+  //- Recent Conversations Table
+  .row.g-3
+    .col-12
+      .card
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Recent Conversations
+          span.text-body-secondary.small Latest model inferences
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap User
+                  th.text-uppercase.fw-bold.text-nowrap Model
+                  th.text-uppercase.fw-bold.text-nowrap Tokens
+                  th.text-uppercase.fw-bold.text-nowrap Cost
+                  th.text-uppercase.fw-bold.text-nowrap Latency
+                  th.text-uppercase.fw-bold.text-nowrap Status
+                  th.text-uppercase.fw-bold.text-nowrap Time
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Action
+              tbody
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-danger.text-white.d-flex.align-items-center.justify-content-center(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") CH
+                      span.fw-bold.text-body Charles Hall
+                  td
+                    span.badge.bg-success-subtle.text-success GPT-5.2
+                  td 1,593
+                  td.fw-bold $0.0048
+                  td 776 ms
+                  td
+                    span.badge.bg-success Completed
+                  td.text-body-secondary.small 2 minutes ago
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-eye.me-1
+                      | Inspect
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") VT
+                      span.fw-bold.text-body Vanessa Tucker
+                  td
+                    span.badge.bg-primary-subtle.text-primary Claude Opus
+                  td 2,504
+                  td.fw-bold $0.0376
+                  td 1,681 ms
+                  td
+                    span.badge.bg-success Completed
+                  td.text-body-secondary.small 6 minutes ago
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-eye.me-1
+                      | Inspect
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-warning.text-white.d-flex.align-items-center.justify-content-center(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") CM
+                      span.fw-bold.text-body Christina Mason
+                  td
+                    span.badge.bg-warning-subtle.text-warning Gemini Flash
+                  td 4,120
+                  td.fw-bold $0.0012
+                  td 412 ms
+                  td
+                    span.badge.bg-success Completed
+                  td.text-body-secondary.small 14 minutes ago
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-eye.me-1
+                      | Inspect
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-info.text-white.d-flex.align-items-center.justify-content-center(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") WH
+                      span.fw-bold.text-body William Harris
+                  td
+                    span.badge.bg-primary-subtle.text-primary Claude Opus
+                  td 840
+                  td.fw-bold $0.0126
+                  td 3,120 ms
+                  td
+                    span.badge.bg-danger-subtle.text-danger Rate Limited
+                  td.text-body-secondary.small 29 minutes ago
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-eye.me-1
+                      | Inspect
+
+block scripts
+  script(src=assets + "plugins/chartjs/chartjs.js")
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const getVar = (name) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+      const primary = window.theme?.primary || "#e83283";
+      const success = window.theme?.success || "#28a745";
+      const warning = window.theme?.warning || "#ffc107";
+      const danger = window.theme?.danger || "#dc3545";
+      const gridColor = getVar("--bs-border-color-translucent") || "rgba(120, 130, 140, 0.15)";
+      const textColor = getVar("--bs-secondary-color") || "#6c757d";
+
+      // 1. Tokens by Model Stacked Area Chart
+      const tokenPeriods = {
+        "7d": {
+          labels: ["10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov"],
+          claude: [3.4, 2.8, 3.2, 2.7, 2.0, 1.9, 3.4],
+          gpt: [3.7, 3.4, 3.7, 3.8, 1.9, 1.9, 3.3],
+          gemini: [1.5, 1.6, 1.6, 1.8, 0.9, 0.9, 1.3]
+        },
+        "30d": {
+          labels: ["Wk 1", "Wk 2", "Wk 3", "Wk 4"],
+          claude: [14.2, 16.5, 15.1, 18.4],
+          gpt: [16.8, 18.2, 17.4, 20.1],
+          gemini: [7.5, 8.1, 7.9, 9.4]
+        },
+        "90d": {
+          labels: ["Sep", "Oct", "Nov"],
+          claude: [48.5, 56.2, 64.2],
+          gpt: [54.1, 63.8, 72.5],
+          gemini: [24.0, 28.4, 32.9]
+        }
+      };
+
+      const tokensChart = new Chart(document.getElementById("chartjs-ai-tokens").getContext("2d"), {
+        type: "line",
+        data: {
+          labels: tokenPeriods["7d"].labels,
+          datasets: [
+            {
+              label: "Claude Opus",
+              data: tokenPeriods["7d"].claude,
+              borderColor: primary,
+              backgroundColor: "rgba(232, 50, 131, 0.15)",
+              fill: true,
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 4
+            },
+            {
+              label: "GPT-5.2",
+              data: tokenPeriods["7d"].gpt,
+              borderColor: success,
+              backgroundColor: "rgba(40, 167, 69, 0.15)",
+              fill: true,
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 4
+            },
+            {
+              label: "Gemini Flash",
+              data: tokenPeriods["7d"].gemini,
+              borderColor: warning,
+              backgroundColor: "rgba(255, 193, 7, 0.15)",
+              fill: true,
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 4
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              align: "start",
+              labels: { color: textColor, boxWidth: 12, usePointStyle: true }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textColor } },
+            y: {
+              stacked: true,
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => val + "M"
+              }
+            }
+          }
+        }
+      });
+
+      document.querySelectorAll("[data-ai-period]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-ai-period]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const p = tokenPeriods[btn.getAttribute("data-ai-period")];
+          if (!p) return;
+          tokensChart.data.labels = p.labels;
+          tokensChart.data.datasets[0].data = p.claude;
+          tokensChart.data.datasets[1].data = p.gpt;
+          tokensChart.data.datasets[2].data = p.gemini;
+          tokensChart.update();
+        });
+      });
+
+      // 2. Requests by Model Doughnut
+      new Chart(document.getElementById("chartjs-ai-requests"), {
+        type: "doughnut",
+        data: {
+          labels: ["Claude Opus", "GPT-5.2", "Gemini Flash"],
+          datasets: [
+            {
+              data: [10800, 24100, 14400],
+              backgroundColor: [primary, success, warning],
+              borderWidth: 0
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          cutout: "72%",
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 3. Cost by Model Horizontal Bar
+      new Chart(document.getElementById("chartjs-ai-cost"), {
+        type: "bar",
+        data: {
+          labels: ["Claude Opus", "GPT-5.2", "Gemini Flash"],
+          datasets: [
+            {
+              label: "Cost ($)",
+              data: [289, 66, 7],
+              backgroundColor: [primary, success, warning],
+              borderRadius: 4,
+              barPercentage: 0.5
+            }
+          ]
+        },
+        options: {
+          indexAxis: "y",
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => "$" + val
+              }
+            },
+            y: { grid: { display: false }, ticks: { color: textColor } }
+          }
+        }
+      });
+
+      // 4. Latency p50 vs p95
+      new Chart(document.getElementById("chartjs-ai-latency"), {
+        type: "line",
+        data: {
+          labels: ["10 Nov", "11 Nov", "12 Nov", "13 Nov", "14 Nov", "15 Nov", "16 Nov"],
+          datasets: [
+            {
+              label: "p50",
+              data: [1010, 1020, 1065, 1040, 985, 970, 990],
+              borderColor: primary,
+              borderWidth: 2,
+              tension: 0.35,
+              pointRadius: 0,
+              pointHoverRadius: 4
+            },
+            {
+              label: "p95",
+              data: [2620, 2650, 2610, 2320, 2410, 2290, 2580],
+              borderColor: danger,
+              borderWidth: 2,
+              borderDash: [4, 4],
+              tension: 0.35,
+              pointRadius: 0,
+              pointHoverRadius: 4
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              align: "start",
+              labels: { color: textColor, boxWidth: 12, usePointStyle: true }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textColor } },
+            y: {
+              min: 500,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => val.toLocaleString() + " ms"
+              }
+            }
+          }
+        }
+      });
+    });

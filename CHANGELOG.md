@@ -209,3 +209,27 @@
 
 ### Dependencies
 - Updated devDependencies (`webpack`, `webpack-cli`, `sass`, `sass-loader`, `postcss`, `postcss-preset-env`, `@babel/core`, `@babel/preset-env`, `css-loader`).
+
+## [v2.4.0] - 16/11/2026
+
+### Added
+- **New Dashboard Demos**:
+  - `dashboard-ecomerse.pug`: E-Commerce Dashboard with KPI cards, dual-series Revenue Overview chart, jsVectorMap world sales map, Monthly Orders bar chart, Top Selling Products, Recent Orders, and Sales by Category.
+  - `dashboard-crm.pug`: CRM Dashboard with period filters (`30d`, `90d`, `YTD`), Revenue vs Target chart, Leads by Source doughnut, Sales Pipeline funnel, Top Sales Reps quota progress, Recent Deals, and interactive Upcoming Tasks.
+  - `dashboard-crypto.pug`: Crypto Dashboard with live pair selector (`BTC/USDT`, `ETH/USDT`, `SOL/USDT`), Quick Order Buy/Sell calculator, Portfolio Allocation, Top Markets, Order Book, and Recent Transactions.
+  - `dashboard-ia.pug`: AI Analytics Dashboard with 5 KPI cards, stacked Tokens by Model chart, Requests by Model doughnut, Cost by Model bar chart, `p50` vs `p95` Latency chart, and Recent Conversations.
+- **New Application & Marketing Pages**:
+  - `pages/prompts.pug`: Prompt Library with category/model/search filters, favorite toggles, `{{variable}}` Playground modal, and dynamic prompt creation.
+  - `pages/chat-ai.pug`: AI Chat workspace with conversation history, model/temperature/max-tokens controls, quick prompt chips, and code copy actions.
+  - `pages/chat.pug`: Team Chat interface with contact search, All/Unread filters, online status indicators, attachment previews, and live message composer.
+  - `pages/pricing.pug`: Pricing page with interactive Monthly/Annual (20% off) toggle, 3 plan tiers, feature comparison table, and FAQ accordion.
+
+### Fixed & Improved
+- **Webpack & Loader**:
+  - Separated Webpack filesystem cache names (`serve` vs `build`) in `webpack.config.js` to prevent stale `mini-css-extract-plugin` HMR code (`module.hot.data`) from breaking `dev`/`watch` builds.
+  - Updated `src/js/modules/loader.js` to handle `document.readyState === "complete"` and added a 3s fallback timeout so the loader never gets stuck on reload.
+  - Added null-safety guards in `src/js/modules/sidebar.js` and live `prefers-color-scheme` listener in `src/js/modules/darkLightMode.js`.
+- **Styles & Layouts**:
+  - Removed duplicate `src/scss/components/_badge.scss` (consolidated in `_badges.scss`) and removed residual `box-shadow` rules in `_auth.scss` and `_avatar.scss`.
+  - Fixed anti-FOUC inline theme script for `"auto"` mode, unified `theme-color` (`#e83283`), `lang="en"`, and `og:image` / `twitter:image` asset paths across layouts.
+  - Updated `pages/timeline.pug` (`.bg-body-secondary` instead of `.bg-light`) and `dashboard.pug` (`g-3`/`mb-3`).

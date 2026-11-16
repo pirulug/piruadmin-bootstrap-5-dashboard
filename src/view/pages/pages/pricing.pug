@@ -1,0 +1,212 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Pricing"
+  - pageUrl = "pages/pricing"
+
+block content
+  //- Header & Billing Toggle
+  .bg-body.p-3.rounded.mb-3.text-center
+    span.badge.bg-primary-subtle.text-primary.text-uppercase.fw-bold.mb-2 Flexible Plans
+    h2.h3.fw-bold.mb-1 Simple, transparent pricing
+    p.text-body-secondary.mb-3 Choose the plan that fits your team. Upgrade or downgrade anytime.
+
+    .d-inline-flex.align-items-center.gap-2.bg-body-secondary.px-3.py-2.rounded
+      span#monthlyLabel.small.fw-bold.text-body Monthly
+      .form-check.form-switch.mb-0
+        input#billingCycleToggle.form-check-input(type="checkbox" role="switch" aria-label="Toggle annual billing")
+      span#annualLabel.small.fw-bold.text-body-secondary Annual
+      span.badge.bg-success-subtle.text-success Save 20%
+
+  //- Pricing Cards
+  .row.g-3.mb-3
+    mixin pricingCard(name, desc, monthlyPrice, annualPrice, popular, ctaText, ctaClass, features)
+      .col-12.col-lg-4.d-flex
+        .card.flex-fill.w-100
+          .card-header.d-flex.justify-content-between.align-items-center
+            h5.card-title.fw-bold.mb-0= name
+            if popular
+              span.badge.bg-primary-subtle.text-primary.text-uppercase.fw-bold Most Popular
+          .card-body.d-flex.flex-column
+            p.small.text-body-secondary.mb-3= desc
+            .d-flex.align-items-baseline.gap-1.mb-1
+              span.h1.fw-bold.mb-0.pricing-amount(data-monthly=monthlyPrice data-annual=annualPrice) $#{monthlyPrice}
+              span.text-body-secondary / month
+            small.text-body-secondary.mb-3.pricing-cycle-note Billed monthly
+
+            ul.list-unstyled.d-flex.flex-column.gap-2.mb-3.flex-grow-1
+              each feat in features
+                li.d-flex.align-items-center.gap-2.small
+                  if feat.included
+                    i.bi.bi-check-circle-fill.text-success
+                    span= feat.text
+                  else
+                    i.bi.bi-dash-circle.text-body-secondary
+                    span.text-body-secondary= feat.text
+
+            a.btn.w-100.text-uppercase.fw-bold(class=ctaClass href="#")
+              = ctaText
+
+    +pricingCard(
+      "Starter",
+      "Everything you need for personal projects and early prototypes.",
+      "19",
+      "15",
+      false,
+      "Get Started",
+      "btn-outline-primary",
+      [
+        { text: "Up to 3 team members", included: true },
+        { text: "100K AI tokens / month", included: true },
+        { text: "Standard analytics dashboards", included: true },
+        { text: "Email support", included: true },
+        { text: "Custom API webhooks", included: false },
+        { text: "SSO & audit logs", included: false }
+      ]
+    )
+
+    +pricingCard(
+      "Pro",
+      "Built for growing teams shipping production SaaS applications.",
+      "49",
+      "39",
+      true,
+      "Start 14-Day Trial",
+      "btn-primary",
+      [
+        { text: "Up to 15 team members", included: true },
+        { text: "2M AI tokens / month", included: true },
+        { text: "All dashboards (E-Commerce, CRM, Crypto, AI)", included: true },
+        { text: "Priority chat & email support", included: true },
+        { text: "Custom API webhooks", included: true },
+        { text: "SSO & audit logs", included: false }
+      ]
+    )
+
+    +pricingCard(
+      "Enterprise",
+      "Dedicated infrastructure, compliance, and custom SLAs at scale.",
+      "129",
+      "103",
+      false,
+      "Contact Sales",
+      "btn-outline-secondary",
+      [
+        { text: "Unlimited team members", included: true },
+        { text: "Unlimited AI tokens", included: true },
+        { text: "Custom white-label dashboards", included: true },
+        { text: "24/7 dedicated account manager", included: true },
+        { text: "Custom API webhooks", included: true },
+        { text: "SSO / SAML & audit logs", included: true }
+      ]
+    )
+
+  //- Feature Comparison Table
+  .bg-body.p-3.rounded.mb-3
+    h5.fw-bold.mb-3 Compare Plans
+    .table-responsive
+      table.table.table-hover.align-middle.table-sm.m-0
+        thead
+          tr
+            th.ps-2.text-uppercase.fw-bold.text-nowrap Feature
+            th.text-center.text-uppercase.fw-bold.text-nowrap Starter
+            th.text-center.text-uppercase.fw-bold.text-nowrap Pro
+            th.text-center.text-uppercase.fw-bold.text-nowrap Enterprise
+        tbody
+          tr
+            td.ps-2.fw-semibold Team Members
+            td.text-center 3
+            td.text-center 15
+            td.text-center Unlimited
+          tr
+            td.ps-2.fw-semibold Monthly AI Tokens
+            td.text-center 100K
+            td.text-center 2M
+            td.text-center Unlimited
+          tr
+            td.ps-2.fw-semibold Prompt Library &amp; AI Chat
+            td.text-center
+              i.bi.bi-check-lg.text-success
+            td.text-center
+              i.bi.bi-check-lg.text-success
+            td.text-center
+              i.bi.bi-check-lg.text-success
+          tr
+            td.ps-2.fw-semibold API &amp; Webhooks
+            td.text-center
+              i.bi.bi-dash.text-body-secondary
+            td.text-center
+              i.bi.bi-check-lg.text-success
+            td.text-center
+              i.bi.bi-check-lg.text-success
+          tr
+            td.ps-2.fw-semibold SAML SSO &amp; Audit Logs
+            td.text-center
+              i.bi.bi-dash.text-body-secondary
+            td.text-center
+              i.bi.bi-dash.text-body-secondary
+            td.text-center
+              i.bi.bi-check-lg.text-success
+          tr
+            td.ps-2.fw-semibold Support SLA
+            td.text-center 48h Email
+            td.text-center 4h Priority
+            td.text-center 24/7 Dedicated
+
+  //- FAQ Accordion
+  .card
+    .card-header
+      h5.card-title.mb-0 Frequently Asked Questions
+    .card-body
+      #pricingFaq.accordion.accordion-flush
+        .accordion-item
+          h2.accordion-header
+            button.accordion-button.fw-semibold(type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1")
+              | Can I switch between monthly and annual billing?
+          #faq1.accordion-collapse.collapse.show(data-bs-parent="#pricingFaq")
+            .accordion-body.small.text-body-secondary
+              | Yes, you can switch billing cycles at any time from your Account Settings. Annual upgrades are prorated automatically.
+        .accordion-item
+          h2.accordion-header
+            button.accordion-button.collapsed.fw-semibold(type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2")
+              | Is there a free trial for the Pro plan?
+          #faq2.accordion-collapse.collapse(data-bs-parent="#pricingFaq")
+            .accordion-body.small.text-body-secondary
+              | Every new workspace includes a 14-day free trial of the Pro plan with no credit card required.
+        .accordion-item
+          h2.accordion-header
+            button.accordion-button.collapsed.fw-semibold(type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3")
+              | What happens if I exceed my monthly AI token limit?
+          #faq3.accordion-collapse.collapse(data-bs-parent="#pricingFaq")
+            .accordion-body.small.text-body-secondary
+              | You will receive a notification at 80% and 100% usage. You can enable pay-as-you-go overages or upgrade to the next tier without service interruption.
+
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("billingCycleToggle");
+      const monthlyLabel = document.getElementById("monthlyLabel");
+      const annualLabel = document.getElementById("annualLabel");
+      const amounts = document.querySelectorAll(".pricing-amount");
+      const notes = document.querySelectorAll(".pricing-cycle-note");
+
+      if (!toggle) return;
+
+      toggle.addEventListener("change", () => {
+        const isAnnual = toggle.checked;
+
+        monthlyLabel.classList.toggle("text-body", !isAnnual);
+        monthlyLabel.classList.toggle("text-body-secondary", isAnnual);
+        annualLabel.classList.toggle("text-body", isAnnual);
+        annualLabel.classList.toggle("text-body-secondary", !isAnnual);
+
+        amounts.forEach((el) => {
+          const price = isAnnual ? el.dataset.annual : el.dataset.monthly;
+          el.textContent = `$${price}`;
+        });
+
+        notes.forEach((el) => {
+          el.textContent = isAnnual ? "Billed annually (20% off)" : "Billed monthly";
+        });
+      });
+    });

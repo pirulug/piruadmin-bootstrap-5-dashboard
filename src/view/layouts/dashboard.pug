@@ -3,7 +3,7 @@ include ../config/config
 block config
 
 doctype html
-html(lang="es")
+html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
@@ -13,7 +13,7 @@ html(lang="es")
     meta(name="robots" content="index, follow")
 
     // Theme Color
-    meta(name="theme-color" content="#ff0055")
+    meta(name="theme-color" content="#e83283")
 
     // Primary Meta Tags
     title #{pageName} - Free Bootstrap 5 Admin Template | #{siteName}
@@ -30,14 +30,14 @@ html(lang="es")
     meta(property="og:url" content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property="og:title" content=`${pageName} | ${siteName}`)
     meta(property="og:description" content="Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.")
-    meta(property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png")
+    meta(property="og:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png")
 
     // Twitter
     meta(property="twitter:card" content="summary_large_image")
     meta(property="twitter:url" content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property="twitter:title" content=`${pageName} | ${siteName}`)
     meta(property="twitter:description" content="Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.")
-    meta(property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png")
+    meta(property="twitter:image" content="https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png")
 
     meta(property="twitter:creator" content="@pirulug")
 
@@ -59,7 +59,7 @@ html(lang="es")
       (function () {
         const storedTheme = localStorage.getItem("theme");
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const theme = storedTheme || (prefersDarkScheme ? "dark" : "light");
+        const theme = (!storedTheme || storedTheme === "auto") ? (prefersDarkScheme ? "dark" : "light") : storedTheme;
         document.documentElement.setAttribute("data-bs-theme", theme);
       })();
 

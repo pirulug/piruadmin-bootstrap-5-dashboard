@@ -12,7 +12,7 @@ html(lang='en')
 
     meta(name='robots' content='index, follow')
 
-    meta(name='theme-color' content='#0d6efd')
+    meta(name='theme-color' content='#e83283')
 
     // Primary Meta Tags
     title #{pageName} - Free Bootstrap 5 Admin Template | #{siteName}
@@ -29,14 +29,14 @@ html(lang='en')
     meta(property='og:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property='og:title' content=`${pageName} | ${siteName}`)
     meta(property='og:description' content='Download the best free Bootstrap 5 Admin Dashboard with a clean, flat design and dark mode support.')
-    meta(property='og:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+    meta(property='og:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png')
 
     // Twitter
     meta(property='twitter:card' content='summary_large_image')
     meta(property='twitter:url' content=`https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/${pageUrl}.html`)
     meta(property='twitter:title' content=`${pageName} | ${siteName}`)
     meta(property='twitter:description' content='Modern Bootstrap 5 Admin Dashboard. Flat design, no jQuery, ready for production.')
-    meta(property='twitter:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/img/background.png')
+    meta(property='twitter:image' content='https://pirulug.github.io/piruadmin-bootstrap-5-dashboard/assets/img/background.png')
 
     meta(property='twitter:creator' content='@pirulug')
 
@@ -47,14 +47,14 @@ html(lang='en')
     link(rel='manifest' href=assets + 'img/favicon/site.webmanifest')
 
     // Core theme CSS (includes Bootstrap)
+    link(rel="preload" href=assets + "css/piruadmin-fonts.css" as="style")
+    link(rel="preload" href=assets + "css/piruadmin.css" as="style")
+
     //- link(rel="stylesheet" href=assets + "plugins/fontawesome/fontawesome.css")
     link(rel="stylesheet" href=assets + "plugins/bootstrapicons/bootstrapicons.css")
     //- link(rel="stylesheet" href=assets + "plugins/piruicons/piruicons.css")
     link(rel="stylesheet" href=assets + "css/piruadmin-fonts.css")
     link(rel="stylesheet" href=assets + "css/piruadmin.css")
-
-    link(rel="preload" href=assets + "css/piruadmin-fonts.css" as="style")
-    link(rel="preload" href=assets + "css/piruadmin.css" as="style")
 
     //- 5. SCHEMA.ORG (JSON-LD): Esto ayuda a Google a entender que es un "Software"
     script(type='application/ld+json').

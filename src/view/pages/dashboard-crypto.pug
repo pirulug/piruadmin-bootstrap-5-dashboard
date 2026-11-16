@@ -1,0 +1,500 @@
+extends ../layouts/dashboard
+
+append config
+  - pageName = "Crypto Dashboard"
+  - pageUrl = "dashboard-crypto"
+
+block content
+  //- Top Action Bar
+  .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2.mb-3
+    .d-flex.align-items-center.gap-2
+      .btn-group.btn-group-sm(role="group" aria-label="Crypto timeframe")
+        button.btn.btn-outline-secondary(type="button" data-crypto-tf="24h") 24H
+        button.btn.btn-outline-secondary.active(type="button" data-crypto-tf="7d") 7D
+        button.btn.btn-outline-secondary(type="button" data-crypto-tf="1m") 1M
+        button.btn.btn-outline-secondary(type="button" data-crypto-tf="1y") 1Y
+      span.badge.bg-success-subtle.text-success
+        i.bi.bi-broadcast.me-1
+        | Market Open
+    .d-flex.align-items-center.gap-2
+      button.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-arrow-down-circle.me-1
+        | Deposit
+      button.btn.btn-sm.btn-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-arrow-left-right.me-1
+        | Quick Trade
+
+  //- KPI Ticker Cards
+  .row.g-3.mb-3
+    mixin cryptoStatCard(title, value, trend, trendUp, icon, color, subtitle)
+      .col-sm-6.col-xl-3
+        .card.h-100
+          .card-body
+            .d-flex.justify-content-between.align-items-start.mb-2
+              div
+                span.text-body-secondary.small.text-uppercase.fw-bold= title
+                h2.h3.fw-bold.mt-1.mb-0= value
+              .stat(class=`stat-${color}`)
+                i(class=`bi bi-${icon} fs-5`)
+            .d-flex.align-items-center.gap-2
+              span.badge(class=trendUp ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger")
+                i.me-1(class=trendUp ? "bi bi-arrow-up-short" : "bi bi-arrow-down-short")
+                = trend
+              span.small.text-body-secondary= subtitle
+
+    +cryptoStatCard("Portfolio Balance", "$128,450", "6.42%", true, "wallet2", "primary", "24h change")
+    +cryptoStatCard("Bitcoin (BTC)", "$91,420", "3.18%", true, "currency-bitcoin", "warning", "Vol $42.8B")
+    +cryptoStatCard("Ethereum (ETH)", "$3,285", "2.45%", true, "gem", "info", "Vol $19.4B")
+    +cryptoStatCard("Solana (SOL)", "$214.80", "1.15%", false, "lightning-charge", "danger", "Vol $6.1B")
+
+  //- Price Chart & Quick Buy/Sell Widget
+  .row.g-3.mb-3
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+          .d-flex.align-items-center.gap-2
+            select#cryptoPairSelect.form-select.form-select-sm.w-auto.fw-bold(aria-label="Select trading pair")
+              option(value="btc" selected) BTC / USDT
+              option(value="eth") ETH / USDT
+              option(value="sol") SOL / USDT
+            span#cryptoPairPrice.h5.fw-bold.mb-0 $91,420.00
+            span#cryptoPairChange.badge.bg-success-subtle.text-success +3.18%
+          small.text-body-secondary 24h High: $92,150 &bull; Low: $88,640
+        .card-body
+          div(style="position: relative; height: 300px;")
+            canvas#chartjs-crypto-price
+
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Quick Order
+          span.text-body-secondary.small Instant Execution
+        .card-body
+          ul.nav.nav-pills.nav-fill.mb-3(role="tablist")
+            li.nav-item(role="presentation")
+              button.nav-link.active.text-uppercase.small.fw-bold(type="button" data-bs-toggle="pill" data-bs-target="#tab-buy" role="tab" aria-selected="true") Buy
+            li.nav-item(role="presentation")
+              button.nav-link.text-uppercase.small.fw-bold(type="button" data-bs-toggle="pill" data-bs-target="#tab-sell" role="tab" aria-selected="false") Sell
+
+          .tab-content
+            #tab-buy.tab-pane.fade.show.active(role="tabpanel")
+              .mb-3
+                label.form-label.small.fw-bold(for="buyAmountUsd") Pay (USDT)
+                .input-group
+                  input#buyAmountUsd.form-control(type="number" value="1000" min="10" step="10")
+                  span.input-group-text USDT
+              .mb-3
+                label.form-label.small.fw-bold(for="buyAssetSelect") Asset
+                select#buyAssetSelect.form-select
+                  option(value="91420" selected) Bitcoin (BTC)
+                  option(value="3285.5") Ethereum (ETH)
+                  option(value="214.8") Solana (SOL)
+              .mb-3
+                label.form-label.small.fw-bold(for="buyReceiveAmount") Estimated Receive
+                input#buyReceiveAmount.form-control(type="text" value="0.010939 BTC" readonly)
+              .d-flex.justify-content-between.small.text-body-secondary.mb-3
+                span Fee (0.1%)
+                span $1.00 USDT
+              button.btn.btn-primary.w-100.text-uppercase.fw-bold(type="button")
+                i.bi.bi-lightning-fill.me-1
+                | Buy Crypto
+
+            #tab-sell.tab-pane.fade(role="tabpanel")
+              .mb-3
+                label.form-label.small.fw-bold(for="sellAmountCoin") Amount (BTC)
+                .input-group
+                  input#sellAmountCoin.form-control(type="number" value="0.25" min="0.001" step="0.01")
+                  span.input-group-text BTC
+              .mb-3
+                label.form-label.small.fw-bold(for="sellReceiveUsd") Estimated Receive (USDT)
+                input#sellReceiveUsd.form-control(type="text" value="$22,855.00" readonly)
+              .d-flex.justify-content-between.small.text-body-secondary.mb-3
+                span Network Fee
+                span $2.50 USDT
+              button.btn.btn-danger.w-100.text-uppercase.fw-bold(type="button")
+                i.bi.bi-cash-coin.me-1
+                | Sell Crypto
+
+  //- Portfolio Allocation & Top Markets
+  .row.g-3.mb-3
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Portfolio Allocation
+          span.text-body-secondary.small 4 Assets
+        .card-body.d-flex.flex-column.justify-content-between
+          div(style="position: relative; height: 210px;")
+            canvas#chartjs-crypto-allocation
+            .position-absolute.top-50.start-50.translate-middle.text-center.pe-none
+              .small.text-body-secondary Total
+              .h5.fw-bold.mb-0 $128.4K
+          .mt-3.small
+            .d-flex.justify-content-between.mb-1
+              span
+                i.bi.bi-circle-fill.text-warning.me-2
+                | Bitcoin (BTC)
+              span.fw-bold 48% &bull; $61,656
+            .d-flex.justify-content-between.mb-1
+              span
+                i.bi.bi-circle-fill.text-info.me-2
+                | Ethereum (ETH)
+              span.fw-bold 28% &bull; $35,966
+            .d-flex.justify-content-between.mb-1
+              span
+                i.bi.bi-circle-fill.text-primary.me-2
+                | Solana (SOL)
+              span.fw-bold 14% &bull; $17,983
+            .d-flex.justify-content-between
+              span
+                i.bi.bi-circle-fill.text-success.me-2
+                | Tether (USDT)
+              span.fw-bold 10% &bull; $12,845
+
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Top Markets
+          span.text-body-secondary.small Live Spot Prices
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap Asset
+                  th.text-uppercase.fw-bold.text-nowrap Price
+                  th.text-uppercase.fw-bold.text-nowrap 24h Change
+                  th.text-uppercase.fw-bold.text-nowrap 24h Volume
+                  th.text-uppercase.fw-bold.text-nowrap Market Cap
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Action
+              tbody
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-warning-subtle.text-warning.d-flex.align-items-center.justify-content-center(style="width: 32px; height: 32px;")
+                        i.bi.bi-currency-bitcoin
+                      div
+                        .fw-bold.text-body Bitcoin
+                        .small.text-body-secondary BTC
+                  td.fw-bold $91,420.00
+                  td
+                    span.badge.bg-success-subtle.text-success +3.18%
+                  td $42.8B
+                  td $1.81T
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-arrow-left-right.me-1
+                      | Trade
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-info-subtle.text-info.d-flex.align-items-center.justify-content-center(style="width: 32px; height: 32px;")
+                        i.bi.bi-gem
+                      div
+                        .fw-bold.text-body Ethereum
+                        .small.text-body-secondary ETH
+                  td.fw-bold $3,285.50
+                  td
+                    span.badge.bg-success-subtle.text-success +2.45%
+                  td $19.4B
+                  td $395.2B
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-arrow-left-right.me-1
+                      | Trade
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-primary-subtle.text-primary.d-flex.align-items-center.justify-content-center(style="width: 32px; height: 32px;")
+                        i.bi.bi-lightning-charge
+                      div
+                        .fw-bold.text-body Solana
+                        .small.text-body-secondary SOL
+                  td.fw-bold $214.80
+                  td
+                    span.badge.bg-danger-subtle.text-danger -1.15%
+                  td $6.1B
+                  td $101.4B
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-arrow-left-right.me-1
+                      | Trade
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-success-subtle.text-success.d-flex.align-items-center.justify-content-center(style="width: 32px; height: 32px;")
+                        i.bi.bi-link-45deg
+                      div
+                        .fw-bold.text-body Chainlink
+                        .small.text-body-secondary LINK
+                  td.fw-bold $18.64
+                  td
+                    span.badge.bg-success-subtle.text-success +4.90%
+                  td $840M
+                  td $11.7B
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-arrow-left-right.me-1
+                      | Trade
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-danger-subtle.text-danger.d-flex.align-items-center.justify-content-center(style="width: 32px; height: 32px;")
+                        i.bi.bi-triangle
+                      div
+                        .fw-bold.text-body Avalanche
+                        .small.text-body-secondary AVAX
+                  td.fw-bold $38.12
+                  td
+                    span.badge.bg-danger-subtle.text-danger -0.64%
+                  td $590M
+                  td $15.6B
+                  td.text-end.pe-3.text-nowrap
+                    button.btn.btn-sm.btn-outline-primary.text-uppercase.fw-bold.text-nowrap(type="button")
+                      i.bi.bi-arrow-left-right.me-1
+                      | Trade
+
+  //- Order Book & Recent Transactions
+  .row.g-3
+    .col-12.col-xl-5.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Order Book
+          span.text-body-secondary.small BTC / USDT
+        .card-body.p-0
+          .row.g-0
+            .col-6.border-end
+              .px-3.py-2.small.text-uppercase.fw-bold.text-success Bids (Buy)
+              table.table.table-sm.table-borderless.mb-0.small
+                tbody
+                  tr
+                    td.ps-3.text-success.fw-semibold 91,410
+                    td.text-end.pe-3 0.420
+                  tr
+                    td.ps-3.text-success.fw-semibold 91,395
+                    td.text-end.pe-3 1.150
+                  tr
+                    td.ps-3.text-success.fw-semibold 91,380
+                    td.text-end.pe-3 0.885
+                  tr
+                    td.ps-3.text-success.fw-semibold 91,350
+                    td.text-end.pe-3 2.310
+            .col-6
+              .px-3.py-2.small.text-uppercase.fw-bold.text-danger Asks (Sell)
+              table.table.table-sm.table-borderless.mb-0.small
+                tbody
+                  tr
+                    td.ps-3.text-danger.fw-semibold 91,435
+                    td.text-end.pe-3 0.310
+                  tr
+                    td.ps-3.text-danger.fw-semibold 91,450
+                    td.text-end.pe-3 0.940
+                  tr
+                    td.ps-3.text-danger.fw-semibold 91,475
+                    td.text-end.pe-3 1.620
+                  tr
+                    td.ps-3.text-danger.fw-semibold 91,500
+                    td.text-end.pe-3 3.050
+
+    .col-12.col-xl-7.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Recent Transactions
+          span.text-body-secondary.small Wallet activity
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap Type
+                  th.text-uppercase.fw-bold.text-nowrap Asset
+                  th.text-uppercase.fw-bold.text-nowrap Amount
+                  th.text-uppercase.fw-bold.text-nowrap Value
+                  th.text-uppercase.fw-bold.text-nowrap Status
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Time
+              tbody
+                tr
+                  td.ps-3
+                    span.badge.bg-success-subtle.text-success Buy
+                  td.fw-bold BTC
+                  td 0.0540 BTC
+                  td.fw-bold $4,936.68
+                  td
+                    span.badge.bg-success Completed
+                  td.text-end.pe-3.text-body-secondary.small 2m ago
+                tr
+                  td.ps-3
+                    span.badge.bg-info-subtle.text-info Swap
+                  td.fw-bold ETH &rarr; SOL
+                  td 1.200 ETH
+                  td.fw-bold $3,942.60
+                  td
+                    span.badge.bg-success Completed
+                  td.text-end.pe-3.text-body-secondary.small 18m ago
+                tr
+                  td.ps-3
+                    span.badge.bg-danger-subtle.text-danger Sell
+                  td.fw-bold SOL
+                  td 12.50 SOL
+                  td.fw-bold $2,685.00
+                  td
+                    span.badge.bg-warning-subtle.text-warning Pending
+                  td.text-end.pe-3.text-body-secondary.small 1h ago
+                tr
+                  td.ps-3
+                    span.badge.bg-primary-subtle.text-primary Deposit
+                  td.fw-bold USDT
+                  td 5,000.00 USDT
+                  td.fw-bold $5,000.00
+                  td
+                    span.badge.bg-success Completed
+                  td.text-end.pe-3.text-body-secondary.small 3h ago
+
+block scripts
+  script(src=assets + "plugins/chartjs/chartjs.js")
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const getVar = (name) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+      const primary = window.theme?.primary || "#e83283";
+      const info = window.theme?.info || "#17a2b8";
+      const success = window.theme?.success || "#28a745";
+      const warning = window.theme?.warning || "#ffc107";
+      const gridColor = getVar("--bs-border-color-translucent") || "rgba(120, 130, 140, 0.15)";
+      const textColor = getVar("--bs-secondary-color") || "#6c757d";
+
+      // 1. Crypto Price Chart
+      const pairSeries = {
+        btc: {
+          price: "$91,420.00",
+          change: "+3.18%",
+          positive: true,
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          data: [86400, 87900, 87200, 89100, 88650, 90300, 91420]
+        },
+        eth: {
+          price: "$3,285.50",
+          change: "+2.45%",
+          positive: true,
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          data: [3110, 3165, 3140, 3210, 3190, 3245, 3285.5]
+        },
+        sol: {
+          price: "$214.80",
+          change: "-1.15%",
+          positive: false,
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          data: [222, 224, 219, 221, 217, 216, 214.8]
+        }
+      };
+
+      const priceChart = new Chart(document.getElementById("chartjs-crypto-price").getContext("2d"), {
+        type: "line",
+        data: {
+          labels: pairSeries.btc.labels,
+          datasets: [
+            {
+              label: "Price (USDT)",
+              fill: true,
+              backgroundColor: "rgba(232, 50, 131, 0.12)",
+              borderColor: primary,
+              borderWidth: 2,
+              tension: 0.35,
+              pointRadius: 2,
+              pointHoverRadius: 5,
+              data: pairSeries.btc.data
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textColor } },
+            y: {
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => "$" + Number(val).toLocaleString()
+              }
+            }
+          }
+        }
+      });
+
+      const pairSelect = document.getElementById("cryptoPairSelect");
+      const pairPriceEl = document.getElementById("cryptoPairPrice");
+      const pairChangeEl = document.getElementById("cryptoPairChange");
+
+      if (pairSelect) {
+        pairSelect.addEventListener("change", () => {
+          const item = pairSeries[pairSelect.value];
+          if (!item) return;
+          pairPriceEl.textContent = item.price;
+          pairChangeEl.textContent = item.change;
+          pairChangeEl.className = item.positive
+            ? "badge bg-success-subtle text-success"
+            : "badge bg-danger-subtle text-danger";
+          priceChart.data.labels = item.labels;
+          priceChart.data.datasets[0].data = item.data;
+          priceChart.update();
+        });
+      }
+
+      document.querySelectorAll("[data-crypto-tf]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-crypto-tf]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+
+      // 2. Portfolio Allocation Doughnut
+      new Chart(document.getElementById("chartjs-crypto-allocation"), {
+        type: "doughnut",
+        data: {
+          labels: ["Bitcoin", "Ethereum", "Solana", "Tether"],
+          datasets: [
+            {
+              data: [48, 28, 14, 10],
+              backgroundColor: [warning, info, primary, success],
+              borderWidth: 0
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          cutout: "72%",
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 3. Quick Buy Calculator
+      const buyAmount = document.getElementById("buyAmountUsd");
+      const buyAsset = document.getElementById("buyAssetSelect");
+      const buyReceive = document.getElementById("buyReceiveAmount");
+
+      const updateBuyEstimate = () => {
+        if (!buyAmount || !buyAsset || !buyReceive) return;
+        const usd = parseFloat(buyAmount.value) || 0;
+        const price = parseFloat(buyAsset.value) || 1;
+        const ticker = buyAsset.options[buyAsset.selectedIndex].text.match(/\(([^)]+)\)/)?.[1] || "";
+        buyReceive.value = `${(usd / price).toFixed(6)} ${ticker}`;
+      };
+
+      if (buyAmount && buyAsset) {
+        buyAmount.addEventListener("input", updateBuyEstimate);
+        buyAsset.addEventListener("change", updateBuyEstimate);
+      }
+
+      // 4. Quick Sell Calculator
+      const sellAmount = document.getElementById("sellAmountCoin");
+      const sellReceive = document.getElementById("sellReceiveUsd");
+      if (sellAmount && sellReceive) {
+        sellAmount.addEventListener("input", () => {
+          const coins = parseFloat(sellAmount.value) || 0;
+          sellReceive.value = "$" + (coins * 91420).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        });
+      }
+    });

@@ -1,0 +1,233 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = "Chat"
+  - pageUrl = "pages/chat"
+
+block content
+  .row.g-3
+    //- Left Sidebar: Contacts & Conversations
+    .col-12.col-lg-4.col-xl-3.d-flex
+      .card.flex-fill.w-100
+        .card-header
+          .d-flex.justify-content-between.align-items-center.mb-2
+            h5.card-title.mb-0 Messages
+            span#unreadTotalBadge.badge.bg-primary 3
+          .input-group.input-group-sm
+            span.input-group-text
+              i.bi.bi-search
+            input#chatContactSearch.form-control(type="text" placeholder="Search contacts...")
+        .card-body.p-2
+          ul.nav.nav-pills.nav-fill.small.mb-2(role="tablist")
+            li.nav-item(role="presentation")
+              button.nav-link.active.py-1.chat-filter-tab(type="button" data-filter="all") All
+            li.nav-item(role="presentation")
+              button.nav-link.py-1.chat-filter-tab(type="button" data-filter="unread") Unread
+
+          .list-group.list-group-flush
+            mixin contactItem(initials, bg, name, lastMsg, time, unread, online, active)
+              a.list-group-item.list-group-item-action.rounded.border-0.py-2.px-2.chat-contact-item(
+                href="#"
+                class=active ? "active" : ""
+                data-name=name
+                data-initials=initials
+                data-bg=bg
+                data-status=online ? "Online" : "Offline"
+                data-unread=unread > 0 ? "true" : "false"
+              )
+                .d-flex.align-items-center.gap-2
+                  .position-relative.flex-shrink-0
+                    .rounded-circle.text-white.d-flex.align-items-center.justify-content-center(class=`bg-${bg}` style="width: 38px; height: 38px; font-size: 0.8rem; font-weight: 600;")= initials
+                    if online
+                      span.position-absolute.bottom-0.end-0.p-1.bg-success.border.border-2.border-body.rounded-circle
+                  .flex-grow-1.min-width-0
+                    .d-flex.justify-content-between.align-items-center
+                      span.fw-bold.text-truncate= name
+                      small.opacity-75= time
+                    .d-flex.justify-content-between.align-items-center
+                      small.text-truncate.opacity-75= lastMsg
+                      if unread > 0
+                        span.badge.rounded-pill.bg-danger.ms-1.contact-unread-badge= unread
+
+            +contactItem("VT", "primary", "Vanessa Tucker", "Sounds good! Let's ship it.", "11:04", 0, true, true)
+            +contactItem("AS", "success", "Alex Smith", "Can you review PR #142?", "10:42", 2, true, false)
+            +contactItem("MG", "warning", "Maria Garcia", "Updated the Figma mockups", "09:15", 1, false, false)
+            +contactItem("RK", "danger", "Robert Kim", "Meeting moved to 3:00 PM", "Yesterday", 0, true, false)
+            +contactItem("EW", "info", "Emma Watson", "Thanks for the quick fix!", "Yesterday", 0, false, false)
+
+    //- Right Panel: Active Conversation
+    .col-12.col-lg-8.col-xl-9.d-flex
+      .card.flex-fill.w-100
+        //- Header
+        .card-header.d-flex.justify-content-between.align-items-center.gap-2
+          .d-flex.align-items-center.gap-2
+            #activeAvatar.rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center(style="width: 38px; height: 38px; font-size: 0.82rem; font-weight: 600;") VT
+            div
+              h5#activeContactName.card-title.mb-0 Vanessa Tucker
+              small#activeContactStatus.text-success
+                i.bi.bi-circle-fill.me-1(style="font-size: 0.5rem;")
+                | Online
+          .d-flex.align-items-center.gap-1
+            button.btn.btn-sm.btn-outline-secondary(type="button" title="Voice call")
+              i.bi.bi-telephone
+            button.btn.btn-sm.btn-outline-secondary(type="button" title="Video call")
+              i.bi.bi-camera-video
+            button.btn.btn-sm.btn-outline-secondary(type="button" title="More options")
+              i.bi.bi-three-dots-vertical
+
+        //- Messages Area
+        #teamChatMessages.card-body(style="height: 460px; overflow-y: auto;")
+          .text-center.my-2
+            span.badge.bg-body-secondary.text-body-secondary Today
+
+          //- Incoming message
+          .d-flex.align-items-start.gap-2.mb-3
+            .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.flex-shrink-0(style="width: 32px; height: 32px; font-size: 0.75rem; font-weight: 600;") VT
+            div(style="max-width: 75%;")
+              .bg-body-secondary.p-3.rounded
+                p.mb-0 Hey! I just checked the new E-Commerce and CRM dashboards on staging. Everything looks super clean in dark mode.
+              small.text-body-secondary.d-block.mt-1 10:58 AM
+
+          //- Outgoing message
+          .d-flex.justify-content-end.align-items-start.gap-2.mb-3
+            div.text-end(style="max-width: 75%;")
+              .bg-primary.text-white.p-3.rounded.text-start
+                p.mb-0 Awesome! I also removed the duplicate badge SCSS and fixed the sidebar spacing. Ready to tag v2.4?
+              small.text-body-secondary.d-block.mt-1
+                | 11:01 AM
+                i.bi.bi-check2-all.text-primary.ms-1
+            .rounded-circle.bg-info.text-white.d-flex.align-items-center.justify-content-center.flex-shrink-0(style="width: 32px; height: 32px; font-size: 0.75rem; font-weight: 600;") JD
+
+          //- Incoming message with attachment
+          .d-flex.align-items-start.gap-2.mb-3
+            .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.flex-shrink-0(style="width: 32px; height: 32px; font-size: 0.75rem; font-weight: 600;") VT
+            div(style="max-width: 75%;")
+              .bg-body-secondary.p-3.rounded
+                p.mb-2 Sounds good! Let's ship it. Here is the QA checklist:
+                .bg-body.p-2.rounded.border.d-flex.align-items-center.justify-content-between.gap-3
+                  .d-flex.align-items-center.gap-2
+                    i.bi.bi-file-earmark-pdf.text-danger.fs-4
+                    div
+                      .small.fw-bold release-qa-v2.4.pdf
+                      .small.text-body-secondary 420 KB
+                  a.btn.btn-sm.btn-outline-secondary(href="#" title="Download")
+                    i.bi.bi-download
+              small.text-body-secondary.d-block.mt-1 11:04 AM
+
+        //- Composer Footer
+        .card-footer
+          form#teamChatForm
+            .input-group
+              button.btn.btn-outline-secondary(type="button" title="Emoji")
+                i.bi.bi-emoji-smile
+              button.btn.btn-outline-secondary(type="button" title="Attach file")
+                i.bi.bi-paperclip
+              input#teamChatInput.form-control(type="text" placeholder="Type a message..." autocomplete="off")
+              button.btn.btn-primary.px-3.text-uppercase.fw-bold.text-nowrap(type="submit")
+                i.bi.bi-send.me-1
+                | Send
+
+block scripts
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const messagesEl = document.getElementById("teamChatMessages");
+      const formEl = document.getElementById("teamChatForm");
+      const inputEl = document.getElementById("teamChatInput");
+      const searchEl = document.getElementById("chatContactSearch");
+      const activeNameEl = document.getElementById("activeContactName");
+      const activeStatusEl = document.getElementById("activeContactStatus");
+      const activeAvatarEl = document.getElementById("activeAvatar");
+      const unreadTotalBadge = document.getElementById("unreadTotalBadge");
+
+      const scrollToBottom = () => {
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+      };
+
+      const updateTotalUnread = () => {
+        let total = 0;
+        document.querySelectorAll(".contact-unread-badge").forEach((b) => {
+          total += parseInt(b.textContent, 10) || 0;
+        });
+        unreadTotalBadge.textContent = total;
+        unreadTotalBadge.classList.toggle("d-none", total === 0);
+      };
+
+      formEl.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const text = inputEl.value.trim();
+        if (!text) return;
+
+        const now = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+        const msg = document.createElement("div");
+        msg.className = "d-flex justify-content-end align-items-start gap-2 mb-3";
+        msg.innerHTML = `
+          <div class="text-end" style="max-width: 75%;">
+            <div class="bg-primary text-white p-3 rounded text-start">
+              <p class="mb-0"></p>
+            </div>
+            <small class="text-body-secondary d-block mt-1">
+              ${now}
+              <i class="bi bi-check2-all text-primary ms-1"></i>
+            </small>
+          </div>
+          <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center flex-shrink-0" style="width: 32px; height: 32px; font-size: 0.75rem; font-weight: 600;">JD</div>
+        `;
+        msg.querySelector("p").textContent = text;
+        messagesEl.appendChild(msg);
+        inputEl.value = "";
+        scrollToBottom();
+      });
+
+      document.querySelectorAll(".chat-contact-item").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelectorAll(".chat-contact-item").forEach((c) => c.classList.remove("active"));
+          item.classList.add("active");
+
+          const name = item.dataset.name;
+          const initials = item.dataset.initials;
+          const bg = item.dataset.bg;
+          const status = item.dataset.status;
+
+          activeNameEl.textContent = name;
+          activeAvatarEl.textContent = initials;
+          activeAvatarEl.className = `rounded-circle bg-${bg} text-white d-flex align-items-center justify-content-center`;
+
+          if (status === "Online") {
+            activeStatusEl.className = "text-success";
+            activeStatusEl.innerHTML = '<i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i>Online';
+          } else {
+            activeStatusEl.className = "text-body-secondary";
+            activeStatusEl.innerHTML = '<i class="bi bi-circle me-1" style="font-size: 0.5rem;"></i>Offline';
+          }
+
+          const badge = item.querySelector(".contact-unread-badge");
+          if (badge) {
+            badge.remove();
+            item.dataset.unread = "false";
+            updateTotalUnread();
+          }
+        });
+      });
+
+      const applyContactFilters = () => {
+        const query = searchEl.value.trim().toLowerCase();
+        const activeTab = document.querySelector(".chat-filter-tab.active")?.dataset.filter || "all";
+
+        document.querySelectorAll(".chat-contact-item").forEach((item) => {
+          const matchName = (item.dataset.name || "").toLowerCase().includes(query);
+          const matchUnread = activeTab === "all" || item.dataset.unread === "true";
+          item.classList.toggle("d-none", !(matchName && matchUnread));
+        });
+      };
+
+      searchEl.addEventListener("input", applyContactFilters);
+
+      document.querySelectorAll(".chat-filter-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".chat-filter-tab").forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          applyContactFilters();
+        });
+      });
+    });

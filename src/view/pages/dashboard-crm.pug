@@ -1,0 +1,424 @@
+extends ../layouts/dashboard
+
+append config
+  - pageName = "CRM Dashboard"
+  - pageUrl = "dashboard-crm"
+
+block content
+  //- Top Action Bar
+  .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2.mb-3
+    .d-flex.align-items-center.gap-2
+      .btn-group.btn-group-sm(role="group" aria-label="CRM period filter")
+        button.btn.btn-outline-secondary(type="button" data-crm-period="30d") 30 days
+        button.btn.btn-outline-secondary(type="button" data-crm-period="90d") 90 days
+        button.btn.btn-outline-secondary.active(type="button" data-crm-period="ytd") Year to date
+    .d-flex.align-items-center.gap-2
+      button.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-download.me-1
+        | Export
+      a.btn.btn-sm.btn-primary.text-uppercase.fw-bold.text-nowrap(href=baseUrl + "pages/project-create.html")
+        i.bi.bi-plus-lg.me-1
+        | New Deal
+
+  //- KPI Stat Cards
+  .row.g-3.mb-3
+    mixin crmStatCard(title, value, trend, trendUp, icon, color, subtitle)
+      .col-sm-6.col-xl-3
+        .card.h-100
+          .card-body
+            .d-flex.justify-content-between.align-items-start.mb-2
+              div
+                span.text-body-secondary.small.text-uppercase.fw-bold= title
+                h2.h3.fw-bold.mt-1.mb-0= value
+              .stat(class=`stat-${color}`)
+                i(class=`bi bi-${icon} fs-5`)
+            .d-flex.align-items-center.gap-2
+              span.badge(class=trendUp ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger")
+                i.me-1(class=trendUp ? "bi bi-arrow-up-short" : "bi bi-arrow-down-short")
+                = trend
+              span.small.text-body-secondary= subtitle
+
+    +crmStatCard("Total Customers", "2,817", "21.5%", true, "people", "primary", "vs last year to date")
+    +crmStatCard("Active Deals", "114", "22.6%", true, "briefcase", "info", "vs last year to date")
+    +crmStatCard("Revenue", "$8.3M", "30.2%", true, "currency-dollar", "success", "vs last year to date")
+    +crmStatCard("Win Rate", "21.9%", "1.2 pts", false, "trophy", "warning", "vs last year to date")
+
+  //- Revenue vs Target & Leads by Source
+  .row.g-3.mb-3
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          div
+            h5.card-title.mb-0 Revenue vs Target
+            small.text-body-secondary Cumulative performance (USD)
+          span.badge.bg-success-subtle.text-success On Track
+        .card-body
+          div(style="position: relative; height: 290px;")
+            canvas#chartjs-crm-revenue
+
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Leads by Source
+          span.text-body-secondary.small Total channels
+        .card-body.d-flex.flex-column.justify-content-between
+          div(style="position: relative; height: 220px;")
+            canvas#chartjs-crm-leads
+            .position-absolute.top-50.start-50.translate-middle.text-center.pe-none
+              .small.text-body-secondary Leads
+              .h4.fw-bold.mb-0 3,386
+          .d-flex.flex-wrap.justify-content-center.gap-3.mt-3.small
+            span
+              i.bi.bi-circle-fill.text-primary.me-1
+              | Website
+            span
+              i.bi.bi-circle-fill.text-success.me-1
+              | Referral
+            span
+              i.bi.bi-circle-fill.text-warning.me-1
+              | LinkedIn
+            span
+              i.bi.bi-circle-fill.text-danger.me-1
+              | Email
+            span
+              i.bi.bi-circle-fill.text-info.me-1
+              | Events
+
+  //- Sales Pipeline & Top Sales Reps
+  .row.g-3.mb-3
+    .col-12.col-xl-6.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Sales Pipeline
+          span.text-body-secondary.small Funnel value by stage
+        .card-body
+          div(style="position: relative; height: 290px;")
+            canvas#chartjs-crm-pipeline
+
+    .col-12.col-xl-6.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Top Sales Reps
+          span.text-body-secondary.small Quota attainment
+        .card-body.d-flex.flex-column.justify-content-between.gap-3
+          mixin salesRep(initials, avatarBg, name, deals, amount, quotaText, percent, barColor)
+            div
+              .d-flex.justify-content-between.align-items-center.mb-1
+                .d-flex.align-items-center.gap-2
+                  .rounded-circle.text-white.d-flex.align-items-center.justify-content-center(class=`bg-${avatarBg}` style="width: 34px; height: 34px; font-size: 0.78rem; font-weight: 600;")= initials
+                  div
+                    .fw-bold.text-body= name
+                    .small.text-body-secondary= deals
+                .text-end
+                  .fw-bold.text-body= amount
+                  .small.text-body-secondary= quotaText
+              .progress(style="height: 6px;")
+                .progress-bar(class=`bg-${barColor}` role="progressbar" style=`width: ${percent > 100 ? 100 : percent}%` aria-valuenow=percent aria-valuemin="0" aria-valuemax="100")
+
+          +salesRep("VT", "primary", "Vanessa Tucker", "145 deals won", "$2.0M", "115% of $1.74M quota", 100, "success")
+          +salesRep("SL", "info", "Sharon Lessman", "95 deals won", "$1.9M", "105% of $1.80M quota", 100, "success")
+          +salesRep("WH", "success", "William Harris", "90 deals won", "$1.7M", "90% of $1.9M quota", 90, "primary")
+          +salesRep("CM", "warning", "Christina Mason", "55 deals won", "$900.2K", "69% of $1.3M quota", 69, "warning")
+          +salesRep("CH", "danger", "Charles Hall", "55 deals won", "$753.5K", "65% of $1.2M quota", 65, "warning")
+
+  //- Recent Deals & Upcoming Tasks
+  .row.g-3
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Recent Deals
+          a.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(href=baseUrl + "pages/project-list.html")
+            i.bi.bi-kanban.me-1
+            | View Pipeline
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap Company
+                  th.text-uppercase.fw-bold.text-nowrap Contact
+                  th.text-uppercase.fw-bold.text-nowrap Stage
+                  th.text-uppercase.fw-bold.text-nowrap Value
+                  th.text-uppercase.fw-bold.text-nowrap Owner
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Close Date
+              tbody
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-primary-subtle.text-primary.d-flex.align-items-center.justify-content-center(style="width: 30px; height: 30px; font-size: 0.72rem; font-weight: 700;") KA
+                      span.fw-bold.text-body Kestrel Analytics
+                  td Olivia Bennett
+                  td
+                    span.badge.bg-primary-subtle.text-primary Lead
+                  td.fw-bold $19,500
+                  td
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-danger.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.65rem; font-weight: 600;") CH
+                      span Charles Hall
+                  td.text-end.pe-3.text-body-secondary.small Nov 16
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-info-subtle.text-info.d-flex.align-items-center.justify-content-center(style="width: 30px; height: 30px; font-size: 0.72rem; font-weight: 700;") LH
+                      span.fw-bold.text-body Lumen Health
+                  td Marcus Reyes
+                  td
+                    span.badge.bg-warning-subtle.text-warning Negotiation
+                  td.fw-bold $19,300
+                  td
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-info.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.65rem; font-weight: 600;") SL
+                      span Sharon Lessman
+                  td.text-end.pe-3.text-body-secondary.small Nov 22
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-success-subtle.text-success.d-flex.align-items-center.justify-content-center(style="width: 30px; height: 30px; font-size: 0.72rem; font-weight: 700;") OP
+                      span.fw-bold.text-body Oakridge Partners
+                  td Hannah Kim
+                  td
+                    span.badge.bg-info-subtle.text-info Proposal
+                  td.fw-bold $42,000
+                  td
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.65rem; font-weight: 600;") VT
+                      span Vanessa Tucker
+                  td.text-end.pe-3.text-body-secondary.small Nov 28
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-warning-subtle.text-warning.d-flex.align-items-center.justify-content-center(style="width: 30px; height: 30px; font-size: 0.72rem; font-weight: 700;") HP
+                      span.fw-bold.text-body Harbor &amp; Pine
+                  td Daniel Brooks
+                  td
+                    span.badge.bg-success-subtle.text-success Won
+                  td.fw-bold $68,400
+                  td
+                    .d-flex.align-items-center.gap-2
+                      .rounded-circle.bg-success.text-white.d-flex.align-items-center.justify-content-center(style="width: 24px; height: 24px; font-size: 0.65rem; font-weight: 600;") WH
+                      span William Harris
+                  td.text-end.pe-3.text-body-secondary.small Nov 30
+
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Upcoming Tasks
+          span#crmTasksOpenBadge.badge.bg-primary-subtle.text-primary 3 open
+        .card-body
+          ul.list-group.list-group-flush
+            li.list-group-item.px-0.d-flex.align-items-start.gap-2
+              input#task1.form-check-input.mt-1.crm-task-check(type="checkbox")
+              label.form-check-label.flex-grow-1(for="task1")
+                .fw-semibold Discovery call with Kestrel Analytics
+                .small.text-danger
+                  i.bi.bi-telephone.me-1
+                  | Call &bull; Overdue, due yesterday
+            li.list-group-item.px-0.d-flex.align-items-start.gap-2
+              input#task2.form-check-input.mt-1.crm-task-check(type="checkbox")
+              label.form-check-label.flex-grow-1(for="task2")
+                .fw-semibold Send the proposal to Lumen Health
+                .small.text-warning
+                  i.bi.bi-envelope.me-1
+                  | Email &bull; Due today
+            li.list-group-item.px-0.d-flex.align-items-start.gap-2
+              input#task3.form-check-input.mt-1.crm-task-check(type="checkbox" checked)
+              label.form-check-label.flex-grow-1.text-decoration-line-through.text-body-secondary(for="task3")
+                .fw-semibold Update the contacts at Harbor &amp; Pine
+                .small
+                  i.bi.bi-journal-text.me-1
+                  | Note &bull; Completed
+            li.list-group-item.px-0.pb-0.d-flex.align-items-start.gap-2
+              input#task4.form-check-input.mt-1.crm-task-check(type="checkbox")
+              label.form-check-label.flex-grow-1(for="task4")
+                .fw-semibold Contract review with Oakridge Partners
+                .small.text-body-secondary
+                  i.bi.bi-calendar-event.me-1
+                  | Meeting &bull; Tomorrow at 10:00 AM
+
+block scripts
+  script(src=assets + "plugins/chartjs/chartjs.js")
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const getVar = (name) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+      const primary = window.theme?.primary || "#e83283";
+      const secondary = window.theme?.secondary || "#686dc3";
+      const success = window.theme?.success || "#28a745";
+      const info = window.theme?.info || "#17a2b8";
+      const warning = window.theme?.warning || "#ffc107";
+      const danger = window.theme?.danger || "#dc3545";
+      const gridColor = getVar("--bs-border-color-translucent") || "rgba(120, 130, 140, 0.15)";
+      const textColor = getVar("--bs-secondary-color") || "#6c757d";
+
+      // 1. Revenue vs Target Line Chart
+      const revenueDatasets = {
+        "30d": {
+          labels: ["Wk 1", "Wk 2", "Wk 3", "Wk 4"],
+          revenue: [0.45, 0.98, 1.54, 2.15],
+          target: [0.5, 1.0, 1.5, 2.0]
+        },
+        "90d": {
+          labels: ["Sep", "Oct", "Nov"],
+          revenue: [1.85, 3.92, 6.18],
+          target: [2.0, 4.0, 6.0]
+        },
+        ytd: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          revenue: [0.65, 1.35, 2.05, 2.65, 3.45, 4.35, 5.15, 6.05, 6.85, 7.65, 8.3, null],
+          target: [0.8, 1.6, 2.4, 3.2, 4.0, 4.8, 5.6, 6.4, 7.2, 8.0, 8.8, 9.6]
+        }
+      };
+
+      const revenueChart = new Chart(document.getElementById("chartjs-crm-revenue").getContext("2d"), {
+        type: "line",
+        data: {
+          labels: revenueDatasets.ytd.labels,
+          datasets: [
+            {
+              label: "Revenue ($M)",
+              fill: true,
+              backgroundColor: "rgba(232, 50, 131, 0.12)",
+              borderColor: primary,
+              borderWidth: 2,
+              tension: 0.3,
+              pointRadius: 2,
+              pointHoverRadius: 5,
+              data: revenueDatasets.ytd.revenue
+            },
+            {
+              label: "Target ($M)",
+              fill: false,
+              borderColor: secondary,
+              borderWidth: 2,
+              borderDash: [5, 5],
+              tension: 0.3,
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              data: revenueDatasets.ytd.target
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              align: "start",
+              labels: { color: textColor, boxWidth: 12, usePointStyle: true }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textColor } },
+            y: {
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => "$" + val + "M"
+              }
+            }
+          }
+        }
+      });
+
+      document.querySelectorAll("[data-crm-period]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-crm-period]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const period = btn.getAttribute("data-crm-period");
+          const ds = revenueDatasets[period];
+          revenueChart.data.labels = ds.labels;
+          revenueChart.data.datasets[0].data = ds.revenue;
+          revenueChart.data.datasets[1].data = ds.target;
+          revenueChart.update();
+        });
+      });
+
+      // 2. Leads by Source Doughnut
+      new Chart(document.getElementById("chartjs-crm-leads"), {
+        type: "doughnut",
+        data: {
+          labels: ["Website", "Referral", "LinkedIn", "Email", "Events"],
+          datasets: [
+            {
+              data: [1240, 845, 590, 412, 299],
+              backgroundColor: [primary, success, warning, danger, info],
+              borderWidth: 0
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          cutout: "72%",
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 3. Sales Pipeline Horizontal Bar
+      new Chart(document.getElementById("chartjs-crm-pipeline"), {
+        type: "bar",
+        data: {
+          labels: [
+            "Lead ($61.6M • 3,386)",
+            "Qualified ($36.0M • 1,855)",
+            "Proposal ($22.4M • 1,001)",
+            "Negotiation ($14.3M • 764)",
+            "Won ($7.5M • 395)"
+          ],
+          datasets: [
+            {
+              label: "Pipeline ($M)",
+              data: [61.6, 36.0, 22.4, 14.3, 7.5],
+              backgroundColor: [primary, secondary, info, warning, success],
+              borderRadius: 4,
+              barPercentage: 0.55
+            }
+          ]
+        },
+        options: {
+          indexAxis: "y",
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (val) => "$" + val + "M"
+              }
+            },
+            y: {
+              grid: { display: false },
+              ticks: { color: textColor }
+            }
+          }
+        }
+      });
+
+      // 4. Interactive Upcoming Tasks Counter
+      const taskChecks = document.querySelectorAll(".crm-task-check");
+      const openBadge = document.getElementById("crmTasksOpenBadge");
+
+      const updateTaskCount = () => {
+        const openCount = Array.from(taskChecks).filter((cb) => !cb.checked).length;
+        if (openBadge) {
+          openBadge.textContent = `${openCount} open`;
+        }
+      };
+
+      taskChecks.forEach((cb) => {
+        cb.addEventListener("change", () => {
+          const label = cb.nextElementSibling;
+          if (label) {
+            label.classList.toggle("text-decoration-line-through", cb.checked);
+            label.classList.toggle("text-body-secondary", cb.checked);
+          }
+          updateTaskCount();
+        });
+      });
+    });

@@ -6,6 +6,38 @@
     "link": "dashboard"
   },
   {
+    "title": "E-Commerce",
+    "path": "dashboard-ecomerse",
+    "icon": "cart3",
+    "link": "dashboard-ecomerse",
+    "badge": "New",
+    "badgeColor": "primary"
+  },
+  {
+    "title": "CRM",
+    "path": "dashboard-crm",
+    "icon": "person-workspace",
+    "link": "dashboard-crm",
+    "badge": "New",
+    "badgeColor": "primary"
+  },
+  {
+    "title": "Crypto",
+    "path": "dashboard-crypto",
+    "icon": "currency-bitcoin",
+    "link": "dashboard-crypto",
+    "badge": "New",
+    "badgeColor": "primary"
+  },
+  {
+    "title": "AI Analytics",
+    "path": "dashboard-ia",
+    "icon": "cpu",
+    "link": "dashboard-ia",
+    "badge": "New",
+    "badgeColor": "primary"
+  },
+  {
     "title": "Pages",
     "header": true
   },
@@ -29,6 +61,34 @@
         "title": "Search",
         "path": "pages/search",
         "link": "pages/search"
+      },
+      {
+        "title": "Prompt Library",
+        "path": "pages/prompts",
+        "link": "pages/prompts",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "AI Chat",
+        "path": "pages/chat-ai",
+        "link": "pages/chat-ai",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "Chat",
+        "path": "pages/chat",
+        "link": "pages/chat",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "Pricing",
+        "path": "pages/pricing",
+        "link": "pages/pricing",
+        "badge": "New",
+        "badgeColor": "primary"
       },
       {
         "title": "Colors",

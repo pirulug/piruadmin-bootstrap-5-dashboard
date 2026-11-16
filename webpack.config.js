@@ -261,6 +261,7 @@ module.exports = (env = {}, argv = {}) => {
     },
     cache: {
       type: "filesystem",
+      name: `${isProduction ? "prod" : "dev"}-${process.env.WEBPACK_SERVE ? "serve" : "build"}`,
     },
     devServer: {
       static: {

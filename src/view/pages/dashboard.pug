@@ -7,7 +7,7 @@ append config
 block content
 
   //- Fila de EstadÃ­sticas
-  .row.g-4.mb-4
+  .row.g-3.mb-3
     //- Mixin para no repetir Código (DRY)
     mixin statCard(title, value, icon, color)
       .col-sm-6.col-xl-3
@@ -27,7 +27,7 @@ block content
     +statCard("Orders", "64", "cart", "danger")
 
   //- GrÃ¡ficos
-  .row.g-4.mb-4
+  .row.g-3.mb-3
     .col-12.col-lg-7.d-flex
       .card.flex-fill.w-100
         .card-header
@@ -45,7 +45,7 @@ block content
           div(style="position: relative; height: 300px;")
             canvas#chartjs-dashboard-bar
 
-  .row.g-4.mb-4
+  .row.g-3.mb-3
     
     //- Widget A: Actividad Reciente (Timeline)
     .col-12.col-lg-4.d-flex
@@ -75,21 +75,21 @@ block content
           h5.card-title.mb-0 Monthly Targets
         .card-body
           
-          .mb-4
+          .mb-3
             .d-flex.justify-content-between.mb-1
               span.fw-bold Sales Goal
               span.text-primary 75%
             .progress(style="height: 6px;")
               .progress-bar.bg-primary(role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100")
 
-          .mb-4
+          .mb-3
             .d-flex.justify-content-between.mb-1
               span.fw-bold Visitors
               span.text-success 50%
             .progress(style="height: 6px;")
               .progress-bar.bg-success(role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100")
 
-          .mb-4
+          .mb-3
             .d-flex.justify-content-between.mb-1
               span.fw-bold Profit Margin
               span.text-warning 25%

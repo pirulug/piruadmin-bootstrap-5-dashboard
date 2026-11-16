@@ -55,6 +55,8 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
     const backdropElement = document.getElementsByClassName("sidebar-backdrop")[0];
     const closeElement = document.getElementsByClassName("js-sidebar-close")[0];
 
+    if (!sidebarElement || !sidebarToggleElement) return;
+
     const toggleSidebar = (e) => {
       if (e) e.preventDefault();
       sidebarElement.classList.toggle("collapsed");

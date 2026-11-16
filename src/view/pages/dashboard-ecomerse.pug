@@ -1,0 +1,481 @@
+extends ../layouts/dashboard
+
+append config
+  - pageName = "E-Commerce Dashboard"
+  - pageUrl = "dashboard-ecomerse"
+
+block styles
+  link(rel="stylesheet" href=assets + "plugins/vectormaps/vectormaps.css")
+
+block content
+  //- Top Action Bar
+  .d-flex.flex-wrap.justify-content-between.align-items-center.gap-2.mb-3
+    .d-flex.align-items-center.gap-2
+      select#ecomPeriodSelect.form-select.form-select-sm.w-auto(aria-label="Select period")
+        option(value="7d") Last 7 days
+        option(value="30d" selected) Last 30 days
+        option(value="90d") This Quarter
+        option(value="1y") This Year
+      span.text-body-secondary.small.d-none.d-sm-inline Updated just now
+    .d-flex.align-items-center.gap-2
+      button.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(type="button")
+        i.bi.bi-download.me-1
+        | Export
+      a.btn.btn-sm.btn-primary.text-uppercase.fw-bold.text-nowrap(href=baseUrl + "pages/project-create.html")
+        i.bi.bi-plus-lg.me-1
+        | New Product
+
+  //- KPI Stat Cards
+  .row.g-3.mb-3
+    mixin ecomStatCard(title, value, trend, trendUp, icon, color, subtitle)
+      .col-sm-6.col-xl-3
+        .card.h-100
+          .card-body
+            .d-flex.justify-content-between.align-items-start.mb-2
+              div
+                span.text-body-secondary.small.text-uppercase.fw-bold= title
+                h2.h3.fw-bold.mt-1.mb-0= value
+              .stat(class=`stat-${color}`)
+                i(class=`bi bi-${icon} fs-5`)
+            .d-flex.align-items-center.gap-2
+              span.badge(class=trendUp ? "bg-success-subtle text-success" : "bg-danger-subtle text-danger")
+                i.me-1(class=trendUp ? "bi bi-arrow-up-short" : "bi bi-arrow-down-short")
+                = trend
+              span.small.text-body-secondary= subtitle
+
+    +ecomStatCard("Total Revenue", "$47,482", "3.65%", true, "currency-dollar", "primary", "vs last week")
+    +ecomStatCard("Total Orders", "2,542", "5.25%", false, "bag-check", "info", "vs last week")
+    +ecomStatCard("Conversion Rate", "3.48%", "0.84%", true, "graph-up-arrow", "success", "vs last week")
+    +ecomStatCard("Avg. Order Value", "$86.40", "2.35%", true, "cart3", "warning", "vs last week")
+
+  //- Revenue Chart & Sales by Region Map
+  .row.g-3.mb-3
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.flex-wrap.justify-content-between.align-items-center.gap-2
+          div
+            h5.card-title.mb-0 Revenue Overview
+            small.text-body-secondary Current year vs previous year
+          .btn-group.btn-group-sm(role="group" aria-label="Chart range")
+            button.btn.btn-outline-secondary.active(type="button" data-range="monthly") Monthly
+            button.btn.btn-outline-secondary(type="button" data-range="quarterly") Quarterly
+        .card-body
+          div(style="position: relative; height: 300px;")
+            canvas#chartjs-ecom-revenue
+
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Sales by Region
+          span.badge.bg-primary-subtle.text-primary Global
+        .card-body.d-flex.flex-column.justify-content-between
+          #ecom-world-map(style="height: 210px;")
+          .mt-3
+            .d-flex.justify-content-between.small.mb-1
+              span United States
+              span.fw-bold 42%
+            .progress.mb-2(style="height: 5px;")
+              .progress-bar.bg-primary(role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100")
+            .d-flex.justify-content-between.small.mb-1
+              span Germany
+              span.fw-bold 26%
+            .progress.mb-2(style="height: 5px;")
+              .progress-bar.bg-info(role="progressbar" style="width: 26%" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100")
+            .d-flex.justify-content-between.small.mb-1
+              span United Kingdom
+              span.fw-bold 18%
+            .progress(style="height: 5px;")
+              .progress-bar.bg-success(role="progressbar" style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100")
+
+  //- Monthly Orders Bar Chart & Top Selling Products
+  .row.g-3.mb-3
+    .col-12.col-xl-4.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Monthly Orders
+          span.text-body-secondary.small 2026
+        .card-body
+          div(style="position: relative; height: 280px;")
+            canvas#chartjs-ecom-orders
+
+    .col-12.col-xl-8.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Top Selling Products
+          a.btn.btn-sm.btn-outline-secondary.text-uppercase.fw-bold.text-nowrap(href=baseUrl + "pages/project-list.html")
+            i.bi.bi-box-seam.me-1
+            | View All
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap Product
+                  th.text-uppercase.fw-bold.text-nowrap Price
+                  th.text-uppercase.fw-bold.text-nowrap Sold
+                  th.text-uppercase.fw-bold.text-nowrap Revenue
+                  th.text-uppercase.fw-bold.text-nowrap Stock
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Action
+              tbody
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center
+                      .p-2.rounded.bg-primary-subtle.text-primary.me-2.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px;")
+                        i.bi.bi-headphones.fs-5
+                      div
+                        .fw-bold.text-body Studio Wireless Pro
+                        .small.text-body-secondary Audio &bull; SKU-8841
+                  td $199.00
+                  td 520
+                  td.fw-bold $103,480
+                  td
+                    span.badge.bg-success-subtle.text-success In Stock
+                  td.text-end.pe-3.text-nowrap
+                    a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#")
+                      i.bi.bi-eye.me-1
+                      | View
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center
+                      .p-2.rounded.bg-info-subtle.text-info.me-2.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px;")
+                        i.bi.bi-smartwatch.fs-5
+                      div
+                        .fw-bold.text-body Pulse Watch Series 5
+                        .small.text-body-secondary Wearables &bull; SKU-3102
+                  td $249.00
+                  td 410
+                  td.fw-bold $102,090
+                  td
+                    span.badge.bg-warning-subtle.text-warning Low Stock
+                  td.text-end.pe-3.text-nowrap
+                    a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#")
+                      i.bi.bi-eye.me-1
+                      | View
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center
+                      .p-2.rounded.bg-success-subtle.text-success.me-2.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px;")
+                        i.bi.bi-keyboard.fs-5
+                      div
+                        .fw-bold.text-body MechKey 75% RGB
+                        .small.text-body-secondary Peripherals &bull; SKU-4490
+                  td $129.00
+                  td 340
+                  td.fw-bold $43,860
+                  td
+                    span.badge.bg-success-subtle.text-success In Stock
+                  td.text-end.pe-3.text-nowrap
+                    a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#")
+                      i.bi.bi-eye.me-1
+                      | View
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center
+                      .p-2.rounded.bg-warning-subtle.text-warning.me-2.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px;")
+                        i.bi.bi-laptop.fs-5
+                      div
+                        .fw-bold.text-body UltraStand Aluminum
+                        .small.text-body-secondary Accessories &bull; SKU-1924
+                  td $59.00
+                  td 295
+                  td.fw-bold $17,405
+                  td
+                    span.badge.bg-success-subtle.text-success In Stock
+                  td.text-end.pe-3.text-nowrap
+                    a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#")
+                      i.bi.bi-eye.me-1
+                      | View
+                tr
+                  td.ps-3
+                    .d-flex.align-items-center
+                      .p-2.rounded.bg-danger-subtle.text-danger.me-2.d-flex.align-items-center.justify-content-center(style="width: 36px; height: 36px;")
+                        i.bi.bi-camera.fs-5
+                      div
+                        .fw-bold.text-body StreamCam 4K HDR
+                        .small.text-body-secondary Video &bull; SKU-7720
+                  td $149.00
+                  td 180
+                  td.fw-bold $26,820
+                  td
+                    span.badge.bg-danger-subtle.text-danger Out of Stock
+                  td.text-end.pe-3.text-nowrap
+                    a.btn.btn-sm.btn-outline-info.text-uppercase.fw-bold.text-nowrap(href="#")
+                      i.bi.bi-eye.me-1
+                      | View
+
+  //- Recent Orders & Sales by Category
+  .row.g-3
+    .col-12.col-xl-7.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Recent Orders
+          span.text-body-secondary.small Latest 5 transactions
+        .card-body.p-0
+          .table-responsive
+            table.table.table-hover.align-middle.table-sm.m-0
+              thead
+                tr
+                  th.ps-3.text-uppercase.fw-bold.text-nowrap Order
+                  th.text-uppercase.fw-bold.text-nowrap Customer
+                  th.text-uppercase.fw-bold.text-nowrap Total
+                  th.text-uppercase.fw-bold.text-nowrap Status
+                  th.text-end.pe-3.text-uppercase.fw-bold.text-nowrap Date
+              tbody
+                tr
+                  td.ps-3.fw-bold #ORD-9482
+                  td
+                    .d-flex.align-items-center
+                      .rounded-circle.bg-primary.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") JD
+                      span Jane Doe
+                  td.fw-bold $249.00
+                  td
+                    span.badge.bg-success-subtle.text-success Delivered
+                  td.text-end.pe-3.text-body-secondary.small Nov 16, 2026
+                tr
+                  td.ps-3.fw-bold #ORD-9481
+                  td
+                    .d-flex.align-items-center
+                      .rounded-circle.bg-info.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") AS
+                      span Alex Smith
+                  td.fw-bold $199.00
+                  td
+                    span.badge.bg-info-subtle.text-info Shipped
+                  td.text-end.pe-3.text-body-secondary.small Nov 16, 2026
+                tr
+                  td.ps-3.fw-bold #ORD-9480
+                  td
+                    .d-flex.align-items-center
+                      .rounded-circle.bg-warning.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") MG
+                      span Maria Garcia
+                  td.fw-bold $328.00
+                  td
+                    span.badge.bg-warning-subtle.text-warning Processing
+                  td.text-end.pe-3.text-body-secondary.small Nov 15, 2026
+                tr
+                  td.ps-3.fw-bold #ORD-9479
+                  td
+                    .d-flex.align-items-center
+                      .rounded-circle.bg-danger.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") RK
+                      span Robert Kim
+                  td.fw-bold $59.00
+                  td
+                    span.badge.bg-danger-subtle.text-danger Cancelled
+                  td.text-end.pe-3.text-body-secondary.small Nov 15, 2026
+                tr
+                  td.ps-3.fw-bold #ORD-9478
+                  td
+                    .d-flex.align-items-center
+                      .rounded-circle.bg-success.text-white.d-flex.align-items-center.justify-content-center.me-2(style="width: 28px; height: 28px; font-size: 0.72rem; font-weight: 600;") EW
+                      span Emma Watson
+                  td.fw-bold $149.00
+                  td
+                    span.badge.bg-success-subtle.text-success Delivered
+                  td.text-end.pe-3.text-body-secondary.small Nov 14, 2026
+
+    .col-12.col-xl-5.d-flex
+      .card.flex-fill.w-100
+        .card-header.d-flex.justify-content-between.align-items-center
+          h5.card-title.mb-0 Sales by Category
+          span.text-body-secondary.small Share of revenue
+        .card-body.d-flex.flex-column.justify-content-center
+          .row.align-items-center.g-3
+            .col-12.col-sm-6
+              div(style="position: relative; height: 200px;")
+                canvas#chartjs-ecom-categories
+            .col-12.col-sm-6
+              ul.list-unstyled.mb-0.small
+                li.d-flex.justify-content-between.align-items-center.mb-2
+                  span
+                    i.bi.bi-circle-fill.text-primary.me-2
+                    | Electronics
+                  span.fw-bold 44%
+                li.d-flex.justify-content-between.align-items-center.mb-2
+                  span
+                    i.bi.bi-circle-fill.text-info.me-2
+                    | Wearables
+                  span.fw-bold 26%
+                li.d-flex.justify-content-between.align-items-center.mb-2
+                  span
+                    i.bi.bi-circle-fill.text-success.me-2
+                    | Peripherals
+                  span.fw-bold 18%
+                li.d-flex.justify-content-between.align-items-center
+                  span
+                    i.bi.bi-circle-fill.text-warning.me-2
+                    | Accessories
+                  span.fw-bold 12%
+
+block scripts
+  script(src=assets + "plugins/chartjs/chartjs.js")
+  script(src=assets + "plugins/vectormaps/vectormaps.js")
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const getVar = (name) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+      const primary = window.theme?.primary || "#e83283";
+      const secondary = window.theme?.secondary || "#686dc3";
+      const info = window.theme?.info || "#17a2b8";
+      const success = window.theme?.success || "#28a745";
+      const warning = window.theme?.warning || "#ffc107";
+      const gridColor = getVar("--bs-border-color-translucent") || "rgba(120, 130, 140, 0.15)";
+      const textColor = getVar("--bs-secondary-color") || "#6c757d";
+
+      // 1. Revenue Overview Line/Area Chart
+      const revenueCtx = document.getElementById("chartjs-ecom-revenue").getContext("2d");
+      const revenueDataSets = {
+        monthly: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          current: [2115, 1862, 1984, 2392, 2187, 2523, 2966, 2748, 3105, 3638, 3317, 3927],
+          previous: [1750, 1620, 1710, 1890, 1820, 2050, 2310, 2240, 2490, 2780, 2610, 3020]
+        },
+        quarterly: {
+          labels: ["Q1", "Q2", "Q3", "Q4"],
+          current: [5961, 7102, 8819, 10882],
+          previous: [5080, 5760, 7040, 8410]
+        }
+      };
+
+      const revenueChart = new Chart(revenueCtx, {
+        type: "line",
+        data: {
+          labels: revenueDataSets.monthly.labels,
+          datasets: [
+            {
+              label: "Current ($)",
+              fill: true,
+              backgroundColor: "rgba(232, 50, 131, 0.12)",
+              borderColor: primary,
+              borderWidth: 2,
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              data: revenueDataSets.monthly.current
+            },
+            {
+              label: "Previous ($)",
+              fill: false,
+              borderColor: secondary,
+              borderWidth: 2,
+              borderDash: [5, 5],
+              tension: 0.4,
+              pointRadius: 0,
+              pointHoverRadius: 4,
+              data: revenueDataSets.monthly.previous
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: "index" },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+              align: "end",
+              labels: { color: textColor, boxWidth: 12, usePointStyle: true }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false },
+              ticks: { color: textColor }
+            },
+            y: {
+              beginAtZero: true,
+              grid: { color: gridColor },
+              ticks: {
+                color: textColor,
+                callback: (value) => "$" + value.toLocaleString()
+              }
+            }
+          }
+        }
+      });
+
+      document.querySelectorAll("[data-range]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll("[data-range]").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const range = btn.getAttribute("data-range");
+          const ds = revenueDataSets[range];
+          revenueChart.data.labels = ds.labels;
+          revenueChart.data.datasets[0].data = ds.current;
+          revenueChart.data.datasets[1].data = ds.previous;
+          revenueChart.update();
+        });
+      });
+
+      // 2. Monthly Orders Bar Chart
+      new Chart(document.getElementById("chartjs-ecom-orders"), {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          datasets: [
+            {
+              label: "Orders",
+              backgroundColor: primary,
+              borderRadius: 4,
+              barPercentage: 0.55,
+              data: [154, 167, 141, 175, 192, 165, 205, 223, 210, 246, 218, 269]
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: textColor } },
+            y: { grid: { color: gridColor }, ticks: { color: textColor }, beginAtZero: true }
+          }
+        }
+      });
+
+      // 3. Sales by Category Doughnut Chart
+      new Chart(document.getElementById("chartjs-ecom-categories"), {
+        type: "doughnut",
+        data: {
+          labels: ["Electronics", "Wearables", "Peripherals", "Accessories"],
+          datasets: [
+            {
+              data: [44, 26, 18, 12],
+              backgroundColor: [primary, info, success, warning],
+              borderWidth: 0
+            }
+          ]
+        },
+        options: {
+          maintainAspectRatio: false,
+          cutout: "70%",
+          plugins: { legend: { display: false } }
+        }
+      });
+
+      // 4. Sales by Region Vector Map
+      if (typeof jsVectorMap !== "undefined") {
+        new jsVectorMap({
+          selector: "#ecom-world-map",
+          map: "world",
+          zoomButtons: false,
+          regionStyle: {
+            initial: {
+              fill: getVar("--bs-tertiary-bg") || "#dee2e6",
+              stroke: getVar("--bs-border-color") || "#adb5bd",
+              strokeWidth: 0.4
+            }
+          },
+          markers: [
+            { name: "United States", coords: [37.0902, -95.7129] },
+            { name: "Germany", coords: [51.1657, 10.4515] },
+            { name: "United Kingdom", coords: [55.3781, -3.436] },
+            { name: "Brazil", coords: [-14.235, -51.9253] },
+            { name: "Japan", coords: [36.2048, 138.2529] }
+          ],
+          markerStyle: {
+            initial: { fill: primary, stroke: "#ffffff", strokeWidth: 2, r: 5 },
+            hover: { fill: info }
+          }
+        });
+      }
+    });
