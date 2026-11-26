@@ -1,12 +1,8 @@
-const Webpack = require("webpack");
+const { rspack } = require("@rspack/core");
 const Path = require("path");
 const Fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const PrettifyWebpackPlugin = require("pirulug-prettify-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 const PluginsManager = require("./scripts/plugins-manager");
 const JsonManager = require("./scripts/json-manager");
@@ -78,24 +74,17 @@ module.exports = (env = {}, argv = {}) => {
     performance: { hints: false },
     optimization: {
       minimizer: [
-        new TerserPlugin({
-          parallel: true,
-          terserOptions: {
-            ecma: 6,
+        new rspack.SwcJsMinimizerRspackPlugin({
+          extractComments: false,
+          minimizerOptions: {
             format: {
               comments: false,
             },
           },
-          extractComments: false,
         }),
-        new CssMinimizerPlugin({
+        new rspack.LightningCssMinimizerRspackPlugin({
           minimizerOptions: {
-            preset: [
-              "default",
-              {
-                discardComments: { removeAll: true },
-              },
-            ],
+            errorRecovery: true,
           },
         }),
       ],
@@ -103,13 +92,13 @@ module.exports = (env = {}, argv = {}) => {
     },
     plugins: [
       new JsonManager(),
-      // Extract css files to seperate bundle
-      new MiniCssExtractPlugin({
+      // Extract css files to separate bundle
+      new rspack.CssExtractRspackPlugin({
         filename: "assets/css/[name].css",
         chunkFilename: "assets/css/[name].css",
       }),
       // Copy fonts and images to dist
-      new CopyWebpackPlugin({
+      new rspack.CopyRspackPlugin({
         patterns: [
           { from: "src/fonts", to: "assets/fonts" },
           { from: "src/img", to: "assets/img" },
@@ -159,34 +148,33 @@ module.exports = (env = {}, argv = {}) => {
         }),
       // Eliminar archivos vacios
       !devBuild && new DeleteEmptyFilesPlugin(__dirname, "dist"),
-      new Webpack.BannerPlugin({
+      new rspack.BannerPlugin({
         banner: banner,
         raw: false,
         entryOnly: false,
         test: /\.(css|js)$/i,
-        stage: Webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
+        stage: rspack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
       }),
     ].filter(Boolean),
     module: {
       rules: [
-        // Babel-loader
+        // SWC-loader (reemplaza babel-loader)
         {
           test: /\.js$/,
           exclude: /(node_modules)/,
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                cacheDirectory: true,
-              },
+          loader: "builtin:swc-loader",
+          options: {
+            env: {
+              targets: ["last 2 versions", "> 0.5%", "not dead", "not ie 11"],
             },
-          ],
+          },
         },
         // Css-loader & sass-loader
         {
           test: /\.(sa|sc|c)ss$/,
+          type: "javascript/auto",
           use: [
-            MiniCssExtractPlugin.loader,
+            rspack.CssExtractRspackPlugin.loader,
             "css-loader",
             "postcss-loader",
             {
@@ -259,10 +247,7 @@ module.exports = (env = {}, argv = {}) => {
         request$: "xhr",
       },
     },
-    cache: {
-      type: "filesystem",
-      name: `${isProduction ? "prod" : "dev"}-${process.env.WEBPACK_SERVE ? "serve" : "build"}`,
-    },
+    cache: true,
     devServer: {
       static: {
         directory: Path.join(__dirname, "dist"),

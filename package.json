@@ -1,7 +1,7 @@
 {
   "homepage": "https://pirulug.github.io/piruadmin-bootstrap-5-dashboard",
   "name": "piruadmin-bootstrap-5-dashboard",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Admin dashboard bootstrap 5",
   "keywords": [
     "template",
@@ -14,13 +14,13 @@
     "web"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress",
-    "dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --progress",
-    "dev:plugins": "cross-env NODE_ENV=development PLUGINS=true webpack --config webpack.config.js --progress --env plugins",
-    "watch": "webpack --config webpack.config.js --watch --progress",
-    "start": "webpack serve --config webpack.config.js --progress",
-    "start:plugins": "cross-env PLUGINS=true webpack serve --config webpack.config.js --progress --env plugins",
-    "prepublishOnly": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production rspack build --config rspack.config.js",
+    "dev": "cross-env NODE_ENV=development rspack build --config rspack.config.js",
+    "dev:plugins": "cross-env NODE_ENV=development PLUGINS=true rspack build --config rspack.config.js --env plugins",
+    "watch": "rspack build --config rspack.config.js --watch",
+    "start": "rspack serve --config rspack.config.js",
+    "start:plugins": "cross-env PLUGINS=true rspack serve --config rspack.config.js --env plugins",
+    "prepublishOnly": "cross-env NODE_ENV=production rspack build --config rspack.config.js",
     "deploy": "gh-pages -d dist"
   },
   "author": "Pirulug",
@@ -30,16 +30,13 @@
     "url": "git+https://github.com/pirulug/piruadmin-bootstrap-5-dashboard.git"
   },
   "devDependencies": {
-    "@babel/core": "8.1.3",
-    "@babel/preset-env": "8.0.7",
-    "babel-loader": "10.1.1",
-    "copy-webpack-plugin": "14.0.0",
+    "@rspack/cli": "^2.3.4",
+    "@rspack/core": "^2.3.4",
+    "@rspack/dev-server": "^2.2.2",
     "cross-env": "10.1.0",
     "css-loader": "7.1.5",
-    "css-minimizer-webpack-plugin": "8.0.0",
     "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.8",
-    "mini-css-extract-plugin": "2.10.2",
     "pirulug-delete-empty-files-webpack-plugin": "^0.0.3",
     "pirulug-prettify-webpack-plugin": "^0.1.1",
     "pirulug-pug-loader": "^0.0.18",
@@ -48,11 +45,7 @@
     "postcss-preset-env": "^11.6.3",
     "pug": "^3.0.4",
     "sass": "^1.108.2",
-    "sass-loader": "17.1.1",
-    "terser-webpack-plugin": "5.6.1",
-    "webpack": "5.113.0",
-    "webpack-cli": "7.3.1",
-    "webpack-dev-server": "6.1.0"
+    "sass-loader": "17.1.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",

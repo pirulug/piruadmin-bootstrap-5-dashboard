@@ -233,3 +233,22 @@
   - Removed duplicate `src/scss/components/_badge.scss` (consolidated in `_badges.scss`) and removed residual `box-shadow` rules in `_auth.scss` and `_avatar.scss`.
   - Fixed anti-FOUC inline theme script for `"auto"` mode, unified `theme-color` (`#e83283`), `lang="en"`, and `og:image` / `twitter:image` asset paths across layouts.
   - Updated `pages/timeline.pug` (`.bg-body-secondary` instead of `.bg-light`) and `dashboard.pug` (`g-3`/`mb-3`).
+
+## [v2.5.0] - 26/11/2026
+
+### Added
+- **Rspack Bundler Migration**:
+  - Replaced Webpack 5 and Babel (`webpack.config.js`, `.babelrc`) with **Rspack 2** (`rspack.config.js`), using `builtin:swc-loader`, `CssExtractRspackPlugin`, `CopyRspackPlugin`, `SwcJsMinimizerRspackPlugin`, and `LightningCssMinimizerRspackPlugin`.
+  - Migrated `scripts/plugins-manager.js` to `@rspack/core` for isolated multi-compiler builds of all 15 plugins.
+- **Plugin Copyright Banners**:
+  - Added `rspack.BannerPlugin` to all 15 compiled plugin `.css` and `.js` bundles using dynamic metadata from `package.json`.
+
+### Fixed & Improved
+- **Responsive Layout (Mobile, Tablet, Laptop & PC)**:
+  - Fixed horizontal overflow in `_content.scss` and `_footer.scss` (`100vw` → `100%` and invalid `max-width: auto` → `max-width: none`).
+  - Improved sidebar drawer in `_sidebar.scss` and `sidebar.js` with `100dvh`, body scroll lock on mobile, and clean state reset when crossing the `992px` breakpoint.
+  - Refined `.navtop` mobile dropdown positioning (`top: 65px`, `min-width: 0`), hid `#fullscreen-btn` on mobile, adjusted `.back-to-top` size/z-index on small screens, and hid `.github-corner` below `lg` so it does not overlap `.navbar-toggler`.
+  - Fixed responsive issues in `footer.pug`, `home-footer.pug`, `index.pug`, `dashboard.pug`, `dashboard-ia.pug`, `account/settings.pug`, `account/profile.pug`, `auth/2-step-verification*.pug`, `pages/chat.pug`, `pages/chat-ai.pug`, and list view paginators.
+
+### Removed
+- Removed legacy Webpack and Babel dependencies (`webpack`, `webpack-cli`, `webpack-dev-server`, `babel-loader`, `@babel/core`, `@babel/preset-env`, `mini-css-extract-plugin`, `copy-webpack-plugin`, `terser-webpack-plugin`, `css-minimizer-webpack-plugin`) along with `webpack.config.js` and `.babelrc`.

@@ -1,8 +1,5 @@
-const Webpack = require("webpack");
+const { rspack } = require("@rspack/core");
 const Path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
 const pkg = require("../package.json");
 
@@ -61,7 +58,7 @@ class PluginsManager {
   }
 
   /**
-   * Crea una configuracion de Webpack totalmente aislada para un plugin individual
+   * Crea una configuracion de Rspack totalmente aislada para un plugin individual
    */
   static createSinglePluginConfig(plugin, env = {}, argv = {}, banner = defaultBanner) {
     const isProduction =
@@ -91,64 +88,56 @@ class PluginsManager {
       performance: { hints: false },
       optimization: {
         minimizer: [
-          new TerserPlugin({
-            parallel: true,
-            terserOptions: {
-              ecma: 6,
+          new rspack.SwcJsMinimizerRspackPlugin({
+            extractComments: false,
+            minimizerOptions: {
               format: {
                 comments: false,
               },
             },
-            extractComments: false,
           }),
-          new CssMinimizerPlugin({
+          new rspack.LightningCssMinimizerRspackPlugin({
             minimizerOptions: {
-              preset: [
-                "default",
-                {
-                  discardComments: { removeAll: true },
-                },
-              ],
+              errorRecovery: true,
             },
           }),
         ],
         runtimeChunk: false,
       },
       plugins: [
-        new MiniCssExtractPlugin({
+        new rspack.CssExtractRspackPlugin({
           filename: "[name].css",
           chunkFilename: "[name].css",
         }),
         !devBuild && new DeleteEmptyFilesPlugin(rootDir, `dist/assets/plugins/${plugin.name}`),
         banner &&
-          new Webpack.BannerPlugin({
+          new rspack.BannerPlugin({
             banner: banner,
             raw: false,
             entryOnly: false,
             test: /\.(css|js)$/i,
-            stage: Webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
+            stage: rspack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
           }),
       ].filter(Boolean),
       module: {
         rules: [
-          // JS Loader
+          // SWC Loader (reemplaza babel-loader)
           {
             test: /\.js$/,
             exclude: /(node_modules)/,
-            use: [
-              {
-                loader: "babel-loader",
-                options: {
-                  cacheDirectory: true,
-                },
+            loader: "builtin:swc-loader",
+            options: {
+              env: {
+                targets: ["last 2 versions", "> 0.5%", "not dead", "not ie 11"],
               },
-            ],
+            },
           },
           // CSS y SASS Loader
           {
             test: /\.(sa|sc|c)ss$/,
+            type: "javascript/auto",
             use: [
-              MiniCssExtractPlugin.loader,
+              rspack.CssExtractRspackPlugin.loader,
               "css-loader",
               "postcss-loader",
               {
@@ -228,9 +217,7 @@ class PluginsManager {
           request$: "xhr",
         },
       },
-      cache: {
-        type: "filesystem",
-      },
+      cache: true,
       stats: {
         assets: true,
         builtAt: true,
