@@ -18,7 +18,7 @@ block content
           h5.card-title Basic Usage
           p.text-muted The <code>.avatar</code> component automatically adapts its content, whether it's an image, text, or icon.
           .d-flex.justify-content-center.gap-4.py-4
-            figure.avatar.mb-0: img(src='https://dummyimage.com/100x100/333/fff.png' alt='Avatar')
+            figure.avatar.mb-0: img(src=assets + 'img/demos/avatar-1.jpg' alt='Avatar')
             figure.avatar.mb-0: span AB
             figure.avatar.mb-0: i.bi.bi-person
           .text-center.mt-2
@@ -49,19 +49,19 @@ block content
           p.text-muted Avatars with brand indicators as badges.
           .d-flex.justify-content-center.flex-wrap.gap-4.py-4
             figure.avatar.avatar-xl.mb-0
-              img(src='https://i.pravatar.cc/150?u=1' alt='User')
+              img(src=assets + 'img/demos/avatar-1.jpg' alt='User')
               span.avatar-badge.avatar-netflix: i.bi.bi-play-fill
             figure.avatar.avatar-xl.mb-0
-              img(src='https://i.pravatar.cc/150?u=2' alt='User')
+              img(src=assets + 'img/demos/avatar-2.jpg' alt='User')
               span.avatar-badge.avatar-amazon: i.bi.bi-amazon
             figure.avatar.avatar-xl.mb-0
-              img(src='https://i.pravatar.cc/150?u=3' alt='User')
+              img(src=assets + 'img/demos/avatar-3.jpg' alt='User')
               span.avatar-badge.avatar-facebook: i.bi.bi-messenger
             figure.avatar.avatar-xl.mb-0
-              img(src='https://i.pravatar.cc/150?u=4' alt='User')
+              img(src=assets + 'img/demos/avatar-4.jpg' alt='User')
               span.avatar-badge.avatar-github: i.bi.bi-github
             figure.avatar.avatar-xl.mb-0
-              img(src='https://i.pravatar.cc/150?u=5' alt='User')
+              img(src=assets + 'img/demos/avatar-1.jpg' alt='User')
               span.avatar-badge.avatar-twitch: i.bi.bi-twitch
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseBrands' aria-expanded='false')
@@ -93,11 +93,11 @@ block content
           p.text-muted Modify the border radius with <code>.avatar-rounded</code> or <code>.avatar-square</code>.
           .d-flex.justify-content-center.gap-4.py-4
             figure.avatar.mb-0
-              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Circle')
+              img(src=assets + 'img/demos/avatar-2.jpg' alt='Circle')
             figure.avatar.avatar-rounded.mb-0
-              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Rounded')
+              img(src=assets + 'img/demos/avatar-3.jpg' alt='Rounded')
             figure.avatar.avatar-square.mb-0
-              img(src='https://dummyimage.com/100x100/0d6efd/fff' alt='Square')
+              img(src=assets + 'img/demos/avatar-4.jpg' alt='Square')
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseShapes' aria-expanded='false')
               i.bi.bi-code-slash.me-1
@@ -161,7 +161,7 @@ block content
           p.text-muted Add specific <code>.avatar-status</code> indicators for online, busy, or away states.
           .d-flex.justify-content-center.gap-5.py-4
             figure.avatar.avatar-lg
-              img(src="https://dummyimage.com/100x100/333/fff&text=U")
+              img(src=assets + "img/demos/avatar-1.jpg" alt="User")
               span.avatar-status.bg-success
             figure.avatar.avatar-secondary
               span AB
@@ -191,13 +191,13 @@ block content
           p.text-muted Stack multiple avatars together using the <code>.avatar-group</code> container.
           .d-flex.flex-column.justify-content-center.align-items-center.gap-4.py-4
             .avatar-group
-              figure.avatar.avatar-lg: img(src='https://dummyimage.com/100x100/0d6efd/fff&text=1')
+              figure.avatar.avatar-lg: img(src=assets + 'img/demos/avatar-1.jpg' alt='User 1')
               figure.avatar.avatar-lg.avatar-primary: span A
               figure.avatar.avatar-lg.avatar-success: i.bi.bi-check
               figure.avatar.avatar-lg.avatar-secondary: span +3
             .avatar-group
-              figure.avatar.avatar-sm: img(src='https://dummyimage.com/100x100/444/fff&text=A')
-              figure.avatar.avatar-sm: img(src='https://dummyimage.com/100x100/555/fff&text=B')
+              figure.avatar.avatar-sm: img(src=assets + 'img/demos/avatar-2.jpg' alt='User 2')
+              figure.avatar.avatar-sm: img(src=assets + 'img/demos/avatar-3.jpg' alt='User 3')
               figure.avatar.avatar-sm.avatar-dark: span 9+
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseGroup' aria-expanded='false')
@@ -221,11 +221,11 @@ block content
           h5.card-title Interactive Lightbox
           p.text-muted Integrated with <code>GLightbox</code> to preview avatar images or videos in full size.
           .d-flex.flex-wrap.justify-content-center.gap-3.py-4
-            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/000/fff.png' data-gallery="avatars")
-              img(src='https://dummyimage.com/100x100/000/fff.png' alt='avatar')
-            a.avatar.avatar-xl.glightbox(href='https://dummyimage.com/800x600/333/fff.png' data-gallery="avatars")
-              img(src='https://dummyimage.com/100x100/333/fff.png' alt='avatar')
-            a.avatar.avatar-xl.avatar-primary.glightbox(href='https://dummyimage.com/800x600/0d6efd/fff.png' data-gallery="avatars")
+            a.avatar.avatar-xl.glightbox(href=assets + 'img/demos/avatar-1.jpg' data-type="image" data-gallery="avatars")
+              img(src=assets + 'img/demos/avatar-1.jpg' alt='avatar')
+            a.avatar.avatar-xl.glightbox(href=assets + 'img/demos/avatar-2.jpg' data-type="image" data-gallery="avatars")
+              img(src=assets + 'img/demos/avatar-2.jpg' alt='avatar')
+            a.avatar.avatar-xl.avatar-primary.glightbox(href=assets + 'img/demos/gallery-5.jpg' data-type="image" data-gallery="avatars")
               span IMG
             a.glightbox(href='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
               figure.avatar.avatar-xl.avatar-danger.mb-0

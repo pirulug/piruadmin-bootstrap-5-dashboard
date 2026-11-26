@@ -18,7 +18,7 @@ block content
         .card-body
           .swiper#swiper-basic
             .swiper-wrapper
-              each slide, i in ['https://picsum.photos/id/1011/800/420', 'https://picsum.photos/id/1016/800/420', 'https://picsum.photos/id/1020/800/420']
+              each slide, i in [assets + 'img/demos/gallery-1.jpg', assets + 'img/demos/gallery-2.jpg', assets + 'img/demos/gallery-3.jpg']
                 .swiper-slide
                   .position-relative.overflow-hidden.rounded
                     img.img-fluid.w-100(src=slide alt=`Slide ${i + 1}` style="height: 260px; object-fit: cover;")
@@ -38,7 +38,7 @@ block content
         .card-body
           .swiper#swiper-fade
             .swiper-wrapper
-              each slide, i in ['https://picsum.photos/id/1035/800/420', 'https://picsum.photos/id/1043/800/420', 'https://picsum.photos/id/1050/800/420']
+              each slide, i in [assets + 'img/demos/gallery-4.jpg', assets + 'img/demos/gallery-5.jpg', assets + 'img/demos/gallery-6.jpg']
                 .swiper-slide
                   .position-relative.overflow-hidden.rounded
                     img.img-fluid.w-100(src=slide alt=`Fade ${i + 1}` style="height: 260px; object-fit: cover;")

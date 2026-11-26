@@ -65,7 +65,7 @@ block content
             each val, i in [1,2,3,4,5,6]
               .col-md-6.col-lg-4
                 .card.h-100
-                  img.card-img-top(src=`https://picsum.photos/seed/${i+10}/600/400` alt="Article")
+                  img.card-img-top(src=`${assets}img/demos/gallery-${(i % 6) + 1}.jpg` alt="Article" style="height: 180px; object-fit: cover;")
                   .card-body
                     h5.card-title.fw-bold Modern CSS Techniques
                     p.card-text.small.text-body-secondary Learn how to use the latest features of CSS to build faster and more beautiful sites.
@@ -78,7 +78,7 @@ block content
             each val, i in [1,2,3,4,5,6,7,8,9,10,11,12]
               .col-6.col-sm-4.col-md-3
                 .ratio.ratio-1x1
-                  img.img-fluid.rounded.border(src=`https://picsum.photos/seed/${i+50}/400/400` alt="Gallery")
+                  img.img-fluid.rounded.border(src=`${assets}img/demos/gallery-${((i + 2) % 6) + 1}.jpg` alt="Gallery" style="aspect-ratio: 1 / 1; object-fit: cover;")
 
         //- Members
         #members.tab-pane.fade(role="tabpanel")

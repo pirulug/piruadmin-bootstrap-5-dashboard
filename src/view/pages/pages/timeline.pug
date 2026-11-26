@@ -33,7 +33,7 @@ block content
             // Image Marker Entry
             .timeline-item.timeline-primary
               .timeline-marker
-                img(src='https://dummyimage.com/60x60/ddd/555&text=MA' alt='Martina')
+                img(src=assets + 'img/demos/avatar-2.jpg' alt='Martina')
               .timeline-content
                 .timeline-header
                   span.timeline-title
@@ -42,7 +42,7 @@ block content
                   span.timeline-time Mar 8:17pm
                 a.text-decoration-none.d-block(href='#')
                   .border.rounded.d-flex.overflow-hidden
-                    img.w-25.d-none.d-sm-block(src='https://dummyimage.com/200x150/f8f9fa/555&text=Preview' alt='preview' style="object-fit: cover;")
+                    img.w-25.d-none.d-sm-block(src=assets + 'img/demos/gallery-4.jpg' alt='preview' style="object-fit: cover;")
                     .p-3
                       h5.mb-1 Connection title
                       p.text-muted.mb-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -104,7 +104,7 @@ block content
                 .row.g-2
                   each i in [1,2,3]
                     .col-4
-                      img.img-fluid.rounded.border(src=`https://dummyimage.com/300x200/f8f9fa/555&text=Photo+${i}` alt='image')
+                      img.img-fluid.rounded.border(src=`${assets}img/demos/gallery-${((i - 1) % 6) + 1}.jpg` alt='image' style="height: 120px; width: 100%; object-fit: cover;")
 
             // Code Update (PrismJS Example)
             .timeline-item.timeline-primary

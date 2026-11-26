@@ -17,7 +17,7 @@ block content
           h5.card-title Responsive Images
           p.text-muted Images in Bootstrap are made responsive with <code>.img-fluid</code>, which applies <code>max-width: 100%</code> and <code>height: auto</code>.
           .text-center.py-4
-            img.img-fluid.rounded(src="https://dummyimage.com/1200x400/0d6efd/fff.png&text=Responsive+Image" alt="Responsive image")
+            img.img-fluid.rounded(src=assets + "img/demos/gallery-5.jpg" alt="Responsive image" style="max-height: 360px; width: 100%; object-fit: cover;")
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseResponsive' aria-expanded='false')
               i.bi.bi-code-slash.me-1
@@ -36,7 +36,7 @@ block content
           h5.card-title Image Thumbnails
           p.text-muted Use the <code>.img-thumbnail</code> class to give an image a rounded 1px border appearance with a small amount of padding.
           .text-center.py-4
-            img.img-thumbnail(src="https://dummyimage.com/200x200/6c757d/fff.png&text=Thumbnail" alt="Thumbnail appearance")
+            img.img-thumbnail(src=assets + "img/demos/avatar-2.jpg" alt="Thumbnail appearance" width="200" height="200" style="object-fit: cover;")
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThumbnail' aria-expanded='false')
               i.bi.bi-code-slash.me-1
@@ -56,10 +56,10 @@ block content
           p.text-muted Align images with helper classes like <code>.float-start</code>, <code>.float-end</code>, or center them using <code>.mx-auto.d-block</code>.
           .py-4
             .mb-3.clearfix
-              img.rounded.float-start(src="https://dummyimage.com/100x100/17a2b8/fff.png&text=Start" alt="Aligned start")
-              img.rounded.float-end(src="https://dummyimage.com/100x100/ffc107/fff.png&text=End" alt="Aligned end")
+              img.rounded.float-start(src=assets + "img/demos/avatar-1.jpg" alt="Aligned start" width="100" height="100" style="object-fit: cover;")
+              img.rounded.float-end(src=assets + "img/demos/avatar-3.jpg" alt="Aligned end" width="100" height="100" style="object-fit: cover;")
             .mt-3.text-center
-              img.rounded.mx-auto.d-block(src="https://dummyimage.com/100x100/198754/fff.png&text=Center" alt="Aligned center")
+              img.rounded.mx-auto.d-block(src=assets + "img/demos/avatar-4.jpg" alt="Aligned center" width="100" height="100" style="object-fit: cover;")
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseAlign' aria-expanded='false')
               i.bi.bi-code-slash.me-1
@@ -84,7 +84,7 @@ block content
           p.text-muted Use the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements to present images with a description.
           .py-4
             figure.figure.m-0.w-100.text-center
-              img.figure-img.img-fluid.rounded(src="https://dummyimage.com/600x200/212529/fff.png&text=Figure" alt="Figure appearance")
+              img.figure-img.img-fluid.rounded(src=assets + "img/demos/gallery-6.jpg" alt="Figure appearance" style="max-height: 240px; width: 100%; object-fit: cover;")
               figcaption.figure-caption.mt-2.text-center A descriptive caption for the image figure.
           .text-center.mt-2
             button.btn.btn-sm.btn-outline-secondary(type='button' data-bs-toggle='collapse' data-bs-target='#collapseFigure' aria-expanded='false')
