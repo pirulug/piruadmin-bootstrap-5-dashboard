@@ -1,0 +1,51 @@
+@import "fullcalendar/skeleton.css";
+@import "fullcalendar/themes/classic/theme.css";
+@import "fullcalendar/themes/classic/palette.css";
+
+:root,
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  /* Buttons */
+  --fc-classic-button: var(--pr-tertiary-bg);
+  --fc-classic-button-border: var(--pr-border-color);
+  --fc-classic-button-strong: var(--pr-primary);
+  --fc-classic-button-strong-border: var(--pr-primary);
+  --fc-classic-button-outline: rgba(var(--pr-primary-rgb), 0.35);
+  --fc-classic-button-foreground: var(--pr-body-color);
+
+  /* Primary & Events */
+  --fc-classic-primary: var(--pr-primary);
+  --fc-classic-primary-foreground: #fff;
+  --fc-classic-event: var(--pr-primary);
+  --fc-classic-event-contrast: #fff;
+  --fc-classic-background-event: var(--pr-success);
+  --fc-classic-highlight: rgba(var(--pr-primary-rgb), 0.14);
+  --fc-classic-today: rgba(var(--pr-primary-rgb), 0.08);
+  --fc-classic-now: var(--pr-danger);
+
+  /* Neutral backgrounds */
+  --fc-classic-background: var(--pr-body-bg);
+  --fc-classic-faint: var(--pr-tertiary-bg);
+  --fc-classic-muted: var(--pr-secondary-bg);
+  --fc-classic-strong: var(--pr-border-color);
+
+  /* Neutral foregrounds */
+  --fc-classic-foreground: var(--pr-body-color);
+  --fc-classic-faint-foreground: var(--pr-secondary-color);
+  --fc-classic-muted-foreground: var(--pr-secondary-color);
+
+  /* Neutral borders */
+  --fc-classic-border: var(--pr-border-color);
+  --fc-classic-strong-border: var(--pr-border-color);
+}
+
+.fc-classic-n5m {
+  font-family: var(--pr-font-sans-serif);
+  font-size: 0.875rem;
+  color: var(--pr-body-color);
+
+  button[aria-pressed="true"],
+  button.fc-button-active {
+    color: #fff;
+  }
+}

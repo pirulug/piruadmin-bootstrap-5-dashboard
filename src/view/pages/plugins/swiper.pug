@@ -1,0 +1,111 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'Swiper'
+  - pageUrl = 'plugins/swiper'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/swiper/swiper.css")
+
+block content
+  .row.g-3.mb-3
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-collection-play.me-2
+            | Navigation &amp; Pagination Slider
+        .card-body
+          .swiper#swiper-basic
+            .swiper-wrapper
+              each slide, i in ['https://picsum.photos/id/1011/800/420', 'https://picsum.photos/id/1016/800/420', 'https://picsum.photos/id/1020/800/420']
+                .swiper-slide
+                  .position-relative.overflow-hidden.rounded
+                    img.img-fluid.w-100(src=slide alt=`Slide ${i + 1}` style="height: 260px; object-fit: cover;")
+                    .position-absolute.bottom-0.start-0.end-0.p-3.bg-body.bg-opacity-75
+                      .fw-bold Slide ##{i + 1}
+                      .small.text-body-secondary Touch-friendly slider with keyboard &amp; arrow controls.
+            .swiper-button-next
+            .swiper-button-prev
+            .swiper-pagination
+
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-stars.me-2
+            | Autoplay &amp; Fade Effect
+        .card-body
+          .swiper#swiper-fade
+            .swiper-wrapper
+              each slide, i in ['https://picsum.photos/id/1035/800/420', 'https://picsum.photos/id/1043/800/420', 'https://picsum.photos/id/1050/800/420']
+                .swiper-slide
+                  .position-relative.overflow-hidden.rounded
+                    img.img-fluid.w-100(src=slide alt=`Fade ${i + 1}` style="height: 260px; object-fit: cover;")
+                    .position-absolute.top-0.end-0.m-2
+                      span.badge.bg-primary Autoplay #{i + 1}/3
+            .swiper-pagination
+
+  .card
+    .card-header
+      h5.card-title.mb-0
+        i.bi.bi-columns-gap.me-2
+        | Responsive Multi-Slide Carousel
+    .card-body
+      .swiper#swiper-multi.pb-4
+        .swiper-wrapper
+          each item, i in [{ title: 'Analytics Pro', tag: 'SaaS', icon: 'bi-graph-up-arrow', color: 'primary' }, { title: 'Cloud Storage', tag: 'Infra', icon: 'bi-cloud-check', color: 'success' }, { title: 'AI Assistant', tag: 'Beta', icon: 'bi-cpu', color: 'info' }, { title: 'Billing Engine', tag: 'Finance', icon: 'bi-credit-card', color: 'warning' }, { title: 'Security Shield', tag: 'Core', icon: 'bi-shield-lock', color: 'danger' }]
+            .swiper-slide
+              .p-4.rounded.bg-body-tertiary.border.h-100
+                .d-flex.justify-content-between.align-items-center.mb-3
+                  i.bi.fs-3(class=`${item.icon} text-${item.color}`)
+                  span.badge(class=`bg-${item.color}-subtle text-${item.color}`)= item.tag
+                h6.fw-bold.mb-1= item.title
+                p.small.text-body-secondary.mb-0 Responsive card slide ##{i + 1} adapting across mobile, tablet and desktop.
+        .swiper-pagination
+
+block scripts
+  script(src=assets + "plugins/swiper/swiper.js")
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.Swiper) return;
+
+      new Swiper('#swiper-basic', {
+        loop: true,
+        navigation: {
+          nextEl: '#swiper-basic .swiper-button-next',
+          prevEl: '#swiper-basic .swiper-button-prev'
+        },
+        pagination: {
+          el: '#swiper-basic .swiper-pagination',
+          clickable: true
+        }
+      });
+
+      new Swiper('#swiper-fade', {
+        loop: true,
+        effect: 'fade',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '#swiper-fade .swiper-pagination',
+          clickable: true
+        }
+      });
+
+      new Swiper('#swiper-multi', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: {
+          el: '#swiper-multi .swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 }
+        }
+      });
+    });

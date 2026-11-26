@@ -1,0 +1,175 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'SortableJS'
+  - pageUrl = 'plugins/sortable'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/sortablejs/sortablejs.css")
+
+block content
+  .row.g-3.mb-3
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-list-ul.me-2
+            | Basic Sortable List
+        .card-body
+          p.text-body-secondary.small.mb-3 Drag any item to reorder the list smoothly.
+          ul#sortable-basic.list-group
+            li.list-group-item.d-flex.justify-content-between.align-items-center(style="cursor: grab;")
+              span
+                i.bi.bi-check2-circle.text-primary.me-2
+                | Configure Rspack build pipeline
+              span.badge.bg-primary-subtle.text-primary High
+            li.list-group-item.d-flex.justify-content-between.align-items-center(style="cursor: grab;")
+              span
+                i.bi.bi-palette.text-success.me-2
+                | Verify Light &amp; Dark mode contrast
+              span.badge.bg-success-subtle.text-success Done
+            li.list-group-item.d-flex.justify-content-between.align-items-center(style="cursor: grab;")
+              span
+                i.bi.bi-fonts.text-info.me-2
+                | Migrate local fonts to Fontsource
+              span.badge.bg-info-subtle.text-info Review
+            li.list-group-item.d-flex.justify-content-between.align-items-center(style="cursor: grab;")
+              span
+                i.bi.bi-shield-check.text-warning.me-2
+                | Audit accessibility attributes
+              span.badge.bg-warning-subtle.text-warning Medium
+            li.list-group-item.d-flex.justify-content-between.align-items-center(style="cursor: grab;")
+              span
+                i.bi.bi-rocket-takeoff.text-danger.me-2
+                | Publish production release
+              span.badge.bg-danger-subtle.text-danger Urgent
+
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-grip-vertical.me-2
+            | Handle-Only Reordering
+        .card-body
+          p.text-body-secondary.small.mb-3 Items can only be dragged using the grip handle on the left.
+          ul#sortable-handle.list-group
+            li.list-group-item.d-flex.align-items-center.gap-2
+              i.bi.bi-grip-vertical.text-body-secondary.sortable-handle.fs-5
+              .flex-grow-1
+                .fw-semibold Dashboard Overview
+                .small.text-body-secondary Main KPI cards and analytics
+              span.badge.bg-body-secondary.text-body 01
+            li.list-group-item.d-flex.align-items-center.gap-2
+              i.bi.bi-grip-vertical.text-body-secondary.sortable-handle.fs-5
+              .flex-grow-1
+                .fw-semibold E-Commerce Orders
+                .small.text-body-secondary Live order tracking widget
+              span.badge.bg-body-secondary.text-body 02
+            li.list-group-item.d-flex.align-items-center.gap-2
+              i.bi.bi-grip-vertical.text-body-secondary.sortable-handle.fs-5
+              .flex-grow-1
+                .fw-semibold Customer Messages
+                .small.text-body-secondary Support inbox preview
+              span.badge.bg-body-secondary.text-body 03
+            li.list-group-item.d-flex.align-items-center.gap-2
+              i.bi.bi-grip-vertical.text-body-secondary.sortable-handle.fs-5
+              .flex-grow-1
+                .fw-semibold Server Health
+                .small.text-body-secondary CPU, memory and latency monitor
+              span.badge.bg-body-secondary.text-body 04
+
+  .card.mb-3
+    .card-header
+      h5.card-title.mb-0
+        i.bi.bi-kanban.me-2
+        | Kanban Board (Shared Lists)
+    .card-body
+      p.text-body-secondary.small.mb-3 Drag cards across columns to update task status.
+      .row.g-3
+        .col-md-4
+          .p-3.rounded.bg-body-tertiary
+            .d-flex.justify-content-between.align-items-center.mb-3
+              span.fw-bold.text-uppercase.small To Do
+              span#count-todo.badge.bg-secondary 2
+            #kanban-todo.d-flex.flex-column.gap-2(style="min-height: 160px;")
+              .p-3.rounded.bg-body.border(style="cursor: grab;")
+                .fw-semibold.mb-1 Design new onboarding flow
+                .small.text-body-secondary Create wireframes and empty states.
+              .p-3.rounded.bg-body.border(style="cursor: grab;")
+                .fw-semibold.mb-1 Write API documentation
+                .small.text-body-secondary Document auth and webhook endpoints.
+
+        .col-md-4
+          .p-3.rounded.bg-body-tertiary
+            .d-flex.justify-content-between.align-items-center.mb-3
+              span.fw-bold.text-uppercase.small.text-primary In Progress
+              span#count-progress.badge.bg-primary 2
+            #kanban-progress.d-flex.flex-column.gap-2(style="min-height: 160px;")
+              .p-3.rounded.bg-body.border(style="cursor: grab;")
+                .fw-semibold.mb-1 Integrate FullCalendar v7
+                .small.text-body-secondary Add drag-and-drop external events.
+              .p-3.rounded.bg-body.border(style="cursor: grab;")
+                .fw-semibold.mb-1 Optimize CSS bundle size
+                .small.text-body-secondary Remove unused custom overrides.
+
+        .col-md-4
+          .p-3.rounded.bg-body-tertiary
+            .d-flex.justify-content-between.align-items-center.mb-3
+              span.fw-bold.text-uppercase.small.text-success Done
+              span#count-done.badge.bg-success 1
+            #kanban-done.d-flex.flex-column.gap-2(style="min-height: 160px;")
+              .p-3.rounded.bg-body.border(style="cursor: grab;")
+                .fw-semibold.mb-1 Migrate bundler to Rspack
+                .small.text-body-secondary Faster dev &amp; production builds.
+
+  .card
+    .card-header
+      h5.card-title.mb-0
+        i.bi.bi-grid-3x2-gap.me-2
+        | Sortable Grid
+    .card-body
+      #sortable-grid.row.g-3
+        each item, idx in ['Analytics', 'Sales', 'Users', 'Orders', 'Revenue', 'Reports']
+          .col-6.col-md-4.col-lg-2
+            .p-3.rounded.bg-body-tertiary.border.text-center(style="cursor: grab;")
+              i.bi.bi-grid-fill.text-primary.fs-4.d-block.mb-2
+              .fw-semibold.small= item
+              .text-body-secondary.small Widget ##{idx + 1}
+
+block scripts
+  script(src=assets + "plugins/sortablejs/sortablejs.js")
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.Sortable) return;
+
+      Sortable.create(document.getElementById('sortable-basic'), {
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+      });
+
+      Sortable.create(document.getElementById('sortable-handle'), {
+        handle: '.sortable-handle',
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+      });
+
+      const updateKanbanCounts = () => {
+        document.getElementById('count-todo').textContent = document.getElementById('kanban-todo').children.length;
+        document.getElementById('count-progress').textContent = document.getElementById('kanban-progress').children.length;
+        document.getElementById('count-done').textContent = document.getElementById('kanban-done').children.length;
+      };
+
+      ['kanban-todo', 'kanban-progress', 'kanban-done'].forEach((id) => {
+        Sortable.create(document.getElementById(id), {
+          group: 'piru-kanban',
+          animation: 150,
+          ghostClass: 'sortable-ghost',
+          onEnd: updateKanbanCounts
+        });
+      });
+
+      Sortable.create(document.getElementById('sortable-grid'), {
+        animation: 150,
+        ghostClass: 'sortable-ghost'
+      });
+    });

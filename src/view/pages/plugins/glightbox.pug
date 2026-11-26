@@ -1,0 +1,112 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'GLightbox'
+  - pageUrl = 'plugins/glightbox'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/glightbox/glightbox.css")
+
+block content
+  .card.mb-3
+    .card-header
+      h5.card-title.mb-0
+        i.bi.bi-images.me-2
+        | Image Gallery with Captions
+    .card-body
+      p.text-body-secondary.small.mb-3 Click any image to open the responsive lightbox with keyboard &amp; swipe navigation.
+      .row.g-3
+        -
+          var galleryItems = [
+            { img: 'https://picsum.photos/id/1015/900/600.jpg', thumb: 'https://picsum.photos/id/1015/450/300.jpg', title: 'Mountain River', desc: 'High-resolution landscape preview with GLightbox.' },
+            { img: 'https://picsum.photos/id/1018/900/600.jpg', thumb: 'https://picsum.photos/id/1018/450/300.jpg', title: 'Alpine Peaks', desc: 'Smooth zoom transitions and touch gestures.' },
+            { img: 'https://picsum.photos/id/1025/900/600.jpg', thumb: 'https://picsum.photos/id/1025/450/300.jpg', title: 'Cozy Companion', desc: 'Zero-dependency vanilla JavaScript lightbox.' },
+            { img: 'https://picsum.photos/id/1039/900/600.jpg', thumb: 'https://picsum.photos/id/1039/450/300.jpg', title: 'Forest Waterfall', desc: 'Supports Light and Dark theme caption styling.' }
+          ]
+        each item in galleryItems
+          .col-sm-6.col-lg-3
+            a.glightbox.d-block.overflow-hidden.rounded.border(
+              href=item.img
+              data-type="image"
+              data-gallery="piru-gallery"
+              data-title=item.title
+              data-description=item.desc
+            )
+              img.img-fluid.w-100(src=item.thumb alt=item.title style="height: 180px; object-fit: cover;")
+
+  .row.g-3
+    .col-md-4
+      .card.h-100
+        .card-body
+          h5.card-title
+            i.bi.bi-play-circle.me-2.text-danger
+            | Video Lightbox
+          p.text-body-secondary.small Open YouTube or Vimeo videos in a clean modal overlay.
+          a.glightbox-video.btn.btn-primary.text-uppercase.fw-bold(href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            i.bi.bi-play-fill.me-1
+            | Play Video
+
+    .col-md-4
+      .card.h-100
+        .card-body
+          h5.card-title
+            i.bi.bi-window-stack.me-2.text-info
+            | Inline HTML Content
+          p.text-body-secondary.small Render any hidden HTML block directly inside GLightbox.
+          a.glightbox-inline.btn.btn-outline-primary.text-uppercase.fw-bold(href="#glightbox-inline-demo")
+            i.bi.bi-eye.me-1
+            | Open Inline Box
+
+          #glightbox-inline-demo.d-none
+            .p-4.bg-body.text-body
+              h4.mb-2
+                i.bi.bi-stars.text-primary.me-2
+                | Inline Lightbox Content
+              p.text-body-secondary.mb-3 You can display custom HTML announcements, license terms, or quick previews inside GLightbox.
+              .d-flex.gap-2
+                span.badge.bg-primary Vanilla JS
+                span.badge.bg-success Responsive
+                span.badge.bg-info Touch Ready
+
+    .col-md-4
+      .card.h-100
+        .card-body
+          h5.card-title
+            i.bi.bi-globe.me-2.text-success
+            | Iframe Preview
+          p.text-body-secondary.small Load external web pages or interactive embeds in an iframe slide.
+          a.glightbox-iframe.btn.btn-outline-secondary.text-uppercase.fw-bold(
+            href="https://getbootstrap.com"
+            data-type="external"
+            data-width="900px"
+            data-height="560px"
+          )
+            i.bi.bi-box-arrow-up-right.me-1
+            | Open Iframe
+
+block scripts
+  script(src=assets + "plugins/glightbox/glightbox.js")
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.GLightbox) return;
+
+      GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true
+      });
+
+      GLightbox({
+        selector: '.glightbox-video',
+        autoplayVideos: true
+      });
+
+      GLightbox({
+        selector: '.glightbox-inline',
+        width: '540px'
+      });
+
+      GLightbox({
+        selector: '.glightbox-iframe'
+      });
+    });

@@ -252,3 +252,25 @@
 
 ### Removed
 - Removed legacy Webpack and Babel dependencies (`webpack`, `webpack-cli`, `webpack-dev-server`, `babel-loader`, `@babel/core`, `@babel/preset-env`, `mini-css-extract-plugin`, `copy-webpack-plugin`, `terser-webpack-plugin`, `css-minimizer-webpack-plugin`) along with `webpack.config.js` and `.babelrc`.
+
+
+## [v2.6.0] - 26/11/2026
+
+### Added
+- **6 New Dashboard Plugins & Independent Demo Pages**:
+  - **FullCalendar v7** (`plugins/fullcalendar.pug`): Interactive calendar (Month/Week/Day/List views), event creation form, color-preserving draggable external events, and `classic` theme tokens mapped to PiruAdmin Light/Dark variables.
+  - **SortableJS** (`plugins/sortable.pug`): Basic sortable list, drag-handle list, 3-column Kanban board with live counters, and sortable widget grid.
+  - **GLightbox** (`plugins/glightbox.pug`): Responsive image gallery with captions, YouTube video modal, inline HTML content box, and iframe preview.
+  - **IMask.js** (`plugins/imask.pug`): Input masks for phone, date, SKU/license plate, IPv4, credit card + expiry + CVV, USD currency, and percentage with live unmasked values.
+  - **ApexCharts v8** (`plugins/apexcharts.pug`): Area Spline, Donut, Bar, and Radial Bar KPI charts styled for Light/Dark modes without shadows.
+  - **Swiper v14** (`plugins/swiper.pug`): Navigation & pagination slider, Autoplay + Fade slider, and responsive multi-slide carousel.
+- Registered all 6 plugins as isolated Rspack builds in `scripts/plugins-manager.js` and added navigation entries in `src/data/menu.json`.
+
+### Changed
+- **Fontsource Variable Fonts**: Migrated typography from manual local font files to `@fontsource-variable/*` (`inter`, `roboto`, `roboto-condensed`, `google-sans-code`) in `src/scss/piruadmin-fonts.scss`, `src/scss/base/_variables.scss`, and `rspack.config.js`.
+
+### Removed
+- Removed manual font binaries from `src/fonts/` in favor of Fontsource npm packages.
+
+### Dependencies
+- Added `fullcalendar`, `sortablejs`, `glightbox`, `imask`, `apexcharts`, `swiper`, `@fontsource-variable/inter`, `@fontsource-variable/roboto`, `@fontsource-variable/roboto-condensed`, and `@fontsource-variable/google-sans-code`.

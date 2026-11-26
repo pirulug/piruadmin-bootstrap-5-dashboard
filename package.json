@@ -1,7 +1,7 @@
 {
   "homepage": "https://pirulug.github.io/piruadmin-bootstrap-5-dashboard",
   "name": "piruadmin-bootstrap-5-dashboard",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Admin dashboard bootstrap 5",
   "keywords": [
     "template",
@@ -56,16 +56,22 @@
     "@justinribeiro/lite-youtube": "^1.9.0",
     "@popperjs/core": "2.11.8",
     "@yaireo/tagify": "^4.39.0",
+    "apexcharts": "^8.9.1",
     "bootstrap": "^5.3.9",
     "bootstrap-icons": "^1.13.2",
     "chart.js": "^4.6.2",
     "feather-icons": "4.29.2",
     "flag-icons": "^7.6.0",
     "flatpickr": "4.6.13",
+    "fullcalendar": "^7.1.5",
+    "glightbox": "^3.3.1",
+    "imask": "^7.6.1",
     "jsvectormap": "1.7.0",
     "simplebar": "6.3.3",
     "simplemde": "^1.11.2",
+    "sortablejs": "^1.15.7",
     "sweetalert2": "^11.26.26",
+    "swiper": "^14.4.0",
     "toastify-js": "^1.12.0"
   }
 }

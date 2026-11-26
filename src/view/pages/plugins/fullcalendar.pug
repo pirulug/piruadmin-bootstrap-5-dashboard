@@ -1,0 +1,176 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'FullCalendar'
+  - pageUrl = 'plugins/fullcalendar'
+
+block styles
+  link(rel="stylesheet", href=assets + "plugins/fullcalendar/fullcalendar.css")
+
+block content
+  .row.g-3
+    .col-lg-3
+      .card.mb-3
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-plus-circle.me-2
+            | New Event
+        .card-body
+          form#fc-add-event-form
+            .mb-3
+              label.form-label(for="fc-event-title") Event Title
+              input#fc-event-title.form-control(type="text" placeholder="e.g. Sprint Review" required)
+            .mb-3
+              label.form-label(for="fc-event-date") Date
+              input#fc-event-date.form-control(type="date" required)
+            .mb-3
+              label.form-label(for="fc-event-color") Color
+              select#fc-event-color.form-select
+                option(value="#ff0055") Primary
+                option(value="#198754") Success
+                option(value="#0dcaf0") Info
+                option(value="#ffc107") Warning
+                option(value="#dc3545") Danger
+            button.btn.btn-primary.w-100.text-uppercase.fw-bold(type="submit")
+              i.bi.bi-calendar-plus.me-1
+              | Add Event
+
+      .card
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-arrows-move.me-2
+            | Draggable Events
+        .card-body
+          p.text-body-secondary.small.mb-3 Drag and drop any event below directly onto the calendar.
+          #fc-external-events.d-flex.flex-column.gap-2
+            .fc-external-event.p-2.rounded.bg-primary.text-white.small.fw-semibold(style="cursor: grab;" data-color="#ff0055" data-text-color="#ffffff")
+              i.bi.bi-grip-vertical.me-1
+              | Team Standup
+            .fc-external-event.p-2.rounded.bg-success.text-white.small.fw-semibold(style="cursor: grab;" data-color="#198754" data-text-color="#ffffff")
+              i.bi.bi-grip-vertical.me-1
+              | Product Launch
+            .fc-external-event.p-2.rounded.bg-info.text-dark.small.fw-semibold(style="cursor: grab;" data-color="#0dcaf0" data-text-color="#111111")
+              i.bi.bi-grip-vertical.me-1
+              | Client Meeting
+            .fc-external-event.p-2.rounded.bg-warning.text-dark.small.fw-semibold(style="cursor: grab;" data-color="#ffc107" data-text-color="#111111")
+              i.bi.bi-grip-vertical.me-1
+              | Design Review
+            .fc-external-event.p-2.rounded.bg-danger.text-white.small.fw-semibold(style="cursor: grab;" data-color="#dc3545" data-text-color="#ffffff")
+              i.bi.bi-grip-vertical.me-1
+              | Server Maintenance
+
+    .col-lg-9
+      .card
+        .card-body
+          #piru-fullcalendar
+
+block scripts
+  script(src=assets + "plugins/fullcalendar/fullcalendar.js")
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const dateInput = document.getElementById('fc-event-date');
+      if (dateInput) dateInput.value = `${yyyy}-${mm}-${dd}`;
+
+      const getTextColor = (bg) => (bg === '#ffc107' || bg === '#0dcaf0' ? '#111111' : '#ffffff');
+
+      const externalEl = document.getElementById('fc-external-events');
+      if (externalEl && window.FullCalendar && window.FullCalendar.Draggable) {
+        new FullCalendar.Draggable(externalEl, {
+          itemSelector: '.fc-external-event',
+          eventData: function (eventEl) {
+            const color = eventEl.getAttribute('data-color') || '#ff0055';
+            const textColor = eventEl.getAttribute('data-text-color') || getTextColor(color);
+            return {
+              title: eventEl.innerText.trim(),
+              color: color,
+              backgroundColor: color,
+              borderColor: color,
+              textColor: textColor
+            };
+          }
+        });
+      }
+
+      const calendarEl = document.getElementById('piru-fullcalendar');
+      if (!calendarEl || !window.FullCalendar) return;
+
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        editable: true,
+        droppable: true,
+        selectable: true,
+        dayMaxEvents: true,
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        },
+        events: [
+          {
+            title: 'Sprint Planning',
+            start: `${yyyy}-${mm}-03`,
+            color: '#ff0055',
+            textColor: '#ffffff'
+          },
+          {
+            title: 'UI Design Workshop',
+            start: `${yyyy}-${mm}-08`,
+            end: `${yyyy}-${mm}-11`,
+            color: '#198754',
+            textColor: '#ffffff'
+          },
+          {
+            title: 'Client Presentation',
+            start: `${yyyy}-${mm}-${dd}T10:30:00`,
+            end: `${yyyy}-${mm}-${dd}T12:00:00`,
+            color: '#0dcaf0',
+            textColor: '#111111'
+          },
+          {
+            title: 'Release v2.6.0',
+            start: `${yyyy}-${mm}-20`,
+            color: '#ffc107',
+            textColor: '#111111'
+          },
+          {
+            title: 'Security Audit',
+            start: `${yyyy}-${mm}-25`,
+            color: '#dc3545',
+            textColor: '#ffffff'
+          }
+        ],
+        dateClick: function (info) {
+          if (dateInput) dateInput.value = info.dateStr.slice(0, 10);
+          document.getElementById('fc-event-title')?.focus();
+        },
+        eventClick: function (info) {
+          if (confirm(`Delete event "${info.event.title}"?`)) {
+            info.event.remove();
+          }
+        }
+      });
+
+      calendar.render();
+
+      const form = document.getElementById('fc-add-event-form');
+      form?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const title = document.getElementById('fc-event-title').value.trim();
+        const date = document.getElementById('fc-event-date').value;
+        const color = document.getElementById('fc-event-color').value;
+        if (!title || !date) return;
+
+        calendar.addEvent({
+          title,
+          start: date,
+          color: color,
+          textColor: getTextColor(color)
+        });
+        form.reset();
+        if (dateInput) dateInput.value = date;
+      });
+    });

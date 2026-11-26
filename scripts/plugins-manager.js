@@ -32,6 +32,12 @@ class PluginsManager {
     { name: "simplemde", entry: "./simplemde/simplemde.js" },
     { name: "custom", entry: "./custom/custon.js" },
     { name: "wysi", entry: ["./wysi/wysi.js", "./wysi/wysi.css"] },
+    { name: "fullcalendar", entry: "./fullcalendar/fullcalendar.js" },
+    { name: "sortablejs", entry: "./sortablejs/sortablejs.js" },
+    { name: "glightbox", entry: "./glightbox/glightbox.js" },
+    { name: "imask", entry: "./imask/imask.js" },
+    { name: "apexcharts", entry: "./apexcharts/apexcharts.js" },
+    { name: "swiper", entry: "./swiper/swiper.js" },
   ];
 
   /**

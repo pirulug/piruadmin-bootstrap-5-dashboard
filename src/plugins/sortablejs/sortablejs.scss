@@ -1,0 +1,22 @@
+.sortable-ghost {
+  opacity: 0.45;
+  background-color: var(--pr-tertiary-bg) !important;
+  border: 1px dashed var(--pr-primary) !important;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+}
+
+.sortable-drag {
+  opacity: 0.95;
+  box-shadow: none !important;
+}
+
+.sortable-handle {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}

@@ -470,6 +470,48 @@
         "title": "Lite YouTube",
         "path": "plugins/lite-youtube",
         "link": "plugins/lite-youtube"
+      },
+      {
+        "title": "FullCalendar",
+        "path": "plugins/fullcalendar",
+        "link": "plugins/fullcalendar",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "SortableJS",
+        "path": "plugins/sortable",
+        "link": "plugins/sortable",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "GLightbox",
+        "path": "plugins/glightbox",
+        "link": "plugins/glightbox",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "IMask.js",
+        "path": "plugins/imask",
+        "link": "plugins/imask",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "ApexCharts",
+        "path": "plugins/apexcharts",
+        "link": "plugins/apexcharts",
+        "badge": "New",
+        "badgeColor": "primary"
+      },
+      {
+        "title": "Swiper",
+        "path": "plugins/swiper",
+        "link": "plugins/swiper",
+        "badge": "New",
+        "badgeColor": "primary"
       }
     ]
   },

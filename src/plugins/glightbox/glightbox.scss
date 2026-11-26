@@ -1,0 +1,18 @@
+@import "glightbox/dist/css/glightbox.min.css";
+
+.glightbox-clean {
+  .gslide-description {
+    background: var(--pr-body-bg);
+    color: var(--pr-body-color);
+    border-top: 1px solid var(--pr-border-color);
+  }
+
+  .gslide-title {
+    color: var(--pr-body-color);
+    font-weight: 600;
+  }
+
+  .gslide-desc {
+    color: var(--pr-secondary-color);
+  }
+}

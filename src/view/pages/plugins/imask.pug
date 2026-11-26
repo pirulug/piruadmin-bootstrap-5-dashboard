@@ -1,0 +1,144 @@
+extends ../../layouts/dashboard
+
+append config
+  - pageName = 'IMask.js'
+  - pageUrl = 'plugins/imask'
+
+block content
+  .row.g-3
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-input-cursor-text.me-2
+            | Pattern &amp; Contact Masks
+        .card-body
+          .mb-3
+            label.form-label(for="imask-phone") Phone Number
+            input#imask-phone.form-control(type="text" placeholder="+1 (000) 000-0000")
+            .form-text Unmasked:
+              code#imask-phone-raw.ms-1 —
+
+          .mb-3
+            label.form-label(for="imask-date") Date (DD/MM/YYYY)
+            input#imask-date.form-control(type="text" placeholder="DD/MM/YYYY")
+            .form-text Valid range: 1900 to 2099.
+
+          .mb-3
+            label.form-label(for="imask-plate") License / SKU Code (AAA-0000)
+            input#imask-plate.form-control(type="text" placeholder="ABC-1234")
+            .form-text Automatically converts letters to uppercase.
+
+          .mb-0
+            label.form-label(for="imask-ip") IPv4 Address
+            input#imask-ip.form-control(type="text" placeholder="192.168.1.1")
+
+    .col-lg-6
+      .card.h-100
+        .card-header
+          h5.card-title.mb-0
+            i.bi.bi-credit-card.me-2
+            | Financial &amp; Numeric Masks
+        .card-body
+          .mb-3
+            label.form-label(for="imask-card") Credit Card Number
+            input#imask-card.form-control(type="text" placeholder="0000 0000 0000 0000")
+            .form-text Unmasked:
+              code#imask-card-raw.ms-1 —
+
+          .row.g-3.mb-3
+            .col-6
+              label.form-label(for="imask-expiry") Expiry (MM/YY)
+              input#imask-expiry.form-control(type="text" placeholder="12/29")
+            .col-6
+              label.form-label(for="imask-cvv") CVV
+              input#imask-cvv.form-control(type="text" placeholder="123")
+
+          .mb-3
+            label.form-label(for="imask-currency") Currency (USD)
+            input#imask-currency.form-control(type="text" placeholder="$ 1,250.00")
+            .form-text Numeric value:
+              code#imask-currency-raw.ms-1 —
+
+          .mb-0
+            label.form-label(for="imask-percent") Percentage (0 - 100%)
+            input#imask-percent.form-control(type="text" placeholder="75%")
+
+block scripts
+  script(src=assets + "plugins/imask/imask.js")
+  script.
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.IMask) return;
+
+      const phoneMask = IMask(document.getElementById('imask-phone'), {
+        mask: '+{1} (000) 000-0000'
+      });
+      phoneMask.on('accept', () => {
+        document.getElementById('imask-phone-raw').textContent = phoneMask.unmaskedValue || '—';
+      });
+
+      IMask(document.getElementById('imask-date'), {
+        mask: Date,
+        pattern: 'd/`m/`Y',
+        min: new Date(1900, 0, 1),
+        max: new Date(2099, 11, 31),
+        lazy: false
+      });
+
+      IMask(document.getElementById('imask-plate'), {
+        mask: 'aaa-0000',
+        prepareChar: (str) => str.toUpperCase()
+      });
+
+      IMask(document.getElementById('imask-ip'), {
+        mask: '0[0][0].0[0][0].0[0][0].0[0][0]'
+      });
+
+      const cardMask = IMask(document.getElementById('imask-card'), {
+        mask: '0000 0000 0000 0000'
+      });
+      cardMask.on('accept', () => {
+        document.getElementById('imask-card-raw').textContent = cardMask.unmaskedValue || '—';
+      });
+
+      IMask(document.getElementById('imask-expiry'), {
+        mask: 'MM/YY',
+        blocks: {
+          MM: { mask: IMask.MaskedRange, from: 1, to: 12 },
+          YY: { mask: IMask.MaskedRange, from: 25, to: 99 }
+        }
+      });
+
+      IMask(document.getElementById('imask-cvv'), {
+        mask: '000[0]'
+      });
+
+      const currencyMask = IMask(document.getElementById('imask-currency'), {
+        mask: '$ num',
+        blocks: {
+          num: {
+            mask: Number,
+            scale: 2,
+            thousandsSeparator: ',',
+            padFractionalZeros: true,
+            radix: '.',
+            min: 0
+          }
+        }
+      });
+      currencyMask.on('accept', () => {
+        document.getElementById('imask-currency-raw').textContent = currencyMask.unmaskedValue || '—';
+      });
+
+      IMask(document.getElementById('imask-percent'), {
+        mask: 'num%',
+        lazy: false,
+        blocks: {
+          num: {
+            mask: Number,
+            min: 0,
+            max: 100
+          }
+        }
+      });
+    });
