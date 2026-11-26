@@ -1,8 +1,22 @@
+const Webpack = require("webpack");
 const Path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const DeleteEmptyFilesPlugin = require("pirulug-delete-empty-files-webpack-plugin");
+const pkg = require("../package.json");
+
+const defaultRepoUrl = (
+  typeof pkg.repository === "string" ? pkg.repository : pkg.repository?.url || ""
+)
+  .replace(/^git\+/, "")
+  .replace(/\.git$/, "");
+
+const defaultBanner = [
+  `PiruAdmin — Bootstrap 5 Dashboard v${pkg.version} (${pkg.homepage})`,
+  `Copyright 2024-${new Date().getFullYear()} ${pkg.author}`,
+  `Licensed under ${pkg.license} (${defaultRepoUrl ? `${defaultRepoUrl}/blob/master/LICENSE` : pkg.license})`,
+].join("\n");
 
 class PluginsManager {
   static PLUGINS = [
@@ -49,7 +63,7 @@ class PluginsManager {
   /**
    * Crea una configuracion de Webpack totalmente aislada para un plugin individual
    */
-  static createSinglePluginConfig(plugin, env = {}, argv = {}) {
+  static createSinglePluginConfig(plugin, env = {}, argv = {}, banner = defaultBanner) {
     const isProduction =
       process.env.NODE_ENV === "production" || argv.mode === "production";
     const devBuild = !isProduction;
@@ -106,6 +120,14 @@ class PluginsManager {
           chunkFilename: "[name].css",
         }),
         !devBuild && new DeleteEmptyFilesPlugin(rootDir, `dist/assets/plugins/${plugin.name}`),
+        banner &&
+          new Webpack.BannerPlugin({
+            banner: banner,
+            raw: false,
+            entryOnly: false,
+            test: /\.(css|js)$/i,
+            stage: Webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
+          }),
       ].filter(Boolean),
       module: {
         rules: [
@@ -222,9 +244,9 @@ class PluginsManager {
   /**
    * Genera el arreglo de configuraciones independientes para todos los plugins
    */
-  static createConfigs(env = {}, argv = {}) {
+  static createConfigs(env = {}, argv = {}, banner = defaultBanner) {
     return PluginsManager.PLUGINS.map((plugin) =>
-      PluginsManager.createSinglePluginConfig(plugin, env, argv)
+      PluginsManager.createSinglePluginConfig(plugin, env, argv, banner)
     );
   }
 }

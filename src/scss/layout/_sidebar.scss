@@ -10,6 +10,7 @@
   transition: $sidebar-transition;
   display: flex;
   height: 100vh;
+  height: 100dvh;
   flex-direction: column;
   background: $sidebar-bg;
 }

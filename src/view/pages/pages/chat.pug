@@ -40,7 +40,7 @@ block content
                     .rounded-circle.text-white.d-flex.align-items-center.justify-content-center(class=`bg-${bg}` style="width: 38px; height: 38px; font-size: 0.8rem; font-weight: 600;")= initials
                     if online
                       span.position-absolute.bottom-0.end-0.p-1.bg-success.border.border-2.border-body.rounded-circle
-                  .flex-grow-1.min-width-0
+                  .flex-grow-1.min-w-0
                     .d-flex.justify-content-between.align-items-center
                       span.fw-bold.text-truncate= name
                       small.opacity-75= time
@@ -76,7 +76,7 @@ block content
               i.bi.bi-three-dots-vertical
 
         //- Messages Area
-        #teamChatMessages.card-body(style="height: 460px; overflow-y: auto;")
+        #teamChatMessages.card-body(style="height: clamp(320px, 55vh, 460px); overflow-y: auto;")
           .text-center.my-2
             span.badge.bg-body-secondary.text-body-secondary Today
 

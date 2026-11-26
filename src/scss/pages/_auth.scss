@@ -39,3 +39,9 @@
     background-color: var(--#{$prefix}secondary-bg) !important;
   }
 }
+
+// 2FA verification code inputs
+.verification-code-input {
+  width: clamp(38px, 11vw, 50px);
+  height: clamp(42px, 12vw, 50px);
+}

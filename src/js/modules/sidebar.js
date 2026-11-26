@@ -57,9 +57,20 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
 
     if (!sidebarElement || !sidebarToggleElement) return;
 
+    const DESKTOP_BREAKPOINT = 992;
+    let isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+    const syncBodyScroll = () => {
+      const mobileOpen =
+        window.innerWidth < DESKTOP_BREAKPOINT &&
+        sidebarElement.classList.contains("collapsed");
+      document.body.style.overflow = mobileOpen ? "hidden" : "";
+    };
+
     const toggleSidebar = (e) => {
       if (e) e.preventDefault();
       sidebarElement.classList.toggle("collapsed");
+      syncBodyScroll();
 
       sidebarElement.addEventListener("transitionend", () => {
         window.dispatchEvent(new Event("resize"));
@@ -76,11 +87,21 @@ if (document.getElementsByClassName("js-simplebar")[0]) {
       closeElement.addEventListener("click", toggleSidebar);
     }
 
+    // Reset collapsed state when crossing desktop/mobile breakpoint so sidebar doesn't unexpectedly open
+    window.addEventListener("resize", () => {
+      const nowDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+      if (nowDesktop !== isDesktop) {
+        isDesktop = nowDesktop;
+        sidebarElement.classList.remove("collapsed");
+        syncBodyScroll();
+      }
+    });
+
     // Close sidebar when clicking a link on mobile
     const sidebarLinks = sidebarElement.querySelectorAll(".sidebar-link");
     sidebarLinks.forEach(link => {
       link.addEventListener("click", () => {
-        if (window.innerWidth < 992 && !link.hasAttribute("data-bs-toggle")) {
+        if (window.innerWidth < DESKTOP_BREAKPOINT && !link.hasAttribute("data-bs-toggle")) {
           toggleSidebar();
         }
       });

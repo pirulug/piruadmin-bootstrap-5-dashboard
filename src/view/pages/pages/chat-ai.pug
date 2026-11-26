@@ -83,7 +83,7 @@ block content
               | Clear
 
         //- Messages Area
-        #chatMessages.card-body(style="height: 480px; overflow-y: auto;")
+        #chatMessages.card-body(style="height: clamp(320px, 55vh, 480px); overflow-y: auto;")
           //- User Message
           .d-flex.justify-content-end.align-items-start.gap-2.mb-3
             .bg-primary.text-white.p-3.rounded(style="max-width: 78%;")

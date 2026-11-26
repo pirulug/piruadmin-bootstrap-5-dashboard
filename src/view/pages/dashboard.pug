@@ -144,30 +144,31 @@ block content
       .card.flex-fill
         .card-header
           h5.card-title.mb-0 Latest Projects
-        table.table.table-hover.my-0.border-top
-          thead
-            tr
-              th Name
-              th.d-none.d-xl-table-cell Start Date
-              th.d-none.d-xl-table-cell End Date
-              th Status
-              th.d-none.d-md-table-cell Assignee
-          tbody
-            tr
-              td Project Apollo
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-success Done
-              td.d-none.d-md-table-cell Vanessa Tucker
-            //- ... resto de filas ...
-            tr
-              td Project Phoenix
-              td.d-none.d-xl-table-cell 01/01/2021
-              td.d-none.d-xl-table-cell 31/06/2021
-              td
-                span.badge.bg-warning In progress
-              td.d-none.d-md-table-cell William Harris
+        .table-responsive
+          table.table.table-hover.my-0.border-top
+            thead
+              tr
+                th Name
+                th.d-none.d-xl-table-cell Start Date
+                th.d-none.d-xl-table-cell End Date
+                th Status
+                th.d-none.d-md-table-cell Assignee
+            tbody
+              tr
+                td Project Apollo
+                td.d-none.d-xl-table-cell 01/01/2021
+                td.d-none.d-xl-table-cell 31/06/2021
+                td
+                  span.badge.bg-success Done
+                td.d-none.d-md-table-cell Vanessa Tucker
+              //- ... resto de filas ...
+              tr
+                td Project Phoenix
+                td.d-none.d-xl-table-cell 01/01/2021
+                td.d-none.d-xl-table-cell 31/06/2021
+                td
+                  span.badge.bg-warning In progress
+                td.d-none.d-md-table-cell William Harris
 
 block scripts 
   script(src=assets + "plugins/chartjs/chartjs.js")

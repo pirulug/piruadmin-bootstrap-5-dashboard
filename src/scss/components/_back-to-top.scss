@@ -7,7 +7,7 @@
   justify-content: center;
   right: 30px;
   bottom: 30px;
-  z-index: 1050;
+  z-index: 1030;
   width: 50px;
   height: 50px;
   background: var(--#{$prefix}body-bg);
@@ -58,6 +58,17 @@
       stroke: var(--#{$prefix}primary);
       stroke-linecap: round;
       transition: stroke-dashoffset 0.1s linear;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    right: 1rem;
+    bottom: 1rem;
+    width: 42px;
+    height: 42px;
+
+    i {
+      font-size: 1.25rem;
     }
   }
 }

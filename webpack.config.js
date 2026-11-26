@@ -294,7 +294,7 @@ module.exports = (env = {}, argv = {}) => {
   const shouldBuildPlugins = PluginsManager.shouldBuildPlugins(env, argv);
 
   if (shouldBuildPlugins) {
-    return [appConfig, ...PluginsManager.createConfigs(env, argv)];
+    return [appConfig, ...PluginsManager.createConfigs(env, argv, banner)];
   }
 
   return appConfig;
