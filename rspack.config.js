@@ -97,10 +97,9 @@ module.exports = (env = {}, argv = {}) => {
         filename: "assets/css/[name].css",
         chunkFilename: "assets/css/[name].css",
       }),
-      // Copy fonts and images to dist
+      // Copy images to dist
       new rspack.CopyRspackPlugin({
         patterns: [
-          { from: "src/fonts", to: "assets/fonts" },
           { from: "src/img", to: "assets/img" },
         ],
       }),
@@ -199,6 +198,14 @@ module.exports = (env = {}, argv = {}) => {
                 pathData?.filename ||
                 ""
               ).replace(/\\/g, "/");
+
+              const fontsourceMatch = resource.match(
+                /@fontsource(?:-variable)?\/([^/]+)\//i
+              );
+              if (fontsourceMatch) {
+                const folder = fontsourceMatch[1].toLowerCase();
+                return `assets/fonts/${folder}/[name][ext]`;
+              }
 
               const fontsMatch = resource.match(/src\/fonts\/([^/]+)\//i);
               if (fontsMatch) {
